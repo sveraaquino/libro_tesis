@@ -1,0 +1,279 @@
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Thesis 
+% LaTeX Template
+% Version 1.3 (21/12/12)
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Original authors:
+% Steven Gunn 
+% http://users.ecs.soton.ac.uk/srg/softwaretools/document/templates/
+% and
+% Sunil Patel
+% http://www.sunilpatel.co.uk/thesis-template/
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Note:
+% Make sure to edit document variables in the Thesis.cls file
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+%\documentclass[draft]{article} %no mostrar las imagenes%
+\documentclass[11pt, a4paper, oneside]{Thesis} % Paper size, default font size and one-sided paper
+\usepackage{multirow}
+\usepackage{url}
+\usepackage[spanish,es-tabla]{babel}
+
+\usepackage[spanish]{babel}
+\selectlanguage{spanish} 
+\usepackage[spanish,onelanguage,ruled,linesnumbered]{algorithm2e}
+\SetKwFor{For}{para}{hacer}{fin}
+
+
+\graphicspath{{./Pictures/}} % Specifies the directory where pictures are stored
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{float}
+
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{pdfpages}
+\usepackage{verbatim} 
+\usepackage{enumerate}
+
+\usepackage{color}
+\newcommand{\hilight}[1]{\colorbox{yellow}{#1}}
+\usepackage{amsmath}
+\usepackage[intoc]{nomencl}
+
+\makenomenclature
+\renewcommand{\nomname}{\'Indice de s\'imbolos}
+\usepackage{program}
+
+%\renewcommand{\nomname}{Nomenclatura}
+%------Bibliografía------------
+
+
+%\usepackage{apacite} %Uno de los esfectos es elimina los números de la bibliografía.
+\usepackage[square, numbers, comma, sort]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' 
+%\usepackage[square, numbers, comma, sort]{biblatex}
+\usepackage[utf8]{inputenc}
+\hypersetup{urlcolor=blue, colorlinks=true} % Colors hyperlinks in blue - change to black if annoying
+\title{\ttitle} % Defines the thesis title - don't touch this
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@makecaption}
+  {\scshape}
+  {}
+  {}
+  {}
+\makeatletter
+\patchcmd{\@makecaption}
+  {\\}
+  {.\ }
+  {}
+  {}
+\makeatother
+\def\tablename{Tabla}
+
+
+\begin{document}
+%\renewcommand\tablename{Tabla}
+%\renewcommand{\figurename}{Figura}
+\frontmatter % Use roman page numbering style (i, ii, iii, iv...) for the pre-content pages
+\setstretch{1.3} % Line spacing of 1.3
+
+% Define the page headers using the FancyHdr package and set up for one-sided printing
+\fancyhead{} % Clears all page headers and footers
+\rhead{\thepage} % Sets the right side header to show the page number
+\lhead{} % Clears the left side page header
+
+\pagestyle{fancy} % Finally, use the "fancy" page style to implement the FancyHdr headers
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % New command to make the lines in the title page
+
+% PDF meta-data
+\hypersetup{pdftitle={\ttitle}}
+\hypersetup{pdfsubject=\subjectname}
+\hypersetup{pdfauthor=\authornames}
+\hypersetup{pdfkeywords=\keywordnames}
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+\begin{center}
+%\includegraphics{Logo} % University/department logo - uncomment to place it
+%\textsc{\LARGE Universidad Nacional de Asunci\'on}\\[1.5cm] % University name
+%\textsc{\Large Facultad Politécnica}\\[0.5cm] 
+%\textsc{\Large Facultad Politécnica}\\[0.5cm] 
+\includegraphics[scale=1]{./Figures/logo.png} % University/department logo - uncomment to place it
+%\textbf{\rmfamily \textsc{\LARGE Universidad Nacional de Asunci\'on} \\ \textsc{\LARGE Facultad Politécnica}}\\[1.5cm] % University name
+
+\large \textit{INGENIERÍA EN INFORMÁTICA}\\[0.3cm]
+
+\HRule \\[0.4cm] % Línea Horizontal
+{\huge \bfseries Metodolog\'ia autom\'atica para estimar p\'erdida de
+	carbono a trav\'es de procesamiento de im\'agenes
+	satelitales. Caso de uso Chaco Paraguayo}\\[0.4cm] % Thesis title
+\HRule \\[1.5cm] % Línea Horizontal
+ 
+\large \textit{PROYECTO FINAL DE GRADO}\\[0.3cm]
+ 
+
+ \vfill
+ 
+\vfill
+
+\vfill
+
+\begin{minipage}{0.4\textwidth}
+\begin{center} \large
+\emph{Autor:}\\
+{Santiago Smael Vera Aquino}
+\end{center}
+\end{minipage} 
+%Using a minipage:
+ \hfill\begin{minipage}{0.4\textwidth}
+\begin{center} \large
+\emph{Tutor:}\\ 
+{Dr. Horacio Legal Ayala} \\
+
+\end{center}
+\end{minipage}\\[3cm]
+
+
+ 
+\textsc{\LARGE San Lorenzo - Paraguay}\\[1.5cm]
+\textsc{\LARGE Octubre - 2015}\\[1.5cm]
+ 
+%{\large \today}\\[4cm] % Date
+\vfill
+\end{center}
+\end{titlepage}
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	DEDICATORIA
+%----------------------------------------------------------------------------------------
+\clearpage % Start a new page
+\setstretch{1.3} % Return the line spacing back to 1.3
+\pagestyle{empty} % Page style needs to be empty for this page
+\dedicatory{
+
+A mis familiares, profesores, compañeros y amigos por su apoyo, aliento y comprensión incondicional. 
+
+} 
+\addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
+
+
+%----------------------------------------------------------------------------------------
+%	AGRADECIMIENTO
+%----------------------------------------------------------------------------------------
+\clearpage % Start a new page
+\setstretch{1.3} % Reset the line-spacing to 1.3 for body text (if it has changed)
+\acknowledgements{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+xxx
+
+
+}
+
+
+%----------------------------------------------------------------------------------------
+%	RESUMEN
+%----------------------------------------------------------------------------------------
+\clearpage % Start a new page
+\addtotoc{Resumen} % Add the "Abstract" page entry to the Contents
+\resumen{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+
+xxxx
+
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+
+\clearpage % Start a new page
+\abstract{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+
+xxxxx
+
+
+
+%----------------------------------------------------------------------------------------
+%	LIST OF CONTENTS/FIGURES/TABLES PAGES
+%----------------------------------------------------------------------------------------
+\clearpage % Start a new page
+\pagestyle{fancy}
+\lhead{\emph{Contenido}} % Set the left side page header to "Contents"
+
+
+%--------------INICIO CONFIGURACION DE INDICE-----------------------
+
+\setcounter{tocdepth}{2} %El numero es el nivel que mostrará en el índice
+\tableofcontents % Write out the Table of Contents
+
+%--------------FIN DE CONFIGURACION DE INDICE-----------------------
+
+\lhead{\emph{Índice de figuras}} % Set the left side page header to "List of Figures"
+\listoffigures % Write out the List of Figures
+
+\clearpage % Start a new page
+%\setstretch{1.5} % Set the line spacing to 1.5, this makes the following tables easier to read
+\lhead{\emph{Lista de símbolos}} % Set the left side page header to "Abbreviations"
+
+\printnomenclature
+
+%\lhead{\emph{Lista de Tablas}} % Set the left side page header to "List of Tables"
+\listoftables % Write out the List of Tables
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	ABBREVIATIONS
+%----------------------------------------------------------------------------------------
+\clearpage % Start a new page
+\setstretch{1.5} % Set the line spacing to 1.5, this makes the following tables easier to read
+\lhead{\emph{Índice de abreviaciones}} % Set the left side page header to "Abbreviations"
+\listofsymbols{ll} % Include a list of Abbreviations (a table of two columns)
+{
+%\textbf{SVM} & \textit{Support vector machine.}\\
+
+
+}
+
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+% CAPÍTULOS DE LA TESIS
+%----------------------------------------------------------------------------------------
+\mainmatter % Begin numeric (1,2,3...) page numbering
+\pagestyle{fancy} % Return the page headers back to the "fancy" style
+%\input{./Chapters/Introduccion}
+%\input{./Chapters/retinopatiaDiabetica}
+%\input{./Chapters/procesamientoDeImagenes}
+%\input{./Chapters/metodologia}
+%\input{./Chapters/casoDeEstudio}
+%\input{./Chapters/conclusion}
+%\input{./Chapters/bibliografia}
+%\input{./Chapters/Anexo}
+
+
+
+
+\end{document}  

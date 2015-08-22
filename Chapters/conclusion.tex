@@ -1,0 +1,39 @@
+\newpage{\ } 
+\thispagestyle{empty} 
+
+\chapter{Conclusiones y trabajos futuros}
+\lhead{Capítulo 6. \emph{Conclusiones y trabajos futuros}}
+%\lhead{Capítulo 6. \emph{Conclusiones y trabajos y futuros}} % This is for the header on each page - perhaps a shortened title
+En base a los resultados obtenidos en la clasificación de retinopatía diabética, en este capítulo se presenta las conclusiones y recomendaciones para investigaciones futuras derivadas del trabajo:
+\begin{itemize}
+\section{Conclusiones}
+\item La metodología propuesta, que se compone de tres módulos: segmentación, extracción de características y clasificación, alcanza 97,65\% de sensibilidad y 96,47\% de especificidad por lo que se logra la meta de superar al menos 80\% de sensibilidad y 95\% de especificidad que es el estándar mínimo para un sistema de \textit{screening} de retinopatía diabética \cite{guide}. A partir de los resultados obtenidos se puede afirmar que se superó el estándar mínimo para un sistema de \textit{screening} por lo que se puede considerar una herramienta válida en la detección temprana de la misma.
+
+\item La idea de la detección asistida por computador no es la de dar un diagnóstico completo a partir de la imagen de retina, no se pretende que el sistema reemplace al profesional médico en la evaluación de las imágenes de retina, pero sí, que el mismo sea de ayuda al momento de diagnosticar a un paciente que pueda estar afectado por esta enfermedad y que posibilite a que el dictamen sea lo más certero posible.
+ 
+%En este trabajo, el proceso de detección y segmentación se realiza mediante el uso de técnicas de procesamiento de imágenes. En la etapa inicial realizamos la segmentación de las imágenes de retina que incluyen el aislamiento de los vasos sanguíneos, exudados duros y microaneurismas, luego con ayuda del clasificador binario Support Vector Machine (SVM), el cual  es entrenado de manera supervisada con las características extraídas permitiendo la clasificación de las imágenes de retina en sanas o enfermas. 
+
+\item  La mala calidad de algunas imágenes dificultó la obtención de mejores resultados, ya que a pesar de aplicar los pasos de mejoras de imagen sobre estas, no se logró corregir las irregularidades, incidiendo finalmente en los resultados de la clasificación.
+
+
+%\item La idea de la detección asistida por computador no es la de dar un diagnóstico completo a partir de la fuente, sino la de ayudar a quien se encarga de redactarlo para conseguir un diagnóstico óptimo.
+\item Se pudo verificar que al utilizar una menor cantidad de imágenes de entrenamiento el desempeño del clasificador es inestable y a medida que va aumentando la cantidad de imágenes de entrenamiento el desempeño se estabiliza.
+
+\item El desempeño se mantiene estable a partir de cierta cantidad de imágenes de entrenamiento, por lo que aumentar no garantiza mejores resultados pero sí mayor tiempo en la fase de entrenamiento.
+
+\item Gracias a esta tecnología el profesional médico podrá interpretar toda la información disponible y elaborar un mejor diagnóstico, dado que las máquinas permiten procesar de manera rápida y fácil toda la información y así evitar que se les escape información menor que, de otra forma, podrían pasar desapercibida al ojo humano.% y así dar un mejor diagnóstico.
+%que podrán realizar un mejor diagnóstico % dejando solo lo relevante que puedan ayudar a los especialistas a notar todos los  detalles.
+
+%\item A partir de los resultados obtenidos   podemos afirmar que se superó el estándar mínimo para un sistema de screening de retinopatía diabética, constituyéndose en una herramienta válida en la detección temprana de la misma.
+\end{itemize}
+Además se anhela que estos procedimientos médicos automatizados que ayudan a los doctores en la interpretación de contenidos multimedia vayan expandiéndose en el país, ya que confiamos en que la tecnología debería ayudar a optimizar todos los procesos de nuestra vida diaria, especialmente el área de la salud, incidiendo de manera positiva en la calidad de vida de las personas.
+
+
+\section{Trabajos futuros}
+Se pretende que la metodología propuesta siga mejorando en términos de desempeño debido a que es un tema sensible con impacto social por lo que mencionamos como trabajos futuros:
+\begin{itemize}
+\item La adición de patologías tales como exudados blandos y hemorragias, de tal manera aumentar la exactitud en el diagnóstico.
+\item Emplear  otras bases de imágenes de retina para las pruebas. 
+\item Ampliar la funcionalidad mediante la clasificación del grado de retinopatía diabética mediante el uso de un clasificador no binario. 
+
+\end{itemize}

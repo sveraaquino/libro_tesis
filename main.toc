@@ -1,0 +1,11 @@
+\select@language {spanish}
+\select@language {spanish}
+\vspace {2em}
+\contentsline {chapter}{Agradecimiento}{\es@scroman {ii}}{dummy.1}
+\vspace {1em}
+\contentsline {chapter}{Resumen}{\es@scroman {iii}}{dummy.2}
+\vspace {1em}
+\vspace {1em}
+\contentsline {chapter}{\'Indice de figuras}{\es@scroman {vi}}{dummy.4}
+\contentsline {chapter}{\'Indice de tablas}{\es@scroman {vii}}{dummy.6}
+\contentsline {chapter}{Abreviaciones}{\es@scroman {viii}}{dummy.8}

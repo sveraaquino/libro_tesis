@@ -1,0 +1,73 @@
+Distribucion de la tesis
+- Portada
+- Dedicatorias
+- Agredecimiento Vazquez, pintos, legal
+
+
+1 - resumen
+2 - Introduccion
+    que causa, que se quiere evitar
+3-RD, RD EN PARAGUAY
+    - Hablar de la enfermedad, sus caracteristicas, causas, como esta en la actualidad,
+4- Parte teorica de procesamiento digital de imagenes - Concepto básico y definiciones
+    //hablar un poco antes
+    4.1 espacio de color RGB H
+    4.2 espacio de color HSI S
+    4.3 canal Verde H 
+    4.4 Canal de intensidad S
+    4.5 Clahe H
+    4.6 operador logico and S
+    4.7 Sustracciion de images H 
+    4.8 elementos conectados S
+    4.9 Ajuste de los valores de intensidad H
+    4.10 filtro de la mediana S
+    4.11 umbralizacion H 
+    4.12 encontrar circulos S
+    4.13 morfologia matematica
+    4.13.1 Dilatación S 
+    4.13.2 Erosión H
+    4.13.3 Apertura S
+    4.14 Transformada de Top-hat H
+    // falta hablar de segmentacion y extracción de caracteristicas en si
+5- Explicar l5.2a metodoloagia
+    5.1 esquema // hablar un poco del esquema
+    5.1.1 explicar cada parte del esquema
+6- Resultados experimentales
+    - formulaciones matemáticas 
+    
+    
+    
+    
+DR
+-	Causas y factores de riesgo
+-	síntomas y detección
+-	etapas 
+-	Tratamiento 
+-	Diabetes 
+-	Predicciones 
+-	Tipos de diabetes
+-	Diabetes en Paraguay.
+-	Explicar MA
+-	Explicar Exudados
+-	Explicar venas
+-	Explicar disco óptico
+-	
+
+PDI
+-	Canal de intensidad
+-	CLAHE
+-	Encontrar circulos..
+-	Transformada TOP- HAT
+-	Morfología Matemática en gris
+-	dilatacion 
+-	erosion
+-	aperture 
+-	cierre 
+-	Morfología Matemática en binario
+-	dilatacion 
+-	erosion
+-	aperture
+-	cierre
+-   Segmentacion
+-   Extracción de características.
+-   Clasificador SVM..

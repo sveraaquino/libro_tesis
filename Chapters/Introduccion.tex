@@ -1,0 +1,143 @@
+\newpage{\ } 
+\thispagestyle{empty} 
+
+\chapter{Introducción}
+\lhead{Capítulo 1. \emph{Introducción}} % This is for the header on each page - perhaps a shortened title
+
+
+La diabetes puede causar daños a los ojos, entre ellos cataratas, glaucoma y \textit{Retinopatía Diabética} (RD), la cual es la más peligrosa por dañar los vasos sanguíneos de la retina en la parte posterior del ojo \cite{crespo2004prevalencia}. Un estudio regular de los ojos  en personas con diabetes es indispensable para detectar la retinopatía diabética debido a su naturaleza asintomática, es decir sus síntomas no son perceptibles para el enfermo hasta que el daño sea de gravedad \cite{salama2001factores}.
+
+Existe una fuerte  relación entre la obesidad y la hipertensión arterial, que  combinados con la presencia de  diabetes  implican un factor de riesgo llegando a empeorar el estado de una persona con diabetes \cite{villanueva1996analisis}.
+
+Al cabo de 15 años con diabetes, aproximadamente un 2\% de los pacientes se quedan ciegos, y un 10\% sufren un deterioro grave de la visión \cite{resnikoff2004global}.
+
+
+La retina es la capa de tejido en la parte posterior del ojo que transforma la luz y las imágenes que ingresan al ojo en señales nerviosas que se envían al cerebro. Los vasos sanguíneos derivan de la arteria central de la retina, el cual se halla en el nervio óptico. Los exudados duros (ED) son encontrados en diversos tamaños desde manchas insignificantes a zonas en auge con periferias claras. Los microaneurismas son una pequeña zona de la cual sobresale sangre de una arteria y vena, atribuidos como síntomas vitales de la retinopatía diabética. Estos conceptos se extienden en el capítulo 2.
+
+
+El método de \textit{screening}, en medicina, también denominado cribado o tamizaje, se refiere a la realización de pruebas diagnósticas a personas para distinguirlas entre sanas y enfermas \cite{mozur2003sistemas}. En principio se trata de una actividad de prevención secundaria \cite{de2002documento}, cuyo objetivo es la detección precoz de una determinada enfermedad con el fin de mejorar su pronóstico y evitar la mortalidad prematura o la discapacidad asociada a ella. Además, si es posible detectar lesiones o situaciones previas a la aparición de la enfermedad en cuestión, su tratamiento permitirá reducir el número de enfermos \cite{elizaga2013apoyo}.
+
+El método de \textit{screening} en pacientes diabéticos para detección de retinopatía diabética puede reducir el riesgo de ceguera en pacientes en un 50\% \cite{fadia}.
+
+En este trabajo  se propone un método de \textit{screening} automático de retinopatía diabética a través del análisis de los vasos sanguíneos, exudados duros  y microaneurismas. % porque estos constituyen  los mejores indicadores en la detección de la retinopatía diabética.  
+
+
+\section{Justificación y Motivación}
+Los aspectos principales que motivan esta área de investigación y por ende a este trabajo final de grado son los siguientes:
+\begin{itemize}
+
+
+\item Según la Organización Mundial de la Salud (OMS) un gran número de  personas con diabetes sufren algún tipo de deterioro o pérdida de la visión  \cite{oms}. 
+
+\item La  Asociación  Americana  de  la  Diabetes  (American  Diabetes  Association)  recomienda  la exploración del fondo de ojo en los pacientes con  diabetes una vez al año y cada 4 meses en caso de que presente Retinopatía Diabética \cite{cigna}.
+
+\item La retinopatía diabética es considerada como la principal causa de ceguera en la población económicamente activa,  ya  que  afecta  a  personas  entre  los 20  y  74  años  de  edad \cite{fong2004retinopathy,browning2010diabetic}.
+
+\item La diabetes no tiene cura \cite{kindberg1999supporting,kleinfield2006diabetes}.
+\end{itemize}
+
+\section{Antecedentes}
+
+A partir de la  conferencia \textit{Screening for Diabetic Retinopathy in Europe} celebrada en Liverpool, Reino Unido en el año 2005, el uso de técnicas de procesamiento digital de imágenes para \textit{screening} de retinopatía diabética ha ido en aumento \cite{iqbal2006automatic}.
+
+Jagadish Nayak et al. \cite{nayak2008automated} proponen un método de detección de retinopatía diabética basada en técnicas de pre-procesamiento digital, técnicas morfológicas de procesamiento y métodos de análisis de textura. Como clasificador utilizaron redes neuronales artificiales. Las pruebas fueron realizadas a partir de una base de imágenes propia, obteniendo un 90\% de sensibilidad, 100\% de especificidad y 93\% de exactitud.
+
+
+
+Gardner et al. \cite{gardner1996automatic} proponen técnicas de mejoras de contraste y suavizado en la detección de retinopatía. Como clasificador utilizaron redes neuronales artificiales. Las pruebas fueron realizadas a partir de una base de imágenes propia de 179 imágenes, de las cuales 32 eran normales y 147 con retinopatía diabética, obteniendo 83,5\% de especificidad, 88,4\%  de sensibilidad y 87\% de exactitud.
+
+%Gardner et al. \cite{gardner1996automatic} realizan sus pruebas en su propia base de datos de 179 imágenes, de las cuales 32 eran normales y 147 con retinopatía diabética, para las segmentaciones hacen , para la clasificación utilizaron un clasificador basado en redes neuronales obteniendo una 83.5\% de especificidad, 88.4\%  de sensibilidad y 87\% de exactitud.
+   
+
+  %  Zohra et al. \cite{zohra2009automated} proponen un método de pre-procesamiento morfológico de imágenes, las segmentaciones fueron realizadas por umbralización. Para la clasificación de imágenes emplearon el support vector machine,  utilizaron como banco de imágenes 81 imágenes de base de datos pública MESSIDOR \cite{messidor}, sus resultados obtenidos fueron 93\% de sensibilidad, 95\% de exactitud y 93\% de especificidad.
+
+
+
+%Sinthanayothin et al. \cite{sinthanayothin2003automated} plantean un sistema de \textit{screening} que tiene como base de pre-procesamiento la ecualización del histograma y técnicas de mejora de contraste, además se emplea la detección de bordes y segmentación por crecimiento de regiones. Las pruebas fueron realizadas a partir de una base de imágenes propia de 179 imágenes, de las cuales 32 eran normales y 147 con retinopatía diabética, obteniendo 83.5\% de especificidad, 88.4\%  de sensibilidad y 87\% de exactitud. 
+
+Sinthanayothin et al. \cite{sinthanayothin2003automated} proponen un sistema de \textit{screening} que tiene como base de pre-procesamiento la ecualización del histograma y técnicas de mejora de contraste, además se emplea la detección de bordes y segmentación por crecimiento de regiones. Como clasificador utilizaron redes neuronales artificiales.  Las pruebas fueron realizadas a partir de una base de imágenes propia de 484 imágenes. El sistema realizó la clasificación  redes neuronales artificiales obteniendo 80,21\% de sensibilidad y 70,66\% de especificidad.  
+
+
+%MI Iqbal et al. \cite{iqbal2006automatic} se usó estimación basada en formas y técnicas de procesamiento morfológicas para las segmentaciones de vasos, sanguíneos, microaneurismas, para su base de datos imágenes hicieron uso de su propia base de datos e hicieron uso de un clasificador basado en la teoría bayesiana, en sus resultados obtuvieron 98\% de sensibilidad y 61\% de especificidad.
+
+Mi Iqbal et al. \cite{iqbal2006automatic} utilizaron estimación basada en formas y técnicas de procesamiento morfológicas para la detección y segmentación. Utilizaron un clasificador basado en la teoría bayesiana. Emplearon una base de imágenes propia, en sus resultados obtuvieron 98\% de sensibilidad y 61\% de especificidad.
+
+
+\section{Planteamiento del problema}
+La mayoría de los pacientes diagnosticados con diabetes en algún momento de su vida desarrollarán retinopatía diabética, por lo que la exploración del fondo de ojo y el examen visual juegan un papel determinante en la detección oportuna de la enfermedad. 
+
+%El examen completo  de  la  vista  incluye:  revisión  optométrica,  revisión  de  la  visión  binocular,  revisión  del estado  de  salud  ocular;  destacando  la  revisión de  la presión  intraocular  (PIO)  y el examen  o exploración  del  fondo  de  ojo  \cite{cigna}.%
+
+ La exploración de fondo de ojo con la cámara digital realizada a los pacientes proporciona un gran número de imágenes, las mismas  deben ser revisadas por los profesionales de la salud visual, empleando una gran cantidad de tiempo por paciente, limitando así el número de consultas por día \cite{selvathi2012automated}.
+ 
+ %Según la guía de diabetes de Reino Unido \cite{guide} un método de \textit{screening} debe cumplir con al menos de 80\% de sensibilidad y 95\% de especificidad, es decir la probabilidad de diagnosticar correctamente una persona enferma debe ser mayor o igual al  80\% y la probabilidad de diagnosticar correctamente una persona sana debe ser mayor o igual al  95\%.
+ 
+ Según la guía de diabetes de Reino Unido \cite{guide} un método de \textit{screening} debe cumplir con al menos  80\% de sensibilidad, es decir la probabilidad que se clasifique correctamente a un individuo enfermo y 95\% de especificidad, esto es que se diagnostique correctamente a un individuo sano.
+ 
+ 
+ 
+%Un método de \textit{screening} de retinopatía debe cumplir ciertos requerimientos para considerarse válido por eso la guía de diabetes de Reino Unido \cite{guide} establece que cualquier procedimiento usado para \textit{screening} de retinopatía diabética debe tener al menos 80\% de sensibilidad y 95\% de especificidad.
+ 
+
+
+\section{Objetivos}
+Atendiendo la naturaleza sensible  de esta investigación en el campo de la medicina,  los  objetivos delineados son los siguientes.
+
+\subsection{Objetivos Generales}
+
+\begin{itemize}
+\item Construir una herramienta válida de asistencia al profesional de salud en el diagnóstico de la enfermedad basada en técnicas de visión por computadora que alcance al menos 80\% de sensibilidad y 95\% de especificidad en la detección de la retinopatía diabética.
+\end{itemize}
+\subsection{Objetivos Específicos}
+Para el logro de los objetivos generales los siguientes objetivos específicos son propuestos:
+\begin{itemize}
+
+
+\item Diseño de un esquema para la detección y segmentación automática de características de imágenes de retina.
+
+   
+    
+%\item Detección y segmentación automática de patologías de imágenes de retina.
+    
+
+\item Aplicación de la técnicas de extracción de características de estructuras y patologías del ojo a partir de las imágenes segmentadas.
+    
+\item Entrenamiento de un clasificador binario competitivo para diferenciar imágenes de retina con o sin retinopatía diabética.
+
+
+
+\end{itemize}
+
+
+
+
+
+\section{Organización de la Tesis}
+
+%La distribución de capítulos del presente trabajo final de grado se encuentra distribuido en 6 capítulos.
+%en este capítulo se da una breve introducción al tema, se describe el problema de manera precisa para lograr su mejor entendimiento, también se citan los objetivos trazados tanto específicos como generales finalmente se habla de los antecedentes.
+%en el capítulo 2  se realiza una breve introducción sobre la diabetes y los tipos existentes, 
+%\begin{comment} luego hablaremos de la enfermedad de los ojos que se da en las personas con diabetes que es conocida como  retinopatía diabética, de la misma se menciona las causas, factores de riesgos y los síntomas. Además se menciona las etapas en cuales la enfermedad se va desarrollando, las anormalidades que se van dando dentro de los ojos, así como también los tratamientos usados para combatir esta enfermedad: fotocoagulación con láser, terapia médica intravítrea y tratamiento quirúrgico. 
+%\end{comment} 
+%en el capítulo 3  se presenta el marco teórico de las técnicas de  visión por computadora, %\begin{comment} desde los espacios de colores utilizados para representar las imágenes de fondo de ojo hasta los algoritmos se mencionan con detalle el funcionamiento del algoritmo de normalización utilizado,  en los procesos de segmentación, extracción de características y clasificación.
+%\end{comment} 
+%en el capítulo 4  se detallan  los algoritmos de detección y segmentación utilizados en el sistema de diagnóstico, además  se menciona las sub-segmentaciones utilizadas en estos procesos,
+%Luego tenemos la extracción de características cuya importancia radica en el hecho de que reduce la cantidad de datos a procesar. Al final de la metodología tenemos al clasificador de máquina de vector de soporte el cual dará el diagnóstico final. 
+%en el capítulo 5  se presenta las métricas  utilizadas para medir el desempeño, luego se evalúa los resultados obtenidos y se realiza  la comparación con respecto al estado del arte y por último en el capítulo 6 se presentan las conclusiones finales tras los experimentos y análisis de resultados del proyecto, por último los trabajos futuros que podrían dar continuidad al trabajo final de grado.
+
+
+La distribución de capítulos del presente trabajo final de grado se encuentra organizado en 6 capítulos.
+%en este capítulo se da una breve introducción al tema, se describe el problema de manera precisa para lograr su mejor entendimiento, también se citan los objetivos trazados tanto específicos como generales finalmente se habla de los antecedentes.
+\begin{itemize}
+
+\item En el capítulo 2  se realiza una breve introducción sobre la diabetes y los tipos existentes.
+%\begin{comment} luego hablaremos de la enfermedad de los ojos que se da en las personas con diabetes que es conocida como  retinopatía diabética, de la misma se menciona las causas, factores de riesgos y los síntomas. Además se menciona las etapas en cuales la enfermedad se va desarrollando, las anormalidades que se van dando dentro de los ojos, así como también los tratamientos usados para combatir esta enfermedad: fotocoagulación con láser, terapia médica intravítrea y tratamiento quirúrgico. 
+%\end{comment} 
+\item En el capítulo 3  se presenta el marco teórico de las técnicas de  visión por computadora. %\begin{comment} desde los espacios de colores utilizados para representar las imágenes de fondo de ojo hasta los algoritmos se mencionan con detalle el funcionamiento del algoritmo de normalización utilizado,  en los procesos de segmentación, extracción de características y clasificación.
+%\end{comment} 
+\item En el capítulo 4  se detallan  los algoritmos de detección y segmentación utilizados en el sistema de diagnóstico, además  se menciona las sub-segmentaciones utilizadas en estos procesos.
+%Luego tenemos la extracción de características cuya importancia radica en el hecho de que reduce la cantidad de datos a procesar. Al final de la metodología tenemos al clasificador de máquina de vector de soporte el cual dará el diagnóstico final. 
+\item En el capítulo 5  se presentan las métricas  utilizadas para medir el desempeño, luego se evalúa los resultados obtenidos y se realiza  la comparación con respecto al estado del arte.
+
+\item En el capítulo 6 se presentan las conclusiones finales tras los experimentos y análisis de resultados del proyecto, por último los trabajos futuros que podrían dar continuidad al trabajo final de grado. 
+\end{itemize}
