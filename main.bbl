@@ -1,0 +1,105 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{AMVMEB{\etalchar{+}}03}
+
+\bibitem[{\'A}JB{\etalchar{+}}01]{avila2001almacenamiento}
+G~{\'A}vila, F~Jim{\'e}nez, J~Beer, M~G{\'o}mez, and M~Ibrahim.
+\newblock Almacenamiento, fijaci{\'o}n de carbono y valoraci{\'o}n de servicios
+  ambientales en sistemas agroforestales en costa rica. carbon storage and
+  fixation, and evaluation of environmental services in agroforestry systems in
+  costa rica.
+\newblock {\em Agroforester{\'\i}a en las Am{\'e}ricas (CATIE)}, 8(30):32--35,
+  2001.
+
+\bibitem[AMVMEB{\etalchar{+}}03]{acosta2003diseno}
+Miguel Acosta~Mireles, Alejandro Vel{\'a}zquez~Mart{\'\i}nez, Jorge~D
+  Etchevers~Barra, J~Jes{\'u}s Vargas~Hern{\'a}ndez, Hugo
+  Ram{\'\i}rez~Maldonado, Fabi{\'a}n Islas~Guti{\'e}rrez, and ;~Instituto de
+  Recursos Naturales Programa~Forestal. Colegio~de Postgraduados,
+  Campus~Montecillo.
+\newblock {\em Dise{\~n}o y aplicaci{\'o}n de un m{\'e}todo para medir los
+  almacenes de carbono en sistemas con vegetaci{\'o}n forestal y agr{\'\i}colas
+  de ladera en M{\'e}xico}.
+\newblock PhD thesis, Tesis Doctoral. Colegio de Postgraduados. Montecillo,
+  M{\'e}xico, 2003.
+
+\bibitem[Bro10]{browning2010diabetic}
+David~J Browning.
+\newblock {\em Diabetic Retinopathy: Evidence-Based Management}.
+\newblock Springer, 2010.
+
+\bibitem[cig14]{cigna}
+{CIGNA MEDICAL COVERAGE POLICY}.
+\newblock \url
+  {http://old.cigna.com/customer_care/healthcare_professional/coverage_positions/medical/mm_0080_coveragepositioncriteria_imaging_systems_optical.pdf},
+  June 2014.
+
+\bibitem[FAG{\etalchar{+}}04]{fong2004retinopathy}
+Donald~S Fong, Lloyd Aiello, Thomas~W Gardner, George~L King, George
+  Blankenship, Jerry~D Cavallerano, Fredrick~L Ferris, and Ronald Klein.
+\newblock Retinopathy in diabetes.
+\newblock {\em Diabetes care}, 27(suppl 1):s84--s87, 2004.
+
+\bibitem[GKWE96]{gardner1996automatic}
+GG~Gardner, D~Keating, TH~Williamson, and AT~Elliott.
+\newblock Automatic detection of diabetic retinopathy using an artificial
+  neural network: a screening tool.
+\newblock {\em British journal of Ophthalmology}, 80(11):940--944, 1996.
+
+\bibitem[GS03]{garzuglia2003wood}
+M~Garzuglia and M~Saket.
+\newblock Wood volume and woody biomass.
+\newblock {\em Food and Agricultural Organization of the United Nations. Roma},
+  page~30, 2003.
+
+\bibitem[IAGK06]{iqbal2006automatic}
+MI~Iqbal, AM~Aibinu, NS~Gubbal, and A~Khan.
+\newblock Automatic diagnosis of diabetic retinopathy using fundus images.
+\newblock {\em Blekinge Institute of Technology}, 2006.
+
+\bibitem[KBKM99]{kindberg1999supporting}
+Tim Kindberg, Nick Bryan-Kinns, and Ranjit Makwana.
+\newblock Supporting the shared care of diabetic patients.
+\newblock In {\em Proceedings of the international ACM SIGGROUP conference on
+  Supporting group work}, pages 91--100. ACM, 1999.
+
+\bibitem[Kle06]{kleinfield2006diabetes}
+NR~Kleinfield.
+\newblock Diabetes and its awful toll quietly emerge as a crisis.
+\newblock {\em New York Times}, 9, 2006.
+
+\bibitem[{Kui}05]{guide}
+{Kuivalainen, M.}
+\newblock {Retinal image analyzing machine vision}.
+\newblock Master's thesis, 2005.
+
+\bibitem[NBA{\etalchar{+}}08]{nayak2008automated}
+Jagadish Nayak, P~Subbanna Bhat, Rajendra Acharya, CM~Lim, and Manjunath
+  Kagathi.
+\newblock Automated identification of diabetic retinopathy stages using digital
+  fundus images.
+\newblock {\em Journal of medical systems}, 32(2):107--115, 2008.
+
+\bibitem[Oje]{peralta2013analisis}
+Fabian Miguel~Peralta Ojeda.
+\newblock Analisis del cambio de cobertura de la tierra y estimacion de carbono
+  en el area para parque nacional san rafael, aÑo 2008/2013.
+
+\bibitem[oms]{oms}
+{Organización Mundial de la Salud}, month = jun, year = {2014}, howpublished
+  ="\url {http://www.who.int/es/}".
+
+\bibitem[SKPS03]{sinthanayothin2003automated}
+Chanjira Sinthanayothin, Viravud Kongbunkiat, Suthee Phoojaruenchanachai, and
+  Apichart Singalavanija.
+\newblock Automated screening system for diabetic retinopathy.
+\newblock In {\em Image and Signal Processing and Analysis, 2003. ISPA 2003.
+  Proceedings of the 3rd International Symposium on}, volume~2, pages 915--920.
+  IEEE, 2003.
+
+\bibitem[SPB12]{selvathi2012automated}
+D~Selvathi, NB~Prakash, and Neethi Balagopal.
+\newblock Automated detection of diabetic retinopathy for early diagnosis using
+  feature extraction and support vector machine.
+\newblock 2012.
+
+\end{thebibliography}

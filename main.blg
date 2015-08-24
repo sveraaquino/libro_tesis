@@ -1,0 +1,148 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+The style file: alpha.bst
+Database file #1: Bibliography.bib
+Warning--entry type for "peralta2013analisis" isn't style-file defined
+--line 33 of file Bibliography.bib
+Repeated entry---line 221 of file Bibliography.bib
+ : @article{iqbal2006automatic
+ :                            ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 228 of file Bibliography.bib
+ : @article{iqbal2006automatic
+ :                            ,
+I'm skipping whatever remains of this entry
+"{" immediately follows a field name---line 647 of file Bibliography.bib
+ : @article
+ :         {gonzalez2013tecnicas,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 845 of file Bibliography.bib
+ : 
+ : @ONLINE{idf,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 861 of file Bibliography.bib
+ : @article{selvathi2012automated
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 910 of file Bibliography.bib
+ : @article{fong2004retinopathy
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 920 of file Bibliography.bib
+ : @book{browning2010diabetic
+ :                           ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 973 of file Bibliography.bib
+ : @article{selvathi2012automated
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1001 of file Bibliography.bib
+ : @article{selvathi2012automated
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1007 of file Bibliography.bib
+ : @techreport{guide
+ :                  ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "cigna" isn't style-file defined
+--line 1014 of file Bibliography.bib
+Repeated entry---line 1143 of file Bibliography.bib
+ : @online{cigna
+ :              ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "oms" isn't style-file defined
+--line 1168 of file Bibliography.bib
+I was expecting a `,' or a `}'---line 1176 of file Bibliography.bib
+ : 
+ : @ONLINE{nei,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 1367 of file Bibliography.bib
+ : @article{nayak2008automated
+ :                            ,
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1575 of file Bibliography.bib
+ :  
+ :  %month = jul,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1591 of file Bibliography.bib
+ :  
+ :  %edition = {2},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1626 of file Bibliography.bib
+ :  
+ :  %month = jul,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1638 of file Bibliography.bib
+ :   
+ :   %pages={185--208},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 1663 of file Bibliography.bib
+ : @techreport{guide
+ :                  ,
+I'm skipping whatever remains of this entry
+You're missing a field name---line 1675 of file Bibliography.bib
+ :  
+ :  %issue_date = {2013},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 1998 of file Bibliography.bib
+ : +´`  
+ :       title={Color image palette construction based on the HSI color system for minimizing the reconstruction error},
+I'm skipping whatever remains of this entry
+Too many commas in name 7 of "Acosta Mireles, Miguel and Vel{\'a}zquez Mart{\'\i}nez, Alejandro and Etchevers Barra, Jorge D and Vargas Hern{\'a}ndez, J Jes{\'u}s and Ram{\'\i}rez Maldonado, Hugo and Islas Guti{\'e}rrez, Fabi{\'a}n and Colegio de Postgraduados, Campus Montecillo,; Instituto de Recursos Naturales, Programa Forestal." for entry acosta2003diseno
+while executing---line 1185 of file alpha.bst
+Warning--to sort, need author or key in oms
+Warning--to sort, need author or key in cigna
+Too many commas in name 7 of "Acosta Mireles, Miguel and Vel{\'a}zquez Mart{\'\i}nez, Alejandro and Etchevers Barra, Jorge D and Vargas Hern{\'a}ndez, J Jes{\'u}s and Ram{\'\i}rez Maldonado, Hugo and Islas Guti{\'e}rrez, Fabi{\'a}n and Colegio de Postgraduados, Campus Montecillo,; Instituto de Recursos Naturales, Programa Forestal." for entry acosta2003diseno
+while executing---line 1250 of file alpha.bst
+Warning--empty institution in guide
+Warning--empty journal in selvathi2012automated
+You've used 16 entries,
+            2543 wiz_defined-function locations,
+            648 strings with 7927 characters,
+and the built_in function-call counts, 6421 in all, are:
+= -- 624
+> -- 361
+< -- 8
++ -- 130
+- -- 130
+* -- 477
+:= -- 1078
+add.period$ -- 46
+call.type$ -- 16
+change.case$ -- 112
+chr.to.int$ -- 16
+cite$ -- 22
+duplicate$ -- 236
+empty$ -- 429
+format.name$ -- 144
+if$ -- 1285
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 12
+newline$ -- 80
+num.names$ -- 42
+pop$ -- 120
+preamble$ -- 1
+purify$ -- 129
+quote$ -- 0
+skip$ -- 202
+stack$ -- 0
+substring$ -- 271
+swap$ -- 38
+text.length$ -- 8
+text.prefix$ -- 4
+top$ -- 0
+type$ -- 124
+warning$ -- 4
+while$ -- 53
+width$ -- 22
+write$ -- 196
+(There were 22 error messages)
