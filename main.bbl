@@ -22,28 +22,12 @@ Miguel Acosta~Mireles, Alejandro Vel{\'a}zquez~Mart{\'\i}nez, Jorge~D
 \newblock PhD thesis, Tesis Doctoral. Colegio de Postgraduados. Montecillo,
   M{\'e}xico, 2003.
 
-\bibitem[Bro10]{browning2010diabetic}
-David~J Browning.
-\newblock {\em Diabetic Retinopathy: Evidence-Based Management}.
-\newblock Springer, 2010.
-
-\bibitem[cig14]{cigna}
-{CIGNA MEDICAL COVERAGE POLICY}.
-\newblock \url
-  {http://old.cigna.com/customer_care/healthcare_professional/coverage_positions/medical/mm_0080_coveragepositioncriteria_imaging_systems_optical.pdf},
-  June 2014.
-
-\bibitem[FAG{\etalchar{+}}04]{fong2004retinopathy}
-Donald~S Fong, Lloyd Aiello, Thomas~W Gardner, George~L King, George
-  Blankenship, Jerry~D Cavallerano, Fredrick~L Ferris, and Ronald Klein.
-\newblock Retinopathy in diabetes.
-\newblock {\em Diabetes care}, 27(suppl 1):s84--s87, 2004.
-
-\bibitem[GKWE96]{gardner1996automatic}
-GG~Gardner, D~Keating, TH~Williamson, and AT~Elliott.
-\newblock Automatic detection of diabetic retinopathy using an artificial
-  neural network: a screening tool.
-\newblock {\em British journal of Ophthalmology}, 80(11):940--944, 1996.
+\bibitem[BdFM03]{basualdo2003estrategia}
+Isabel Basualdo, Isabel~Gamarra de~Fox, and Miguel~Angel Morales.
+\newblock {\em Estrategia nacional y plan de acci{\'o}n para la
+  conservaci{\'o}n de la biodiversidad del Paraguay: ENPAB, Estrategia Nacional
+  y Plan de Acci{\'o}n de Biodiversidad, 2004-2009}.
+\newblock Presidencia de la Rep{\'u}blica, Secretar{\'\i}a del Ambiente, 2003.
 
 \bibitem[GS03]{garzuglia2003wood}
 M~Garzuglia and M~Saket.
@@ -51,55 +35,47 @@ M~Garzuglia and M~Saket.
 \newblock {\em Food and Agricultural Organization of the United Nations. Roma},
   page~30, 2003.
 
-\bibitem[IAGK06]{iqbal2006automatic}
-MI~Iqbal, AM~Aibinu, NS~Gubbal, and A~Khan.
-\newblock Automatic diagnosis of diabetic retinopathy using fundus images.
-\newblock {\em Blekinge Institute of Technology}, 2006.
+\bibitem[HKS{\etalchar{+}}09]{huang2009assessment}
+Chengquan Huang, Sunghee Kim, Kuan Song, John~RG Townshend, Paul Davis, Alice
+  Altstatt, Oscar Rodas, Alberto Yanosky, Rob Clay, Compton~J Tucker, et~al.
+\newblock Assessment of paraguay's forest cover change using landsat
+  observations.
+\newblock {\em Global and Planetary Change}, 67(1):1--12, 2009.
 
-\bibitem[KBKM99]{kindberg1999supporting}
-Tim Kindberg, Nick Bryan-Kinns, and Ranjit Makwana.
-\newblock Supporting the shared care of diabetic patients.
-\newblock In {\em Proceedings of the international ACM SIGGROUP conference on
-  Supporting group work}, pages 91--100. ACM, 1999.
+\bibitem[LK94]{lillesand1994remote}
+Thomas~M Lillesand and Ralph~W Kiefer.
+\newblock Remote sensing and image interpretation. john willey \& sons.
+\newblock {\em Inc, United States of America}, 1994.
 
-\bibitem[Kle06]{kleinfield2006diabetes}
-NR~Kleinfield.
-\newblock Diabetes and its awful toll quietly emerge as a crisis.
-\newblock {\em New York Times}, 9, 2006.
+\bibitem[MG13]{martinez2013normalizacion}
+Raul Mart{\'\i}nez~Garrido.
+\newblock Normalizaci{\'o}n radiom{\'e}trica iterativa en detecci{\'o}n de
+  cambios: seguimiento del tipo de cambios asociados al ecosistema
+  mediterr{\'a}neo.
+\newblock 2013.
 
-\bibitem[{Kui}05]{guide}
-{Kuivalainen, M.}
-\newblock {Retinal image analyzing machine vision}.
-\newblock Master's thesis, 2005.
-
-\bibitem[NBA{\etalchar{+}}08]{nayak2008automated}
-Jagadish Nayak, P~Subbanna Bhat, Rajendra Acharya, CM~Lim, and Manjunath
-  Kagathi.
-\newblock Automated identification of diabetic retinopathy stages using digital
-  fundus images.
-\newblock {\em Journal of medical systems}, 32(2):107--115, 2008.
+\bibitem[Nel]{nellemann2009carbono}
+Corcoran E. Duarte C. M. Valdés L. De Young C. Fonseca L. Grimsditch~G
+  Nellemann, C.
+\newblock Carbono azul. evaluación de una respuesta rápida.
 
 \bibitem[Oje]{peralta2013analisis}
 Fabian Miguel~Peralta Ojeda.
 \newblock Analisis del cambio de cobertura de la tierra y estimacion de carbono
   en el area para parque nacional san rafael, aÑo 2008/2013.
 
-\bibitem[oms]{oms}
-{Organización Mundial de la Salud}, month = jun, year = {2014}, howpublished
-  ="\url {http://www.who.int/es/}".
+\bibitem[Par]{BAAPA2013}
+WWF Paraguay y la Facultad de Ciencias~Agrarias ParLu.
+\newblock Desarrollo del estudio de lÍnea de base para el sitio piloto bosque
+  atlantico alto parana (baapa).
 
-\bibitem[SKPS03]{sinthanayothin2003automated}
-Chanjira Sinthanayothin, Viravud Kongbunkiat, Suthee Phoojaruenchanachai, and
-  Apichart Singalavanija.
-\newblock Automated screening system for diabetic retinopathy.
-\newblock In {\em Image and Signal Processing and Analysis, 2003. ISPA 2003.
-  Proceedings of the 3rd International Symposium on}, volume~2, pages 915--920.
-  IEEE, 2003.
-
-\bibitem[SPB12]{selvathi2012automated}
-D~Selvathi, NB~Prakash, and Neethi Balagopal.
-\newblock Automated detection of diabetic retinopathy for early diagnosis using
-  feature extraction and support vector machine.
-\newblock 2012.
+\bibitem[SHB{\etalchar{+}}11]{saatchi2011benchmark}
+Sassan~S Saatchi, Nancy~L Harris, Sandra Brown, Michael Lefsky, Edward~TA
+  Mitchard, William Salas, Brian~R Zutta, Wolfgang Buermann, Simon~L Lewis,
+  Stephen Hagen, et~al.
+\newblock Benchmark map of forest carbon stocks in tropical regions across
+  three continents.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  108(24):9899--9904, 2011.
 
 \end{thebibliography}

@@ -10,10 +10,10 @@
 \contentsline {chapter}{\'Indice de tablas}{\es@scroman {vii}}{dummy.6}
 \contentsline {chapter}{Abreviaciones}{\es@scroman {viii}}{dummy.8}
 \contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{2}{chapter.11}
-\contentsline {section}{\numberline {1.1}Justificaci\IeC {\'o}n y Motivaci\IeC {\'o}n}{3}{section.12}
-\contentsline {section}{\numberline {1.2}Antecedentes}{3}{section.13}
-\contentsline {section}{\numberline {1.3}Planteamiento del problema}{4}{section.14}
-\contentsline {section}{\numberline {1.4}Objetivos}{5}{section.15}
-\contentsline {subsection}{\numberline {1.4.1}Objetivos Generales}{5}{subsection.16}
-\contentsline {subsection}{\numberline {1.4.2}Objetivos Espec\IeC {\'\i }ficos}{5}{subsection.17}
-\contentsline {section}{\numberline {1.5}Organizaci\IeC {\'o}n de la Tesis}{5}{section.18}
+\contentsline {section}{\numberline {1.1}Justificaci\IeC {\'o}n y Motivaci\IeC {\'o}n}{4}{section.12}
+\contentsline {section}{\numberline {1.2}Antecedentes}{4}{section.13}
+\contentsline {section}{\numberline {1.3}Planteamiento del problema}{5}{section.14}
+\contentsline {section}{\numberline {1.4}Objetivos}{6}{section.15}
+\contentsline {subsection}{\numberline {1.4.1}Objetivos Generales}{6}{subsection.16}
+\contentsline {subsection}{\numberline {1.4.2}Objetivos Espec\IeC {\'\i }ficos}{7}{subsection.17}
+\contentsline {section}{\numberline {1.5}Organizaci\IeC {\'o}n de la Tesis}{7}{section.18}
