@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.27)  31 AUG 2015 18:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.27)  3 SEP 2015 18:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -974,7 +974,7 @@ LaTeX Info: Redefining \nameref on input line 87.
 LaTeX Info: Redefining \. on input line 87.
 LaTeX Info: Redefining \% on input line 87.
 
-<./Pictures/./Figures/logo.png, id=56, 414.79968pt x 148.30406pt>
+<./Pictures/./Figures/logo.png, id=144, 414.79968pt x 148.30406pt>
 File: ./Pictures/./Figures/logo.png Graphic file (type png)
 
 <use ./Pictures/./Figures/logo.png>
@@ -1044,14 +1044,14 @@ Package spanish Warning: Replacing `OT1/cmr/bx/sc' by
 Package spanish Warning: Replacing `OT1/cmr/bx/sc' by 
 (spanish)                faked small caps on input line 11.
 
-)
+[5
+
+
+])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [5
-
-
-]
+ [6]
 ------------------------------------------------------------------------------
  \'Indice de figuras
 ------------------------------------------------------------------------------
@@ -1064,7 +1064,7 @@ LaTeX Info: Redefining \% on input line 2.
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
- [6
+ [7
 
 
 ]
@@ -1081,7 +1081,7 @@ LaTeX Info: Redefining \% on input line 2.
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [7
+ [8
 
 
 
@@ -1094,7 +1094,7 @@ Overfull \hbox (26.9522pt too wide) in alignment at lines 264--264
  [] [] 
  []
 
-[8
+[9
 
 
 
@@ -1107,90 +1107,247 @@ Cap\'{\i }tulo 1.
  1 Introducci\IeC {\'o}n
 ------------------------------------------------------------------------------
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--15
+Underfull \hbox (badness 10000) in paragraph at lines 8--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--15
+Underfull \hbox (badness 10000) in paragraph at lines 8--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--15
+Underfull \hbox (badness 10000) in paragraph at lines 8--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--15
+Underfull \hbox (badness 10000) in paragraph at lines 8--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--15
+Underfull \hbox (badness 10000) in paragraph at lines 8--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--15
+Underfull \hbox (badness 10000) in paragraph at lines 8--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--15
+Underfull \hbox (badness 10000) in paragraph at lines 8--16
 
  []
 
 [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 18--22
+Underfull \hbox (badness 10000) in paragraph at lines 19--23
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--22
+Underfull \hbox (badness 10000) in paragraph at lines 19--23
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 18--22
+Underfull \hbox (badness 10000) in paragraph at lines 19--23
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 24--27
+Underfull \hbox (badness 10000) in paragraph at lines 25--28
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--27
+Underfull \hbox (badness 10000) in paragraph at lines 25--28
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 30--35
+Underfull \hbox (badness 10000) in paragraph at lines 31--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--35
+Underfull \hbox (badness 10000) in paragraph at lines 31--36
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 30--35
+Underfull \hbox (badness 10000) in paragraph at lines 31--36
 
  []
 
-[5] [6]) (./Chapters/bibliografia.tex [7] (./main.bbl [8] [9
+[5] [6]) (./Chapters/areaDeEstudio.tex [7] [8]
+Cap\'{\i }tulo 2.
+------------------------------------------------------------------------------
+ 2 Cambio Clim\'atico
+------------------------------------------------------------------------------
 
-]))
+Underfull \hbox (badness 10000) in paragraph at lines 7--9
+
+ []
+
+<./Pictures/./Figures/cicloCarbono.jpg, id=312, 521.95pt x 521.95pt>
+File: ./Pictures/./Figures/cicloCarbono.jpg Graphic file (type jpg)
+
+<use ./Pictures/./Figures/cicloCarbono.jpg>
+Package pdftex.def Info: ./Pictures/./Figures/cicloCarbono.jpg used on input li
+ne 15.
+(pdftex.def)             Requested size: 208.73653pt x 208.73647pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--19
+
+ []
+
+[9
+
+] [10 <./Pictures/./Figures/cicloCarbono.jpg>] [11] [12] [13] [14] [15]
+[16] [17] [18]
+Overfull \hbox (9.32388pt too wide) in paragraph at lines 223--238
+ [] 
+ []
+
+<./Pictures/./Figures/cap2/sinDR.png, id=422, 258.9675pt x 139.27031pt>
+File: ./Pictures/./Figures/cap2/sinDR.png Graphic file (type png)
+
+<use ./Pictures/./Figures/cap2/sinDR.png>
+Package pdftex.def Info: ./Pictures/./Figures/cap2/sinDR.png used on input line
+ 253.
+(pdftex.def)             Requested size: 199.17638pt x 199.17413pt.
+
+<./Pictures/./Figures/cap2/conRD.png, id=423, 278.54062pt x 150.5625pt>
+File: ./Pictures/./Figures/cap2/conRD.png Graphic file (type png)
+
+<use ./Pictures/./Figures/cap2/conRD.png>
+Package pdftex.def Info: ./Pictures/./Figures/cap2/conRD.png used on input line
+ 254.
+(pdftex.def)             Requested size: 199.17203pt x 199.18878pt.
+ [19]
+<./Pictures/./Figures/cap2/microMu.png, id=429, 224.33812pt x 224.33812pt>
+File: ./Pictures/./Figures/cap2/microMu.png Graphic file (type png)
+
+<use ./Pictures/./Figures/cap2/microMu.png>
+Package pdftex.def Info: ./Pictures/./Figures/cap2/microMu.png used on input li
+ne 267.
+(pdftex.def)             Requested size: 199.16928pt x 199.17763pt.
+
+<./Pictures/./Figures/cap2/microMu2.png, id=431, 596.2275pt x 566.86781pt>
+File: ./Pictures/./Figures/cap2/microMu2.png Graphic file (type png)
+
+<use ./Pictures/./Figures/cap2/microMu2.png>
+Package pdftex.def Info: ./Pictures/./Figures/cap2/microMu2.png used on input l
+ine 268.
+(pdftex.def)             Requested size: 199.16656pt x 199.16788pt.
+ [20 <./Pictures/./Figures/cap2/sinDR.png> <./Pictures/./Figures/cap2/conRD.png
+>]
+<./Pictures/./Figures/cap2/microEx.png, id=440, 224.33812pt x 222.8325pt>
+File: ./Pictures/./Figures/cap2/microEx.png Graphic file (type png)
+
+<use ./Pictures/./Figures/cap2/microEx.png>
+Package pdftex.def Info: ./Pictures/./Figures/cap2/microEx.png used on input li
+ne 276.
+(pdftex.def)             Requested size: 199.16928pt x 197.84088pt.
+
+<./Pictures/./Figures/cap2/microexu.png, id=441, 236.38312pt x 228.855pt>
+File: ./Pictures/./Figures/cap2/microexu.png Graphic file (type png)
+
+<use ./Pictures/./Figures/cap2/microexu.png>
+Package pdftex.def Info: ./Pictures/./Figures/cap2/microexu.png used on input l
+ine 277.
+(pdftex.def)             Requested size: 199.17363pt x 199.17557pt.
+ [21 <./Pictures/./Figures/cap2/microMu.png> <./Pictures/./Figures/cap2/microMu
+2.png>]
+<./Pictures/./Figures/cap4/vasos/vaso1.jpg, id=454, 1054.94125pt x 1051.93pt>
+File: ./Pictures/./Figures/cap4/vasos/vaso1.jpg Graphic file (type jpg)
+
+<use ./Pictures/./Figures/cap4/vasos/vaso1.jpg>
+Package pdftex.def Info: ./Pictures/./Figures/cap4/vasos/vaso1.jpg used on inpu
+t line 288.
+(pdftex.def)             Requested size: 199.16928pt x 198.60074pt.
+
+<./Pictures/./Figures/cap2/vasosRetinpatia.png, id=455, 333.49594pt x 478.03593
+pt>
+File: ./Pictures/./Figures/cap2/vasosRetinpatia.png Graphic file (type png)
+ <use ./Pictures/./Figures/cap2/vasosRetinpatia.png>
+Package pdftex.def Info: ./Pictures/./Figures/cap2/vasosRetinpatia.png used on 
+input line 289.
+(pdftex.def)             Requested size: 199.17294pt x 199.16899pt.
+ [22 <./Pictures/./Figures/cap2/microEx.png> <./Pictures/./Figures/cap2/microex
+u.png> <./Pictures/./Figures/cap4/vasos/vaso1.jpg> <./Pictures/./Figures/cap2/v
+asosRetinpatia.png>])
+(./Chapters/bibliografia.tex [23] (./main.bbl [24]
+Underfull \hbox (badness 10000) in paragraph at lines 17--21
+[]\OT1/cmr/m/n/10.95 Factores de Ries-go de la re-ti-no-pat^^S^^Pa diab^^Seti-c
+a.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--21
+[][]$\OT1/cmtt/m/n/10.95 http : / / www . geteyesmart . org / eyesmart / diseas
+es-[]es /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--27
+\OT1/cmtt/m/n/10.95 eyesmart / diseases-[]es / retinopatia-[]diabetica / sintom
+as . cfm$[][]\OT1/cmr/m/n/10.95 ,
+ []
+
+[25
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 89--93
+[]\OT1/cmr/m/n/10.95 Pruebas of-tal-mol^^Sogi-cas.  [][]$\OT1/cmtt/m/n/10.95 ht
+tp : / / www . mapfre . es / salud / es /
+ []
+
+[26] [27]
+Underfull \hbox (badness 2698) in paragraph at lines 177--181
+[]\OT1/cmr/m/n/10.95 Retinopat^^S^^Pa Diab^^Seti-ca.  [][]$\OT1/cmtt/m/n/10.95 
+https : / / www . optos . com / ca / Pacientes /
+ []
+
+
+Underfull \hbox (badness 3919) in paragraph at lines 225--230
+[]\OT1/cmr/m/n/10.95 Dr. Pe-dro E. S^^Saenz.  Re-ti-no-pat^^S^^Pa diab^^Seti-ca
+.  [][]$\OT1/cmtt/m/n/10.95 http : / / www .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--230
+\OT1/cmtt/m/n/10.95 fihu-[]diagnostico . org . pe / revista / numeros / 2000 / 
+enefeb00 /
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 238--242
+[]\OT1/cmr/m/n/10.95 Foto-screening de Re-ti-no-pat^^S^^Pa Diab^^Seti-ca en Pa-
+ra-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--242
+\OT1/cmr/m/n/10.95 guay.  [][]$\OT1/cmtt/m/n/10.95 http : / / vision2020la . wo
+rdpress . com / 2012 / 09 / 16 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 238--242
+\OT1/cmtt/m/n/10.95 foto-[]screening-[]de-[]retinopatia-[]diabetica-[]en-[]para
+guay/$[][]\OT1/cmr/m/n/10.95 ,
+ []
+
+))
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 288.
- [10]
+ [29]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 288.
-
-(./main.aux
+ (./main.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 LaTeX Info: Redefining \. on input line 27.
@@ -1198,9 +1355,15 @@ LaTeX Info: Redefining \% on input line 27.
 )
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 288.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 288.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: BF1AE8E56FAA2F8A41EE24953C5C3B57;1971.
 
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: 14B05D202F7C5BC666D8B6C7C42472A6;6117
+(rerunfilecheck)             After:  657020C2CDE9AF4889654BD597600075;6122.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
@@ -1212,13 +1375,13 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 288.
 ### simple group (level 1) entered at line 197 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 17092 strings out of 493307
- 236032 string characters out of 6139905
- 355709 words of memory out of 5000000
- 20233 multiletter control sequences out of 15000+600000
- 19151 words of font info for 71 fonts, out of 8000000 for 9000
+ 17397 strings out of 493307
+ 242202 string characters out of 6139905
+ 359188 words of memory out of 5000000
+ 20425 multiletter control sequences out of 15000+600000
+ 20856 words of font info for 78 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 49i,12n,45p,13130b,607s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,12n,45p,13130b,701s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></u
@@ -1228,11 +1391,12 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts
 /type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (19 pages, 186965 bytes).
+/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmtt10.pfb>
+Output written on main.pdf (39 pages, 1653377 bytes).
 PDF statistics:
- 238 PDF objects out of 1000 (max. 8388607)
- 203 compressed objects within 3 object streams
- 50 named destinations out of 1000 (max. 500000)
- 110 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 586 PDF objects out of 1000 (max. 8388607)
+ 515 compressed objects within 6 object streams
+ 142 named destinations out of 1000 (max. 500000)
+ 331 words of extra memory for PDF output out of 10000 (max. 10000000)
 

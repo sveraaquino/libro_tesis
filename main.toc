@@ -6,9 +6,9 @@
 \contentsline {chapter}{Resumen}{\es@scroman {iii}}{dummy.2}
 \vspace {1em}
 \vspace {1em}
-\contentsline {chapter}{\'Indice de figuras}{\es@scroman {vi}}{dummy.4}
-\contentsline {chapter}{\'Indice de tablas}{\es@scroman {vii}}{dummy.6}
-\contentsline {chapter}{Abreviaciones}{\es@scroman {viii}}{dummy.8}
+\contentsline {chapter}{\'Indice de figuras}{\es@scroman {vii}}{dummy.4}
+\contentsline {chapter}{\'Indice de tablas}{\es@scroman {viii}}{dummy.6}
+\contentsline {chapter}{Abreviaciones}{\es@scroman {ix}}{dummy.8}
 \contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{2}{chapter.11}
 \contentsline {section}{\numberline {1.1}Justificaci\IeC {\'o}n y Motivaci\IeC {\'o}n}{4}{section.12}
 \contentsline {section}{\numberline {1.2}Antecedentes}{4}{section.13}
@@ -17,3 +17,28 @@
 \contentsline {subsection}{\numberline {1.4.1}Objetivos Generales}{6}{subsection.16}
 \contentsline {subsection}{\numberline {1.4.2}Objetivos Espec\IeC {\'\i }ficos}{7}{subsection.17}
 \contentsline {section}{\numberline {1.5}Organizaci\IeC {\'o}n de la Tesis}{7}{section.18}
+\contentsline {chapter}{\numberline {2}Cambio Clim\'atico}{9}{chapter.19}
+\contentsline {section}{\numberline {2.1}Ciclo de carbono}{9}{section.20}
+\contentsline {subsection}{\numberline {2.1.1}Secuestro de carbono}{10}{subsection.22}
+\contentsline {subsection}{\numberline {2.1.2}P\'erdida de Carbono}{11}{subsection.23}
+\contentsline {section}{\numberline {2.2}Biomasa}{11}{section.24}
+\contentsline {subsection}{\numberline {2.2.1}Biomasa Forestal}{11}{subsection.25}
+\contentsline {section}{\numberline {2.3}Estimaci\'on de carbono}{12}{section.26}
+\contentsline {subsection}{\numberline {2.3.1}Diabetes en Paraguay}{12}{subsection.27}
+\contentsline {subsection}{\numberline {2.3.2}Aumento de la prevalencia de la diabetes}{12}{subsection.28}
+\contentsline {section}{\numberline {2.4}Enfermedades del Ojo}{13}{section.30}
+\contentsline {section}{\numberline {2.5}Rese\IeC {\~n}a sobre retinopat\IeC {\'\i }a diab\IeC {\'e}tica}{14}{section.31}
+\contentsline {subsection}{\numberline {2.5.1}Causas}{14}{subsection.32}
+\contentsline {subsection}{\numberline {2.5.2}Factores de riesgo}{14}{subsection.33}
+\contentsline {subsection}{\numberline {2.5.3}S\IeC {\'\i }ntomas}{15}{subsection.34}
+\contentsline {subsection}{\numberline {2.5.4}Etapas de la retinopat\IeC {\'\i }a diab\IeC {\'e}tica}{15}{subsection.35}
+\contentsline {subsection}{\numberline {2.5.5}Tratamiento}{16}{subsection.36}
+\contentsline {subsubsection}{\numberline {2.5.5.1}Fotocoagulaci\IeC {\'o}n con L\IeC {\'a}ser}{16}{subsubsection.37}
+\contentsline {subsubsection}{\numberline {2.5.5.2}Terapia m\IeC {\'e}dica intrav\IeC {\'\i }trea}{16}{subsubsection.38}
+\contentsline {subsubsection}{\numberline {2.5.5.3}Tratamiento quir\IeC {\'u}rgico}{16}{subsubsection.39}
+\contentsline {section}{\numberline {2.6}Detecci\IeC {\'o}n de retinopat\IeC {\'\i }a diab\IeC {\'e}tica}{17}{section.40}
+\contentsline {section}{\numberline {2.7}Estructuras anat\IeC {\'o}micas y patolog\IeC {\'\i }as}{20}{section.45}
+\contentsline {subsection}{\numberline {2.7.1}Microaneurismas}{20}{subsection.46}
+\contentsline {subsection}{\numberline {2.7.2}Exudados duros}{21}{subsection.50}
+\contentsline {subsection}{\numberline {2.7.3}Vasos sangu\IeC {\'\i }neos}{22}{subsection.54}
+\contentsline {section}{\numberline {2.8}Resumen}{23}{section.58}

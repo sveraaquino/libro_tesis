@@ -1,6 +1,30 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{AMVMEB{\etalchar{+}}03}
 
+\bibitem[20m14]{20medios}
+{Diabetes, qué es? Causas y tratamiento}.
+\newblock \url
+  {http://http://20medios.com/2014/03/la-diabetes-que-es-causas-y-tratamiento/},
+  2014.
+
+\bibitem[AAO13a]{AAOcausas}
+{Causas de la retinopatía diabética}.
+\newblock \url
+  {http://www.geteyesmart.org/eyesmart/diseases-es/retinopatia-diabetica/causas.cfm},
+  2013.
+
+\bibitem[AAO13b]{AAORiesgos}
+{Factores de Riesgo de la retinopatía diabética}.
+\newblock \url
+  {http://www.geteyesmart.org/eyesmart/diseases-es/retinopatia-diabetica/riesgo.cfm},
+  2013.
+
+\bibitem[AAO13c]{AAOSintomas}
+{Síntomas de la retinopatía diabética}.
+\newblock \url
+  {http://www.geteyesmart.org/eyesmart/diseases-es/retinopatia-diabetica/sintomas.cfm},
+  2013.
+
 \bibitem[{\'A}JB{\etalchar{+}}01]{avila2001almacenamiento}
 G~{\'A}vila, F~Jim{\'e}nez, J~Beer, M~G{\'o}mez, and M~Ibrahim.
 \newblock Almacenamiento, fijaci{\'o}n de carbono y valoraci{\'o}n de servicios
@@ -22,12 +46,65 @@ Miguel Acosta~Mireles, Alejandro Vel{\'a}zquez~Mart{\'\i}nez, Jorge~D
 \newblock PhD thesis, Tesis Doctoral. Colegio de Postgraduados. Montecillo,
   M{\'e}xico, 2003.
 
+\bibitem[BBK94]{beaglehole1994epidemiologia}
+Robert Beaglehole, Ruth Bonita, and Tord Kjellstr{\"o}m.
+\newblock {\em Epidemiolog{\'\i}a b{\'a}sica}.
+\newblock OPS, 1994.
+
 \bibitem[BdFM03]{basualdo2003estrategia}
 Isabel Basualdo, Isabel~Gamarra de~Fox, and Miguel~Angel Morales.
 \newblock {\em Estrategia nacional y plan de acci{\'o}n para la
   conservaci{\'o}n de la biodiversidad del Paraguay: ENPAB, Estrategia Nacional
   y Plan de Acci{\'o}n de Biodiversidad, 2004-2009}.
 \newblock Presidencia de la Rep{\'u}blica, Secretar{\'\i}a del Ambiente, 2003.
+
+\bibitem[BvBMC11]{barria2011guia}
+F~Barr{\'\i}a-von Bischhoffshausen and F~Mart{\'\i}nez-Castro.
+\newblock Gu{\'\i}a practica cl{\'\i}nica de retinopat{\'\i}a diab{\'e}tica
+  para latinoam{\'e}rica.
+\newblock {\em Arlington, TX: Asociaci{\'o}n Panamericana de
+  Oftalmolog{\'\i}a}, page~27, 2011.
+
+\bibitem[C{\etalchar{+}}03]{uk2003criteria}
+UK~National~Screening Committee et~al.
+\newblock Criteria for appraising the viability, effectiveness and
+  appropriateness of a screening programme, 2003.
+
+\bibitem[Dia06]{diabetica2006pontificia}
+{\'A}lvarez R~Retinopat{\'\i}a Diab{\'e}tica.
+\newblock Pontificia universidad cat{\'o}lica de chile.
+\newblock {\em Bolet{\'\i}n de la escuela de medicina}, 31(3), 2006.
+
+\bibitem[Dur]{almando2014estimacion}
+Kris Vanessa~Almando Dure.
+\newblock Estimaci\'on de carbono almacenado en el parque nacional defensores
+  del chaco seg\'un formaci\'on vegetal mediante im\'agenes satelitales,
+  a\~{n}o 2014.
+
+\bibitem[eeS]{encaptura}
+Secuestro de~Carbono en~el Suelo.
+\newblock Captura de carbono.
+
+\bibitem[exa14]{exa}
+{Pruebas oftalmológicas}.
+\newblock \url
+  {http://www.mapfre.es/salud/es/cinformativo/fundoscopia-oftalmoscopia.shtml},
+  July 2014.
+
+\bibitem[F{\etalchar{+}}00]{francis2000estimating}
+JOHN~K Francis et~al.
+\newblock Estimating biomass and carbon content of saplings in puerto rican
+  secondary forests.
+\newblock {\em Caribbean Journal of Science}, 36(3/4):346--349, 2000.
+
+\bibitem[GMKM{\etalchar{+}}87]{garciduenas1987produccion}
+Apolo~Rolando Garcidue{\~n}as~Mart{\'\i}nez, R~Keyes, Mart{\'\i}nez~Menez
+  Michael, R~Mario, Zarate Lara, P~Guillermo, and ;~Programa~Forestal.
+  Colegio~de Postgraduados, Campus~Montecillo.
+\newblock {\em Producci{\'o}n de biomasa y acumulaci{\'o}n de nutrientes en un
+  rodal de Pinus montezumae Lamb}.
+\newblock PhD thesis, Tesis de Maestr{\'\i}a. Colegio de Postgraduados,
+  Montecillos, M{\'e}xico, 1987.
 
 \bibitem[GS03]{garzuglia2003wood}
 M~Garzuglia and M~Saket.
@@ -42,10 +119,29 @@ Chengquan Huang, Sunghee Kim, Kuan Song, John~RG Townshend, Paul Davis, Alice
   observations.
 \newblock {\em Global and Planetary Change}, 67(1):1--12, 2009.
 
+\bibitem[idf14]{idf}
+{International Diabetes Federation}.
+\newblock \url {http://www.idf.org/}, July 2014.
+
+\bibitem[KJ04]{kanski2004oftalmologia}
+J~Kanski~Jack.
+\newblock Oftalmolog{\'\i}a cl{\'\i}nica, 2004.
+
+\bibitem[LB05]{lu2005exploring}
+Dengsheng Lu and Mateus Batistella.
+\newblock Exploring tm image texture and its relationships with biomass
+  estimation in rond{\^o}nia, brazilian amazon.
+\newblock {\em Acta Amazonica}, 35(2):249--257, 2005.
+
 \bibitem[LK94]{lillesand1994remote}
 Thomas~M Lillesand and Ralph~W Kiefer.
 \newblock Remote sensing and image interpretation. john willey \& sons.
 \newblock {\em Inc, United States of America}, 1994.
+
+\bibitem[Man12]{manteca2012tratamiento}
+Jordi~Mesa Manteca.
+\newblock Tratamiento de la retinopat{\'\i}a diab{\'e}tica.
+\newblock {\em Diab{\'e}ticos: Presente y futuro}, (82):1, 2012.
 
 \bibitem[MG13]{martinez2013normalizacion}
 Raul Mart{\'\i}nez~Garrido.
@@ -54,20 +150,61 @@ Raul Mart{\'\i}nez~Garrido.
   mediterr{\'a}neo.
 \newblock 2013.
 
+\bibitem[nat]{natur2015PW}
+natureduca.
+\newblock El ciclo del carbono.
+
 \bibitem[Nel]{nellemann2009carbono}
 Corcoran E. Duarte C. M. Valdés L. De Young C. Fonseca L. Grimsditch~G
   Nellemann, C.
 \newblock Carbono azul. evaluación de una respuesta rápida.
+
+\bibitem[ohhs]{retinoUSdep}
+U.S.~Deparment of~health and National Eye~Institute human services, National
+  Institutes of~health.
+\newblock La retinopatía diabética. lo que usted debe saber.
 
 \bibitem[Oje]{peralta2013analisis}
 Fabian Miguel~Peralta Ojeda.
 \newblock Analisis del cambio de cobertura de la tierra y estimacion de carbono
   en el area para parque nacional san rafael, aÑo 2008/2013.
 
+\bibitem[oms]{oms}
+{Organización Mundial de la Salud}, month = jun, year = {2014}, howpublished
+  ="\url {http://www.who.int/es/}".
+
+\bibitem[opt14]{optos}
+{Retinopatía Diabética}.
+\newblock \url
+  {https://www.optos.com/ca/Pacientes/Patologias-oculares/Retinopatia-diabetica/},
+  2014.
+
 \bibitem[Par]{BAAPA2013}
 WWF Paraguay y la Facultad de Ciencias~Agrarias ParLu.
 \newblock Desarrollo del estudio de lÍnea de base para el sitio piloto bosque
   atlantico alto parana (baapa).
+
+\bibitem[PS]{pinaestimacion}
+Biol Rocio~Becerril Pi{\~n}a and Enrique~Gonz{\'a}lez Sosa.
+\newblock Estimaci{\'o}n del contenido y captura de carbono en zonas
+  semi{\'a}ridas microcuenca “el carmen”, gto.
+
+\bibitem[Rob02]{robert2002captura}
+Michel Robert.
+\newblock {\em Captura de carbono en los suelos para un mejor manejo de la
+  tierra}, volume~96.
+\newblock Food \& Agriculture Org., 2002.
+
+\bibitem[SGG00]{schlegel2000manual}
+Bastienne Schlegel, Jorge Gayoso, and Javier Guerra.
+\newblock Manual de procedimientos para muestreos de biomasa forestal.
+\newblock {\em Universidad Austral de Chile}, 2000.
+
+\bibitem[SH08]{salinas2008guia}
+Zenia Salinas and Paulo Hern{\'a}ndez.
+\newblock Gu{\'\i}a para el dise{\~n}o de proyectos mdl forestales y de
+  bioenerg{\'\i}a.
+\newblock 2008.
 
 \bibitem[SHB{\etalchar{+}}11]{saatchi2011benchmark}
 Sassan~S Saatchi, Nancy~L Harris, Sandra Brown, Michael Lefsky, Edward~TA
@@ -77,5 +214,46 @@ Sassan~S Saatchi, Nancy~L Harris, Sandra Brown, Michael Lefsky, Edward~TA
   three continents.
 \newblock {\em Proceedings of the National Academy of Sciences},
   108(24):9899--9904, 2011.
+
+\bibitem[Sli01]{slijepcevic2001loss}
+A~Slijepcevic.
+\newblock Loss of carbon during controlled regeneration burns in eucalyptus
+  obliqua forest.
+\newblock {\em TASFORESTS-HOBART-}, 13(2):281--290, 2001.
+
+\bibitem[Sá00]{PedroSaenzRetinopatiaDiabetica}
+Dr. Pedro~E. Sáenz.
+\newblock Retinopatía diabética.
+\newblock \url
+  {http://www.fihu-diagnostico.org.pe/revista/numeros/2000/enefeb00/19-30.html},
+  2000.
+
+\bibitem[vBC]{von2011guia}
+Fernando~Barr{\'\i}a von Bischhoffshausen and Francisco~Mart{\'\i}nez Castro.
+\newblock Gu{\'\i}a pr{\'a}ctica cl{\'\i}nica de retinopat{\'\i}a diab{\'e}tica
+  para latinoam{\'e}rica.
+\newblock {\em Revista M{\'e}dico Oftalm{\'o}logo}, 2011.
+
+\bibitem[vis14]{vision2020la}
+{Foto-screening de Retinopatía Diabética en Paraguay}.
+\newblock \url
+  {http://vision2020la.wordpress.com/2012/09/16/foto-screening-de-retinopatia-diabetica-en-paraguay/},
+  July 2014.
+
+\bibitem[WJ68]{wilson1968principles}
+JMG Wilson and G~Jungner.
+\newblock Principles and practice of screening.
+\newblock {\em WHO: Geneva}, 1968.
+
+\bibitem[WRG{\etalchar{+}}04]{wild2004global}
+Sarah~H Wild, Gojka Roglic, Anders Green, Richard Sicree, and Hilary King.
+\newblock Global prevalence of diabetes: estimates for the year 2000 and
+  projections for 2030 response to rathman and giani.
+\newblock {\em Diabetes care}, 27(10):2569--2569, 2004.
+
+\bibitem[Zav69]{zavon1969principles}
+Mitchell~R Zavon.
+\newblock Principles and practice of screening for disease.
+\newblock {\em Archives of Internal Medicine}, 123(3):349--349, 1969.
 
 \end{thebibliography}
