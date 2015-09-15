@@ -7,6 +7,11 @@
   {http://http://20medios.com/2014/03/la-diabetes-que-es-causas-y-tratamiento/},
   2014.
 
+\bibitem[A{\etalchar{+}}08]{angelsen2008moving}
+Arild Angelsen et~al.
+\newblock {\em Moving ahead with REDD: issues, options and implications}.
+\newblock Cifor, 2008.
+
 \bibitem[AAO13a]{AAOcausas}
 {Causas de la retinopatía diabética}.
 \newblock \url
@@ -33,6 +38,12 @@ G~{\'A}vila, F~Jim{\'e}nez, J~Beer, M~G{\'o}mez, and M~Ibrahim.
   costa rica.
 \newblock {\em Agroforester{\'\i}a en las Am{\'e}ricas (CATIE)}, 8(30):32--35,
   2001.
+
+\bibitem[AKB{\etalchar{+}}05]{asner2005selective}
+Gregory~P Asner, David~E Knapp, Eben~N Broadbent, Paulo~JC Oliveira, Michael
+  Keller, and Jose~N Silva.
+\newblock Selective logging in the brazilian amazon.
+\newblock {\em Science}, 310(5747):480--482, 2005.
 
 \bibitem[AMVMEB{\etalchar{+}}03]{acosta2003diseno}
 Miguel Acosta~Mireles, Alejandro Vel{\'a}zquez~Mart{\'\i}nez, Jorge~D
@@ -96,6 +107,11 @@ JOHN~K Francis et~al.
 \newblock Estimating biomass and carbon content of saplings in puerto rican
   secondary forests.
 \newblock {\em Caribbean Journal of Science}, 36(3/4):346--349, 2000.
+
+\bibitem[fao03]{fao2003revista}
+Revista internacional de silvicultura e industrias forestales.
+\newblock {\em Organización de las Naciones Unidas para la Agricultura y la
+  Alimentación}, 54, 2003.
 
 \bibitem[GMKM{\etalchar{+}}87]{garciduenas1987produccion}
 Apolo~Rolando Garcidue{\~n}as~Mart{\'\i}nez, R~Keyes, Mart{\'\i}nez~Menez
@@ -184,6 +200,12 @@ WWF Paraguay y la Facultad de Ciencias~Agrarias ParLu.
 \newblock Desarrollo del estudio de lÍnea de base para el sitio piloto bosque
   atlantico alto parana (baapa).
 
+\bibitem[Piz10]{cecilia2010Proyecto}
+Cecilia Pizzurno.
+\newblock Proyecto de evaluaci\'on de flujos de inversi\'on y financieros para
+  la mitigaci\'on al cambio clim\'atico en paraguay.
+\newblock 54, 2010.
+
 \bibitem[PS]{pinaestimacion}
 Biol Rocio~Becerril Pi{\~n}a and Enrique~Gonz{\'a}lez Sosa.
 \newblock Estimaci{\'o}n del contenido y captura de carbono en zonas
@@ -227,6 +249,14 @@ Dr. Pedro~E. Sáenz.
 \newblock \url
   {http://www.fihu-diagnostico.org.pe/revista/numeros/2000/enefeb00/19-30.html},
   2000.
+
+\bibitem[Tsu12]{libro2012Tsuyuki}
+Satoshi Tsuyuki.
+\newblock {\em Sensoramiento y tipos de sensores selecci\'on de datos de
+  sat\'elite}.
+\newblock Reducing Emissions from Deforestation and forest Degradation and the
+  Role of Conservation, Sustainable Management of Forests and Enhancement,
+  2012.
 
 \bibitem[vBC]{von2011guia}
 Fernando~Barr{\'\i}a von Bischhoffshausen and Francisco~Mart{\'\i}nez Castro.
