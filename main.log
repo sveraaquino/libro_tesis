@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.27)  24 SEP 2015 18:00
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.27)  1 OCT 2015 16:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -974,7 +974,7 @@ LaTeX Info: Redefining \nameref on input line 87.
 LaTeX Info: Redefining \. on input line 87.
 LaTeX Info: Redefining \% on input line 87.
 
-<./Pictures/./Figures/logo.png, id=132, 414.79968pt x 148.30406pt>
+<./Pictures/./Figures/logo.png, id=148, 414.79968pt x 148.30406pt>
 File: ./Pictures/./Figures/logo.png Graphic file (type png)
 
 <use ./Pictures/./Figures/logo.png>
@@ -1090,7 +1090,7 @@ LaTeX Info: Redefining \% on input line 2.
  Abreviaciones
 ------------------------------------------------------------------------------
 
-Overfull \hbox (26.9522pt too wide) in alignment at lines 273--273
+Overfull \hbox (26.9522pt too wide) in alignment at lines 274--274
  [] [] 
  []
 
@@ -1193,7 +1193,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--9
 
  []
 
-<./Pictures/./Figures/cicloCarbono.jpg, id=298, 521.95pt x 521.95pt>
+<./Pictures/./Figures/cicloCarbono.jpg, id=325, 521.95pt x 521.95pt>
 File: ./Pictures/./Figures/cicloCarbono.jpg Graphic file (type jpg)
 
 <use ./Pictures/./Figures/cicloCarbono.jpg>
@@ -1255,7 +1255,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
 
-<./Pictures/./Figures/sensores.png, id=337, 900.36375pt x 362.10281pt>
+<./Pictures/./Figures/sensores.png, id=363, 900.36375pt x 362.10281pt>
 File: ./Pictures/./Figures/sensores.png Graphic file (type png)
 
 <use ./Pictures/./Figures/sensores.png>
@@ -1281,14 +1281,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--25
  []
 
 
-<./Pictures/./Figures/cap3/firmaEspectral.jpg, id=370, 736.7525pt x 572.1375pt>
+<./Pictures/./Figures/cap3/firmaEspectral.jpg, id=396, 736.7525pt x 572.1375pt>
 File: ./Pictures/./Figures/cap3/firmaEspectral.jpg Graphic file (type jpg)
 <use ./Pictures/./Figures/cap3/firmaEspectral.jpg>
 Package pdftex.def Info: ./Pictures/./Figures/cap3/firmaEspectral.jpg used on i
 nput line 28.
 (pdftex.def)             Requested size: 375.7232pt x 291.7688pt.
  [17]
-<./Pictures/./Figures/cap3/espatialRes.jpg, id=378, 176.3388pt x 135.1449pt>
+<./Pictures/./Figures/cap3/espatialRes.jpg, id=404, 176.3388pt x 135.1449pt>
 File: ./Pictures/./Figures/cap3/espatialRes.jpg Graphic file (type jpg)
 
 <use ./Pictures/./Figures/cap3/espatialRes.jpg>
@@ -1296,7 +1296,7 @@ Package pdftex.def Info: ./Pictures/./Figures/cap3/espatialRes.jpg used on inpu
 t line 41.
 (pdftex.def)             Requested size: 166.98668pt x 127.9848pt.
 
-<./Pictures/./Figures/cap3/resolucionespectral.jpg, id=379, 530.98375pt x 377.4
+<./Pictures/./Figures/cap3/resolucionespectral.jpg, id=405, 530.98375pt x 377.4
 1pt>
 File: ./Pictures/./Figures/cap3/resolucionespectral.jpg Graphic file (type jpg)
 
@@ -1306,7 +1306,7 @@ Package pdftex.def Info: ./Pictures/./Figures/cap3/resolucionespectral.jpg used
 (pdftex.def)             Requested size: 250.48637pt x 178.03922pt.
  [18 <./Pictures/./Figures/cap3/firmaEspectral.jpg> <./Pictures/./Figures/cap3/
 espatialRes.jpg>]
-<./Pictures/./Figures/cap3/resolucionradiometrica.jpg, id=384, 323.2075pt x 211
+<./Pictures/./Figures/cap3/resolucionradiometrica.jpg, id=410, 323.2075pt x 211
 .79124pt>
 File: ./Pictures/./Figures/cap3/resolucionradiometrica.jpg Graphic file (type j
 pg)
@@ -1315,7 +1315,7 @@ Package pdftex.def Info: ./Pictures/./Figures/cap3/resolucionradiometrica.jpg u
 sed on input line 55.
 (pdftex.def)             Requested size: 250.48637pt x 164.13974pt.
 
-<./Pictures/./Figures/cap3/temporalRes.png, id=385, 451.6875pt x 348.55219pt>
+<./Pictures/./Figures/cap3/temporalRes.png, id=411, 451.6875pt x 348.55219pt>
 File: ./Pictures/./Figures/cap3/temporalRes.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap3/temporalRes.png>
@@ -1339,28 +1339,81 @@ Underfull \hbox (badness 10000) in paragraph at lines 87--91
 
  []
 
-[21]) (./Chapters/bibliografia.tex [22] (./main.bbl [23] [24
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 97--100
 
-] [25] [26]))
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 297.
+ []
 
-[27]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 297.
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--116
+
+ []
+
+[22]
+<./Pictures/./Figures/cap3/inter_spacial.png, id=445, 463.7325pt x 401.24907pt>
+File: ./Pictures/./Figures/cap3/inter_spacial.png Graphic file (type png)
+<use ./Pictures/./Figures/cap3/inter_spacial.png>
+Package pdftex.def Info: ./Pictures/./Figures/cap3/inter_spacial.png used on in
+put line 121.
+(pdftex.def)             Requested size: 375.7232pt x 325.10179pt.
+ [23] [24 <./Pictures/./Figures/cap3/inter_spacial.png>]
+<./Pictures/./Figures/cap3/ecuacPolinomica.png, id=461, 628.59843pt x 314.67563
+pt>
+File: ./Pictures/./Figures/cap3/ecuacPolinomica.png Graphic file (type png)
+ <use ./Pictures/./Figures/cap3/ecuacPolinomica.png>
+Package pdftex.def Info: ./Pictures/./Figures/cap3/ecuacPolinomica.png used on 
+input line 147.
+(pdftex.def)             Requested size: 375.7232pt x 188.0866pt.
+ [25 <./Pictures/./Figures/cap3/ecuacPolinomica.png>]
+<./Pictures/./Figures/cap3/interRadio.png, id=469, 566.86781pt x 465.99094pt>
+File: ./Pictures/./Figures/cap3/interRadio.png Graphic file (type png)
+
+<use ./Pictures/./Figures/cap3/interRadio.png>
+Package pdftex.def Info: ./Pictures/./Figures/cap3/interRadio.png used on input
+ line 163.
+(pdftex.def)             Requested size: 375.7232pt x 308.87039pt.
+ [26 <./Pictures/./Figures/cap3/interRadio.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 179--182
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--188
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 189--192
+
+ []
+
+[27]) (./Chapters/bibliografia.tex [28] (./main.bbl [29] [30
+
+] [31] [32]))
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 298.
+
+[33]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 298.
  (./main.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
 LaTeX Info: Redefining \. on input line 27.
 LaTeX Info: Redefining \% on input line 27.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 297.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 297.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 298.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 298.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DE5FF1101921A5423D943F2E906FCA23;5940.
+(rerunfilecheck)             Checksum: 22E781A87E1F182013CD62B4F40E2B91;6853.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 297.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 298.
  )
 (\end occurred inside a group at level 2)
 
@@ -1368,30 +1421,32 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 297.
 ### simple group (level 1) entered at line 197 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 17329 strings out of 493307
- 241296 string characters out of 6139905
- 356065 words of memory out of 5000000
- 20384 multiletter control sequences out of 15000+600000
+ 17377 strings out of 493307
+ 242325 string characters out of 6139905
+ 356332 words of memory out of 5000000
+ 20403 multiletter control sequences out of 15000+600000
  19452 words of font info for 72 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 49i,12n,45p,13130b,684s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 49i,13n,45p,13130b,684s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmti12.pfb>
-Output written on main.pdf (37 pages, 1328485 bytes).
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/te
+xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (43 pages, 1638043 bytes).
 PDF statistics:
- 511 PDF objects out of 1000 (max. 8388607)
- 444 compressed objects within 5 object streams
- 117 named destinations out of 1000 (max. 500000)
- 297 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 600 PDF objects out of 1000 (max. 8388607)
+ 517 compressed objects within 6 object streams
+ 143 named destinations out of 1000 (max. 500000)
+ 344 words of extra memory for PDF output out of 10000 (max. 10000000)
 

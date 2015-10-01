@@ -94,7 +94,114 @@ Se calcula extrayendo de las bandas correspondientes al rojo $B_{R}$ e infrarroj
 Las plantas muestran un fuerte pico de absorci\'on causados por los pigmentos fotosint\'eticos en longitudes de onda cercanas a los 700 micrones, hecho que contrasta con una fuerte reflexi\'on de las longitudes de onda del infrarrojo cercano. Por su parte, los suelos desnudos se caracterizan por un incremento suavemente monot\'onico de la reflectancia, a medida que aumenta la longitud de onda.
 
 \section{An\'alisis Multitemporal}
-Sea uno u otro el enfoque aplicado al estudio multitemporal, resulta preciso abordar previamente una serie de tratamientos sobre las im\'agenes satelitales de cara a garantizar su comparabilidad. Existen factores que influye desde la captura de informaci\'on hasta su transformaci\'on a niveles digitales.
+B\'asicamente el an\'alisis multitemporal consiste en el estudio de zonas determinadas mediante tomas hechas en diferentes tiempos, Chuvieco \cite{salinero2002teledeteccion} resalta que el factor temporal puede abordarse con un doble objetivo: por un lado reconstruir la variaci\'on estacional de la zona y por otra parte la detecci\'on de cambios, esta \'ultima se enfoca a detectar cambios entre dos o m\'as
+fechas alejadas en el tiempo, estudia el dinamismo temporal de una determinada zona, como por ejemplo: el crecimiento urbano, transformaciones agrícolas, entre otras.\\~\\
+Sea uno u otro el enfoque aplicado al estudio multitemporal, resulta preciso abordar previamente una serie de tratamientos sobre las im\'agenes satelitales de cara a garantizar su comparabilidad, ya que existen factores, naturales o las del sensor, que influye desde la captura de informaci\'on hasta su transformaci\'on final a niveles digitales que podr\'ian afectar el an\'alisis.
+
+
+\section{Correciones a las im\'agenes de sat\'elites}
+Una imagen de sat\'elite est\'a sometida a una serie de interferencias que hacen que la informaci\'on que quiere obtenerse aparezca perturbada por una serie de errores:
+	\begin{itemize}
+		\item Fallos en los sensores, generan pixeles incorrectos.
+		\item Alteraciones en el movimiento del sat\'elite y el mecanismo de captaci\'on e los sensores, generan
+		distorsiones en la imagen global.
+		\item Interferencia de la atm\'osfera, alteran de forma sistem\'atica los valores de los pixeles.
+	\end{itemize}
+
+
+\subsection{Correccci\'on geom\'etrica}
+Una imagen de sat\'elite, al igual que las fotograf\'ias a\'ereas, no proporciona informaci\'on georreferenciada; cada pixel se ubica en un sistema de coordenadas arbitrario de tipo fila-columna como los que manejan los programas de tratamiento digital de im\'agenes.\\~\\
+El proceso consiste en dar a cada pixel su localizaci\'on en un sistema de coordenadas estandard (UTM, lambert, coordenadas geogr\'aficas) para poder, de este modo, combinar la imagen de sat\'elite con otro tipo de capas en un entorno SIG. Mediante esto, se obtiene una nueva capa en la que cada columna corresponde con un valor de longitud y cada fila con un valor de latitud. En caso de que la imagen no hubiese sufrido ningún tipo de distorsi\'on, el procedimiento ser\'ia bastante sencillo, sin embargo una imagen puede sufrir diversos tipos de distorsiones.\\~\\
+Es necesario localizar puntos comunes de la imagen con puntos de referencias, como tarea incial para la correcci\'on geom\'etrica, de manera a poder realizar una interpolaci\'on espacial y de los valores radiom\'etricos.
+
+\subsubsection{Interpolaci\'on espacial}
+Consiste en la determinaci\'on de la relaci\'on geom\'etrica entre las coordenadas del pixel de la imagen a corregir y las coordenadas correspondientes. Utilizando los puntos comunes localizados, se plantea una ecuaci\'on de transformaci\'on mediante la cual se obtiene la posici\'on de los pixeles en la imagen de salida, ilustrada en la figura \ref{fig:intEspacial}. Este proceso tambi\'en es conocido como Georreferenciaci\'on. El m\'etodo mas utilizado para la transformaci\'on es el de ecuaciones polin\'omicas. 
+    \begin{figure}[H]
+    	\centering
+    	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/inter_spacial.png}
+    	\caption{Localizaci\'on de puntos comunes y puntos de referencia.}
+    	\label{fig:intEspacial}
+    \end{figure}
+ 
+ La transformaci\'on puede expresarse de la siguiente manera:
+	\begin{equation}
+	s = \sum_{j=0}^{m} \sum_{k=0}^{m-j} a_{ij}c^{j}l^{k}
+	\end{equation} 
+
+Donde $ s $ indica la coordenada en la imagen corregida, $ c $ y $ l $ representan las coordenadas de la imagen de entrada. El superindice $ m $ indica el grado del polinomio de ajuste. Siendo la ecuaci\'on lineal las mas simple:
+	\begin{equation}
+	x_{i} = a_{0}+a_{1}c_{i}+a_{2}l_{i}
+	\end{equation} 
+		\begin{equation}
+		y_{i} = b_{0}+b_{1}c_{i}+b_{2}l_{i}
+		\end{equation} 
+En distorsiones moderadas o en un \'area reducida, se utilizan transformaciones de primer orden, pudiendo corregir efectos de translaci\'on en $ x $ e $ y $, cambios de escala y rotaci\'on.
+En distorsiones m\'as importantes o en \'areas extensas, es necesario una transfomaci\'on de segundo orden. Este tipo de transformaci\'on agregan a diferencia del primer orden, correcciones a deformaciones locales.
+Para calcular la calidad en la interpolaci\'on espacial y los puntos de control seleccionados, se utiliza el error cuadrático medio (RMS).
+		\begin{equation}
+		RMS = \sqrt{(c_{corr}-c_{orig})^{2}+(l_{corr}-l_{orig})^{2}}
+		\end{equation} 
+
+    \begin{figure}[H]
+    	\centering
+    	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/ecuacPolinomica.png}
+    	\caption{Interpolaci\'on espacial con polinomios de primer y segundo orden.}
+    	\label{fig:intPolEcua}
+    \end{figure}
+
+
+\subsubsection{Interpolaci\'on de los valores radiom\'etricos}
+La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digital perteneciente a la imagen original, a la imagen corregida. Lo que se pretende es crear una imagen que se corresponda con estas coordenadas, por lo tanto, resulta necesario trasvasar de alguna forma, los niveles digital originales a su nueva posici\'on. Pudi\'endose ser abordada por tres m\'etodos diferentes:
+	\begin{itemize}
+		\item \textbf{Vecino m\'as pr\'oximo:} situ\'a en cada celda de la imagen corregida el nivel digital del pixel m\'as cercano en la imagen original. Constituye la soluci\'on m\'as r\'apida y la que supone menor transformaci\'on en los niveles digitales originales. Su principal inconveniente es que produce una distorsi\'on en rasgos lineales en la imagen(fracturas, carreteras, caminos), que pueden aparecer en la corregida como lineales quebradas.
+		\item \textbf{Interpolaci\'on bilineal:} promedia del nivel digital de los cuatros pixeles m\'as cercanos en la imagen original. Este promedio se ponderan seg\'un la distancia del pixel original al corregido; tienen una mayor influencia aquellos pixeles m\'as cercanos en la imagen inicial, pero tienden a difuminar un tanto los contrastes espaciales de la imagen original.
+		\item \textbf{Convoluci\'on c\'ubica:} considera los niveles digitales de los 16 pixeles m\'as pr\'oximos. El efecto visual es m\'as correcto, pero supone un volumen de c\'alculo mucho m\'as elevado.
+	\end{itemize}
+
+    \begin{figure}[H]
+    	\centering
+    	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/interRadio.png}
+    	\caption{M\'etodos de interpolaci\'on radiom\'etricas.}
+    	\label{fig:intRadiometrica}
+    \end{figure}
+
+
+
+\subsection{Correcci\'on radiom\'etrica}
+La correci\'on radiom\'etrica se encarga de minimizar los desajustes producidos en el registro del valor digital en las celdas de la imagen, de hecho en algunos casos las estaciones receptoras llevan a cabo alg\'un tipo de correcci\'on en el momento de recepci\'on de la imagen. La corrección radiom\'etrica implica por una parte la restauraci\'on de lineas o p\'ixeles perdidos y por otra la correcci\'on del bandeado en la imagen.
+
+\subsubsection{Pixeles o lineas perdidas}
+Si se ha perdido el valor de alg\'un pixel la solución m\'as simple ser\'ia estimarlo como la media de los valores
+del mismo pixel en las lineas anterior y posterior (no es recomendable utilizar los pixeles contiguos de la misma linea por que han sido captados por el mismo detector o banda que ha dado el fallo, por tanto son
+poco fiables).
+		\begin{equation}
+		ND_{i,j} = round(\dfrac{ND_{i-1,j} + ND_{i+1,j}}{2})
+		\end{equation} 
+Siendo $ ND $ el valor digital de la imagen, $ round() $ funci\'on que indica el redondeo entero m\'as cercano.\\~\\
+Las diferentes bandas ($ k $ y $ r $) de una imagen están altamente correlacionadas y adem\'as los detectores de dos bandas diferentes no son los mismos. Por tanto podría utilizarse el valor del pixel faltante en una banda diferente para mejorar la estimaci\'on:
+
+		\begin{equation}
+		ND_{i,j,k} = round(\dfrac{s_{k}}{s_{r}}(ND_{i,j,r}-\dfrac{ND_{i+1,j,r} - ND_{i-1,j,r}}{2} + \dfrac{ND_{i+1,j,k} + ND_{i-1,j,k}}{2}))
+		\end{equation} 	
+En caso de que la imagen abarque un territorio amplio y cambiante resulta recomendable calcular los coeficientes de correlaci\'on y las desviaciones t\'ipicas ($ sk $ y $ sr $) en un entorno cercano al pixel perdido.\\~\\
+Para detectar lineas perdidas se compara la media de los $ ND $ de una linea con las medias de las lineas anterior y posterior, para detectar pixeles perdidos se compara el valor de un pixel con los de los 8 pixeles vecinos mediante alg\'un procedimiento de filtrado.
+\subsubsection{Bandeado}
+El fen\'omeno del bandeado se debe a una mala calibraci\'on entre detectores y resulta especialmente visible en las zonas de baja radiancia (zonas marinas por ejemplo). El resultado es la aparici\'on peri\'odica de una banda m\'as clara u oscura que las dem\'as.
+Para corregir el bandeado se asume que, en caso de no haber error, los histogramas obtenidos por cada uno de los detectores ser\'ian similares entre s\'i y similares al histograma global de la imagen que se toma como referencia.\\~\\
+En primer lugar se calculan los coeficientes $ a_{k} $ y $ b_{k} $ para una correcci\'on lineal de cada uno de las bandas.
+		\begin{equation}
+		b_{k}=\dfrac{s}{s_{k}}
+		\end{equation} 	
+				\begin{equation}
+				a_{k}=m - b_{k}m_{k}
+				\end{equation} 	
+Donde $ m $ y $ s $ son la media y la desviaci\'on t\'ipica del conjunto de pixeles de la imagen y $ m_{k} $ y $ s_{k} $ la media
+y la desviaci\'on t\'ipica de los pixeles obtenidos por el detector $ k $. A continuaci\'on los $ ND $ de la imagen se recalculan como:
+				\begin{equation}
+				ND_{i,j}^{'} = a_{k}+b_{k}ND_{i,j}
+				\end{equation} 	
+asumiendo que la linea $ i $ pertenece a la banda $ k $.				
+
 
 %\begin{equation}
 %\label{eq:imagenDigital}
@@ -102,7 +209,7 @@ Sea uno u otro el enfoque aplicado al estudio multitemporal, resulta preciso abo
 %f(0,0) &f(0,1)  & \cdots & f(0,N-1) \\ 
 %f(1,0) & f(1,1) & \cdots  & f(1,N-1)\\ 
  %\vdots & \vdots & & \vdots \\ 
- %f(M-1,0) & f(M-1,1)  &\cdots  & f(M-1,N-1)
+ %f(M-1,0) & f(M-$  $1,1)  &\cdots  & f(M-1,N-1)
 %\end{bmatrix}
 %\end{equation}
 

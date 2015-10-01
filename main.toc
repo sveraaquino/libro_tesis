@@ -36,3 +36,11 @@
 \contentsline {subsection}{\numberline {3.2.1}Tipo de im\'agenes satelitales}{20}{subsection.43}
 \contentsline {section}{\numberline {3.3}\'Indices de vegetaci\'on}{21}{section.44}
 \contentsline {subsection}{\numberline {3.3.1}\'Indice de vegetaci\'on diferencial normalizada}{21}{subsection.45}
+\contentsline {section}{\numberline {3.4}An\'alisis Multitemporal}{22}{section.47}
+\contentsline {section}{\numberline {3.5}Correciones a las im\'agenes de sat\'elites}{22}{section.48}
+\contentsline {subsection}{\numberline {3.5.1}Correccci\'on geom\'etrica}{23}{subsection.49}
+\contentsline {subsubsection}{\numberline {3.5.1.1}Interpolaci\'on espacial}{23}{subsubsection.50}
+\contentsline {subsubsection}{\numberline {3.5.1.2}Interpolaci\'on de los valores radiom\'etricos}{25}{subsubsection.57}
+\contentsline {subsection}{\numberline {3.5.2}Correcci\'on radiom\'etrica}{26}{subsection.59}
+\contentsline {subsubsection}{\numberline {3.5.2.1}Pixeles o lineas perdidas}{27}{subsubsection.60}
+\contentsline {subsubsection}{\numberline {3.5.2.2}Bandeado}{27}{subsubsection.63}

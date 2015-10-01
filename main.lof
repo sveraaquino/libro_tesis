@@ -10,3 +10,6 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Resoluci\'on espectral igual a 3 para el sensor SPOT y 7 en el sensor Landsat.\relax }}{19}{figure.caption.39}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Resoluci\'on radiom\'etrica de 8 bits (0 a 255 niveles digitales).\relax }}{19}{figure.caption.40}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Resoluci\'on temporal de 16 d\'ias.\relax }}{20}{figure.caption.41}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Localizaci\'on de puntos comunes y puntos de referencia.\relax }}{24}{figure.caption.51}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Interpolaci\'on espacial con polinomios de primer y segundo orden.\relax }}{25}{figure.caption.56}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces M\'etodos de interpolaci\'on radiom\'etricas.\relax }}{26}{figure.caption.58}
