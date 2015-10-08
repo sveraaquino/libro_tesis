@@ -3,56 +3,64 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: alpha.bst
 Database file #1: Bibliography.bib
+Warning--entry type for "gl2015Uni" isn't style-file defined
+--line 1 of file Bibliography.bib
+Warning--entry type for "landsatNasa" isn't style-file defined
+--line 8 of file Bibliography.bib
+Warning--entry type for "deniseCultivos" isn't style-file defined
+--line 76 of file Bibliography.bib
+Warning--entry type for "teledUm" isn't style-file defined
+--line 85 of file Bibliography.bib
 Warning--entry type for "almando2014estimacion" isn't style-file defined
---line 168 of file Bibliography.bib
+--line 259 of file Bibliography.bib
 Warning--entry type for "natur2015PW" isn't style-file defined
---line 190 of file Bibliography.bib
+--line 281 of file Bibliography.bib
 Warning--entry type for "BAAPA2013" isn't style-file defined
---line 196 of file Bibliography.bib
+--line 290 of file Bibliography.bib
 Warning--entry type for "nellemann2009carbono" isn't style-file defined
---line 238 of file Bibliography.bib
+--line 332 of file Bibliography.bib
 Warning--entry type for "peralta2013analisis" isn't style-file defined
---line 292 of file Bibliography.bib
-"{" immediately follows a field name---line 906 of file Bibliography.bib
+--line 386 of file Bibliography.bib
+"{" immediately follows a field name---line 1000 of file Bibliography.bib
  : @article
  :         {gonzalez2013tecnicas,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1104 of file Bibliography.bib
+I was expecting a `,' or a `}'---line 1198 of file Bibliography.bib
  : 
  : @ONLINE{idf,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1435 of file Bibliography.bib
+I was expecting a `,' or a `}'---line 1529 of file Bibliography.bib
  : 
  : @ONLINE{nei,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 1834 of file Bibliography.bib
+You're missing a field name---line 1928 of file Bibliography.bib
  :  
  :  %month = jul,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 1850 of file Bibliography.bib
+You're missing a field name---line 1944 of file Bibliography.bib
  :  
  :  %edition = {2},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 1885 of file Bibliography.bib
+You're missing a field name---line 1979 of file Bibliography.bib
  :  
  :  %month = jul,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 1897 of file Bibliography.bib
+You're missing a field name---line 1991 of file Bibliography.bib
  :   
  :   %pages={185--208},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 1934 of file Bibliography.bib
+You're missing a field name---line 2028 of file Bibliography.bib
  :  
  :  %issue_date = {2013},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting an "="---line 2257 of file Bibliography.bib
+I was expecting an "="---line 2351 of file Bibliography.bib
  : +´`  
  :       title={Color image palette construction based on the HSI color system for minimizing the reconstruction error},
 I'm skipping whatever remains of this entry
@@ -159,45 +167,45 @@ Warning--empty journal in perez2011aplicaciones
 Warning--empty publisher in salinero2002teledeteccion
 Warning--empty journal in salinas2008guia
 Warning--there's a number but no series in sivakumar2004satellite
-You've used 32 entries,
+You've used 42 entries,
             2543 wiz_defined-function locations,
-            726 strings with 11551 characters,
-and the built_in function-call counts, 11825 in all, are:
-= -- 1108
-> -- 688
-< -- 18
-+ -- 240
-- -- 240
-* -- 842
-:= -- 2037
-add.period$ -- 89
-call.type$ -- 32
-change.case$ -- 212
-chr.to.int$ -- 32
-cite$ -- 44
-duplicate$ -- 454
-empty$ -- 780
-format.name$ -- 274
-if$ -- 2321
+            782 strings with 13335 characters,
+and the built_in function-call counts, 15402 in all, are:
+= -- 1461
+> -- 851
+< -- 24
++ -- 295
+- -- 294
+* -- 1094
+:= -- 2618
+add.period$ -- 115
+call.type$ -- 42
+change.case$ -- 273
+chr.to.int$ -- 42
+cite$ -- 54
+duplicate$ -- 584
+empty$ -- 1054
+format.name$ -- 341
+if$ -- 3037
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 30
-newline$ -- 157
-num.names$ -- 93
-pop$ -- 246
+missing$ -- 36
+newline$ -- 203
+num.names$ -- 123
+pop$ -- 313
 preamble$ -- 1
-purify$ -- 251
+purify$ -- 322
 quote$ -- 0
-skip$ -- 393
+skip$ -- 514
 stack$ -- 0
-substring$ -- 406
-swap$ -- 48
-text.length$ -- 18
-text.prefix$ -- 10
+substring$ -- 615
+swap$ -- 58
+text.length$ -- 24
+text.prefix$ -- 14
 top$ -- 0
-type$ -- 236
+type$ -- 316
 warning$ -- 11
-while$ -- 97
-width$ -- 38
-write$ -- 378
+while$ -- 133
+width$ -- 47
+write$ -- 492
 (There were 55 error messages)

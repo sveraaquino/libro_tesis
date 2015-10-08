@@ -42,5 +42,19 @@
 \contentsline {subsubsection}{\numberline {3.5.1.1}Interpolaci\'on espacial}{23}{subsubsection.50}
 \contentsline {subsubsection}{\numberline {3.5.1.2}Interpolaci\'on de los valores radiom\'etricos}{25}{subsubsection.57}
 \contentsline {subsection}{\numberline {3.5.2}Correcci\'on radiom\'etrica}{26}{subsection.59}
-\contentsline {subsubsection}{\numberline {3.5.2.1}Pixeles o lineas perdidas}{27}{subsubsection.60}
-\contentsline {subsubsection}{\numberline {3.5.2.2}Bandeado}{27}{subsubsection.63}
+\contentsline {subsubsection}{\numberline {3.5.2.1}Pixeles o lineas perdidas}{27}{subsubsection.61}
+\contentsline {subsubsection}{\numberline {3.5.2.2}Bandeado}{28}{subsubsection.64}
+\contentsline {section}{\numberline {3.6}Proceso de detecci\'on de cambios}{29}{section.69}
+\contentsline {subsection}{\numberline {3.6.1}Comparaci\'on multitemporal}{30}{subsection.70}
+\contentsline {subsection}{\numberline {3.6.2}Criterios de decisi\'on}{30}{subsection.73}
+\contentsline {subsubsection}{\numberline {3.6.2.1}Discriminaci\'on de las zonas de cambio}{31}{subsubsection.74}
+\contentsline {chapter}{\numberline {4}Materiales y Metodolog\'ia}{34}{chapter.77}
+\contentsline {section}{\numberline {4.1}Materiales}{34}{section.78}
+\contentsline {subsection}{\numberline {4.1.1}Im\'agenes satelitales}{34}{subsection.79}
+\contentsline {subsubsection}{\numberline {4.1.1.1}Landsat}{34}{subsubsection.80}
+\contentsline {subsubsection}{\numberline {4.1.1.2}Vegetation Continuous Fields}{35}{subsubsection.82}
+\contentsline {subsubsection}{\numberline {4.1.1.3}Paraguay Forest Change Product}{36}{subsubsection.84}
+\contentsline {subsection}{\numberline {4.1.2}Software}{37}{subsection.86}
+\contentsline {subsubsection}{\numberline {4.1.2.1}GRASS}{37}{subsubsection.87}
+\contentsline {subsubsection}{\numberline {4.1.2.2}Quantum GIS}{37}{subsubsection.88}
+\contentsline {section}{\numberline {4.2}Metodolog\'ia}{37}{section.89}

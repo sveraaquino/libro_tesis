@@ -59,6 +59,16 @@ Corey Baker, Rick Lawrence, Clifford Montagne, and Duncan Patten.
   decision-tree-based models.
 \newblock {\em Wetlands}, 26(2):465--474, 2006.
 
+\bibitem[Chu98]{chuvieco1998factor}
+E~Chuvieco.
+\newblock El factor temporal en teledetecci{\'o}n: evoluci{\'o}n
+  fenomenol{\'o}gica y an{\'a}lisis de cambios.
+\newblock {\em Revista de teledetecci{\'o}n}, 10:39--48, 1998.
+
+\bibitem[dM]{teledUm}
+Universidad de~Murcia.
+\newblock Correciones a las imágenes de satélites.
+
 \bibitem[Dur]{almando2014estimacion}
 Kris Vanessa~Almando Dure.
 \newblock Estimaci\'on de carbono almacenado en el parque nacional defensores
@@ -68,6 +78,12 @@ Kris Vanessa~Almando Dure.
 \bibitem[eeS]{encaptura}
 Secuestro de~Carbono en~el Suelo.
 \newblock Captura de carbono.
+
+\bibitem[ERdR04]{estornell2004analisis}
+J~Estornell, LA~Ruiz, and A~del Rey.
+\newblock An{\'a}lisis metodol{\'o}gico para la detecci{\'o}n de cambios
+  urbanos en la ciudad de valencia.
+\newblock {\em Revista de Teledetecci{\'o}n}, 22:55--56, 2004.
 
 \bibitem[fao03]{fao2003revista}
 Revista internacional de silvicultura e industrias forestales.
@@ -128,6 +144,10 @@ Fabian Miguel~Peralta Ojeda.
 \newblock Analisis del cambio de cobertura de la tierra y estimacion de carbono
   en el area para parque nacional san rafael, aÑo 2008/2013.
 
+\bibitem[oM]{gl2015Uni}
+University of~Maryland.
+\newblock Global land cover facility.
+
 \bibitem[Par]{BAAPA2013}
 WWF Paraguay y la Facultad de Ciencias~Agrarias ParLu.
 \newblock Desarrollo del estudio de lÍnea de base para el sitio piloto bosque
@@ -144,6 +164,20 @@ Mar{\'\i}a P{\'e}rez~Ortega.
 \newblock Aplicaciones de la teledetecci{\'o}n y sig en la caracterizaci{\'o}n
   de humedales en la reserva de la biosfera de la mancha h{\'u}meda.
 \newblock 2011.
+
+\bibitem[RAAKR05]{radke2005image}
+Richard~J Radke, Srinivas Andra, Omar Al-Kofahi, and Badrinath Roysam.
+\newblock Image change detection algorithms: a systematic survey.
+\newblock {\em Image Processing, IEEE Transactions on}, 14(3):294--307, 2005.
+
+\bibitem[RGGSCO{\etalchar{+}}10]{rodriguez2010analisis}
+VF~Rodr{\'\i}guez-Galiano, MJ~Garc{\'\i}a-Soldado, M~Chica-Olmo,
+  E~Pardo-Ig{\'u}zquiza, JP~Rigol-S{\'a}nchez, and M~Chica-Rivas.
+\newblock An{\'a}lisis de cambios de usos del suelo en la {\guillemotleft}vega
+  de granada{\guillemotright}: correcciones radiom{\'e}tricas y evaluaci{\'o}n
+  del cambio land-cover change analysis in {\guillemotleft}vega de
+  granada{\guillemotright}: radiometric corrections.
+\newblock {\em Revista de Teledetecci{\'o}n}, 2010(34):5--15, 2010.
 
 \bibitem[Rob02]{robert2002captura}
 Michel Robert.
@@ -177,6 +211,12 @@ Sassan~S Saatchi, Nancy~L Harris, Sandra Brown, Michael Lefsky, Edward~TA
 \newblock {\em Proceedings of the National Academy of Sciences},
   108(24):9899--9904, 2011.
 
+\bibitem[Sin89]{singh1989review}
+Ashbindu Singh.
+\newblock Review article digital change detection techniques using
+  remotely-sensed data.
+\newblock {\em International journal of remote sensing}, 10(6):989--1003, 1989.
+
 \bibitem[SMIY00]{sader2000estimacion}
 SA~Sader, EB~Martinez, DE~Irwin, and HT~Yax.
 \newblock Estimaci{\'o}n de la deforestaci{\'o}n en la reserva de la biosfera
@@ -192,11 +232,26 @@ MVK Sivakumar, PS~Roy, K~Harmsen, and SK~Saha.
 \newblock In {\em Proceedings of the Training Workshop in Dehradun, India.
   AGM-8, WMO/TD}, number 1182, 2004.
 
+\bibitem[Sur]{landsatNasa}
+United States~Geological Survey.
+\newblock Landsat project description.
+
 \bibitem[SZ05]{speranza2005potencialidad}
 FC~Speranza and HR~Zerda.
 \newblock Potencialidad de los {\'\i}ndices de vegetaci{\'o}n para la
   discriminaci{\'o}n de coberturas forestales.
 \newblock {\em Proyecto Picto}, 12931, 2005.
+
+\bibitem[TL88]{tung1988determination}
+F~Tung and Ellsworth LeDrew.
+\newblock The determination of optimal threshold levels for change detection
+  using various accuracy indexes.
+\newblock {\em Photogrammetric Engineering and Remote Sensing},
+  54(10):1449--1454, 1988.
+
+\bibitem[Tro]{deniseCultivos}
+Denise~Trevisan Troche.
+\newblock Identificaci\'on de cultivos mediante im\'agenes satelitales.
 
 \bibitem[Tsu12]{libro2012Tsuyuki}
 Satoshi Tsuyuki.
