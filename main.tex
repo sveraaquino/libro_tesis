@@ -35,6 +35,17 @@
 \selectlanguage{spanish} 
 \usepackage[spanish,onelanguage,ruled,linesnumbered]{algorithm2e}
 \SetKwFor{For}{para}{hacer}{fin}
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage{titlesec}
+
+
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
 
 
 \graphicspath{{./Pictures/}} % Specifies the directory where pictures are stored
@@ -221,7 +232,7 @@ xxxxx
 
 %--------------INICIO CONFIGURACION DE INDICE-----------------------
 
-\setcounter{tocdepth}{2} %El numero es el nivel que mostrará en el índice
+\setcounter{tocdepth}{5} %El numero es el nivel que mostrará en el índice
 \tableofcontents % Write out the Table of Contents
 
 %--------------FIN DE CONFIGURACION DE INDICE-----------------------
@@ -277,7 +288,10 @@ xxxxx
 \textbf{USGS} & \textit{United States Geological Survey.}\\
 \textbf{L1T} & \textit{Level 1 Terrain Corrected.}\\
 \textbf{GPL} & \textit{General Public License.}\\
-
+\textbf{GA} & \textit{Global Acurrancy.}\\
+\textbf{WRS-2} & \textit{Landsat Worldwide Reference System-2.}\\
+\textbf{PFCP} & \textit{Forest Change Produc.}\\
+ 
 
 
 
@@ -304,7 +318,7 @@ xxxxx
 \input{./Chapters/areaDeEstudio}
 \input{./Chapters/procesamientoDeImagenes}
 \input{./Chapters/metodologia}
-%\input{./Chapters/casoDeEstudio}
+\input{./Chapters/casoDeEstudio}
 %\input{./Chapters/conclusion}
 \input{./Chapters/bibliografia}
 %\input{./Chapters/Anexo}

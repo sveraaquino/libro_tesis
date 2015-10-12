@@ -90,6 +90,11 @@ Revista internacional de silvicultura e industrias forestales.
 \newblock {\em Organización de las Naciones Unidas para la Agricultura y la
   Alimentación}, 54, 2003.
 
+\bibitem[Foo02]{foody2002status}
+Giles~M Foody.
+\newblock Status of land cover classification accuracy assessment.
+\newblock {\em Remote sensing of environment}, 80(1):185--201, 2002.
+
 \bibitem[GMKM{\etalchar{+}}87]{garciduenas1987produccion}
 Apolo~Rolando Garcidue{\~n}as~Mart{\'\i}nez, R~Keyes, Mart{\'\i}nez~Menez
   Michael, R~Mario, Zarate Lara, P~Guillermo, and ;~Programa~Forestal.
@@ -112,11 +117,27 @@ Chengquan Huang, Sunghee Kim, Kuan Song, John~RG Townshend, Paul Davis, Alice
   observations.
 \newblock {\em Global and Planetary Change}, 67(1):1--12, 2009.
 
+\bibitem[Jen81]{jensen1981urban}
+John~R Jensen.
+\newblock Urban change detection mapping using landsat digital data.
+\newblock {\em The American Cartographer}, 8(2):127--147, 1981.
+
 \bibitem[LB05]{lu2005exploring}
 Dengsheng Lu and Mateus Batistella.
 \newblock Exploring tm image texture and its relationships with biomass
   estimation in rond{\^o}nia, brazilian amazon.
 \newblock {\em Acta Amazonica}, 35(2):249--257, 2005.
+
+\bibitem[LG01]{lovell2001filtering}
+JL~Lovell and RD~Graetz.
+\newblock Filtering pathfinder avhrr land ndvi data for australia.
+\newblock {\em International Journal of Remote Sensing}, 22(13):2649--2654,
+  2001.
+
+\bibitem[LK77]{landis1977measurement}
+J~Richard Landis and Gary~G Koch.
+\newblock The measurement of observer agreement for categorical data.
+\newblock {\em biometrics}, pages 159--174, 1977.
 
 \bibitem[LK94]{lillesand1994remote}
 Thomas~M Lillesand and Ralph~W Kiefer.
@@ -130,9 +151,32 @@ Raul Mart{\'\i}nez~Garrido.
   mediterr{\'a}neo.
 \newblock 2013.
 
+\bibitem[MMP02]{malpica2002fusion}
+Jos{\'e}~A Malpica, Juan Mena, and Javier Pedraza.
+\newblock Fusi{\'o}n de informaci{\'o}n con la teor{\'\i}a de la evidencia para
+  la extracci{\'o}n de objetos cartogr{\'a}ficos de im{\'a}genes a{\'e}reas.
+\newblock {\em Actas del Seminario Anual de Autom{\'a}tica, Electr{\'o}nica
+  Industrial e Instrumentaci{\'o}n}, 1:511--514, 2002.
+
+\bibitem[MP97]{mehl1997fundamentos}
+Harald Mehl and Osvaldo Peinado.
+\newblock Fundamentos del procesamiento digital de im{\'a}genes, 1997.
+
+\bibitem[MR99]{mateu1999comparacion}
+A~Mateu and LA~Ruiz.
+\newblock Comparaci{\'o}n y evaluaci{\'o}n de m{\'e}todos de normalizaci{\'o}n
+  radiom{\'e}trica relativa.
+\newblock {\em Revista de Teledetecci{\'o}n}, 12:99--103, 1999.
+
 \bibitem[nat]{natur2015PW}
 natureduca.
 \newblock El ciclo del carbono.
+
+\bibitem[NAvG06]{niemeijer2006image}
+Meindert Niemeijer, Michael~D Abramoff, and Bram van Ginneken.
+\newblock Image structure clustering for image quality verification of color
+  retina images in diabetic retinopathy screening.
+\newblock {\em Medical image analysis}, 10(6):888--898, 2006.
 
 \bibitem[Nel]{nellemann2009carbono}
 Corcoran E. Duarte C. M. Valdés L. De Young C. Fonseca L. Grimsditch~G

@@ -2,219 +2,251 @@
 \thispagestyle{empty} 
 
 \chapter{Pruebas experimentales}
-\lhead{Capítulo 5. \emph{Pruebas experimentales}} % This is for the header on each page - perhaps a shortened title
-En este capítulo se menciona las métricas de evaluación utilizadas para medir el desempeño de la metodología propuesta. Por otro lado, se detallan los experimentos realizados y los  resultados tanto de la metodología propuesta y  del estado del arte, seguidamente se esboza la comparación y la posterior discusión de los mismos.
+\lhead{Cap\'itulo 5. \emph{Pruebas experimentales}} % This is for the header on each page - perhaps a shortened title
+En este capítulo se menciona las m\'etricas de evaluaci\'on utilizadas para medir el desempe\~{n}o de la metodolog\'ia propuesta. Por otro lado, se detallan los experimentos realizados y los resultados de la metodolog\'ia propuesta, seguidamente se esboza la comparaci\'on y la posterior discusi\'on de los mismos.
 
+\section{Caso de estudio}
+Filadelfia es una ciudad de Paraguay, del departamento de Boquer\'on, del Chaco paraguayo(lat-long $22^{o}20^{,}00^{,,} S - 60^{o}01^{,} 00^{,,} O$ ) con una superficie de 13.879 $ km^{2} $. Fue elevada a nivel de distrito en 2006. Su poblaci\'on la constituyen principalmente colonos menonitas. Fundada junto a otras localidades menonitas a finales de la d'ecada de 1920, ha desarrollado una cultura espec\'ifica, transmitida a lo largo de los siglos a trav\'es de la religi\'on, y una infraestructura productiva que le aporta a sus residentes alto poder de compra. Estas comunidades menonitas trabajan con modernas t\'ecnicas de producci\'on agropecuaria, fabricaci\'on de productos l\'acteos y procesamiento de s\'esamo y man\'i. Pueden ser ubicadas dentro de las imagenes landsat con path-Row 228-76 y en las VCF con c\'odigo KJ1920.\\~\\
+Se opto por esta localizaci\'on debido a que ademas de estar ubicada en el Chaco Paraguayo posee un crecimiento demogr\'afico en la que las actividades agr\'icolas y ganaderas son variantes, proporcionando un ambiente ideal para las distintas pruebas y validaciones necesarias.
 
 \section{Métricas de evaluación}
+Para realizar el control de calidad, algunos se basan en el concepto de matriz de confusi\'on, que establece una relaci\'on entre los resultados obtenidos en el proceso de asignaci\'on y la informaci\'on verdad terreno $ (VT) $ disponible para la zona de estudio. La diagonal principal representa el n\'umero de celdas correctamente catalogadas $ (T) $ , y la diagonal transpuesta, las incorrectamente catalogadas $ (F) $ . El uso de esta matriz presenta como mayor desventaja que est\'a condicionada a la veracidad y exactitud de la referencia utilizada como $ VT $.
 
-Como se había mencionado anteriormente, un diagnóstico consiste en determinar la presencia o ausencia de una enfermedad, para este caso particular es la  presencia o ausencia de la retinopatía diabética. Un diagnóstico positivo determina la presencia de retinopatía diabética y un diagnóstico negativo determina la ausencia de la misma.
-
-Dado un clasificador y un diagnóstico, hay cuatro resultados posibles. Si el diagnóstico es positivo y se clasifica como positivo, se cuenta como un verdadero positivo (VP); si se clasifica como negativo, se cuenta como un falso negativo (FN). Si el diagnóstico es negativo y se clasifica como negativo, se cuenta como un verdadero negativo (VN); si se clasifica como positivo, se cuenta como un falso positivo (FP) \cite{fawcett2006introduction}. En la FIGURA \ref{fig:clasificacion} se puede ver la gráfica de una matriz en donde se ve los cuatro casos posibles del par diagnóstico y clasificación. 
-%Las limitaciones de la precisión de diagnóstico como una medida del desempeño de decisión, requiere la introducción de los conceptos de sensibilidad y especificidad de una prueba diagnóstica \cite{metz1978basic,fawcett2006introduction}.
-
-\begin{figure}
+\begin{table}[]
 	\centering
-		\includegraphics[width=0.65	\textwidth]{./Figures/cap5/matrizd.PNG}
-	\caption{Esquema de clasificación.}
+\begin{tabular}{|
+		>{\columncolor[HTML]{EFEFEF}}l |l|l|l|}
+	\hline
+	\textbf{Categorias}             & \cellcolor[HTML]{EFEFEF}\textbf{Perdida (VT)} & \cellcolor[HTML]{EFEFEF}\textbf{No Perdida (VT)} & \cellcolor[HTML]{EFEFEF}\textbf{Total (VT)} \\ \hline
+	\textbf{Perdida (Algoritmo)}    & TP                                            & FP                                               & P                                           \\ \hline
+	\textbf{No Perdida (Algoritmo)} & FN                                            & TN                                               & N                                           \\ \hline
+	\textbf{Total (Algoritmo)}      & P'                                            & N'                                               & Total                                       \\ \hline
+\end{tabular}
+		\caption{Matriz de Confusi\'on}
+		\label{t:matrizConfusion}
+\end{table}
 
-	\label{fig:clasificacion}
-\end{figure}
+Esta matriz de confusi\'on, permite extraer distintos par\'ametros que eval\'uen la calidad del resultado obtenido en un proceso de detecci\'on de cambios utilizando t\'ecnicas de teledetecci\'on. A continuación se explican los dos par\'ametros m\'as utilizados para este propósito: el porcentaje de precisi\'on global y el coeficiente Kappa. Estas medidas de la precisi\'on se han utilizado para evaluar diferentes m\'etodos de detecci\'on de cambio\cite{foody2002status}.
 
-Para evaluar los resultados obtenidos se hace uso de las siguientes métricas de evaluación: sensibilidad, especificidad y exactitud. A continuación las mismas se explican con más detalles.  
-\subsection{Sensibilidad}
-Es la probabilidad de clasificar correctamente a un paciente con retinopatía diabética, es decir, la probabilidad de que  un paciente con retinopatía diabética sea diagnosticado con resultado positivo. La sensibilidad es, por lo tanto, la capacidad para detectar pacientes con retinopatía diabética \cite{pita2003pruebas}.
+\subsection{Porcentaje de precisi\'on global}\label{sec:pg}
+El porcentaje de precisi\'on global (Global Acurrancy, GA) se define como la suma del n\'umero de celdas clasificadas correctamente y dividiendo por el n\'umero total de celdas que componen el \'area de referencia que representa la verdad terreno. Foody \cite{foody2002status} considera \'optimo cualquier resultado a partir de un 85 de precisión global. Seguidamente se muestra la expresi\'on matem\'atica de la precisi\'on global.
+		\begin{equation}
+		GA = \frac{TP+TN}{T+F}\cdot100
+		\end{equation}
+\subsection{Coeficiente Kappa}\label{sec:kappa}
+El coeficiente Kappa es otro indicador utilizado frecuentemente en un proceso de teledetecci\'on, en la fase correspondiente al control de calidad de los resultados \cite{chuvieco1998factor}. Este \'indice es una medida de la correspondencia entre los resultados de la detecci\'on de cambios y los datos verdad-terreno tomados como referencia, en relaci\'on a la exactitud de una variable aleatoria, en otras palabras, es una medida estad\'istica que ajusta el efecto del azar en la proporci\'on de la concordancia observada para elementos cualitativos (variables categ\'oricas).\\~\\
+Seg\'un se indica en Jensen \cite{jensen1981urban}, en detecci\'on de cambios en zonas urbanas es m\'as apropiado utilizar el coeficiente Kappa, puesto que hace uso de toda la matriz de error.
 
-\begin{equation}
-\label{eq:sensibilidad}
-\small	Sensibilidad=\frac{\text{VP}}{\text{VP} + \text{FN}}
-\end{equation}
+		\begin{equation}
+		KAPPA=\dfrac{Total.(TP+TN)-(P.P'+N.N')}{Total^{2}.(P.P'+N.N')}\cdot100
+		\end{equation}
+		
+		% Please add the following required packages to your document preamble:
+		% \usepackage[table,xcdraw]{xcolor}
+		% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+		\begin{table}[]
+			\centering
+			\begin{tabular}{|l|l|}
+				\hline
+				\rowcolor[HTML]{EFEFEF} 
+				\textbf{Coeficiente Kappa} & \textbf{Fuerza de la concordancia} \\ \hline
+				0,00                       & Pobre                              \\ \hline
+				0,01-0,20                  & Leve                               \\ \hline
+				0,21-0,40                  & Aceptable                          \\ \hline
+				0,41-0,60                  & Moderada                           \\ \hline
+				0,61-80                    & Considerable                       \\ \hline
+				0,81-1,00                  & Casi perfecta                      \\ \hline
+			\end{tabular}
+						\caption{Valoración del coeficiente kappa\cite{landis1977measurement}.}
+						\label{t:kappaTable}
+		\end{table}
+		
 
-\subsection{Especificidad}
-Es la probabilidad de clasificar correctamente a un paciente sin retinopatía diabética, es decir, la probabilidad de que para un sujeto sano se obtenga un resultado negativo. En otras palabras, se puede definir la especificidad como la capacidad para detectar pacientes sin retinopatía diabética \cite{pita2003pruebas}. 
-\begin{equation}
-\label{eq:especificidad}
-\small	Especificidad=\frac{\text{VN}}{\text{VN} + \text{FP}}
-\end{equation}
-
-\subsection{Exactitud}
-Es la probabilidad de clasificar correctamente a un paciente, dicho de otra manera, la probabilidad de que un paciente sano o enfermo obtenga un diagnóstico correcto. En otras palabras, se puede definir la exactitud como la capacidad para detectar pacientes con o sin  retinopatía diabética \cite{pita2003pruebas}. 
-\begin{equation}
-\label{eq:exactitud}
-\small	Exactitud = \frac{VN + VP}{VN + FP + FN + VP}
-\end{equation}
 
 \section{Pruebas y resultados experimentales}
-En esta sección  se profundiza el trabajo base del estado del arte, motivo por el cual fue seleccionado y sus resultados. Igualmente  se exponen los resultados obtenidos por nuestra metodología y se realiza una comparación con respecto a las métricas de evaluación.
+En esta secci\'on se describir\'an las diferentes pruebas desarrolladas para la determinaci\'on de constantes establecidas dentro de los proceso metodol\'ogicos. Igualmente se exponen los resultados obtenidos por la metodolog\'ia empleado en el estado del arte, de manera a evaluar los datos de salida a trav\'es de m\'etricas de evaluaci\'on.
+\subsection{Umbral de Vegetaci\'on} 
+En la metodolog\'ia hemos hablado y utilizado una variable estad\'istica\ref{sec:uvegetacion} hallada por un an\'alisis previo del comportamiento espectral que presenta la cobertura vegetal. Dicha variable corresponde a la desviaci\'on.\\~\\
+Partiendo del las im\'agenes VCF \ref{sec:vcf} junto con las im\'agenes Landsat \ref{sec:landsat}, se elaboro un cruzamiento de datos. En las im\'agenes VCF, los p\'ixeles representan proporciones de vegetaci\'on existente en un espacio geogr\'afico, mientras que las im\'agenes Landsat nos permite calcular NDVI. Se procedi\'o a la obtenci\'on y calculo del NDVI en diferentes tiempos (1986,1990,2000) teniendo como referencia la fecha de la imagen VCF. Existe una colecci\'on disponible de im\'agenes VCF, del a\~{n}o 2000 hasta el 2010, en la que se tomo el a\~{n}o 2000 como referencia, por observar mayor porcentaje de cobertura vegetal que las dem\'as. Una vez obtenidos los NDVI de cada fecha, se elaboro mascaras de la imagen VCF, en la que representaba existencia de vegetaci\'on para cada rango de porcentaje. Los rangos var\'ian de 0-10, 0-20, 0-30, 0-40 y 0-50, no se analizaron en el rango completo debido a lo no existencia de p\'ixeles con los valores.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8	\textwidth]{./Figures/cap5/mascaraVCF.png}
+	\caption{Mascara VCF de 0-30\% sobre NDVI a\~{n}o 2000}
+	\label{fig:mascVCf}
+\end{figure}
+Posteriormente se extrajeron 2000 puntos aleatorios, para muestreo, de la mascara VCF, donde estaran los valores de NDVI..
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8	\textwidth]{./Figures/cap5/vcfAleatorio.png}
+	\caption{Puntos aleatorios dentro de la mascara VCF.}
+	\label{fig:aleatorioVCf}
+\end{figure}
+El procedimiento se repite para cada mascara en los distintos rangos. En total se obtiene 5 grupos por cada a\~{n}o estudiado con estad\'isticas ilustrada en la tabla \ref{t:vcfNdvi}.
 
-\subsection{Base de imágenes MESSIDOR}
-Para las pruebas se utiliza la base de imágenes pública MESSIDOR  \cite{messidor}. Estas imágenes poseen una resolución de 2240 x 1488 píxeles. Las imágenes seleccionadas para las pruebas incluyen imágenes borrosas y con poca iluminación con el fin de probar la robustez del detector.
-
-\subsection{Metodología del trabajo base}
-Selvathi et al. \cite{selvathi2012automated} proponen un sistema  de detección automática de retinopatía diabética a partir de imágenes de retina, cuyo trabajo se compara con nuestra metodología propuesta.
-Las razones por las cuales este trabajo fue seleccionado, se basa en las siguientes similitudes:
-\begin{itemize}
-\item Utilizaron segmentaciones de vasos sanguíneos, exudados duros y microaneurismas.
-\item Utilizaron  una base de imágenes pública MESSIDOR \cite{messidor} con imágenes de retina previamente diagnosticada por profesionales médicos.
-\item Estructuraron su metodología en tres módulos, el primero de ellos el de detección y segmentación, luego el módulo de extracción de características y por último el módulo de clasificación. 
-\item Hicieron uso del clasificador binario SVM.
-\item Es el trabajo con mejores resultados para el diagnóstico automatizado de presencia o ausencia de retinopatía diabética para la base de imágenes de MESSIDOR  \cite{messidor}.
-\end{itemize}
-
-Además de estas semejanzas, en \cite{selvathi2012automated} los resultados reportados indican que el enfoque de Selvathi et al. es el más promisorio, por tal motivo, es el fundamento principal de la comparación con este trabajo.
-
-
-%la propuesta de este trabajo  base a la etapa de investigación se concluye que ellos obtuvieron los mejores resultados en  el diagnóstico de la retinopatía diabética en relación a otros similares, lo que representa el fundamento principal de la comparación con este trabajo.
-\subsubsection{Resultados del estado del arte}
-Selvathi et al. \cite{selvathi2012automated} utilizaron 200 imágenes para sus experimentaciones de las cuales  50 fueron  imágenes de entrenamiento, 25 imágenes sin retinopatía diabética y 25 imágenes con retinopatía diabética. 
-En la etapa de pruebas emplearon 150 imágenes, 75 imágenes con retinopatía diabética y 75 imágenes sin retinopatía diabética, diagnosticadas por el clasificador binario SVM.
-
-De las 75 imágenes con retinopatía diabética, 4 no fueron clasificadas correctamente, dando una tasa de sensibilidad 94,67\%, mientras que 7 de 75 imágenes sin retinopatía diabética fueron mal diagnosticadas, teniendo así una tasa de especificidad del 90,67\%, para dar  un total de 139 imágenes correctamente diagnosticada de 150 imágenes de prueba logrando una tasa de exactitud del 92,67\%.
-
-Los resultados  obtenidos por \cite{selvathi2012automated} se pueden apreciar en la TABLA \ref{tab:resultados1}. 
-
-\begin{table}[!hbtp]
-\begin{center}
-\caption{Resultados de Clasificación de Selvathi 2012 \cite{selvathi2012automated}.}
-\resizebox{15cm}{!} {
-\begin{tabular}{|p{2.2cm}|p{1.9cm}|p{2.2cm}|p{2.4cm}|p{2cm}|}
-
-
-\hline
-Métricas &  Imágenes de entrenamiento & Imágenes de prueba  & Imágenes clasificadas correctamente  & Tasa \\ 
-\hline
-Sensibilidad & 25 & 75 & 71 & 94,67 \\
-Especificidad & 25 & 75 & 68 & 90,67  \\
-Exactitud  & 50 & 150  & 139  & 92.67 \\
-%\hlineExactitud  & 50 & 150  & 139  & 93 \\
-\hline
-\end{tabular}
-}
-
-\label{tab:resultados1}
-\end{center}
-\end{table}
- 
-\subsection{Prueba experimental I}
-Para los experimentos se hace uso de 200 imágenes de la base pública MESSIDOR. El software utilizado para la implementación de los módulos fue el \textit{toolbox} de procesamiento de imágenes de MATLAB versión 2013b. El primer paso a realizarse es la segmentación de los vasos sanguíneos, exudados duros y microaneurismas. Luego se realiza la extracción de características en base a las imágenes segmentadas. Por último, la clasificación y los resultados obtenidos  se exponen a continuación:
-
-% 0.969333 0.952  0.9866667
-
-\begin{table}[!hbtp]
-\begin{center}
-\caption{Resultados de Clasificación.}
-\resizebox{15cm}{!} {
-\begin{tabular}{|p{2.2cm}|p{1.9cm}|p{2.2cm}|p{2.4cm}|p{2cm}|}
-
-\hline
-Métricas &  Imágenes de entrenamiento & Imágenes de prueba  & Imágenes clasificadas correctamente  & Tasa \\ 
-\hline
-Sensibilidad & 25 & 75 & 71 & 94,67 \\
-Especificidad & 25 & 75 & 74 & 98,67  \\
-%\hline
-Exactitud  & 50 & 150  & 145  & 96,67\\
-\hline
-\end{tabular}
-}
-
-\label{tab:resultados}
-\end{center}
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\rowcolor[HTML]{EFEFEF} 
+		\multicolumn{3}{|c|}{\cellcolor[HTML]{EFEFEF}\textbf{A\~{n}o 1986}}        \\ \hline
+		\rowcolor[HTML]{EFEFEF} 
+		\textbf{VCF (\%)} & \textbf{NDVI (Media)} & \textbf{NDVI (Desviaci\'on)} \\ \hline
+		50                & 0.356701              & 0.047891                   \\ \hline
+		40                & 0.344022              & 0.0507296                  \\ \hline
+		30                & 0.337696              & 0.061581                   \\ \hline
+		20                & 0.339586              & 0.0632055                  \\ \hline
+		10                & 0.335528              & 0.0727573                  \\ \hline
+		\rowcolor[HTML]{EFEFEF} 
+		\multicolumn{3}{|c|}{\cellcolor[HTML]{EFEFEF}\textbf{A\~{n}o 1990}}        \\ \hline
+		\rowcolor[HTML]{EFEFEF} 
+		\textbf{VCF (\%)} & \textbf{NDVI (Media)} & \textbf{NDVI (Desviaci\'on)} \\ \hline
+		50                & 0.278804              & 0.0631834                  \\ \hline
+		40                & 0.264651              & 0.0679451                  \\ \hline
+		30                & 0.254145              & 0.0742348                  \\ \hline
+		20                & 0.252186              & 0.0759032                  \\ \hline
+		10                & 0.251421              & 0.0796667                  \\ \hline
+		\rowcolor[HTML]{EFEFEF} 
+		\multicolumn{3}{|c|}{\cellcolor[HTML]{EFEFEF}\textbf{A\~{n}o 1990}}        \\ \hline
+		\rowcolor[HTML]{EFEFEF} 
+		\textbf{VCF (\%)} & \textbf{NDVI (Media)} & \textbf{NDVI (Desviaci\'on)} \\ \hline
+		50                & 0.0202133             & 0.0572825                  \\ \hline
+		40                & 0.0104289             & 0.0608757                  \\ \hline
+		30                & -0.00337075           & 0.066776                   \\ \hline
+		20                & -0.00663188           & 0.0695777                  \\ \hline
+		10                & -0.0103891            & 0.0757546                  \\ \hline
+	\end{tabular}
+		\caption{Media y desviaci\'on del muestreo realizado.}
+		\label{t:vcfNdvi}
 \end{table}
 
+La tabla nos muestra claramente, que la media del NDVI es diferente para cada a\~{n}o, independientemente del porcentaje de vegetaci\'on evaluado. En este caso, no es conveniente tomar la media dentro de un patrón de comportamiento, con el fin de discriminar la vegetaci\'on. Por otro lado, las desviaciones presentan peque\~{n}as diferencias no considerables, lo cual es debido, a que el \'area foliar (hojas) en la vegetaci\'on posee diferente vigor en cada estaci\'on o condici\'on clim\'atica, al momento de ser capturado su reflectividad por sensores del sat\'elite.\\~\\
+De esta manera se realiza un promedio entre todas las desviaciones, quedando como valor constante en la umbralizaci\'on de vegetaci\'on \ref{sec:uvegetacion}$ \sigma_{ndvi} = 0.0658242733 $.
+\subsection{Estimaci\'on de p\'erdida de carbono forestal}
+Gracias al Mapa Global de Carbono \ref{sec:saatchiMapa} es posible analizar la relaci\'on que posee con los indices de vegetaci\'on. El mapa corresponde a fechas cercanas al a\~{n}o 2000, por lo que para el estudio, se obtuvieron im\'agenes Landsat del a\~{n}o 2003 para el calculo de NDVI. Posteriormente se generaron 240 puntos aleatorios dentro \'areas que correspond\'ian a vegetaci\'on.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8	\textwidth]{./Figures/cap5/carbNdvi.png}
+	\caption{Puntos aleatorios.}
+	\label{fig:aleatorioCrb}
+\end{figure}
+Estos puntos fueron generados para interceptar en ellos, los NDVI y ton C/ha en el espacio geográfico. De esa manera nos permiti\'o realizar un an\'alisis de regresi\'on. Inicialmente se hallo una ecuaci\'on lineal, donde el coeficiente de determinaci\'on fue moderado ($ r^{2}=0.509125 $).
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8	\textwidth]{./Figures/cap4/ndviCarb.png}
+	\caption{Regresi\'on Lineal. $ X=NDVI, Y=TonC/ha $}
+	\label{fig:linealCar}
+\end{figure}
+En la misma forma se construyo una ecuaci\'on cuadr\'atica, pero el coeficiente de determinaci\'on era semejante al lineal $ r^{2}=0.509273 $.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8	\textwidth]{./Figures/cap4/ndvCarCuadratico.png}
+	\caption{Regresi\'on cuadr\'atica. $ X=NDVI, Y=TonC/ha $}
+	\label{fig:cuaCar}
+\end{figure}
+De esta manera, se opta por la ecuaci\'on lineal para el calculo de carbono en funci\'on al NDVI:
+		\begin{equation}
+		C=4,33+30,1 NDVI
+		\end{equation} 
+Siendo $ C $ toneladas de carbono por hect\'area.
 
-En la TABLA \ref{tab:resultados}, como se puede observar, se hace uso de 50 imágenes de entrenamiento que se seleccionaron aleatoriamente de un grupo de imágenes de entrenamiento, 25 imágenes sin retinopatía diabética y 25 imágenes con retinopatía diabética. Para probar el sistema se utiliza 150 imágenes de prueba, 75 imágenes con retinopatía diabética y 75 imágenes sin retinopatía diabética.
+\subsection{Prueba experimental} 
+Con el prop\'osito de evaluar la calidad en la detecci\'on de cambio, se obtuvieron las im\'agenes que fueron utilizadas en la elaboraci\'on del Paraguay Forest Change Product \ref{sec:fcc}. Dichas im\'agenes corresponden a la fecha 1-26-1992	del sat\'elite Landsat-5 y 8-17-1999 del satelite Landsat-7, con path-row 228-76 del WRS-2 correspondiente al \'area del caso de estudio.\\~\\
+Se delimitaron 3 tipos de \'areas, donde cada uno representa un sector las \'areas urbana, rural y h\'umeda. Esto es con el fin de evaluar la detecci\'on en diferentes condiciones o usos del suelo.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8	\textwidth]{./Figures/cap5/zonas.png}
+	\caption{Sectores de estudio.}
+	\label{fig:zonasEva}
+\end{figure}
+\begin{table}[]
+	\centering
+	\begin{tabular}{|l|l|l|l|l|}
+		\hline
+		\rowcolor[HTML]{EFEFEF} 
+		\textbf{Sector} & \textbf{xMin} & \textbf{yMin} & \textbf{xMax} & \textbf{yMax} \\ \hline
+		Urbano          & 748797.48     & -2532113.76   & 799869.96     & -2482116.50   \\ \hline
+		Rural           & 758474.37     & -2578885.40   & 827825.42     & -2537489.81   \\ \hline
+		Húmedo          & 750947.90     & -2615442.54   & 798257.14     & -2579960.61   \\ \hline
+	\end{tabular}
+		\caption{Pol\'igono de las \'areas. Sistema de coordenadas UTM Zona 20 K. }
+		\label{t:poligonos}
+\end{table}
+La metodolog\'ia fue implementada como un complemento al Quantum GIS\ref{sec:quantum}, de manera a poder realizar las pruebas. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8	\textwidth]{./Figures/cap5/qgisCarbono.png}
+	\caption{Complemento Quantum GIS.}
+	\label{fig:qgisC}
+\end{figure}
+Se recortaron las bandas de las im\'agenes, infrarroja cercana y roja $ (B4,B3) $, para cada sector y fecha e introducidas como datos de entrada al complemento, ilustraci\'on \ref{fig:qgisC}. A continuaci\'on se muestran los resultados de cada sector con diferentes coeficientes de tolerancia, descripto en la secci\'on \ref{sec:discriminacion}, luego de pasar por el complemento:
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8	\textwidth]{./Figures/cap5/res_zona_urbana.png}
+	\caption{\'Area Urbana.}
+	\label{fig:ubana}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8	\textwidth]{./Figures/cap5/res_zona_rural.png}
+	\caption{\'Area Rural.}
+	\label{fig:rural}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8	\textwidth]{./Figures/cap5/res_zona_humeda.png}
+	\caption{\'Area H\'umeda.}
+	\label{fig:humeda}
+\end{figure}
 
- Con respecto a los resultados obtenidos de las 75 imágenes con retinopatía diabética, 4 no fueron clasificadas correctamente, dando una tasa de sensibilidad 94,67\%, mientras que 74  de las 75 imágenes sin retinopatía diabética fueron diagnosticadas correctamente, es decir una tasa de especificidad de 98,67\%, para dar un total de 145 imágenes correctamente diagnosticadas de 150 imágenes de prueba logrando una tasa de exactitud del 96,67\%.
+\subsection{Discusi\'on de resultados}
+La evaluaci\'on de la calidad en la detecci\'on de perdida forestal fueron hechas con la comparaci\'on del Paraguay Forest Change Produc (PFCP) y los resultados obtenidos por cada sector y coeficiente de tolerancia $ (n) $. El indice kappa y la precision Global nos permitira saber la calidad en los resultados de detecci\'on de cambio.\\~\\
+Previamente se realizo una re-clasificaci\'on en la imagen PFCP, ya que en ella refleja varios tipos de bosques y no bosques, por ello se procedi\'o a dejar solo aquellos pixeles que representan perdida de vegetaci\'on en cualquier de los tipos.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8	\textwidth]{./Figures/cap5/pcfp.png}
+	\caption{Re-clasificaci\'on de la imagen PFCP. Perdida = 2, Otros=1}
+	\label{fig:pfcp}
+\end{figure}
+Una vez generado la imagen de referencia para la evaluaci\'on, con ayuda de la aplicaci\'on GRASS GIS \ref{sec:grass} se obtuvo los siguientes resultados:
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[]
+	\centering
 
-
-% Selvathi, D., N. B. Prakash, and Neethi Balagopal \cite{selvathi2012automated}.
-%\begin{itemize}
-%\item 200 imágenes: 100 normales, 100 con retinopatía diabética.
-%\item Sensibilidad: 95\%.
-%\item Especificidad: 91\%.
-%\item Exactitud: 93\%.
-%\end{itemize}
-%\subsection{}
-
-
-\subsection{Comparación y discusión de resultados}
-% \cite{selvathi2012automated}
- En la TABLA \ref{tab:comparacion} se puede ver la comparación de los resultados y del estado del arte:
- \begin{table}[!hbtp]
- \caption{Comparación de clasificación.}
-\begin{center}
-\resizebox{15cm}{!} {
-
-\begin{tabular}{|p{3.5cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}| p{2cm}}
-\hline
- &  Imágenes de entrenamiento &  Imágenes de Prueba & Sensibilidad & Especificidad & Exactitud   \\ 
- 
-\hline
-Selvathi 2012 & 50 & 150& 94,67 & 90,67 & 92,67  \\
-Método propuesto& 50 & 150 & 94,67 & 98,67 & 96,67   \\
-\hline
-\end{tabular}
-}
-
-\label{tab:comparacion}
-\end{center}
+	\begin{tabular}{|l|l|l|}
+		\hline
+		\rowcolor[HTML]{EFEFEF} 
+		\multicolumn{3}{|l|}{\cellcolor[HTML]{EFEFEF}\textbf{N=1}}   \\ \hline
+		\rowcolor[HTML]{EFEFEF} 
+		\textbf{\'Area}  & \textbf{Kappa}  & \textbf{Precisi\'on Global} \\ \hline
+		Urbano         & 0.476389        & 84.257452                 \\ \hline
+		Rural          & 0.65782         & 93.82121                  \\ \hline
+		H\'umeda         & 0.301541        & 90.624794                 \\ \hline
+		\rowcolor[HTML]{EFEFEF} 
+		\multicolumn{3}{|l|}{\cellcolor[HTML]{EFEFEF}\textbf{N=1.5}} \\ \hline
+		\rowcolor[HTML]{EFEFEF} 
+		\textbf{\'Area}  & \textbf{Kappa}  & \textbf{Precisi\'on Global} \\ \hline
+		Urbano         & 0.315273        & 83.514875                 \\ \hline
+		Rural          & 0.671753        & 94.899171                 \\ \hline
+		H\'umeda         & 0.425555        & 96.693648                 \\ \hline
+		\rowcolor[HTML]{EFEFEF} 
+		\multicolumn{3}{|l|}{\cellcolor[HTML]{EFEFEF}\textbf{N=2}}   \\ \hline
+		\rowcolor[HTML]{EFEFEF} 
+		\textbf{\'Area}  & \textbf{Kappa}  & \textbf{Precisi\'on Global} \\ \hline
+		Urbano         & 0.09368         & 81.642457                 \\ \hline
+		Rural          & 0.570687        & 94.33648                  \\ \hline
+		H\'umeda         & 0.425555        & 96.693648                 \\ \hline
+	\end{tabular}
+		\caption{Coeficiente Kappa y precisi\'on Global obtenidos.}
+		\label{t:kappaGa}
 \end{table}
 
 
-Se puede apreciar que el método propuesto ha superado en especificidad e igualado en sensibilidad al propuesto por Selvathi et al. \cite{selvathi2012automated} obteniendo así mayor exactitud. 
-  En el proceso de entrenamiento del clasificador, se emplea la misma cantidad de imágenes, de igual manera, se obtiene una mejora con respecto a las métricas: especificidad y exactitud.
+%\subsection{Dificultades encontradas} 
 
 
-El segundo experimento denota los valores de exactitud obtenidos en base a cierta cantidad de imágenes de entrenamiento.
-\subsection{Prueba experimental II}
-Para el segundo experimento, se usan 200 imágenes de la base de imágenes MESSIDOR, se toman 100 imágenes de entrenamiento y 100 imágenes de prueba.
-El experimento consiste en tomar aleatoriamente $v$ imágenes de entrenamiento y hallar la exactitud obtenida al clasificar las 100 imágenes de prueba. Esto se realiza en 10 iteraciones. Luego, este procedimiento se repite para valores de $v=\{10,20,30,40,50,60,70,80\}$.
-
- \begin{figure}[H]
-	\centering
-		\includegraphics[width=0.65	\textwidth]{./Figures/cap5/boxplot.png}
-	\caption{Diagrama de caja de los valores de exactitud obtenidos.}
-
-	\label{fig:bp}
-\end{figure}
-
-En la FIGURA \ref{fig:bp} se puede ver que para menores cantidades de entrenamiento se obtuvieron resultados altos tanto como resultados bajos, es decir se tienen resultados inestables. A medida que fue aumentando la cantidad de imágenes de entrenamiento los resultados obtenidos se estabilizaron.
-
- \begin{figure}[H]
-	\centering
-		\includegraphics[width=0.65	\textwidth]{./Figures/cap5/exacTra.png}
-	\caption{Porcentaje de exactitud por imágenes de entrenamiento.}
-
-	\label{fig:exacNtrta}
-\end{figure}
- 
-
-
-En la FIGURA \ref{fig:exacNtrta} se puede ver la curva generada por los valores de exactitud obtenidos en promedio de las 10 iteraciones para la clasificación en función de la imágenes de entrenamiento.
-Se puede notar en la gráfica que por más de que aumente la cantidad de imágenes de entrenamiento la exactitud en la clasificación ya no se mejora.
-
-
-
-%\section{Discusión de resultados}
-   
- % Entre las características utilizadas en la detección de retinopatía diabética, la de mayor relevancia fueron los microaneurismas  debido a que su presencia o ausencia en la imagen de retina fue determinante en el diagnóstico realizado \cite{veritticlose} por el clasificador SVM.
-  
-\subsection{Dificultades encontradas} 
- Debido a la mala calidad de algunas imágenes se hace necesario evaluar automáticamente la calidad de las imágenes de retina para aumentar la exactitud en la detección de estructuras y patologías de la retina para un sistema de detección basado en técnicas de visión por  computadora. Una imagen se considera de mala calidad cuando es difícil o imposible hacer un  juicio clínico confiable con respecto a la presencia o ausencia de retinopatía diabética en la imagen \cite{niemeijer2006image}.  
-
- En la FIGURA \ref{fig:badQuality} se muestra una de las imágenes de mala calidad utilizada como imagen de prueba, en ella se puede notar poca iluminación debido al pequeño tamaño de la pupila y pérdida de contraste por el movimiento del ojo.
- 
- \begin{figure}[H]
-	\centering
-		\includegraphics[width=0.65	\textwidth]{./Figures/cap5/badQ.png}
-	\caption{Imágen digital de mala calidad.}
-
-	\label{fig:badQuality}
-\end{figure}
- 
-
-
-
- 
-%Durante el proceso de desarrollo se comprobó que existe una relación  de costo entre la sensibilidad  y la especificidad del método, las mismas son inversamente proporcionales, lo que significa que a medida que aumenta la sensibilidad, la especificidad disminuye y viceversa. \cite{parikh2008understanding}.
 Teniendo en cuenta los resultados favorables en base a los objetivos propuestos, en el siguiente y último capítulo se exponen las conclusiones de este trabajo  y finalmente trabajos futuros que puedan dar continuidad a este trabajo final de grado.
