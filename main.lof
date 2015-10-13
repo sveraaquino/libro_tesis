@@ -28,8 +28,8 @@
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Normalizaci\'on Radiom\'etrica.\relax }}{47}{figure.caption.114}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Umbrales y valores cualitativas asignadas en cada categor\'ia.\relax }}{48}{figure.caption.117}
 \contentsline {figure}{\numberline {4.9}{\ignorespaces Mascaras de cambio, iteraci\'on de la normalizaci\'on radiom\'etrica.\relax }}{49}{figure.caption.119}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Diagrama de flujo. Discriminaci\'on Forestal.\relax }}{49}{figure.caption.121}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Umbral NDVI. U=0,78076712 para n=1.\relax }}{50}{figure.caption.125}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Diagrama de flujo. Discriminaci\'on Forestal.\relax }}{50}{figure.caption.121}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Umbral NDVI. U=0,78076712 para n=1.\relax }}{51}{figure.caption.125}
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Diagrama de flujo. Mascara de P\'erdida Forestal.\relax }}{52}{figure.caption.128}
 \contentsline {figure}{\numberline {4.13}{\ignorespaces Presentaci\'on del resultado. Mascara de perdida Vegetal y cuantificaci\'on\relax }}{54}{figure.caption.138}
 \addvspace {10\p@ }
@@ -40,7 +40,9 @@
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Regresi\'on cuadr\'atica. $ X=NDVI, Y=TonC/ha $\relax }}{63}{figure.caption.156}
 \contentsline {figure}{\numberline {5.6}{\ignorespaces Sectores de estudio.\relax }}{64}{figure.caption.159}
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Complemento Quantum GIS.\relax }}{65}{figure.caption.161}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces \'Area Urbana.\relax }}{65}{figure.caption.162}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces \'Area Rural.\relax }}{66}{figure.caption.163}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces \'Area H\'umeda.\relax }}{66}{figure.caption.164}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Re-clasificaci\'on de la imagen PFCP. Perdida = 2, Otros=1\relax }}{67}{figure.caption.166}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces \'Area Urbana.\relax }}{66}{figure.caption.163}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces \'Area Rural.\relax }}{66}{figure.caption.164}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces \'Area H\'umeda.\relax }}{67}{figure.caption.165}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Re-clasificaci\'on de la imagen PFCP. Perdida = 2, Otros=1\relax }}{68}{figure.caption.167}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Coeficiente Kappa por cada \'Area y tolerancia.\relax }}{70}{figure.caption.169}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces GA por cada \'Area y tolerancia.\relax }}{70}{figure.caption.170}

@@ -7,12 +7,12 @@ En este capítulo se menciona las m\'etricas de evaluaci\'on utilizadas para med
 
 \section{Caso de estudio}
 Filadelfia es una ciudad de Paraguay, del departamento de Boquer\'on, del Chaco paraguayo(lat-long $22^{o}20^{,}00^{,,} S - 60^{o}01^{,} 00^{,,} O$ ) con una superficie de 13.879 $ km^{2} $. Fue elevada a nivel de distrito en 2006. Su poblaci\'on la constituyen principalmente colonos menonitas. Fundada junto a otras localidades menonitas a finales de la d'ecada de 1920, ha desarrollado una cultura espec\'ifica, transmitida a lo largo de los siglos a trav\'es de la religi\'on, y una infraestructura productiva que le aporta a sus residentes alto poder de compra. Estas comunidades menonitas trabajan con modernas t\'ecnicas de producci\'on agropecuaria, fabricaci\'on de productos l\'acteos y procesamiento de s\'esamo y man\'i. Pueden ser ubicadas dentro de las imagenes landsat con path-Row 228-76 y en las VCF con c\'odigo KJ1920.\\~\\
-Se opto por esta localizaci\'on debido a que ademas de estar ubicada en el Chaco Paraguayo posee un crecimiento demogr\'afico en la que las actividades agr\'icolas y ganaderas son variantes, proporcionando un ambiente ideal para las distintas pruebas y validaciones necesarias.
+Se opto por esta localizaci\'on debido a que ademas de estar ubicada en el Chaco Paraguayo posee un crecimiento demogr\'afico en la que las actividades agr\'icolas y ganaderas son variantes, proporcionando un ambiente ideal para las distintas pruebas y validaciones necesarias.\\~\\
 
 \section{Métricas de evaluación}
 Para realizar el control de calidad, algunos se basan en el concepto de matriz de confusi\'on, que establece una relaci\'on entre los resultados obtenidos en el proceso de asignaci\'on y la informaci\'on verdad terreno $ (VT) $ disponible para la zona de estudio. La diagonal principal representa el n\'umero de celdas correctamente catalogadas $ (T) $ , y la diagonal transpuesta, las incorrectamente catalogadas $ (F) $ . El uso de esta matriz presenta como mayor desventaja que est\'a condicionada a la veracidad y exactitud de la referencia utilizada como $ VT $.
 
-\begin{table}[]
+\begin{table}[H]
 	\centering
 \begin{tabular}{|
 		>{\columncolor[HTML]{EFEFEF}}l |l|l|l|}
@@ -44,7 +44,7 @@ Seg\'un se indica en Jensen \cite{jensen1981urban}, en detecci\'on de cambios en
 		% Please add the following required packages to your document preamble:
 		% \usepackage[table,xcdraw]{xcolor}
 		% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
-		\begin{table}[]
+		\begin{table}[H]
 			\centering
 			\begin{tabular}{|l|l|}
 				\hline
@@ -161,15 +161,15 @@ Se delimitaron 3 tipos de \'areas, donde cada uno representa un sector las \'are
 	\caption{Sectores de estudio.}
 	\label{fig:zonasEva}
 \end{figure}
-\begin{table}[]
+\begin{table}[H]
 	\centering
-	\begin{tabular}{|l|l|l|l|l|}
+	\begin{tabular}{|l|l|l|l|l|l|l|}
 		\hline
 		\rowcolor[HTML]{EFEFEF} 
-		\textbf{Sector} & \textbf{xMin} & \textbf{yMin} & \textbf{xMax} & \textbf{yMax} \\ \hline
-		Urbano          & 748797.48     & -2532113.76   & 799869.96     & -2482116.50   \\ \hline
-		Rural           & 758474.37     & -2578885.40   & 827825.42     & -2537489.81   \\ \hline
-		Húmedo          & 750947.90     & -2615442.54   & 798257.14     & -2579960.61   \\ \hline
+		\textbf{Sector} & \textbf{xMin} & \textbf{yMin} & \textbf{xMax} & \textbf{yMax} & \textbf{Has.} & \textbf{Km.} \\ \hline
+		Urbano          & 748797.48     & -2532113.76   & 799869.96     & -2482116.50 & 255348.41 & 202.13   \\ \hline
+		Rural           & 758474.37     & -2578885.40   & 827825.42     & -2537489.81 & 287082.72 & 221.49  \\ \hline
+		Húmedo          & 750947.90     & -2615442.54   & 798257.14     & -2579960.61 & 167862.32 & 165.58	  \\ \hline
 	\end{tabular}
 		\caption{Pol\'igono de las \'areas. Sistema de coordenadas UTM Zona 20 K. }
 		\label{t:poligonos}
@@ -181,6 +181,24 @@ La metodolog\'ia fue implementada como un complemento al Quantum GIS\ref{sec:qua
 	\caption{Complemento Quantum GIS.}
 	\label{fig:qgisC}
 \end{figure}
+El proceso de correcci\'on de las im\'agenes satelitales \ref{sec:coorImsat}, debido a que obtuvieron los productos L1T del USGS \ref{sec:landsat}, no fueron implementados por ya poseer el pre-procesamiento de correcci\'on geom\'etrica y radiom\'etrica correspondiente. Esto es beneficioso al estudio en cuanto a costo, por que no es necesario el levantamiento de los puntos de control (GCP) en el terreno para la correcci\'on geom\'etrica espec\'ificamente. La interpolaci\'on espacial fue hecha por un polinomio cuadr\'atico y la radiom\'etrica por el m\'etodo de convoluci\'on cubica.
+% Please add the following required packages to your document preamble:
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+\begin{table}[H]
+	\centering
+
+	\begin{tabular}{|l|l|l|l|l|}
+		\hline
+		\rowcolor[HTML]{EFEFEF} 
+		\textbf{Sat\'elite} & \textbf{Path-row} & \textbf{Fecha} & \textbf{RMSE} & \textbf{GCP} \\ \hline
+		Landsat-5         & 228-76            & 1-26-199       & 4.302         & 108          \\ \hline
+		Landsat-7         & 229-76            & 8-17-1999      & 4.066         & 199          \\ \hline
+	\end{tabular}
+		\caption{RMSE obtenido del meta-dato de cada imagen obtenida.}
+		\label{t:rmse}
+\end{table}
+
 Se recortaron las bandas de las im\'agenes, infrarroja cercana y roja $ (B4,B3) $, para cada sector y fecha e introducidas como datos de entrada al complemento, ilustraci\'on \ref{fig:qgisC}. A continuaci\'on se muestran los resultados de cada sector con diferentes coeficientes de tolerancia, descripto en la secci\'on \ref{sec:discriminacion}, luego de pasar por el complemento:
 \begin{figure}[H]
 	\centering
@@ -214,7 +232,7 @@ Una vez generado la imagen de referencia para la evaluaci\'on, con ayuda de la a
 % Please add the following required packages to your document preamble:
 % \usepackage[table,xcdraw]{xcolor}
 % If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
-\begin{table}[]
+\begin{table}[H]
 	\centering
 
 	\begin{tabular}{|l|l|l|}
@@ -245,8 +263,24 @@ Una vez generado la imagen de referencia para la evaluaci\'on, con ayuda de la a
 		\label{t:kappaGa}
 \end{table}
 
+En la figura \ref{fig:kappaGrafico}, podemos observar que los coeficientes kappas en todos los $ n  $ son mejores para zonas rurales, variando en resultados moderados y considerables. Seguido por zonas h\'umedas, donde $ n=1 $ se obtienen resultados aceptables a diferencia de las dem\'as que son moderadas. Por ultimo las zonas urbanos son las que presentan gran variaci\'on entre los coeficientes hallados para el, debiendo implementar tolerancia baja $(n=1)$, al modelo de detecci\'on, para obtener resultados moderados. Los coeficientes son interpretados seg\'un la tabla \ref{t:kappaTable}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8	\textwidth]{./Figures/cap5/kappaGrafico.png}
+	\caption{Coeficiente Kappa por cada \'Area y tolerancia.}
+	\label{fig:kappaGrafico}
+\end{figure}
 
-%\subsection{Dificultades encontradas} 
 
+La precisi\'on global, seg\'un la ilustraci\'on \ref{fig:gaGrafico}, nos dice que el mejor resultado fue en la zona h\'umeda $ (n=2) $ bajando el porcentaje para los dem\'as tolerancias. Pero en zonas rurales obtenemos porcentajes parejos y elevados para cualquier $ n $. Tanto para zonas h\'umedas y rurales seg\'un Jensen \cite{jensen1981urban} son \'optimos por sobrepasar el 85\%. Las zonas urbanas se encuentran entre 81\% - 85\% proximos al umbral, lo que los deja sin ning\'un resultado satisfactorio.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8	\textwidth]{./Figures/cap5/gaGrafico.png}
+	\caption{GA por cada \'Area y tolerancia.}
+	\label{fig:gaGrafico}
+\end{figure}
 
-Teniendo en cuenta los resultados favorables en base a los objetivos propuestos, en el siguiente y último capítulo se exponen las conclusiones de este trabajo  y finalmente trabajos futuros que puedan dar continuidad a este trabajo final de grado.
+\subsection{Dificultades encontradas} 
+Unas de las principales dificultades encontradas fueron en el proceso de correcci\'on geom\'etrica, debido a que es necesario ir al terreno para el levantamiento de puntos de control, sino se utilizan las im\'agenes Landsat prove\'idas por USGS \ref{sec:landsat}. Otro punto considerable a lo que se refiere a dificultad, es que las im\'agenes Landsat presentan un porcentaje de nubosidad, por lo que requerir\'a un pre-procesamiento que permita su utilizaci\'on en el an\'alisis.\\~\\
+
+Habiendo evaluado los resultados en base a los objetivos propuestos, en el siguiente y \'ultimo cap\'itulo se exponen las conclusiones de este trabajo  y finalmente trabajos futuros que puedan dar continuidad a este trabajo final de grado.

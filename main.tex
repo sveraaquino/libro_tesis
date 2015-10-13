@@ -40,11 +40,7 @@
 \usepackage{titlesec}
 
 
-\setcounter{secnumdepth}{4}
-\titleformat{\paragraph}
-{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
-\titlespacing*{\paragraph}
-{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
 
 
 
@@ -67,6 +63,10 @@
 \makenomenclature
 \renewcommand{\nomname}{\'Indice de s\'imbolos}
 \usepackage{program}
+\setcounter{secnumdepth}{4}
+
+
+
 
 %\renewcommand{\nomname}{Nomenclatura}
 %------Bibliografía------------
@@ -194,7 +194,7 @@ A mis familiares, profesores, compañeros y amigos por su apoyo, aliento y compr
 \clearpage % Start a new page
 \setstretch{1.3} % Reset the line-spacing to 1.3 for body text (if it has changed)
 \acknowledgements{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
-xxx
+A todos los que conocen
 
 
 }
@@ -207,7 +207,9 @@ xxx
 \addtotoc{Resumen} % Add the "Abstract" page entry to the Contents
 \resumen{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
 
-xxxx
+
+
+El cambio clim\'atico es un problema de carácter mundial, que engloba distintos factores ligadas a las actividades humanas. Los bosques constituyen un medio principal de conservaci\'on de carbono, donde la de-forestaci\'on y degradaci\'on contribuyen al GEI(Gases de efecto invernadero) como di\'oxido de carbono (CO2).En los \'ultimos 50 a\~{n}os la explotaci\'on Forestal y el cambio en el uso de la tierra, produjo la p\'erdida del 90\% de los bosques en la región Oriental del Paraguay. La degradaci\'on de los suelos, genera una progresiva desertificaci\'on, que atenta contra la biodiversidad eliminado sumideros de carbono. La regi\'on Occidental o Chaco Paraguayo es una region en la cual aplicar mecanismos de control en cuanto al uso ambiental implica un costo elevado. Por ello, mediante esta investigaci\'on se pretende elaborar una metodología practica y din\'amica que permita identificar focos de perdidas de carbono empleando el procesamiento de im\'agenes satelitales. Esto permitir\'a una vez identificado las posibles alertas, elaborar planes o estrategias para controles mas rigurosos y espec\'ificos que direccionen las pol\'iticas de acci\'on, con objeto de prevenci\'on.
 
 
 %----------------------------------------------------------------------------------------
@@ -291,6 +293,11 @@ xxxxx
 \textbf{GA} & \textit{Global Acurrancy.}\\
 \textbf{WRS-2} & \textit{Landsat Worldwide Reference System-2.}\\
 \textbf{PFCP} & \textit{Forest Change Produc.}\\
+\textbf{Km} & \textit{Kil\'ometros.}\\
+\textbf{Has} & \textit{Hect\'areas.}\\
+\textbf{GCP} & \textit{Global Control Points .}\\
+
+
  
 
 
@@ -319,7 +326,7 @@ xxxxx
 \input{./Chapters/procesamientoDeImagenes}
 \input{./Chapters/metodologia}
 \input{./Chapters/casoDeEstudio}
-%\input{./Chapters/conclusion}
+\input{./Chapters/conclusion}
 \input{./Chapters/bibliografia}
 %\input{./Chapters/Anexo}
 

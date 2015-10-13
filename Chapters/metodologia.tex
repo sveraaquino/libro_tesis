@@ -115,7 +115,7 @@ Se plantea como datos de entrada las im\'agenes Landsat por su disponibilidad en
 	\label{fig:metodologiapc}
 \end{figure}
 
-\subsection{Correcciones de im\'agenes satelitales}
+\subsection{Correcciones de im\'agenes satelitales}\label{sec:coorImsat}
 Es necesario que los pixeles en las im\'agenes posean una ubicaci\'on suficientemente aproximada a la realidad del terreno, de manera que se garantice la correspondencia geogr\'afica entre pixeles a ser comparados. Por ello se lleva a cabo pre-procesamientos de la im\'agenes aplicando correcciones geom\'etricas y radiom\'etricas.
 \subsubsection{Correcci\'on Geom\'etrica}
 Este procedimiento es m\'as conocido como georeferenciaci\'on consistiendo en 3 fases; puntos de control, interpolacion espacial y radiom\'etricos. Para llevar a cabo el proceso de interpolaci\'on espacial es necesario la recopilaci\'on de puntos de control, dispersos en la imagen, a trav\'es de visitas al terreno o mediante el relevamientos de datos cartogr\'aficos existentes (Mapa de caminos, ríos, cruces, etc.).\\~\\
@@ -136,7 +136,7 @@ La siguiente ilustraci\'on \ref{fig:deteccionCambio} presenta un panorama especi
 	\label{fig:deteccionCambio}
 \end{figure}
 
-\paragraph{Nomalizaci\'on Radiom\'etrica}
+\paragraph{Nomalizaci\'on Radiom\'etrica}\mbox{}\\\mbox{}\\
 La normalizaci\'on radiom\'etrica pretende optimizar el proceso de comparaci\'on, optimizando y mejorando la semejanza entre im\'agenes. Debido a la respuesta espectral que presentan las coberturas vegetales a diferentes estaciones del a\~{n}o, es necesario un procedimiento adicional que iguale los pixeles en relaci\'on a contraste y brillo entre im\'agenes. Es un proceso similar al m\'etodo del bandeado, empleado en la correcci\'on radiom\'etrica entre bandas de una misma imagen. Tomando como referencia los trabajo de Singh\cite{singh1989review}; Mateu y Ruiz\cite{mateu1999comparacion}; Estornell \cite{estornell2004analisis}; Mena y Malpica\cite{malpica2002fusion}, se aplicaran m\'etodos de normalizaci\'on mediante par\'ametros estad\'isticos de la imagen.\\~\\
 En las distintas bandas de una imagen satelital se observan un comportamiento con distribucion normal en sus histogramas, por lo que teniendo una variable tipificada $(Z)$ es posible definirlos en una distribuci\'on normal est\'andar del tipo $ N(0,1) $ seg\'un la expresión:
 	\begin{equation}
@@ -171,9 +171,9 @@ En las distintas bandas de una imagen satelital se observan un comportamiento co
 	\end{figure}
 	
 	
-\paragraph{Comparaci\'on Multitemporal}
+\paragraph{Comparaci\'on Multitemporal}\mbox{}\\\mbox{}\\
 Una vez equiparados radiom\'etricamente las im\'agenes, el siguiente paso consiste en la comparaci\'on multitemporal que nos permitir\'an obtener un indice de cambio (variable cuantitativa) en cada pixel resultante. Se aplicara el m\'etodo de Diferencia de im\'agenes, debido a que el m\'etodo Ratio no se ajusta a una distribuci\'on normal, condici\'on clave para la umbralizaci\'on estad\'istica. La comparaci\'on sera realizado sobre el NDVI de cada serie temporal, a modo a resaltar la vegetaci\'on y simplificar la cantidad de bandas utilizadas, observando a su vez que los datos estables ser\'an pr\'oximos a 0, gracias a la semejanza existente entre los pixeles. 
-\paragraph{Umbral estad\'istico}
+\paragraph{Umbral estad\'istico}\mbox{}\\\mbox{}\\
 Partiendo de la imagen que representa el grado de cambio, los criterios de decisi\'on propuesto en el capitulo anterior, asignan valores de cambio/no cambio en funci\'on a un umbral, generando una mascara de cambio con valores cualitativos, es decir, discrimina cada indice de cambio $ (I_{c}) $. Se escoge el m\'etodo basados en par\'ametros estad\'isticos por su sencillez y coherencia con el m\'etodo de comparaci\'on multitemporal aplicada. \\~\\
 La imagen es re-clasificadas en distintas categor\'ias mediante los umbrales calculados (Perdida=2, Ganancia=1, No cambio=3) y eligiendo la variable de fiabilidad $ n $ en base a la probabilidad de cambio deseado para la detecci\'on.
 	\begin{figure}[H]
@@ -182,7 +182,7 @@ La imagen es re-clasificadas en distintas categor\'ias mediante los umbrales cal
 		\caption{Umbrales y valores cualitativas asignadas en cada categor\'ia.}
 		\label{fig:umbrales}
 	\end{figure}
-\paragraph{Iteraci\'on}
+\paragraph{Iteraci\'on}\mbox{}\\\mbox{}\\
 Al considerarse las dos im\'agenes como semejantes, los cambios producidos en el terreno afectan a la radiometría registrada en las imágenes, y por tanto, en los parámetros estadísticos que las definen. En Estornell\cite{estornell2004analisis} se asume que el porcentaje de cambios existentes entre las dos im\'agenes es muy reducido.\\~\\
 Se plantea la hip\'otesis, que en la normalizaci\'on radiom\'etrica los cambios introducen ruido. Cuando mayor sea la superficie de cambio, mayor sera su influencia en la normalizaci\'on y por ende la detecci\'on de cambios. En vista al problema, se pretende minimizar dicha influencia, proponiendo una normalizaci\'on radiom\'etrica iterativa, donde los par\'ametros estad\'isticos utilizados constituyen pixeles sin cambios. \\~\\
 En la máscara de cambios generada en la detección de cambios, las celdas clasificadas como cambios $ (VD = 2; VD = 1) $, son re-clasificadas como $ VD=0 $; frente a las celdas de no cambio $(VD = 3)  $, clasificadas con $ VD=1 $. Esta máscara re-clasificada se utiliza para suprimir los cambios de las im\'agenes radiom\'etricas utilizadas como referencia estad\'istica. Se aplica \'unicamente para estimar los par\'ametros de normalizaci\'on radiom\'etrica; la imagen sobre la que se aplica la normalizaci\'on ha de mantener todas las
@@ -204,9 +204,9 @@ La siguiente ilustraci\'on \ref{fig:discrimForestal} refleja los pasos realizado
 	\label{fig:discrimForestal}
 \end{figure}
 
-\paragraph{NDVI}
+\paragraph{NDVI}\mbox{}\\\mbox{}\\
 Se procede a hallar del NDVI para ambas fechas pertenecientes a la serie temporal evaluada. El calculo es hecho teniendo como entradas las bandas infrarroja cercana y roja, donde el vigor vegetal de cada p\'ixel sera determinado por la ecuaci\'on \ref{e:ndvi}. En total son consumidas 4 im\'agenes para obtener dos de salidas.
-\paragraph{Umbral de Vegetaci\'on}\label{sec:uvegetacion}
+\paragraph{Umbral de Vegetaci\'on}\label{sec:uvegetacion}\mbox{}\\\mbox{}\\
 El umbral discriminatorio para la vegetaci\'on es determinado a partir de una constante calculada por un previo estudio del comportamiento espectral de la cobertura vegetal y las im\'agenes NDVI. Dicha variable corresponde a la desviaci\'on $(\sigma_{c} = 0.05923288)  $ observada en el an\'alisis hecho por cruzamientos de datos entre im\'agenes VCF y Landsat. La ecuaci\'on del umbral $ U_{NDVI} $ tiene la siguiente expresi\'on:
 		\begin{equation}
 		U_{NDVI} = \mu_{NDVI}\pm n \sigma_{c}
@@ -219,7 +219,7 @@ Donde $ \mu_{NDVI} $ representa la media del NDVI calculada y $ n $ la fiabilida
 	\label{fig:ndviUmbral}
 \end{figure}
 
-\paragraph{Intersecci\'on \'area boscosa }
+\paragraph{Intersecci\'on \'area boscosa }\mbox{}\\\mbox{}\\
 Una vez obtenido la mascara de vegetaci\'on de las dos fechas, es necesario determinar las celdas que ser\'an evaluados el cambio, por ello aplicamos una simple operaci\'on de intersecci\'on que generara una mascara de vegetaci\'on para los dos tiempos.
 
 \subsubsection{Mascara de P\'erdida Forestal}
