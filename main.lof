@@ -38,11 +38,12 @@
 \contentsline {figure}{\numberline {5.3}{\ignorespaces Puntos aleatorios.\relax }}{62}{figure.caption.154}
 \contentsline {figure}{\numberline {5.4}{\ignorespaces Regresi\'on Lineal. $ X=NDVI, Y=TonC/ha $\relax }}{63}{figure.caption.155}
 \contentsline {figure}{\numberline {5.5}{\ignorespaces Regresi\'on cuadr\'atica. $ X=NDVI, Y=TonC/ha $\relax }}{63}{figure.caption.156}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Sectores de estudio.\relax }}{64}{figure.caption.159}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Complemento Quantum GIS.\relax }}{65}{figure.caption.161}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces \'Area Urbana.\relax }}{66}{figure.caption.163}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces \'Area Rural.\relax }}{66}{figure.caption.164}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces \'Area H\'umeda.\relax }}{67}{figure.caption.165}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Re-clasificaci\'on de la imagen PFCP. Perdida = 2, Otros=1\relax }}{68}{figure.caption.167}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Coeficiente Kappa por cada \'Area y tolerancia.\relax }}{70}{figure.caption.169}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces GA por cada \'Area y tolerancia.\relax }}{70}{figure.caption.170}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Sectores de estudio.\relax }}{65}{figure.caption.159}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Complemento Quantum GIS.\relax }}{66}{figure.caption.161}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces \'Area Urbana.\relax }}{67}{figure.caption.163}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces \'Area Rural.\relax }}{67}{figure.caption.164}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces \'Area H\'umeda.\relax }}{68}{figure.caption.165}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Re-clasificaci\'on de la imagen PFCP. Perdida = 2, Otros=1\relax }}{69}{figure.caption.167}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Coeficiente Kappa por cada \'Area y tolerancia.\relax }}{71}{figure.caption.169}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces GA por cada \'Area y tolerancia.\relax }}{71}{figure.caption.170}
+\addvspace {10\p@ }

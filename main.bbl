@@ -65,15 +65,12 @@ E~Chuvieco.
   fenomenol{\'o}gica y an{\'a}lisis de cambios.
 \newblock {\em Revista de teledetecci{\'o}n}, 10:39--48, 1998.
 
-\bibitem[dM]{teledUm}
-Universidad de~Murcia.
-\newblock Correciones a las imágenes de satélites.
-
-\bibitem[Dur]{almando2014estimacion}
+\bibitem[Dur14]{almando2014estimacion}
 Kris Vanessa~Almando Dure.
-\newblock Estimaci\'on de carbono almacenado en el parque nacional defensores
-  del chaco seg\'un formaci\'on vegetal mediante im\'agenes satelitales,
-  a\~{n}o 2014.
+\newblock {\em Estimaci\'on de carbono almacenado en el Parque Nacional
+  Defensores del Chaco seg\'un formaci\'on vegetal mediante im\'agenes
+  satelitales, a\~{n}o 2014}.
+\newblock Universidad Nacional de Asunci\'on, 2014.
 
 \bibitem[eeS]{encaptura}
 Secuestro de~Carbono en~el Suelo.
@@ -94,6 +91,10 @@ Revista internacional de silvicultura e industrias forestales.
 Giles~M Foody.
 \newblock Status of land cover classification accuracy assessment.
 \newblock {\em Remote sensing of environment}, 80(1):185--201, 2002.
+
+\bibitem[gl215]{gl2015Uni}
+{Global Land Cover Facility}.
+\newblock \url {http://glcf.umd.edu/}, 2015.
 
 \bibitem[GMKM{\etalchar{+}}87]{garciduenas1987produccion}
 Apolo~Rolando Garcidue{\~n}as~Mart{\'\i}nez, R~Keyes, Mart{\'\i}nez~Menez
@@ -121,6 +122,10 @@ Chengquan Huang, Sunghee Kim, Kuan Song, John~RG Townshend, Paul Davis, Alice
 John~R Jensen.
 \newblock Urban change detection mapping using landsat digital data.
 \newblock {\em The American Cartographer}, 8(2):127--147, 1981.
+
+\bibitem[lan13]{landsatNasa}
+{Landsat Project Description}.
+\newblock \url {http://landsat.usgs.gov//about_project_descriptions.php}, 2013.
 
 \bibitem[LB05]{lu2005exploring}
 Dengsheng Lu and Mateus Batistella.
@@ -168,29 +173,20 @@ A~Mateu and LA~Ruiz.
   radiom{\'e}trica relativa.
 \newblock {\em Revista de Teledetecci{\'o}n}, 12:99--103, 1999.
 
-\bibitem[nat]{natur2015PW}
-natureduca.
-\newblock El ciclo del carbono.
-
-\bibitem[NAvG06]{niemeijer2006image}
-Meindert Niemeijer, Michael~D Abramoff, and Bram van Ginneken.
-\newblock Image structure clustering for image quality verification of color
-  retina images in diabetic retinopathy screening.
-\newblock {\em Medical image analysis}, 10(6):888--898, 2006.
+\bibitem[nat15]{natur2015PW}
+{El ciclo del carbono}.
+\newblock \url {http://www.natureduca.com/cienc_gen_ciclocarbono.php}, 2015.
 
 \bibitem[Nel]{nellemann2009carbono}
 Corcoran E. Duarte C. M. Valdés L. De Young C. Fonseca L. Grimsditch~G
   Nellemann, C.
 \newblock Carbono azul. evaluación de una respuesta rápida.
 
-\bibitem[Oje]{peralta2013analisis}
+\bibitem[Oje13]{peralta2013analisis}
 Fabian Miguel~Peralta Ojeda.
-\newblock Analisis del cambio de cobertura de la tierra y estimacion de carbono
-  en el area para parque nacional san rafael, aÑo 2008/2013.
-
-\bibitem[oM]{gl2015Uni}
-University of~Maryland.
-\newblock Global land cover facility.
+\newblock {\em ANALISIS DEL CAMBIO DE COBERTURA DE LA TIERRA Y ESTIMACION DE
+  CARBONO EN EL AREA PARA PARQUE NACIONAL SAN RAFAEL, AÑO 2008/2013}.
+\newblock Universidad Nacional de Asunci\'on, 2013.
 
 \bibitem[Par]{BAAPA2013}
 WWF Paraguay y la Facultad de Ciencias~Agrarias ParLu.
@@ -276,15 +272,15 @@ MVK Sivakumar, PS~Roy, K~Harmsen, and SK~Saha.
 \newblock In {\em Proceedings of the Training Workshop in Dehradun, India.
   AGM-8, WMO/TD}, number 1182, 2004.
 
-\bibitem[Sur]{landsatNasa}
-United States~Geological Survey.
-\newblock Landsat project description.
-
 \bibitem[SZ05]{speranza2005potencialidad}
 FC~Speranza and HR~Zerda.
 \newblock Potencialidad de los {\'\i}ndices de vegetaci{\'o}n para la
   discriminaci{\'o}n de coberturas forestales.
 \newblock {\em Proyecto Picto}, 12931, 2005.
+
+\bibitem[tel06]{teledUm}
+{Correciones a las imágenes de satélites}.
+\newblock \url {http://www.um.es/geograf/sigmur/teledet/tema07.pdf}, 2006.
 
 \bibitem[TL88]{tung1988determination}
 F~Tung and Ellsworth LeDrew.
@@ -293,9 +289,10 @@ F~Tung and Ellsworth LeDrew.
 \newblock {\em Photogrammetric Engineering and Remote Sensing},
   54(10):1449--1454, 1988.
 
-\bibitem[Tro]{deniseCultivos}
+\bibitem[Tro12]{deniseCultivos}
 Denise~Trevisan Troche.
-\newblock Identificaci\'on de cultivos mediante im\'agenes satelitales.
+\newblock {\em Identificaci\'on de cultivos mediante Im\'agenes Satelitales}.
+\newblock Universidad Nacional de Asunci\'on, 2012.
 
 \bibitem[Tsu12]{libro2012Tsuyuki}
 Satoshi Tsuyuki.
