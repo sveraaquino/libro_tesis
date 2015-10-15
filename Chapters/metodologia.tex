@@ -118,7 +118,14 @@ Se plantea como datos de entrada las im\'agenes Landsat por su disponibilidad en
 \subsection{Correcciones de im\'agenes satelitales}\label{sec:coorImsat}
 Es necesario que los pixeles en las im\'agenes posean una ubicaci\'on suficientemente aproximada a la realidad del terreno, de manera que se garantice la correspondencia geogr\'afica entre pixeles a ser comparados. Por ello se lleva a cabo pre-procesamientos de la im\'agenes aplicando correcciones geom\'etricas y radiom\'etricas.
 \subsubsection{Correcci\'on Geom\'etrica}
-Este procedimiento es m\'as conocido como georeferenciaci\'on consistiendo en 3 fases; puntos de control, interpolacion espacial y radiom\'etricos. Para llevar a cabo el proceso de interpolaci\'on espacial es necesario la recopilaci\'on de puntos de control, dispersos en la imagen, a trav\'es de visitas al terreno o mediante el relevamientos de datos cartogr\'aficos existentes (Mapa de caminos, ríos, cruces, etc.).\\~\\
+Este procedimiento es m\'as conocido como georeferenciaci\'on consistiendo en 3 fases; puntos de control, interpolacion espacial y radiom\'etricos. Para llevar a cabo el proceso de interpolaci\'on espacial es necesario la recopilaci\'on de puntos de control, dispersos en la imagen, a trav\'es de visitas al terreno o mediante el relevamientos de datos cartogr\'aficos existentes (Mapa de caminos, ríos, cruces, etc.).
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0	\textwidth]{./Figures/cap4/ejGpc.png}
+	\caption{Levantamiento de puntos de control.}
+	\label{fig:gcp}
+\end{figure}
+
 La ecuaci\'on de transformaci\'on es una regresi\'on que relaciona los valores de coordenadas, pertenecientes a la imagen, con las coordenadas cartogr\'aficas. Los coeficientes de transformaci\'on se obtienen a partir de los puntos de control seleccionados, aplicando un ajuste por m\'inimos cuadrados de todos los puntos. Cuando la contribuci\'on de los puntos al RMS es alta, significa que las correspondencias de puntos esta mal seleccionada y que no corresponden al modelo de transformaci\'on entre la imagen y la referencia. Por ello se tiene un umbral donde los puntos que sobre pasan son borrados, re-calculando el RMS. En nuestra modelo utilizaremos 0,5 p\'ixel de la imagen, como umbral. La redundancia de datos har\'a que la bondad de ajuste tenga significaci\'on estad\'isticas y proporcione una mayor fiabilidad. La regresi\'on para esta m\'etodologia es de segundo orden.\\~\\
 La ultima fase en la correcci\'on geom\'etrica consiste en la interpolaci\'on radiom\'etrica, donde se lleva a cabo el re-muestreo de los p\'ixeles a una nueva posici\'on utilizando el m\'etodo de convoluci\'on cubica, seleccionada por su mayor precisi\'on.
 \subsubsection{Correcci\'on Radiom\'etrica}

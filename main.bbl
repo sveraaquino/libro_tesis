@@ -149,6 +149,11 @@ Thomas~M Lillesand and Ralph~W Kiefer.
 \newblock Remote sensing and image interpretation. john willey \& sons.
 \newblock {\em Inc, United States of America}, 1994.
 
+\bibitem[LKC14]{lillesand2014remote}
+Thomas Lillesand, Ralph~W Kiefer, and Jonathan Chipman.
+\newblock {\em Remote sensing and image interpretation}.
+\newblock John Wiley \& Sons, 2014.
+
 \bibitem[MG13]{martinez2013normalizacion}
 Raul Mart{\'\i}nez~Garrido.
 \newblock Normalizaci{\'o}n radiom{\'e}trica iterativa en detecci{\'o}n de
@@ -281,6 +286,12 @@ FC~Speranza and HR~Zerda.
 \bibitem[tel06]{teledUm}
 {Correciones a las imágenes de satélites}.
 \newblock \url {http://www.um.es/geograf/sigmur/teledet/tema07.pdf}, 2006.
+
+\bibitem[tel15]{teledet2015Combi}
+{COMBINACIONES DE COLORES}.
+\newblock \url
+  {http://www.teledet.com.uy/tutorial-imagenes-satelitales/combinaciones-colores.htm},
+  2015.
 
 \bibitem[TL88]{tung1988determination}
 F~Tung and Ellsworth LeDrew.

@@ -78,7 +78,28 @@ Las im\'agenes satelitales se dividen en dos tipos \cite{salinero2002teledetecci
 		\item \textbf{Multiespectrales:} se captan mediante un sensor digital que mide la reflectancia en muchas bandas. Por ejemplo, un conjunto de detectores puede medir energ\'ia roja reflejada dentro de la parte visible del espectro mientras que otro conjunto mide la energ\'ia del infrarrojo cercano. Es posible incluso que dos series de detectores midan la energ\'ia en dos partes diferentes de la misma longitud de onda. Estos distintos valores de reflectancia se combinan para crear im\'agenes de color.
 
 	\end{itemize}
-	
+
+\subsection{Histogramas}
+El histograma es una representaci\'on gr\'afica \'util de la informaci\'on contenida por las im\'agenes obtenidas a trav\'es de la percepci\'on remota. Los analistas, a menudo despliegan el histograma ya que proporciona una apreciaci\'on de la calidad de los datos que presenta una imagen. Por ejemplo si el contraste es bajo o muy alto (histogramas estrechos y amplios); si son multimodales responden a distintos tipos de coberturas detectadas (agua, humedales, tipos de vegetaci\'on, etc.), si el histograma se encuentra desplazado hacia la izquierda, la imagen tendr\'a una tonalidad oscura y si esta desplazada hacia la derecha tendr\'a una tonalidad mas clara; entre otras interpretaciones.
+
+\subsection{Combinacion de bandas}
+Las im\'agenes satelitales suelen ser multiespectrales, es decir que son registradas simult\'aneamente en varias regiones del espectro electromagn\'etico (Bandas). Estas im\'agenes pueden ser estudiadas individualmente en escalas de grises o en im\'agenes coloreadas obtenidas a partir de las primeras. Las im\'agenes coloreadas se generan seg\'un el modelo de color RGB ( Red, Green, Blue). Este hace referencia a la composici\'on del color en t\'erminos de la intensidad de los colores primarios con los que se forma: el rojo, el verde y el azul. Es un modelo de color basado en la s\'intesis aditiva, es decir basado en la mezcla por adici\'on de dichos primarios\cite{teledet2015Combi}.
+Mediante el estudio en cada banda, y la combinaci\'on de ellas, es posible resaltar variaciones de color, tonalidad, textura de las rocas, etc. A continuaci\'on se describe algunas combinaciones posibles con im\'agenes Landsat para la identificacion visual de aspectos terrestres\cite{lillesand2014remote}:
+	\begin{itemize}
+		\item \textbf{Bandas 3,2,1 (RGB):} Es una imagen de color natural. Refleja el \'area tal como la observa el ojo humano en una fotograf\'ia a\'erea a color.
+		\item  \textbf{Bandas 7,4,2 (RGB):} Permite discriminar los tipos de rocas. Ayuda en la interpretaci\'on estructural de los complejos intrusivos asociados a los patrones volcano - tect\'onicos.
+		\item  \textbf{Bandas 5,4,2 (RGB):} Es una imagen que no refleja los patrones en colores naturales (falso color), por lo tanto las carreteras pueden ser rojas, el agua amarilla y la vegetaci\'on azul.
+		\item \textbf{Bandas 7,3,1 (RGB):} Ayuda a diferenciar tipos de rocas, definir anomal\'ias de color que generalmente son de color amarillo claro algo verdoso, la vegetaci\'on es verde oscuro a negro, los r\'ios son negros y con algunas coloraciones azules a celestes.		
+	\end{itemize}
+ 
+  \begin{figure}[H]
+  	\centering
+  	\includegraphics[width=0.8	\textwidth]{./Figures/cap3/combinacionColor.jpg}
+  	\caption{Combinaci\'on de bandas espectrales a trav\'es de los canales RGB.}
+  	\label{fig:combinacionColor}
+  \end{figure}
+
+ 
 \section{\'Indices de vegetaci\'on}
 Los \'indices de vegetaci\'on son transformaciones que implican efectuar una combinaci\'on matem\'atica, entre los niveles digitales almacenados en dos o m\'as bandas espectrales de la misma imagen, teniendo en cuenta el comportamiento radiom\'etrico de la vegetaci\'on vigorosa para la elecci\'on de bandas\cite{speranza2005potencialidad}. \\~\\
 El estudio de las cubiertas vegetales mediante la teledetecci\'on se aborda tradicionalmente mediante la utilización de los denominados “índices de vegetaci\'on”, el índice de vegetaci\'on m\'as utilizado es el NDVI (\'Indice de vegetaci\'on diferencial normalizada)\cite{sader2000estimacion}.
@@ -138,17 +159,27 @@ Donde $ s $ indica la coordenada en la imagen corregida, $ c $ y $ l $ represent
 		\end{equation} 
 En distorsiones moderadas o en un \'area reducida, se utilizan transformaciones de primer orden, pudiendo corregir efectos de translaci\'on en $ x $ e $ y $, cambios de escala y rotaci\'on.
 En distorsiones m\'as importantes o en \'areas extensas, es necesario una transfomaci\'on de segundo orden. Este tipo de transformaci\'on agregan a diferencia del primer orden, correcciones a deformaciones locales.
-Para calcular la calidad en la interpolaci\'on espacial y los puntos de control seleccionados, se utiliza el error cuadrático medio (RMS).
-		\begin{equation}
-		RMS = \sqrt{(c_{corr}-c_{orig})^{2}+(l_{corr}-l_{orig})^{2}}
-		\end{equation} 
-
     \begin{figure}[H]
     	\centering
     	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/ecuacPolinomica.png}
     	\caption{Interpolaci\'on espacial con polinomios de primer y segundo orden.}
     	\label{fig:intPolEcua}
     \end{figure}
+ Para calcular la calidad en la interpolaci\'on espacial y los puntos de control seleccionados, se utiliza el error cuadrático medio (RMS), que consiste en la diferencia entre la coordenada re-transformada deseada para un punto de control y la coordenada real obtenida como salida.
+
+ \begin{equation}
+ RMS_{erro(i)} = \sqrt{(x_{i}^{'}-x_{i})^{2}+(y_{i}^{'}-y_{i})^{2}}
+ \end{equation} 
+ 
+ Donde $ x_{i} $ e $ y_{i} $ son las coordenadas de entrada, $ x_{i}^{'} $ e $ y_{i}^{'} $ 
+ 
+     \begin{figure}[H]
+     	\centering
+     	\includegraphics[width=0.9	\textwidth]{./Figures/cap4/rms.png}
+     	\caption{Error RMS.}
+     	\label{fig:rms}
+     \end{figure}
+
 
 
 \subsubsection{Interpolaci\'on de los valores radiom\'etricos}
