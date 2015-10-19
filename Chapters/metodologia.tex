@@ -121,13 +121,53 @@ Es necesario que los pixeles en las im\'agenes posean una ubicaci\'on suficiente
 Este procedimiento es m\'as conocido como georeferenciaci\'on consistiendo en 3 fases; puntos de control, interpolacion espacial y radiom\'etricos. Para llevar a cabo el proceso de interpolaci\'on espacial es necesario la recopilaci\'on de puntos de control, dispersos en la imagen, a trav\'es de visitas al terreno o mediante el relevamientos de datos cartogr\'aficos existentes (Mapa de caminos, ríos, cruces, etc.).
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.0	\textwidth]{./Figures/cap4/ejGpc.png}
+	\includegraphics[width=0.7	\textwidth]{./Figures/cap4/ejGpc.png}
 	\caption{Levantamiento de puntos de control.}
 	\label{fig:gcp}
 \end{figure}
 
-La ecuaci\'on de transformaci\'on es una regresi\'on que relaciona los valores de coordenadas, pertenecientes a la imagen, con las coordenadas cartogr\'aficas. Los coeficientes de transformaci\'on se obtienen a partir de los puntos de control seleccionados, aplicando un ajuste por m\'inimos cuadrados de todos los puntos. Cuando la contribuci\'on de los puntos al RMS es alta, significa que las correspondencias de puntos esta mal seleccionada y que no corresponden al modelo de transformaci\'on entre la imagen y la referencia. Por ello se tiene un umbral donde los puntos que sobre pasan son borrados, re-calculando el RMS. En nuestra modelo utilizaremos 0,5 p\'ixel de la imagen, como umbral. La redundancia de datos har\'a que la bondad de ajuste tenga significaci\'on estad\'isticas y proporcione una mayor fiabilidad. La regresi\'on para esta m\'etodologia es de segundo orden.\\~\\
-La ultima fase en la correcci\'on geom\'etrica consiste en la interpolaci\'on radiom\'etrica, donde se lleva a cabo el re-muestreo de los p\'ixeles a una nueva posici\'on utilizando el m\'etodo de convoluci\'on cubica, seleccionada por su mayor precisi\'on.
+La ecuaci\'on de transformaci\'on es una regresi\'on que relaciona los valores de coordenadas, pertenecientes a la imagen, con las coordenadas cartogr\'aficas. Los coeficientes de transformaci\'on se obtienen a partir de los puntos de control seleccionados, aplicando un ajuste por m\'inimos cuadrados de todos los puntos. Cuando la contribuci\'on de los puntos al RMS es alta, significa que las correspondencias de puntos esta mal seleccionada y que no corresponden al modelo de transformaci\'on entre la imagen y la referencia. Por ello se tiene un umbral donde los puntos que sobre pasan son borrados, re-calculando el RMS. En nuestra modelo utilizaremos 0,5 p\'ixel de la imagen, como umbral. La redundancia de datos har\'a que la bondad de ajuste tenga significaci\'on estad\'isticas y proporcione una mayor fiabilidad. La regresi\'on para esta m\'etodologia es lineal.\\~\\
+La ultima fase en la correcci\'on geom\'etrica consiste en la interpolaci\'on radiom\'etrica, donde se lleva a cabo el re-muestreo de los p\'ixeles a una nueva posici\'on utilizando el m\'etodo de convoluci'on c\'ubica, seleccionada por su mayor precisi\'on.\\~\\
+A continuaci\'on los algoritmos empleados para la correcci\'on geom\'etrica:
+\begin{algorithm}
+	\caption{Algoritmo de correci\'on geom\'etrica}
+	\label{alg:corrGEom}
+	\begin{algorithmic}[1]
+		\Require{Puntos de control($pc$) y las bandas de la imagen($bandas$)}
+		\Statex
+		\Function{correcionGeometrica}{$pc,bandas$}
+		
+		\State $a \gets \text{vector de coeficientes para la axisa}$
+		\State $b \gets \text{vector de coeficientes para la ordenada}$
+		
+		\State $\textsc{coeficientesAjusteRMS}((p,a,b))$
+		
+		\State 
+		\State $i \gets 0$
+		
+		\While{$bandas[i] < bandas.size$}
+			\For{$x \gets 0, banda[i].filas$}
+				\For{$y \gets 1, banda[i].columnas$}
+					\State $\textsc{transformacion}(x,y,a,b,bandas[i],bandacorr[i])$
+				\EndFor
+			\EndFor
+		\EndWhile
+		
+		\EndFunction
+		
+		\State
+		\State
+		\Procedure{transformacion}{$x,y,a,b,banda,bandacorr$}
+			\State $x = a[0]+a[1].c+a[2].l$
+			\State $y = b[0]+b[1].c+b[2].l$
+			
+			\State $bandacorr[x][y]=\textsc{convolucionCubica}(x,y,c,l,banda)$
+			
+		\EndProcedure
+	\end{algorithmic}
+\end{algorithm}
+
+
 \subsubsection{Correcci\'on Radiom\'etrica}
 Los bandeo y los pixeles perdidos causados por factores del sensor como ambientales, podr\'ian generar errores para la extracci\'on de informaci\'on al combinar bandas en c\'alculos de indices y variables estad\'isticas, necesarios para la discriminaci\'on de cobertura vegetal y detecci\'on de cambio. Por ello, se plantea un sub-porceso que realice la correcci\'on radiom\'etrica aplicando los m\'etodos de bandeo y pixel o lineas perdidas.
 
@@ -192,14 +232,42 @@ La imagen es re-clasificadas en distintas categor\'ias mediante los umbrales cal
 \paragraph{Iteraci\'on}\mbox{}\\\mbox{}\\
 Al considerarse las dos im\'agenes como semejantes, los cambios producidos en el terreno afectan a la radiometría registrada en las imágenes, y por tanto, en los parámetros estadísticos que las definen. En Estornell\cite{estornell2004analisis} se asume que el porcentaje de cambios existentes entre las dos im\'agenes es muy reducido.\\~\\
 Se plantea la hip\'otesis, que en la normalizaci\'on radiom\'etrica los cambios introducen ruido. Cuando mayor sea la superficie de cambio, mayor sera su influencia en la normalizaci\'on y por ende la detecci\'on de cambios. En vista al problema, se pretende minimizar dicha influencia, proponiendo una normalizaci\'on radiom\'etrica iterativa, donde los par\'ametros estad\'isticos utilizados constituyen pixeles sin cambios. \\~\\
-En la máscara de cambios generada en la detección de cambios, las celdas clasificadas como cambios $ (VD = 2; VD = 1) $, son re-clasificadas como $ VD=0 $; frente a las celdas de no cambio $(VD = 3)  $, clasificadas con $ VD=1 $. Esta máscara re-clasificada se utiliza para suprimir los cambios de las im\'agenes radiom\'etricas utilizadas como referencia estad\'istica. Se aplica \'unicamente para estimar los par\'ametros de normalizaci\'on radiom\'etrica; la imagen sobre la que se aplica la normalizaci\'on ha de mantener todas las
-celdas, independientemente de que se consideren como cambios a priori. Se propone repetir las iteraciones hasta que la media de las diferencias entre NDVI, sea de magnitud similar a la media obtenida en la iteraci\'on anterior. 
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7	\textwidth]{./Figures/cap4/iteracionUmbra.png}
 		\caption{Mascaras de cambio, iteraci\'on de la normalizaci\'on radiom\'etrica.}
 		\label{fig:umbrales}
 	\end{figure}
+En la máscara de cambios generada en la detección de cambios, las celdas clasificadas como cambios $ (VD = 2; VD = 1) $, son re-clasificadas como $ VD=0 $; frente a las celdas de no cambio $(VD = 3)  $, clasificadas con $ VD=1 $. Esta máscara re-clasificada se utiliza para suprimir los cambios de las im\'agenes radiom\'etricas utilizadas como referencia estad\'istica. Se aplica \'unicamente para estimar los par\'ametros de normalizaci\'on radiom\'etrica; la imagen sobre la que se aplica la normalizaci\'on ha de mantener todas las
+celdas, independientemente de que se consideren como cambios a priori. Se propone repetir las iteraciones hasta que la media de las diferencias entre NDVI, sea de magnitud similar a la media obtenida en la iteraci\'on anterior. 
+\begin{algorithm}
+	\caption{Algoritmo de iteraci\'on}
+	\label{alg:iteracionAlg}
+	\begin{algorithmic}[1]
+	\Statex
+	
+	\State $ bandaf1 \gets \text{imagen de la fecha 1} $ 
+	\State $ bandaf2 \gets \text{imagen de la fecha 2} $ 
+	\State $ mascCambio \gets \text{mascara de cambio} $ 
+	\State $ bandaNorm \gets bandaf2$ 
+	\State $ bandera = 0$
+
+	
+	\State 
+	\State $ continuar \gets 1 $ 
+	\State $ primera \gets 1 $ 
+	\While{$continuar = 1$}
+			\State $ mascCambio = \textsc{normalizar}(mascCambio,bandaf1,bandaf2,bandaNorm)$ 
+			\If{$primera = 1 \text{ or } bandaNorm.media <> bandera$}
+				\State $ continuar = 1 $ 
+				\State $ primera = 0 $ 
+			\Else
+				\State $continuar = 0$
+			\EndIf
+	\EndWhile
+	
+	\end{algorithmic}
+\end{algorithm}
 
 
 \subsubsection{Discriminaci\'on Forestal}

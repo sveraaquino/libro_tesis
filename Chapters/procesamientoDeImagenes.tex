@@ -150,7 +150,7 @@ Consiste en la determinaci\'on de la relaci\'on geom\'etrica entre las coordenad
 	s = \sum_{j=0}^{m} \sum_{k=0}^{m-j} a_{ij}c^{j}l^{k}
 	\end{equation} 
 
-Donde $ s $ indica la coordenada en la imagen corregida, $ c $ y $ l $ representan las coordenadas de la imagen de entrada. El superindice $ m $ indica el grado del polinomio de ajuste. Siendo la ecuaci\'on lineal las mas simple:
+Donde $ s $ indica la coordenada en la imagen corregida, $ c $ y $ l $ representan las coordenadas de la imagen de entrada. El superindice $ m $ indica el grado del polinomio de ajuste y $ a_{i} $ los coeficientes de las coordenadas. Siendo la ecuaci\'on lineal las mas simple:
 	\begin{equation}
 	x_{i} = a_{0}+a_{1}c_{i}+a_{2}l_{i}
 	\end{equation} 
@@ -171,7 +171,7 @@ En distorsiones m\'as importantes o en \'areas extensas, es necesario una transf
  RMS_{erro(i)} = \sqrt{(x_{i}^{'}-x_{i})^{2}+(y_{i}^{'}-y_{i})^{2}}
  \end{equation} 
  
- Donde $ x_{i} $ e $ y_{i} $ son las coordenadas de entrada, $ x_{i}^{'} $ e $ y_{i}^{'} $ 
+ Donde $ x_{i} $ e $ y_{i} $ son las coordenadas de entrada, $ x_{i}^{'} $ e $ y_{i}^{'} $ .
  
      \begin{figure}[H]
      	\centering
@@ -185,26 +185,72 @@ En distorsiones m\'as importantes o en \'areas extensas, es necesario una transf
 \subsubsection{Interpolaci\'on de los valores radiom\'etricos}
 La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digital perteneciente a la imagen original, a la imagen corregida. Lo que se pretende es crear una imagen que se corresponda con estas coordenadas, por lo tanto, resulta necesario trasvasar de alguna forma, los niveles digital originales a su nueva posici\'on. Pudi\'endose ser abordada por tres m\'etodos diferentes:
 	\begin{itemize}
-		\item \textbf{Vecino m\'as pr\'oximo:} situ\'a en cada celda de la imagen corregida el nivel digital del pixel m\'as cercano en la imagen original. Constituye la soluci\'on m\'as r\'apida y la que supone menor transformaci\'on en los niveles digitales originales. Su principal inconveniente es que produce una distorsi\'on en rasgos lineales en la imagen(fracturas, carreteras, caminos), que pueden aparecer en la corregida como lineales quebradas. En siguiente ilustraci\'on \ref{fig:vecinoMasCercano}, los centros de las celdas del r\'aster de entrada son los puntos grises, las celdas de salida est\'an sombreadas en verde, las procesadas en amarillo, la naranja el vecino mas cercano y el rojo valor de salida.
+		\item \textbf{Vecino m\'as pr\'oximo:} situ\'a en cada celda de la imagen corregida el nivel digital (Nd) del pixel m\'as cercano en la imagen original. Constituye la soluci\'on m\'as r\'apida y la que supone menor transformaci\'on en los niveles digitales originales. Su principal inconveniente es que produce una distorsi\'on en rasgos lineales en la imagen(fracturas, carreteras, caminos), que pueden aparecer en la corregida como lineales quebradas. Algebraicamente puede ser expresado:
+		
+\begin{equation}
+	f(m,n) = \begin{cases}
+		f(x,y) & \text{si }\Delta x < 0.5 \text{ y } \Delta y < 0.5\\
+		f(x+1,y) & \text{si } \Delta x \geq 0.5 \text{ y } \Delta y < 0.5\\
+		f(x,y+1) & \text{si } \Delta x < 0.5 \text{ y } \Delta y \geq 0.5\\
+		f(x+1,y+1) & \text{si } \Delta x \geq 0.5 \text{ y } \Delta y \geq 0.5
+	\end{cases}
+\end{equation}	
+
+\begin{equation}
+	\Delta x = m-x
+\end{equation}	
+\begin{equation}
+	\Delta y = n-y
+\end{equation}	
+
+		Donde $ f(x,y) $ representa el nivel digital de la imagen original, con coordenadas $ x $ e $ y  $;  $ f(m,n) $ el nivel digital de la imagen corregida con coordenadas $ m $ y $ n $. En la ilustraci\'on \ref{fig:vecinoMasCercano2} se observa el procedimiento realizado.
+				    \begin{figure}[H]
+				    	\centering
+				    	\includegraphics[width=0.6	\textwidth]{./Figures/cap3/vecinoMasCercano2.png}
+				    	\caption{Interpolaci\'on Vecino m\'as Cercano.}
+				    	\label{fig:vecinoMasCercano2}
+				    \end{figure}
+		
+		\item \textbf{Interpolaci\'on bilineal:} promedia del nivel digital de los cuatros pixeles m\'as cercanos en la imagen original. Este promedio se ponderan seg\'un la distancia del pixel original al corregido; tienen una mayor influencia aquellos pixeles m\'as cercanos en la imagen inicial, pero tienden a difuminar un tanto los contrastes espaciales de la imagen original. Se representa con la siguiente expresion:
+		\begin{equation}
+		f(m,n) = c_{1}f(x,y)+c_{2}f(x+1,y)+c_{3}f(x,y+1)+c_{14}f(x+1,y+1)
+		\end{equation}	
+		Donde $ c_{i} $ es un peso asociado a cada valor digital, proporcional a la proximidad entre ellos $ (1-\Delta x, 1-\Delta y) $ , medida entre los centros de celdas \ref{ec:centros}.
+		\begin{equation}\label{ec:centros}
+		\begin{cases}
+		c_{1} = (1-\Delta x)(1-\Delta y)\\
+		c_{2} = \Delta x(1-\Delta y)\\
+		c_{3} = (1-\Delta x)\Delta y\\
+		c_{4} = \Delta x \Delta y
+		\end{cases}
+		\end{equation}	
+		
+		La siguiente ilustraci\'on \ref{fig:bilineal2} nos presenta gr\'aficamente el muestreo bilineal.
 		    \begin{figure}[H]
 		    	\centering
-		    	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/vecinoMasCercano.png}
-		    	\caption{Interpolaci\'on Vecino m\'as Cercano.}
-		    	\label{fig:vecinoMasCercano}
-		    \end{figure}
-		\item \textbf{Interpolaci\'on bilineal:} promedia del nivel digital de los cuatros pixeles m\'as cercanos en la imagen original. Este promedio se ponderan seg\'un la distancia del pixel original al corregido; tienen una mayor influencia aquellos pixeles m\'as cercanos en la imagen inicial, pero tienden a difuminar un tanto los contrastes espaciales de la imagen original. En la siguiente ilustraci\'on \ref{fig:bilineal}, igual que en la anterior para la interpolaci\'on de vecino m\'as cercano, los centros de la celda del r\'aster de entrada son puntos grises, las celdas de salida est\'an sombreadas en verde y la celda que se est\'a procesando est\'a sombreada en amarillo. Para la interpolaci\'on bilineal, los cuatro centros de celda de entrada (puntos naranjas) m\'as pr\'oximos al centro de la celda de procesamiento (punto rojo) est\'an identificados, se calcula la media ponderada y el valor resultante se asigna como el valor de salida para la celda de procesamiento (sombreada en amarillo).
-		    \begin{figure}[H]
-		    	\centering
-		    	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/bilineal.png}
+		    	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/bilineal2.png}
 		    	\caption{Interpolaci\'on Bilineal.}
-		    	\label{fig:bilineal}
+		    	\label{fig:bilineal2}
 		    \end{figure}
-		\item \textbf{Convoluci\'on c\'ubica:} es similar a la interporlaci\'on bilineal pero considera niveles digitales de los 16 pixeles m\'as pr\'oximos. El efecto visual es m\'as correcto, pero supone un volumen de c\'alculo mucho m\'as elevado. La siguiente ilustraci\'on \ref{fig:convCubica} demuestra c\'omo se calcula el valor de salida para la convoluci\'on c\'ubica. Los 16 centros de celda de entrada (puntos naranjas) m\'as pr\'oximos al centro de la celda de procesamiento (punto rojo) est\'an identificados, se calcula la media ponderada y el valor resultante se asigna como el valor de salida para la celda de procesamiento (sombreada en amarillo).
+		\item \textbf{Convoluci\'on c\'ubica:} es similar a la interporlaci\'on bilineal pero considera niveles digitales de los 16 pixeles m\'as pr\'oximos. El efecto visual es m\'as correcto, pero supone un volumen de c\'alculo mucho m\'as elevado. Inicialmente, los valores digitales se interpolan linealmente en grupos de cuatro lineas de pixeles cada una para formar cuatro interpolantes:
+		
+		\begin{equation}
+		\resizebox{.9 \textwidth}{!} {$
+		f(m) = [(\Delta x)^{3}-(\Delta x)^{2}]f(x+2,y)-[(\Delta x)^{3}-(\Delta x)^{2}-(\Delta x)]f(x+1,y)+[(\Delta x)^{3}-2(\Delta x)^{2}+1]f(x,y)-[(\Delta x)^{3}-2(\Delta x)^{2}+(\Delta x)]f(x-1,y)
+		$}
+		\end{equation}	
+		Posteriormente se realiza otra interpolaci\'on lineal entre los cuatros valores obtenidos para asignar el resultante a la celda corregida:
+		\begin{equation}\resizebox{.9 \textwidth}{!}{$
+		f(m,n) = [(\Delta y)^{3}-(\Delta y)^{2}]f(m+2)-[(\Delta y)^{3}-(\Delta y)^{2}-(\Delta y]f(m+1)+[(\Delta y)^{3}-2(\Delta y)^{2}+1]f(m)-[(\Delta y)^{3}-2(\Delta y)^{2}+(\Delta y)]f(m-1)
+		$}
+		\end{equation}	
+		La siguiente ilustraci\'on \ref{fig:convCubica2} nos muestra graficamente la convoluci\'on c\'ubica:
+		
 		    \begin{figure}[H]
 		    	\centering
-		    	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/convCubica.png}
+		    	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/convCubica2.png}
 		    	\caption{Convoluci\'on c\'ubica.}
-		    	\label{fig:convCubica}
+		    	\label{fig:convCubica2}
 		    \end{figure}
 	\end{itemize}
 
