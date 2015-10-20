@@ -104,7 +104,7 @@ Mediante el estudio en cada banda, y la combinaci\'on de ellas, es posible resal
 Los \'indices de vegetaci\'on son transformaciones que implican efectuar una combinaci\'on matem\'atica, entre los niveles digitales almacenados en dos o m\'as bandas espectrales de la misma imagen, teniendo en cuenta el comportamiento radiom\'etrico de la vegetaci\'on vigorosa para la elecci\'on de bandas\cite{speranza2005potencialidad}. \\~\\
 El estudio de las cubiertas vegetales mediante la teledetecci\'on se aborda tradicionalmente mediante la utilización de los denominados “índices de vegetaci\'on”, el índice de vegetaci\'on m\'as utilizado es el NDVI (\'Indice de vegetaci\'on diferencial normalizada)\cite{sader2000estimacion}.
 
-\subsection{\'Indice de vegetaci\'on diferencial normalizada}
+\subsection{\'Indice de vegetaci\'on diferencial normalizada}\label{subsec:ndvi}
 Es un \'indice usado para estimar la cantidad, calidad y desarrollo de la vegetaci\'on, por medio de sensores remotos instalados com\'unmente desde la plataforma espaciales, es decir mide las condiciones de vigor vegetal de la planta, principalmente su contenido en clorofila\cite{salinero2002teledeteccion}. El objetivo del NDVI es la reducci\'on de m\'ultiples bandas a una sola, condensando la informaci\'on m\'as importante, en este caso la vegetaci\'on.\\~\\
 Chuvieco\cite{salinero2002teledeteccion} menciona que la principal ventaja del NDVI es su f\'acil interpretaci\'on, ya que sus
 valores var\'ian entre -1 y +1 permitiendo conocer el estado de vigor vegetal en grandes superficies, detectando fen\'omenos de amplio rango.\\~\\
@@ -131,7 +131,7 @@ Una imagen de sat\'elite est\'a sometida a una serie de interferencias que hacen
 	\end{itemize}
 
 
-\subsection{Correccci\'on geom\'etrica}
+\subsection{Correccci\'on geom\'etrica}\label{sec:corrGeometrica}
 Una imagen de sat\'elite, al igual que las fotograf\'ias a\'ereas, no proporciona informaci\'on georreferenciada; cada pixel se ubica en un sistema de coordenadas arbitrario de tipo fila-columna como los que manejan los programas de tratamiento digital de im\'agenes.\\~\\
 El proceso consiste en dar a cada pixel su localizaci\'on en un sistema de coordenadas estandard (UTM, lambert, coordenadas geogr\'aficas) para poder, de este modo, combinar la imagen de sat\'elite con otro tipo de capas en un entorno SIG. Mediante esto, se obtiene una nueva capa en la que cada columna corresponde con un valor de longitud y cada fila con un valor de latitud. En caso de que la imagen no hubiese sufrido ningún tipo de distorsi\'on, el procedimiento ser\'ia bastante sencillo, sin embargo una imagen puede sufrir diversos tipos de distorsiones.\\~\\
 Es necesario localizar puntos comunes de la imagen con puntos de referencias, como tarea incial para la correcci\'on geom\'etrica, de manera a poder realizar una interpolaci\'on espacial y de los valores radiom\'etricos\cite{deniseCultivos}.
@@ -264,14 +264,14 @@ La correci\'on radiom\'etrica se encarga de minimizar los desajustes producidos 
     	\label{fig:correcError}
     \end{figure}
 
-\subsubsection{Pixeles o lineas perdidas}
+\subsubsection{Pixeles o lineas perdidas}\label{subsec:pixelesP}
 Si se ha perdido el valor de alg\'un pixel la solución m\'as simple ser\'ia estimarlo como la media de los valores
 del mismo pixel en las lineas anterior y posterior (no es recomendable utilizar los pixeles contiguos de la misma linea por que han sido captados por el mismo detector o banda que ha dado el fallo, por tanto son
 poco fiables).
 		\begin{equation}
 		ND_{i,j} = round(\dfrac{ND_{i-1,j} + ND_{i+1,j}}{2})
 		\end{equation} 
-Siendo $ ND $ el valor digital de la imagen, $ round() $ funci\'on que indica el redondeo entero m\'as cercano.\\~\\
+Siendo $ ND $ el valor digital en la celda $ (i,j) $ de la imagen, $ round() $ funci\'on que indica el redondeo entero m\'as cercano.\\~\\
 Las diferentes bandas ($ k $ y $ r $) de una imagen están altamente correlacionadas y adem\'as los detectores de dos bandas diferentes no son los mismos. Por tanto podría utilizarse el valor del pixel faltante en una banda diferente para mejorar la estimaci\'on:
 
 		\begin{equation}
@@ -279,7 +279,7 @@ Las diferentes bandas ($ k $ y $ r $) de una imagen están altamente correlacion
 		\end{equation} 	
 En caso de que la imagen abarque un territorio amplio y cambiante resulta recomendable calcular los coeficientes de correlaci\'on y las desviaciones t\'ipicas ($ sk $ y $ sr $) en un entorno cercano al pixel perdido.\\~\\
 Para detectar lineas perdidas se compara la media de los $ ND $ de una linea con las medias de las lineas anterior y posterior, para detectar pixeles perdidos se compara el valor de un pixel con los de los 8 pixeles vecinos mediante alg\'un procedimiento de filtrado.
-\subsubsection{Bandeado}
+\subsubsection{Bandeado}\label{subsec:bandeado}
 El fen\'omeno del bandeado se debe a una mala calibraci\'on entre detectores y resulta especialmente visible en las zonas de baja radiancia (zonas marinas por ejemplo). El resultado es la aparici\'on peri\'odica de una banda m\'as clara u oscura que las dem\'as.
 Para corregir el bandeado se asume que, en caso de no haber error, los histogramas obtenidos por cada uno de los detectores ser\'ian similares entre s\'i y similares al histograma global de la imagen que se toma como referencia.\\~\\
 En primer lugar se calculan los coeficientes $ a_{k} $ y $ b_{k} $ para una correcci\'on lineal de cada uno de las bandas.
@@ -306,7 +306,7 @@ asumiendo que la linea $ i $ pertenece a la banda $ k $.
 \section{Proceso de detecci\'on de cambios}
 En los m\'etodos comunes de detecci\'on de cambios se asigna un valor correspondiente al grado de cambio sobre cada celda, independientemente del resto de la imagen. En estos m\'etodos se considera la celda como unidad b\'asica (\'algebra de imagen) para aplicar las correspondientes operaciones matem\'aticas asociadas a cada algoritmo.\\~\\
 Los m\'etodos de comparaci\'on, generan una imagen (\'indice de cambios) que representa el grado de cambio entre dos situaciones temporales; las celdas de la imagen resultante, contienen una variable continua de tipo cuantitativo, por lo que se requieren t\'ecnicas que los conviertan en variables cualitativa\cite{martinez2013normalizacion}.
-\subsection{Comparaci\'on multitemporal}
+\subsection{Comparaci\'on multitemporal}\label{subsec:compMult}
 La comparaci\'on parte de un par de im\'agenes semejantes que abarcan la misma zona de estudio, siguiendo una secuencia multitemporal; cuando los conjuntos de im\'agenes son de car\'acter radiom\'etrico, se recomienda haber aplicado un proceso previo de correcci\'on radiom\'etrica. Singh\cite{singh1989review}, Chuvieco\cite{chuvieco1998factor} y Estornell\cite{estornell2004analisis}, muestran como operaciones más utilizadas:
 	\begin{itemize}
 		\item \textbf{Diferencia de im\'agenes:} es el m\'etodo m\'as simple, f\'acil de interpretar y directo, ya que consiste en una diferencia algebraica entre los valores digitales ($ VD $ ) inicial y final para la obtenci\'on de un \'indice ($ I_{dif} $). Normalmente es realizada combinada  con extracciones de \'indices espectrales.
@@ -326,8 +326,8 @@ Si el cambio abarca un sector importante de la imagen, el histograma de la image
 Si es necesario establecer un umbral para separar las \'areas de cambio, puede optarse por se\~{n}alar alg\'un criterio estad\'istico, como la media y la desviaci\'on t\'ipica de una serie de p\'ixeles elegidos aleatoriamente. En ocasiones se ha propuesto utilizar unas \'areas de entrenamiento para calcular que rango de desviaci\'on se pod\'ia considerar l\'imite para p\'ixeles estables, aplicando luego ese valor al conjunto de la imagen\cite{tung1988determination}.
 
 \subsubsection{Discriminaci\'on de las zonas de cambio}\label{sec:discriminacion}
-El m\'etodos ($ B_{x} $) genera una m\'ascara binaria de cambios (0, No Cambio; 1, Cambio) aplicando un umbral ($ U $) especifico sobre la imagen resultante del proceso de comparaci\'on multitemporal \cite{singh1989review}. Son f\'acilmente implementables en procesos de car\'acter autom\'atico/semiautom\'atico. Según Estornell \cite{estornell2004analisis}, partiendo de la hip\'otesis de que el porcentaje de cambios es muy reducido, los valores correspondientes se encuentran situados en los extremos del histograma de frecuencias. Para generar una m\'ascara de cambios es preciso se\~{n}alar un umbral que delimite ambas categorías (cambio/no cambio) a partir del \'indice de cambios ($ I_{c} $)\cite{radke2005image}.	
-\begin{equation}
+El m\'etodos ($ B_{x} $), de la ecuaci\'on \ref{ec:umbralizacion}, genera una m\'ascara binaria de cambios (0, No Cambio; 1, Cambio) aplicando un umbral ($ U $) especifico sobre la imagen resultante del proceso de comparaci\'on multitemporal \cite{singh1989review}. Son f\'acilmente implementables en procesos de car\'acter autom\'atico/semiautom\'atico. Según Estornell \cite{estornell2004analisis}, partiendo de la hip\'otesis de que el porcentaje de cambios es muy reducido, los valores correspondientes se encuentran situados en los extremos del histograma de frecuencias. Para generar una m\'ascara de cambios es preciso se\~{n}alar un umbral que delimite ambas categorías (cambio/no cambio) a partir del \'indice de cambios ($ I_{c} $)\cite{radke2005image}.	
+\begin{equation}\label{ec:umbralizacion}
 B(x) = \begin{cases}
 1 & \text{si se cumple que } \abs{I_c} \geq U \\
 0 & \text{en cualquier otro caso}
@@ -350,7 +350,7 @@ Los filtros constituyen unos de los principales m\'etodos del procesamiento digi
 		\item \textbf{Realzar la imagen:} aumentar las variaciones de intensidad, all\'i donde se producen.
 		\item \textbf{Detectar bordes::} detectar aquellos p\'ixeles donde se produce un cambio brusco en la funci\'on intensidad.	
 	\end{itemize}
-\subsubsection{Filtro de la mediana}
+\subsubsection{Filtro de la mediana}\label{subsec:filMediana}
 El filtrado tiene como ventaja de que el valor final del pixel es un valor real presente en la imagen, siendo dicha variable, la mediana entre los niveles digitales pertenecientes a su vecindad. La mediana es el valor para el cual el 50 \% de todos los p\'ixeles en el histograma son mayores y 50 \% son menores, al contrario de la media \'esta no es influenciada por los valores m\'aximos o m\'inimos\cite{mehl1997fundamentos}.
 
     \begin{figure}[H]
