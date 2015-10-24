@@ -6,9 +6,9 @@
 \contentsline {chapter}{Resumen}{\es@scroman {iii}}{dummy.2}
 \vspace {1em}
 \vspace {1em}
-\contentsline {chapter}{\'Indice de figuras}{\es@scroman {viii}}{dummy.4}
-\contentsline {chapter}{\'Indice de tablas}{\es@scroman {x}}{dummy.6}
-\contentsline {chapter}{Abreviaciones}{\es@scroman {xi}}{dummy.8}
+\contentsline {chapter}{\'Indice de figuras}{\es@scroman {ix}}{dummy.4}
+\contentsline {chapter}{\'Indice de tablas}{\es@scroman {xi}}{dummy.6}
+\contentsline {chapter}{Abreviaciones}{\es@scroman {xii}}{dummy.8}
 \contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{2}{chapter.11}
 \contentsline {section}{\numberline {1.1}Justificaci\IeC {\'o}n y Motivaci\IeC {\'o}n}{4}{section.12}
 \contentsline {section}{\numberline {1.2}Antecedentes}{4}{section.13}
