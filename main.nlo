@@ -1,0 +1,6 @@
+\nomenclatureentry{a$NDVI$@[{$NDVI$}]\begingroup Función que representa una imagen con el \'Indice de vegetaci\'on diferencial normalizada.\nomeqref {0}|nompageref}{\es@scroman  {xi}}
+\nomenclatureentry{a$B_{IRc}$@[{$B_{IRc}$}]\begingroup Imagen que representa a la banda infrarroja cercana.\nomeqref {0}|nompageref}{\es@scroman  {xi}}
+\nomenclatureentry{a$B_{R}$@[{$B_{R}$}]\begingroup Imagen que representa a la banda roja.\nomeqref {0}|nompageref}{\es@scroman  {xi}}
+\nomenclatureentry{1$NDVI$@[{$NDVI$}]\begingroup Función que representa una imagen con el \'Indice de vegetaci\'on diferencial normalizada.\nomeqref {3.1}|nompageref}{24}
+\nomenclatureentry{2$B_{IRc}$@[{$B_{IRc}$}]\begingroup Imagen que representa a la banda infrarroja cercana.\nomeqref {3.1}|nompageref}{24}
+\nomenclatureentry{3$B_{R}$@[{$B_{R}$}]\begingroup Imagen que representa a la banda roja.\nomeqref {3.1}|nompageref}{24}
