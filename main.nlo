@@ -1,6 +1,10 @@
-\nomenclatureentry{a$NDVI$@[{$NDVI$}]\begingroup Función que representa una imagen con el \'Indice de vegetaci\'on diferencial normalizada.\nomeqref {0}|nompageref}{\es@scroman  {xi}}
-\nomenclatureentry{a$B_{IRc}$@[{$B_{IRc}$}]\begingroup Imagen que representa a la banda infrarroja cercana.\nomeqref {0}|nompageref}{\es@scroman  {xi}}
-\nomenclatureentry{a$B_{R}$@[{$B_{R}$}]\begingroup Imagen que representa a la banda roja.\nomeqref {0}|nompageref}{\es@scroman  {xi}}
-\nomenclatureentry{1$NDVI$@[{$NDVI$}]\begingroup Función que representa una imagen con el \'Indice de vegetaci\'on diferencial normalizada.\nomeqref {3.1}|nompageref}{24}
-\nomenclatureentry{2$B_{IRc}$@[{$B_{IRc}$}]\begingroup Imagen que representa a la banda infrarroja cercana.\nomeqref {3.1}|nompageref}{24}
-\nomenclatureentry{3$B_{R}$@[{$B_{R}$}]\begingroup Imagen que representa a la banda roja.\nomeqref {3.1}|nompageref}{24}
+\nomenclatureentry{a$NDVI$@[{$NDVI$}]\begingroup Función que representa una imagen con el \'Indice de vegetaci\'on diferencial normalizada.\nomeqref {3.1}|nompageref}{25}
+\nomenclatureentry{a$B_{IRc}$@[{$B_{IRc}$}]\begingroup Imagen que representa a la banda infrarroja cercana.\nomeqref {3.1}|nompageref}{25}
+\nomenclatureentry{a$B_{R}$@[{$B_{R}$}]\begingroup Imagen que representa a la banda roja.\nomeqref {3.1}|nompageref}{25}
+\nomenclatureentry{a$ (x,y) $@[{$ (x,y) $}]\begingroup Representa las coordenadas de la imagen de entrada.\nomeqref {3.2}|nompageref}{28}
+\nomenclatureentry{a$ s $@[{$ s $}]\begingroup Indica la coordenada en la imagen corregida.\nomeqref {3.2}|nompageref}{28}
+\nomenclatureentry{a$ m $@[{$ m $}]\begingroup  grado del polinomio de ajuste.\nomeqref {3.2}|nompageref}{28}
+\nomenclatureentry{a$ a_{i} $@[{$ a_{i} $}]\begingroup Representa los coeficientes del polinomio de ajuste para la coordenada $ x $.\nomeqref {3.2}|nompageref}{28}
+\nomenclatureentry{a$ b_{i} $@[{$ b_{i} $}]\begingroup Representa los coeficientes del polinomio de ajuste para la coordenada $ y $.\nomeqref {3.2}|nompageref}{28}
+\nomenclatureentry{a$ (x^{,},y^{,}) $@[{$ (x^{,},y^{,}) $}]\begingroup  coordenadas de la imagen transformada.\nomeqref {3.4}|nompageref}{28}
+\nomenclatureentry{a$ RMS_{error(i)} $@[{$ RMS_{error(i)} $}]\begingroup  error cuadr\'atico de la banda $ i $.\nomeqref {3.5}|nompageref}{29}

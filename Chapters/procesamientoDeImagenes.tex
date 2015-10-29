@@ -113,9 +113,9 @@ Se calcula extrayendo de las bandas correspondientes al rojo $B_{R}$ e infrarroj
 	\label{e:ndvi}
 	NDVI=\dfrac{B_{IRc}-B_{R}}{B_{IRc}+B_{R}}
 	\end{equation}
-	\nomenclature[1]{$NDVI$}{Función que representa una imagen con el \'Indice de vegetaci\'on diferencial normalizada.}
-	\nomenclature[2]{$B_{IRc}$}{Imagen que representa a la banda infrarroja cercana.}
-	\nomenclature[3]{$B_{R}$}{Imagen que representa a la banda roja.}
+	\nomenclature{$NDVI$}{Función que representa una imagen con el \'Indice de vegetaci\'on diferencial normalizada.}
+	\nomenclature{$B_{IRc}$}{Imagen que representa a la banda infrarroja cercana.}
+	\nomenclature{$B_{R}$}{Imagen que representa a la banda roja.}
 Las plantas muestran un fuerte pico de absorci\'on causados por los pigmentos fotosint\'eticos en longitudes de onda cercanas a los 700 micrones, hecho que contrasta con una fuerte reflexi\'on de las longitudes de onda del infrarrojo cercano. Por su parte, los suelos desnudos se caracterizan por un incremento suavemente monot\'onico de la reflectancia, a medida que aumenta la longitud de onda.
 
 \section{An\'alisis Multitemporal}
@@ -150,17 +150,24 @@ Consiste en la determinaci\'on de la relaci\'on geom\'etrica entre las coordenad
  
  La transformaci\'on puede expresarse de la siguiente manera:
 	\begin{equation}
-	s = \sum_{j=0}^{m} \sum_{k=0}^{m-j} a_{ij}c^{j}l^{k}
+	s = \sum_{j=0}^{m} \sum_{k=0}^{m-j} a_{ij}x^{j}y^{k}
 	\end{equation} 
 
-Donde $ s $ indica la coordenada en la imagen corregida, $ c $ y $ l $ representan las coordenadas de la imagen de entrada. El superindice $ m $ indica el grado del polinomio de ajuste y $ a_{i} $ los coeficientes de las coordenadas. Siendo la ecuaci\'on lineal las mas simple:
+\nomenclature{$ (x,y) $}{Representa las coordenadas de la imagen de entrada.}	
+\nomenclature{$ s $}{Indica la coordenada en la imagen corregida.}
+\nomenclature{$ m $}{ grado del polinomio de ajuste.}
+\nomenclature{$ a_{i} $}{Representa los coeficientes del polinomio de ajuste para la coordenada $ x $.}
+\nomenclature{$ b_{i} $}{Representa los coeficientes del polinomio de ajuste para la coordenada $ y $.}
+
+Donde $ s $ indica la coordenada en la imagen corregida, $ x $ y $ y $ representan las coordenadas de la imagen de entrada. El superindice $ m $ indica el grado del polinomio de ajuste y $ a_{i} $ los coeficientes del polinomio. Siendo la ecuaci\'on lineal las mas simple:
 	\begin{equation}
-	x_{i} = a_{0}+a_{1}c_{i}+a_{2}l_{i}
+	x^{,}_{i} = a_{0}+a_{1}x_{i}+a_{2}y_{i}
 	\end{equation} 
 		\begin{equation}
-		y_{i} = b_{0}+b_{1}c_{i}+b_{2}l_{i}
+		y^{,}_{i} = b_{0}+b_{1}x_{i}+b_{2}y_{i}
 		\end{equation} 
-En distorsiones moderadas o en un \'area reducida, se utilizan transformaciones de primer orden, pudiendo corregir efectos de translaci\'on en $ x $ e $ y $, cambios de escala y rotaci\'on.
+		\nomenclature{$ (x^{,},y^{,}) $}{ coordenadas de la imagen transformada.}
+En distorsiones moderadas o en un \'area reducida, se utilizan transformaciones de primer orden, pudiendo corregir efectos de translaci\'on en $ x^{,} $ e $ y^{,} $, cambios de escala y rotaci\'on.
 En distorsiones m\'as importantes o en \'areas extensas, es necesario una transfomaci\'on de segundo orden. Este tipo de transformaci\'on agregan a diferencia del primer orden, correcciones a deformaciones locales.
     \begin{figure}[H]
     	\centering
@@ -171,8 +178,9 @@ En distorsiones m\'as importantes o en \'areas extensas, es necesario una transf
  Para calcular la calidad en la interpolaci\'on espacial y los puntos de control seleccionados, se utiliza el error cuadrático medio (RMS), que consiste en la diferencia entre la coordenada re-transformada deseada para un punto de control y la coordenada real obtenida como salida.
 
  \begin{equation}
- RMS_{erro(i)} = \sqrt{(x_{i}^{'}-x_{i})^{2}+(y_{i}^{'}-y_{i})^{2}}
+ RMS_{error(i)} = \sqrt{(x_{i}^{'}-x_{i})^{2}+(y_{i}^{'}-y_{i})^{2}}
  \end{equation} 
+ 		\nomenclature{$ RMS_{error(i)} $}{ error cuadr\'atico de la banda $ i $.}
  
  Donde $ x_{i} $ e $ y_{i} $ son las coordenadas de entrada, $ x_{i}^{'} $ e $ y_{i}^{'} $ .
  

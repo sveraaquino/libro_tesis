@@ -65,7 +65,21 @@ E~Chuvieco.
   fenomenol{\'o}gica y an{\'a}lisis de cambios.
 \newblock {\em Revista de teledetecci{\'o}n}, 10:39--48, 1998.
 
-\bibitem[Dur14]{almando2014estimacion}
+\bibitem[Dua12]{gustavo2012deteccion}
+Gustavo Miguel~Huespe Duarte.
+\newblock {\em Detecci\'on de cambios de la cobertura vegetal mediante indices
+  de vegetaci\'on (NDVI), dentro y fuera de la Reserva de la biosfera del Chaco
+  en el periodo 1985-2011}.
+\newblock Universidad Nacional de Asunci\'on, 2012.
+
+\bibitem[Dur14a]{kris2014estimacion}
+Kris Vanessa~Alamado Dur\'e.
+\newblock {\em Estimaci\'on de carbono almacenado en el Parque Nacional
+  Defensores del Chaco seg\'un formaci\'on vegetal mediante im\'agenes
+  satelitales, a\~{n}o 2014}.
+\newblock Universidad Nacional de Asunci\'on, 2014.
+
+\bibitem[Dur14b]{almando2014estimacion}
 Kris Vanessa~Almando Dure.
 \newblock {\em Estimaci\'on de carbono almacenado en el Parque Nacional
   Defensores del Chaco seg\'un formaci\'on vegetal mediante im\'agenes
@@ -91,6 +105,12 @@ Revista internacional de silvicultura e industrias forestales.
 Giles~M Foody.
 \newblock Status of land cover classification accuracy assessment.
 \newblock {\em Remote sensing of environment}, 80(1):185--201, 2002.
+
+\bibitem[GBNF07]{gibbs2007monitoring}
+Holly~K Gibbs, Sandra Brown, John~O Niles, and Jonathan~A Foley.
+\newblock Monitoring and estimating tropical forest carbon stocks: making redd
+  a reality.
+\newblock {\em Environmental Research Letters}, 2(4):045023, 2007.
 
 \bibitem[gl215]{gl2015Uni}
 {Global Land Cover Facility}.
@@ -144,15 +164,15 @@ J~Richard Landis and Gary~G Koch.
 \newblock The measurement of observer agreement for categorical data.
 \newblock {\em biometrics}, pages 159--174, 1977.
 
-\bibitem[LK94]{lillesand1994remote}
-Thomas~M Lillesand and Ralph~W Kiefer.
-\newblock Remote sensing and image interpretation. john willey \& sons.
-\newblock {\em Inc, United States of America}, 1994.
-
 \bibitem[LKC14]{lillesand2014remote}
 Thomas Lillesand, Ralph~W Kiefer, and Jonathan Chipman.
 \newblock {\em Remote sensing and image interpretation}.
 \newblock John Wiley \& Sons, 2014.
+
+\bibitem[MD]{marquezestimacion}
+Jaime M{\'a}rquez~D{\'\i}az.
+\newblock Estimaci{\'o}n de carbono arboreo por medio de imagenes del satelite
+  spot en la region de tlaxco, tlaxcala/por jaime m{\'a}rquez d{\'\i}az.
 
 \bibitem[MG13]{martinez2013normalizacion}
 Raul Mart{\'\i}nez~Garrido.
@@ -189,8 +209,8 @@ Corcoran E. Duarte C. M. Valdés L. De Young C. Fonseca L. Grimsditch~G
 
 \bibitem[Oje13]{peralta2013analisis}
 Fabian Miguel~Peralta Ojeda.
-\newblock {\em ANALISIS DEL CAMBIO DE COBERTURA DE LA TIERRA Y ESTIMACION DE
-  CARBONO EN EL AREA PARA PARQUE NACIONAL SAN RAFAEL, AÑO 2008/2013}.
+\newblock {\em An\'alisis del cambio de cobertura de la tierra y estimaci\'on
+  de carbono en el \'area para Parque Nacional San Rafael, a\~{n}o 2008/2013}.
 \newblock Universidad Nacional de Asunci\'on, 2013.
 
 \bibitem[Par]{BAAPA2013}
@@ -312,5 +332,10 @@ Satoshi Tsuyuki.
 \newblock Reducing Emissions from Deforestation and forest Degradation and the
   Role of Conservation, Sustainable Management of Forests and Enhancement,
   2012.
+
+\bibitem[Wik15]{wikixxx}
+Wikipedia.
+\newblock Ciclo del carbono --- wikipedia{,} la enciclopedia libre, 2015.
+\newblock [Internet; descargado 28-octubre-2015].
 
 \end{thebibliography}

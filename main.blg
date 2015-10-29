@@ -4,63 +4,63 @@ The top-level auxiliary file: main.aux
 The style file: alpha.bst
 Database file #1: Bibliography.bib
 Warning--entry type for "teledet2015Combi" isn't style-file defined
---line 78 of file Bibliography.bib
+--line 100 of file Bibliography.bib
 Warning--entry type for "gl2015Uni" isn't style-file defined
---line 84 of file Bibliography.bib
+--line 106 of file Bibliography.bib
 Warning--entry type for "landsatNasa" isn't style-file defined
---line 90 of file Bibliography.bib
+--line 112 of file Bibliography.bib
 Warning--entry type for "teledUm" isn't style-file defined
---line 166 of file Bibliography.bib
+--line 188 of file Bibliography.bib
 Warning--entry type for "natur2015PW" isn't style-file defined
---line 362 of file Bibliography.bib
+--line 384 of file Bibliography.bib
 Warning--entry type for "BAAPA2013" isn't style-file defined
---line 370 of file Bibliography.bib
+--line 392 of file Bibliography.bib
 Warning--entry type for "nellemann2009carbono" isn't style-file defined
---line 412 of file Bibliography.bib
-Repeated entry---line 727 of file Bibliography.bib
+--line 434 of file Bibliography.bib
+Repeated entry---line 760 of file Bibliography.bib
  : @misc{mehl1997fundamentos
  :                          ,
 I'm skipping whatever remains of this entry
-"{" immediately follows a field name---line 1074 of file Bibliography.bib
+"{" immediately follows a field name---line 1107 of file Bibliography.bib
  : @article
  :         {gonzalez2013tecnicas,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1272 of file Bibliography.bib
+I was expecting a `,' or a `}'---line 1305 of file Bibliography.bib
  : 
  : @ONLINE{idf,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1603 of file Bibliography.bib
+I was expecting a `,' or a `}'---line 1636 of file Bibliography.bib
  : 
  : @ONLINE{nei,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2002 of file Bibliography.bib
+You're missing a field name---line 2035 of file Bibliography.bib
  :  
  :  %month = jul,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2018 of file Bibliography.bib
+You're missing a field name---line 2051 of file Bibliography.bib
  :  
  :  %edition = {2},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2053 of file Bibliography.bib
+You're missing a field name---line 2086 of file Bibliography.bib
  :  
  :  %month = jul,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2065 of file Bibliography.bib
+You're missing a field name---line 2098 of file Bibliography.bib
  :   
  :   %pages={185--208},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2102 of file Bibliography.bib
+You're missing a field name---line 2135 of file Bibliography.bib
  :  
  :  %issue_date = {2013},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting an "="---line 2425 of file Bibliography.bib
+I was expecting an "="---line 2458 of file Bibliography.bib
  : +´`  
  :       title={Color image palette construction based on the HSI color system for minimizing the reconstruction error},
 I'm skipping whatever remains of this entry
@@ -144,6 +144,8 @@ while executing---line 1250 of file alpha.bst
 Warning--empty journal in encaptura
 Warning--empty year in encaptura
 Warning--empty author in fao2003revista
+Warning--empty journal in marquezestimacion
+Warning--empty year in marquezestimacion
 Warning--empty journal in martinez2013normalizacion
 Too many commas in name 1 of "Nellemann, C., Corcoran, E., Duarte, C. M., Valdés, L., De Young, C., Fonseca, L., Grimsditch, G" for entry nellemann2009carbono
 while executing---line 1250 of file alpha.bst
@@ -172,45 +174,45 @@ Warning--empty journal in perez2011aplicaciones
 Warning--empty publisher in salinero2002teledeteccion
 Warning--empty journal in salinas2008guia
 Warning--there's a number but no series in sivakumar2004satellite
-You've used 51 entries,
+You've used 55 entries,
             2543 wiz_defined-function locations,
-            834 strings with 15012 characters,
-and the built_in function-call counts, 18691 in all, are:
-= -- 1815
-> -- 966
-< -- 23
-+ -- 334
-- -- 332
-* -- 1344
-:= -- 3117
-add.period$ -- 143
-call.type$ -- 51
-change.case$ -- 317
-chr.to.int$ -- 51
-cite$ -- 73
-duplicate$ -- 725
-empty$ -- 1323
-format.name$ -- 383
-if$ -- 3734
-int.to.chr$ -- 1
+            848 strings with 15645 characters,
+and the built_in function-call counts, 19899 in all, are:
+= -- 1922
+> -- 1010
+< -- 27
++ -- 349
+- -- 346
+* -- 1420
+:= -- 3315
+add.period$ -- 154
+call.type$ -- 55
+change.case$ -- 337
+chr.to.int$ -- 54
+cite$ -- 79
+duplicate$ -- 783
+empty$ -- 1427
+format.name$ -- 404
+if$ -- 3977
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 50
-newline$ -- 249
-num.names$ -- 135
-pop$ -- 346
+missing$ -- 55
+newline$ -- 268
+num.names$ -- 147
+pop$ -- 384
 preamble$ -- 1
-purify$ -- 379
+purify$ -- 405
 quote$ -- 0
-skip$ -- 623
+skip$ -- 661
 stack$ -- 0
-substring$ -- 844
-swap$ -- 76
-text.length$ -- 23
-text.prefix$ -- 14
+substring$ -- 890
+swap$ -- 79
+text.length$ -- 27
+text.prefix$ -- 17
 top$ -- 0
-type$ -- 372
-warning$ -- 16
-while$ -- 160
-width$ -- 56
-write$ -- 615
+type$ -- 396
+warning$ -- 18
+while$ -- 169
+width$ -- 60
+write$ -- 661
 (There were 56 error messages)
