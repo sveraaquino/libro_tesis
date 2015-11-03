@@ -1,26 +1,78 @@
 \begin{thenomenclature} 
 
- \nomgroup{A}
+ \nomgroup{Symbols}
 
-  \item [{$ (x,y) $}]\begingroup Representa las coordenadas de la imagen de entrada.\nomeqref {3.2}
-		\nompageref{28}
-  \item [{$ (x^{,},y^{,}) $}]\begingroup  coordenadas de la imagen transformada.\nomeqref {3.4}
-		\nompageref{28}
-  \item [{$ a_{i} $}]\begingroup Representa los coeficientes del polinomio de ajuste para la coordenada $ x $.\nomeqref {3.2}
-		\nompageref{28}
-  \item [{$ b_{i} $}]\begingroup Representa los coeficientes del polinomio de ajuste para la coordenada $ y $.\nomeqref {3.2}
-		\nompageref{28}
-  \item [{$ m $}]\begingroup  grado del polinomio de ajuste.\nomeqref {3.2}
-		\nompageref{28}
-  \item [{$ RMS_{error(i)} $}]\begingroup  error cuadr\'atico de la banda $ i $.\nomeqref {3.5}
-		\nompageref{29}
-  \item [{$ s $}]\begingroup Indica la coordenada en la imagen corregida.\nomeqref {3.2}
-		\nompageref{28}
+  \item [{$NDVI$}]\begingroup Imagen con el indice de vegetaci\'on diferencial normalizada calculada.\nomeqref {3.1}
+		\nompageref{25}
   \item [{$B_{IRc}$}]\begingroup Imagen que representa a la banda infrarroja cercana.\nomeqref {3.1}
 		\nompageref{25}
   \item [{$B_{R}$}]\begingroup Imagen que representa a la banda roja.\nomeqref {3.1}
 		\nompageref{25}
-  \item [{$NDVI$}]\begingroup Función que representa una imagen con el \'Indice de vegetaci\'on diferencial normalizada.\nomeqref {3.1}
-		\nompageref{25}
+  \item [{$ (x,y) $}]\begingroup Representa las coordenadas de la imagen de entrada.\nomeqref {3.3}
+		\nompageref{28}
+  \item [{$ g $}]\begingroup  Grado del polinomio de ajuste.\nomeqref {3.3}
+		\nompageref{28}
+  \item [{$ i $}]\begingroup  Banda de la imagen satelital.\nomeqref {3.3}
+		\nompageref{28}
+  \item [{$ (x^{,},y^{,}) $}]\begingroup  coordenadas de la imagen transformada.\nomeqref {3.5}
+		\nompageref{29}
+  \item [{$ RMS_{error(i)} $}]\begingroup  error cuadr\'atico de la banda $ i $.\nomeqref {3.6}
+		\nompageref{29}
+  \item [{$ f(x,y) $}]\begingroup  Funci\'on que obtiene el nivel digital en la imagen original.\nomeqref {3.9}
+		\nompageref{31}
+  \item [{$ f(x^{,},y^{,}) $}]\begingroup  Funci\'on que obtiene el nivel digital en la imagen corregida.\nomeqref {3.9}
+		\nompageref{31}
+  \item [{$ c_{j} $}]\begingroup  Peso asociado a cada valor digital.\nomeqref {3.10}
+		\nompageref{31}
+  \item [{$ ND_{x,y} $}]\begingroup Nivel digital en la celda $ (x,y) $ de la imagen.\nomeqref {3.14}
+		\nompageref{34}
+  \item [{$ \mu $}]\begingroup Valor de la media.\nomeqref {3.17}
+		\nompageref{35}
+  \item [{$ \sigma $}]\begingroup Desviaci\'on t\'ipica.\nomeqref {3.17}
+		\nompageref{35}
+  \item [{$ I_{dif} $}]\begingroup Indice de cambio por diferencia de im\'agenes.\nomeqref {3.19}
+		\nompageref{36}
+  \item [{$ I_{ratio} $}]\begingroup Indice de cambio por el m\'etodo de ratio.\nomeqref {3.19}
+		\nompageref{36}
+  \item [{$ I_{c} $}]\begingroup Indice de cambio.\nomeqref {3.21}
+		\nompageref{38}
+  \item [{$ B(I_{c}) $}]\begingroup Funci\'on que genera una mascara de cambio a partir de $ I_{c} $.\nomeqref {3.21}
+		\nompageref{38}
+  \item [{$ U $}]\begingroup Umbral de cambio.\nomeqref {3.21}
+		\nompageref{38}
+  \item [{$ n $}]\begingroup Coeficiente de fiabilidad de los datos.\nomeqref {3.22}
+		\nompageref{38}
+  \item [{$ Z $}]\begingroup Variable tipificada.\nomeqref {4.1}
+		\nompageref{51}
+  \item [{$ \sigma_{c} $}]\begingroup Desviaci\'on determinada como constante para la umbralizaci\'on de la cobertura vegetal.\nomeqref {4.7}
+		\nompageref{57}
+  \item [{$ r^{2}$}]\begingroup Coeficiente de determinaci\'on.\nomeqref {4.7}
+		\nompageref{58}
+  \item [{$ C_{(x,y)}$}]\begingroup Toneladas de carbono por hect\'area en las coordenadas $ x $ e $ y $.\nomeqref {4.8}
+		\nompageref{59}
+  \item [{$PC_{(x,y)}$}]\begingroup Toneladas de carbono por hect\'area perdidos en las coordenadas $ x $ e $ y $.\nomeqref {4.13}
+		\nompageref{59}
+  \item [{$ F $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}
+		\nompageref{63}
+  \item [{$ FN $}]\begingroup Falso negativo.\nomeqref {5.0}
+		\nompageref{63}
+  \item [{$ FP $}]\begingroup Falso Positivo.\nomeqref {5.0}
+		\nompageref{63}
+  \item [{$ FP $}]\begingroup Falso positivo.\nomeqref {5.0}
+		\nompageref{63}
+  \item [{$ N $}]\begingroup Total Negativo.\nomeqref {5.0}
+		\nompageref{63}
+  \item [{$ N^{,} $}]\begingroup Total Negativo catalogado.\nomeqref {5.0}
+		\nompageref{63}
+  \item [{$ P $}]\begingroup Total Positivo.\nomeqref {5.0}
+		\nompageref{63}
+  \item [{$ P^{,} $}]\begingroup Total Positivo catalogado.\nomeqref {5.0}
+		\nompageref{63}
+  \item [{$ T $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}
+		\nompageref{63}
+  \item [{$ TP $}]\begingroup Verdadero Positivo.\nomeqref {5.0}
+		\nompageref{63}
+  \item [{$ VT $}]\begingroup Puntos de Verdad terreno.\nomeqref {5.0}
+		\nompageref{63}
 
 \end{thenomenclature}

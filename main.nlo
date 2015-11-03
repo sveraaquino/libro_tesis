@@ -1,10 +1,35 @@
-\nomenclatureentry{a$NDVI$@[{$NDVI$}]\begingroup Función que representa una imagen con el \'Indice de vegetaci\'on diferencial normalizada.\nomeqref {3.1}|nompageref}{25}
-\nomenclatureentry{a$B_{IRc}$@[{$B_{IRc}$}]\begingroup Imagen que representa a la banda infrarroja cercana.\nomeqref {3.1}|nompageref}{25}
-\nomenclatureentry{a$B_{R}$@[{$B_{R}$}]\begingroup Imagen que representa a la banda roja.\nomeqref {3.1}|nompageref}{25}
-\nomenclatureentry{a$ (x,y) $@[{$ (x,y) $}]\begingroup Representa las coordenadas de la imagen de entrada.\nomeqref {3.2}|nompageref}{28}
-\nomenclatureentry{a$ s $@[{$ s $}]\begingroup Indica la coordenada en la imagen corregida.\nomeqref {3.2}|nompageref}{28}
-\nomenclatureentry{a$ m $@[{$ m $}]\begingroup  grado del polinomio de ajuste.\nomeqref {3.2}|nompageref}{28}
-\nomenclatureentry{a$ a_{i} $@[{$ a_{i} $}]\begingroup Representa los coeficientes del polinomio de ajuste para la coordenada $ x $.\nomeqref {3.2}|nompageref}{28}
-\nomenclatureentry{a$ b_{i} $@[{$ b_{i} $}]\begingroup Representa los coeficientes del polinomio de ajuste para la coordenada $ y $.\nomeqref {3.2}|nompageref}{28}
-\nomenclatureentry{a$ (x^{,},y^{,}) $@[{$ (x^{,},y^{,}) $}]\begingroup  coordenadas de la imagen transformada.\nomeqref {3.4}|nompageref}{28}
-\nomenclatureentry{a$ RMS_{error(i)} $@[{$ RMS_{error(i)} $}]\begingroup  error cuadr\'atico de la banda $ i $.\nomeqref {3.5}|nompageref}{29}
+\nomenclatureentry{10$NDVI$@[{$NDVI$}]\begingroup Imagen con el \'indice de vegetaci\'on diferencial normalizada calculada.\nomeqref {3.1}|nompageref}{25}
+\nomenclatureentry{11$B_{IRc}$@[{$B_{IRc}$}]\begingroup Imagen que representa a la banda infrarroja cercana.\nomeqref {3.1}|nompageref}{25}
+\nomenclatureentry{12$B_{R}$@[{$B_{R}$}]\begingroup Imagen que representa a la banda roja.\nomeqref {3.1}|nompageref}{25}
+\nomenclatureentry{13$ (x,y) $@[{$ (x,y) $}]\begingroup Representa las coordenadas de la imagen de entrada.\nomeqref {3.3}|nompageref}{28}
+\nomenclatureentry{13$ g $@[{$ g $}]\begingroup  Grado del polinomio de ajuste.\nomeqref {3.3}|nompageref}{28}
+\nomenclatureentry{13$ i $@[{$ i $}]\begingroup  Banda de la imagen satelital.\nomeqref {3.3}|nompageref}{28}
+\nomenclatureentry{14$ (x^{,},y^{,}) $@[{$ (x^{,},y^{,}) $}]\begingroup Coordenadas de la imagen transformada.\nomeqref {3.5}|nompageref}{29}
+\nomenclatureentry{15$ RMS_{error(i)} $@[{$ RMS_{error(i)} $}]\begingroup Error cuadr\'atico de la banda $ i $.\nomeqref {3.6}|nompageref}{29}
+\nomenclatureentry{16$ f(x,y) $@[{$ f(x,y) $}]\begingroup  Funci\'on que obtiene el nivel digital en la imagen original.\nomeqref {3.9}|nompageref}{31}
+\nomenclatureentry{17$ f(x^{,},y^{,}) $@[{$ f(x^{,},y^{,}) $}]\begingroup  Funci\'on que obtiene el nivel digital en la imagen corregida.\nomeqref {3.9}|nompageref}{31}
+\nomenclatureentry{18$ c_{j} $@[{$ c_{j} $}]\begingroup  Peso asociado a los coeficiente del polinomio bilineal.\nomeqref {3.10}|nompageref}{31}
+\nomenclatureentry{19$ ND_{x,y} $@[{$ ND_{x,y} $}]\begingroup Nivel digital en la celda $ (x,y) $ de la imagen.\nomeqref {3.14}|nompageref}{34}
+\nomenclatureentry{20$ \mu $@[{$ \mu $}]\begingroup Valor de la media.\nomeqref {3.17}|nompageref}{35}
+\nomenclatureentry{20$ \sigma $@[{$ \sigma $}]\begingroup Desviaci\'on t\'ipica.\nomeqref {3.17}|nompageref}{35}
+\nomenclatureentry{21$ I_{dif} $@[{$ I_{dif} $}]\begingroup Indice de cambio por diferencia de im\'agenes.\nomeqref {3.19}|nompageref}{36}
+\nomenclatureentry{21$ I_{ratio} $@[{$ I_{ratio} $}]\begingroup Indice de cambio por el m\'etodo de ratio.\nomeqref {3.19}|nompageref}{36}
+\nomenclatureentry{22$ I_{c} $@[{$ I_{c} $}]\begingroup Indice de cambio.\nomeqref {3.21}|nompageref}{38}
+\nomenclatureentry{23$ B(I_{c}) $@[{$ B(I_{c}) $}]\begingroup Funci\'on que genera una mascara de cambio a partir de $ I_{c} $.\nomeqref {3.21}|nompageref}{38}
+\nomenclatureentry{24$ U $@[{$ U $}]\begingroup Umbral de cambio.\nomeqref {3.21}|nompageref}{38}
+\nomenclatureentry{24$ n $@[{$ n $}]\begingroup Coeficiente de fiabilidad de los datos.\nomeqref {3.22}|nompageref}{38}
+\nomenclatureentry{26$ Z $@[{$ Z $}]\begingroup Variable tipificada.\nomeqref {4.1}|nompageref}{51}
+\nomenclatureentry{27$ \sigma_{c} $@[{$ \sigma_{c} $}]\begingroup Desviaci\'on determinada como constante para la umbralizaci\'on de la cobertura vegetal.\nomeqref {4.7}|nompageref}{57}
+\nomenclatureentry{28$ r^{2}$@[{$ r^{2}$}]\begingroup Coeficiente de determinaci\'on.\nomeqref {4.7}|nompageref}{58}
+\nomenclatureentry{29$ C_{(x,y)}$@[{$ C_{(x,y)}$}]\begingroup Toneladas de carbono por hect\'area en las coordenadas $ x $ e $ y $.\nomeqref {4.8}|nompageref}{59}
+\nomenclatureentry{30$PC_{(x,y)}$@[{$PC_{(x,y)}$}]\begingroup Toneladas de carbono por hect\'area perdidos en las coordenadas $ x $ e $ y $.\nomeqref {4.13}|nompageref}{59}
+\nomenclatureentry{31$ VT $@[{$ VT $}]\begingroup Puntos de Verdad terreno.\nomeqref {5.0}|nompageref}{63}
+\nomenclatureentry{31$ T $@[{$ T $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}|nompageref}{63}
+\nomenclatureentry{31$ F $@[{$ F $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}|nompageref}{63}
+\nomenclatureentry{31$ TP $@[{$ TP $}]\begingroup Verdadero Positivo.\nomeqref {5.0}|nompageref}{63}
+\nomenclatureentry{31$ FP $@[{$ FP $}]\begingroup Falso Positivo.\nomeqref {5.0}|nompageref}{63}
+\nomenclatureentry{31$ P $@[{$ P $}]\begingroup Total Positivo.\nomeqref {5.0}|nompageref}{63}
+\nomenclatureentry{31$ N $@[{$ N $}]\begingroup Total Negativo.\nomeqref {5.0}|nompageref}{63}
+\nomenclatureentry{31$ FN $@[{$ FN $}]\begingroup Falso negativo.\nomeqref {5.0}|nompageref}{63}
+\nomenclatureentry{31$ P^{,} $@[{$ P^{,} $}]\begingroup Total Positivo catalogado.\nomeqref {5.0}|nompageref}{63}
+\nomenclatureentry{31$ N^{,} $@[{$ N^{,} $}]\begingroup Total Negativo catalogado.\nomeqref {5.0}|nompageref}{63}

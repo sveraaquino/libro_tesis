@@ -126,7 +126,7 @@ Este procedimiento es m\'as conocido como georeferenciaci\'on consistiendo en 3 
 	\label{fig:gcp}
 \end{figure}
 
-La ecuaci\'on de transformaci\'on es una regresi\'on que relaciona los valores de coordenadas, pertenecientes a la imagen, con las coordenadas cartogr\'aficas. Los coeficientes de transformaci\'on se obtienen a partir de los puntos de control seleccionados, aplicando un ajuste por m\'inimos cuadrados de todos los puntos. Cuando la contribuci\'on de los puntos al RMS es alta, significa que las correspondencias de puntos esta mal seleccionada y que no corresponden al modelo de transformaci\'on entre la imagen y la referencia. Por ello se tiene un umbral donde los puntos que sobre pasan son borrados, re-calculando el RMS. En nuestra modelo utilizaremos 0,5 p\'ixel de la imagen, como umbral. La redundancia de datos har\'a que la bondad de ajuste tenga significaci\'on estad\'isticas y proporcione una mayor fiabilidad. La regresi\'on para esta m\'etodologia es lineal.\\~\\
+La ecuaci\'on de transformaci\'on es una regresi\'on que relaciona los valores de coordenadas, pertenecientes a la imagen, con las coordenadas cartogr\'aficas. Los coeficientes de transformaci\'on se obtienen a partir de los puntos de control seleccionados, aplicando un ajuste por m\'inimos cuadrados de todos los puntos. Cuando la contribuci\'on de los puntos al $ RMS $ es alta, significa que las correspondencias de puntos esta mal seleccionada y que no corresponden al modelo de transformaci\'on entre la imagen y la referencia. Por ello se tiene un umbral donde los puntos que sobre pasan son borrados, re-calculando el RMS. En nuestra modelo utilizaremos 0,5 p\'ixel de la imagen, como umbral. La redundancia de datos har\'a que la bondad de ajuste tenga significaci\'on estad\'isticas y proporcione una mayor fiabilidad. La regresi\'on para esta m\'etodologia es lineal.\\~\\
 La ultima fase en la correcci\'on geom\'etrica consiste en la interpolaci\'on radiom\'etrica, donde se lleva a cabo el re-muestreo de los p\'ixeles a una nueva posici\'on utilizando el m\'etodo de convoluci\'on c\'ubica, seleccionada por su mayor precisi\'on.\\~\\
 A continuaci\'on los algoritmos empleados para la correcci\'on geom\'etrica:
 \begin{algorithm}
@@ -187,26 +187,28 @@ La siguiente ilustraci\'on \ref{fig:deteccionCambio} presenta un panorama especi
 La normalizaci\'on radiom\'etrica pretende optimizar el proceso de comparaci\'on, mejorando la semejanza entre im\'agenes. Debido a la respuesta espectral que presentan las coberturas vegetales en diferentes estaciones del a\~{n}o o condiciones ambientales en el momento de la captura, es necesario un procedimiento adicional que iguale los pixeles en relaci\'on a contraste y brillo entre im\'agenes. Es un proceso similar al m\'etodo del bandeado \ref{subsec:bandeado}, empleado en la correcci\'on radiom\'etrica entre bandas de una misma imagen. Tomando como referencia los trabajo de Singh\cite{singh1989review}; Mateu y Ruiz\cite{mateu1999comparacion}; Estornell \cite{estornell2004analisis}; Mena y Malpica\cite{malpica2002fusion}, se aplicaran m\'etodos de normalizaci\'on mediante par\'ametros estad\'isticos de la imagen.\\~\\
 En las distintas bandas de una imagen satelital se observan un comportamiento con distribucion normal en sus histogramas, por lo que teniendo una variable tipificada $(Z)$ es posible definirlos en una distribuci\'on normal est\'andar del tipo $ N(0,1) $ seg\'un la expresión:
 	\begin{equation}
-	Z=\dfrac{VD-\mu}{\sigma}
+	Z=\dfrac{ND-\mu}{\sigma}
 	\end{equation}
+\nomenclature[26]{$ Z $}{Variable tipificada.}	
+	
 	Aplicando este concepto sobre cada una de las dos im\'agenes, se pueden comparar siendo ambas distribuciones estandarizadas:
 	\begin{equation}
-	\dfrac{VD_{1}-\mu_{1}}{\sigma_{1}}=\dfrac{VD_{2}-\mu_{2}}{\sigma_{2}}
+	\dfrac{ND_{1}-\mu_{1}}{\sigma_{1}}=\dfrac{ND_{2}-\mu_{2}}{\sigma_{2}}
 	\end{equation}
-	Para su aplicaci\'on pr\'actica, se puede transformar el valor digital $ (VD) $ perteneciente a la imagen 1 $ (VD_{1}) $, para que se asemeje al $ VD_{2} $ de la imagen 2, expresi\'on:
+	Para su aplicaci\'on pr\'actica, se puede transformar el nivel digital $ (ND) $ perteneciente a la imagen 1 $ (ND_{1}) $, para que se asemeje al $ ND_{2} $ de la imagen 2, expresi\'on:
 	\begin{equation}
-	VD_{1}^{'}=\mu_{2}+\dfrac{\sigma_{2}}{\sigma_{1}}\cdot(VD_{1}-\mu_{1})
+	ND_{1}^{'}=\mu_{2}+\dfrac{\sigma_{2}}{\sigma_{1}}\cdot(ND_{1}-\mu_{1})
 	\end{equation}
-	As\'i se puede definir una relaci\'on lineal entre las dos distribuciones; aplicando una normalizaci\'on radiom\'etrica estad\'istica, los par\'ametros de la transformaci\'on $ m_{1,2} $ y $ n_{1,2} $ se definen seg\'un se indica en la expresi\'on:
+	As\'i se puede definir una relaci\'on lineal entre las dos distribuciones; aplicando una normalizaci\'on radiom\'etrica estad\'istica, los coeficientes de la transformaci\'on $ m_{1,2} $ y $ h_{1,2} $ se definen seg\'un se indica en la expresi\'on:
 	
 			\begin{equation}
-			n_{1,2}=\mu_{2}-\dfrac{\sigma_{2}}{\sigma_{1}}\cdot\mu_{1}
+			h_{1,2}=\mu_{2}-\dfrac{\sigma_{2}}{\sigma_{1}}\cdot\mu_{1}
 			\end{equation}
 					\begin{equation}
 					m_{1,2}=\dfrac{\sigma_{2}}{\sigma_{1}}
 					\end{equation}
 		\begin{equation}
-				VD_{1}^{'}=m_{1,2}\cdot VD_{1}+n_{1,2}
+				ND_{1}^{'}=m_{1,2}\cdot ND_{1}+h_{1,2}
 		\end{equation}
 	Mediante esta transformaci\'on se obtienen histogramas parecidos, logrando de este modo mayor semejanza para el proceso de comparaci\'on multitemporal.
 	
@@ -229,6 +231,7 @@ La imagen es re-clasificadas en distintas categor\'ias mediante los umbrales cal
 		\caption{Umbrales y valores cualitativas asignadas en cada categor\'ia.}
 		\label{fig:umbrales}
 	\end{figure}
+
 \paragraph{Iteraci\'on}\label{subsec:iteracion}\mbox{}\\\mbox{}\\
 Al considerarse las dos im\'agenes como semejantes, los cambios producidos en el terreno afectan a la radiometría registrada en las imágenes, y por tanto, en los parámetros estadísticos que las definen. En Estornell\cite{estornell2004analisis} se asume que el porcentaje de cambios existentes entre las dos im\'agenes es muy reducido.\\~\\
 Se plantea la hip\'otesis, que en la normalizaci\'on radiom\'etrica los cambios introducen ruido. Cuando mayor sea la superficie de cambio, mayor sera su influencia en la normalizaci\'on y por ende la detecci\'on de cambios. En vista al problema, se pretende minimizar dicha influencia, proponiendo una normalizaci\'on radiom\'etrica iterativa, donde los par\'ametros estad\'isticos utilizados constituyen pixeles sin cambios. \\~\\
@@ -238,7 +241,7 @@ Se plantea la hip\'otesis, que en la normalizaci\'on radiom\'etrica los cambios 
 		\caption{Mascaras de cambio, iteraci\'on de la normalizaci\'on radiom\'etrica.}
 		\label{fig:umbrales}
 	\end{figure}
-En la máscara de cambios generada en la detección de cambios, las celdas clasificadas como cambios $ (VD = 2; VD = 1) $, son re-clasificadas como $ VD=0 $; frente a las celdas de no cambio $(VD = 3)  $, clasificadas con $ VD=1 $. Esta máscara re-clasificada se utiliza para suprimir los cambios de las im\'agenes radiom\'etricas utilizadas como referencia estad\'istica. Se aplica \'unicamente para estimar los par\'ametros de normalizaci\'on radiom\'etrica; la imagen sobre la que se aplica la normalizaci\'on ha de mantener todas las
+En la máscara de cambios generada en la detección de cambios, las celdas clasificadas como cambios $ (ND = 2; ND = 1) $, son re-clasificadas como $ ND=0 $; frente a las celdas de no cambio $(ND = 3)  $, clasificadas con $ ND=1 $. Esta m\'ascara re-clasificada se utiliza para suprimir los cambios de las im\'agenes radiom\'etricas utilizadas como referencia estad\'istica. Se aplica \'unicamente para estimar los par\'ametros de normalizaci\'on radiom\'etrica; la imagen sobre la que se aplica la normalizaci\'on ha de mantener todas las
 celdas, independientemente de que se consideren como cambios a priori. Se propone repetir las iteraciones hasta que la media de las diferencias entre NDVI, sea de magnitud similar a la media obtenida en la iteraci\'on anterior. 
 \begin{algorithm}
 	\caption{Algoritmo de iteraci\'on}
@@ -283,10 +286,11 @@ La siguiente ilustraci\'on \ref{fig:discrimForestal} refleja los pasos realizado
 \paragraph{NDVI}\mbox{}\\\mbox{}\\
 Se procede a hallar del NDVI para ambas fechas pertenecientes a la serie temporal evaluada. El calculo es hecho teniendo como entradas las bandas infrarroja cercana y roja, donde el vigor vegetal de cada p\'ixel sera determinado por la ecuaci\'on \ref{e:ndvi}. En total son consumidas 4 im\'agenes para obtener dos de salidas.
 \paragraph{Umbral de Vegetaci\'on}\label{sec:uvegetacion}\mbox{}\\\mbox{}\\
-El umbral discriminatorio para la vegetaci\'on es determinado a partir de una constante calculada por un previo estudio del comportamiento espectral de la cobertura vegetal y las im\'agenes NDVI \ref{subsec:umbralVegetacion}. Dicha variable corresponde a la desviaci\'on $(\sigma_{c} = 0.05923288)  $ observada en el an\'alisis hecho por cruzamientos de datos entre im\'agenes VCF y Landsat. La ecuaci\'on del umbral $ U_{NDVI} $ tiene la siguiente expresi\'on:
+El umbral discriminatorio para la vegetaci\'on es determinado a partir de una constante calculada por un previo estudio del comportamiento espectral de la cobertura vegetal y las im\'agenes NDVI \ref{subsec:umbralVegetacion}. Dicha variable corresponde a la desviaci\'on $(\sigma_{c} = 0.0658242733)  $ observada en el an\'alisis hecho por cruzamientos de datos entre im\'agenes VCF y Landsat. La ecuaci\'on del umbral $ U_{NDVI} $ tiene la siguiente expresi\'on:
 		\begin{equation}
 		U_{NDVI} = \mu_{NDVI}\pm n \sigma_{c}
 		\end{equation}
+\nomenclature[27]{$ \sigma_{c} $}{Desviaci\'on determinada como constante para la umbralizaci\'on de la cobertura vegetal.}
 Donde $ \mu_{NDVI} $ representa la media del NDVI calculada y $ n $ la fiabilidad. No se utiliza la ecuaci\'on correspondiente a la suma, debido a que se pretende analizar im\'agenes donde el porcentaje de vegetaci\'on es mayor, por lo que quedaría fuera la media.
 \begin{figure}[H]
 	\centering
@@ -312,6 +316,7 @@ La siguiente ilustraci\'on representa el flujo de tareas \ref{fig:intersPerdida}
 
 \subsection{Estimaci\'on de p\'erdida de carbono forestal}
 El procedimiento final consiste en estimar el carbono perdido o no secuestrados dentro del tiempo transcurrido entre las im\'agenes satelitales. El producto constituye la mascara de perdida forestal junto con la cuantificaci\'on en toneladas de carbono por hect\'area, obtenida mediante la ecuaci\'on de regresi\'on lineal $(y= b + ax) $ que fue generada a través del mapa global de carbono \cite{saatchi2011benchmark} y el NDVI, determinadas por las im\'agenes Landsat, en un estudio previo \ref{subsec:estimacionCarbono}. La regresi\'on presenta un coeficiente de determinaci\'on $ (r^{2}=0.509125) $ moderado, según tabla \ref{t:coefDeter}, por lo que el estudio es considerado valido para su aplicaci\'on en la metodolog\'ia.
+\nomenclature[28]{$ r^{2}$}{Coeficiente de determinaci\'on.}
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|l|l|}
@@ -330,6 +335,7 @@ La siguiente expresi\'on define la ecuaci\'on hallada:
 		\begin{equation}
 			C_{(x,y)}=4,33+30,1 NDVI_{(x,y)}
 		\end{equation}
+\nomenclature[29]{$ C_{(x,y)}$}{Toneladas de carbono por hect\'area en las coordenadas $ x $ e $ y $.}
 Donde $ C_{(x,y)} $ representa Toneladas de carbono por hect\'area (ton C/Ha.) para el p\'ixel con posici\'on $ (x,y) $ y $ NDVI_{(x,y)} $ la variable independiente perteneciente a una fecha. Para no realizar el calculo de carbono repetidamente en cada imagen temporal y luego restarlas con finalidad de tener la perdida producida en los p\'ixeles, se optimizo el proceso  utilizando la imagen con indices de cambios resultante $ (Ic) $ del proceso de iteraci\'on \ref{subsec:iteracion}, por lo que la ecuaci\'on quedara modificada con las siguientes expresiones:
 		\begin{equation}
 				\label{e:fecha1}
@@ -352,7 +358,8 @@ Restando el carbono obtenido entre cada fecha, ecuación \ref{e:fecha2} y \ref{e
 				\label{e:perdidaCar}
 					PC_{(x,y)} =C2_{(x,y)} - C1_{(x,y)}
 				\end{equation}		
-Siendo $ PC_{(x,y)}$ una variable representativa de la resta. Remplazando \ref{e:indiceCambio} y \ref{e:perdidaCar} en \ref{e:restaCar}, la ecuaci\'on de regresi\'on final quedar\'ia:
+\nomenclature[30]{$PC_{(x,y)}$}{Toneladas de carbono por hect\'area perdidos en las coordenadas $ x $ e $ y $.}
+Siendo $ PC_{(x,y)}$ Toneladas de carbono por hect\'area perdidos. Remplazando \ref{e:indiceCambio} y \ref{e:perdidaCar} en \ref{e:restaCar}, la ecuaci\'on de regresi\'on final quedar\'ia:
 		\begin{equation}
 			PC_{(x,y)} = 30,1 Ic_{(x,y)}
 		\end{equation}
@@ -365,12 +372,5 @@ La cuantificaci\'on sera realizado teniendo en cuenta la mascara de perdida fore
 \end{figure}
 
 
-
-%\begin{figure}[H]
-%\centering
-%\subfigure[Imagen de retina.]{\includegraphics[width=50mm]{./Figures/cap4/vasos/vaso1.jpg}}
-%\subfigure[Canal verde de la Imagen.]{\includegraphics[width=50mm]{./Figures/cap4/micro0.jpg}}
-%\caption{Canal verde de la imagen.} \label{fig:vaso_1}
-%\end{figure}
-
-%\subsubsection{CLAHE}
+\section{Resumen}
+En este capitulo se describen los materiales y los tres procedimientos generales que componen la metodolog\'ia propuesta. La im\'agenes infrarroja cercana y roja de las dos fechas inicialmente deben pasar por un proceso de correcci\'on de errores del sensor y de ubicaci\'on geogr\'afica para realizar el an\'alisis multitemporal en la detecci\'on de cambio forestal. Una vez detectado la perdida forestal entre las fechas del proceso de detecci\'on de cambio, se realiza la estimaci\'on de carbono en base a una ecuaci\'on de regresi\'on hallado por un estudio previo. El resultado consiste en un mapa de perdida forestal junto a la cuantificaci\'on en toneladas de carbono perdidos.

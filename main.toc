@@ -8,8 +8,8 @@
 \vspace {1em}
 \contentsline {chapter}{\'Indice de figuras}{\es@scroman {ix}}{dummy.4}
 \contentsline {chapter}{\'Indice de s\'imbolos}{\es@scroman {xi}}{chapter*.6}
-\contentsline {chapter}{\'Indice de tablas}{\es@scroman {xi}}{dummy.7}
-\contentsline {chapter}{Abreviaciones}{\es@scroman {xiii}}{dummy.9}
+\contentsline {chapter}{\'Indice de tablas}{\es@scroman {xii}}{dummy.7}
+\contentsline {chapter}{Abreviaciones}{\es@scroman {xiv}}{dummy.9}
 \contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{2}{chapter.12}
 \contentsline {section}{\numberline {1.1}Justificaci\IeC {\'o}n y Motivaci\IeC {\'o}n}{4}{section.13}
 \contentsline {section}{\numberline {1.2}Antecedentes}{5}{section.14}
@@ -28,68 +28,71 @@
 \contentsline {subsection}{\numberline {2.2.1}Biomasa Forestal}{14}{subsection.30}
 \contentsline {section}{\numberline {2.3}Medici\'on de balances de carbono}{14}{section.31}
 \contentsline {section}{\numberline {2.4}Teledetecci\'on en el medio ambiente}{15}{section.33}
-\contentsline {chapter}{\numberline {3}Procesamiento de im\'agenes satelitales}{18}{chapter.34}
-\contentsline {section}{\numberline {3.1}Sensores Remotos}{18}{section.35}
-\contentsline {subsection}{\numberline {3.1.1}El espectro electromagn\'etico}{19}{subsection.36}
-\contentsline {subsection}{\numberline {3.1.2}Firmas espectrales}{19}{subsection.37}
-\contentsline {subsection}{\numberline {3.1.3}Resoluciones de un sensor}{20}{subsection.39}
-\contentsline {section}{\numberline {3.2}Im\'agenes satelitales}{22}{section.44}
-\contentsline {subsection}{\numberline {3.2.1}Tipo de im\'agenes satelitales}{22}{subsection.45}
-\contentsline {subsection}{\numberline {3.2.2}Histogramas}{23}{subsection.46}
-\contentsline {subsection}{\numberline {3.2.3}Combinacion de bandas}{23}{subsection.47}
-\contentsline {section}{\numberline {3.3}\'Indices de vegetaci\'on}{25}{section.49}
-\contentsline {subsection}{\numberline {3.3.1}\'Indice de vegetaci\'on diferencial normalizada}{25}{subsection.50}
-\contentsline {section}{\numberline {3.4}An\'alisis Multitemporal}{26}{section.52}
-\contentsline {section}{\numberline {3.5}Correciones a las im\'agenes de sat\'elites}{26}{section.53}
-\contentsline {subsection}{\numberline {3.5.1}Correccci\'on geom\'etrica}{26}{subsection.54}
-\contentsline {subsubsection}{\numberline {3.5.1.1}Interpolaci\'on espacial}{27}{subsubsection.55}
-\contentsline {subsubsection}{\numberline {3.5.1.2}Interpolaci\'on de los valores radiom\'etricos}{30}{subsubsection.63}
-\contentsline {subsection}{\numberline {3.5.2}Correcci\'on radiom\'etrica}{33}{subsection.74}
-\contentsline {subsubsection}{\numberline {3.5.2.1}Pixeles o lineas perdidas}{34}{subsubsection.76}
-\contentsline {subsubsection}{\numberline {3.5.2.2}Bandeado}{34}{subsubsection.79}
-\contentsline {section}{\numberline {3.6}Proceso de detecci\'on de cambios}{36}{section.84}
-\contentsline {subsection}{\numberline {3.6.1}Comparaci\'on multitemporal}{36}{subsection.85}
-\contentsline {subsection}{\numberline {3.6.2}Criterios de decisi\'on}{37}{subsection.88}
-\contentsline {subsubsection}{\numberline {3.6.2.1}Discriminaci\'on de las zonas de cambio}{37}{subsubsection.89}
-\contentsline {subsection}{\numberline {3.6.3}Filtrado}{38}{subsection.92}
-\contentsline {subsubsection}{\numberline {3.6.3.1}Filtro de la mediana}{39}{subsubsection.93}
-\contentsline {chapter}{\numberline {4}Materiales y Metodolog\'ia}{41}{chapter.95}
-\contentsline {section}{\numberline {4.1}Materiales}{41}{section.96}
-\contentsline {subsection}{\numberline {4.1.1}Im\'agenes satelitales}{41}{subsection.97}
-\contentsline {subsubsection}{\numberline {4.1.1.1}Landsat}{41}{subsubsection.98}
-\contentsline {subsubsection}{\numberline {4.1.1.2}Vegetation Continuous Fields}{43}{subsubsection.101}
-\contentsline {subsubsection}{\numberline {4.1.1.3}Mapa global de carbono - Paraguay}{44}{subsubsection.104}
-\contentsline {subsubsection}{\numberline {4.1.1.4}Paraguay Forest Change Product}{45}{subsubsection.106}
-\contentsline {subsection}{\numberline {4.1.2}Software}{46}{subsection.109}
-\contentsline {subsubsection}{\numberline {4.1.2.1}GRASS}{47}{subsubsection.110}
-\contentsline {subsubsection}{\numberline {4.1.2.2}Quantum GIS}{47}{subsubsection.111}
-\contentsline {section}{\numberline {4.2}Metodolog\'ia}{47}{section.112}
-\contentsline {subsection}{\numberline {4.2.1}Correcciones de im\'agenes satelitales}{48}{subsection.114}
-\contentsline {subsubsection}{\numberline {4.2.1.1}Correcci\'on Geom\'etrica}{48}{subsubsection.115}
-\contentsline {subsubsection}{\numberline {4.2.1.2}Correcci\'on Radiom\'etrica}{50}{subsubsection.118}
-\contentsline {subsection}{\numberline {4.2.2}Detecci\'on de cambio forestal}{50}{subsection.119}
-\contentsline {subsubsection}{\numberline {4.2.2.1}Detecci\'on de cambio}{51}{subsubsection.120}
-\contentsline {paragraph}{\numberline {4.2.2.1.1}Nomalizaci\'on Radiom\'etrica}{51}{paragraph.122}
-\contentsline {paragraph}{\numberline {4.2.2.1.2}Comparaci\'on Multitemporal}{52}{paragraph.130}
-\contentsline {paragraph}{\numberline {4.2.2.1.3}Umbral estad\'istico}{53}{paragraph.131}
-\contentsline {paragraph}{\numberline {4.2.2.1.4}Iteraci\'on}{54}{paragraph.133}
-\contentsline {subsubsection}{\numberline {4.2.2.2}Discriminaci\'on Forestal}{56}{subsubsection.136}
-\contentsline {paragraph}{\numberline {4.2.2.2.1}NDVI}{56}{paragraph.138}
-\contentsline {paragraph}{\numberline {4.2.2.2.2}Umbral de Vegetaci\'on}{56}{paragraph.139}
-\contentsline {paragraph}{\numberline {4.2.2.2.3}Intersecci\'on \'area boscosa }{57}{paragraph.142}
-\contentsline {subsubsection}{\numberline {4.2.2.3}Mascara de P\'erdida Forestal}{57}{subsubsection.143}
-\contentsline {subsection}{\numberline {4.2.3}Estimaci\'on de p\'erdida de carbono forestal}{58}{subsection.145}
-\contentsline {chapter}{\numberline {5}Pruebas experimentales}{62}{chapter.155}
-\contentsline {section}{\numberline {5.1}Caso de estudio}{62}{section.156}
-\contentsline {section}{\numberline {5.2}M\IeC {\'e}tricas de evaluaci\IeC {\'o}n}{63}{section.157}
-\contentsline {subsection}{\numberline {5.2.1}Porcentaje de precisi\'on global}{63}{subsection.159}
-\contentsline {subsection}{\numberline {5.2.2}Coeficiente Kappa}{64}{subsection.161}
-\contentsline {section}{\numberline {5.3}Pruebas y resultados experimentales}{64}{section.164}
-\contentsline {subsection}{\numberline {5.3.1}Umbral de Vegetaci\'on}{65}{subsection.165}
-\contentsline {subsection}{\numberline {5.3.2}Estimaci\'on de p\'erdida de carbono forestal}{68}{subsection.169}
-\contentsline {subsection}{\numberline {5.3.3}Prueba experimental}{70}{subsection.174}
-\contentsline {subsection}{\numberline {5.3.4}Discusi\'on de resultados}{74}{subsection.182}
-\contentsline {subsection}{\numberline {5.3.5}Dificultades encontradas}{77}{subsection.187}
-\contentsline {chapter}{\numberline {6}Conclusiones y trabajos futuros}{80}{chapter.188}
-\contentsline {section}{\numberline {6.1}Conclusiones}{80}{section.189}
-\contentsline {section}{\numberline {6.2}Trabajos futuros}{82}{section.190}
+\contentsline {section}{\numberline {2.5}Resumen}{16}{section.34}
+\contentsline {chapter}{\numberline {3}Procesamiento de im\'agenes satelitales}{18}{chapter.35}
+\contentsline {section}{\numberline {3.1}Sensores Remotos}{18}{section.36}
+\contentsline {subsection}{\numberline {3.1.1}El espectro electromagn\'etico}{19}{subsection.37}
+\contentsline {subsection}{\numberline {3.1.2}Firmas espectrales}{19}{subsection.38}
+\contentsline {subsection}{\numberline {3.1.3}Resoluciones de un sensor}{20}{subsection.40}
+\contentsline {section}{\numberline {3.2}Im\'agenes satelitales}{22}{section.45}
+\contentsline {subsection}{\numberline {3.2.1}Tipo de im\'agenes satelitales}{22}{subsection.46}
+\contentsline {subsection}{\numberline {3.2.2}Histogramas}{23}{subsection.47}
+\contentsline {subsection}{\numberline {3.2.3}Combinaci\'on de bandas}{23}{subsection.48}
+\contentsline {section}{\numberline {3.3}\'Indices de vegetaci\'on}{25}{section.50}
+\contentsline {subsection}{\numberline {3.3.1}\'Indice de vegetaci\'on diferencial normalizada}{25}{subsection.51}
+\contentsline {section}{\numberline {3.4}An\'alisis Multitemporal}{26}{section.53}
+\contentsline {section}{\numberline {3.5}Correciones a las im\'agenes de sat\'elites}{26}{section.54}
+\contentsline {subsection}{\numberline {3.5.1}Correccci\'on geom\'etrica}{26}{subsection.55}
+\contentsline {subsubsection}{\numberline {3.5.1.1}Interpolaci\'on espacial}{27}{subsubsection.56}
+\contentsline {subsubsection}{\numberline {3.5.1.2}Interpolaci\'on de los valores radiom\'etricos}{30}{subsubsection.65}
+\contentsline {subsection}{\numberline {3.5.2}Correcci\'on radiom\'etrica}{33}{subsection.76}
+\contentsline {subsubsection}{\numberline {3.5.2.1}Pixeles o lineas perdidas}{34}{subsubsection.78}
+\contentsline {subsubsection}{\numberline {3.5.2.2}Bandeado}{34}{subsubsection.81}
+\contentsline {section}{\numberline {3.6}Proceso de detecci\'on de cambios}{36}{section.86}
+\contentsline {subsection}{\numberline {3.6.1}Comparaci\'on multitemporal}{36}{subsection.87}
+\contentsline {subsection}{\numberline {3.6.2}Criterios de decisi\'on}{37}{subsection.90}
+\contentsline {subsubsection}{\numberline {3.6.2.1}Discriminaci\'on de las zonas de cambio}{37}{subsubsection.91}
+\contentsline {subsection}{\numberline {3.6.3}Filtrado}{38}{subsection.94}
+\contentsline {subsubsection}{\numberline {3.6.3.1}Filtro de la mediana}{39}{subsubsection.95}
+\contentsline {section}{\numberline {3.7}Resumen}{39}{section.97}
+\contentsline {chapter}{\numberline {4}Materiales y Metodolog\'ia}{41}{chapter.98}
+\contentsline {section}{\numberline {4.1}Materiales}{41}{section.99}
+\contentsline {subsection}{\numberline {4.1.1}Im\'agenes satelitales}{41}{subsection.100}
+\contentsline {subsubsection}{\numberline {4.1.1.1}Landsat}{41}{subsubsection.101}
+\contentsline {subsubsection}{\numberline {4.1.1.2}Vegetation Continuous Fields}{43}{subsubsection.104}
+\contentsline {subsubsection}{\numberline {4.1.1.3}Mapa global de carbono - Paraguay}{44}{subsubsection.107}
+\contentsline {subsubsection}{\numberline {4.1.1.4}Paraguay Forest Change Product}{45}{subsubsection.109}
+\contentsline {subsection}{\numberline {4.1.2}Software}{46}{subsection.112}
+\contentsline {subsubsection}{\numberline {4.1.2.1}GRASS}{47}{subsubsection.113}
+\contentsline {subsubsection}{\numberline {4.1.2.2}Quantum GIS}{47}{subsubsection.114}
+\contentsline {section}{\numberline {4.2}Metodolog\'ia}{47}{section.115}
+\contentsline {subsection}{\numberline {4.2.1}Correcciones de im\'agenes satelitales}{48}{subsection.117}
+\contentsline {subsubsection}{\numberline {4.2.1.1}Correcci\'on Geom\'etrica}{48}{subsubsection.118}
+\contentsline {subsubsection}{\numberline {4.2.1.2}Correcci\'on Radiom\'etrica}{50}{subsubsection.121}
+\contentsline {subsection}{\numberline {4.2.2}Detecci\'on de cambio forestal}{50}{subsection.122}
+\contentsline {subsubsection}{\numberline {4.2.2.1}Detecci\'on de cambio}{51}{subsubsection.123}
+\contentsline {paragraph}{\numberline {4.2.2.1.1}Nomalizaci\'on Radiom\'etrica}{51}{paragraph.125}
+\contentsline {paragraph}{\numberline {4.2.2.1.2}Comparaci\'on Multitemporal}{52}{paragraph.133}
+\contentsline {paragraph}{\numberline {4.2.2.1.3}Umbral estad\'istico}{53}{paragraph.134}
+\contentsline {paragraph}{\numberline {4.2.2.1.4}Iteraci\'on}{54}{paragraph.136}
+\contentsline {subsubsection}{\numberline {4.2.2.2}Discriminaci\'on Forestal}{56}{subsubsection.139}
+\contentsline {paragraph}{\numberline {4.2.2.2.1}NDVI}{56}{paragraph.141}
+\contentsline {paragraph}{\numberline {4.2.2.2.2}Umbral de Vegetaci\'on}{56}{paragraph.142}
+\contentsline {paragraph}{\numberline {4.2.2.2.3}Intersecci\'on \'area boscosa }{57}{paragraph.145}
+\contentsline {subsubsection}{\numberline {4.2.2.3}Mascara de P\'erdida Forestal}{57}{subsubsection.146}
+\contentsline {subsection}{\numberline {4.2.3}Estimaci\'on de p\'erdida de carbono forestal}{58}{subsection.148}
+\contentsline {section}{\numberline {4.3}Resumen}{60}{section.158}
+\contentsline {chapter}{\numberline {5}Pruebas experimentales}{62}{chapter.159}
+\contentsline {section}{\numberline {5.1}Caso de estudio}{62}{section.160}
+\contentsline {section}{\numberline {5.2}M\IeC {\'e}tricas de evaluaci\IeC {\'o}n}{63}{section.161}
+\contentsline {subsection}{\numberline {5.2.1}Porcentaje de precisi\'on global}{63}{subsection.163}
+\contentsline {subsection}{\numberline {5.2.2}Coeficiente Kappa}{64}{subsection.165}
+\contentsline {section}{\numberline {5.3}Pruebas y resultados experimentales}{64}{section.168}
+\contentsline {subsection}{\numberline {5.3.1}Umbral de Vegetaci\'on}{65}{subsection.169}
+\contentsline {subsection}{\numberline {5.3.2}Estimaci\'on de p\'erdida de carbono forestal}{68}{subsection.173}
+\contentsline {subsection}{\numberline {5.3.3}Prueba experimental}{70}{subsection.178}
+\contentsline {subsection}{\numberline {5.3.4}Discusi\'on de resultados}{74}{subsection.186}
+\contentsline {subsection}{\numberline {5.3.5}Dificultades encontradas}{77}{subsection.191}
+\contentsline {chapter}{\numberline {6}Conclusiones y trabajos futuros}{80}{chapter.192}
+\contentsline {section}{\numberline {6.1}Conclusiones}{80}{section.193}
+\contentsline {section}{\numberline {6.2}Trabajos futuros}{82}{section.194}

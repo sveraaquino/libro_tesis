@@ -11,7 +11,16 @@ Se opto por esta localizaci\'on debido a que ademas de estar ubicada en el Chaco
 
 \section{Métricas de evaluación}
 Para realizar el control de calidad, algunos se basan en el concepto de matriz de confusi\'on, que establece una relaci\'on entre los resultados obtenidos en el proceso de asignaci\'on y la informaci\'on verdad terreno $ (VT) $ disponible para la zona de estudio. La diagonal principal representa el n\'umero de celdas correctamente catalogadas $ (T) $ , y la diagonal transpuesta, las incorrectamente catalogadas $ (F) $ . El uso de esta matriz presenta como mayor desventaja que est\'a condicionada a la veracidad y exactitud de la referencia utilizada como $ VT $.
-
+\nomenclature[31]{$ VT $}{Puntos de Verdad terreno.}
+\nomenclature[31]{$ T $}{Puntos catalogados correctamente.}
+\nomenclature[31]{$ F $}{Puntos catalogados correctamente.}
+\nomenclature[31]{$ TP $}{Verdadero Positivo.}
+\nomenclature[31]{$ FP $}{Falso Positivo.}
+\nomenclature[31]{$ P $}{Total Positivo.}
+\nomenclature[31]{$ N $}{Total Negativo.}
+\nomenclature[31]{$ FN $}{Falso negativo.}
+\nomenclature[31]{$ P^{,} $}{Total Positivo catalogado.}
+\nomenclature[31]{$ N^{,} $}{Total Negativo catalogado.}
 \begin{table}[H]
 	\centering
 \begin{tabular}{|
@@ -123,7 +132,7 @@ El procedimiento se repite para cada mascara en los distintos rangos. En total s
 \end{table}
 
 La tabla nos muestra claramente, que la media del NDVI es diferente para cada a\~{n}o, independientemente del porcentaje de vegetaci\'on evaluado. En este caso, no es conveniente tomar la media dentro de un patrón de comportamiento, con el fin de discriminar la vegetaci\'on. Por otro lado, las desviaciones presentan peque\~{n}as diferencias no considerables, lo cual es debido, a que el \'area foliar (hojas) en la vegetaci\'on posee diferente vigor en cada estaci\'on o condici\'on clim\'atica, al momento de ser capturado su reflectividad por sensores del sat\'elite.\\~\\
-De esta manera se realiza un promedio entre todas las desviaciones, quedando como valor constante en la umbralizaci\'on de vegetaci\'on $ \sigma_{ndvi} = 0.0658242733 $.
+De esta manera se realiza un promedio entre todas las desviaciones, quedando como valor constante en la umbralizaci\'on de vegetaci\'on $ \sigma_{c} = 0.0658242733 $.
 \subsection{Estimaci\'on de p\'erdida de carbono forestal}\label{subsec:estimacionCarbono}
 Gracias al Mapa Global de Carbono \ref{sec:saatchiMapa} es posible analizar la relaci\'on que posee con los indices de vegetaci\'on. El mapa corresponde a fechas cercanas al a\~{n}o 2000, por lo que para el estudio, se obtuvieron im\'agenes Landsat del a\~{n}o 2003 para el calculo de NDVI. Posteriormente se generaron 240 puntos aleatorios dentro \'areas que correspond\'ian a vegetaci\'on.
 \begin{figure}[H]
