@@ -11,16 +11,17 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Resoluci\'on espectral igual a 3 para el sensor SPOT y 7 en el sensor Landsat.\relax }}{21}{figure.caption.42}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Resoluci\'on radiom\'etrica de 8 bits (0 a 255 niveles digitales).\relax }}{21}{figure.caption.43}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Resoluci\'on temporal de 16 d\'ias.\relax }}{22}{figure.caption.44}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Combinaci\'on de bandas espectrales a trav\'es de los canales RGB.\relax }}{24}{figure.caption.49}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Localizaci\'on de puntos comunes y puntos de referencia.\relax }}{28}{figure.caption.57}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Interpolaci\'on espacial con polinomios de primer y segundo orden.\relax }}{29}{figure.caption.62}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Error RMS.\relax }}{30}{figure.caption.64}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Interpolaci\'on Vecino m\'as Cercano.\relax }}{31}{figure.caption.69}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Interpolaci\'on Bilineal.\relax }}{32}{figure.caption.72}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Convoluci\'on c\'ubica.\relax }}{33}{figure.caption.75}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Fallos del sensor en la captura de la imagen.\relax }}{33}{figure.caption.77}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Proceso de correcci\'on del bandeo.\relax }}{35}{figure.caption.85}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Proceso del filtro de mediana.\relax }}{39}{figure.caption.96}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Imagen satelital.\relax }}{23}{figure.caption.46}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Combinaci\'on de bandas espectrales a trav\'es de los canales RGB.\relax }}{25}{figure.caption.49}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Localizaci\'on de puntos comunes y puntos de referencia.\relax }}{28}{figure.caption.57}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Interpolaci\'on espacial con polinomios de primer y segundo orden.\relax }}{29}{figure.caption.62}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Error RMS.\relax }}{30}{figure.caption.64}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Interpolaci\'on Vecino m\'as Cercano.\relax }}{31}{figure.caption.69}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Interpolaci\'on Bilineal.\relax }}{32}{figure.caption.72}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Convoluci\'on c\'ubica.\relax }}{33}{figure.caption.75}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Fallos del sensor en la captura de la imagen.\relax }}{33}{figure.caption.77}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Proceso de correcci\'on del bandeo.\relax }}{35}{figure.caption.85}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Proceso del filtro de mediana.\relax }}{39}{figure.caption.96}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces Ejemplo WRS-2 Path/Row\relax }}{43}{figure.caption.103}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Imagen VCF\relax }}{44}{figure.caption.106}

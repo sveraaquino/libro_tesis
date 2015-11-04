@@ -49,7 +49,8 @@ Se define a la resoluci\'on de un sensor como el menor cambio en la magnitud de 
 					\caption{Resoluci\'on espectral igual a 3 para el sensor SPOT y 7 en el sensor Landsat.}
 					\label{fig:espectralRes}
 				\end{figure}
-		\item \textbf{Resoluci\'on radiom\'etrica:} Es la sensibilidad del sensor para detectar variaciones en la cantidad de energ\'ia espectral recibida. La sensibilidad se expresa en bits e indica el n\'umero de los distintos niveles radiom\'etricos que puede detectar un sensor.
+		\item \textbf{Resoluci\'on radiom\'etrica:} Es la sensibilidad del sensor para detectar variaciones en la cantidad de energ\'ia espectral recibida. La sensibilidad se expresa en bits e indica el n\'umero de los distintos niveles radiom\'etricos $ r $ que puede detectar un sensor.
+		\nomenclature[10]{$ r $}{Bits o Niveles radiom\'etricos de la imagen satelital.}	
 						\begin{figure}[H]
 							\centering
 							\includegraphics[width=0.6	\textwidth]{./Figures/cap3/resolucionradiometrica.jpg}
@@ -69,15 +70,27 @@ Se define a la resoluci\'on de un sensor como el menor cambio en la magnitud de 
 	\end{itemize}
 
 \section{Im\'agenes satelitales}
-Una imagen satelital o imagen de sat\'elite se puede definir como la representaci\'on visual de la informaci\'on capturada por un sensor montado en un sat\'elite artificial. Est\'an organizados en un arreglo matricial bidimensional de elementos llamados p\'ixeles, donde cada p\'ixel representa un \'area de superficie sobre la tierra con un valor de intensidad y una ubicación en la imagen, tambi\'en son conocidas como im\'agenes r\'aster \cite{acosta2003experiencia}. 
+%Una imagen satelital o imagen de sat\'elite $ S $ se puede definir como la representaci\'on visual de la informaci\'on capturada por un sensor montado en un sat\'elite artificial. Est\'an organizados en un arreglo matricial bidimensional $ l \times c $ de elementos llamados p\'ixeles, donde cada p\'ixel representa un \'area de superficie sobre la tierra con un valor de intensidad o nivel digital $ f(x,y) $, dentro del dominio $ D=[0,2^{r}] $, y una ubicación en la imagen  $(x,y)$, tambi\'en son conocidas como im\'agenes r\'aster \cite{acosta2003experiencia}. 
+%		\nomenclature[11]{$ S $}{Imagen satelital.}	
+%\begin{equation}
+%\label{eq:imagenDigital}
+%f(x,y)=\begin{bmatrix}
+%f(0,0) &f(0,1)  & \cdots & f(0,c-1) \\ 
+%f(1,0) & f(1,1) & \cdots  & f(1,c-1)\\ 
+%\vdots & \vdots & & \vdots \\ 
+%f(l-1,0) & f(l-1,1)  &\cdots  & f(l-1,c-1)
+%\end{bmatrix}
+%\end{equation}
+Una imagen satelital se puede definir como la representaci\'on visual de la informaci\'on capturada por un sensor montado en un sat\'elite artificial \cite{acosta2003experiencia}. \\~\\
+Sea $ \mathbb{Z} $ un conjunto de enteros. Una imagen satelital es una funci\'on $ f:\mathbb{Z}^{3} \longrightarrow [0,....,2^{r}) $. Cada $ (x,y,i) $ se los conoce como coordenadas espaciales de la banda $ i $, donde $ i \in [1,k] $, siendo $ k $ el numero de bandas y $ r $ la resoluci\'on radiom\'etrica en la imagen. Las im\'agenes satelitales son conocidos tambi\'en como raster.
+  \begin{figure}[H]
+  	\centering
+  	\includegraphics[width=0.8	\textwidth]{./Figures/cap3/imagen_satelital.png}
+  	\caption{Imagen satelital.}
+  	\label{fig:imagenMultiespectral}
+  \end{figure}
+La ilustraci\'on \ref{fig:imagenMultiespectral} nos muestra los ejes de coordenadas espaciales $ x $ e $ y $ para cada plano que representan las bandas, pudiendo acceder a valor de la intensidad o nivel digital mediante la funci\'on $ f(x,y,i) $.
 
-\subsection{Tipo de im\'agenes satelitales}
-Las im\'agenes satelitales se dividen en dos tipos \cite{salinero2002teledeteccion}:
-	\begin{itemize}
-		\item \textbf{Pancrom\'aticas:} se captan mediante un sensor digital que mide la reflectancia de energ\'ia en una amplia parte del espectro electromagn\'etico. Para los sensores pancrom\'aticos m\'as modernos, esta \'unica banda suele abarcar la parte visible e infrarrojo cercano del espectro. Los datos pancrom\'aticos se representan por medio de im\'agenes en blanco y negro. 
-		\item \textbf{Multiespectrales:} se captan mediante un sensor digital que mide la reflectancia en muchas bandas. Por ejemplo, un conjunto de detectores puede medir energ\'ia roja reflejada dentro de la parte visible del espectro mientras que otro conjunto mide la energ\'ia del infrarrojo cercano. Es posible incluso que dos series de detectores midan la energ\'ia en dos partes diferentes de la misma longitud de onda. Estos distintos valores de reflectancia se combinan para crear im\'agenes de color.
-
-	\end{itemize}
 
 \subsection{Histogramas}
 El histograma es una representaci\'on gr\'afica \'util de la informaci\'on contenida por las im\'agenes obtenidas a trav\'es de la percepci\'on remota. Los analistas, a menudo despliegan el histograma ya que proporciona una apreciaci\'on de la calidad de los datos que presenta una imagen. Por ejemplo si el contraste es bajo o muy alto (histogramas estrechos y amplios); si son multimodales responden a distintos tipos de coberturas detectadas (agua, humedales, tipos de vegetaci\'on, etc.), si el histograma se encuentra desplazado hacia la izquierda, la imagen tendr\'a una tonalidad oscura y si esta desplazada hacia la derecha tendr\'a una tonalidad mas clara; entre otras interpretaciones.

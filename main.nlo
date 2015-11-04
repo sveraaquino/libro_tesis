@@ -1,9 +1,10 @@
-\nomenclatureentry{10$NDVI$@[{$NDVI$}]\begingroup Imagen con el \'indice de vegetaci\'on diferencial normalizada calculada.\nomeqref {3.1}|nompageref}{25}
-\nomenclatureentry{11$B_{IRc}$@[{$B_{IRc}$}]\begingroup Imagen que representa a la banda infrarroja cercana.\nomeqref {3.1}|nompageref}{25}
-\nomenclatureentry{12$B_{R}$@[{$B_{R}$}]\begingroup Imagen que representa a la banda roja.\nomeqref {3.1}|nompageref}{25}
-\nomenclatureentry{13$ (x,y) $@[{$ (x,y) $}]\begingroup Representa las coordenadas de la imagen de entrada.\nomeqref {3.3}|nompageref}{28}
-\nomenclatureentry{13$ g $@[{$ g $}]\begingroup  Grado del polinomio de ajuste.\nomeqref {3.3}|nompageref}{28}
-\nomenclatureentry{13$ i $@[{$ i $}]\begingroup  Banda de la imagen satelital.\nomeqref {3.3}|nompageref}{28}
+\nomenclatureentry{10$ r $@[{$ r $}]\begingroup Bits o Niveles radiom\'etricos de la imagen satelital.\nomeqref {3.0}|nompageref}{21}
+\nomenclatureentry{10$NDVI$@[{$NDVI$}]\begingroup Imagen con el \'indice de vegetaci\'on diferencial normalizada calculada.\nomeqref {3.1}|nompageref}{26}
+\nomenclatureentry{11$B_{IRc}$@[{$B_{IRc}$}]\begingroup Imagen que representa a la banda infrarroja cercana.\nomeqref {3.1}|nompageref}{26}
+\nomenclatureentry{12$B_{R}$@[{$B_{R}$}]\begingroup Imagen que representa a la banda roja.\nomeqref {3.1}|nompageref}{26}
+\nomenclatureentry{13$ (x,y) $@[{$ (x,y) $}]\begingroup Representa las coordenadas de la imagen de entrada.\nomeqref {3.3}|nompageref}{29}
+\nomenclatureentry{13$ g $@[{$ g $}]\begingroup  Grado del polinomio de ajuste.\nomeqref {3.3}|nompageref}{29}
+\nomenclatureentry{13$ i $@[{$ i $}]\begingroup  Banda de la imagen satelital.\nomeqref {3.3}|nompageref}{29}
 \nomenclatureentry{14$ (x^{,},y^{,}) $@[{$ (x^{,},y^{,}) $}]\begingroup Coordenadas de la imagen transformada.\nomeqref {3.5}|nompageref}{29}
 \nomenclatureentry{15$ RMS_{error(i)} $@[{$ RMS_{error(i)} $}]\begingroup Error cuadr\'atico de la banda $ i $.\nomeqref {3.6}|nompageref}{29}
 \nomenclatureentry{16$ f(x,y) $@[{$ f(x,y) $}]\begingroup  Funci\'on que obtiene el nivel digital en la imagen original.\nomeqref {3.9}|nompageref}{31}

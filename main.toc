@@ -35,15 +35,14 @@
 \contentsline {subsection}{\numberline {3.1.2}Firmas espectrales}{19}{subsection.38}
 \contentsline {subsection}{\numberline {3.1.3}Resoluciones de un sensor}{20}{subsection.40}
 \contentsline {section}{\numberline {3.2}Im\'agenes satelitales}{22}{section.45}
-\contentsline {subsection}{\numberline {3.2.1}Tipo de im\'agenes satelitales}{22}{subsection.46}
-\contentsline {subsection}{\numberline {3.2.2}Histogramas}{23}{subsection.47}
-\contentsline {subsection}{\numberline {3.2.3}Combinaci\'on de bandas}{23}{subsection.48}
+\contentsline {subsection}{\numberline {3.2.1}Histogramas}{23}{subsection.47}
+\contentsline {subsection}{\numberline {3.2.2}Combinaci\'on de bandas}{24}{subsection.48}
 \contentsline {section}{\numberline {3.3}\'Indices de vegetaci\'on}{25}{section.50}
-\contentsline {subsection}{\numberline {3.3.1}\'Indice de vegetaci\'on diferencial normalizada}{25}{subsection.51}
+\contentsline {subsection}{\numberline {3.3.1}\'Indice de vegetaci\'on diferencial normalizada}{26}{subsection.51}
 \contentsline {section}{\numberline {3.4}An\'alisis Multitemporal}{26}{section.53}
-\contentsline {section}{\numberline {3.5}Correciones a las im\'agenes de sat\'elites}{26}{section.54}
-\contentsline {subsection}{\numberline {3.5.1}Correccci\'on geom\'etrica}{26}{subsection.55}
-\contentsline {subsubsection}{\numberline {3.5.1.1}Interpolaci\'on espacial}{27}{subsubsection.56}
+\contentsline {section}{\numberline {3.5}Correciones a las im\'agenes de sat\'elites}{27}{section.54}
+\contentsline {subsection}{\numberline {3.5.1}Correccci\'on geom\'etrica}{27}{subsection.55}
+\contentsline {subsubsection}{\numberline {3.5.1.1}Interpolaci\'on espacial}{28}{subsubsection.56}
 \contentsline {subsubsection}{\numberline {3.5.1.2}Interpolaci\'on de los valores radiom\'etricos}{30}{subsubsection.65}
 \contentsline {subsection}{\numberline {3.5.2}Correcci\'on radiom\'etrica}{33}{subsection.76}
 \contentsline {subsubsection}{\numberline {3.5.2.1}Pixeles o lineas perdidas}{34}{subsubsection.78}
