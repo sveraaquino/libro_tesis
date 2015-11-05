@@ -60,7 +60,7 @@ Se define a la resoluci\'on de un sensor como el menor cambio en la magnitud de 
 		\item \textbf{Resoluci\'on temporal:} Este tipo de resoluci\'on se refiere al intervalo de tiempo entre muestras sucesivas de la misma zona de la cobertura terrestre. El ciclo de cobertura est\'a en funció\'on de las caracter\'isticas orbitales de la plataforma, su velocidad, el ancho de barrido del sensor y las caracter\'isticas de construcci\'on del sistema.
 			\begin{figure}[H]
 					\centering
-					\includegraphics[width=0.6	\textwidth]{./Figures/cap3/temporalRes.png}
+					\includegraphics[width=0.6	\textwidth]{./Figures/cap3/resolucion_temporal_land.png}
 					\caption{Resoluci\'on temporal de 16 d\'ias.}
 					\label{fig:temporaRes}
 				\end{figure}
@@ -89,6 +89,11 @@ Sea $ \mathbb{Z} $ un conjunto de enteros. Una imagen satelital es una funci\'on
   	\caption{Imagen satelital.}
   	\label{fig:imagenMultiespectral}
   \end{figure}
+  	\nomenclature[11]{$\mathbb{Z}$}{Conjunto de enteros.}
+  	\nomenclature[11]{$i$}{ Banda de la imagen satelital.}
+  	\nomenclature[11]{$(x,y,i)$}{Coordenadas espaciales de la banda $ i $ en la imagen satelital.}
+  	\nomenclature[11]{$k$}{ N\'umero de bandas que posee una imagen satelital.}
+  	\nomenclature[12]{$f(x,y,i)$}{ Nivel digital, en la posicion $ x $ e $ y $ de la banda $ i $, de la imagen satelital.}
 La ilustraci\'on \ref{fig:imagenMultiespectral} nos muestra los ejes de coordenadas espaciales $ x $ e $ y $ para cada plano que representan las bandas, pudiendo acceder a valor de la intensidad o nivel digital mediante la funci\'on $ f(x,y,i) $.
 
 
@@ -163,18 +168,16 @@ Consiste en la determinaci\'on de la relaci\'on geom\'etrica entre las coordenad
  
  La transformaci\'on puede expresarse de la siguiente manera:
 	\begin{equation}
-	x^{,}_{i} = \sum_{j=0}^{g} \sum_{k=0}^{g-j} a_{ij}x^{j}_{i}y^{k}_{i}
+	x^{,}_{i} = \sum_{j=0}^{g} \sum_{d=0}^{g-j} a_{ij}x^{j}_{i}y^{d}_{i}
 	\end{equation} 
 		\begin{equation}
-		y^{,}_{i} = \sum_{j=0}^{g} \sum_{k=0}^{g-j} b_{ij}x^{j}_{i}y^{k}_{i}
+		y^{,}_{i} = \sum_{j=0}^{g} \sum_{d=0}^{g-j} b_{ij}x^{j}_{i}y^{d}_{i}
 		\end{equation} 
 
-\nomenclature[13]{$ (x,y) $}{Representa las coordenadas de la imagen de entrada.}	
+
 \nomenclature[13]{$ g $}{ Grado del polinomio de ajuste.}
-\nomenclature[13]{$ i $}{ Banda de la imagen satelital.}
 
-
-Donde $ x^{,}_{i} $ e $ y^{,}_{i} $ indica la coordenada en la imagen corregida, $ i $ representa la banda de la imagen, $ x_{i} $ y $ y_{i} $ representan las coordenadas de la imagen de entrada. El superindice $ g $ indica el grado del polinomio de ajuste, $ a_{i} $ y $ b_{i} $ los coeficientes del polinomio. Siendo la ecuaci\'on lineal las mas simple:
+Donde $ x^{,}_{i} $ e $ y^{,}_{i} $ indica la coordenada en la imagen corregida para la banda $ i $. El superindice $ g $ indica el grado del polinomio de ajuste, $ a_{i} $ y $ b_{i} $ los coeficientes del polinomio. Siendo la ecuaci\'on lineal las mas simple:
 	\begin{equation}
 	x^{,}_{i} = a_{0}+a_{1}x_{i}+a_{2}y_{i}
 	\end{equation} 
@@ -193,11 +196,10 @@ En distorsiones m\'as importantes o en \'areas extensas, es necesario una transf
  Para calcular la calidad en la interpolaci\'on espacial y los puntos de control seleccionados, se utiliza el error cuadrático medio (RMS), que consiste en la diferencia entre la coordenada re-transformada deseada para un punto de control y la coordenada real obtenida como salida.
 
  \begin{equation}
- RMS_{error(i)} = \sqrt{(x_{i}^{'}-x_{i})^{2}+(y_{i}^{'}-y_{i})^{2}}
+ RMS_{i} = \sqrt{(x_{i}^{'}-x_{i})^{2}+(y_{i}^{'}-y_{i})^{2}}
  \end{equation} 
- 		\nomenclature[15]{$ RMS_{error(i)} $}{Error cuadr\'atico de la banda $ i $.}
+ 		\nomenclature[15]{$ RMS_{i} $}{Error cuadr\'atico de la banda $ i $.}
  
- Donde $ x_{i} $ e $ y_{i} $ son las coordenadas de entrada.
  
      \begin{figure}[H]
      	\centering
@@ -211,27 +213,25 @@ En distorsiones m\'as importantes o en \'areas extensas, es necesario una transf
 \subsubsection{Interpolaci\'on de los valores radiom\'etricos}
 La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digital perteneciente a la imagen original, a la imagen corregida. Lo que se pretende es crear una imagen que se corresponda con estas coordenadas, por lo tanto, resulta necesario trasvasar de alguna forma, los niveles digital originales a su nueva posici\'on. Pudi\'endose ser abordada por tres m\'etodos diferentes:
 	\begin{itemize}
-		\item \textbf{Vecino m\'as pr\'oximo:} situ\'a en cada celda de la imagen corregida el nivel digital $ (Nd) $ del pixel m\'as cercano en la imagen original. Constituye la soluci\'on m\'as r\'apida y la que supone menor transformaci\'on en los niveles digitales originales. Su principal inconveniente es que produce una distorsi\'on en rasgos lineales en la imagen(fracturas, carreteras, caminos), que pueden aparecer en la corregida como lineales quebradas. Algebraicamente puede ser expresado:
-		
+		\item \textbf{Vecino m\'as pr\'oximo:} situ\'a en cada celda de la imagen corregida el nivel digital $ (ND) $ del pixel m\'as cercano en la imagen original. Constituye la soluci\'on m\'as r\'apida y la que supone menor transformaci\'on en los niveles digitales originales. Su principal inconveniente es que produce una distorsi\'on en rasgos lineales en la imagen(fracturas, carreteras, caminos), que pueden aparecer en la corregida como lineales quebradas. Algebraicamente puede ser expresado, donde $ g(x,y)=f(x,y,i) $ e $ i \in [1,...,k] $:
+		\nomenclature[15]{$ g(x,y) $}{Nivel digital en la posicion $ x $ e $ y $ de una imagen satelital en cualquier banda.}
+		\begin{equation}
+		\Delta x = x^{,}-x
+		\end{equation}	
+		\begin{equation}
+		\Delta y = y^{,}-y
+		\end{equation}	
 \begin{equation}
-	f(x^{,},y^{,}) = \begin{cases}
-		f(x,y) & \text{si }\Delta x < 0.5 \text{ y } \Delta y < 0.5\\
-		f(x+1,y) & \text{si } \Delta x \geq 0.5 \text{ y } \Delta y < 0.5\\
-		f(x,y+1) & \text{si } \Delta x < 0.5 \text{ y } \Delta y \geq 0.5\\
-		f(x+1,y+1) & \text{si } \Delta x \geq 0.5 \text{ y } \Delta y \geq 0.5
+	g(x^{,},y^{,}) = \begin{cases}
+		g(x,y) & \text{si }\Delta x < 0.5 \text{ y } \Delta y < 0.5\\
+		g(x+1,y) & \text{si } \Delta x \geq 0.5 \text{ y } \Delta y < 0.5\\
+		g(x,y+1) & \text{si } \Delta x < 0.5 \text{ y } \Delta y \geq 0.5\\
+		g(x+1,y+1) & \text{si } \Delta x \geq 0.5 \text{ y } \Delta y \geq 0.5
 	\end{cases}
 \end{equation}	
 
-\begin{equation}
-	\Delta x = x^{,}-x
-\end{equation}	
-\begin{equation}
-	\Delta y = y^{,}-y
-\end{equation}	
-\nomenclature[16]{$ f(x,y) $}{ Funci\'on que obtiene el nivel digital en la imagen original.}
-\nomenclature[17]{$ f(x^{,},y^{,}) $}{ Funci\'on que obtiene el nivel digital en la imagen corregida.}
-
-		Donde $ f(x,y) $ obtiene el nivel digital de la imagen original, $ f(x^{,},y^{,}) $ el nivel digital de la imagen corregida. En la ilustraci\'on \ref{fig:vecinoMasCercano2} se observa el procedimiento realizado.
+	\nomenclature[15]{$ g(x^{,},y^{,}) $}{Nivel digital en la posici\'on $ x $ e $ y $ de una imagen satelital corregida en cualquier banda.}
+		Donde $ g(x^{,},y^{,}) $ es el nivel digital en la imagen corregida. En la ilustraci\'on \ref{fig:vecinoMasCercano2} se observa el procedimiento realizado.
 				    \begin{figure}[H]
 				    	\centering
 				    	\includegraphics[width=0.6	\textwidth]{./Figures/cap3/vecinoMasCercano2.png}
@@ -241,7 +241,7 @@ La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digit
 		
 		\item \textbf{Interpolaci\'on bilineal:} promedia del nivel digital de los cuatros pixeles m\'as cercanos en la imagen original. Este promedio se ponderan seg\'un la distancia del pixel original al corregido; tienen una mayor influencia aquellos pixeles m\'as cercanos en la imagen inicial, pero tienden a difuminar un tanto los contrastes espaciales de la imagen original. Se representa con la siguiente expresi\'on:
 		\begin{equation}
-		f(x^{,},y^{,}) = c_{1}f(x,y)+c_{2}f(x+1,y)+c_{3}f(x,y+1)+c_{4}f(x+1,y+1)
+		g(x^{,},y^{,}) = c_{1}g(x,y)+c_{2}g(x+1,y)+c_{3}g(x,y+1)+c_{4}g(x+1,y+1)
 		\end{equation}	
 
 		\nomenclature[18]{$ c_{j} $}{ Peso asociado a los coeficiente del polinomio bilineal.}
@@ -262,18 +262,23 @@ La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digit
 		    	\caption{Interpolaci\'on Bilineal.}
 		    	\label{fig:bilineal2}
 		    \end{figure}
-		\item \textbf{Convoluci\'on c\'ubica:} es similar a la interporlaci\'on bilineal pero considera niveles digitales de los 16 pixeles m\'as pr\'oximos. El efecto visual es m\'as correcto, pero supone un volumen de c\'alculo mucho m\'as elevado. Inicialmente, los valores digitales se interpolan linealmente en grupos de cuatro lineas de pixeles cada una para formar cuatro interpolantes:
-		
-		\begin{equation}
-		\resizebox{.9 \textwidth}{!} {$
-		f(x^{,}) = [(\Delta x)^{3}-(\Delta x)^{2}]f(x+2,y)-[(\Delta x)^{3}-(\Delta x)^{2}-(\Delta x)]f(x+1,y)+[(\Delta x)^{3}-2(\Delta x)^{2}+1]f(x,y)-[(\Delta x)^{3}-2(\Delta x)^{2}+(\Delta x)]f(x-1,y)
-		$}
-		\end{equation}	
-		Posteriormente se realiza otra interpolaci\'on lineal entre los cuatros valores obtenidos para asignar el resultante a la celda corregida:
-		\begin{equation}\resizebox{.9 \textwidth}{!}{$
-		f(x^{,},y^{,}) = [(\Delta y)^{3}-(\Delta y)^{2}]f(x^{,}+2)-[(\Delta y)^{3}-(\Delta y)^{2}-(\Delta y]f(x^{,}+1)+[(\Delta y)^{3}-2(\Delta y)^{2}+1]f(x^{,})-[(\Delta y)^{3}-2(\Delta y)^{2}+(\Delta y)]f(x^{,}-1)
-		$}
-		\end{equation}	
+		    
+		    		\item \textbf{Convoluci\'on c\'ubica:} es similar a la interporlaci\'on bilineal pero considera niveles digitales de los 16 pixeles m\'as pr\'oximos. El efecto visual es m\'as correcto, pero supone un volumen de c\'alculo mucho m\'as elevado. Existen diferentes versiones de la ecuación de convolución c\'ubica, cada una de las cuales con resultados de salida diferentes, en lo que a niveles digitales se refiere. Para este caso, se ha usado la de ERDAS IMAGINE \cite{aldeguer2011geometria}:
+		    		\begin{equation}\resizebox{.9 \textwidth}{!}{$
+		    		g(x^{,},y^{,}) = \Sigma _{p=1}^{4} g(x-1,y+p-2)f(e(x-1,y+p-2)+1)+g(x,y+p-2)f(e(x,y+p-2))+g(x+1,y+p-2)f(e(x+1,y+p-2)-1)
+		    		g(x+2,y+p-2)f(e(x+2,y+p-2)-2)
+		    		$}
+		    		\end{equation}	
+		    		
+		    		Donde la funcion $ f(q) $ corresponde a:
+		    		
+		    		\begin{equation}\label{ec:interCubica}
+		    		f(q) = \begin{cases}
+		    		(w+2)\abs{q^{3}}-(w+3)\abs{q^{2}}+1 & \text{si} \abs{q} < 1 \\
+		    		w\abs{q^{3}}-5w\abs{q^{2}}2+8w\abs{q}-4w & \text{si} 1 < \abs{q} < 2\\
+		    		0 & \text{otra condici\'on}
+		    		\end{cases}
+		    		\end{equation}
 		La siguiente ilustraci\'on \ref{fig:convCubica2} nos muestra graficamente la convoluci\'on c\'ubica:
 		
 		    \begin{figure}[H]
