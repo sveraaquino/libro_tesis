@@ -187,29 +187,29 @@ La siguiente ilustraci\'on \ref{fig:deteccionCambio} presenta un panorama especi
 La normalizaci\'on radiom\'etrica pretende optimizar el proceso de comparaci\'on, mejorando la semejanza entre im\'agenes. Debido a la respuesta espectral que presentan las coberturas vegetales en diferentes estaciones del a\~{n}o o condiciones ambientales en el momento de la captura, es necesario un procedimiento adicional que iguale los pixeles en relaci\'on a contraste y brillo entre im\'agenes. Es un proceso similar al m\'etodo del bandeado \ref{subsec:bandeado}, empleado en la correcci\'on radiom\'etrica entre bandas de una misma imagen. Tomando como referencia los trabajo de Singh\cite{singh1989review}; Mateu y Ruiz\cite{mateu1999comparacion}; Estornell \cite{estornell2004analisis}; Mena y Malpica\cite{malpica2002fusion}, se aplicaran m\'etodos de normalizaci\'on mediante par\'ametros estad\'isticos de la imagen.\\~\\
 En las distintas bandas de una imagen satelital se observan un comportamiento con distribucion normal en sus histogramas, por lo que teniendo una variable tipificada $(Z)$ es posible definirlos en una distribuci\'on normal est\'andar del tipo $ N(0,1) $ seg\'un la expresión:
 	\begin{equation}
-	Z=\dfrac{ND-\mu}{\sigma}
+	Z=\dfrac{ND_{i}-\mu_{i}}{\sigma_{i}}
 	\end{equation}
-\nomenclature[26]{$ Z $}{Variable tipificada.}	
-	
+\nomenclature[41]{$ Z $}{Variable tipificada.}	
 	Aplicando este concepto sobre cada una de las dos im\'agenes, se pueden comparar siendo ambas distribuciones estandarizadas:
 	\begin{equation}
-	\dfrac{ND_{1}-\mu_{1}}{\sigma_{1}}=\dfrac{ND_{2}-\mu_{2}}{\sigma_{2}}
+	\dfrac{ND_{i_{1}}-\mu_{i_{1}}}{\sigma_{i_{1}}}=\dfrac{ND_{i_{2}}-\mu_{i_{2}}}{\sigma_{i_{2}}}
 	\end{equation}
-	Para su aplicaci\'on pr\'actica, se puede transformar el nivel digital $ (ND) $ perteneciente a la imagen 1 $ (ND_{1}) $, para que se asemeje al $ ND_{2} $ de la imagen 2, expresi\'on:
+	Para su aplicaci\'on pr\'actica, se puede transformar el nivel digital $ (ND_{i_{1}}) $ perteneciente a la imagen 1, para que se asemeje al $ ND_{i_{2}} $ de la imagen 2, ambas de la banda $ i $, expresi\'on:
 	\begin{equation}
-	ND_{1}^{'}=\mu_{2}+\dfrac{\sigma_{2}}{\sigma_{1}}\cdot(ND_{1}-\mu_{1})
+	ND_{i_{1}}^{'}=\mu_{i_{2}}+\dfrac{\sigma_{i_{2}}}{\sigma_{i_{1}}}\cdot(ND_{i_{1}}-\mu_{i_{1}})
 	\end{equation}
-	As\'i se puede definir una relaci\'on lineal entre las dos distribuciones; aplicando una normalizaci\'on radiom\'etrica estad\'istica, los coeficientes de la transformaci\'on $ m_{1,2} $ y $ h_{1,2} $ se definen seg\'un se indica en la expresi\'on:
+	 Siendo $ ND_{i_{1}}^{'} $ la imagen normalizada. As\'i se puede definir una relaci\'on lineal entre las dos distribuciones; aplicando una normalizaci\'on radiom\'etrica estad\'istica, los coeficientes de la transformaci\'on $ m_{1,2} $ y $ h_{1,2} $ se definen seg\'un se indica en la expresi\'on:
 	
 			\begin{equation}
-			h_{1,2}=\mu_{2}-\dfrac{\sigma_{2}}{\sigma_{1}}\cdot\mu_{1}
+			h_{1,2}=\mu_{i_{2}}-\dfrac{\sigma_{i_{2}}}{\sigma_{i_{1}}}\cdot\mu_{i_{1}}
 			\end{equation}
 					\begin{equation}
-					m_{1,2}=\dfrac{\sigma_{2}}{\sigma_{1}}
+					m_{1,2}=\dfrac{\sigma_{i_{2}}}{\sigma_{i_{1}}}
 					\end{equation}
 		\begin{equation}
-				ND_{1}^{'}=m_{1,2}\cdot ND_{1}+h_{1,2}
+				ND_{i_{1}}^{'}=m_{1,2}\cdot ND_{i_{1}}+h_{1,2}
 		\end{equation}
+		\nomenclature[42]{$ ND_{i_{1}}^{'} $}{Imagen normalizada, de la banda $ i $.}	
 	Mediante esta transformaci\'on se obtienen histogramas parecidos, logrando de este modo mayor semejanza para el proceso de comparaci\'on multitemporal.
 	
 	\begin{figure}[H]
@@ -290,7 +290,7 @@ El umbral discriminatorio para la vegetaci\'on es determinado a partir de una co
 		\begin{equation}
 		U_{NDVI} = \mu_{NDVI}\pm n \sigma_{c}
 		\end{equation}
-\nomenclature[27]{$ \sigma_{c} $}{Desviaci\'on determinada como constante para la umbralizaci\'on de la cobertura vegetal.}
+\nomenclature[42]{$ \sigma_{c} $}{Desviaci\'on determinada como constante para la umbralizaci\'on de la cobertura vegetal.}
 Donde $ \mu_{NDVI} $ representa la media del NDVI calculada y $ n $ la fiabilidad. No se utiliza la ecuaci\'on correspondiente a la suma, debido a que se pretende analizar im\'agenes donde el porcentaje de vegetaci\'on es mayor, por lo que quedaría fuera la media.
 \begin{figure}[H]
 	\centering
@@ -316,7 +316,7 @@ La siguiente ilustraci\'on representa el flujo de tareas \ref{fig:intersPerdida}
 
 \subsection{Estimaci\'on de p\'erdida de carbono forestal}
 El procedimiento final consiste en estimar el carbono perdido o no secuestrados dentro del tiempo transcurrido entre las im\'agenes satelitales. El producto constituye la mascara de perdida forestal junto con la cuantificaci\'on en toneladas de carbono por hect\'area, obtenida mediante la ecuaci\'on de regresi\'on lineal $(y= b + ax) $ que fue generada a través del mapa global de carbono \cite{saatchi2011benchmark} y el NDVI, determinadas por las im\'agenes Landsat, en un estudio previo \ref{subsec:estimacionCarbono}. La regresi\'on presenta un coeficiente de determinaci\'on $ (r^{2}=0.509125) $ moderado, según tabla \ref{t:coefDeter}, por lo que el estudio es considerado valido para su aplicaci\'on en la metodolog\'ia.
-\nomenclature[28]{$ r^{2}$}{Coeficiente de determinaci\'on.}
+\nomenclature[43]{$ r^{2}$}{Coeficiente de determinaci\'on.}
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|l|l|}
@@ -335,33 +335,36 @@ La siguiente expresi\'on define la ecuaci\'on hallada:
 		\begin{equation}
 			C_{(x,y)}=4,33+30,1 NDVI_{(x,y)}
 		\end{equation}
-\nomenclature[29]{$ C_{(x,y)}$}{Toneladas de carbono por hect\'area en las coordenadas $ x $ e $ y $.}
-Donde $ C_{(x,y)} $ representa Toneladas de carbono por hect\'area (ton C/Ha.) para el p\'ixel con posici\'on $ (x,y) $ y $ NDVI_{(x,y)} $ la variable independiente perteneciente a una fecha. Para no realizar el calculo de carbono repetidamente en cada imagen temporal y luego restarlas con finalidad de tener la perdida producida en los p\'ixeles, se optimizo el proceso  utilizando la imagen con indices de cambios resultante $ (Ic) $ del proceso de iteraci\'on \ref{subsec:iteracion}, por lo que la ecuaci\'on quedara modificada con las siguientes expresiones:
+		\nomenclature[44]{$ C(x,y)$}{Toneladas de carbono por hect\'area en las coordenadas $ x $ e $ y $.}
+		\nomenclature[45]{$ NDVI(x,y)$}{NDVI en la posición $ x $ e $ y $.}
+
+Donde $ C(x,y) $ representa Toneladas de carbono por hect\'area (ton C/Ha.) para el p\'ixel con posici\'on $ (x,y) $ y $ NDVI(x,y) $ la variable independiente perteneciente a una fecha. Para no realizar el calculo de carbono repetidamente en cada imagen temporal y luego restarlas con finalidad de tener la perdida producida en los p\'ixeles, se optimizo el proceso  utilizando la imagen con indices de cambios resultante $ (Ic) $ del proceso de iteraci\'on \ref{subsec:iteracion}, por lo que la ecuaci\'on quedara modificada con las siguientes expresiones:
 		\begin{equation}
 				\label{e:fecha1}
-		C1_{(x,y)}=4,33+30,1 NDVI_{(x1,y1)}
+		C_{1}(x_{1},y_{1})=4,33+30,1 NDVI(x_{1},y_{1})
 		\end{equation}
 		\begin{equation}
 						\label{e:fecha2}
-		C2_{(x,y)}=4,33+30,1 NDVI_{(x2,y2)}
+		C_{2}(x_{2},y_{2})=4,33+30,1 NDVI_(x_{2},y_{2})
 		\end{equation}
 		\begin{equation}
 		\label{e:indiceCambio}
-		Ic_{(x,y)}=NDVI_{(x2,y2)} -NDVI_{(x1,y1)}
+		Ic(x,y)=NDVI(x_{2},y_{2}) -NDVI(x_{1},y_{1})
 		\end{equation}		
 Restando el carbono obtenido entre cada fecha, ecuación \ref{e:fecha2} y \ref{e:fecha1}, tendr\'iamos:
 		\begin{equation}
 				\label{e:restaCar}
-		C2_{(x,y)} - C1_{(x,y)}= 30,1(NDVI_{(x2,y2)}-NDVI_{(x1,y1}))
+		C_{2}(x_{2},y_{2}) - C_{1}(x_{1},y_{1})= 30,1(NDVI(x_{2},y_{2})-NDVI(x_{2},y_{2}))
 		\end{equation}		
 				\begin{equation}
 				\label{e:perdidaCar}
-					PC_{(x,y)} =C2_{(x,y)} - C1_{(x,y)}
+					PC(x,y)= C_{2}(x_{2},y_{2}) - C_{1}(x_{1},y_{1})
 				\end{equation}		
-\nomenclature[30]{$PC_{(x,y)}$}{Toneladas de carbono por hect\'area perdidos en las coordenadas $ x $ e $ y $.}
-Siendo $ PC_{(x,y)}$ Toneladas de carbono por hect\'area perdidos. Remplazando \ref{e:indiceCambio} y \ref{e:perdidaCar} en \ref{e:restaCar}, la ecuaci\'on de regresi\'on final quedar\'ia:
+\nomenclature[46]{$Ic(x,y)$}{ Indice de cambio en las coordenadas $ x $ e $ y $.}
+\nomenclature[47]{$PC(x,y)$}{Toneladas de carbono por hect\'area perdidos en las coordenadas $ x $ e $ y $.}
+Siendo $ PC(x,y)$ Toneladas de carbono por hect\'area perdidos. Remplazando \ref{e:indiceCambio} y \ref{e:perdidaCar} en \ref{e:restaCar}, la ecuaci\'on de regresi\'on final quedar\'ia:
 		\begin{equation}
-			PC_{(x,y)} = 30,1 Ic_{(x,y)}
+			PC(x,y) = 30,1 Ic(x,y)
 		\end{equation}
 La cuantificaci\'on sera realizado teniendo en cuenta la mascara de perdida forestal.
 \begin{figure}[H]
@@ -370,7 +373,5 @@ La cuantificaci\'on sera realizado teniendo en cuenta la mascara de perdida fore
 	\caption{Presentaci\'on del resultado. Mascara de perdida Vegetal y cuantificaci\'on.}
 	\label{fig:resulPC}
 \end{figure}
-
-
 \section{Resumen}
 En este capitulo se describen los materiales y los tres procedimientos generales que componen la metodolog\'ia propuesta. La im\'agenes infrarroja cercana y roja de las dos fechas inicialmente deben pasar por un proceso de correcci\'on de errores del sensor y de ubicaci\'on geogr\'afica para realizar el an\'alisis multitemporal en la detecci\'on de cambio forestal. Una vez detectado la perdida forestal entre las fechas del proceso de detecci\'on de cambio, se realiza la estimaci\'on de carbono en base a una ecuaci\'on de regresi\'on hallado por un estudio previo. El resultado consiste en un mapa de perdida forestal junto a la cuantificaci\'on en toneladas de carbono perdidos.

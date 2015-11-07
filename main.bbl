@@ -21,11 +21,6 @@ Gregory~P Asner, David~E Knapp, Eben~N Broadbent, Paulo~JC Oliveira, Michael
 \newblock Selective logging in the brazilian amazon.
 \newblock {\em Science}, 310(5747):480--482, 2005.
 
-\bibitem[AL{\etalchar{+}}11]{aldeguer2011geometria}
-Elena Aldeguer~Lima et~al.
-\newblock Geometr{\'\i}a epipolar de un par fotogram{\'e}trico.
-\newblock 2011.
-
 \bibitem[Ali10]{remote2010abdulrahman}
 Dr. Abdulrahman~K. Ali.
 \newblock Remote sensing.
@@ -135,6 +130,11 @@ M~Garzuglia and M~Saket.
 \newblock Wood volume and woody biomass.
 \newblock {\em Food and Agricultural Organization of the United Nations. Roma},
   page~30, 2003.
+
+\bibitem[Gui99]{guide1999erdas}
+ERDAS~Field Guide.
+\newblock Erdas inc.
+\newblock {\em Atlanta, Georgia}, 672:94, 1999.
 
 \bibitem[HKS{\etalchar{+}}09]{huang2009assessment}
 Chengquan Huang, Sunghee Kim, Kuan Song, John~RG Townshend, Paul Davis, Alice

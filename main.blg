@@ -4,63 +4,63 @@ The top-level auxiliary file: main.aux
 The style file: alpha.bst
 Database file #1: Bibliography.bib
 Warning--entry type for "teledet2015Combi" isn't style-file defined
---line 107 of file Bibliography.bib
+--line 118 of file Bibliography.bib
 Warning--entry type for "gl2015Uni" isn't style-file defined
---line 113 of file Bibliography.bib
+--line 124 of file Bibliography.bib
 Warning--entry type for "landsatNasa" isn't style-file defined
---line 119 of file Bibliography.bib
+--line 130 of file Bibliography.bib
 Warning--entry type for "teledUm" isn't style-file defined
---line 195 of file Bibliography.bib
+--line 206 of file Bibliography.bib
 Warning--entry type for "natur2015PW" isn't style-file defined
---line 391 of file Bibliography.bib
+--line 402 of file Bibliography.bib
 Warning--entry type for "BAAPA2013" isn't style-file defined
---line 399 of file Bibliography.bib
+--line 410 of file Bibliography.bib
 Warning--entry type for "nellemann2009carbono" isn't style-file defined
---line 441 of file Bibliography.bib
-Repeated entry---line 767 of file Bibliography.bib
+--line 452 of file Bibliography.bib
+Repeated entry---line 778 of file Bibliography.bib
  : @misc{mehl1997fundamentos
  :                          ,
 I'm skipping whatever remains of this entry
-"{" immediately follows a field name---line 1114 of file Bibliography.bib
+"{" immediately follows a field name---line 1125 of file Bibliography.bib
  : @article
  :         {gonzalez2013tecnicas,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1312 of file Bibliography.bib
+I was expecting a `,' or a `}'---line 1323 of file Bibliography.bib
  : 
  : @ONLINE{idf,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1643 of file Bibliography.bib
+I was expecting a `,' or a `}'---line 1654 of file Bibliography.bib
  : 
  : @ONLINE{nei,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2042 of file Bibliography.bib
+You're missing a field name---line 2053 of file Bibliography.bib
  :  
  :  %month = jul,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2058 of file Bibliography.bib
+You're missing a field name---line 2069 of file Bibliography.bib
  :  
  :  %edition = {2},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2093 of file Bibliography.bib
+You're missing a field name---line 2104 of file Bibliography.bib
  :  
  :  %month = jul,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2105 of file Bibliography.bib
+You're missing a field name---line 2116 of file Bibliography.bib
  :   
  :   %pages={185--208},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2142 of file Bibliography.bib
+You're missing a field name---line 2153 of file Bibliography.bib
  :  
  :  %issue_date = {2013},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting an "="---line 2465 of file Bibliography.bib
+I was expecting an "="---line 2476 of file Bibliography.bib
  : +´`  
  :       title={Color image palette construction based on the HSI color system for minimizing the reconstruction error},
 I'm skipping whatever remains of this entry
@@ -138,7 +138,6 @@ Warning--to sort, need author or key in teledet2015Combi
 Warning--to sort, need author or key in teledUm
 Warning--to sort, need author or key in landsatNasa
 Warning--to sort, need author or key in gl2015Uni
-Warning--empty journal in aldeguer2011geometria
 Warning--empty journal in remote2010abdulrahman
 Too many commas in name 7 of "Acosta Mireles, Miguel and Vel{\'a}zquez Mart{\'\i}nez, Alejandro and Etchevers Barra, Jorge D and Vargas Hern{\'a}ndez, J Jes{\'u}s and Ram{\'\i}rez Maldonado, Hugo and Islas Guti{\'e}rrez, Fabi{\'a}n and Colegio de Postgraduados, Campus Montecillo,; Instituto de Recursos Naturales, Programa Forestal." for entry acosta2003diseno
 while executing---line 1250 of file alpha.bst
@@ -177,43 +176,43 @@ Warning--empty journal in salinas2008guia
 Warning--there's a number but no series in sivakumar2004satellite
 You've used 56 entries,
             2543 wiz_defined-function locations,
-            852 strings with 15789 characters,
-and the built_in function-call counts, 20216 in all, are:
-= -- 1953
-> -- 1029
-< -- 27
-+ -- 355
-- -- 352
+            854 strings with 15707 characters,
+and the built_in function-call counts, 20192 in all, are:
+= -- 1951
+> -- 1018
+< -- 28
++ -- 351
+- -- 348
 * -- 1438
-:= -- 3373
+:= -- 3365
 add.period$ -- 157
 call.type$ -- 56
 change.case$ -- 342
 chr.to.int$ -- 55
-cite$ -- 81
-duplicate$ -- 796
-empty$ -- 1447
-format.name$ -- 410
-if$ -- 4039
+cite$ -- 80
+duplicate$ -- 798
+empty$ -- 1451
+format.name$ -- 408
+if$ -- 4036
 int.to.chr$ -- 2
 int.to.str$ -- 0
 missing$ -- 56
 newline$ -- 273
 num.names$ -- 150
-pop$ -- 390
+pop$ -- 387
 preamble$ -- 1
 purify$ -- 411
 quote$ -- 0
-skip$ -- 675
+skip$ -- 672
 stack$ -- 0
-substring$ -- 897
-swap$ -- 79
-text.length$ -- 27
-text.prefix$ -- 17
+substring$ -- 903
+swap$ -- 80
+text.length$ -- 28
+text.prefix$ -- 18
 top$ -- 0
 type$ -- 404
-warning$ -- 19
+warning$ -- 18
 while$ -- 172
 width$ -- 61
-write$ -- 672
+write$ -- 674
 (There were 56 error messages)

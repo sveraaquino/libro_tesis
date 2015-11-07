@@ -82,7 +82,7 @@ Se define a la resoluci\'on de un sensor como el menor cambio en la magnitud de 
 %\end{bmatrix}
 %\end{equation}
 Una imagen satelital se puede definir como la representaci\'on visual de la informaci\'on capturada por un sensor montado en un sat\'elite artificial \cite{acosta2003experiencia}. \\~\\
-Sea $ \mathbb{Z} $ un conjunto de enteros. Una imagen satelital es una funci\'on $ f:\mathbb{Z}^{3} \longrightarrow [0,....,2^{r}) $. Cada $ (x,y,i) $ se los conoce como coordenadas espaciales de la banda $ i $, donde $ i \in [1,k] $, siendo $ k $ el numero de bandas y $ r $ la resoluci\'on radiom\'etrica en la imagen. Las im\'agenes satelitales son conocidos tambi\'en como raster.
+Sea $ \mathbb{Z} $ un conjunto de enteros. Una imagen satelital es una funci\'on $ f:\mathbb{Z}^{3} \longrightarrow \{0,...,2^{r}\} $. Cada $ (x,y,i) $ se los conoce como coordenadas espaciales de la banda $ i $, donde $ i \in \{1,...,k\} $, $ x \in \{0,...,m\} $ e $ y \in \{0,...,n\} $ para una matriz $ m \times n $, siendo $ k $ el numero de bandas y $ r $ la resoluci\'on radiom\'etrica en la imagen. Las im\'agenes satelitales son conocidos tambi\'en como raster.
   \begin{figure}[H]
   	\centering
   	\includegraphics[width=0.8	\textwidth]{./Figures/cap3/imagen_satelital.png}
@@ -90,10 +90,13 @@ Sea $ \mathbb{Z} $ un conjunto de enteros. Una imagen satelital es una funci\'on
   	\label{fig:imagenMultiespectral}
   \end{figure}
   	\nomenclature[11]{$\mathbb{Z}$}{Conjunto de enteros.}
-  	\nomenclature[11]{$i$}{ Banda de la imagen satelital.}
-  	\nomenclature[11]{$(x,y,i)$}{Coordenadas espaciales de la banda $ i $ en la imagen satelital.}
-  	\nomenclature[11]{$k$}{ N\'umero de bandas que posee una imagen satelital.}
-  	\nomenclature[12]{$f(x,y,i)$}{ Nivel digital, en la posicion $ x $ e $ y $ de la banda $ i $, de la imagen satelital.}
+  	\nomenclature[12]{$i$}{ Banda de la imagen satelital.}
+  	\nomenclature[12]{$f$}{ Imagen satelital.}
+  	\nomenclature[12]{$m$}{ N\'umero de filas de $ f $.}
+  	\nomenclature[12]{$n$}{ N\'umero de columnas de $ f $.}
+  	\nomenclature[13]{$(x,y,i)$}{Coordenadas espaciales de la banda $ i $ en la imagen satelital.}
+  	\nomenclature[14]{$k$}{ N\'umero de bandas que posee una imagen satelital.}
+  	\nomenclature[15]{$f(x,y,i)$}{ Nivel digital, en la posicion $ x $ e $ y $ de la banda $ i $, de la imagen satelital.}
 La ilustraci\'on \ref{fig:imagenMultiespectral} nos muestra los ejes de coordenadas espaciales $ x $ e $ y $ para cada plano que representan las bandas, pudiendo acceder a valor de la intensidad o nivel digital mediante la funci\'on $ f(x,y,i) $.
 
 
@@ -120,21 +123,22 @@ Mediante el estudio en cada banda, y la combinaci\'on de ellas, es posible resal
  
 \section{\'Indices de vegetaci\'on}
 Los \'indices de vegetaci\'on son transformaciones que implican efectuar una combinaci\'on matem\'atica, entre los niveles digitales almacenados en dos o m\'as bandas espectrales de la misma imagen, teniendo en cuenta el comportamiento radiom\'etrico de la vegetaci\'on vigorosa para la elecci\'on de bandas\cite{speranza2005potencialidad}. \\~\\
-El estudio de las cubiertas vegetales mediante la teledetecci\'on se aborda tradicionalmente mediante la utilización de los denominados “índices de vegetaci\'on”, el índice de vegetaci\'on m\'as utilizado es el NDVI (\'Indice de vegetaci\'on diferencial normalizada)\cite{sader2000estimacion}.
+El estudio de las cubiertas vegetales mediante la teledetecci\'on se aborda tradicionalmente mediante la utilización de los denominados “índices de vegetaci\'on”, siendo el m\'as utilizado el \'Indice de vegetaci\'on diferencial normalizada (NDVI) \cite{sader2000estimacion}.
 
 \subsection{\'Indice de vegetaci\'on diferencial normalizada}\label{subsec:ndvi}
-Es un \'indice usado para estimar la cantidad, calidad y desarrollo de la vegetaci\'on, por medio de sensores remotos instalados com\'unmente desde la plataforma espaciales, es decir mide las condiciones de vigor vegetal de la planta, principalmente su contenido en clorofila\cite{salinero2002teledeteccion}. El objetivo del NDVI es la reducci\'on de m\'ultiples bandas a una sola, condensando la informaci\'on m\'as importante, en este caso la vegetaci\'on.\\~\\
-Chuvieco\cite{salinero2002teledeteccion} menciona que la principal ventaja del NDVI es su f\'acil interpretaci\'on, ya que sus
-valores var\'ian entre -1 y +1 permitiendo conocer el estado de vigor vegetal en grandes superficies, detectando fen\'omenos de amplio rango.\\~\\
-Se calcula extrayendo de las bandas correspondientes al rojo $B_{R}$ e infrarrojo pr\'oximo $B_{IRc}$ seg\'un la siguiente expresi\'on:
+El NDVI es un \'indice usado para estimar la cantidad, calidad y desarrollo de la vegetaci\'on por medio de sensores remotos instalados com\'unmente desde la plataforma espaciales, es decir mide las condiciones de vigor vegetal de la planta, principalmente su contenido en clorofila \cite{salinero2002teledeteccion}. El objetivo del NDVI es la reducci\'on de m\'ultiples bandas a una sola, condensando la informaci\'on m\'as importante, en este caso la vegetaci\'on.\\~\\
+Chuvieco \cite{salinero2002teledeteccion} menciona que la principal ventaja del NDVI es su f\'acil interpretaci\'on, ya que sus
+valores var\'ian entre -1 y +1, permitiendo conocer el estado de vigor vegetal en grandes superficies y detecta fen\'omenos de amplio rango.\\~\\
+Sea $ ndvi:(x,y) \longrightarrow [-1,1] $ una funci\'on que determina la imagen con los NDVI en cada coordenada espacial, $ R \in \{1,...,k\}$ representa la banda roja del espectro visible y $ IRc \in \{1,...,k\}$ la banda infrarroja cercana del espectro infrarrojo, queda definida la siguiente expresi\'on:
 	\begin{equation}
 	\label{e:ndvi}
-	NDVI=\dfrac{B_{IRc}-B_{R}}{B_{IRc}+B_{R}}
+	ndvi(x,y)=\dfrac{f(x,y,IRc)-f(x,y,R)}{f(x,y,IRc)+f(x,y,R)}
 	\end{equation}
-	\nomenclature[10]{$NDVI$}{Imagen con el \'indice de vegetaci\'on diferencial normalizada calculada.}
-	\nomenclature[11]{$B_{IRc}$}{Imagen que representa a la banda infrarroja cercana.}
-	\nomenclature[12]{$B_{R}$}{Imagen que representa a la banda roja.}
-Las plantas muestran un fuerte pico de absorci\'on causados por los pigmentos fotosint\'eticos en longitudes de onda cercanas a los 700 micrones, hecho que contrasta con una fuerte reflexi\'on de las longitudes de onda del infrarrojo cercano. Por su parte, los suelos desnudos se caracterizan por un incremento suavemente monot\'onico de la reflectancia, a medida que aumenta la longitud de onda.
+	\nomenclature[16]{$ndvi$}{Imagen del \'indice de vegetaci\'on diferencial normalizada (NDVI).}
+	\nomenclature[17]{$ndvi(x,y)$}{ NDVI de las coordenadas $ (x,y) $.}
+	\nomenclature[18]{$R$}{ Posici\'on de la banda Roja en la imagen satelital.}
+	\nomenclature[19]{$IRc$}{ Posici\'on de la banda Infrarroja cercana en la imagen satelital.}
+Las plantas muestran un fuerte pico de absorci\'on causados por los pigmentos fotosint\'eticos en longitudes de onda cercanas a los 700 micrones, hecho que contrasta con una fuerte reflexi\'on de las longitudes de onda del infrarrojo cercano \cite{salinero2002teledeteccion}. Por su parte, los suelos desnudos se caracterizan por un incremento suavemente monot\'onico de la reflectancia, a medida que aumenta la longitud de onda \cite{salinero2002teledeteccion}.
 
 \section{An\'alisis Multitemporal}
 B\'asicamente el an\'alisis multitemporal consiste en el estudio de zonas determinadas mediante tomas hechas en diferentes tiempos, Chuvieco \cite{salinero2002teledeteccion} resalta que el factor temporal puede abordarse con un doble objetivo: por un lado reconstruir la variaci\'on estacional de la zona y por otra parte la detecci\'on de cambios, esta \'ultima se enfoca a detectar cambios entre dos o m\'as
@@ -155,7 +159,7 @@ Una imagen de sat\'elite est\'a sometida a una serie de interferencias que hacen
 \subsection{Correccci\'on geom\'etrica}\label{sec:corrGeometrica}
 Una imagen de sat\'elite, al igual que las fotograf\'ias a\'ereas, no proporciona informaci\'on georreferenciada; cada pixel se ubica en un sistema de coordenadas arbitrario de tipo fila-columna como los que manejan los programas de tratamiento digital de im\'agenes.\\~\\
 El proceso consiste en dar a cada pixel su localizaci\'on en un sistema de coordenadas estandard (UTM, lambert, coordenadas geogr\'aficas) para poder, de este modo, combinar la imagen de sat\'elite con otro tipo de capas en un entorno SIG. Mediante esto, se obtiene una nueva capa en la que cada columna corresponde con un valor de longitud y cada fila con un valor de latitud. En caso de que la imagen no hubiese sufrido ningún tipo de distorsi\'on, el procedimiento ser\'ia bastante sencillo, sin embargo una imagen puede sufrir diversos tipos de distorsiones.\\~\\
-Es necesario localizar puntos comunes de la imagen con puntos de referencias, como tarea incial para la correcci\'on geom\'etrica, de manera a poder realizar una interpolaci\'on espacial y de los valores radiom\'etricos\cite{deniseCultivos}.
+Es necesario localizar puntos comunes de la imagen con puntos de control, como tarea incial para la correcci\'on geom\'etrica, de manera a poder realizar una interpolaci\'on espacial y de los valores radiom\'etricos\cite{deniseCultivos}.
 
 \subsubsection{Interpolaci\'on espacial}
 Consiste en la determinaci\'on de la relaci\'on geom\'etrica entre las coordenadas del pixel de la imagen a corregir y las coordenadas correspondientes. Utilizando los puntos comunes localizados, se plantea una ecuaci\'on de transformaci\'on mediante la cual se obtiene la posici\'on de los pixeles en la imagen de salida, ilustrada en la figura \ref{fig:intEspacial}. Este proceso tambi\'en es conocido como Georreferenciaci\'on. El m\'etodo mas utilizado para la transformaci\'on es el de ecuaciones polin\'omicas. 
@@ -168,24 +172,25 @@ Consiste en la determinaci\'on de la relaci\'on geom\'etrica entre las coordenad
  
  La transformaci\'on puede expresarse de la siguiente manera:
 	\begin{equation}
-	x^{,}_{i} = \sum_{j=0}^{g} \sum_{d=0}^{g-j} a_{ij}x^{j}_{i}y^{d}_{i}
+	x^{'}_{i} = \sum_{j=0}^{l} \sum_{d=0}^{l-j} a_{ij}x^{j}_{i}y^{d}_{i}
 	\end{equation} 
 		\begin{equation}
-		y^{,}_{i} = \sum_{j=0}^{g} \sum_{d=0}^{g-j} b_{ij}x^{j}_{i}y^{d}_{i}
+		y^{'}_{i} = \sum_{j=0}^{l} \sum_{d=0}^{l-j} b_{ij}x^{j}_{i}y^{d}_{i}
 		\end{equation} 
 
 
-\nomenclature[13]{$ g $}{ Grado del polinomio de ajuste.}
+\nomenclature[19]{$ l $}{ Grado del polinomio de ajuste.}
+\nomenclature[19]{$ d $}{ Variable de iteraci\'on.}
 
-Donde $ x^{,}_{i} $ e $ y^{,}_{i} $ indica la coordenada en la imagen corregida para la banda $ i $. El superindice $ g $ indica el grado del polinomio de ajuste, $ a_{i} $ y $ b_{i} $ los coeficientes del polinomio. Siendo la ecuaci\'on lineal las mas simple:
+Donde $ x^{'}_{i} $ e $ y^{'}_{i} $ indica la coordenada en la imagen corregida para la banda $ i $. El superindice $ g $ indica el grado del polinomio de ajuste, $ a_{i} $ y $ b_{i} $ los coeficientes del polinomio. Siendo la ecuaci\'on lineal las mas simple:
 	\begin{equation}
-	x^{,}_{i} = a_{0}+a_{1}x_{i}+a_{2}y_{i}
+	x^{'}_{i} = a_{0}+a_{1}x_{i}+a_{2}y_{i}
 	\end{equation} 
 		\begin{equation}
-		y^{,}_{i} = b_{0}+b_{1}x_{i}+b_{2}y_{i}
+		y^{'}_{i} = b_{0}+b_{1}x_{i}+b_{2}y_{i}
 		\end{equation} 
-		\nomenclature[14]{$ (x^{,},y^{,}) $}{Coordenadas de la imagen transformada.}
-En distorsiones moderadas o en un \'area reducida, se utilizan transformaciones de primer orden, pudiendo corregir efectos de translaci\'on en $ x^{,}_{i} $ e $ y^{,}_{i} $, cambios de escala y rotaci\'on.
+		\nomenclature[20]{$ (x^{'},y^{'}) $}{Coordenadas de la imagen transformada.}
+En distorsiones moderadas o en un \'area reducida, se utilizan transformaciones de primer orden, pudiendo corregir efectos de translaci\'on en $ x^{'}_{i} $ e $ y^{'}_{i} $, cambios de escala y rotaci\'on.
 En distorsiones m\'as importantes o en \'areas extensas, es necesario una transfomaci\'on de segundo orden. Este tipo de transformaci\'on agregan a diferencia del primer orden, correcciones a deformaciones locales.
     \begin{figure}[H]
     	\centering
@@ -193,12 +198,15 @@ En distorsiones m\'as importantes o en \'areas extensas, es necesario una transf
     	\caption{Interpolaci\'on espacial con polinomios de primer y segundo orden.}
     	\label{fig:intPolEcua}
     \end{figure}
- Para calcular la calidad en la interpolaci\'on espacial y los puntos de control seleccionados, se utiliza el error cuadrático medio (RMS), que consiste en la diferencia entre la coordenada re-transformada deseada para un punto de control y la coordenada real obtenida como salida.
+ Para calcular la calidad en la interpolaci\'on espacial y los puntos de control seleccionados $ nc $, se utiliza el promedio de los errores cuadráticos medios (RMS), que consiste en la diferencia entre la coordenada re-transformada deseada para un punto de control y la coordenada real obtenida como salida.
 
  \begin{equation}
- RMS_{i} = \sqrt{(x_{i}^{'}-x_{i})^{2}+(y_{i}^{'}-y_{i})^{2}}
+ RMS_{i} = \sqrt{\dfrac{\sum_{p=1}^{nc} ((x_{i_{p}}^{'}-x_{i_{p}})^{2}+(y_{i_{p}}^{'}-y_{i_{p}})^{2})}{nc}}
  \end{equation} 
- 		\nomenclature[15]{$ RMS_{i} $}{Error cuadr\'atico de la banda $ i $.}
+ 		\nomenclature[21]{$ RMS_{i} $}{Error cuadr\'atico de la banda $ i $.}
+ 		\nomenclature[22]{$ nc $}{N\'umero de puntos de control.}
+ 		\nomenclature[23]{$ p $}{Variable de iteraci\'on.}
+ 	Idealmente, el valor de RMS elegido por referencia para corregir una imagen debe ser aproximadamente $ 0.5 $, y en lo posible nunca superar la unidad \cite{guide1999erdas}.
  
  
      \begin{figure}[H]
@@ -213,16 +221,18 @@ En distorsiones m\'as importantes o en \'areas extensas, es necesario una transf
 \subsubsection{Interpolaci\'on de los valores radiom\'etricos}
 La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digital perteneciente a la imagen original, a la imagen corregida. Lo que se pretende es crear una imagen que se corresponda con estas coordenadas, por lo tanto, resulta necesario trasvasar de alguna forma, los niveles digital originales a su nueva posici\'on. Pudi\'endose ser abordada por tres m\'etodos diferentes:
 	\begin{itemize}
-		\item \textbf{Vecino m\'as pr\'oximo:} situ\'a en cada celda de la imagen corregida el nivel digital $ (ND) $ del pixel m\'as cercano en la imagen original. Constituye la soluci\'on m\'as r\'apida y la que supone menor transformaci\'on en los niveles digitales originales. Su principal inconveniente es que produce una distorsi\'on en rasgos lineales en la imagen(fracturas, carreteras, caminos), que pueden aparecer en la corregida como lineales quebradas. Algebraicamente puede ser expresado, donde $ g(x,y)=f(x,y,i) $ e $ i \in [1,...,k] $:
-		\nomenclature[15]{$ g(x,y) $}{Nivel digital en la posicion $ x $ e $ y $ de una imagen satelital en cualquier banda.}
+		\item \textbf{Vecino m\'as pr\'oximo:} situ\'a en cada celda de la imagen corregida el nivel digital $ (ND) $ del pixel m\'as cercano en la imagen original. Constituye la soluci\'on m\'as r\'apida y la que supone menor transformaci\'on en los niveles digitales originales. Su principal inconveniente es que produce una distorsi\'on en rasgos lineales en la imagen(fracturas, carreteras, caminos), que pueden aparecer en la corregida como lineales quebradas. \\~\\
+		Sea $ g:(x,y) \longrightarrow f$ una funci\'on para cualquier banda de la imagen satelital, se define el m\'etodo de vecino m\'as pr\'oximo como sigue:
+		\nomenclature[24]{$ g $}{Imagen que representa a cualquier banda de la imagen satelital.}
+		\nomenclature[24]{$ g(x,y) $}{Nivel digital en la posicion $ x $ e $ y $ de $ g $.}
 		\begin{equation}
-		\Delta x = x^{,}-x
+		\Delta x = x^{'}-x
 		\end{equation}	
 		\begin{equation}
-		\Delta y = y^{,}-y
+		\Delta y = y^{'}-y
 		\end{equation}	
 \begin{equation}
-	g(x^{,},y^{,}) = \begin{cases}
+	g(x^{'},y^{'}) = \begin{cases}
 		g(x,y) & \text{si }\Delta x < 0.5 \text{ y } \Delta y < 0.5\\
 		g(x+1,y) & \text{si } \Delta x \geq 0.5 \text{ y } \Delta y < 0.5\\
 		g(x,y+1) & \text{si } \Delta x < 0.5 \text{ y } \Delta y \geq 0.5\\
@@ -230,8 +240,8 @@ La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digit
 	\end{cases}
 \end{equation}	
 
-	\nomenclature[15]{$ g(x^{,},y^{,}) $}{Nivel digital en la posici\'on $ x $ e $ y $ de una imagen satelital corregida en cualquier banda.}
-		Donde $ g(x^{,},y^{,}) $ es el nivel digital en la imagen corregida. En la ilustraci\'on \ref{fig:vecinoMasCercano2} se observa el procedimiento realizado.
+	\nomenclature[25]{$ g(x^{'},y^{'}) $}{Nivel digital en la posici\'on $ x $ e $ y $ de una imagen satelital corregida en cualquier banda.}
+		Siendo $ g(x^{'},y^{'}) $ el nivel digital en la imagen corregida. En la ilustraci\'on \ref{fig:vecinoMasCercano2} se observa el procedimiento realizado.
 				    \begin{figure}[H]
 				    	\centering
 				    	\includegraphics[width=0.6	\textwidth]{./Figures/cap3/vecinoMasCercano2.png}
@@ -239,38 +249,34 @@ La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digit
 				    	\label{fig:vecinoMasCercano2}
 				    \end{figure}
 		
-		\item \textbf{Interpolaci\'on bilineal:} promedia del nivel digital de los cuatros pixeles m\'as cercanos en la imagen original. Este promedio se ponderan seg\'un la distancia del pixel original al corregido; tienen una mayor influencia aquellos pixeles m\'as cercanos en la imagen inicial, pero tienden a difuminar un tanto los contrastes espaciales de la imagen original. Se representa con la siguiente expresi\'on:
-		\begin{equation}
-		g(x^{,},y^{,}) = c_{1}g(x,y)+c_{2}g(x+1,y)+c_{3}g(x,y+1)+c_{4}g(x+1,y+1)
-		\end{equation}	
-
-		\nomenclature[18]{$ c_{j} $}{ Peso asociado a los coeficiente del polinomio bilineal.}
-		Donde $ c_{j} $ es un peso asociado a cada valor digital proporcional a la proximidad entre ellos $ (1-\Delta x, 1-\Delta y) $, medida entre los centros de celdas \ref{ec:centros}.
-		\begin{equation}\label{ec:centros}
-		\begin{cases}
-		c_{1} = (1-\Delta x)(1-\Delta y)\\
-		c_{2} = \Delta x(1-\Delta y)\\
-		c_{3} = (1-\Delta x)\Delta y\\
-		c_{4} = \Delta x \Delta y
-		\end{cases}
-		\end{equation}	
+		\item \textbf{Interpolaci\'on bilineal:} Considera el valor de los 4 pixeles mas cercanos en la imagen de entrada para asignar el nuevo valor de la imagen de salida. Las ventajas son que no existe el efecto de escalones en los bordes pudiendo aparecer en el vecino superior izquierdo y ademas cuenta con mejor exactitud espacial. El m\'etodo es utilizado a menudo cuando se cambia el tama\~{n}o de las celdas en los datos. La desventaja es que como los pixeles son promediados, algunos extremos de los valores de los datos pueden perderse.
 		
+		\begin{equation}
+		g(x^{'},y^{'}) = \sum_{p=1}^{4}\dfrac{(D-\Delta x_{p})(D-\Delta y_{p})}{D^{2}}g(x,y)
+		\end{equation}	
+		\nomenclature[26]{$ D $}{Distancia euclidiana en el (eje $ x $ o $ y $) del sistema de coordenadas de la imagen original}
+		Siendo $ D $ la distancia euclidiana en el (eje $ x $ o $ y $) del sistema de coordenadas de la imagen original.
 		La siguiente ilustraci\'on \ref{fig:bilineal2} nos presenta gr\'aficamente el muestreo bilineal.
 		    \begin{figure}[H]
 		    	\centering
-		    	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/bilineal2.png}
+		    	\includegraphics[width=0.7	\textwidth]{./Figures/cap3/bilineal_ecuation.png}
 		    	\caption{Interpolaci\'on Bilineal.}
 		    	\label{fig:bilineal2}
 		    \end{figure}
 		    
-		    		\item \textbf{Convoluci\'on c\'ubica:} es similar a la interporlaci\'on bilineal pero considera niveles digitales de los 16 pixeles m\'as pr\'oximos. El efecto visual es m\'as correcto, pero supone un volumen de c\'alculo mucho m\'as elevado. Existen diferentes versiones de la ecuación de convolución c\'ubica, cada una de las cuales con resultados de salida diferentes, en lo que a niveles digitales se refiere. Para este caso, se ha usado la de ERDAS IMAGINE \cite{aldeguer2011geometria}:
-		    		\begin{equation}\resizebox{.9 \textwidth}{!}{$
-		    		g(x^{,},y^{,}) = \Sigma _{p=1}^{4} g(x-1,y+p-2)f(e(x-1,y+p-2)+1)+g(x,y+p-2)f(e(x,y+p-2))+g(x+1,y+p-2)f(e(x+1,y+p-2)-1)
-		    		g(x+2,y+p-2)f(e(x+2,y+p-2)-2)
-		    		$}
-		    		\end{equation}	
+		    		\item \textbf{Convoluci\'on c\'ubica:} es similar a la interporlaci\'on bilineal pero considera niveles digitales de los 16 pixeles m\'as pr\'oximos. El efecto visual es m\'as correcto, pero supone un volumen de c\'alculo mucho m\'as elevado. La ecuaci\'on de convoluci\'on c\'ubica utilizada es la siguiente \cite{guide1999erdas}:
 		    		
-		    		Donde la funcion $ f(q) $ corresponde a:
+		    		
+		    		\begin{align}
+		    		g(x^{'},y^{'}) = \sum_{p=1}^{4} g(x-1,y+p-2)f(e(x-1,y+p-2)+1)+ \nonumber \\
+		    		g(x,y+p-2)f(e(x,y+p-2))+ \nonumber \\
+		    		g(x+1,y+p-2)f(e(x+1,y+p-2)-1)+ \nonumber \\
+		    		g(x+2,y+p-2)f(e(x+2,y+p-2)-2)
+		    		\end{align}
+
+	\nomenclature[27]{$ e(x,y) $}{ Distancia euclidiana entre $ (x,y) $ y $ (x^{'},y^{'}) $.}		    		
+	\nomenclature[28]{$ f(q) $}{ Funci\'on interpolante en la ecuaci\'on de convoluci\'on c\'ubica.}
+		    		Donde $ e(x,y) $ es la distancia euclidiana entre $ (x,y) $ y $ (x^{'},y^{'}) $, la funci\'on interpolante $ f(q) $ corresponde a:
 		    		
 		    		\begin{equation}\label{ec:interCubica}
 		    		f(q) = \begin{cases}
@@ -279,6 +285,12 @@ La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digit
 		    		0 & \text{otra condici\'on}
 		    		\end{cases}
 		    		\end{equation}
+		    		Siendo $ w=-0.5 $ una constante \cite{guide1999erdas} y $ q $ una variable de entrada.
+			    		\nomenclature[29]{$ q $}{ Variable de entrada en la funci\'on interpolante $ f(q) $.}
+		    			\nomenclature[30]{$ w $}{ Constante en la funci\'on interpolante $ f(q) $.}
+		    					    		
+		    		
+		    		
 		La siguiente ilustraci\'on \ref{fig:convCubica2} nos muestra graficamente la convoluci\'on c\'ubica:
 		
 		    \begin{figure}[H]
@@ -301,38 +313,41 @@ La correci\'on radiom\'etrica se encarga de minimizar los desajustes producidos 
 
 \subsubsection{Pixeles o lineas perdidas}\label{subsec:pixelesP}
 Si se ha perdido el valor de alg\'un pixel la solución m\'as simple ser\'ia estimarlo como la media de los valores
-del mismo pixel en las lineas anterior y posterior (no es recomendable utilizar los pixeles contiguos de la misma linea por que han sido captados por el mismo detector o banda que ha dado el fallo, por tanto son
-poco fiables).
-		\begin{equation}
-		ND_{x,y} = round(\dfrac{ND_{x-1,y} + ND_{x+1,y}}{2})
-		\end{equation} 
-				\nomenclature[19]{$ ND_{x,y} $}{Nivel digital en la celda $ (x,y) $ de la imagen.}
-Siendo $ ND_{x,y} $ el nivel digital en la celda $ (x,y) $ de la imagen, $ round() $ funci\'on que indica el redondeo entero m\'as cercano.\\~\\
-Las diferentes bandas ($ k $ y $ r $) de una imagen están altamente correlacionadas y adem\'as los detectores de dos bandas diferentes no son los mismos. Por tanto podría utilizarse el valor del pixel faltante en una banda diferente para mejorar la estimaci\'on:
+del mismo pixel en las lineas anterior y posterior (no es recomendable utilizar los pixeles contiguos de la misma linea por que han sido captados por el mismo detector o banda que ha dado el fallo, por tanto son poco fiables).
 
 		\begin{equation}
-		ND_{x,y,k} = round((\dfrac{\sigma_{k}}{\sigma_{r}}(ND_{x,y,r}-\dfrac{ND_{x+1,y,r} - ND_{x-1,y,r}}{2}) + \dfrac{ND_{x+1,y,k} + ND_{x-1,y,k}}{2})
-		\end{equation} 	
-En caso de que la imagen abarque un territorio amplio y cambiante resulta recomendable calcular los coeficientes de correlaci\'on y las desviaciones t\'ipicas ($ \sigma_{k} $ y $ \sigma_{r} $) en un entorno cercano al pixel perdido.\\~\\
-Para detectar lineas perdidas se compara la media de los $ ND $ de una linea con las medias de las lineas anterior y posterior, para detectar pixeles perdidos se compara el valor de un pixel con los de los 8 pixeles vecinos mediante alg\'un procedimiento de filtrado.
+		f^{'}(x,y,i) = \ldbrack \dfrac{g(x-1,y,i) + g(x+1,y,i)}{2}) \rdbrack
+		\end{equation} 
+
+				\nomenclature[31]{$ g^{'}(x,y) $}{Nivel digital en la celda $ (x,y) $ de la imagen corregida radiom\'etricamenten.}
+				\nomenclature[32]{$ \mu $}{Valor de la media.}
+				\nomenclature[33]{$ \sigma $}{Desviaci\'on t\'ipica.}
+Siendo $ f^{,}(x,y,i) $ el nivel digital en la celda $ (x,y) $ de la imagen corregida radiom\'etricamente.\\~\\
+La bandas de una imagen son de detectores diferentes y est\'an altamente correlacionadas. Sea  $ z $ una banda de la imagen satelital, donde $ z \in [1,k] $, podr\'ia utilizarse el valor del pixel faltante en una banda diferente para mejorar la estimaci\'on:
+		\begin{equation}
+		f^{'}(x,y,i) = \ldbrack (\dfrac{f(x-1,y,i)-f(x+1,y,i)}{2})+ \dfrac{\sigma_{i}}{\sigma_{z}} +(f(x,y,z)-\dfrac{f(x-1,y,z)-f(x+1,y,z)}{2}) \rdbrack
+		\end{equation} 
+
+En caso de que la imagen abarque un territorio amplio y cambiante resulta recomendable calcular las desviaciones t\'ipicas ($ \sigma_{i} $ y $ \sigma_{z} $) en un entorno cercano al pixel perdido.\\~\\
+Para detectar lineas perdidas se compara la media de los $ ND $ de una linea con las medias de las lineas anterior y posterior, para detectar pixeles perdidos se compara el valor de un pixel con los de los 8 pixeles.
 \subsubsection{Bandeado}\label{subsec:bandeado}
 El fen\'omeno del bandeado se debe a una mala calibraci\'on entre detectores y resulta especialmente visible en las zonas de baja radiancia (zonas marinas por ejemplo). El resultado es la aparici\'on peri\'odica de una banda m\'as clara u oscura que las dem\'as.
 Para corregir el bandeado se asume que, en caso de no haber error, los histogramas obtenidos por cada uno de los detectores ser\'ian similares entre s\'i y similares al histograma global de la imagen que se toma como referencia.\\~\\
-En primer lugar se calculan los coeficientes $ a_{k} $ y $ b_{k} $ para una correcci\'on lineal de cada uno de las bandas.
+En primer lugar se calculan los coeficientes $ m $ y $ s $ para una correcci\'on lineal de cada uno de las bandas.
 		\begin{equation}
-		b_{k}=\dfrac{\sigma_{r}}{\sigma_{k}}
+		m =\dfrac{\sigma_{i}}{\sigma_{z}}
 		\end{equation} 	
 				\begin{equation}
-				a_{k}=\mu_{r} - b_{k}\mu_{k}
+				s=\mu_{i} - m\mu_{z}
 				\end{equation} 	
 				
-\nomenclature[20]{$ \mu $}{Valor de la media.}
-\nomenclature[20]{$ \sigma $}{Desviaci\'on t\'ipica.}
-Donde $ \mu $ y $ \sigma $ son la media y la desviaci\'on t\'ipica del conjunto de pixeles de la imagen para los detectores. A continuaci\'on los $ ND $ de la imagen se recalculan como:
+
+A continuaci\'on los $ ND $ de la imagen se recalculan como:
 				\begin{equation}
-				ND_{x,y,k}^{'} = a_{k}+b_{k}ND_{x,y,k}
-				\end{equation} 	
-asumiendo que la linea $ x $ pertenece a la banda $ k $.				
+				F^{'}(x,y,i) = 	mf(x,y,i) + s
+				\end{equation} 				
+		\nomenclature[34]{$ F^{'}(x,y,i) $}{Nivel digital, con correcci\'on de bandeado, del pixel $ x $ e $ y $ de la banda $ i $.}
+Siendo $ F^{'}(x,y,i) $ el nivel digital, con correcci\'on de bandeado. 
 
     \begin{figure}[H]
     	\centering
@@ -351,15 +366,15 @@ La comparaci\'on parte de un par de im\'agenes semejantes que abarcan la misma z
 								\begin{equation}
 								I_{dif} = ND_{final}-ND_{inicial}
 								\end{equation} 	
-\nomenclature[21]{$ I_{dif} $}{Indice de cambio por diferencia de im\'agenes.}
-\nomenclature[21]{$ I_{ratio} $}{Indice de cambio por el m\'etodo de ratio.}
+\nomenclature[35]{$ I_{dif} $}{Indice de cambio por diferencia de im\'agenes.}
+\nomenclature[36]{$ I_{ratio} $}{Indice de cambio por el m\'etodo de ratio.}
 				\item \textbf{Ratio:} se obtiene aplicando la operación de cociente, entre los niveles digitales ($ ND $ ) inicial y final para la obtenci\'on de un \'indice ($ I_{ratio} $). Podr\'ia  generar mejores resultados pero no se ajusta a una distribución normal.
 										\begin{equation}
 										I_{ratio} = \dfrac{ND_{final}}{ND_{inicial}}
 										\end{equation} 	
 
 		\end{itemize}
-Estas dos operaciones generan un \'indice de cambios a partir de cada conjunto de datos multitemporal, dando lugar a tantos mapas de cambios como bandas/capas se consideren; son de gran utilidad cuando se trabaje con im\'agenes pancrom\'aticas o \'indices espectrales/texturales.
+Estas dos operaciones generan un \'indice de cambios $ I_{c} $a partir de cada conjunto de datos multitemporal, dando lugar a tantos mapas de cambios como bandas/capas se consideren; son de gran utilidad cuando se trabaje con im\'agenes pancrom\'aticas o \'indices espectrales/texturales.
 \subsection{Criterios de decisi\'on}
 La comparaci\'on multitemporal facilita im\'agenes continuas del cambio. En otras palabras, el resultado de los c\'alculos es una imagen en donde el valor de salida indica el grado de cambio, desde la mayor p\'erdida a la mayor ganancia, en una escala gradual. Si se pretende generar una imagen binaria (cambio/estable), es preciso se\~{n}alar un umbral que delimite ambas categor\'ias en las im\'agenes. Ah\'i se plantea un problema de dif\'icil soluci\'on ya que no existen criterios de aplicación general.\\~\\
 Si el cambio abarca un sector importante de la imagen, el histograma de la imagen de cambios debiese mostrar un perfil bimodal, lo que permitir\'ia establecer umbrales naturales de cambio, aunque esta situaci\'on no es muy habitual, ya que los cambios en la naturaleza no suelen producirse de modo abrupto\cite{martinez2013normalizacion}.\\~\\
@@ -374,16 +389,18 @@ B(I_{c}) = \begin{cases}
 \end{cases}
 \end{equation}
 
-\nomenclature[22]{$ I_{c} $}{Indice de cambio.}
-\nomenclature[23]{$ B(I_{c}) $}{Funci\'on que genera una mascara de cambio a partir de $ I_{c} $.}
-\nomenclature[24]{$ U $}{Umbral de cambio.}
+\nomenclature[37]{$ I_{c} $}{Indice de cambio entre dos im\'agenes.}
+\nomenclature[38]{$ B(I_{c}) $}{Funci\'on que genera una mascara de cambio a partir de $ I_{c} $.}
+\nomenclature[39]{$ U $}{Umbral de cambio.}
 
 En Rodriguez-Galiano \cite{rodriguez2010analisis} se propone, como criterios de decisi\'on, el m\'etodo de discriminaci\'on basado en los par\'ametros estad\'isticos del \'indice de cambio entre la secuencia temporal de im\'agenes:
 \begin{equation}
-U=\mu \pm n\sigma
+U=\mu_{I_{c}} \pm n\sigma _{I_{c}}
 \end{equation}
-\nomenclature[24]{$ n $}{Coeficiente de fiabilidad de los datos.}
-Donde, el valor de umbral entre cambio/no cambio $ (U) $ se estima en funci\'on de los par\'ametros estad\'isticos $ (\mu, \sigma) $ y un coeficiente de tolerancia $ n $ asignado en base a la fiabilidad de los datos. En Estornell \cite{estornell2004analisis} se clasifican los resultados en funci\'on de $ n $; alta probabilidad de cambio $ (n \geq 2) $ y
+\nomenclature[40]{$ n $}{Coeficiente de fiabilidad de los datos.}
+\nomenclature[40]{$ \sigma_{I_{c}}) $}{Desviaci\'on t\'ipica de la imagen de \'Indices de cambio.}
+\nomenclature[40]{$ \mu_{I_{c}}) $}{Media de la imagen de \'Indices de cambio.}
+Donde, el valor de umbral entre cambio/no cambio $ (U) $ se estima en funci\'on de los par\'ametros estad\'isticos $ (\mu_{I_{c}}, \sigma_{I_{c}}) $ y un coeficiente de tolerancia $ n $ asignado en base a la fiabilidad de los datos. En Estornell \cite{estornell2004analisis} se clasifican los resultados en funci\'on de $ n $; alta probabilidad de cambio $ (n \geq 2) $ y
 zonas de media probabilidad de cambio $ (1 < n < 2) $.
 
 \subsection{Filtrado}
