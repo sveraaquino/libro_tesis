@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.27)  7 NOV 2015 17:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.27)  9 NOV 2015 20:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1405,11 +1405,11 @@ LaTeX Info: Redefining \% on input line 2.
 
 
 
-])
+] [12])
 ------------------------------------------------------------------------------
  \'Indice de tablas
 ------------------------------------------------------------------------------
-[12] (./main.lot
+[13] (./main.lot
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 2.
@@ -1418,7 +1418,7 @@ LaTeX Info: Redefining \% on input line 2.
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [13
+ [14
 
 ]
 ------------------------------------------------------------------------------
@@ -1434,11 +1434,11 @@ Overfull \hbox (26.95216pt too wide) in alignment at lines 327--327
  [] [] 
  []
 
-[14
+[15
 
 
 
-] [15] (./Chapters/Introduccion.tex [1
+] [16] (./Chapters/Introduccion.tex [1
 
 
 ]
@@ -1539,7 +1539,7 @@ Cap\'{\i }tulo 2.
  2 Cambio Clim\'atico
 ------------------------------------------------------------------------------
 
-<./Pictures/./Figures/cap2/calentamiento.png, id=744, 360.59718pt x 252.945pt>
+<./Pictures/./Figures/cap2/calentamiento.png, id=752, 360.59718pt x 252.945pt>
 File: ./Pictures/./Figures/cap2/calentamiento.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap2/calentamiento.png>
@@ -1551,7 +1551,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--15
 
  []
 
-<./Pictures/./Figures/cicloCarbono.jpg, id=747, 521.95pt x 521.95pt>
+<./Pictures/./Figures/cicloCarbono.jpg, id=755, 521.95pt x 521.95pt>
 File: ./Pictures/./Figures/cicloCarbono.jpg Graphic file (type jpg)
 
 <use ./Pictures/./Figures/cicloCarbono.jpg>
@@ -1614,7 +1614,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 74.
  [14]
-<./Pictures/./Figures/sensores.png, id=793, 900.36375pt x 362.10281pt>
+<./Pictures/./Figures/sensores.png, id=802, 900.36375pt x 362.10281pt>
 File: ./Pictures/./Figures/sensores.png Graphic file (type png)
 
 <use ./Pictures/./Figures/sensores.png>
@@ -1635,222 +1635,245 @@ Cap\'{\i }tulo 3.
 [18
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 23--25
+<./Pictures/./Figures/cap3/bandas_imagen.png, id=829, 1073.51062pt x 779.16093p
+t>
+File: ./Pictures/./Figures/cap3/bandas_imagen.png Graphic file (type png)
+ <use ./Pictures/./Figures/cap3/bandas_imagen.png>
+Package pdftex.def Info: ./Pictures/./Figures/cap3/bandas_imagen.png used on in
+put line 23.
+(pdftex.def)             Requested size: 292.22987pt x 212.10017pt.
+ [19]
+Underfull \hbox (badness 10000) in paragraph at lines 29--31
 
  []
 
 
-<./Pictures/./Figures/cap3/firmaEspectral.jpg, id=822, 736.7525pt x 572.1375pt>
+<./Pictures/./Figures/cap3/firmaEspectral.jpg, id=836, 736.7525pt x 572.1375pt>
 File: ./Pictures/./Figures/cap3/firmaEspectral.jpg Graphic file (type jpg)
 <use ./Pictures/./Figures/cap3/firmaEspectral.jpg>
 Package pdftex.def Info: ./Pictures/./Figures/cap3/firmaEspectral.jpg used on i
-nput line 28.
+nput line 34.
 (pdftex.def)             Requested size: 375.7232pt x 291.7688pt.
- [19]
-<./Pictures/./Figures/cap3/espatialRes.jpg, id=830, 176.3388pt x 135.1449pt>
+ [20 <./Pictures/./Figures/cap3/bandas_imagen.png>]
+<./Pictures/./Figures/cap3/espatialRes.jpg, id=845, 176.3388pt x 135.1449pt>
 File: ./Pictures/./Figures/cap3/espatialRes.jpg Graphic file (type jpg)
 
 <use ./Pictures/./Figures/cap3/espatialRes.jpg>
 Package pdftex.def Info: ./Pictures/./Figures/cap3/espatialRes.jpg used on inpu
-t line 41.
+t line 47.
 (pdftex.def)             Requested size: 166.98668pt x 127.9848pt.
-
-<./Pictures/./Figures/cap3/resolucionespectral.jpg, id=831, 530.98375pt x 377.4
+ [21 <./Pictures/./Figures/cap3/firmaEspectral.jpg>]
+<./Pictures/./Figures/cap3/resolucionespectral.jpg, id=850, 530.98375pt x 377.4
 1pt>
 File: ./Pictures/./Figures/cap3/resolucionespectral.jpg Graphic file (type jpg)
 
  <use ./Pictures/./Figures/cap3/resolucionespectral.jpg>
 Package pdftex.def Info: ./Pictures/./Figures/cap3/resolucionespectral.jpg used
- on input line 48.
+ on input line 54.
 (pdftex.def)             Requested size: 250.48637pt x 178.03922pt.
- [20 <./Pictures/./Figures/cap3/firmaEspectral.jpg> <./Pictures/./Figures/cap3/
-espatialRes.jpg>]
-<./Pictures/./Figures/cap3/resolucionradiometrica.jpg, id=836, 323.2075pt x 211
+
+<./Pictures/./Figures/cap3/resolucionradiometrica.jpg, id=851, 323.2075pt x 211
 .79124pt>
 File: ./Pictures/./Figures/cap3/resolucionradiometrica.jpg Graphic file (type j
 pg)
  <use ./Pictures/./Figures/cap3/resolucionradiometrica.jpg>
 Package pdftex.def Info: ./Pictures/./Figures/cap3/resolucionradiometrica.jpg u
-sed on input line 56.
+sed on input line 62.
 (pdftex.def)             Requested size: 250.48637pt x 164.13974pt.
-
-<./Pictures/./Figures/cap3/resolucion_temporal_land.png, id=837, 537.00626pt x 
+ [22 <./Pictures/./Figures/cap3/espatialRes.jpg> <./Pictures/./Figures/cap3/res
+olucionespectral.jpg>]
+<./Pictures/./Figures/cap3/resolucion_temporal_land.png, id=856, 537.00626pt x 
 261.97874pt>
 File: ./Pictures/./Figures/cap3/resolucion_temporal_land.png Graphic file (type
  png)
  <use ./Pictures/./Figures/cap3/resolucion_temporal_land.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap3/resolucion_temporal_land.png
- used on input line 63.
+ used on input line 69.
 (pdftex.def)             Requested size: 250.48637pt x 122.19861pt.
 
-[21 <./Pictures/./Figures/cap3/resolucionespectral.jpg> <./Pictures/./Figures/c
-ap3/resolucionradiometrica.jpg>]
-<./Pictures/./Figures/cap3/imagen_satelital.png, id=844, 331.2375pt x 268.75406
+<./Pictures/./Figures/cap3/imagen_satelital.png, id=858, 331.2375pt x 268.75406
 pt>
 File: ./Pictures/./Figures/cap3/imagen_satelital.png Graphic file (type png)
  <use ./Pictures/./Figures/cap3/imagen_satelital.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap3/imagen_satelital.png used on
- input line 88.
+ input line 94.
 (pdftex.def)             Requested size: 333.97972pt x 270.99246pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--91
+Underfull \hbox (badness 10000) in paragraph at lines 90--97
 
  []
 
-[22 <./Pictures/./Figures/cap3/resolucion_temporal_land.png>] [23 <./Pictures/.
-/Figures/cap3/imagen_satelital.png>]
-<./Pictures/./Figures/cap3/combinacionColor.jpg, id=859, 589.20125pt x 607.2687
+[23 <./Pictures/./Figures/cap3/resolucionradiometrica.jpg> <./Pictures/./Figure
+s/cap3/resolucion_temporal_land.png>] [24 <./Pictures/./Figures/cap3/imagen_sat
+elital.png>]
+<./Pictures/./Figures/cap3/combinacionColor.jpg, id=873, 589.20125pt x 607.2687
 5pt>
 File: ./Pictures/./Figures/cap3/combinacionColor.jpg Graphic file (type jpg)
  <use ./Pictures/./Figures/cap3/combinacionColor.jpg>
 Package pdftex.def Info: ./Pictures/./Figures/cap3/combinacionColor.jpg used on
- input line 118.
+ input line 123.
 (pdftex.def)             Requested size: 333.97972pt x 344.21942pt.
- [24]
-Underfull \hbox (badness 10000) in paragraph at lines 125--127
+ [25]
+Underfull \hbox (badness 10000) in paragraph at lines 130--132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--133
+Underfull \hbox (badness 10000) in paragraph at lines 134--138
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 129--133
+Underfull \hbox (badness 10000) in paragraph at lines 134--138
 
  []
 
-[25 <./Pictures/./Figures/cap3/combinacionColor.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 144--147
+[26 <./Pictures/./Figures/cap3/combinacionColor.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 149--152
 
  []
 
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 160--163
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 165--168
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 160--163
+Underfull \hbox (badness 10000) in paragraph at lines 165--168
 
  []
 
-<./Pictures/./Figures/cap3/inter_spacial.png, id=886, 389.455pt x 355.3275pt>
+<./Pictures/./Figures/cap3/inter_spacial.png, id=901, 389.455pt x 355.3275pt>
 File: ./Pictures/./Figures/cap3/inter_spacial.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap3/inter_spacial.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap3/inter_spacial.png used on in
-put line 168.
+put line 173.
 (pdftex.def)             Requested size: 375.7232pt x 342.81297pt.
- [27] [28 <./Pictures/./Figures/cap3/inter_spacial.png>]
-<./Pictures/./Figures/cap3/ecuacPolinomica.png, id=901, 628.59843pt x 314.67563
+ [28] [29 <./Pictures/./Figures/cap3/inter_spacial.png>]
+<./Pictures/./Figures/cap3/ecuacPolinomica.png, id=915, 628.59843pt x 314.67563
 pt>
 File: ./Pictures/./Figures/cap3/ecuacPolinomica.png Graphic file (type png)
  <use ./Pictures/./Figures/cap3/ecuacPolinomica.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap3/ecuacPolinomica.png used on 
-input line 197.
+input line 203.
 (pdftex.def)             Requested size: 375.7232pt x 188.0866pt.
 
-<./Pictures/./Figures/cap4/rms.png, id=903, 552.56438pt x 258.9675pt>
+<./Pictures/./Figures/cap4/rms.png, id=917, 552.56438pt x 258.9675pt>
 File: ./Pictures/./Figures/cap4/rms.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap4/rms.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap4/rms.png used on input line 2
-14.
+20.
 (pdftex.def)             Requested size: 375.7232pt x 176.08765pt.
- [29 <./Pictures/./Figures/cap3/ecuacPolinomica.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 224--228
+ [30 <./Pictures/./Figures/cap3/ecuacPolinomica.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 230--234
 
  []
 
-[30 <./Pictures/./Figures/cap4/rms.png>]
-<./Pictures/./Figures/cap3/vecinoMasCercano2.png, id=922, 325.96782pt x 412.541
+[31 <./Pictures/./Figures/cap4/rms.png>]
+<./Pictures/./Figures/cap3/vecinoMasCercano2.png, id=936, 325.96782pt x 412.541
 24pt>
 File: ./Pictures/./Figures/cap3/vecinoMasCercano2.png Graphic file (type png)
  <use ./Pictures/./Figures/cap3/vecinoMasCercano2.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap3/vecinoMasCercano2.png used o
-n input line 247.
+n input line 252.
 (pdftex.def)             Requested size: 250.48637pt x 317.02196pt.
- [31 <./Pictures/./Figures/cap3/vecinoMasCercano2.png>]
-<./Pictures/./Figures/cap3/bilineal_ecuation.png, id=930, 217.5628pt x 228.1021
+
+Underfull \hbox (badness 10000) in paragraph at lines 257--259
+
+ []
+
+[32 <./Pictures/./Figures/cap3/vecinoMasCercano2.png>]
+<./Pictures/./Figures/cap3/bilineal_ecuation.png, id=945, 217.5628pt x 228.1021
 9pt>
 File: ./Pictures/./Figures/cap3/bilineal_ecuation.png Graphic file (type png)
  <use ./Pictures/./Figures/cap3/bilineal_ecuation.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap3/bilineal_ecuation.png used o
-n input line 262.
+n input line 269.
 (pdftex.def)             Requested size: 292.22987pt x 306.428pt.
- [32 <./Pictures/./Figures/cap3/bilineal_ecuation.png>]
-<./Pictures/./Figures/cap3/convCubica2.png, id=941, 646.66594pt x 350.81062pt>
-File: ./Pictures/./Figures/cap3/convCubica2.png Graphic file (type png)
 
-<use ./Pictures/./Figures/cap3/convCubica2.png>
-Package pdftex.def Info: ./Pictures/./Figures/cap3/convCubica2.png used on inpu
-t line 298.
-(pdftex.def)             Requested size: 375.7232pt x 203.82893pt.
+Underfull \hbox (badness 10000) in paragraph at lines 274--276
 
-<./Pictures/./Figures/cap3/correcError.png, id=943, 696.35156pt x 427.5975pt>
+ []
+
+[33 <./Pictures/./Figures/cap3/bilineal_ecuation.png>]
+<./Pictures/./Figures/cap3/convolucionCubica_matriz.png, id=954, 331.2375pt x 3
+09.40594pt>
+File: ./Pictures/./Figures/cap3/convolucionCubica_matriz.png Graphic file (type
+ png)
+ <use ./Pictures/./Figures/cap3/convolucionCubica_matriz.png>
+Package pdftex.def Info: ./Pictures/./Figures/cap3/convolucionCubica_matriz.png
+ used on input line 304.
+(pdftex.def)             Requested size: 375.7232pt x 350.97488pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 299--307
+
+ []
+
+[34]
+<./Pictures/./Figures/cap3/correcError.png, id=962, 696.35156pt x 427.5975pt>
 File: ./Pictures/./Figures/cap3/correcError.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap3/correcError.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap3/correcError.png used on inpu
-t line 309.
+t line 315.
 (pdftex.def)             Requested size: 375.7232pt x 230.70999pt.
- [33 <./Pictures/./Figures/cap3/convCubica2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 325--327
+ [35 <./Pictures/./Figures/cap3/convolucionCubica_matriz.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 321--324
 
  []
 
 
-Overfull \hbox (21.17859pt too wide) detected at line 329
+Overfull \hbox (21.17859pt too wide) detected at line 335
 []\OML/cmm/m/it/10.95 f[]\U/matha/m/n/10.95 p\OML/cmm/m/it/10.95 x; y; i\U/math
 a/m/n/10.95 q ^^P vp[]q ^^@ [] ^^@ p\OML/cmm/m/it/10.95 f\U/matha/m/n/10.95 p\O
 ML/cmm/m/it/10.95 x; y; z\U/matha/m/n/10.95 q ^^A []qw
  []
 
-[34 <./Pictures/./Figures/cap3/correcError.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 331--333
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--339
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 334--337
+[36 <./Pictures/./Figures/cap3/correcError.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 340--343
 
  []
 
-<./Pictures/./Figures/cap3/bandeo_k.png, id=959, 520.94624pt x 465.99094pt>
+<./Pictures/./Figures/cap3/bandeo_k.png, id=976, 520.94624pt x 465.99094pt>
 File: ./Pictures/./Figures/cap3/bandeo_k.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap3/bandeo_k.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap3/bandeo_k.png used on input l
-ine 354.
+ine 359.
 (pdftex.def)             Requested size: 375.7232pt x 336.08916pt.
- [35]
-Underfull \hbox (badness 10000) in paragraph at lines 360--362
+ [37]
+Underfull \hbox (badness 10000) in paragraph at lines 365--367
 
  []
 
-[36 <./Pictures/./Figures/cap3/bandeo_k.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 379--382
+[38 <./Pictures/./Figures/cap3/bandeo_k.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 384--387
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 379--382
+Underfull \hbox (badness 10000) in paragraph at lines 384--387
 
  []
 
-[37] [38]
-<./Pictures/./Figures/cap3/FiltrodelaMediana.png, id=1004, 301.125pt x 188.9559
+[39] [40]
+<./Pictures/./Figures/cap3/FiltrodelaMediana.png, id=1021, 301.125pt x 188.9559
 3pt>
 File: ./Pictures/./Figures/cap3/FiltrodelaMediana.png Graphic file (type png)
  <use ./Pictures/./Figures/cap3/FiltrodelaMediana.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap3/FiltrodelaMediana.png used o
-n input line 419.
+n input line 426.
 (pdftex.def)             Requested size: 333.97972pt x 209.59074pt.
- [39])
-(./Chapters/metodologia.tex [40 <./Pictures/./Figures/cap3/FiltrodelaMediana.pn
-g>] [41]
+ [41])
+(./Chapters/metodologia.tex [42 <./Pictures/./Figures/cap3/FiltrodelaMediana.pn
+g>] [43]
 Cap\'{\i }tulo 4.
 ------------------------------------------------------------------------------
  4 Materiales y Metodolog\'ia
@@ -1865,43 +1888,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 12--15
 
  []
 
-[42
+[44
 
 ]
-<./Pictures/./Figures/cap4/va_wrs2b.png, id=1024, 884.30376pt x 507.8975pt>
+<./Pictures/./Figures/cap4/va_wrs2b.png, id=1041, 884.30376pt x 507.8975pt>
 File: ./Pictures/./Figures/cap4/va_wrs2b.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap4/va_wrs2b.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap4/va_wrs2b.png used on input l
 ine 40.
 (pdftex.def)             Requested size: 333.97972pt x 191.81732pt.
- [43]
-<./Pictures/./Figures/cap4/vcf_image.png, id=1032, 400.49625pt x 298.86656pt>
+ [45]
+<./Pictures/./Figures/cap4/vcf_image.png, id=1049, 400.49625pt x 298.86656pt>
 File: ./Pictures/./Figures/cap4/vcf_image.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap4/vcf_image.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap4/vcf_image.png used on input 
 line 63.
 (pdftex.def)             Requested size: 333.97972pt x 249.24486pt.
- [44 <./Pictures/./Figures/cap4/va_wrs2b.png>]
-<./Pictures/./Figures/cap5/saatchi.png, id=1040, 288.3272pt x 300.3722pt>
+ [46 <./Pictures/./Figures/cap4/va_wrs2b.png>]
+<./Pictures/./Figures/cap5/saatchi.png, id=1058, 288.3272pt x 300.3722pt>
 File: ./Pictures/./Figures/cap5/saatchi.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap5/saatchi.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap5/saatchi.png used on input li
 ne 71.
 (pdftex.def)             Requested size: 333.97972pt x 347.94614pt.
- [45 <./Pictures/./Figures/cap4/vcf_image.png>]
-<./Pictures/./Figures/cap4/fcc_paraguay.png, id=1049, 280.04625pt x 298.11375pt
+ [47 <./Pictures/./Figures/cap4/vcf_image.png>]
+<./Pictures/./Figures/cap4/fcc_paraguay.png, id=1065, 280.04625pt x 298.11375pt
 >
 File: ./Pictures/./Figures/cap4/fcc_paraguay.png Graphic file (type png)
  <use ./Pictures/./Figures/cap4/fcc_paraguay.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap4/fcc_paraguay.png used on inp
 ut line 95.
 (pdftex.def)             Requested size: 292.22987pt x 311.09541pt.
- [46 <./Pictures/./Figures/cap5/saatchi.png>] [47 <./Pictures/./Figures/cap4/fc
+ [48 <./Pictures/./Figures/cap5/saatchi.png>] [49 <./Pictures/./Figures/cap4/fc
 c_paraguay.png>]
-<./Pictures/./Figures/cap4/metodologiaCarbono.png, id=1060, 819.06pt x 141.5287
+<./Pictures/./Figures/cap4/metodologiaCarbono.png, id=1076, 819.06pt x 141.5287
 5pt>
 File: ./Pictures/./Figures/cap4/metodologiaCarbono.png Graphic file (type png)
  <use ./Pictures/./Figures/cap4/metodologiaCarbono.png>
@@ -1913,14 +1936,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 109--116
 
  []
 
-[48] <./Pictures/./Figures/cap4/ejGpc.png, id=1066, 434.37282pt x 420.82219pt>
+[50] <./Pictures/./Figures/cap4/ejGpc.png, id=1083, 434.37282pt x 420.82219pt>
 File: ./Pictures/./Figures/cap4/ejGpc.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap4/ejGpc.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap4/ejGpc.png used on input line
  124.
 (pdftex.def)             Requested size: 292.22987pt x 283.1309pt.
- [49 <./Pictures/./Figures/cap4/metodologiaCarbono.png>]
+ [51 <./Pictures/./Figures/cap4/metodologiaCarbono.png>]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 133.
 
@@ -1933,29 +1956,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--169
 
  []
 
-[50 <./Pictures/./Figures/cap4/ejGpc.png>]
-<./Pictures/./Figures/cap4/deteccionCambio.png, id=1082, 866.48718pt x 278.5406
+[52 <./Pictures/./Figures/cap4/ejGpc.png>]
+<./Pictures/./Figures/cap4/deteccionCambio.png, id=1099, 866.48718pt x 278.5406
 2pt>
 File: ./Pictures/./Figures/cap4/deteccionCambio.png Graphic file (type png)
  <use ./Pictures/./Figures/cap4/deteccionCambio.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap4/deteccionCambio.png used on 
 input line 181.
 (pdftex.def)             Requested size: 417.47307pt x 134.1995pt.
- [51]
+ [53]
 Underfull \hbox (badness 10000) in paragraph at lines 186--189
 
  []
 
-[52 <./Pictures/./Figures/cap4/deteccionCambio.png>]
-<./Pictures/./Figures/cap4/normaRadio.png, id=1103, 525.46312pt x 195.73125pt>
+[54 <./Pictures/./Figures/cap4/deteccionCambio.png>]
+<./Pictures/./Figures/cap4/normaRadio.png, id=1119, 525.46312pt x 195.73125pt>
 File: ./Pictures/./Figures/cap4/normaRadio.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap4/normaRadio.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap4/normaRadio.png used on input
  line 217.
 (pdftex.def)             Requested size: 417.47307pt x 155.51001pt.
- [53 <./Pictures/./Figures/cap4/normaRadio.png>]
-<./Pictures/./Figures/cap4/umbrales.png, id=1118, 219.82124pt x 210.03468pt>
+ [55 <./Pictures/./Figures/cap4/normaRadio.png>]
+<./Pictures/./Figures/cap4/umbrales.png, id=1133, 219.82124pt x 210.03468pt>
 File: ./Pictures/./Figures/cap4/umbrales.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap4/umbrales.png>
@@ -1967,8 +1990,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 225--233
 
  []
 
-[54]
-<./Pictures/./Figures/cap4/iteracionUmbra.png, id=1124, 748.29562pt x 408.02437
+[56]
+<./Pictures/./Figures/cap4/iteracionUmbra.png, id=1140, 748.29562pt x 408.02437
 pt>
 File: ./Pictures/./Figures/cap4/iteracionUmbra.png Graphic file (type png)
  <use ./Pictures/./Figures/cap4/iteracionUmbra.png>
@@ -1990,8 +2013,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 235--243
 
  []
 
-[55 <./Pictures/./Figures/cap4/umbrales.png>]
-<./Pictures/./Figures/cap4/discriminacionForestal.png, id=1131, 855.94781pt x 3
+[57 <./Pictures/./Figures/cap4/umbrales.png>]
+<./Pictures/./Figures/cap4/discriminacionForestal.png, id=1147, 855.94781pt x 3
 06.39468pt>
 File: ./Pictures/./Figures/cap4/discriminacionForestal.png Graphic file (type p
 ng)
@@ -1999,16 +2022,16 @@ ng)
 Package pdftex.def Info: ./Pictures/./Figures/cap4/discriminacionForestal.png u
 sed on input line 281.
 (pdftex.def)             Requested size: 417.47307pt x 149.4381pt.
- [56 <./Pictures/./Figures/cap4/iteracionUmbra.png>]
-<./Pictures/./Figures/cap4/ndviUmbral.png, id=1140, 225.09094pt x 152.82094pt>
+ [58 <./Pictures/./Figures/cap4/iteracionUmbra.png>]
+<./Pictures/./Figures/cap4/ndviUmbral.png, id=1156, 225.09094pt x 152.82094pt>
 File: ./Pictures/./Figures/cap4/ndviUmbral.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap4/ndviUmbral.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap4/ndviUmbral.png used on input
  line 297.
 (pdftex.def)             Requested size: 333.97972pt x 226.77536pt.
- [57 <./Pictures/./Figures/cap4/discriminacionForestal.png>]
-<./Pictures/./Figures/cap4/interseccionPerdida.png, id=1152, 401.24907pt x 368.
+ [59 <./Pictures/./Figures/cap4/discriminacionForestal.png>]
+<./Pictures/./Figures/cap4/interseccionPerdida.png, id=1168, 401.24907pt x 368.
 1253pt>
 File: ./Pictures/./Figures/cap4/interseccionPerdida.png Graphic file (type png)
 
@@ -2026,19 +2049,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 306--315
 
  []
 
-[58 <./Pictures/./Figures/cap4/ndviUmbral.png>] [59 <./Pictures/./Figures/cap4/
-interseccionPerdida.png>] [60]
-<./Pictures/./Figures/cap4/resultadoMetodologia.png, id=1184, 429.10312pt x 295
+[60 <./Pictures/./Figures/cap4/ndviUmbral.png>] [61 <./Pictures/./Figures/cap4/
+interseccionPerdida.png>] [62]
+<./Pictures/./Figures/cap4/resultadoMetodologia.png, id=1200, 429.10312pt x 295
 .85532pt>
 File: ./Pictures/./Figures/cap4/resultadoMetodologia.png Graphic file (type png
 )
  <use ./Pictures/./Figures/cap4/resultadoMetodologia.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap4/resultadoMetodologia.png use
-d on input line 372.
+d on input line 373.
 (pdftex.def)             Requested size: 333.97972pt x 230.27414pt.
 )
-(./Chapters/casoDeEstudio.tex [61 <./Pictures/./Figures/cap4/resultadoMetodolog
-ia.png>] [62]
+(./Chapters/casoDeEstudio.tex [63 <./Pictures/./Figures/cap4/resultadoMetodolog
+ia.png>] [64]
 Cap\'{\i }tulo 5.
 ------------------------------------------------------------------------------
  5 Pruebas experimentales
@@ -2058,15 +2081,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--11
 
  []
 
-[63
+[65
 
-] [64]
+] [66]
 Underfull \hbox (badness 10000) in paragraph at lines 46--48
 
  []
 
-[65]
-<./Pictures/./Figures/cap5/mascaraVCF.png, id=1221, 621.07031pt x 313.17pt>
+[67]
+<./Pictures/./Figures/cap5/mascaraVCF.png, id=1236, 621.07031pt x 313.17pt>
 File: ./Pictures/./Figures/cap5/mascaraVCF.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap5/mascaraVCF.png>
@@ -2079,65 +2102,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 78--85
  []
 
 
-<./Pictures/./Figures/cap5/vcfAleatorio.png, id=1222, 638.385pt x 309.40594pt>
+<./Pictures/./Figures/cap5/vcfAleatorio.png, id=1237, 638.385pt x 309.40594pt>
 File: ./Pictures/./Figures/cap5/vcfAleatorio.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap5/vcfAleatorio.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap5/vcfAleatorio.png used on inp
 ut line 89.
 (pdftex.def)             Requested size: 333.97972pt x 161.8693pt.
- [66 <./Pictures/./Figures/cap5/mascaraVCF.png>] [67 <./Pictures/./Figures/cap5
+ [68 <./Pictures/./Figures/cap5/mascaraVCF.png>] [69 <./Pictures/./Figures/cap5
 /vcfAleatorio.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 134--136
 
  []
 
-<./Pictures/./Figures/cap5/carbNdvi.png, id=1235, 428.35031pt x 307.1475pt>
+<./Pictures/./Figures/cap5/carbNdvi.png, id=1251, 428.35031pt x 307.1475pt>
 File: ./Pictures/./Figures/cap5/carbNdvi.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap5/carbNdvi.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap5/carbNdvi.png used on input l
 ine 140.
 (pdftex.def)             Requested size: 333.97972pt x 239.48035pt.
- [68]
-<./Pictures/./Figures/cap4/ndviCarb.png, id=1240, 642.4pt x 481.8pt>
+ [70]
+<./Pictures/./Figures/cap4/ndviCarb.png, id=1256, 642.4pt x 481.8pt>
 File: ./Pictures/./Figures/cap4/ndviCarb.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap4/ndviCarb.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap4/ndviCarb.png used on input l
 ine 147.
 (pdftex.def)             Requested size: 333.97972pt x 250.49332pt.
- [69 <./Pictures/./Figures/cap5/carbNdvi.png>]
-<./Pictures/./Figures/cap4/ndvCarCuadratico.png, id=1247, 642.4pt x 481.8pt>
+ [71 <./Pictures/./Figures/cap5/carbNdvi.png>]
+<./Pictures/./Figures/cap4/ndvCarCuadratico.png, id=1262, 642.4pt x 481.8pt>
 File: ./Pictures/./Figures/cap4/ndvCarCuadratico.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap4/ndvCarCuadratico.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap4/ndvCarCuadratico.png used on
  input line 154.
 (pdftex.def)             Requested size: 333.97972pt x 250.49332pt.
- [70 <./Pictures/./Figures/cap4/ndviCarb.png> <./Pictures/./Figures/cap4/ndvCar
+ [72 <./Pictures/./Figures/cap4/ndviCarb.png> <./Pictures/./Figures/cap4/ndvCar
 Cuadratico.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 165--167
 
  []
 
-<./Pictures/./Figures/cap5/zonas.png, id=1253, 344.03531pt x 313.9228pt>
+<./Pictures/./Figures/cap5/zonas.png, id=1268, 344.03531pt x 313.9228pt>
 File: ./Pictures/./Figures/cap5/zonas.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap5/zonas.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap5/zonas.png used on input line
  174.
 (pdftex.def)             Requested size: 333.97972pt x 304.74904pt.
- [71]
-<./Pictures/./Figures/cap5/qgisCarbono.png, id=1260, 1023.07219pt x 552.56438pt
+ [73]
+<./Pictures/./Figures/cap5/qgisCarbono.png, id=1276, 1023.07219pt x 552.56438pt
 >
 File: ./Pictures/./Figures/cap5/qgisCarbono.png Graphic file (type png)
  <use ./Pictures/./Figures/cap5/qgisCarbono.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap5/qgisCarbono.png used on inpu
 t line 194.
 (pdftex.def)             Requested size: 333.97972pt x 180.38228pt.
- [72 <./Pictures/./Figures/cap5/zonas.png>]
-<./Pictures/./Figures/cap5/res_zona_urbana.png, id=1270, 937.25156pt x 337.26pt
+ [74 <./Pictures/./Figures/cap5/zonas.png>]
+<./Pictures/./Figures/cap5/res_zona_urbana.png, id=1287, 937.25156pt x 337.26pt
 >
 File: ./Pictures/./Figures/cap5/res_zona_urbana.png Graphic file (type png)
  <use ./Pictures/./Figures/cap5/res_zona_urbana.png>
@@ -2145,24 +2168,24 @@ Package pdftex.def Info: ./Pictures/./Figures/cap5/res_zona_urbana.png used on
 input line 219.
 (pdftex.def)             Requested size: 333.97972pt x 120.17842pt.
 
-<./Pictures/./Figures/cap5/res_zona_rural.png, id=1271, 979.40906pt x 665.48625
+<./Pictures/./Figures/cap5/res_zona_rural.png, id=1288, 979.40906pt x 665.48625
 pt>
 File: ./Pictures/./Figures/cap5/res_zona_rural.png Graphic file (type png)
  <use ./Pictures/./Figures/cap5/res_zona_rural.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap5/res_zona_rural.png used on i
 nput line 225.
 (pdftex.def)             Requested size: 333.97972pt x 226.92236pt.
- [73 <./Pictures/./Figures/cap5/qgisCarbono.png>]
-<./Pictures/./Figures/cap5/res_zona_humeda.png, id=1278, 809.27344pt x 671.5087
+ [75 <./Pictures/./Figures/cap5/qgisCarbono.png>]
+<./Pictures/./Figures/cap5/res_zona_humeda.png, id=1294, 809.27344pt x 671.5087
 4pt>
 File: ./Pictures/./Figures/cap5/res_zona_humeda.png Graphic file (type png)
  <use ./Pictures/./Figures/cap5/res_zona_humeda.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap5/res_zona_humeda.png used on 
 input line 231.
 (pdftex.def)             Requested size: 333.97972pt x 277.12373pt.
- [74 <./Pictures/./Figures/cap5/res_zona_urbana.png> <./Pictures/./Figures/cap5
+ [76 <./Pictures/./Figures/cap5/res_zona_urbana.png> <./Pictures/./Figures/cap5
 /res_zona_rural.png>]
-<./Pictures/./Figures/cap5/pcfp.png, id=1285, 444.15938pt x 470.50781pt>
+<./Pictures/./Figures/cap5/pcfp.png, id=1301, 444.15938pt x 470.50781pt>
 File: ./Pictures/./Figures/cap5/pcfp.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap5/pcfp.png>
@@ -2174,17 +2197,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 237--244
 
  []
 
-[75 <./Pictures/./Figures/cap5/res_zona_humeda.png>] [76 <./Pictures/./Figures/
+[77 <./Pictures/./Figures/cap5/res_zona_humeda.png>] [78 <./Pictures/./Figures/
 cap5/pcfp.png>]
-<./Pictures/./Figures/cap5/kappaGrafico.png, id=1300, 702.37407pt x 372.64218pt
+<./Pictures/./Figures/cap5/kappaGrafico.png, id=1315, 702.37407pt x 372.64218pt
 >
 File: ./Pictures/./Figures/cap5/kappaGrafico.png Graphic file (type png)
  <use ./Pictures/./Figures/cap5/kappaGrafico.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap5/kappaGrafico.png used on inp
 ut line 283.
 (pdftex.def)             Requested size: 333.97972pt x 177.1945pt.
- [77]
-<./Pictures/./Figures/cap5/gaGrafico.png, id=1307, 763.35187pt x 365.86688pt>
+ [79]
+<./Pictures/./Figures/cap5/gaGrafico.png, id=1322, 763.35187pt x 365.86688pt>
 File: ./Pictures/./Figures/cap5/gaGrafico.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap5/gaGrafico.png>
@@ -2196,13 +2219,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 296--1
 
  []
 
-[78 <./Pictures/./Figures/cap5/kappaGrafico.png> <./Pictures/./Figures/cap5/gaG
-rafico.png>] [79] [80]
+[80 <./Pictures/./Figures/cap5/kappaGrafico.png> <./Pictures/./Figures/cap5/gaG
+rafico.png>] [81] [82]
 Cap\'{\i }tulo 6.
 ------------------------------------------------------------------------------
  6 Conclusiones y trabajos futuros
 ------------------------------------------------------------------------------
-[81
+[83
 
 ]
 Overfull \hbox (10.91577pt too wide) in paragraph at lines 30--31
@@ -2210,27 +2233,27 @@ Overfull \hbox (10.91577pt too wide) in paragraph at lines 30--31
  me-jo-ran-do en t^^Sermi-nos de pre-procesamiento
  []
 
-[82]) (./Chapters/bibliografia.tex [83] (./main.bbl [84] [85
+[84]) (./Chapters/bibliografia.tex [85] (./main.bbl [86] [87
 
-] [86] [87]
+] [88] [89]
 Underfull \hbox (badness 1430) in paragraph at lines 207--209
 []\OT1/cmr/m/n/10.95 El ci-clo del car-bono.  [][]$\OT1/cmtt/m/n/10.95 http : /
  / www . natureduca . com / cienc _ gen _
  []
 
-[88]
+[90]
 LaTeX Font Info:    Try loading font information for U+lasy on input line 246.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-) [89]
+) [91]
 Underfull \hbox (badness 10000) in paragraph at lines 316--320
 \OT1/cmtt/m/n/10.95 tutorial-[]imagenes-[]satelitales / combinaciones-[]colores
  . htm$[][]\OT1/cmr/m/n/10.95 ,
  []
 
-[90]))
+[92]))
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 351.
- [91]
+ [93]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 351.
  (./main.aux
 LaTeX Info: Redefining \. on input line 23.
@@ -2241,7 +2264,7 @@ LaTeX Info: Redefining \% on input line 27.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 351.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 351.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C1B6C5172DFE13844C79B223AD25D592;18164.
+(rerunfilecheck)             Checksum: 8E08CE5FD27255CA21C5CA8B8B9B554C;18169.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -2257,10 +2280,10 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 351.
 ### simple group (level 1) entered at line 212 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 17984 strings out of 493307
- 255359 string characters out of 6139905
- 337169 words of memory out of 5000000
- 20699 multiletter control sequences out of 15000+600000
+ 17994 strings out of 493307
+ 255689 string characters out of 6139905
+ 337240 words of memory out of 5000000
+ 20704 multiletter control sequences out of 15000+600000
  29926 words of font info for 105 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  49i,13n,47p,13130b,938s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2286,10 +2309,10 @@ texmf-dist/fonts/type1/public/mathabx-type1/matha6.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/mathabx-type1/matha8.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (107 pages, 5901138 bytes).
+Output written on main.pdf (110 pages, 6532476 bytes).
 PDF statistics:
- 1536 PDF objects out of 1728 (max. 8388607)
- 1305 compressed objects within 14 object streams
- 358 named destinations out of 1000 (max. 500000)
- 964 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1555 PDF objects out of 1728 (max. 8388607)
+ 1319 compressed objects within 14 object streams
+ 362 named destinations out of 1000 (max. 500000)
+ 969 words of extra memory for PDF output out of 10000 (max. 10000000)
 

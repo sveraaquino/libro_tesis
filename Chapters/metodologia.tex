@@ -189,7 +189,7 @@ En las distintas bandas de una imagen satelital se observan un comportamiento co
 	\begin{equation}
 	Z=\dfrac{ND_{i}-\mu_{i}}{\sigma_{i}}
 	\end{equation}
-\nomenclature[41]{$ Z $}{Variable tipificada.}	
+\nomenclature[56]{$ Z $}{Variable tipificada.}	
 	Aplicando este concepto sobre cada una de las dos im\'agenes, se pueden comparar siendo ambas distribuciones estandarizadas:
 	\begin{equation}
 	\dfrac{ND_{i_{1}}-\mu_{i_{1}}}{\sigma_{i_{1}}}=\dfrac{ND_{i_{2}}-\mu_{i_{2}}}{\sigma_{i_{2}}}
@@ -209,7 +209,7 @@ En las distintas bandas de una imagen satelital se observan un comportamiento co
 		\begin{equation}
 				ND_{i_{1}}^{'}=m_{1,2}\cdot ND_{i_{1}}+h_{1,2}
 		\end{equation}
-		\nomenclature[42]{$ ND_{i_{1}}^{'} $}{Imagen normalizada, de la banda $ i $.}	
+		\nomenclature[57]{$ ND_{i_{1}}^{'} $}{Imagen normalizada, de la banda $ i $.}	
 	Mediante esta transformaci\'on se obtienen histogramas parecidos, logrando de este modo mayor semejanza para el proceso de comparaci\'on multitemporal.
 	
 	\begin{figure}[H]
@@ -290,8 +290,8 @@ El umbral discriminatorio para la vegetaci\'on es determinado a partir de una co
 		\begin{equation}
 		U_{NDVI} = \mu_{NDVI}\pm n \sigma_{c}
 		\end{equation}
-\nomenclature[42]{$ \sigma_{c} $}{Desviaci\'on determinada como constante para la umbralizaci\'on de la cobertura vegetal.}
-Donde $ \mu_{NDVI} $ representa la media del NDVI calculada y $ n $ la fiabilidad. No se utiliza la ecuaci\'on correspondiente a la suma, debido a que se pretende analizar im\'agenes donde el porcentaje de vegetaci\'on es mayor, por lo que quedaría fuera la media.
+\nomenclature[58]{$ \sigma_{c} $}{Desviaci\'on determinada como constante para la umbralizaci\'on de la cobertura vegetal.}
+Donde $ \mu_{NDVI} $ representa la media del NDVI calculada y $ n $ la fiabilidad. No se utiliza la ecuaci\'on correspondiente a la suma, debido a que se pretende incluir \'indices por debajo de la media.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8	\textwidth]{./Figures/cap4/ndviUmbral.png}
@@ -316,7 +316,7 @@ La siguiente ilustraci\'on representa el flujo de tareas \ref{fig:intersPerdida}
 
 \subsection{Estimaci\'on de p\'erdida de carbono forestal}
 El procedimiento final consiste en estimar el carbono perdido o no secuestrados dentro del tiempo transcurrido entre las im\'agenes satelitales. El producto constituye la mascara de perdida forestal junto con la cuantificaci\'on en toneladas de carbono por hect\'area, obtenida mediante la ecuaci\'on de regresi\'on lineal $(y= b + ax) $ que fue generada a través del mapa global de carbono \cite{saatchi2011benchmark} y el NDVI, determinadas por las im\'agenes Landsat, en un estudio previo \ref{subsec:estimacionCarbono}. La regresi\'on presenta un coeficiente de determinaci\'on $ (r^{2}=0.509125) $ moderado, según tabla \ref{t:coefDeter}, por lo que el estudio es considerado valido para su aplicaci\'on en la metodolog\'ia.
-\nomenclature[43]{$ r^{2}$}{Coeficiente de determinaci\'on.}
+\nomenclature[59]{$ r^{2}$}{Coeficiente de determinaci\'on.}
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|l|l|}
@@ -331,37 +331,38 @@ El procedimiento final consiste en estimar el carbono perdido o no secuestrados 
 	\caption{Rangos del coeficiente de determinaci\'on.}
 	\label{t:coefDeter}
 \end{table}
-La siguiente expresi\'on define la ecuaci\'on hallada:
-		\begin{equation}
-			C_{(x,y)}=4,33+30,1 NDVI_{(x,y)}
-		\end{equation}
-		\nomenclature[44]{$ C(x,y)$}{Toneladas de carbono por hect\'area en las coordenadas $ x $ e $ y $.}
-		\nomenclature[45]{$ NDVI(x,y)$}{NDVI en la posición $ x $ e $ y $.}
+Sea $ C:(x,y) \longrightarrow \{ [-\infty,\infty]\}$ la cantidad de carbono, en toneladas por hect\'area, para la coordenada $ (x,y) $, se tiene que: 
 
-Donde $ C(x,y) $ representa Toneladas de carbono por hect\'area (ton C/Ha.) para el p\'ixel con posici\'on $ (x,y) $ y $ NDVI(x,y) $ la variable independiente perteneciente a una fecha. Para no realizar el calculo de carbono repetidamente en cada imagen temporal y luego restarlas con finalidad de tener la perdida producida en los p\'ixeles, se optimizo el proceso  utilizando la imagen con indices de cambios resultante $ (Ic) $ del proceso de iteraci\'on \ref{subsec:iteracion}, por lo que la ecuaci\'on quedara modificada con las siguientes expresiones:
+		\begin{equation}
+			C(x,y)=4,33+30,1 ndvi(x,y)
+		\end{equation}
+		\nomenclature[60]{$ C(x,y)$}{Toneladas de carbono por hect\'area en las coordenadas $ (x,y) $.}
+
+
+ Para no realizar el calculo de carbono repetidamente en cada imagen de la secuencia temporal y luego restarlas con finalidad de tener la perdida producida en los p\'ixeles, se optimizo el proceso  utilizando la imagen con indices de cambios resultante $ (Ic) $ del proceso de iteraci\'on \ref{subsec:iteracion}, por lo que la ecuaci\'on quedara modificada con las siguientes expresiones para dos fechas {}:
 		\begin{equation}
 				\label{e:fecha1}
-		C_{1}(x_{1},y_{1})=4,33+30,1 NDVI(x_{1},y_{1})
+		C(x_{1},y_{1})=4,33+30,1 ndvi(x_{1},y_{1})
 		\end{equation}
 		\begin{equation}
 						\label{e:fecha2}
-		C_{2}(x_{2},y_{2})=4,33+30,1 NDVI_(x_{2},y_{2})
+		C(x_{2},y_{2})=4,33+30,1 ndvi(x_{2},y_{2})
 		\end{equation}
 		\begin{equation}
 		\label{e:indiceCambio}
-		Ic(x,y)=NDVI(x_{2},y_{2}) -NDVI(x_{1},y_{1})
+		Ic(x,y)=ndvi(x_{2},y_{2}) -ndvi(x_{1},y_{1})
 		\end{equation}		
 Restando el carbono obtenido entre cada fecha, ecuación \ref{e:fecha2} y \ref{e:fecha1}, tendr\'iamos:
 		\begin{equation}
 				\label{e:restaCar}
-		C_{2}(x_{2},y_{2}) - C_{1}(x_{1},y_{1})= 30,1(NDVI(x_{2},y_{2})-NDVI(x_{2},y_{2}))
+		C(x_{2},y_{2}) - C(x_{1},y_{1})= 30,1(ndvi(x_{2},y_{2})-ndvi(x_{1},y_{1}))
 		\end{equation}		
 				\begin{equation}
 				\label{e:perdidaCar}
-					PC(x,y)= C_{2}(x_{2},y_{2}) - C_{1}(x_{1},y_{1})
+					PC(x,y)= C(x_{2},y_{2}) - C(x_{1},y_{1})
 				\end{equation}		
-\nomenclature[46]{$Ic(x,y)$}{ Indice de cambio en las coordenadas $ x $ e $ y $.}
-\nomenclature[47]{$PC(x,y)$}{Toneladas de carbono por hect\'area perdidos en las coordenadas $ x $ e $ y $.}
+\nomenclature[62]{$Ic(x,y)$}{ Indice de cambio en las coordenadas $ (x,y) $.}
+\nomenclature[63]{$PC(x,y)$}{Toneladas de carbono por hect\'area perdidos en las coordenadas $ (x,y) $.}
 Siendo $ PC(x,y)$ Toneladas de carbono por hect\'area perdidos. Remplazando \ref{e:indiceCambio} y \ref{e:perdidaCar} en \ref{e:restaCar}, la ecuaci\'on de regresi\'on final quedar\'ia:
 		\begin{equation}
 			PC(x,y) = 30,1 Ic(x,y)

@@ -18,12 +18,18 @@ Las bandas m\'as empleadas son las siguientes\cite{salinero2002teledeteccion}:
 		\item \textbf{Infrarrojo lejano o térmico:} (8 um a 14 um) se detecta el calor de la mayor\'ia de las cubiertas terrestres.
 		\item \textbf{Microondas:} (a partir de 1 um) de gran inter\'es por ser un tipo de energ\'ia transparente a la cubierta nubosa.
 	\end{itemize}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.7	\textwidth]{./Figures/cap3/bandas_imagen.png}
+		\caption{Bandas capturadas por un sat\'elite.}
+		\label{fig:bandasIs}
+	\end{figure}
 
 \subsection{Firmas espectrales}
-Las firmas espectrales consisten en la represntaci\'on de energ\'ia reflejada con relaci\'on a las longitudes de ondas, consideradas sin el efecto atmosf\'erico y medida en condiciones ideales del \'angulo incidente. Ayudan a identificar los objetos en la superficie terrestre debido a que cada uno presenta una respuesta espectral \'unica\cite{sivakumar2004satellite}.\\~\\
+Las firmas espectrales consisten en la representaci\'on de energ\'ia reflejada con relaci\'on a las longitudes de ondas, consideradas sin el efecto atmosf\'erico y medida en condiciones ideales del \'angulo incidente. Ayudan a identificar los objetos en la superficie terrestre debido a que cada uno presenta una respuesta espectral \'unica\cite{sivakumar2004satellite}.\\~\\
 En la siguiente figura se observa como cada objeto difiere de los dem\'as en sus firmas espectrales:
 
-\begin{figure}[!hbtp]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/firmaEspectral.jpg}
 	\caption{Firmas espectrales de diferentes coberturas.}
@@ -91,13 +97,12 @@ Sea $ \mathbb{Z} $ un conjunto de enteros. Una imagen satelital es una funci\'on
   \end{figure}
   	\nomenclature[11]{$\mathbb{Z}$}{Conjunto de enteros.}
   	\nomenclature[12]{$i$}{ Banda de la imagen satelital.}
-  	\nomenclature[12]{$f$}{ Imagen satelital.}
-  	\nomenclature[12]{$m$}{ N\'umero de filas de $ f $.}
-  	\nomenclature[12]{$n$}{ N\'umero de columnas de $ f $.}
-  	\nomenclature[13]{$(x,y,i)$}{Coordenadas espaciales de la banda $ i $ en la imagen satelital.}
-  	\nomenclature[14]{$k$}{ N\'umero de bandas que posee una imagen satelital.}
-  	\nomenclature[15]{$f(x,y,i)$}{ Nivel digital, en la posicion $ x $ e $ y $ de la banda $ i $, de la imagen satelital.}
-La ilustraci\'on \ref{fig:imagenMultiespectral} nos muestra los ejes de coordenadas espaciales $ x $ e $ y $ para cada plano que representan las bandas, pudiendo acceder a valor de la intensidad o nivel digital mediante la funci\'on $ f(x,y,i) $.
+  	\nomenclature[13]{$f$}{ Imagen satelital.}
+  	\nomenclature[13]{$(x,y)$}{ Coordenadas espaciales.}
+  	\nomenclature[16]{$(x,y,i)$}{Coordenadas espaciales de la banda $ i $ en la imagen satelital.}
+  	\nomenclature[17]{$k$}{ N\'umero de bandas que posee una imagen satelital.}
+  	\nomenclature[18]{$f(x,y,i)$}{ Nivel digital, en la posici\'on $ (x,y) $ de la banda $ i $, de la imagen satelital.}
+La ilustraci\'on \ref{fig:imagenMultiespectral} nos muestra los ejes de coordenadas espaciales $ (x,y) $ para cada plano que representan las bandas, pudiendo acceder a valor de la intensidad o nivel digital mediante la funci\'on $ f(x,y,i) $.
 
 
 \subsection{Histogramas}
@@ -134,10 +139,10 @@ Sea $ ndvi:(x,y) \longrightarrow [-1,1] $ una funci\'on que determina la imagen 
 	\label{e:ndvi}
 	ndvi(x,y)=\dfrac{f(x,y,IRc)-f(x,y,R)}{f(x,y,IRc)+f(x,y,R)}
 	\end{equation}
-	\nomenclature[16]{$ndvi$}{Imagen del \'indice de vegetaci\'on diferencial normalizada (NDVI).}
-	\nomenclature[17]{$ndvi(x,y)$}{ NDVI de las coordenadas $ (x,y) $.}
-	\nomenclature[18]{$R$}{ Posici\'on de la banda Roja en la imagen satelital.}
-	\nomenclature[19]{$IRc$}{ Posici\'on de la banda Infrarroja cercana en la imagen satelital.}
+	\nomenclature[19]{$ndvi$}{Imagen del \'indice de vegetaci\'on diferencial normalizada (NDVI).}
+	\nomenclature[20]{$ndvi(x,y)$}{ NDVI de las coordenadas $ (x,y) $.}
+	\nomenclature[21]{$R$}{ Posici\'on de la banda Roja en la imagen satelital.}
+	\nomenclature[22]{$IRc$}{ Posici\'on de la banda Infrarroja cercana en la imagen satelital.}
 Las plantas muestran un fuerte pico de absorci\'on causados por los pigmentos fotosint\'eticos en longitudes de onda cercanas a los 700 micrones, hecho que contrasta con una fuerte reflexi\'on de las longitudes de onda del infrarrojo cercano \cite{salinero2002teledeteccion}. Por su parte, los suelos desnudos se caracterizan por un incremento suavemente monot\'onico de la reflectancia, a medida que aumenta la longitud de onda \cite{salinero2002teledeteccion}.
 
 \section{An\'alisis Multitemporal}
@@ -175,21 +180,22 @@ Consiste en la determinaci\'on de la relaci\'on geom\'etrica entre las coordenad
 	x^{'}_{i} = \sum_{j=0}^{l} \sum_{d=0}^{l-j} a_{ij}x^{j}_{i}y^{d}_{i}
 	\end{equation} 
 		\begin{equation}
-		y^{'}_{i} = \sum_{j=0}^{l} \sum_{d=0}^{l-j} b_{ij}x^{j}_{i}y^{d}_{i}
+		y^{'}_{i} = \sum_{j=0}^{l} \sum_{e=0}^{l-j} b_{ij}x^{j}_{i}y^{e}_{i}
 		\end{equation} 
 
 
-\nomenclature[19]{$ l $}{ Grado del polinomio de ajuste.}
-\nomenclature[19]{$ d $}{ Variable de iteraci\'on.}
+\nomenclature[23]{$ l $}{ Grado del polinomio de ajuste.}
+\nomenclature[24]{$ e $}{ Variable de iteraci\'on.}
+\nomenclature[25]{$ j $}{ Variable de iteraci\'on.}
 
-Donde $ x^{'}_{i} $ e $ y^{'}_{i} $ indica la coordenada en la imagen corregida para la banda $ i $. El superindice $ g $ indica el grado del polinomio de ajuste, $ a_{i} $ y $ b_{i} $ los coeficientes del polinomio. Siendo la ecuaci\'on lineal las mas simple:
+Donde $ x^{'}_{i} $ e $ y^{'}_{i} $ indica la coordenada en la imagen corregida para la banda $ i $. El superindice $ l $ indica el grado del polinomio de ajuste, $ a_{i} $ y $ b_{i} $ los coeficientes del polinomio. Siendo la ecuaci\'on lineal las mas simple:
 	\begin{equation}
 	x^{'}_{i} = a_{0}+a_{1}x_{i}+a_{2}y_{i}
 	\end{equation} 
 		\begin{equation}
 		y^{'}_{i} = b_{0}+b_{1}x_{i}+b_{2}y_{i}
 		\end{equation} 
-		\nomenclature[20]{$ (x^{'},y^{'}) $}{Coordenadas de la imagen transformada.}
+		\nomenclature[26]{$ (x^{'},y^{'}) $}{Coordenadas de la imagen transformada.}
 En distorsiones moderadas o en un \'area reducida, se utilizan transformaciones de primer orden, pudiendo corregir efectos de translaci\'on en $ x^{'}_{i} $ e $ y^{'}_{i} $, cambios de escala y rotaci\'on.
 En distorsiones m\'as importantes o en \'areas extensas, es necesario una transfomaci\'on de segundo orden. Este tipo de transformaci\'on agregan a diferencia del primer orden, correcciones a deformaciones locales.
     \begin{figure}[H]
@@ -201,11 +207,11 @@ En distorsiones m\'as importantes o en \'areas extensas, es necesario una transf
  Para calcular la calidad en la interpolaci\'on espacial y los puntos de control seleccionados $ nc $, se utiliza el promedio de los errores cuadráticos medios (RMS), que consiste en la diferencia entre la coordenada re-transformada deseada para un punto de control y la coordenada real obtenida como salida.
 
  \begin{equation}
- RMS_{i} = \sqrt{\dfrac{\sum_{p=1}^{nc} ((x_{i_{p}}^{'}-x_{i_{p}})^{2}+(y_{i_{p}}^{'}-y_{i_{p}})^{2})}{nc}}
+ RMS_{i} = \sqrt{\dfrac{\sum_{j=1}^{nc} ((x_{i_{j}}^{'}-x_{i_{j}})^{2}+(y_{i_{j}}^{'}-y_{i_{j}})^{2})}{nc}}
  \end{equation} 
- 		\nomenclature[21]{$ RMS_{i} $}{Error cuadr\'atico de la banda $ i $.}
- 		\nomenclature[22]{$ nc $}{N\'umero de puntos de control.}
- 		\nomenclature[23]{$ p $}{Variable de iteraci\'on.}
+ 		\nomenclature[27]{$ RMS_{i} $}{Error cuadr\'atico de la banda $ i $.}
+ 		\nomenclature[28]{$ nc $}{N\'umero de puntos de control.}
+
  	Idealmente, el valor de RMS elegido por referencia para corregir una imagen debe ser aproximadamente $ 0.5 $, y en lo posible nunca superar la unidad \cite{guide1999erdas}.
  
  
@@ -222,9 +228,9 @@ En distorsiones m\'as importantes o en \'areas extensas, es necesario una transf
 La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digital perteneciente a la imagen original, a la imagen corregida. Lo que se pretende es crear una imagen que se corresponda con estas coordenadas, por lo tanto, resulta necesario trasvasar de alguna forma, los niveles digital originales a su nueva posici\'on. Pudi\'endose ser abordada por tres m\'etodos diferentes:
 	\begin{itemize}
 		\item \textbf{Vecino m\'as pr\'oximo:} situ\'a en cada celda de la imagen corregida el nivel digital $ (ND) $ del pixel m\'as cercano en la imagen original. Constituye la soluci\'on m\'as r\'apida y la que supone menor transformaci\'on en los niveles digitales originales. Su principal inconveniente es que produce una distorsi\'on en rasgos lineales en la imagen(fracturas, carreteras, caminos), que pueden aparecer en la corregida como lineales quebradas. \\~\\
-		Sea $ g:(x,y) \longrightarrow f$ una funci\'on para cualquier banda de la imagen satelital, se define el m\'etodo de vecino m\'as pr\'oximo como sigue:
-		\nomenclature[24]{$ g $}{Imagen que representa a cualquier banda de la imagen satelital.}
-		\nomenclature[24]{$ g(x,y) $}{Nivel digital en la posicion $ x $ e $ y $ de $ g $.}
+		Sea $ g:(x,y,i) \longrightarrow f$ una imagen interpolada radiom\'etricamente por el m\'etodo de vecino m\'as pr\'oximo en la banda $ i $:
+		\nomenclature[30]{$ g $}{Imagen interpolada radiom\'etricamente por el m\'etodo de vecino m\'as pr\'oximo.}
+		\nomenclature[31]{$ g(x,y,i) $}{Nivel digital en la posici\'on $ (x,y) $ de $ g $ en la banda $ i $.}
 		\begin{equation}
 		\Delta x = x^{'}-x
 		\end{equation}	
@@ -232,16 +238,15 @@ La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digit
 		\Delta y = y^{'}-y
 		\end{equation}	
 \begin{equation}
-	g(x^{'},y^{'}) = \begin{cases}
-		g(x,y) & \text{si }\Delta x < 0.5 \text{ y } \Delta y < 0.5\\
-		g(x+1,y) & \text{si } \Delta x \geq 0.5 \text{ y } \Delta y < 0.5\\
-		g(x,y+1) & \text{si } \Delta x < 0.5 \text{ y } \Delta y \geq 0.5\\
-		g(x+1,y+1) & \text{si } \Delta x \geq 0.5 \text{ y } \Delta y \geq 0.5
+	g(x,y,i) = \begin{cases}
+		f(x,y,i) & \text{si }\Delta x < 0.5 \text{ y } \Delta y < 0.5\\
+		f(x+1,y,i) & \text{si } \Delta x \geq 0.5 \text{ y } \Delta y < 0.5\\
+		f(x,y+1,i) & \text{si } \Delta x < 0.5 \text{ y } \Delta y \geq 0.5\\
+		f(x+1,y+1,i) & \text{si } \Delta x \geq 0.5 \text{ y } \Delta y \geq 0.5
 	\end{cases}
 \end{equation}	
 
-	\nomenclature[25]{$ g(x^{'},y^{'}) $}{Nivel digital en la posici\'on $ x $ e $ y $ de una imagen satelital corregida en cualquier banda.}
-		Siendo $ g(x^{'},y^{'}) $ el nivel digital en la imagen corregida. En la ilustraci\'on \ref{fig:vecinoMasCercano2} se observa el procedimiento realizado.
+		En la ilustraci\'on \ref{fig:vecinoMasCercano2} se observa el procedimiento realizado.
 				    \begin{figure}[H]
 				    	\centering
 				    	\includegraphics[width=0.6	\textwidth]{./Figures/cap3/vecinoMasCercano2.png}
@@ -249,13 +254,15 @@ La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digit
 				    	\label{fig:vecinoMasCercano2}
 				    \end{figure}
 		
-		\item \textbf{Interpolaci\'on bilineal:} Considera el valor de los 4 pixeles mas cercanos en la imagen de entrada para asignar el nuevo valor de la imagen de salida. Las ventajas son que no existe el efecto de escalones en los bordes pudiendo aparecer en el vecino superior izquierdo y ademas cuenta con mejor exactitud espacial. El m\'etodo es utilizado a menudo cuando se cambia el tama\~{n}o de las celdas en los datos. La desventaja es que como los pixeles son promediados, algunos extremos de los valores de los datos pueden perderse.
-		
+		\item \textbf{Interpolaci\'on bilineal:} Considera el valor de los 4 pixeles mas cercanos en la imagen de entrada para asignar el nuevo valor de la imagen de salida. Las ventajas son que no existe el efecto de escalones en los bordes pudiendo aparecer en el vecino superior izquierdo y ademas cuenta con mejor exactitud espacial. El m\'etodo es utilizado a menudo cuando se cambia el tama\~{n}o de las celdas en los datos. La desventaja es que como los pixeles son promediados, algunos extremos de los valores de los datos pueden perderse.\\~\\
+		Sea $ \rho:(x,y,i) \longrightarrow f$ una imagen interpolada radiom\'etricamente por el m\'etodo bilineal en la banda $ i $:
 		\begin{equation}
-		g(x^{'},y^{'}) = \sum_{p=1}^{4}\dfrac{(D-\Delta x_{p})(D-\Delta y_{p})}{D^{2}}g(x,y)
+		\rho(x,y) = \sum_{j=1}^{4}\dfrac{(D-\Delta x_{j})(D-\Delta y_{j})}{D^{2}}f(x,y,i)
 		\end{equation}	
-		\nomenclature[26]{$ D $}{Distancia euclidiana en el (eje $ x $ o $ y $) del sistema de coordenadas de la imagen original}
-		Siendo $ D $ la distancia euclidiana en el (eje $ x $ o $ y $) del sistema de coordenadas de la imagen original.
+				\nomenclature[32]{$ \rho $}{Imagen interpolada radiom\'etricamente por el m\'etodo bilineal.}
+				\nomenclature[33]{$ \rho(x,y,i) $}{Nivel digital en la posici\'on $ (x,y) $ de $ \rho $ en la banda $ i $.}
+		\nomenclature[33]{$ D $}{Distancia entre dos pixeles consecutivos en el eje $ x $ o $ y $ de la imagen.}
+		Donde $ D $ es la distancia entre dos pixeles consecutivos en su coordenada $ x $ o $ y $ de la imagen.
 		La siguiente ilustraci\'on \ref{fig:bilineal2} nos presenta gr\'aficamente el muestreo bilineal.
 		    \begin{figure}[H]
 		    	\centering
@@ -264,38 +271,37 @@ La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digit
 		    	\label{fig:bilineal2}
 		    \end{figure}
 		    
-		    		\item \textbf{Convoluci\'on c\'ubica:} es similar a la interporlaci\'on bilineal pero considera niveles digitales de los 16 pixeles m\'as pr\'oximos. El efecto visual es m\'as correcto, pero supone un volumen de c\'alculo mucho m\'as elevado. La ecuaci\'on de convoluci\'on c\'ubica utilizada es la siguiente \cite{guide1999erdas}:
-		    		
-		    		
-		    		\begin{align}
-		    		g(x^{'},y^{'}) = \sum_{p=1}^{4} g(x-1,y+p-2)f(e(x-1,y+p-2)+1)+ \nonumber \\
-		    		g(x,y+p-2)f(e(x,y+p-2))+ \nonumber \\
-		    		g(x+1,y+p-2)f(e(x+1,y+p-2)-1)+ \nonumber \\
-		    		g(x+2,y+p-2)f(e(x+2,y+p-2)-2)
-		    		\end{align}
-
-	\nomenclature[27]{$ e(x,y) $}{ Distancia euclidiana entre $ (x,y) $ y $ (x^{'},y^{'}) $.}		    		
-	\nomenclature[28]{$ f(q) $}{ Funci\'on interpolante en la ecuaci\'on de convoluci\'on c\'ubica.}
-		    		Donde $ e(x,y) $ es la distancia euclidiana entre $ (x,y) $ y $ (x^{'},y^{'}) $, la funci\'on interpolante $ f(q) $ corresponde a:
-		    		
+		    		\item \textbf{Convoluci\'on c\'ubica:} es similar a la interporlaci\'on bilineal pero considera niveles digitales de los 16 pixeles m\'as pr\'oximos. El efecto visual es m\'as correcto, pero supone un volumen de c\'alculo mucho m\'as elevado. \\~\\
+					Sea $ d:(p_{x,y,i},p'_{x,y,i})\longrightarrow [0,\infty] $ la distancia euclidiana entre un pixel $ p $ con coordenadas $ (x,y,i) $ y la traslaci\'on del mismo en la imagen corregida $ (x^{'},y^{'},i)$. La funci\'on de convoluci\'on c\'ubica $ \varphi:(x,y,i) \longrightarrow f$ utilizada es la siguiente \cite{guide1999erdas}:
+										\begin{align}
+										\varphi(x,y,i) = \sum_{j=1}^{4} f(x-1,y+j-2,i)\beta(d(p_{x-1,y+j-2,i},p'_{x-1,y+j-2,i})+1)+ \nonumber \\
+										f(x,y+j-2,i)\beta(d(p_{x,y+j-2,i},p'_{x,y+j-2,i}))+ \nonumber \\
+										f(x+1,y+j-2,i)\beta(d(p_{x+1,y+j-2,i},p'_{x+1,y+j-2,i})-1)+ \nonumber \\
+										f(x+2,y+j-2,i)\beta(d(p_{x+2,y+j-2,i},p'_{x+2,y+j-2,i})-2)
+										\end{align}
+					Donde la funci\'on $ \beta:(q) \longrightarrow [-\infty,\infty] $, determina los coeficientes de $ \varphi(x,y,i) $ en base a una variable de entrada $ q $ definida por $ d(p_{x,y,i},p'_{x,y,i}) $:
+										\nomenclature[34]{$ varphi $}{Imagen interpolada radiom\'etricamente por el m\'etodo de convoluci\'on c\'ubica.}
+										\nomenclature[34]{$ \varphi(x,y,i) $}{Nivel digital en la posici\'on $ (x,y) $ de $ \varphi $ en la banda $ i $.}
+		    				    		\nomenclature[34]{$ d $}{ Distancia euclidiana.}
+		    				    		\nomenclature[35]{$ p_{x,y,i} $}{ Pixel de una imagen con coordenadas $ (x,y) $ de la banda $ i $.}
+		    				    		\nomenclature[36]{$ p'_{x,y,i} $}{ Pixel $ p_{x,y,i} $ interpolada espacialmente.}
+		    				    		\nomenclature[37]{$ d(p_{x,y,i},p'_{x,y,i}) $}{ Distancia euclidiana entre un pixel $ p_{x,y,i} $ y $ p_{x,y,i} $.}		    		
+		    				    		\nomenclature[40]{$ q $}{ Variable de entrada en la funci\'on interpolante $ c $.}
+		    				    		\nomenclature[38]{$ \beta $}{ Funci\'on que determina los coeficientes de $ \varphi$.}
+		    				    		\nomenclature[40]{$ q $}{ Variable de entrada en $ \beta $ definida por $ d(p_{x,y,i},p'_{x,y,i}) $.}
+		    				    		\nomenclature[39]{$ \beta(q) $}{ Coeficiente hallado en base a $ q $.}
 		    		\begin{equation}\label{ec:interCubica}
-		    		f(q) = \begin{cases}
+		    		\beta(q) = \begin{cases}
 		    		(w+2)\abs{q^{3}}-(w+3)\abs{q^{2}}+1 & \text{si} \abs{q} < 1 \\
 		    		w\abs{q^{3}}-5w\abs{q^{2}}2+8w\abs{q}-4w & \text{si} 1 < \abs{q} < 2\\
 		    		0 & \text{otra condici\'on}
 		    		\end{cases}
 		    		\end{equation}
-		    		Siendo $ w=-0.5 $ una constante \cite{guide1999erdas} y $ q $ una variable de entrada.
-			    		\nomenclature[29]{$ q $}{ Variable de entrada en la funci\'on interpolante $ f(q) $.}
-		    			\nomenclature[30]{$ w $}{ Constante en la funci\'on interpolante $ f(q) $.}
-		    					    		
-		    		
-		    		
-		La siguiente ilustraci\'on \ref{fig:convCubica2} nos muestra graficamente la convoluci\'on c\'ubica:
-		
+		    		Siendo $ w=-0.5 $ una constante \cite{guide1999erdas}.\\~\\
+		    			\nomenclature[41]{$ w $}{ Constante en la funci\'on $ \beta $.}		    				
 		    \begin{figure}[H]
 		    	\centering
-		    	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/convCubica2.png}
+		    	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/convolucionCubica_matriz.png}
 		    	\caption{Convoluci\'on c\'ubica.}
 		    	\label{fig:convCubica2}
 		    \end{figure}
@@ -313,21 +319,21 @@ La correci\'on radiom\'etrica se encarga de minimizar los desajustes producidos 
 
 \subsubsection{Pixeles o lineas perdidas}\label{subsec:pixelesP}
 Si se ha perdido el valor de alg\'un pixel la solución m\'as simple ser\'ia estimarlo como la media de los valores
-del mismo pixel en las lineas anterior y posterior (no es recomendable utilizar los pixeles contiguos de la misma linea por que han sido captados por el mismo detector o banda que ha dado el fallo, por tanto son poco fiables).
+del mismo pixel en las lineas anterior y posterior (no es recomendable utilizar los pixeles contiguos de la misma linea por que han sido captados por el mismo detector o banda que ha dado el fallo, por tanto son poco fiables).\\~\\
+Sea $ f^{'}:(x,y,i)\longrightarrow \{0,...,2^{r}\} $ una funci\'on que corrige los pixeles o lineas perdidas en la coordenadas $ (x,y) $ de la banda $ i $:
 
 		\begin{equation}
-		f^{'}(x,y,i) = \ldbrack \dfrac{g(x-1,y,i) + g(x+1,y,i)}{2}) \rdbrack
+		f^{'}(x,y,i) = \ldbrack \dfrac{f(x-1,y,i) + f(x+1,y,i)}{2}) \rdbrack
 		\end{equation} 
 
-				\nomenclature[31]{$ g^{'}(x,y) $}{Nivel digital en la celda $ (x,y) $ de la imagen corregida radiom\'etricamenten.}
-				\nomenclature[32]{$ \mu $}{Valor de la media.}
-				\nomenclature[33]{$ \sigma $}{Desviaci\'on t\'ipica.}
-Siendo $ f^{,}(x,y,i) $ el nivel digital en la celda $ (x,y) $ de la imagen corregida radiom\'etricamente.\\~\\
+				\nomenclature[42]{$ \mu $}{Valor de la media.}
+				\nomenclature[43]{$ \sigma $}{Desviaci\'on t\'ipica.}
+				\nomenclature[44]{$ z $}{Banda de la imagen satelital.}
 La bandas de una imagen son de detectores diferentes y est\'an altamente correlacionadas. Sea  $ z $ una banda de la imagen satelital, donde $ z \in [1,k] $, podr\'ia utilizarse el valor del pixel faltante en una banda diferente para mejorar la estimaci\'on:
 		\begin{equation}
 		f^{'}(x,y,i) = \ldbrack (\dfrac{f(x-1,y,i)-f(x+1,y,i)}{2})+ \dfrac{\sigma_{i}}{\sigma_{z}} +(f(x,y,z)-\dfrac{f(x-1,y,z)-f(x+1,y,z)}{2}) \rdbrack
 		\end{equation} 
-
+\nomenclature[45]{$ f^{'}(x,y,i) $}{Nivel digital, con correcci\'on del pixel o linea perdida de las coordenadas $ (x,y) $ en la banda $ i $.}
 En caso de que la imagen abarque un territorio amplio y cambiante resulta recomendable calcular las desviaciones t\'ipicas ($ \sigma_{i} $ y $ \sigma_{z} $) en un entorno cercano al pixel perdido.\\~\\
 Para detectar lineas perdidas se compara la media de los $ ND $ de una linea con las medias de las lineas anterior y posterior, para detectar pixeles perdidos se compara el valor de un pixel con los de los 8 pixeles.
 \subsubsection{Bandeado}\label{subsec:bandeado}
@@ -342,12 +348,11 @@ En primer lugar se calculan los coeficientes $ m $ y $ s $ para una correcci\'on
 				\end{equation} 	
 				
 
-A continuaci\'on los $ ND $ de la imagen se recalculan como:
+A continuaci\'on los $ ND $ de la imagen se recalculan a partir de la funcion $ f^{''}:(x,y,i) \longrightarrow \{0,...,2^{r}\} $
 				\begin{equation}
-				F^{'}(x,y,i) = 	mf(x,y,i) + s
+				f^{''}(x,y,i) = m f'(x,y,i) + s
 				\end{equation} 				
-		\nomenclature[34]{$ F^{'}(x,y,i) $}{Nivel digital, con correcci\'on de bandeado, del pixel $ x $ e $ y $ de la banda $ i $.}
-Siendo $ F^{'}(x,y,i) $ el nivel digital, con correcci\'on de bandeado. 
+		\nomenclature[46]{$ f^{''}(x,y,i) $}{Nivel digital, con correcci\'on de bandeado, del pixel con coordenadas $ (x,y) $ de la banda $ i $.}
 
     \begin{figure}[H]
     	\centering
@@ -366,22 +371,23 @@ La comparaci\'on parte de un par de im\'agenes semejantes que abarcan la misma z
 								\begin{equation}
 								I_{dif} = ND_{final}-ND_{inicial}
 								\end{equation} 	
-\nomenclature[35]{$ I_{dif} $}{Indice de cambio por diferencia de im\'agenes.}
-\nomenclature[36]{$ I_{ratio} $}{Indice de cambio por el m\'etodo de ratio.}
+\nomenclature[47]{$ I_{dif} $}{Indice de cambio por diferencia de im\'agenes.}
+\nomenclature[48]{$ I_{ratio} $}{Indice de cambio por el m\'etodo de ratio.}
 				\item \textbf{Ratio:} se obtiene aplicando la operación de cociente, entre los niveles digitales ($ ND $ ) inicial y final para la obtenci\'on de un \'indice ($ I_{ratio} $). Podr\'ia  generar mejores resultados pero no se ajusta a una distribución normal.
 										\begin{equation}
 										I_{ratio} = \dfrac{ND_{final}}{ND_{inicial}}
 										\end{equation} 	
 
 		\end{itemize}
-Estas dos operaciones generan un \'indice de cambios $ I_{c} $a partir de cada conjunto de datos multitemporal, dando lugar a tantos mapas de cambios como bandas/capas se consideren; son de gran utilidad cuando se trabaje con im\'agenes pancrom\'aticas o \'indices espectrales/texturales.
+Estas dos operaciones generan un \'indice de cambios $ I_{c}$ a partir de cada conjunto de datos multitemporal, dando lugar a tantos mapas de cambios como bandas/capas se consideren; son de gran utilidad cuando se trabaje con im\'agenes pancrom\'aticas o \'indices espectrales/texturales.
 \subsection{Criterios de decisi\'on}
 La comparaci\'on multitemporal facilita im\'agenes continuas del cambio. En otras palabras, el resultado de los c\'alculos es una imagen en donde el valor de salida indica el grado de cambio, desde la mayor p\'erdida a la mayor ganancia, en una escala gradual. Si se pretende generar una imagen binaria (cambio/estable), es preciso se\~{n}alar un umbral que delimite ambas categor\'ias en las im\'agenes. Ah\'i se plantea un problema de dif\'icil soluci\'on ya que no existen criterios de aplicación general.\\~\\
 Si el cambio abarca un sector importante de la imagen, el histograma de la imagen de cambios debiese mostrar un perfil bimodal, lo que permitir\'ia establecer umbrales naturales de cambio, aunque esta situaci\'on no es muy habitual, ya que los cambios en la naturaleza no suelen producirse de modo abrupto\cite{martinez2013normalizacion}.\\~\\
 Si es necesario establecer un umbral para separar las \'areas de cambio, puede optarse por se\~{n}alar alg\'un criterio estad\'istico, como la media y la desviaci\'on t\'ipica de una serie de p\'ixeles elegidos aleatoriamente. En ocasiones se ha propuesto utilizar unas \'areas de entrenamiento para calcular que rango de desviaci\'on se pod\'ia considerar l\'imite para p\'ixeles estables, aplicando luego ese valor al conjunto de la imagen\cite{tung1988determination}.
 
 \subsubsection{Discriminaci\'on de las zonas de cambio}\label{sec:discriminacion}
-El m\'etodos ($ B(I_{c}) $), de la ecuaci\'on \ref{ec:umbralizacion}, genera una m\'ascara binaria de cambios (0, No Cambio; 1, Cambio) aplicando un umbral ($ U $) especifico sobre la imagen resultante del proceso de comparaci\'on multitemporal \cite{singh1989review}. Son f\'acilmente implementables en procesos de car\'acter autom\'atico/semiautom\'atico. Según Estornell \cite{estornell2004analisis}, partiendo de la hip\'otesis de que el porcentaje de cambios es muy reducido, los valores correspondientes se encuentran situados en los extremos del histograma de frecuencias. Para generar una m\'ascara de cambios es preciso se\~{n}alar un umbral que delimite ambas categorías (cambio/no cambio) a partir del \'indice de cambios ($ I_{c} $)\cite{radke2005image}.	
+La ecuaci\'on \ref{ec:umbralizacion} genera una m\'ascara binaria de cambios (0, No Cambio; 1, Cambio) aplicando un umbral ($ U $) especifico sobre la imagen resultante del proceso de comparaci\'on multitemporal \cite{singh1989review}. Son f\'acilmente implementables en procesos de car\'acter autom\'atico/semiautom\'atico. Según Estornell \cite{estornell2004analisis}, partiendo de la hip\'otesis de que el porcentaje de cambios es muy reducido, los valores correspondientes se encuentran situados en los extremos del histograma de frecuencias. Para generar una m\'ascara de cambios es preciso se\~{n}alar un umbral que delimite ambas categorías (cambio/no cambio) a partir del \'indice de cambios ($ I_{c} $)\cite{radke2005image}.
+Sea $ B:I_{c} \longrightarrow \{0,1\}$ 	una funci\'on que binariza una imagen en base a un Umbral $ U $:
 \begin{equation}\label{ec:umbralizacion}
 B(I_{c}) = \begin{cases}
 1 & \text{si se cumple que } \abs{I_c} \geq U \\
@@ -389,17 +395,18 @@ B(I_{c}) = \begin{cases}
 \end{cases}
 \end{equation}
 
-\nomenclature[37]{$ I_{c} $}{Indice de cambio entre dos im\'agenes.}
-\nomenclature[38]{$ B(I_{c}) $}{Funci\'on que genera una mascara de cambio a partir de $ I_{c} $.}
-\nomenclature[39]{$ U $}{Umbral de cambio.}
+\nomenclature[49]{$ I_{c} $}{Indice de cambio entre dos im\'agenes.}
+\nomenclature[50]{$ B $}{Imagen binaria en el proceso de detecci\'on de cambio.}
+\nomenclature[51]{$ B(I_{c}) $}{Nivel digital para el $ I_{c} $.}
+\nomenclature[52]{$ U $}{Umbral que binariza una imagen en base a un $ I_{c} $.}
 
 En Rodriguez-Galiano \cite{rodriguez2010analisis} se propone, como criterios de decisi\'on, el m\'etodo de discriminaci\'on basado en los par\'ametros estad\'isticos del \'indice de cambio entre la secuencia temporal de im\'agenes:
 \begin{equation}
 U=\mu_{I_{c}} \pm n\sigma _{I_{c}}
 \end{equation}
-\nomenclature[40]{$ n $}{Coeficiente de fiabilidad de los datos.}
-\nomenclature[40]{$ \sigma_{I_{c}}) $}{Desviaci\'on t\'ipica de la imagen de \'Indices de cambio.}
-\nomenclature[40]{$ \mu_{I_{c}}) $}{Media de la imagen de \'Indices de cambio.}
+\nomenclature[53]{$ n $}{Coeficiente de fiabilidad de los datos.}
+\nomenclature[54]{$ \sigma_{I_{c}} $}{Desviaci\'on t\'ipica de la imagen de \'Indices de cambio.}
+\nomenclature[55]{$ \mu_{I_{c}} $}{Media de la imagen de \'Indices de cambio.}
 Donde, el valor de umbral entre cambio/no cambio $ (U) $ se estima en funci\'on de los par\'ametros estad\'isticos $ (\mu_{I_{c}}, \sigma_{I_{c}}) $ y un coeficiente de tolerancia $ n $ asignado en base a la fiabilidad de los datos. En Estornell \cite{estornell2004analisis} se clasifican los resultados en funci\'on de $ n $; alta probabilidad de cambio $ (n \geq 2) $ y
 zonas de media probabilidad de cambio $ (1 < n < 2) $.
 
