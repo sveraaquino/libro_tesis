@@ -6,21 +6,21 @@
 En este capítulo se menciona las m\'etricas de evaluaci\'on utilizadas para medir el desempe\~{n}o en la metodolog\'ia propuesta. Por otro lado, se detallan los experimentos realizados y los resultados obtenidos, seguidamente se esboza la comparaci\'on y la posterior discusi\'on de los mismos.
 
 \section{Caso de estudio}
-Filadelfia es una ciudad de Paraguay, del departamento de Boquer\'on, del Chaco paraguayo (lat-long $22^{o}20^{,}00^{,,} S - 60^{o}01^{,} 00^{,,} O$ ) con una superficie de 13.879 $ km^{2} $. Fue elevada a nivel de distrito en 2006. Su poblaci\'on la constituyen principalmente colonos menonitas. Fundada junto a otras localidades menonitas a finales de la d\'ecada de 1920, ha desarrollado una cultura espec\'ifica, transmitida a lo largo de los siglos a trav\'es de la religi\'on, y una infraestructura productiva que le aporta a sus residentes alto poder de compra. Estas comunidades menonitas trabajan con modernas t\'ecnicas de producci\'on agropecuaria, fabricaci\'on de productos l\'acteos y procesamiento de s\'esamo y man\'i. Pueden ser ubicadas dentro de las imagenes landsat con path-Row 228-76 y en las VCF con c\'odigo KJ1920.\\~\\
+Filadelfia es una ciudad de Paraguay, del departamento de Boquer\'on, del Chaco paraguayo (lat-long $22^{o}20^{,}00^{,,} S - 60^{o}01^{,} 00^{,,} O$ ) con una superficie de 13.879 $ km^{2} $. Fue elevada a nivel de distrito en 2006. Su poblaci\'on la constituyen principalmente colonos menonitas. Fundada junto a otras localidades menonitas a finales de la d\'ecada de 1920, ha desarrollado una cultura espec\'ifica, transmitida a lo largo de los siglos a trav\'es de la religi\'on, y una infraestructura productiva que le aporta a sus residentes alto poder de compra. Estas comunidades menonitas trabajan con modernas t\'ecnicas de producci\'on agropecuaria, fabricaci\'on de productos l\'acteos y procesamiento de s\'esamo y man\'i. Pueden ser ubicadas dentro de las im\'agenes landsat con path-Row 228-76 y en las VCF con c\'odigo KJ1920.\\~\\
 Se opto por esta localizaci\'on debido a que ademas de estar ubicada en el Chaco Paraguayo posee un crecimiento demogr\'afico en la que las actividades agr\'icolas y ganaderas son variantes, proporcionando un ambiente ideal para las distintas pruebas y validaciones necesarias.\\~\\
 
 \section{Métricas de evaluación}
 Para realizar el control de calidad, algunos se basan en el concepto de matriz de confusi\'on, que establece una relaci\'on entre los resultados obtenidos en el proceso de asignaci\'on y la informaci\'on verdad terreno $ (VT) $ disponible para la zona de estudio. La diagonal principal representa el n\'umero de celdas correctamente catalogadas $ (T) $ , y la diagonal transpuesta, las incorrectamente catalogadas $ (F) $ . El uso de esta matriz presenta como mayor desventaja que est\'a condicionada a la veracidad y exactitud de la referencia utilizada como $ VT $.
-\nomenclature[64]{$ VT $}{Puntos de Verdad terreno.}
+\nomenclature[64]{$ VT $}{Puntos de verdad terreno.}
 \nomenclature[65]{$ T $}{Puntos catalogados correctamente.}
 \nomenclature[66]{$ F $}{Puntos catalogados correctamente.}
-\nomenclature[67]{$ TP $}{Verdadero Positivo.}
-\nomenclature[68]{$ FP $}{Falso Positivo.}
-\nomenclature[69]{$ P $}{Total Positivo.}
-\nomenclature[70]{$ N $}{Total Negativo.}
+\nomenclature[67]{$ TP $}{Verdadero positivo.}
+\nomenclature[68]{$ FP $}{Falso positivo.}
+\nomenclature[69]{$ P $}{Total positivo.}
+\nomenclature[70]{$ N $}{Total negativo.}
 \nomenclature[71]{$ FN $}{Falso negativo.}
-\nomenclature[72]{$ P^{'} $}{Total Positivo catalogado.}
-\nomenclature[73]{$ N^{'} $}{Total Negativo catalogado.}
+\nomenclature[72]{$ P^{'} $}{Total positivo catalogado.}
+\nomenclature[73]{$ N^{'} $}{Total negativo catalogado.}
 \begin{table}[H]
 	\centering
 \begin{tabular}{|

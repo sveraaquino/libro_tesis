@@ -76,17 +76,7 @@ Se define a la resoluci\'on de un sensor como el menor cambio en la magnitud de 
 	\end{itemize}
 
 \section{Im\'agenes satelitales}
-%Una imagen satelital o imagen de sat\'elite $ S $ se puede definir como la representaci\'on visual de la informaci\'on capturada por un sensor montado en un sat\'elite artificial. Est\'an organizados en un arreglo matricial bidimensional $ l \times c $ de elementos llamados p\'ixeles, donde cada p\'ixel representa un \'area de superficie sobre la tierra con un valor de intensidad o nivel digital $ f(x,y) $, dentro del dominio $ D=[0,2^{r}] $, y una ubicación en la imagen  $(x,y)$, tambi\'en son conocidas como im\'agenes r\'aster \cite{acosta2003experiencia}. 
-%		\nomenclature[11]{$ S $}{Imagen satelital.}	
-%\begin{equation}
-%\label{eq:imagenDigital}
-%f(x,y)=\begin{bmatrix}
-%f(0,0) &f(0,1)  & \cdots & f(0,c-1) \\ 
-%f(1,0) & f(1,1) & \cdots  & f(1,c-1)\\ 
-%\vdots & \vdots & & \vdots \\ 
-%f(l-1,0) & f(l-1,1)  &\cdots  & f(l-1,c-1)
-%\end{bmatrix}
-%\end{equation}
+
 Una imagen satelital se puede definir como la representaci\'on visual de la informaci\'on capturada por un sensor montado en un sat\'elite artificial \cite{acosta2003experiencia}. \\~\\
 Sea $ \mathbb{Z} $ un conjunto de enteros. Una imagen satelital es una funci\'on $ f:\mathbb{Z}^{3} \longrightarrow \{0,...,2^{r}\} $. Cada $ (x,y,i) $ se los conoce como coordenadas espaciales de la banda $ i $, donde $ i \in \{1,...,k\} $, $ x \in \{0,...,m\} $ e $ y \in \{0,...,n\} $ para una matriz $ m \times n $, siendo $ k $ el numero de bandas y $ r $ la resoluci\'on radiom\'etrica en la imagen. Las im\'agenes satelitales son conocidos tambi\'en como raster.
   \begin{figure}[H]
@@ -95,7 +85,6 @@ Sea $ \mathbb{Z} $ un conjunto de enteros. Una imagen satelital es una funci\'on
   	\caption{Imagen satelital.}
   	\label{fig:imagenMultiespectral}
   \end{figure}
-  	\nomenclature[11]{$\mathbb{Z}$}{Conjunto de enteros.}
   	\nomenclature[12]{$i$}{ Banda de la imagen satelital.}
   	\nomenclature[13]{$f$}{ Imagen satelital.}
   	\nomenclature[13]{$(x,y)$}{ Coordenadas espaciales.}
@@ -177,7 +166,7 @@ Consiste en la determinaci\'on de la relaci\'on geom\'etrica entre las coordenad
  
  La transformaci\'on puede expresarse de la siguiente manera:
 	\begin{equation}
-	x^{'}_{i} = \sum_{j=0}^{l} \sum_{d=0}^{l-j} a_{ij}x^{j}_{i}y^{d}_{i}
+	x^{'}_{i} = \sum_{j=0}^{l} \sum_{e=0}^{l-j} a_{ij}x^{j}_{i}y^{e}_{i}
 	\end{equation} 
 		\begin{equation}
 		y^{'}_{i} = \sum_{j=0}^{l} \sum_{e=0}^{l-j} b_{ij}x^{j}_{i}y^{e}_{i}
@@ -185,8 +174,7 @@ Consiste en la determinaci\'on de la relaci\'on geom\'etrica entre las coordenad
 
 
 \nomenclature[23]{$ l $}{ Grado del polinomio de ajuste.}
-\nomenclature[24]{$ e $}{ Variable de iteraci\'on.}
-\nomenclature[25]{$ j $}{ Variable de iteraci\'on.}
+
 
 Donde $ x^{'}_{i} $ e $ y^{'}_{i} $ indica la coordenada en la imagen corregida para la banda $ i $. El superindice $ l $ indica el grado del polinomio de ajuste, $ a_{i} $ y $ b_{i} $ los coeficientes del polinomio. Siendo la ecuaci\'on lineal las mas simple:
 	\begin{equation}
@@ -255,40 +243,42 @@ La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digit
 				    \end{figure}
 		
 		\item \textbf{Interpolaci\'on bilineal:} Considera el valor de los 4 pixeles mas cercanos en la imagen de entrada para asignar el nuevo valor de la imagen de salida. Las ventajas son que no existe el efecto de escalones en los bordes pudiendo aparecer en el vecino superior izquierdo y ademas cuenta con mejor exactitud espacial. El m\'etodo es utilizado a menudo cuando se cambia el tama\~{n}o de las celdas en los datos. La desventaja es que como los pixeles son promediados, algunos extremos de los valores de los datos pueden perderse.\\~\\
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=0.6	\textwidth]{./Figures/cap3/bilineal.png}
+			\caption{Interpolaci\'on Bilineal.}
+			\label{fig:bilineal2}
+		\end{figure}
 		Sea $ \rho:(x,y,i) \longrightarrow f$ una imagen interpolada radiom\'etricamente por el m\'etodo bilineal en la banda $ i $:
 		\begin{equation}
-		\rho(x,y) = \sum_{j=1}^{4}\dfrac{(D-\Delta x_{j})(D-\Delta y_{j})}{D^{2}}f(x,y,i)
+		\rho(x,y) = \sum_{j=1}^{4}(1-\Delta x_{j})(1-\Delta y_{j})f(x,y,i)
 		\end{equation}	
 				\nomenclature[32]{$ \rho $}{Imagen interpolada radiom\'etricamente por el m\'etodo bilineal.}
 				\nomenclature[33]{$ \rho(x,y,i) $}{Nivel digital en la posici\'on $ (x,y) $ de $ \rho $ en la banda $ i $.}
-		\nomenclature[33]{$ D $}{Distancia entre dos pixeles consecutivos en el eje $ x $ o $ y $ de la imagen.}
-		Donde $ D $ es la distancia entre dos pixeles consecutivos en su coordenada $ x $ o $ y $ de la imagen.
-		La siguiente ilustraci\'on \ref{fig:bilineal2} nos presenta gr\'aficamente el muestreo bilineal.
-		    \begin{figure}[H]
-		    	\centering
-		    	\includegraphics[width=0.7	\textwidth]{./Figures/cap3/bilineal_ecuation.png}
-		    	\caption{Interpolaci\'on Bilineal.}
-		    	\label{fig:bilineal2}
-		    \end{figure}
-		    
 		    		\item \textbf{Convoluci\'on c\'ubica:} es similar a la interporlaci\'on bilineal pero considera niveles digitales de los 16 pixeles m\'as pr\'oximos. El efecto visual es m\'as correcto, pero supone un volumen de c\'alculo mucho m\'as elevado. \\~\\
-					Sea $ d:(p_{x,y,i},p'_{x,y,i})\longrightarrow [0,\infty] $ la distancia euclidiana entre un pixel $ p $ con coordenadas $ (x,y,i) $ y la traslaci\'on del mismo en la imagen corregida $ (x^{'},y^{'},i)$. La funci\'on de convoluci\'on c\'ubica $ \varphi:(x,y,i) \longrightarrow f$ utilizada es la siguiente \cite{guide1999erdas}:
+		    				    \begin{figure}[H]
+		    				    	\centering
+		    				    	\includegraphics[width=0.7	\textwidth]{./Figures/cap3/convolucionCubica_matriz.png}
+		    				    	\caption{Convoluci\'on c\'ubica.}
+		    				    	\label{fig:convCubica2}
+		    				    \end{figure}
+					Sea $ d:(p_{x,y,i},p'_{x,y,i})\longrightarrow [0,\infty] $ la distancia euclidiana entre un pixel $ p $ con coordenadas $ (x,y,i) $ y la traslaci\'on del mismo en la imagen interpolada espacialmente $ (x^{'},y^{'},i)$. La funci\'on de convoluci\'on c\'ubica $ \varphi:(x,y,i) \longrightarrow f$ utilizada es la siguiente \cite{guide1999erdas}:
 										\begin{align}
 										\varphi(x,y,i) = \sum_{j=1}^{4} f(x-1,y+j-2,i)\beta(d(p_{x-1,y+j-2,i},p'_{x-1,y+j-2,i})+1)+ \nonumber \\
 										f(x,y+j-2,i)\beta(d(p_{x,y+j-2,i},p'_{x,y+j-2,i}))+ \nonumber \\
 										f(x+1,y+j-2,i)\beta(d(p_{x+1,y+j-2,i},p'_{x+1,y+j-2,i})-1)+ \nonumber \\
 										f(x+2,y+j-2,i)\beta(d(p_{x+2,y+j-2,i},p'_{x+2,y+j-2,i})-2)
 										\end{align}
-					Donde la funci\'on $ \beta:(q) \longrightarrow [-\infty,\infty] $, determina los coeficientes de $ \varphi(x,y,i) $ en base a una variable de entrada $ q $ definida por $ d(p_{x,y,i},p'_{x,y,i}) $:
-										\nomenclature[34]{$ varphi $}{Imagen interpolada radiom\'etricamente por el m\'etodo de convoluci\'on c\'ubica.}
+					Donde la funci\'on $ \beta:(q) \longrightarrow [-\infty,\infty] $, determina los coeficientes de $ \varphi(x,y,i) $ en base a un coeficiente $ q $ definida por $ d(p_{x,y,i},p'_{x,y,i}) $:
+										\nomenclature[34]{$ \varphi $}{Imagen interpolada radiom\'etricamente por el m\'etodo de convoluci\'on c\'ubica.}
 										\nomenclature[34]{$ \varphi(x,y,i) $}{Nivel digital en la posici\'on $ (x,y) $ de $ \varphi $ en la banda $ i $.}
 		    				    		\nomenclature[34]{$ d $}{ Distancia euclidiana.}
 		    				    		\nomenclature[35]{$ p_{x,y,i} $}{ Pixel de una imagen con coordenadas $ (x,y) $ de la banda $ i $.}
 		    				    		\nomenclature[36]{$ p'_{x,y,i} $}{ Pixel $ p_{x,y,i} $ interpolada espacialmente.}
-		    				    		\nomenclature[37]{$ d(p_{x,y,i},p'_{x,y,i}) $}{ Distancia euclidiana entre un pixel $ p_{x,y,i} $ y $ p_{x,y,i} $.}		    		
-		    				    		\nomenclature[40]{$ q $}{ Variable de entrada en la funci\'on interpolante $ c $.}
+		    				    		\nomenclature[37]{$ d(p_{x,y,i},p'_{x,y,i}) $}{ Distancia euclidiana entre un pixel $ p_{x,y,i} $ y $ p'_{x,y,i} $.}		    		
 		    				    		\nomenclature[38]{$ \beta $}{ Funci\'on que determina los coeficientes de $ \varphi$.}
-		    				    		\nomenclature[40]{$ q $}{ Variable de entrada en $ \beta $ definida por $ d(p_{x,y,i},p'_{x,y,i}) $.}
+		    				    		\nomenclature[40]{$ q $}{ Coeficiente definido por $ d(p_{x,y,i},p'_{x,y,i}) $.}
 		    				    		\nomenclature[39]{$ \beta(q) $}{ Coeficiente hallado en base a $ q $.}
 		    		\begin{equation}\label{ec:interCubica}
 		    		\beta(q) = \begin{cases}
@@ -299,15 +289,8 @@ La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digit
 		    		\end{equation}
 		    		Siendo $ w=-0.5 $ una constante \cite{guide1999erdas}.\\~\\
 		    			\nomenclature[41]{$ w $}{ Constante en la funci\'on $ \beta $.}		    				
-		    \begin{figure}[H]
-		    	\centering
-		    	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/convolucionCubica_matriz.png}
-		    	\caption{Convoluci\'on c\'ubica.}
-		    	\label{fig:convCubica2}
-		    \end{figure}
+
 	\end{itemize}
-
-
 \subsection{Correcci\'on radiom\'etrica}
 La correci\'on radiom\'etrica se encarga de minimizar los desajustes producidos en el registro del valor digital en las celdas de la imagen, de hecho en algunos casos las estaciones receptoras llevan a cabo alg\'un tipo de correcci\'on en el momento de recepci\'on de la imagen. La corrección radiom\'etrica implica por una parte la restauraci\'on de lineas o p\'ixeles perdidos y por otra la correcci\'on del bandeado en la imagen \cite{teledUm}.
     \begin{figure}[H]
