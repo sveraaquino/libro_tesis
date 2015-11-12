@@ -3,46 +3,57 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: alpha.bst
 Database file #1: Bibliography.bib
+Warning--entry type for "els2015refere" isn't style-file defined
+--line 2 of file Bibliography.bib
+Warning--entry type for "ndvi2015com" isn't style-file defined
+--line 8 of file Bibliography.bib
+Warning--entry type for "chara2015sate" isn't style-file defined
+--line 14 of file Bibliography.bib
+Repeated entry---line 21 of file Bibliography.bib
+ : @online{chara2015sate
+ :                      ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "teledet2015perce" isn't style-file defined
+--line 27 of file Bibliography.bib
+I was expecting a `,' or a `}'---line 36 of file Bibliography.bib
+ :  
+ :  year={2006},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--entry type for "ciclot2015carbo" isn't style-file defined
+--line 46 of file Bibliography.bib
+Warning--entry type for "calent2015global" isn't style-file defined
+--line 52 of file Bibliography.bib
 Warning--entry type for "teledet2015Combi" isn't style-file defined
---line 118 of file Bibliography.bib
+--line 173 of file Bibliography.bib
 Warning--entry type for "gl2015Uni" isn't style-file defined
---line 124 of file Bibliography.bib
+--line 179 of file Bibliography.bib
 Warning--entry type for "landsatNasa" isn't style-file defined
---line 130 of file Bibliography.bib
+--line 185 of file Bibliography.bib
 Warning--entry type for "teledUm" isn't style-file defined
---line 206 of file Bibliography.bib
+--line 261 of file Bibliography.bib
 Warning--entry type for "natur2015PW" isn't style-file defined
---line 402 of file Bibliography.bib
+--line 453 of file Bibliography.bib
 Warning--entry type for "BAAPA2013" isn't style-file defined
---line 410 of file Bibliography.bib
+--line 461 of file Bibliography.bib
 Warning--entry type for "nellemann2009carbono" isn't style-file defined
---line 452 of file Bibliography.bib
-Repeated entry---line 778 of file Bibliography.bib
+--line 503 of file Bibliography.bib
+Repeated entry---line 829 of file Bibliography.bib
  : @misc{mehl1997fundamentos
  :                          ,
 I'm skipping whatever remains of this entry
-"{" immediately follows a field name---line 1125 of file Bibliography.bib
+"{" immediately follows a field name---line 1176 of file Bibliography.bib
  : @article
  :         {gonzalez2013tecnicas,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1323 of file Bibliography.bib
+I was expecting a `,' or a `}'---line 1374 of file Bibliography.bib
  : 
  : @ONLINE{idf,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1654 of file Bibliography.bib
+I was expecting a `,' or a `}'---line 1705 of file Bibliography.bib
  : 
  : @ONLINE{nei,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 2053 of file Bibliography.bib
- :  
- :  %month = jul,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-You're missing a field name---line 2069 of file Bibliography.bib
- :  
- :  %edition = {2},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 You're missing a field name---line 2104 of file Bibliography.bib
@@ -50,20 +61,36 @@ You're missing a field name---line 2104 of file Bibliography.bib
  :  %month = jul,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2116 of file Bibliography.bib
+You're missing a field name---line 2120 of file Bibliography.bib
+ :  
+ :  %edition = {2},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 2155 of file Bibliography.bib
+ :  
+ :  %month = jul,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 2167 of file Bibliography.bib
  :   
  :   %pages={185--208},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2153 of file Bibliography.bib
+You're missing a field name---line 2204 of file Bibliography.bib
  :  
  :  %issue_date = {2013},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting an "="---line 2476 of file Bibliography.bib
+I was expecting an "="---line 2527 of file Bibliography.bib
  : +´`  
  :       title={Color image palette construction based on the HSI color system for minimizing the reconstruction error},
 I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in calent2015global
+Warning--to sort, need author or key in ciclot2015carbo
+Warning--to sort, need author or key in teledet2015perce
+Warning--to sort, need author or key in chara2015sate
+Warning--to sort, need author or key in teledet2015Combi
+Warning--to sort, need author or key in ndvi2015com
 Too many commas in name 7 of "Acosta Mireles, Miguel and Vel{\'a}zquez Mart{\'\i}nez, Alejandro and Etchevers Barra, Jorge D and Vargas Hern{\'a}ndez, J Jes{\'u}s and Ram{\'\i}rez Maldonado, Hugo and Islas Guti{\'e}rrez, Fabi{\'a}n and Colegio de Postgraduados, Campus Montecillo,; Instituto de Recursos Naturales, Programa Forestal." for entry acosta2003diseno
 while executing---line 1185 of file alpha.bst
 Too many commas in name 1 of "Nellemann, C., Corcoran, E., Duarte, C. M., Valdés, L., De Young, C., Fonseca, L., Grimsditch, G" for entry nellemann2009carbono
@@ -134,13 +161,14 @@ Too many commas in name 1 of "Nellemann, C., Corcoran, E., Duarte, C. M., Valdé
 while executing---line 1185 of file alpha.bst
 Warning--to sort, need author or key in natur2015PW
 Warning--to sort, need author or key in fao2003revista
-Warning--to sort, need author or key in teledet2015Combi
 Warning--to sort, need author or key in teledUm
 Warning--to sort, need author or key in landsatNasa
+Warning--to sort, need author or key in els2015refere
 Warning--to sort, need author or key in gl2015Uni
 Warning--empty journal in remote2010abdulrahman
 Too many commas in name 7 of "Acosta Mireles, Miguel and Vel{\'a}zquez Mart{\'\i}nez, Alejandro and Etchevers Barra, Jorge D and Vargas Hern{\'a}ndez, J Jes{\'u}s and Ram{\'\i}rez Maldonado, Hugo and Islas Guti{\'e}rrez, Fabi{\'a}n and Colegio de Postgraduados, Campus Montecillo,; Instituto de Recursos Naturales, Programa Forestal." for entry acosta2003diseno
 while executing---line 1250 of file alpha.bst
+Warning--empty journal in castillo2003manejo
 Warning--empty journal in encaptura
 Warning--empty year in encaptura
 Warning--empty author in fao2003revista
@@ -174,45 +202,45 @@ Warning--empty journal in perez2011aplicaciones
 Warning--empty publisher in salinero2002teledeteccion
 Warning--empty journal in salinas2008guia
 Warning--there's a number but no series in sivakumar2004satellite
-You've used 56 entries,
+You've used 63 entries,
             2543 wiz_defined-function locations,
-            854 strings with 15707 characters,
-and the built_in function-call counts, 20192 in all, are:
-= -- 1951
-> -- 1018
-< -- 28
-+ -- 351
-- -- 348
-* -- 1438
-:= -- 3365
-add.period$ -- 157
-call.type$ -- 56
-change.case$ -- 342
-chr.to.int$ -- 55
-cite$ -- 80
-duplicate$ -- 798
-empty$ -- 1451
-format.name$ -- 408
-if$ -- 4036
-int.to.chr$ -- 2
+            876 strings with 16758 characters,
+and the built_in function-call counts, 21769 in all, are:
+= -- 2115
+> -- 1032
+< -- 29
++ -- 354
+- -- 350
+* -- 1510
+:= -- 3555
+add.period$ -- 179
+call.type$ -- 63
+change.case$ -- 371
+chr.to.int$ -- 61
+cite$ -- 100
+duplicate$ -- 872
+empty$ -- 1633
+format.name$ -- 413
+if$ -- 4400
+int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 56
-newline$ -- 273
-num.names$ -- 150
-pop$ -- 387
+missing$ -- 57
+newline$ -- 309
+num.names$ -- 153
+pop$ -- 471
 preamble$ -- 1
-purify$ -- 411
+purify$ -- 447
 quote$ -- 0
-skip$ -- 672
+skip$ -- 719
 stack$ -- 0
-substring$ -- 903
-swap$ -- 80
-text.length$ -- 28
-text.prefix$ -- 18
+substring$ -- 958
+swap$ -- 86
+text.length$ -- 29
+text.prefix$ -- 20
 top$ -- 0
-type$ -- 404
-warning$ -- 18
-while$ -- 172
-width$ -- 61
-write$ -- 674
-(There were 56 error messages)
+type$ -- 460
+warning$ -- 25
+while$ -- 174
+width$ -- 68
+write$ -- 752
+(There were 58 error messages)

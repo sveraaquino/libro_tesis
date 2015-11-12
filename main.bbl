@@ -59,11 +59,34 @@ Corey Baker, Rick Lawrence, Clifford Montagne, and Duncan Patten.
   decision-tree-based models.
 \newblock {\em Wetlands}, 26(2):465--474, 2006.
 
+\bibitem[cal]{calent2015global}
+{¿QUÉ ES EL CALENTAMIENTO GLOBAL?}
+\newblock \url {http://ecopolitica.net/que-es-el-calentamiento-global/}.
+\newblock [Internet; descargado 11-noviembre-2015].
+
+\bibitem[Cas03]{castillo2003manejo}
+Benito Bernardo~Dzib Castillo.
+\newblock Manejo, secuestro de carbono e ingresos de tres especies forestales
+  de sombra en cafetales de tres regiones contrastantes de costa rica.
+\newblock 2003.
+
+\bibitem[cha]{chara2015sate}
+{Teledetecci\'onl}.
+\newblock \url
+  {http://laotraopinion.net/tecnologia/teledeteccion/poder-de-resolucion-espectral/}.
+\newblock [Internet; descargado 11-noviembre-2015].
+
 \bibitem[Chu98]{chuvieco1998factor}
 E~Chuvieco.
 \newblock El factor temporal en teledetecci{\'o}n: evoluci{\'o}n
   fenomenol{\'o}gica y an{\'a}lisis de cambios.
 \newblock {\em Revista de teledetecci{\'o}n}, 10:39--48, 1998.
+
+\bibitem[cic]{ciclot2015carbo}
+{Ciclo del carbono, ¿sabes en qué consiste?}
+\newblock \url
+  {http://www.guioteca.com/educacion-para-ninos/ciclo-del-carbono-sabes-en-que-consiste/}.
+\newblock [Internet; descargado 11-noviembre-2015].
 
 \bibitem[Dua12]{gustavo2012deteccion}
 Gustavo Miguel~Huespe Duarte.
@@ -86,15 +109,21 @@ Kris Vanessa~Almando Dure.
   satelitales, a\~{n}o 2014}.
 \newblock Universidad Nacional de Asunci\'on, 2014.
 
-\bibitem[eeS]{encaptura}
-Secuestro de~Carbono en~el Suelo.
-\newblock Captura de carbono.
+\bibitem[els]{els2015refere}
+{EL SISTEMA DE REFERENCIA MUNDIAL LANDSAT-2 (WRS-2)}.
+\newblock \url
+  {http://geoinfoven.blogspot.com/2015/01/el-sistema-de-referencia-mundial_16.html}.
+\newblock [Internet; descargado 11-noviembre-2015].
 
 \bibitem[ERdR04]{estornell2004analisis}
 J~Estornell, LA~Ruiz, and A~del Rey.
 \newblock An{\'a}lisis metodol{\'o}gico para la detecci{\'o}n de cambios
   urbanos en la ciudad de valencia.
 \newblock {\em Revista de Teledetecci{\'o}n}, 22:55--56, 2004.
+
+\bibitem[Esp]{encaptura}
+Yusmary Espinoza.
+\newblock Secuestro de carbono en el suelo.
 
 \bibitem[fao03]{fao2003revista}
 Revista internacional de silvicultura e industrias forestales.
@@ -207,6 +236,12 @@ A~Mateu and LA~Ruiz.
 {El ciclo del carbono}.
 \newblock \url {http://www.natureduca.com/cienc_gen_ciclocarbono.php}, 2015.
 
+\bibitem[ndv]{ndvi2015com}
+{NDVI COMO HERRAMIENTA ÚTIL EN LA EVOLUCIÓN DE ECOSISTEMAS}.
+\newblock \url
+  {http://constanzarojasg.blogspot.com/2014/06/ndvi-como-herramienta-util-en-la.html}.
+\newblock [Internet; descargado 11-noviembre-2015].
+
 \bibitem[Nel]{nellemann2009carbono}
 Corcoran E. Duarte C. M. Valdés L. De Young C. Fonseca L. Grimsditch~G
   Nellemann, C.
@@ -308,9 +343,16 @@ FC~Speranza and HR~Zerda.
   discriminaci{\'o}n de coberturas forestales.
 \newblock {\em Proyecto Picto}, 12931, 2005.
 
-\bibitem[tel06]{teledUm}
+\bibitem[tela]{teledUm}
 {Correciones a las imágenes de satélites}.
-\newblock \url {http://www.um.es/geograf/sigmur/teledet/tema07.pdf}, 2006.
+\newblock \url {http://www.um.es/geograf/sigmur/teledet/tema07.pdf}.
+\newblock [Internet; descargado 11-noviembre-2015].
+
+\bibitem[telb]{teledet2015perce}
+{Elementos de percepción remota}.
+\newblock \url
+  {http://www.inegi.org.mx/geo/contenidos/imgpercepcion/imgsatelite/elementos.aspx}.
+\newblock [Internet; descargado 11-noviembre-2015].
 
 \bibitem[tel15]{teledet2015Combi}
 {COMBINACIONES DE COLORES}.

@@ -4,13 +4,14 @@
 
 \chapter{Procesamiento de im\'agenes satelitales}
 \lhead{Capítulo 3. \emph{Procesamiento de im\'agenes satelitales}} % This is for the header on each page - perhaps a shortened title
-La teledetecci\'on presenta un principio base similar al de la visi\'on, permitiendo mediante una fuente de energ\'ia, un objetivo o escena y un sensor, generar im\'agenes digitales que posibilitan resaltar aquellos elementos dif\'iciles de percibir o ser distinguidos directamente a trav\'es de una imagen normal. A todo esto sum\'andole el comportamiento caracter\'istico que poseen los recursos naturales a sensores espaciales, nos posibilita el empleo amplio de t\'ecnicas de procesamiento de im\'agenes provechosos para el logro de los objetivos en la investigaci\'on. Este capitulo consiste en brindar conceptos espec\'ificos utilizados por la metodolog\'ia, posibilitando comprender la influencia de cada factor en el empleo de im\'agenes satelitales para la estimaci\'on de p\'erdida del contenido de carbono forestal.
+La teledetecci\'on presenta un principio base similar al de la visi\'on, permitiendo mediante una fuente de energ\'ia, un objetivo o escena y un sensor, generar im\'agenes digitales que posibilitan resaltar aquellos elementos dif\'iciles de percibir o ser distinguidos directamente a trav\'es de una imagen normal. El comportamiento caracter\'istico que poseen los recursos naturales a sensores espaciales, nos posibilita el empleo amplio de t\'ecnicas de procesamiento de im\'agenes provechosos para el logro de los objetivos en la investigaci\'on. \\~\\
+Este capitulo consiste en brindar conceptos espec\'ificos utilizados por la metodolog\'ia, posibilitando comprender la influencia de cada factor en el empleo de im\'agenes satelitales para la estimaci\'on de p\'erdida del contenido de carbono forestal.
 
 \section{Sensores Remotos}
-Los sensores remotos nos permiten obtener informaci\'on de la superficie terrestre, soportados en diferentes plataformas (terrestre, \'area y satelital), mediante la captura de energ\'ias reflejadas o radiadas proveniente del sol (sensores pasivos) o del mismo sensor (sensores activos) para luego ser transformadas en productos con diversos y diferentes especificaciones, siendo fotografi\'as \'areas e im\'agenes de sat\'elites los m\'as conocidos.
+Los sensores remotos nos permiten obtener informaci\'on de la superficie terrestre, soportados en diferentes plataformas (terrestre, a\'erea y sat\'elite), mediante la captura de energ\'ias reflejadas o radiadas proveniente del sol (sensores pasivos) o del mismo sensor (sensores activos) \cite{gustavo2012deteccion}. La energ\'ia capturada es transformadas en productos, con diversos y diferentes especificaciones, siendo las fotografi\'as \'areas e im\'agenes de sat\'elites los m\'as conocidos.
 \subsection{El espectro electromagn\'etico}
-A pesar de que las longitudes de ondas son continuas, se establece un serie de bandas donde las radiaciones manifiestan un comportamiento similar organizando las de este modo, en un espectro electromagn\'etico\cite{remote2010abdulrahman}.
-Las bandas m\'as empleadas son las siguientes\cite{salinero2002teledeteccion}:
+Las longitudes de ondas son continuas, pero de igual modo se establecen un serie de bandas donde las radiaciones manifiestan un comportamiento similar, organizandolas de este modo en un espectro electromagn\'etico \cite{remote2010abdulrahman}.
+Las bandas m\'as empleadas son las siguientes \cite{salinero2002teledeteccion}:
 	\begin{itemize}
 		\item \textbf{Espectro visible:} (400 nm a 700 nm) se denomina as\'i por tratarse de la \'unica radiaci\'on electromagn\'etica que pueden percibir nuestros ojos, coincidiendo con las longitudes de onda en donde es m\'axima la radiaci\'on solar. Dentro de esta se distinguen tres bandas fundamentales: Azul (400 nm a 500 nm), verde (500 nm a 600 nm) y rojo (600 nm a 700 nm).
 		\item \textbf{Infrarrojo pr\'oximo:} (700 nm a 1300 nm) se utiliza para discriminar masas vegetales y concentraciones de humedad.
@@ -21,12 +22,12 @@ Las bandas m\'as empleadas son las siguientes\cite{salinero2002teledeteccion}:
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7	\textwidth]{./Figures/cap3/bandas_imagen.png}
-		\caption{Bandas capturadas por un sat\'elite.}
+		\caption{Bandas capturadas por un sat\'elite \cite{teledet2015perce}.}
 		\label{fig:bandasIs}
 	\end{figure}
 
 \subsection{Firmas espectrales}
-Las firmas espectrales consisten en la representaci\'on de energ\'ia reflejada con relaci\'on a las longitudes de ondas, consideradas sin el efecto atmosf\'erico y medida en condiciones ideales del \'angulo incidente. Ayudan a identificar los objetos en la superficie terrestre debido a que cada uno presenta una respuesta espectral \'unica\cite{sivakumar2004satellite}.\\~\\
+Las firmas espectrales consisten en la representaci\'on de energ\'ia reflejada con relaci\'on a las longitudes de ondas, consideradas sin el efecto atmosf\'erico y medida en condiciones ideales del \'angulo incidente. Ayudan a identificar los objetos en la superficie terrestre debido a que cada uno presenta una respuesta espectral \'unica \cite{sivakumar2004satellite}.\\~\\
 En la siguiente figura se observa como cada objeto difiere de los dem\'as en sus firmas espectrales:
 
 \begin{figure}[H]
@@ -38,41 +39,38 @@ En la siguiente figura se observa como cada objeto difiere de los dem\'as en sus
 
 \subsection{Resoluciones de un sensor}
 
-Se define a la resoluci\'on de un sensor como el menor cambio en la magnitud de entrada que puede ser apreciada en la magnitud de salida. El concepto de resoluci\'on implica al menos cuatro manifestaciones \cite{peralta2013analisis}: 
+La resoluci\'on de un sensor se define como el menor cambio en la magnitud de entrada que puede ser apreciada en la magnitud de salida. El concepto de resoluci\'on implica al menos cuatro manifestaciones \cite{peralta2013analisis}: 
 	\begin{itemize}
 		
-		\item \textbf{Resolución espacial:} Es el tamaño que representa en el terreno una unidad de pixel de la imagen. Tiene mucha importancia en la interpretaci\'on pues marca el nivel de detalle que ofrece, cuanto menor sea el tama\~{n}o del pixel, menor ser\'a tambi\'en la probabilidad de que corresponda a un compuesto de dos o m\'as \'areas fronterizas.
+		\item \textbf{Resoluci\'on espacial:} Es el tama\~{n}o que representa en el terreno una unidad de pixel de la imagen. Tiene mucha importancia en la interpretaci\'on pues marca el nivel de detalle que ofrece, cuanto menor sea el tama\~{n}o del pixel, menor ser\'a tambi\'en la probabilidad de que corresponda a un compuesto de dos o m\'as \'areas fronterizas.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.4	\textwidth]{./Figures/cap3/espatialRes.jpg}
-			\caption{Resoluci\'on espacial.}
+			\caption{Resoluci\'on espacial \cite{chara2015sate}.}
 			\label{fig:espatialRes}
 		\end{figure}
 			\item \textbf{Resoluci\'on espectral:} Indica el n\'umero y anchura de las bandas espectrales que puede discriminar el sensor. Un sensor ser\'a tanto m\'as id\'oneo cuanto mayor n\'umero de bandas proporcione, ya que facilita la caracterizaci\'on espectral de las distintas cubiertas.
 				\begin{figure}[H]
 					\centering
 					\includegraphics[width=0.6	\textwidth]{./Figures/cap3/resolucionespectral.jpg}
-					\caption{Resoluci\'on espectral igual a 3 para el sensor SPOT y 7 en el sensor Landsat.}
+					\caption{Resoluci\'on espectral igual a 3 para el sensor SPOT y 7 en el sensor Landsat \cite{chara2015sate}.}
 					\label{fig:espectralRes}
 				\end{figure}
-		\item \textbf{Resoluci\'on radiom\'etrica:} Es la sensibilidad del sensor para detectar variaciones en la cantidad de energ\'ia espectral recibida. La sensibilidad se expresa en bits e indica el n\'umero de los distintos niveles radiom\'etricos $ r $ que puede detectar un sensor.
+		\item \textbf{Resoluci\'on \'etrica:} Es la sensibilidad del sensor para detectar variaciones en la cantidad de energ\'ia espectral recibida. La sensibilidad se expresa en bits e indica el n\'umero de los distintos niveles radiom\'etricos $ r $ que puede detectar un sensor.
 		\nomenclature[10]{$ r $}{Bits o Niveles radiom\'etricos de la imagen satelital.}	
 						\begin{figure}[H]
 							\centering
 							\includegraphics[width=0.6	\textwidth]{./Figures/cap3/resolucionradiometrica.jpg}
-							\caption{Resoluci\'on radiom\'etrica de 8 bits (0 a 255 niveles digitales).}
+							\caption{Resoluci\'on radiom\'etrica de 8 bits (0 a 255 niveles digitales) \cite{chara2015sate}.}
 							\label{fig:radioRes}
 						\end{figure}
 		\item \textbf{Resoluci\'on temporal:} Este tipo de resoluci\'on se refiere al intervalo de tiempo entre muestras sucesivas de la misma zona de la cobertura terrestre. El ciclo de cobertura est\'a en funció\'on de las caracter\'isticas orbitales de la plataforma, su velocidad, el ancho de barrido del sensor y las caracter\'isticas de construcci\'on del sistema.
 			\begin{figure}[H]
 					\centering
 					\includegraphics[width=0.6	\textwidth]{./Figures/cap3/resolucion_temporal_land.png}
-					\caption{Resoluci\'on temporal de 16 d\'ias.}
+					\caption{Resoluci\'on temporal de 16 d\'ias \cite{teledet2015Combi}.}
 					\label{fig:temporaRes}
 				\end{figure}
-		
-
-		
 	\end{itemize}
 
 \section{Im\'agenes satelitales}
@@ -95,7 +93,7 @@ La ilustraci\'on \ref{fig:imagenMultiespectral} nos muestra los ejes de coordena
 
 
 \subsection{Histogramas}
-El histograma es una representaci\'on gr\'afica \'util de la informaci\'on contenida por las im\'agenes obtenidas a trav\'es de la percepci\'on remota. Los analistas, a menudo despliegan el histograma ya que proporciona una apreciaci\'on de la calidad de los datos que presenta una imagen. Por ejemplo si el contraste es bajo o muy alto (histogramas estrechos y amplios); si son multimodales responden a distintos tipos de coberturas detectadas (agua, humedales, tipos de vegetaci\'on, etc.), si el histograma se encuentra desplazado hacia la izquierda, la imagen tendr\'a una tonalidad oscura y si esta desplazada hacia la derecha tendr\'a una tonalidad mas clara; entre otras interpretaciones.
+El histograma de una una imagen satelital, es una representaci\'on gr\'afica \'util de la informaci\'on contenida por las im\'agenes obtenidas a trav\'es de la percepci\'on remota. Los analistas a menudo despliegan el histograma en cada banda, ya que proporciona una apreciaci\'on de la calidad de los datos que presenta una imagen. Por ejemplo si el contraste es bajo o muy alto (histogramas estrechos y amplios); si son multimodales responden a distintos tipos de coberturas detectadas (agua, humedales, tipos de vegetaci\'on, etc.), si en  el histograma de la banda infrarroja cercana se encuentran picos desplazados hacia la derecha implicar\'ia que existe una alta probabilidad de aparici\'on vegetal en la imagen, entre otros an\'alisis.
 
 \subsection{Combinaci\'on de bandas}
 Las im\'agenes satelitales suelen ser multiespectrales, es decir que son registradas simult\'aneamente en varias regiones del espectro electromagn\'etico (Bandas). Estas im\'agenes pueden ser estudiadas individualmente en escalas de grises o en im\'agenes coloreadas obtenidas a partir de las primeras. Las im\'agenes coloreadas se generan seg\'un el modelo de color RGB ( Red, Green, Blue). Este hace referencia a la composici\'on del color en t\'erminos de la intensidad de los colores primarios con los que se forma: el rojo, el verde y el azul. Es un modelo de color basado en la s\'intesis aditiva, es decir basado en la mezcla por adici\'on de dichos primarios\cite{teledet2015Combi}.
@@ -116,32 +114,38 @@ Mediante el estudio en cada banda, y la combinaci\'on de ellas, es posible resal
 
  
 \section{\'Indices de vegetaci\'on}
-Los \'indices de vegetaci\'on son transformaciones que implican efectuar una combinaci\'on matem\'atica, entre los niveles digitales almacenados en dos o m\'as bandas espectrales de la misma imagen, teniendo en cuenta el comportamiento radiom\'etrico de la vegetaci\'on vigorosa para la elecci\'on de bandas\cite{speranza2005potencialidad}. \\~\\
+Los \'indices de vegetaci\'on son transformaciones que implican efectuar una combinaci\'on matem\'atica, entre los niveles digitales almacenados en dos o m\'as bandas espectrales de la misma imagen, teniendo en cuenta el comportamiento radiom\'etrico de la vegetaci\'on vigorosa para la elecci\'on de bandas \cite{speranza2005potencialidad}. \\~\\
 El estudio de las cubiertas vegetales mediante la teledetecci\'on se aborda tradicionalmente mediante la utilización de los denominados “índices de vegetaci\'on”, siendo el m\'as utilizado el \'Indice de vegetaci\'on diferencial normalizada (NDVI) \cite{sader2000estimacion}.
 
 \subsection{\'Indice de vegetaci\'on diferencial normalizada}\label{subsec:ndvi}
 El NDVI es un \'indice usado para estimar la cantidad, calidad y desarrollo de la vegetaci\'on por medio de sensores remotos instalados com\'unmente desde la plataforma espaciales, es decir mide las condiciones de vigor vegetal de la planta, principalmente su contenido en clorofila \cite{salinero2002teledeteccion}. El objetivo del NDVI es la reducci\'on de m\'ultiples bandas a una sola, condensando la informaci\'on m\'as importante, en este caso la vegetaci\'on.\\~\\
-Chuvieco \cite{salinero2002teledeteccion} menciona que la principal ventaja del NDVI es su f\'acil interpretaci\'on, ya que sus
-valores var\'ian entre -1 y +1, permitiendo conocer el estado de vigor vegetal en grandes superficies y detecta fen\'omenos de amplio rango.\\~\\
-Sea $ ndvi:(x,y) \longrightarrow [-1,1] $ una funci\'on que determina la imagen con los NDVI en cada coordenada espacial, $ R \in \{1,...,k\}$ representa la banda roja del espectro visible y $ IRc \in \{1,...,k\}$ la banda infrarroja cercana del espectro infrarrojo, queda definida la siguiente expresi\'on:
+La principal ventaja del NDVI es su f\'acil interpretaci\'on, ya que sus valores var\'ian entre -1 y +1, permitiendo conocer el estado de vigor vegetal en grandes superficies y detecta fen\'omenos de amplio rango \cite{salinero2002teledeteccion}.\\~\\
+Sea $ ndvi:(x,y) \longrightarrow [-1,1] $ una funci\'on que determina la imagen con los NDVI en cada coordenada espacial $ (x,y) $, $ R \in \{1,...,k\}$ representa la banda roja del espectro visible y $ IRc \in \{1,...,k\}$ la banda infrarroja cercana del espectro infrarrojo, queda definida la siguiente expresi\'on:
 	\begin{equation}
 	\label{e:ndvi}
 	ndvi(x,y)=\dfrac{f(x,y,IRc)-f(x,y,R)}{f(x,y,IRc)+f(x,y,R)}
 	\end{equation}
 	\nomenclature[19]{$ndvi$}{Imagen del \'indice de vegetaci\'on diferencial normalizada (NDVI).}
 	\nomenclature[20]{$ndvi(x,y)$}{ NDVI de las coordenadas $ (x,y) $.}
-	\nomenclature[21]{$R$}{ Posici\'on de la banda Roja en la imagen satelital.}
-	\nomenclature[22]{$IRc$}{ Posici\'on de la banda Infrarroja cercana en la imagen satelital.}
+	\nomenclature[21]{$R$}{ Posici\'on de la banda roja en la imagen satelital.}
+	\nomenclature[22]{$IRc$}{ Posici\'on de la banda infrarroja cercana en la imagen satelital.}
 Las plantas muestran un fuerte pico de absorci\'on causados por los pigmentos fotosint\'eticos en longitudes de onda cercanas a los 700 micrones, hecho que contrasta con una fuerte reflexi\'on de las longitudes de onda del infrarrojo cercano \cite{salinero2002teledeteccion}. Por su parte, los suelos desnudos se caracterizan por un incremento suavemente monot\'onico de la reflectancia, a medida que aumenta la longitud de onda \cite{salinero2002teledeteccion}.
 
+  \begin{figure}[H]
+  	\centering
+  	\includegraphics[width=0.8 \textwidth]{./Figures/cap3/Firma_espectral_vegetacion_vigorosa.jpg}
+  	\caption{Firma espectral de la vegetaci\'on \cite{ndvi2015com}.}
+  	\label{fig:firmaVegetacion}
+  \end{figure}
+
+
 \section{An\'alisis Multitemporal}
-B\'asicamente el an\'alisis multitemporal consiste en el estudio de zonas determinadas mediante tomas hechas en diferentes tiempos, Chuvieco \cite{salinero2002teledeteccion} resalta que el factor temporal puede abordarse con un doble objetivo: por un lado reconstruir la variaci\'on estacional de la zona y por otra parte la detecci\'on de cambios, esta \'ultima se enfoca a detectar cambios entre dos o m\'as
-fechas alejadas en el tiempo, estudia el dinamismo temporal de una determinada zona, como por ejemplo: el crecimiento urbano, transformaciones agrícolas, entre otras.\\~\\
-Sea uno u otro el enfoque aplicado al estudio multitemporal, resulta preciso abordar previamente una serie de tratamientos sobre las im\'agenes satelitales de cara a garantizar su comparabilidad, ya que existen factores, naturales o las del sensor, que influye desde la captura de informaci\'on hasta su transformaci\'on final a niveles digitales que podr\'ian afectar el an\'alisis.
+El an\'alisis multitemporal de im\'agenes satelitales consiste en el estudio de zonas determinadas mediante tomas hechas en diferentes tiempos. El factor temporal puede abordarse con un doble objetivo: por un lado reconstruir la variaci\'on estacional de la zona y por otra parte la detecci\'on de cambios. Este \'ultimo objetivo se enfoca en detectar cambios entre dos o m\'as
+fechas alejadas en el tiempo, estudia el dinamismo temporal de una determinada zona, como por ejemplo: el crecimiento urbano, transformaciones agrícolas, entre otras \cite{salinero2002teledeteccion}.\\~\\
+En el enfoque aplicado al estudio multitemporal, resulta preciso abordar previamente una serie de tratamientos sobre las im\'agenes satelitales de cara a garantizar su comparabilidad, ya que existen factores naturales o las del sensor, que influyen desde la captura de informaci\'on hasta su transformaci\'on final a niveles digitales que afectar\'ia el an\'alisis.
 
-
-\section{Correciones a las im\'agenes de sat\'elites}
-Una imagen de sat\'elite est\'a sometida a una serie de interferencias que hacen que la informaci\'on que quiere obtenerse aparezca perturbada por una serie de errores:
+\section{Correcciones a las im\'agenes de sat\'elites}
+Una imagen de sat\'elite est\'a sometida a una serie de interferencias que hacen que la informaci\'on que quiere obtenerse aparezca perturbada por una serie de errores \cite{teledUm}:
 	\begin{itemize}
 		\item Fallos en los sensores, generan pixeles incorrectos.
 		\item Alteraciones en el movimiento del sat\'elite y el mecanismo de captaci\'on e los sensores, generan
@@ -151,12 +155,12 @@ Una imagen de sat\'elite est\'a sometida a una serie de interferencias que hacen
 
 
 \subsection{Correccci\'on geom\'etrica}\label{sec:corrGeometrica}
-Una imagen de sat\'elite, al igual que las fotograf\'ias a\'ereas, no proporciona informaci\'on georreferenciada; cada pixel se ubica en un sistema de coordenadas arbitrario de tipo fila-columna como los que manejan los programas de tratamiento digital de im\'agenes.\\~\\
-El proceso consiste en dar a cada pixel su localizaci\'on en un sistema de coordenadas estandard (UTM, lambert, coordenadas geogr\'aficas) para poder, de este modo, combinar la imagen de sat\'elite con otro tipo de capas en un entorno SIG. Mediante esto, se obtiene una nueva capa en la que cada columna corresponde con un valor de longitud y cada fila con un valor de latitud. En caso de que la imagen no hubiese sufrido ningún tipo de distorsi\'on, el procedimiento ser\'ia bastante sencillo, sin embargo una imagen puede sufrir diversos tipos de distorsiones.\\~\\
-Es necesario localizar puntos comunes de la imagen con puntos de control, como tarea incial para la correcci\'on geom\'etrica, de manera a poder realizar una interpolaci\'on espacial y de los valores radiom\'etricos\cite{deniseCultivos}.
+Una imagen de sat\'elite, al igual que las fotograf\'ias a\'ereas, no proporciona informaci\'on georreferenciada; cada pixel se ubica en un sistema de coordenadas arbitrario de tipo fila-columna como los que manejan los programas de tratamiento digital de im\'agenes \cite{deniseCultivos}.\\~\\
+El proceso consiste en dar a cada pixel su localizaci\'on en un sistema de coordenadas estandard (UTM, lambert, coordenadas geogr\'aficas) para poder combinar la imagen de sat\'elite con otro tipo de capas en un entorno SIG. El proceso obtiene una nueva capa en la que cada columna corresponde con un valor de longitud y cada fila con un valor de latitud. En caso de que la imagen no hubiese sufrido ningún tipo de distorsi\'on, el procedimiento ser\'ia bastante sencillo, sin embargo una imagen puede sufrir diversos tipos de distorsiones.\\~\\
+Es necesario localizar puntos comunes de la imagen con puntos de control, como tarea inicial para la correcci\'on geom\'etrica, de manera a poder realizar una interpolaci\'on espacial y de los valores radiom\'etricos \cite{deniseCultivos}.
 
 \subsubsection{Interpolaci\'on espacial}
-Consiste en la determinaci\'on de la relaci\'on geom\'etrica entre las coordenadas del pixel de la imagen a corregir y las coordenadas correspondientes. Utilizando los puntos comunes localizados, se plantea una ecuaci\'on de transformaci\'on mediante la cual se obtiene la posici\'on de los pixeles en la imagen de salida, ilustrada en la figura \ref{fig:intEspacial}. Este proceso tambi\'en es conocido como Georreferenciaci\'on. El m\'etodo mas utilizado para la transformaci\'on es el de ecuaciones polin\'omicas. 
+La interpolaci\'on espacial consiste en determinar la relaci\'on geom\'etrica entre las coordenadas del pixel de la imagen a corregir y sus coordenadas geogr\'afica correspondientes. Utilizando los puntos comunes localizados, se plantea una ecuaci\'on de transformaci\'on mediante la cual se obtiene la posici\'on de los pixeles en la imagen de salida, ilustrada en la figura \ref{fig:intEspacial}. Este proceso tambi\'en es conocido como Georreferenciaci\'on. El m\'etodo mas utilizado para la transformaci\'on es el de ecuaciones polin\'omicas. 
     \begin{figure}[H]
     	\centering
     	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/inter_spacial.png}
@@ -192,7 +196,7 @@ En distorsiones m\'as importantes o en \'areas extensas, es necesario una transf
     	\caption{Interpolaci\'on espacial con polinomios de primer y segundo orden.}
     	\label{fig:intPolEcua}
     \end{figure}
- Para calcular la calidad en la interpolaci\'on espacial y los puntos de control seleccionados $ nc $, se utiliza el promedio de los errores cuadráticos medios (RMS), que consiste en la diferencia entre la coordenada re-transformada deseada para un punto de control y la coordenada real obtenida como salida.
+ La calidad en la interpolaci\'on espacial y los puntos de control seleccionados $ nc $ se calcula utilizando el promedio de los errores cuadráticos medios (RMS), que consiste en la diferencia entre la coordenada transformada deseada para un punto de control y la coordenada real obtenida como salida.
 
  \begin{equation}
  RMS_{i} = \sqrt{\dfrac{\sum_{j=1}^{nc} ((x_{i_{j}}^{'}-x_{i_{j}})^{2}+(y_{i_{j}}^{'}-y_{i_{j}})^{2})}{nc}}
@@ -200,7 +204,7 @@ En distorsiones m\'as importantes o en \'areas extensas, es necesario una transf
  		\nomenclature[27]{$ RMS_{i} $}{Error cuadr\'atico de la banda $ i $.}
  		\nomenclature[28]{$ nc $}{N\'umero de puntos de control.}
 
- 	Idealmente, el valor de RMS elegido por referencia para corregir una imagen debe ser aproximadamente $ 0.5 $, y en lo posible nunca superar la unidad \cite{guide1999erdas}.
+ 	El valor de RMS elegido por referencia para corregir una imagen debe ser aproximadamente $ 0.5 $, y en lo posible nunca superar la unidad \cite{guide1999erdas}.
  
  
      \begin{figure}[H]
@@ -213,7 +217,7 @@ En distorsiones m\'as importantes o en \'areas extensas, es necesario una transf
 
 
 \subsubsection{Interpolaci\'on de los valores radiom\'etricos}
-La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digital perteneciente a la imagen original, a la imagen corregida. Lo que se pretende es crear una imagen que se corresponda con estas coordenadas, por lo tanto, resulta necesario trasvasar de alguna forma, los niveles digital originales a su nueva posici\'on. Pudi\'endose ser abordada por tres m\'etodos diferentes:
+La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digital perteneciente a la imagen original, a la imagen corregida. Lo que se pretende es crear una imagen que se corresponda con estas coordenadas, por lo tanto, resulta necesario trasvasar de alguna forma los niveles digital originales a su nueva posici\'on. Pudi\'endose ser abordada por tres m\'etodos diferentes:
 	\begin{itemize}
 		\item \textbf{Vecino m\'as pr\'oximo:} situ\'a en cada celda de la imagen corregida el nivel digital $ (ND) $ del pixel m\'as cercano en la imagen original. Constituye la soluci\'on m\'as r\'apida y la que supone menor transformaci\'on en los niveles digitales originales. Su principal inconveniente es que produce una distorsi\'on en rasgos lineales en la imagen(fracturas, carreteras, caminos), que pueden aparecer en la corregida como lineales quebradas. \\~\\
 		Sea $ g:(x,y,i) \longrightarrow f$ una imagen interpolada radiom\'etricamente por el m\'etodo de vecino m\'as pr\'oximo en la banda $ i $:
@@ -301,8 +305,8 @@ La correci\'on radiom\'etrica se encarga de minimizar los desajustes producidos 
     \end{figure}
 
 \subsubsection{Pixeles o lineas perdidas}\label{subsec:pixelesP}
-Si se ha perdido el valor de alg\'un pixel la solución m\'as simple ser\'ia estimarlo como la media de los valores
-del mismo pixel en las lineas anterior y posterior (no es recomendable utilizar los pixeles contiguos de la misma linea por que han sido captados por el mismo detector o banda que ha dado el fallo, por tanto son poco fiables).\\~\\
+La soluci\'on m\'as simple para hallar el valor de alg\'un pixel perdido, es estimar la media de los valores
+del mismo pixel en las lineas anterior y posterior. No es recomendable utilizar los pixeles contiguos de la misma linea por que han sido captados por el mismo detector o banda que ha dado el fallo, por tanto son poco fiables.\\~\\
 Sea $ f^{'}:(x,y,i)\longrightarrow \{0,...,2^{r}\} $ una funci\'on que corrige los pixeles o lineas perdidas en la coordenadas $ (x,y) $ de la banda $ i $:
 
 		\begin{equation}
@@ -346,7 +350,7 @@ A continuaci\'on los $ ND $ de la imagen se recalculan a partir de la funcion $ 
 
 \section{Proceso de detecci\'on de cambios}
 En los m\'etodos comunes de detecci\'on de cambios se asigna un valor correspondiente al grado de cambio sobre cada celda, independientemente del resto de la imagen. En estos m\'etodos se considera la celda como unidad b\'asica (\'algebra de imagen) para aplicar las correspondientes operaciones matem\'aticas asociadas a cada algoritmo.\\~\\
-Los m\'etodos de comparaci\'on, generan una imagen (\'indice de cambios) que representa el grado de cambio entre dos situaciones temporales; las celdas de la imagen resultante, contienen una variable continua de tipo cuantitativo, por lo que se requieren t\'ecnicas que los conviertan en variables cualitativa\cite{martinez2013normalizacion}.
+Los m\'etodos de comparaci\'on, generan una imagen (\'indice de cambios) que representa el grado de cambio entre dos situaciones temporales; las celdas de la imagen resultante, contienen una variable continua de tipo cuantitativo, por lo que se requieren t\'ecnicas que los conviertan en variables cualitativa \cite{martinez2013normalizacion}.
 \subsection{Comparaci\'on multitemporal}\label{subsec:compMult}
 La comparaci\'on parte de un par de im\'agenes semejantes que abarcan la misma zona de estudio, siguiendo una secuencia multitemporal; cuando los conjuntos de im\'agenes son de car\'acter radiom\'etrico, se recomienda haber aplicado un proceso previo de correcci\'on radiom\'etrica. Singh\cite{singh1989review}, Chuvieco\cite{chuvieco1998factor} y Estornell\cite{estornell2004analisis}, muestran como operaciones más utilizadas:
 	\begin{itemize}
