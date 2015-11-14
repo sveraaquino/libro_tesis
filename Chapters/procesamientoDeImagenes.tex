@@ -19,6 +19,7 @@ Las bandas m\'as empleadas son las siguientes \cite{salinero2002teledeteccion}:
 		\item \textbf{Infrarrojo lejano o térmico:} (8 um a 14 um) se detecta el calor de la mayor\'ia de las cubiertas terrestres.
 		\item \textbf{Microondas:} (a partir de 1 um) de gran inter\'es por ser un tipo de energ\'ia transparente a la cubierta nubosa.
 	\end{itemize}
+	En la figura \ref{fig:bandasIs} podemos observar como el sensor, montado en una plataforma espacial, capta la informaci\'on terrestre en diferentes bandas de acuerdo a la longitud de onda.
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.7	\textwidth]{./Figures/cap3/bandas_imagen.png}
@@ -28,7 +29,7 @@ Las bandas m\'as empleadas son las siguientes \cite{salinero2002teledeteccion}:
 
 \subsection{Firmas espectrales}
 Las firmas espectrales consisten en la representaci\'on de energ\'ia reflejada con relaci\'on a las longitudes de ondas, consideradas sin el efecto atmosf\'erico y medida en condiciones ideales del \'angulo incidente. Ayudan a identificar los objetos en la superficie terrestre debido a que cada uno presenta una respuesta espectral \'unica \cite{sivakumar2004satellite}.\\~\\
-En la siguiente figura se observa como cada objeto difiere de los dem\'as en sus firmas espectrales:
+En la siguiente figura \ref{fig:firmaEspectral} se observa como cada objeto difiere de los dem\'as en sus firmas espectrales:
 
 \begin{figure}[H]
 	\centering
@@ -42,29 +43,29 @@ En la siguiente figura se observa como cada objeto difiere de los dem\'as en sus
 La resoluci\'on de un sensor se define como el menor cambio en la magnitud de entrada que puede ser apreciada en la magnitud de salida. El concepto de resoluci\'on implica al menos cuatro manifestaciones \cite{peralta2013analisis}: 
 	\begin{itemize}
 		
-		\item \textbf{Resoluci\'on espacial:} Es el tama\~{n}o que representa en el terreno una unidad de pixel de la imagen. Tiene mucha importancia en la interpretaci\'on pues marca el nivel de detalle que ofrece, cuanto menor sea el tama\~{n}o del pixel, menor ser\'a tambi\'en la probabilidad de que corresponda a un compuesto de dos o m\'as \'areas fronterizas.
+		\item \textbf{Resoluci\'on espacial:} es el tama\~{n}o que representa en el terreno una unidad de pixel de la imagen. Esta resoluci\'on tiene mucha importancia en la interpretaci\'on pues marca el nivel de detalle que ofrece, como podemos observar en la figura \ref{fig:espatialRes}, cuanto menor sea el tama\~{n}o del pixel, menor ser\'a tambi\'en la probabilidad de que corresponda a un compuesto de dos o m\'as \'areas fronterizas.
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=0.4	\textwidth]{./Figures/cap3/espatialRes.jpg}
+			\includegraphics[width=0.4	\textwidth]{./Figures/cap3/resolucion_espacial_n.jpg}
 			\caption{Resoluci\'on espacial \cite{chara2015sate}.}
 			\label{fig:espatialRes}
 		\end{figure}
-			\item \textbf{Resoluci\'on espectral:} Indica el n\'umero y anchura de las bandas espectrales que puede discriminar el sensor. Un sensor ser\'a tanto m\'as id\'oneo cuanto mayor n\'umero de bandas proporcione, ya que facilita la caracterizaci\'on espectral de las distintas cubiertas.
+			\item \textbf{Resoluci\'on espectral:} indica el n\'umero y anchura de las bandas espectrales que puede discriminar el sensor. Un sensor ser\'a tanto m\'as id\'oneo cuanto mayor n\'umero de bandas proporcione, ya que facilita la caracterizaci\'on espectral de las distintas cubiertas. La siguiente figura \ref{fig:espectralRes} podemos comparar la resoluci\'on espectral de dos diferentes sensores espaciales.
 				\begin{figure}[H]
 					\centering
 					\includegraphics[width=0.6	\textwidth]{./Figures/cap3/resolucionespectral.jpg}
 					\caption{Resoluci\'on espectral igual a 3 para el sensor SPOT y 7 en el sensor Landsat \cite{chara2015sate}.}
 					\label{fig:espectralRes}
 				\end{figure}
-		\item \textbf{Resoluci\'on \'etrica:} Es la sensibilidad del sensor para detectar variaciones en la cantidad de energ\'ia espectral recibida. La sensibilidad se expresa en bits e indica el n\'umero de los distintos niveles radiom\'etricos $ r $ que puede detectar un sensor.
+		\item \textbf{Resoluci\'on radiom\'etrica:} es la sensibilidad del sensor para detectar variaciones en la cantidad de energ\'ia espectral recibida. La sensibilidad se expresa en bits e indica el n\'umero de los distintos niveles radiom\'etricos $ r $, como podemos observar en la figura \ref{fig:radioRes}, que puede detectar un sensor.
 		\nomenclature[10]{$ r $}{Bits o Niveles radiom\'etricos de la imagen satelital.}	
 						\begin{figure}[H]
 							\centering
-							\includegraphics[width=0.6	\textwidth]{./Figures/cap3/resolucionradiometrica.jpg}
-							\caption{Resoluci\'on radiom\'etrica de 8 bits (0 a 255 niveles digitales) \cite{chara2015sate}.}
+							\includegraphics[width=0.6	\textwidth]{./Figures/cap3/radiometrica_bits}
+							\caption{Diferentes resoluci\'ones radiom\'etrica en im\'agenes satelitales .}
 							\label{fig:radioRes}
 						\end{figure}
-		\item \textbf{Resoluci\'on temporal:} Este tipo de resoluci\'on se refiere al intervalo de tiempo entre muestras sucesivas de la misma zona de la cobertura terrestre. El ciclo de cobertura est\'a en funció\'on de las caracter\'isticas orbitales de la plataforma, su velocidad, el ancho de barrido del sensor y las caracter\'isticas de construcci\'on del sistema.
+		\item \textbf{Resoluci\'on temporal:} Este tipo de resoluci\'on se refiere al intervalo de tiempo entre muestras sucesivas de la misma zona de la cobertura terrestre. El ciclo de cobertura presentada por la figura \ref{fig:temporaRes}, est\'a en funci\'on de las caracter\'isticas orbitales de la plataforma, su velocidad, el ancho de barrido del sensor y las caracter\'isticas de construcci\'on del sistema.
 			\begin{figure}[H]
 					\centering
 					\includegraphics[width=0.6	\textwidth]{./Figures/cap3/resolucion_temporal_land.png}
@@ -79,8 +80,8 @@ Una imagen satelital se puede definir como la representaci\'on visual de la info
 Sea $ \mathbb{Z} $ un conjunto de enteros. Una imagen satelital es una funci\'on $ f:\mathbb{Z}^{3} \longrightarrow \{0,...,2^{r}\} $. Cada $ (x,y,i) $ se los conoce como coordenadas espaciales de la banda $ i $, donde $ i \in \{1,...,k\} $, $ x \in \{0,...,m\} $ e $ y \in \{0,...,n\} $ para una matriz $ m \times n $, siendo $ k $ el numero de bandas y $ r $ la resoluci\'on radiom\'etrica en la imagen. Las im\'agenes satelitales son conocidos tambi\'en como raster.
   \begin{figure}[H]
   	\centering
-  	\includegraphics[width=0.8	\textwidth]{./Figures/cap3/imagen_satelital.png}
-  	\caption{Imagen satelital.}
+  	\includegraphics[width=0.8	\textwidth]{./Figures/cap3/imagen_satelital_k4.png}
+  	\caption{Valor digital en una imagen satelital de 4 bandas $ (k=4) $ y resoluci\'on radiometrica $ r=8 $.}
   	\label{fig:imagenMultiespectral}
   \end{figure}
   	\nomenclature[12]{$i$}{ Banda de la imagen satelital.}
@@ -89,7 +90,7 @@ Sea $ \mathbb{Z} $ un conjunto de enteros. Una imagen satelital es una funci\'on
   	\nomenclature[16]{$(x,y,i)$}{Coordenadas espaciales de la banda $ i $ en la imagen satelital.}
   	\nomenclature[17]{$k$}{ N\'umero de bandas que posee una imagen satelital.}
   	\nomenclature[18]{$f(x,y,i)$}{ Nivel digital, en la posici\'on $ (x,y) $ de la banda $ i $, de la imagen satelital.}
-La ilustraci\'on \ref{fig:imagenMultiespectral} nos muestra los ejes de coordenadas espaciales $ (x,y) $ para cada plano que representan las bandas, pudiendo acceder a valor de la intensidad o nivel digital mediante la funci\'on $ f(x,y,i) $.
+La figura \ref{fig:imagenMultiespectral} nos muestra los ejes de coordenadas espaciales $ (x,y) $ para cada plano que representan las bandas, pudiendo acceder a valor de la intensidad o nivel digital mediante la funci\'on $ f(x,y,i) $.
 
 
 \subsection{Histogramas}
@@ -104,7 +105,7 @@ Mediante el estudio en cada banda, y la combinaci\'on de ellas, es posible resal
 		\item  \textbf{Bandas 5,4,2 (RGB):} Es una imagen que no refleja los patrones en colores naturales (falso color), por lo tanto las carreteras pueden ser rojas, el agua amarilla y la vegetaci\'on azul.
 		\item \textbf{Bandas 7,3,1 (RGB):} Ayuda a diferenciar tipos de rocas, definir anomal\'ias de color que generalmente son de color amarillo claro algo verdoso, la vegetaci\'on es verde oscuro a negro, los r\'ios son negros y con algunas coloraciones azules a celestes.		
 	\end{itemize}
- 
+ La figura \ref{fig:combinacionColor} muestra como es combinada las bandas (3,4,5) en los canales (R,G,B).
   \begin{figure}[H]
   	\centering
   	\includegraphics[width=0.8	\textwidth]{./Figures/cap3/combinacionColor.jpg}
@@ -129,7 +130,7 @@ Sea $ ndvi:(x,y) \longrightarrow [-1,1] $ una funci\'on que determina la imagen 
 	\nomenclature[20]{$ndvi(x,y)$}{ NDVI de las coordenadas $ (x,y) $.}
 	\nomenclature[21]{$R$}{ Posici\'on de la banda roja en la imagen satelital.}
 	\nomenclature[22]{$IRc$}{ Posici\'on de la banda infrarroja cercana en la imagen satelital.}
-Las plantas muestran un fuerte pico de absorci\'on causados por los pigmentos fotosint\'eticos en longitudes de onda cercanas a los 700 micrones, hecho que contrasta con una fuerte reflexi\'on de las longitudes de onda del infrarrojo cercano \cite{salinero2002teledeteccion}. Por su parte, los suelos desnudos se caracterizan por un incremento suavemente monot\'onico de la reflectancia, a medida que aumenta la longitud de onda \cite{salinero2002teledeteccion}.
+En la figura \ref{fig:firmaVegetacion}, podemos obserar como las plantas muestran un fuerte pico de absorci\'on causados por los pigmentos fotosint\'eticos en longitudes de onda cercanas a los 700 micrones, hecho que contrasta con una fuerte reflexi\'on de las longitudes de onda del infrarrojo cercano \cite{salinero2002teledeteccion}. Por su parte, los suelos desnudos se caracterizan por un incremento suavemente monot\'onico de la reflectancia, a medida que aumenta la longitud de onda \cite{salinero2002teledeteccion}.
 
   \begin{figure}[H]
   	\centering
@@ -190,6 +191,7 @@ Donde $ x^{'}_{i} $ e $ y^{'}_{i} $ indica la coordenada en la imagen corregida 
 		\nomenclature[26]{$ (x^{'},y^{'}) $}{Coordenadas de la imagen transformada.}
 En distorsiones moderadas o en un \'area reducida, se utilizan transformaciones de primer orden, pudiendo corregir efectos de translaci\'on en $ x^{'}_{i} $ e $ y^{'}_{i} $, cambios de escala y rotaci\'on.
 En distorsiones m\'as importantes o en \'areas extensas, es necesario una transfomaci\'on de segundo orden. Este tipo de transformaci\'on agregan a diferencia del primer orden, correcciones a deformaciones locales.
+En la figura \ref{fig:intPolEcua} podemos observar las transformaciones con polinomios de primer y segundo orden.
     \begin{figure}[H]
     	\centering
     	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/ecuacPolinomica.png}
@@ -204,7 +206,8 @@ En distorsiones m\'as importantes o en \'areas extensas, es necesario una transf
  		\nomenclature[27]{$ RMS_{i} $}{Error cuadr\'atico de la banda $ i $.}
  		\nomenclature[28]{$ nc $}{N\'umero de puntos de control.}
 
- 	El valor de RMS elegido por referencia para corregir una imagen debe ser aproximadamente $ 0.5 $, y en lo posible nunca superar la unidad \cite{guide1999erdas}.
+ 	El valor de RMS elegido por referencia para corregir una imagen debe ser aproximadamente $ 0.5 $, y en lo posible nunca superar la unidad \cite{guide1999erdas}. \\~\\
+ 	La figura \ref{fig:rms} nos muestra la manera de como es calculado el RMS para un punto de control determinado.
  
  
      \begin{figure}[H]
@@ -238,7 +241,7 @@ La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digit
 	\end{cases}
 \end{equation}	
 
-		En la ilustraci\'on \ref{fig:vecinoMasCercano2} se observa el procedimiento realizado.
+En la figura \ref{fig:vecinoMasCercano2} se observa el procedimiento realizado.
 				    \begin{figure}[H]
 				    	\centering
 				    	\includegraphics[width=0.6	\textwidth]{./Figures/cap3/vecinoMasCercano2.png}
@@ -246,7 +249,7 @@ La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digit
 				    	\label{fig:vecinoMasCercano2}
 				    \end{figure}
 		
-		\item \textbf{Interpolaci\'on bilineal:} Considera el valor de los 4 pixeles mas cercanos en la imagen de entrada para asignar el nuevo valor de la imagen de salida. Las ventajas son que no existe el efecto de escalones en los bordes pudiendo aparecer en el vecino superior izquierdo y ademas cuenta con mejor exactitud espacial. El m\'etodo es utilizado a menudo cuando se cambia el tama\~{n}o de las celdas en los datos. La desventaja es que como los pixeles son promediados, algunos extremos de los valores de los datos pueden perderse.\\~\\
+		\item \textbf{Interpolaci\'on bilineal:} Considera el valor de los 4 pixeles mas cercanos en la imagen de entrada, como podemos ver en la figura \ref{fig:bilineal2}, para asignar el nuevo valor de la imagen de salida. Las ventajas son que no existe el efecto de escalones en los bordes pudiendo aparecer en el vecino superior izquierdo y ademas cuenta con mejor exactitud espacial. El m\'etodo es utilizado a menudo cuando se cambia el tama\~{n}o de las celdas en los datos. La desventaja es que como los pixeles son promediados, algunos extremos de los valores de los datos pueden perderse.\\~\\
 		
 		\begin{figure}[H]
 			\centering
@@ -260,7 +263,7 @@ La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digit
 		\end{equation}	
 				\nomenclature[32]{$ \rho $}{Imagen interpolada radiom\'etricamente por el m\'etodo bilineal.}
 				\nomenclature[33]{$ \rho(x,y,i) $}{Nivel digital en la posici\'on $ (x,y) $ de $ \rho $ en la banda $ i $.}
-		    		\item \textbf{Convoluci\'on c\'ubica:} es similar a la interporlaci\'on bilineal pero considera niveles digitales de los 16 pixeles m\'as pr\'oximos. El efecto visual es m\'as correcto, pero supone un volumen de c\'alculo mucho m\'as elevado. \\~\\
+		    		\item \textbf{Convoluci\'on c\'ubica:} es similar a la interporlaci\'on bilineal pero considera niveles digitales de los 16 pixeles m\'as pr\'oximos observados en la figura \ref{fig:convCubica2}. El efecto visual es m\'as correcto, pero supone un volumen de c\'alculo mucho m\'as elevado. \\~\\
 		    				    \begin{figure}[H]
 		    				    	\centering
 		    				    	\includegraphics[width=0.7	\textwidth]{./Figures/cap3/convolucionCubica_matriz.png}
@@ -296,7 +299,7 @@ La Interpolaci\'on de los valores radiom\'etricos es el traslado del nivel digit
 
 	\end{itemize}
 \subsection{Correcci\'on radiom\'etrica}
-La correci\'on radiom\'etrica se encarga de minimizar los desajustes producidos en el registro del valor digital en las celdas de la imagen, de hecho en algunos casos las estaciones receptoras llevan a cabo alg\'un tipo de correcci\'on en el momento de recepci\'on de la imagen. La corrección radiom\'etrica implica por una parte la restauraci\'on de lineas o p\'ixeles perdidos y por otra la correcci\'on del bandeado en la imagen \cite{teledUm}.
+La correci\'on radiom\'etrica se encarga de minimizar los desajustes producidos en el registro del valor digital en las celdas de la imagen, de hecho en algunos casos las estaciones receptoras llevan a cabo alg\'un tipo de correcci\'on en el momento de recepci\'on de la imagen. La corrección radiom\'etrica implica por una parte la restauraci\'on de lineas o p\'ixeles perdidos y por otra la correcci\'on del bandeado en la imagen \cite{teledUm}, observados en la figura \ref{fig:correcError}.
     \begin{figure}[H]
     	\centering
     	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/correcError.png}
@@ -340,7 +343,7 @@ A continuaci\'on los $ ND $ de la imagen se recalculan a partir de la funcion $ 
 				f^{''}(x,y,i) = m f'(x,y,i) + s
 				\end{equation} 				
 		\nomenclature[46]{$ f^{''}(x,y,i) $}{Nivel digital, con correcci\'on de bandeado, del pixel con coordenadas $ (x,y) $ de la banda $ i $.}
-
+En figura \ref{fig:bandeado} podemos observar los histogramas de una banda corregida en funci\'on a otra banda.
     \begin{figure}[H]
     	\centering
     	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/bandeo_k.png}
@@ -406,7 +409,7 @@ Los filtros constituyen unos de los principales m\'etodos del procesamiento digi
 		\item \textbf{Detectar bordes::} detectar aquellos p\'ixeles donde se produce un cambio brusco en la funci\'on intensidad.	
 	\end{itemize}
 \subsubsection{Filtro de la mediana}\label{subsec:filMediana}
-El filtrado tiene como ventaja de que el valor final del pixel es un valor real presente en la imagen, siendo dicha variable, la mediana entre los niveles digitales pertenecientes a su vecindad. La mediana es el valor para el cual el 50 \% de todos los p\'ixeles en el histograma son mayores y 50 \% son menores, al contrario de la media \'esta no es influenciada por los valores m\'aximos o m\'inimos\cite{mehl1997fundamentos}.
+El filtrado tiene como ventaja de que el valor final del pixel es un valor real presente en la imagen, siendo dicha variable, la mediana entre los niveles digitales pertenecientes a su vecindad como podemos observar en la figura \ref{fig:filMediata} de ejemplo. La mediana es el valor para el cual el 50 \% de todos los p\'ixeles en el histograma son mayores y 50 \% son menores, al contrario de la media \'esta no es influenciada por los valores m\'aximos o m\'inimos \cite{mehl1997fundamentos}.
 
     \begin{figure}[H]
     	\centering

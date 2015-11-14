@@ -34,10 +34,10 @@
 \nomenclatureentry{46$ f^{''}(x,y,i) $@[{$ f^{''}(x,y,i) $}]\begingroup Nivel digital, con correcci\'on de bandeado, del pixel con coordenadas $ (x,y) $ de la banda $ i $.\nomeqref {3.17}|nompageref}{39}
 \nomenclatureentry{47$ I_{dif} $@[{$ I_{dif} $}]\begingroup Indice de cambio por diferencia de im\'agenes.\nomeqref {3.18}|nompageref}{40}
 \nomenclatureentry{48$ I_{ratio} $@[{$ I_{ratio} $}]\begingroup Indice de cambio por el m\'etodo de ratio.\nomeqref {3.18}|nompageref}{40}
-\nomenclatureentry{49$ I_{c} $@[{$ I_{c} $}]\begingroup Indice de cambio entre dos im\'agenes.\nomeqref {3.20}|nompageref}{41}
-\nomenclatureentry{50$ B $@[{$ B $}]\begingroup Imagen binaria en el proceso de detecci\'on de cambio.\nomeqref {3.20}|nompageref}{41}
-\nomenclatureentry{51$ B(I_{c}) $@[{$ B(I_{c}) $}]\begingroup Nivel digital para el $ I_{c} $.\nomeqref {3.20}|nompageref}{41}
-\nomenclatureentry{52$ U $@[{$ U $}]\begingroup Umbral que binariza una imagen en base a un $ I_{c} $.\nomeqref {3.20}|nompageref}{41}
+\nomenclatureentry{49$ I_{c} $@[{$ I_{c} $}]\begingroup Indice de cambio entre dos im\'agenes.\nomeqref {3.20}|nompageref}{42}
+\nomenclatureentry{50$ B $@[{$ B $}]\begingroup Imagen binaria en el proceso de detecci\'on de cambio.\nomeqref {3.20}|nompageref}{42}
+\nomenclatureentry{51$ B(I_{c}) $@[{$ B(I_{c}) $}]\begingroup Nivel digital para el $ I_{c} $.\nomeqref {3.20}|nompageref}{42}
+\nomenclatureentry{52$ U $@[{$ U $}]\begingroup Umbral que binariza una imagen en base a un $ I_{c} $.\nomeqref {3.20}|nompageref}{42}
 \nomenclatureentry{53$ n $@[{$ n $}]\begingroup Coeficiente de fiabilidad de los datos.\nomeqref {3.21}|nompageref}{42}
 \nomenclatureentry{54$ \sigma_{I_{c}} $@[{$ \sigma_{I_{c}} $}]\begingroup Desviaci\'on t\'ipica de la imagen de \'Indices de cambio.\nomeqref {3.21}|nompageref}{42}
 \nomenclatureentry{55$ \mu_{I_{c}} $@[{$ \mu_{I_{c}} $}]\begingroup Media de la imagen de \'Indices de cambio.\nomeqref {3.21}|nompageref}{42}

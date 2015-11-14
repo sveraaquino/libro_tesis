@@ -4,54 +4,54 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Calentamiento Global \cite {calent2015global}.\relax }}{10}{figure.caption.21}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Ciclo de carbono \cite {ciclot2015carbo}.\relax }}{11}{figure.caption.23}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Tipos de sensores.\relax }}{15}{figure.caption.32}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Teledetecci\'on \cite {teledet2015perce}.\relax }}{16}{figure.caption.34}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Tipos de sensores.\relax }}{15}{figure.caption.35}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Teledetecci\'on \cite {teledet2015perce}.\relax }}{16}{figure.caption.37}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Bandas capturadas por un sat\'elite \cite {teledet2015perce}.\relax }}{21}{figure.caption.39}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Firmas espectrales de diferentes coberturas.\relax }}{22}{figure.caption.41}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Resoluci\'on espacial \cite {chara2015sate}.\relax }}{23}{figure.caption.43}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Resoluci\'on espectral igual a 3 para el sensor SPOT y 7 en el sensor Landsat \cite {chara2015sate}.\relax }}{23}{figure.caption.44}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Resoluci\'on radiom\'etrica de 8 bits (0 a 255 niveles digitales) \cite {chara2015sate}.\relax }}{24}{figure.caption.45}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Resoluci\'on temporal de 16 d\'ias \cite {teledet2015Combi}.\relax }}{24}{figure.caption.46}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Imagen satelital.\relax }}{25}{figure.caption.48}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Combinaci\'on de bandas espectrales a trav\'es de los canales RGB.\relax }}{27}{figure.caption.51}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Firma espectral de la vegetaci\'on \cite {ndvi2015com}.\relax }}{29}{figure.caption.55}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Localizaci\'on de puntos comunes y puntos de referencia.\relax }}{31}{figure.caption.60}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Interpolaci\'on espacial con polinomios de primer y segundo orden.\relax }}{32}{figure.caption.65}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Error RMS.\relax }}{33}{figure.caption.67}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Interpolaci\'on Vecino m\'as Cercano.\relax }}{34}{figure.caption.72}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Interpolaci\'on Bilineal.\relax }}{35}{figure.caption.73}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Convoluci\'on c\'ubica.\relax }}{36}{figure.caption.75}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Fallos del sensor en la captura de la imagen.\relax }}{37}{figure.caption.79}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Proceso de correcci\'on del bandeo.\relax }}{39}{figure.caption.87}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Proceso del filtro de mediana.\relax }}{43}{figure.caption.98}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Bandas capturadas por un sat\'elite \cite {teledet2015perce}.\relax }}{21}{figure.caption.42}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Firmas espectrales de diferentes coberturas.\relax }}{22}{figure.caption.44}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Resoluci\'on espacial \cite {chara2015sate}.\relax }}{23}{figure.caption.46}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Resoluci\'on espectral igual a 3 para el sensor SPOT y 7 en el sensor Landsat \cite {chara2015sate}.\relax }}{23}{figure.caption.47}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Diferentes resoluci\'ones radiom\'etrica en im\'agenes satelitales .\relax }}{24}{figure.caption.48}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Resoluci\'on temporal de 16 d\'ias \cite {teledet2015Combi}.\relax }}{24}{figure.caption.49}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Valor digital en una imagen satelital de 4 bandas $ (k=4) $ y resoluci\'on radiometrica $ r=8 $.\relax }}{25}{figure.caption.51}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Combinaci\'on de bandas espectrales a trav\'es de los canales RGB.\relax }}{27}{figure.caption.54}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Firma espectral de la vegetaci\'on \cite {ndvi2015com}.\relax }}{29}{figure.caption.58}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Localizaci\'on de puntos comunes y puntos de referencia.\relax }}{31}{figure.caption.63}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Interpolaci\'on espacial con polinomios de primer y segundo orden.\relax }}{32}{figure.caption.68}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Error RMS.\relax }}{33}{figure.caption.70}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Interpolaci\'on Vecino m\'as Cercano.\relax }}{34}{figure.caption.75}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Interpolaci\'on Bilineal.\relax }}{35}{figure.caption.76}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Convoluci\'on c\'ubica.\relax }}{36}{figure.caption.78}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Fallos del sensor en la captura de la imagen.\relax }}{37}{figure.caption.82}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Proceso de correcci\'on del bandeo.\relax }}{39}{figure.caption.90}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Proceso del filtro de mediana.\relax }}{43}{figure.caption.101}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Ejemplo WRS-2 Path/Row\relax }}{47}{figure.caption.105}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Imagen VCF\relax }}{48}{figure.caption.108}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Mapa Global de Carbono - Paraguay\relax }}{49}{figure.caption.110}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Paraguay Forest Change Product\relax }}{50}{figure.caption.113}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Diagrama de flujo. Metodolog\'ia propuesta\relax }}{52}{figure.caption.118}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Levantamiento de puntos de control.\relax }}{53}{figure.caption.121}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Diagrama de flujo. Detecci\'on de Cambio.\relax }}{55}{figure.caption.126}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Normalizaci\'on Radiom\'etrica.\relax }}{56}{figure.caption.134}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Umbrales y valores cualitativas asignadas en cada categor\'ia.\relax }}{58}{figure.caption.137}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Mascaras de cambio, iteraci\'on de la normalizaci\'on radiom\'etrica.\relax }}{59}{figure.caption.139}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Diagrama de flujo. Discriminaci\'on Forestal.\relax }}{60}{figure.caption.142}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Umbral NDVI. U=0,78076712 para n=1.\relax }}{61}{figure.caption.146}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Diagrama de flujo. Mascara P\'erdida Forestal.\relax }}{62}{figure.caption.149}
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Presentaci\'on del resultado. Mascara de perdida Vegetal y cuantificaci\'on.\relax }}{64}{figure.caption.159}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Ejemplo WRS-2 Path/Row\relax }}{47}{figure.caption.108}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Imagen VCF\relax }}{48}{figure.caption.111}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Mapa Global de Carbono - Paraguay\relax }}{49}{figure.caption.113}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Paraguay Forest Change Product\relax }}{50}{figure.caption.116}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Diagrama de flujo. Metodolog\'ia propuesta\relax }}{52}{figure.caption.121}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Levantamiento de puntos de control.\relax }}{53}{figure.caption.124}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Diagrama de flujo. Detecci\'on de Cambio.\relax }}{55}{figure.caption.129}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Normalizaci\'on Radiom\'etrica.\relax }}{56}{figure.caption.137}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Umbrales y valores cualitativas asignadas en cada categor\'ia.\relax }}{58}{figure.caption.140}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Mascaras de cambio, iteraci\'on de la normalizaci\'on radiom\'etrica.\relax }}{59}{figure.caption.142}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Diagrama de flujo. Discriminaci\'on Forestal.\relax }}{60}{figure.caption.145}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Umbral NDVI. U=0,78076712 para n=1.\relax }}{61}{figure.caption.149}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Diagrama de flujo. Mascara P\'erdida Forestal.\relax }}{62}{figure.caption.152}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Presentaci\'on del resultado. Mascara de perdida Vegetal y cuantificaci\'on.\relax }}{64}{figure.caption.162}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Mascara VCF de 0-30\% sobre NDVI a\~{n}o 2000\relax }}{69}{figure.caption.172}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Puntos aleatorios dentro de la mascara VCF.\relax }}{70}{figure.caption.173}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Puntos aleatorios.\relax }}{72}{figure.caption.176}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Regresi\'on Lineal. $ X=NDVI, Y=TonC/ha $\relax }}{73}{figure.caption.177}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Regresi\'on cuadr\'atica. $ X=NDVI, Y=TonC/ha $\relax }}{73}{figure.caption.178}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Sectores de estudio.\relax }}{75}{figure.caption.181}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Complemento Quantum GIS.\relax }}{76}{figure.caption.183}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces \'Area Urbana.\relax }}{77}{figure.caption.185}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces \'Area Rural.\relax }}{77}{figure.caption.186}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces \'Area H\'umeda.\relax }}{78}{figure.caption.187}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Re-clasificaci\'on de la imagen PFCP. Perdida = 2, Otros=1\relax }}{79}{figure.caption.189}
-\contentsline {figure}{\numberline {5.12}{\ignorespaces Coeficiente Kappa por cada \'Area y tolerancia.\relax }}{81}{figure.caption.191}
-\contentsline {figure}{\numberline {5.13}{\ignorespaces GA por cada \'Area y tolerancia.\relax }}{81}{figure.caption.192}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Mascara VCF de 0-30\% sobre NDVI a\~{n}o 2000\relax }}{69}{figure.caption.175}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Puntos aleatorios dentro de la mascara VCF.\relax }}{70}{figure.caption.176}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Puntos aleatorios.\relax }}{72}{figure.caption.179}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Regresi\'on Lineal. $ X=NDVI, Y=TonC/ha $\relax }}{73}{figure.caption.180}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Regresi\'on cuadr\'atica. $ X=NDVI, Y=TonC/ha $\relax }}{73}{figure.caption.181}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Sectores de estudio.\relax }}{75}{figure.caption.184}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Complemento Quantum GIS.\relax }}{76}{figure.caption.186}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces \'Area Urbana.\relax }}{77}{figure.caption.188}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces \'Area Rural.\relax }}{77}{figure.caption.189}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces \'Area H\'umeda.\relax }}{78}{figure.caption.190}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Re-clasificaci\'on de la imagen PFCP. Perdida = 2, Otros=1\relax }}{79}{figure.caption.192}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Coeficiente Kappa por cada \'Area y tolerancia.\relax }}{81}{figure.caption.194}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces GA por cada \'Area y tolerancia.\relax }}{81}{figure.caption.195}
 \addvspace {10\p@ }
