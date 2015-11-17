@@ -38,14 +38,6 @@ Miguel Acosta~Mireles, Alejandro Vel{\'a}zquez~Mart{\'\i}nez, Jorge~D
 \newblock PhD thesis, Tesis Doctoral. Colegio de Postgraduados. Montecillo,
   M{\'e}xico, 2003.
 
-\bibitem[AVKA03]{acosta2003experiencia}
-Le{\'o}n~Benday{\'a}n Acosta, Jos{\'e}~Sanjurjo V{\'\i}lchez, Risto Kalliola,
-  and Fernando~Rodr{\'\i}guez Achung.
-\newblock Experiencia de la tecnolog{\'\i}a de percepci{\'o}n remota para la
-  elaboraci{\'o}n del mosaico de im{\'a}genes de sat{\'e}lite landsat tm en la
-  selva baja de la amazon{\'\i}a peruana.
-\newblock {\em Folia Amaz{\'o}nica}, page~73, 2003.
-
 \bibitem[BdFM03]{basualdo2003estrategia}
 Isabel Basualdo, Isabel~Gamarra de~Fox, and Miguel~Angel Morales.
 \newblock {\em Estrategia nacional y plan de acci{\'o}n para la
@@ -87,6 +79,17 @@ E~Chuvieco.
 \newblock \url
   {http://www.guioteca.com/educacion-para-ninos/ciclo-del-carbono-sabes-en-que-consiste/}.
 \newblock [Internet; descargado 11-noviembre-2015].
+
+\bibitem[com]{com2015color}
+{Composici\'on de colores en las im\'agenes digitales.}
+\newblock \url
+  {http://concurso.cnice.mec.es/cnice2006/material121/unidad1/i_colreal.htm}.
+\newblock [Internet; descargado 16-noviembre-2015].
+
+\bibitem[DN]{deespectro}
+T{\'E}CNICAS DE MUESTREO PARA~MANEJADORES DE and RECURSOS NATURALES.
+\newblock El espectro electromagn{\'e}tico.
+\newblock {\em Blanca}, page 455.
 
 \bibitem[Dua12]{gustavo2012deteccion}
 Gustavo Miguel~Huespe Duarte.
@@ -205,8 +208,17 @@ Thomas Lillesand, Ralph~W Kiefer, and Jonathan Chipman.
 
 \bibitem[MD]{marquezestimacion}
 Jaime M{\'a}rquez~D{\'\i}az.
-\newblock Estimaci{\'o}n de carbono arboreo por medio de imagenes del satelite
-  spot en la region de tlaxco, tlaxcala/por jaime m{\'a}rquez d{\'\i}az.
+\newblock Estimaci{\'o}n de carbono arboreo por medio de im\'agenes del
+  satelite spot en la regi\'on de tlaxco, tlaxcala/por jaime m{\'a}rquez
+  d{\'\i}az.
+\newblock page 157.
+
+\bibitem[MD05]{martinez2005percepcion}
+J~Mart{\'\i}nez and A~D{\'\i}az.
+\newblock Percepci{\'o}n remota: fundamentos de teledetecci{\'o}n espacial.
+\newblock {\em Recuperado 12 de 11 de 2011, de http://siga. cna. gob.
+  mx/SIGA/Percepcion/Fundamentos\% 20de\% 20teledetecc i\% C3\% B3n\%
+  20espacial. PDF}, 2005.
 
 \bibitem[MG13]{martinez2013normalizacion}
 Raul Mart{\'\i}nez~Garrido.
@@ -367,6 +379,11 @@ F~Tung and Ellsworth LeDrew.
 \newblock {\em Photogrammetric Engineering and Remote Sensing},
   54(10):1449--1454, 1988.
 
+\bibitem[Tom90]{tomlin1990map}
+C~Dana Tomlin.
+\newblock {\em A map algebra}.
+\newblock Harvard Graduate School of Design, 1990.
+
 \bibitem[Tro12]{deniseCultivos}
 Denise~Trevisan Troche.
 \newblock {\em Identificaci\'on de cultivos mediante Im\'agenes Satelitales}.
@@ -379,6 +396,13 @@ Satoshi Tsuyuki.
 \newblock Reducing Emissions from Deforestation and forest Degradation and the
   Role of Conservation, Sustainable Management of Forests and Enhancement,
   2012.
+
+\bibitem[V{\'a}s11]{vasquez2011mineria}
+Juan Olegario~Monroy V{\'a}squez.
+\newblock Miner{\'\i}a de datos con conjuntos aproximados para
+  clasificaci{\'o}n de im{\'a}genes satelitales (data mining with rough sets
+  for classification of satellite images).
+\newblock {\em Ventana Inform{\'a}tica}, (25):141, 2011.
 
 \bibitem[Wik15]{wikixxx}
 Wikipedia.

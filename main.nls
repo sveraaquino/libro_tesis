@@ -5,122 +5,96 @@
   \item [{$ r $}]\begingroup Bits o Niveles radiom\'etricos de la imagen satelital.\nomeqref {3.0}
 		\nompageref{23}
   \item [{$i$}]\begingroup  Banda de la imagen satelital.\nomeqref {3.0}
-		\nompageref{25}
+		\nompageref{24}
   \item [{$(x,y)$}]\begingroup  Coordenadas espaciales.\nomeqref {3.0}
-		\nompageref{25}
+		\nompageref{24}
   \item [{$f$}]\begingroup  Imagen satelital.\nomeqref {3.0}
-		\nompageref{25}
+		\nompageref{24}
   \item [{$(x,y,i)$}]\begingroup Coordenadas espaciales de la banda $ i $ en la imagen satelital.\nomeqref {3.0}
-		\nompageref{25}
+		\nompageref{24}
   \item [{$k$}]\begingroup  N\'umero de bandas que posee una imagen satelital.\nomeqref {3.0}
-		\nompageref{25}
+		\nompageref{24}
   \item [{$f(x,y,i)$}]\begingroup  Nivel digital, en la posici\'on $ (x,y) $ de la banda $ i $, de la imagen satelital.\nomeqref {3.0}
-		\nompageref{25}
-  \item [{$ndvi$}]\begingroup Imagen del \'indice de vegetaci\'on diferencial normalizada (NDVI).\nomeqref {3.1}
-		\nompageref{28}
-  \item [{$ndvi(x,y)$}]\begingroup  NDVI de las coordenadas $ (x,y) $.\nomeqref {3.1}
-		\nompageref{28}
-  \item [{$R$}]\begingroup  Posici\'on de la banda roja en la imagen satelital.\nomeqref {3.1}
-		\nompageref{28}
-  \item [{$IRc$}]\begingroup  Posici\'on de la banda infrarroja cercana en la imagen satelital.\nomeqref {3.1}
-		\nompageref{28}
-  \item [{$ l $}]\begingroup  Grado del polinomio de ajuste.\nomeqref {3.3}
+		\nompageref{24}
+  \item [{$\rho$}]\begingroup Funci\'on que representa a una operaci\'on aritm\'etica, l\'ogico, entre otros.\nomeqref {3.1}
+		\nompageref{27}
+  \item [{$ndvi$}]\begingroup Imagen del \'indice de vegetaci\'on diferencial normalizada (NDVI).\nomeqref {3.2}
 		\nompageref{31}
-  \item [{$ (x^{'},y^{'}) $}]\begingroup Coordenadas de la imagen transformada.\nomeqref {3.5}
-		\nompageref{32}
-  \item [{$ RMS_{i} $}]\begingroup Error cuadr\'atico de la banda $ i $.\nomeqref {3.6}
-		\nompageref{32}
-  \item [{$ nc $}]\begingroup N\'umero de puntos de control.\nomeqref {3.6}
-		\nompageref{32}
-  \item [{$ g $}]\begingroup Imagen interpolada radiom\'etricamente por el m\'etodo de vecino m\'as pr\'oximo.\nomeqref {3.6}
-		\nompageref{33}
-  \item [{$ g(x,y,i) $}]\begingroup Nivel digital en la posici\'on $ (x,y) $ de $ g $ en la banda $ i $.\nomeqref {3.6}
-		\nompageref{33}
-  \item [{$ \rho $}]\begingroup Imagen interpolada radiom\'etricamente por el m\'etodo bilineal.\nomeqref {3.10}
+  \item [{$ndvi(x,y)$}]\begingroup  NDVI de las coordenadas $ (x,y) $.\nomeqref {3.2}
+		\nompageref{31}
+  \item [{$R$}]\begingroup  Posici\'on de la banda roja en la imagen satelital.\nomeqref {3.2}
+		\nompageref{31}
+  \item [{$IRc$}]\begingroup  Posici\'on de la banda infrarroja cercana en la imagen satelital.\nomeqref {3.2}
+		\nompageref{31}
+  \item [{$ l $}]\begingroup  Grado del polinomio de ajuste.\nomeqref {3.4}
+		\nompageref{34}
+  \item [{$ (x^{'},y^{'}) $}]\begingroup Coordenadas de la imagen transformada.\nomeqref {3.6}
 		\nompageref{35}
-  \item [{$ \rho(x,y,i) $}]\begingroup Nivel digital en la posici\'on $ (x,y) $ de $ \rho $ en la banda $ i $.\nomeqref {3.10}
+  \item [{$ RMS_{i} $}]\begingroup Error cuadr\'atico de la banda $ i $.\nomeqref {3.7}
 		\nompageref{35}
-  \item [{$ \varphi $}]\begingroup Imagen interpolada radiom\'etricamente por el m\'etodo de convoluci\'on c\'ubica.\nomeqref {3.11}
-		\nompageref{36}
-  \item [{$ \varphi(x,y,i) $}]\begingroup Nivel digital en la posici\'on $ (x,y) $ de $ \varphi $ en la banda $ i $.\nomeqref {3.11}
-		\nompageref{36}
-  \item [{$ d $}]\begingroup  Distancia euclidiana.\nomeqref {3.11}
-		\nompageref{36}
-  \item [{$ p_{x,y,i} $}]\begingroup  Pixel de una imagen con coordenadas $ (x,y) $ de la banda $ i $.\nomeqref {3.11}
-		\nompageref{36}
-  \item [{$ p'_{x,y,i} $}]\begingroup  Pixel $ p_{x,y,i} $ interpolada espacialmente.\nomeqref {3.11}
-		\nompageref{36}
-  \item [{$ d(p_{x,y,i},p'_{x,y,i}) $}]\begingroup  Distancia euclidiana entre un pixel $ p_{x,y,i} $ y $ p'_{x,y,i} $.\nomeqref {3.11}
-		\nompageref{36}
-  \item [{$ \beta $}]\begingroup  Funci\'on que determina los coeficientes de $ \varphi$.\nomeqref {3.11}
-		\nompageref{36}
-  \item [{$ \beta(q) $}]\begingroup  Coeficiente hallado en base a $ q $.\nomeqref {3.11}
-		\nompageref{36}
-  \item [{$ q $}]\begingroup  Coeficiente definido por $ d(p_{x,y,i},p'_{x,y,i}) $.\nomeqref {3.11}
-		\nompageref{36}
-  \item [{$ w $}]\begingroup  Constante en la funci\'on $ \beta $.\nomeqref {3.12}
-		\nompageref{37}
-  \item [{$ \mu $}]\begingroup Valor de la media.\nomeqref {3.13}
-		\nompageref{38}
-  \item [{$ \sigma $}]\begingroup Desviaci\'on t\'ipica.\nomeqref {3.13}
-		\nompageref{38}
-  \item [{$ z $}]\begingroup Banda de la imagen satelital.\nomeqref {3.13}
-		\nompageref{38}
-  \item [{$ f^{'}(x,y,i) $}]\begingroup Nivel digital, con correcci\'on del pixel o linea perdida de las coordenadas $ (x,y) $ en la banda $ i $.\nomeqref {3.14}
-		\nompageref{38}
-  \item [{$ f^{''}(x,y,i) $}]\begingroup Nivel digital, con correcci\'on de bandeado, del pixel con coordenadas $ (x,y) $ de la banda $ i $.\nomeqref {3.17}
+  \item [{$ \eta $}]\begingroup N\'umero de puntos de control.\nomeqref {3.7}
+		\nompageref{35}
+  \item [{$ \mu $}]\begingroup Valor de la media.\nomeqref {3.8}
 		\nompageref{39}
-  \item [{$ I_{dif} $}]\begingroup Indice de cambio por diferencia de im\'agenes.\nomeqref {3.18}
+  \item [{$ \sigma $}]\begingroup Desviaci\'on t\'ipica.\nomeqref {3.8}
+		\nompageref{39}
+  \item [{$ i_{*} $}]\begingroup Banda de la imagen satelital.\nomeqref {3.8}
+		\nompageref{39}
+  \item [{$ f^{'}(x,y,i) $}]\begingroup Nivel digital, con correcci\'on del pixel o linea perdida de las coordenadas $ (x,y) $ en la banda $ i $.\nomeqref {3.9}
 		\nompageref{40}
-  \item [{$ I_{ratio} $}]\begingroup Indice de cambio por el m\'etodo de ratio.\nomeqref {3.18}
+  \item [{$ f^{''}(x,y,i) $}]\begingroup Nivel digital, con correcci\'on de bandeado, del pixel con coordenadas $ (x,y) $ de la banda $ i $.\nomeqref {3.12}
 		\nompageref{40}
-  \item [{$ I_{c} $}]\begingroup Indice de cambio entre dos im\'agenes.\nomeqref {3.20}
-		\nompageref{41}
-  \item [{$ B $}]\begingroup Imagen binaria en el proceso de detecci\'on de cambio.\nomeqref {3.20}
-		\nompageref{41}
-  \item [{$ B(I_{c}) $}]\begingroup Nivel digital para el $ I_{c} $.\nomeqref {3.20}
-		\nompageref{41}
-  \item [{$ U $}]\begingroup Umbral que binariza una imagen en base a un $ I_{c} $.\nomeqref {3.20}
-		\nompageref{41}
-  \item [{$ n $}]\begingroup Coeficiente de fiabilidad de los datos.\nomeqref {3.21}
+  \item [{$ I_{dif} $}]\begingroup Indice de cambio por diferencia de im\'agenes.\nomeqref {3.13}
 		\nompageref{42}
-  \item [{$ \sigma_{I_{c}} $}]\begingroup Desviaci\'on t\'ipica de la imagen de \'Indices de cambio.\nomeqref {3.21}
+  \item [{$ I_{ratio} $}]\begingroup Indice de cambio por el m\'etodo de ratio.\nomeqref {3.13}
 		\nompageref{42}
-  \item [{$ \mu_{I_{c}} $}]\begingroup Media de la imagen de \'Indices de cambio.\nomeqref {3.21}
-		\nompageref{42}
+  \item [{$ I_{c} $}]\begingroup Indice de cambio entre dos im\'agenes.\nomeqref {3.15}
+		\nompageref{43}
+  \item [{$ B $}]\begingroup Imagen binaria en el proceso de detecci\'on de cambio.\nomeqref {3.15}
+		\nompageref{43}
+  \item [{$ B(I_{c}) $}]\begingroup Nivel digital para el $ I_{c} $.\nomeqref {3.15}
+		\nompageref{43}
+  \item [{$ U $}]\begingroup Umbral que binariza una imagen en base a un $ I_{c} $.\nomeqref {3.15}
+		\nompageref{43}
+  \item [{$ n $}]\begingroup Coeficiente de fiabilidad de los datos.\nomeqref {3.16}
+		\nompageref{44}
+  \item [{$ \sigma_{I_{c}} $}]\begingroup Desviaci\'on t\'ipica de la imagen de \'Indices de cambio.\nomeqref {3.16}
+		\nompageref{44}
+  \item [{$ \mu_{I_{c}} $}]\begingroup Media de la imagen de \'Indices de cambio.\nomeqref {3.16}
+		\nompageref{44}
   \item [{$ Z $}]\begingroup Variable tipificada.\nomeqref {4.1}
-		\nompageref{56}
+		\nompageref{58}
   \item [{$ ND_{i_{1}}^{'} $}]\begingroup Imagen normalizada, de la banda $ i $.\nomeqref {4.6}
-		\nompageref{56}
+		\nompageref{58}
   \item [{$ \sigma_{c} $}]\begingroup Desviaci\'on determinada como constante para la umbralizaci\'on de la cobertura vegetal.\nomeqref {4.7}
-		\nompageref{61}
-  \item [{$ r^{2}$}]\begingroup Coeficiente de determinaci\'on.\nomeqref {4.7}
-		\nompageref{62}
-  \item [{$ C(x,y)$}]\begingroup Toneladas de carbono por hect\'area en las coordenadas $ (x,y) $.\nomeqref {4.8}
 		\nompageref{63}
+  \item [{$ r^{2}$}]\begingroup Coeficiente de determinaci\'on.\nomeqref {4.7}
+		\nompageref{64}
+  \item [{$ C(x,y)$}]\begingroup Toneladas de carbono por hect\'area en las coordenadas $ (x,y) $.\nomeqref {4.8}
+		\nompageref{65}
   \item [{$Ic(x,y)$}]\begingroup  Indice de cambio en las coordenadas $ (x,y) $.\nomeqref {4.13}
-		\nompageref{64}
+		\nompageref{66}
   \item [{$PC(x,y)$}]\begingroup Toneladas de carbono por hect\'area perdidos en las coordenadas $ (x,y) $.\nomeqref {4.13}
-		\nompageref{64}
+		\nompageref{66}
   \item [{$ VT $}]\begingroup Puntos de verdad terreno.\nomeqref {5.0}
-		\nompageref{67}
+		\nompageref{69}
   \item [{$ T $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}
-		\nompageref{67}
+		\nompageref{69}
   \item [{$ F $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}
-		\nompageref{67}
+		\nompageref{69}
   \item [{$ TP $}]\begingroup Verdadero positivo.\nomeqref {5.0}
-		\nompageref{67}
+		\nompageref{69}
   \item [{$ FP $}]\begingroup Falso positivo.\nomeqref {5.0}
-		\nompageref{67}
+		\nompageref{69}
   \item [{$ P $}]\begingroup Total positivo.\nomeqref {5.0}
-		\nompageref{67}
+		\nompageref{69}
   \item [{$ N $}]\begingroup Total negativo.\nomeqref {5.0}
-		\nompageref{67}
+		\nompageref{69}
   \item [{$ FN $}]\begingroup Falso negativo.\nomeqref {5.0}
-		\nompageref{67}
+		\nompageref{69}
   \item [{$ P^{'} $}]\begingroup Total positivo catalogado.\nomeqref {5.0}
-		\nompageref{67}
+		\nompageref{69}
   \item [{$ N^{'} $}]\begingroup Total negativo catalogado.\nomeqref {5.0}
-		\nompageref{67}
+		\nompageref{69}
 
 \end{thenomenclature}
