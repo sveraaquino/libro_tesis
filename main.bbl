@@ -6,6 +6,12 @@ Arild Angelsen et~al.
 \newblock {\em Moving ahead with REDD: issues, options and implications}.
 \newblock Cifor, 2008.
 
+\bibitem[ACRR13]{armenteras2013national}
+Dolors Armenteras, Edersson Cabrera, Nelly Rodr{\'\i}guez, and Javier Retana.
+\newblock National and regional determinants of tropical deforestation in
+  colombia.
+\newblock {\em Regional Environmental Change}, 13(6):1181--1193, 2013.
+
 \bibitem[{\'A}JB{\etalchar{+}}01]{avila2001almacenamiento}
 G~{\'A}vila, F~Jim{\'e}nez, J~Beer, M~G{\'o}mez, and M~Ibrahim.
 \newblock Almacenamiento, fijaci{\'o}n de carbono y valoraci{\'o}n de servicios
@@ -50,6 +56,12 @@ Corey Baker, Rick Lawrence, Clifford Montagne, and Duncan Patten.
 \newblock Mapping wetlands and riparian areas using landsat etm+ imagery and
   decision-tree-based models.
 \newblock {\em Wetlands}, 26(2):465--474, 2006.
+
+\bibitem[CAGR10]{clark2010scalable}
+Matthew~L Clark, T~Mitchell Aide, H~Ricardo Grau, and George Riner.
+\newblock A scalable approach to mapping annual land cover at 250 m using modis
+  time series data: A case study in the dry chaco ecoregion of south america.
+\newblock {\em Remote Sensing of Environment}, 114(11):2816--2832, 2010.
 
 \bibitem[cal]{calent2015global}
 {¿QUÉ ES EL CALENTAMIENTO GLOBAL?}
@@ -162,6 +174,14 @@ RC—Woods Gonzalez.
 \newblock Re: Digital image processing.
 \newblock {\em Reading, Addison Wesley}, page~88, 2002.
 
+\bibitem[GRG{\etalchar{+}}13]{grinand2013estimating}
+Clovis Grinand, F{\'e}ty Rakotomalala, Val{\'e}ry Gond, Romuald Vaudry, Martial
+  Bernoux, and Ghislain Vieilledent.
+\newblock Estimating deforestation in tropical humid and dry forests in
+  madagascar from 2000 to 2010 using multi-date landsat satellite images and
+  the random forests classifier.
+\newblock {\em Remote Sensing of Environment}, 139:68--80, 2013.
+
 \bibitem[GS03]{garzuglia2003wood}
 M~Garzuglia and M~Saket.
 \newblock Wood volume and woody biomass.
@@ -172,6 +192,20 @@ M~Garzuglia and M~Saket.
 ERDAS~Field Guide.
 \newblock Erdas inc.
 \newblock {\em Atlanta, Georgia}, 672:94, 1999.
+
+\bibitem[GW15]{gu2015downscaling}
+Yingxin Gu and Bruce~K Wylie.
+\newblock Downscaling 250-m modis growing season ndvi based on multiple-date
+  landsat images and data mining approaches.
+\newblock {\em Remote Sensing}, 7(4):3489--3506, 2015.
+
+\bibitem[HBH{\etalchar{+}}12]{harris2012baseline}
+Nancy~L Harris, Sandra Brown, Stephen~C Hagen, Sassan~S Saatchi, Silvia
+  Petrova, William Salas, Matthew~C Hansen, Peter~V Potapov, and Alexander
+  Lotsch.
+\newblock Baseline map of carbon emissions from deforestation in tropical
+  regions.
+\newblock {\em Science}, 336(6088):1573--1576, 2012.
 
 \bibitem[HKS{\etalchar{+}}09]{huang2009assessment}
 Chengquan Huang, Sunghee Kim, Kuan Song, John~RG Townshend, Paul Davis, Alice
@@ -264,6 +298,14 @@ Corcoran E. Duarte C. M. Valdés L. De Young C. Fonseca L. Grimsditch~G
   Nellemann, C.
 \newblock Carbono azul. evaluación de una respuesta rápida.
 
+\bibitem[OAA{\etalchar{+}}15]{ometto2015amazon}
+Jean~Pierre Ometto, Ana~Paula Aguiar, Talita Assis, Luciana Soler, Pedro Valle,
+  Graciela Tejada, David~M Lapola, and Patrick Meir.
+\newblock Amazon forest biomass density maps: tackling the uncertainty in
+  carbon emission estimates.
+\newblock In {\em Uncertainties in Greenhouse Gas Inventories}, pages 95--110.
+  Springer, 2015.
+
 \bibitem[Oje13]{peralta2013analisis}
 Fabian Miguel~Peralta Ojeda.
 \newblock {\em An\'alisis del cambio de cobertura de la tierra y estimaci\'on
@@ -287,6 +329,13 @@ Mar{\'\i}a P{\'e}rez~Ortega.
   de humedales en la reserva de la biosfera de la mancha h{\'u}meda.
 \newblock 2011.
 
+\bibitem[PSD{\etalchar{+}}15]{palace2015estimating}
+Michael~W Palace, Franklin~B Sullivan, Mark~J Ducey, Robert~N Treuhaft,
+  Christina Herrick, Julia~Z Shimbo, and Jonas Mota-E-Silva.
+\newblock Estimating forest structure in a tropical forest using field
+  measurements, a synthetic model and discrete return lidar data.
+\newblock {\em Remote Sensing of Environment}, 161:1--11, 2015.
+
 \bibitem[RAAKR05]{radke2005image}
 Richard~J Radke, Srinivas Andra, Omar Al-Kofahi, and Badrinath Roysam.
 \newblock Image change detection algorithms: a systematic survey.
@@ -300,6 +349,14 @@ VF~Rodr{\'\i}guez-Galiano, MJ~Garc{\'\i}a-Soldado, M~Chica-Olmo,
   del cambio land-cover change analysis in {\guillemotleft}vega de
   granada{\guillemotright}: radiometric corrections.
 \newblock {\em Revista de Teledetecci{\'o}n}, 2010(34):5--15, 2010.
+
+\bibitem[RMTB{\etalchar{+}}15]{rejou2015using}
+Maxime R{\'e}jou-M{\'e}chain, Blaise Tymen, Lilian Blanc, Sophie Fauset, Ted~R
+  Feldpausch, Abel Monteagudo, Oliver~L Phillips, H{\'e}l{\`e}ne Richard, and
+  J{\'e}r{\^o}me Chave.
+\newblock Using repeated small-footprint lidar acquisitions to infer spatial
+  and temporal variations of a high-biomass neotropical forest.
+\newblock {\em Remote Sensing of Environment}, 169:93--101, 2015.
 
 \bibitem[Rob02]{robert2002captura}
 Michel Robert.
@@ -333,6 +390,13 @@ Sassan~S Saatchi, Nancy~L Harris, Sandra Brown, Michael Lefsky, Edward~TA
 \newblock {\em Proceedings of the National Academy of Sciences},
   108(24):9899--9904, 2011.
 
+\bibitem[SHS{\etalchar{+}}14]{song2014annual}
+Xiao-Peng Song, Chengquan Huang, Joseph~O Sexton, Saurabh Channan, and John~R
+  Townshend.
+\newblock Annual detection of forest cover loss using time series satellite
+  measurements of percent tree cover.
+\newblock {\em Remote Sensing}, 6(9):8878--8903, 2014.
+
 \bibitem[Sin89]{singh1989review}
 Ashbindu Singh.
 \newblock Review article digital change detection techniques using
@@ -359,6 +423,13 @@ FC~Speranza and HR~Zerda.
 \newblock Potencialidad de los {\'\i}ndices de vegetaci{\'o}n para la
   discriminaci{\'o}n de coberturas forestales.
 \newblock {\em Proyecto Picto}, 12931, 2005.
+
+\bibitem[TBH{\etalchar{+}}15]{tyukavina2015aboveground}
+A~Tyukavina, A~Baccini, MC~Hansen, PV~Potapov, SV~Stehman, RA~Houghton,
+  AM~Krylov, S~Turubanova, and SJ~Goetz.
+\newblock Aboveground carbon loss in natural and managed tropical forests from
+  2000 to 2012.
+\newblock {\em Environmental Research Letters}, 10(7):074002, 2015.
 
 \bibitem[tela]{teledUm}
 {Correciones a las imágenes de satélites}.

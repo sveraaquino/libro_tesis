@@ -3,87 +3,92 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 The style file: alpha.bst
 Database file #1: Bibliography.bib
+I was expecting an "="---line 65 of file Bibliography.bib
+ : 
+ : @article{palace2015estimating,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--entry type for "com2015color" isn't style-file defined
---line 16 of file Bibliography.bib
+--line 120 of file Bibliography.bib
 Warning--entry type for "els2015refere" isn't style-file defined
---line 48 of file Bibliography.bib
+--line 152 of file Bibliography.bib
 Warning--entry type for "ndvi2015com" isn't style-file defined
---line 54 of file Bibliography.bib
+--line 158 of file Bibliography.bib
 Warning--entry type for "chara2015sate" isn't style-file defined
---line 60 of file Bibliography.bib
-Repeated entry---line 67 of file Bibliography.bib
+--line 164 of file Bibliography.bib
+Repeated entry---line 171 of file Bibliography.bib
  : @online{chara2015sate
  :                      ,
 I'm skipping whatever remains of this entry
 Warning--entry type for "teledet2015perce" isn't style-file defined
---line 73 of file Bibliography.bib
-I was expecting a `,' or a `}'---line 82 of file Bibliography.bib
+--line 177 of file Bibliography.bib
+I was expecting a `,' or a `}'---line 186 of file Bibliography.bib
  :  
  :  year={2006},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--entry type for "ciclot2015carbo" isn't style-file defined
---line 92 of file Bibliography.bib
+--line 196 of file Bibliography.bib
 Warning--entry type for "calent2015global" isn't style-file defined
---line 98 of file Bibliography.bib
+--line 202 of file Bibliography.bib
 Warning--entry type for "teledet2015Combi" isn't style-file defined
---line 220 of file Bibliography.bib
+--line 324 of file Bibliography.bib
 Warning--entry type for "gl2015Uni" isn't style-file defined
---line 226 of file Bibliography.bib
+--line 330 of file Bibliography.bib
 Warning--entry type for "landsatNasa" isn't style-file defined
---line 232 of file Bibliography.bib
+--line 336 of file Bibliography.bib
 Warning--entry type for "teledUm" isn't style-file defined
---line 308 of file Bibliography.bib
+--line 412 of file Bibliography.bib
 Warning--entry type for "natur2015PW" isn't style-file defined
---line 500 of file Bibliography.bib
+--line 604 of file Bibliography.bib
 Warning--entry type for "BAAPA2013" isn't style-file defined
---line 508 of file Bibliography.bib
+--line 612 of file Bibliography.bib
 Warning--entry type for "nellemann2009carbono" isn't style-file defined
---line 550 of file Bibliography.bib
-Repeated entry---line 876 of file Bibliography.bib
+--line 654 of file Bibliography.bib
+Repeated entry---line 980 of file Bibliography.bib
  : @misc{mehl1997fundamentos
  :                          ,
 I'm skipping whatever remains of this entry
-"{" immediately follows a field name---line 1223 of file Bibliography.bib
+"{" immediately follows a field name---line 1327 of file Bibliography.bib
  : @article
  :         {gonzalez2013tecnicas,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1421 of file Bibliography.bib
+I was expecting a `,' or a `}'---line 1525 of file Bibliography.bib
  : 
  : @ONLINE{idf,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1752 of file Bibliography.bib
+I was expecting a `,' or a `}'---line 1856 of file Bibliography.bib
  : 
  : @ONLINE{nei,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2151 of file Bibliography.bib
+You're missing a field name---line 2255 of file Bibliography.bib
  :  
  :  %month = jul,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2167 of file Bibliography.bib
+You're missing a field name---line 2271 of file Bibliography.bib
  :  
  :  %edition = {2},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2202 of file Bibliography.bib
+You're missing a field name---line 2306 of file Bibliography.bib
  :  
  :  %month = jul,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2214 of file Bibliography.bib
+You're missing a field name---line 2318 of file Bibliography.bib
  :   
  :   %pages={185--208},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2251 of file Bibliography.bib
+You're missing a field name---line 2355 of file Bibliography.bib
  :  
  :  %issue_date = {2013},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting an "="---line 2574 of file Bibliography.bib
+I was expecting an "="---line 2678 of file Bibliography.bib
  : +´`  
  :       title={Color image palette construction based on the HSI color system for minimizing the reconstruction error},
 I'm skipping whatever remains of this entry
@@ -207,45 +212,45 @@ Warning--empty publisher in salinero2002teledeteccion
 Warning--empty journal in salinas2008guia
 Warning--there's a number but no series in sivakumar2004satellite
 Warning--there's a number but no volume in vasquez2011mineria
-You've used 68 entries,
+You've used 78 entries,
             2543 wiz_defined-function locations,
-            900 strings with 17393 characters,
-and the built_in function-call counts, 23248 in all, are:
-= -- 2263
-> -- 1064
-< -- 34
-+ -- 361
-- -- 356
-* -- 1584
-:= -- 3777
-add.period$ -- 195
-call.type$ -- 68
-change.case$ -- 393
-chr.to.int$ -- 66
-cite$ -- 109
-duplicate$ -- 956
-empty$ -- 1763
-format.name$ -- 426
-if$ -- 4724
+            954 strings with 20168 characters,
+and the built_in function-call counts, 28911 in all, are:
+= -- 2805
+> -- 1480
+< -- 35
++ -- 519
+- -- 513
+* -- 2104
+:= -- 4754
+add.period$ -- 226
+call.type$ -- 78
+change.case$ -- 496
+chr.to.int$ -- 76
+cite$ -- 119
+duplicate$ -- 1107
+empty$ -- 2075
+format.name$ -- 586
+if$ -- 5809
 int.to.chr$ -- 3
 int.to.str$ -- 0
-missing$ -- 62
-newline$ -- 335
-num.names$ -- 165
-pop$ -- 510
+missing$ -- 72
+newline$ -- 385
+num.names$ -- 195
+pop$ -- 588
 preamble$ -- 1
-purify$ -- 475
+purify$ -- 588
 quote$ -- 0
-skip$ -- 782
+skip$ -- 904
 stack$ -- 0
-substring$ -- 1016
-swap$ -- 105
-text.length$ -- 34
+substring$ -- 1344
+swap$ -- 122
+text.length$ -- 35
 text.prefix$ -- 23
 top$ -- 0
-type$ -- 496
+type$ -- 576
 warning$ -- 28
-while$ -- 186
-width$ -- 74
-write$ -- 814
-(There were 58 error messages)
+while$ -- 236
+width$ -- 84
+write$ -- 945
+(There were 59 error messages)
