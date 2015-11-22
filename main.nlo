@@ -1,53 +1,53 @@
-\nomenclatureentry{10$ r $@[{$ r $}]\begingroup Bits o Niveles radiom\'etricos de la imagen satelital.\nomeqref {3.0}|nompageref}{25}
-\nomenclatureentry{12$i$@[{$i$}]\begingroup  Banda de la imagen satelital.\nomeqref {3.0}|nompageref}{27}
-\nomenclatureentry{13$f$@[{$f$}]\begingroup  Imagen satelital.\nomeqref {3.0}|nompageref}{27}
-\nomenclatureentry{13$(x,y)$@[{$(x,y)$}]\begingroup  Coordenadas espaciales.\nomeqref {3.0}|nompageref}{27}
-\nomenclatureentry{16$(x,y,i)$@[{$(x,y,i)$}]\begingroup Coordenadas espaciales de la banda $ i $ en la imagen satelital.\nomeqref {3.0}|nompageref}{27}
-\nomenclatureentry{17$k$@[{$k$}]\begingroup  N\'umero de bandas que posee una imagen satelital.\nomeqref {3.0}|nompageref}{27}
-\nomenclatureentry{18$f(x,y,i)$@[{$f(x,y,i)$}]\begingroup  Nivel digital, en la posici\'on $ (x,y) $ de la banda $ i $, de la imagen satelital.\nomeqref {3.0}|nompageref}{27}
-\nomenclatureentry{19$ND$@[{$ND$}]\begingroup  Nivel digital de una imagen satelital.\nomeqref {3.0}|nompageref}{27}
-\nomenclatureentry{20$H(ND)$@[{$H(ND)$}]\begingroup  Funci\'on discreta que determina la cantidad de apariciones de $ ND $, en la imagen satelital.\nomeqref {3.0}|nompageref}{27}
-\nomenclatureentry{21$n_{ND}$@[{$n_{ND}$}]\begingroup  N\'umero de pixeles en la imagen satelital teniendo el nivel digital $ ND $.\nomeqref {3.0}|nompageref}{27}
-\nomenclatureentry{22$\rho$@[{$\rho$}]\begingroup Funci\'on que representa a una operaci\'on aritm\'etica, l\'ogico, entre otros.\nomeqref {3.1}|nompageref}{29}
-\nomenclatureentry{23$ndvi$@[{$ndvi$}]\begingroup Imagen del \'indice de vegetaci\'on diferencial normalizada (NDVI).\nomeqref {3.2}|nompageref}{32}
-\nomenclatureentry{24$ndvi(x,y)$@[{$ndvi(x,y)$}]\begingroup  NDVI de las coordenadas $ (x,y) $.\nomeqref {3.2}|nompageref}{32}
-\nomenclatureentry{25$R$@[{$R$}]\begingroup  Posici\'on de la banda roja en la imagen satelital.\nomeqref {3.2}|nompageref}{32}
-\nomenclatureentry{26$IRc$@[{$IRc$}]\begingroup  Posici\'on de la banda infrarroja cercana en la imagen satelital.\nomeqref {3.2}|nompageref}{32}
-\nomenclatureentry{27$ T(f) $@[{$ T(f) $}]\begingroup  Operador que corrige la imagen satelital $ f $.\nomeqref {3.2}|nompageref}{34}
-\nomenclatureentry{28$ l $@[{$ l $}]\begingroup  Grado del polinomio de ajuste.\nomeqref {3.4}|nompageref}{36}
-\nomenclatureentry{29$ (x^{'},y^{'}) $@[{$ (x^{'},y^{'}) $}]\begingroup Coordenadas de la imagen transformada.\nomeqref {3.6}|nompageref}{36}
-\nomenclatureentry{30$ RMS_{i} $@[{$ RMS_{i} $}]\begingroup Error cuadr\'atico de la banda $ i $.\nomeqref {3.7}|nompageref}{37}
-\nomenclatureentry{31$ \eta $@[{$ \eta $}]\begingroup N\'umero de puntos de control.\nomeqref {3.7}|nompageref}{37}
-\nomenclatureentry{42$ \mu $@[{$ \mu $}]\begingroup Valor de la media.\nomeqref {3.8}|nompageref}{40}
-\nomenclatureentry{43$ \sigma $@[{$ \sigma $}]\begingroup Desviaci\'on t\'ipica.\nomeqref {3.8}|nompageref}{40}
-\nomenclatureentry{44$ i_{*} $@[{$ i_{*} $}]\begingroup Banda de la imagen satelital.\nomeqref {3.8}|nompageref}{40}
-\nomenclatureentry{45$ \sigma_{i} $@[{$ \sigma_{i} $}]\begingroup Desviaci\'on t\'ipica de la banda $ i $ de una imagen satelital.\nomeqref {3.8}|nompageref}{40}
-\nomenclatureentry{46$ \sigma_{i_{*}} $@[{$ \sigma_{i_{*}} $}]\begingroup Desviaci\'on t\'ipica de la banda $ i_{*} $ de una imagen satelital.\nomeqref {3.8}|nompageref}{40}
-\nomenclatureentry{47$ f^{'}(x,y,i) $@[{$ f^{'}(x,y,i) $}]\begingroup Nivel digital, con correcci\'on del pixel o linea perdida de las coordenadas $ (x,y) $ en la banda $ i $.\nomeqref {3.9}|nompageref}{41}
-\nomenclatureentry{48$ f^{''}(x,y,i) $@[{$ f^{''}(x,y,i) $}]\begingroup Nivel digital, con correcci\'on de bandeado, del pixel con coordenadas $ (x,y) $ de la banda $ i $.\nomeqref {3.12}|nompageref}{41}
-\nomenclatureentry{49$ I_{dif} $@[{$ I_{dif} $}]\begingroup Indice de cambio por diferencia de im\'agenes.\nomeqref {3.13}|nompageref}{43}
-\nomenclatureentry{50$ I_{ratio} $@[{$ I_{ratio} $}]\begingroup Indice de cambio por el m\'etodo de ratio.\nomeqref {3.13}|nompageref}{43}
-\nomenclatureentry{51$ I_{c} $@[{$ I_{c} $}]\begingroup Indice de cambio entre dos im\'agenes.\nomeqref {3.15}|nompageref}{44}
-\nomenclatureentry{52$ B $@[{$ B $}]\begingroup Imagen binaria en el proceso de detecci\'on de cambio.\nomeqref {3.15}|nompageref}{44}
-\nomenclatureentry{53$ B(I_{c}) $@[{$ B(I_{c}) $}]\begingroup Nivel digital para el $ I_{c} $.\nomeqref {3.15}|nompageref}{44}
-\nomenclatureentry{54$ U $@[{$ U $}]\begingroup Umbral que binariza una imagen en base a un $ I_{c} $.\nomeqref {3.15}|nompageref}{44}
-\nomenclatureentry{55$ n $@[{$ n $}]\begingroup Coeficiente de fiabilidad de los datos.\nomeqref {3.16}|nompageref}{45}
-\nomenclatureentry{56$ \sigma_{I_{c}} $@[{$ \sigma_{I_{c}} $}]\begingroup Desviaci\'on t\'ipica de la imagen de \'Indices de cambio.\nomeqref {3.16}|nompageref}{45}
-\nomenclatureentry{56$ \mu_{I_{c}} $@[{$ \mu_{I_{c}} $}]\begingroup Media de la imagen de \'Indices de cambio.\nomeqref {3.16}|nompageref}{45}
-\nomenclatureentry{56$ Z $@[{$ Z $}]\begingroup Variable tipificada.\nomeqref {4.1}|nompageref}{59}
-\nomenclatureentry{57$ ND_{i_{1}}^{'} $@[{$ ND_{i_{1}}^{'} $}]\begingroup Imagen normalizada, de la banda $ i $.\nomeqref {4.6}|nompageref}{59}
-\nomenclatureentry{58$ \sigma_{c} $@[{$ \sigma_{c} $}]\begingroup Desviaci\'on determinada como constante para la umbralizaci\'on de la cobertura vegetal.\nomeqref {4.7}|nompageref}{64}
-\nomenclatureentry{59$ r^{2}$@[{$ r^{2}$}]\begingroup Coeficiente de determinaci\'on.\nomeqref {4.7}|nompageref}{65}
-\nomenclatureentry{60$ C(x,y)$@[{$ C(x,y)$}]\begingroup Toneladas de carbono por hect\'area en las coordenadas $ (x,y) $.\nomeqref {4.8}|nompageref}{66}
-\nomenclatureentry{62$Ic(x,y)$@[{$Ic(x,y)$}]\begingroup  Indice de cambio en las coordenadas $ (x,y) $.\nomeqref {4.13}|nompageref}{67}
-\nomenclatureentry{63$PC(x,y)$@[{$PC(x,y)$}]\begingroup Toneladas de carbono por hect\'area perdidos en las coordenadas $ (x,y) $.\nomeqref {4.13}|nompageref}{67}
-\nomenclatureentry{64$ VT $@[{$ VT $}]\begingroup Puntos de verdad terreno.\nomeqref {5.0}|nompageref}{70}
-\nomenclatureentry{65$ T $@[{$ T $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}|nompageref}{70}
-\nomenclatureentry{66$ F $@[{$ F $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}|nompageref}{70}
-\nomenclatureentry{67$ TP $@[{$ TP $}]\begingroup Verdadero positivo.\nomeqref {5.0}|nompageref}{70}
-\nomenclatureentry{68$ FP $@[{$ FP $}]\begingroup Falso positivo.\nomeqref {5.0}|nompageref}{70}
-\nomenclatureentry{69$ P $@[{$ P $}]\begingroup Total positivo.\nomeqref {5.0}|nompageref}{70}
-\nomenclatureentry{70$ N $@[{$ N $}]\begingroup Total negativo.\nomeqref {5.0}|nompageref}{70}
-\nomenclatureentry{71$ FN $@[{$ FN $}]\begingroup Falso negativo.\nomeqref {5.0}|nompageref}{70}
-\nomenclatureentry{72$ P^{'} $@[{$ P^{'} $}]\begingroup Total positivo catalogado.\nomeqref {5.0}|nompageref}{70}
-\nomenclatureentry{73$ N^{'} $@[{$ N^{'} $}]\begingroup Total negativo catalogado.\nomeqref {5.0}|nompageref}{70}
+\nomenclatureentry{10$ r $@[{$ r $}]\begingroup Bits o Niveles radiom\'etricos de la imagen satelital.\nomeqref {3.0}|nompageref}{28}
+\nomenclatureentry{12$i$@[{$i$}]\begingroup  Banda de la imagen satelital.\nomeqref {3.0}|nompageref}{30}
+\nomenclatureentry{13$f$@[{$f$}]\begingroup  Imagen satelital.\nomeqref {3.0}|nompageref}{30}
+\nomenclatureentry{13$(x,y)$@[{$(x,y)$}]\begingroup  Coordenadas espaciales.\nomeqref {3.0}|nompageref}{30}
+\nomenclatureentry{16$(x,y,i)$@[{$(x,y,i)$}]\begingroup Coordenadas espaciales de la banda $ i $ en la imagen satelital.\nomeqref {3.0}|nompageref}{30}
+\nomenclatureentry{17$k$@[{$k$}]\begingroup  N\'umero de bandas que posee una imagen satelital.\nomeqref {3.0}|nompageref}{30}
+\nomenclatureentry{18$f(x,y,i)$@[{$f(x,y,i)$}]\begingroup  Nivel digital, en la posici\'on $ (x,y) $ de la banda $ i $, de la imagen satelital.\nomeqref {3.0}|nompageref}{30}
+\nomenclatureentry{19$ND$@[{$ND$}]\begingroup  Nivel digital de una imagen satelital.\nomeqref {3.0}|nompageref}{30}
+\nomenclatureentry{20$H(ND)$@[{$H(ND)$}]\begingroup  Funci\'on discreta que determina la cantidad de apariciones de $ ND $, en la imagen satelital.\nomeqref {3.0}|nompageref}{30}
+\nomenclatureentry{21$n_{ND}$@[{$n_{ND}$}]\begingroup  N\'umero de pixeles en la imagen satelital teniendo el nivel digital $ ND $.\nomeqref {3.0}|nompageref}{30}
+\nomenclatureentry{22$\rho$@[{$\rho$}]\begingroup Funci\'on que representa a una operaci\'on aritm\'etica, l\'ogico, entre otros.\nomeqref {3.1}|nompageref}{32}
+\nomenclatureentry{23$ndvi$@[{$ndvi$}]\begingroup Imagen del \'indice de vegetaci\'on diferencial normalizada (NDVI).\nomeqref {3.2}|nompageref}{35}
+\nomenclatureentry{24$ndvi(x,y)$@[{$ndvi(x,y)$}]\begingroup  NDVI de las coordenadas $ (x,y) $.\nomeqref {3.2}|nompageref}{35}
+\nomenclatureentry{25$R$@[{$R$}]\begingroup  Posici\'on de la banda roja en la imagen satelital.\nomeqref {3.2}|nompageref}{35}
+\nomenclatureentry{26$IRc$@[{$IRc$}]\begingroup  Posici\'on de la banda infrarroja cercana en la imagen satelital.\nomeqref {3.2}|nompageref}{35}
+\nomenclatureentry{27$ T(f) $@[{$ T(f) $}]\begingroup  Operador que corrige la imagen satelital $ f $.\nomeqref {3.2}|nompageref}{37}
+\nomenclatureentry{28$ l $@[{$ l $}]\begingroup  Grado del polinomio de ajuste.\nomeqref {3.4}|nompageref}{39}
+\nomenclatureentry{29$ (x^{'},y^{'}) $@[{$ (x^{'},y^{'}) $}]\begingroup Coordenadas de la imagen transformada.\nomeqref {3.6}|nompageref}{39}
+\nomenclatureentry{30$ RMS_{i} $@[{$ RMS_{i} $}]\begingroup Error cuadr\'atico de la banda $ i $.\nomeqref {3.7}|nompageref}{40}
+\nomenclatureentry{31$ \eta $@[{$ \eta $}]\begingroup N\'umero de puntos de control.\nomeqref {3.7}|nompageref}{40}
+\nomenclatureentry{42$ \mu $@[{$ \mu $}]\begingroup Valor de la media.\nomeqref {3.8}|nompageref}{43}
+\nomenclatureentry{43$ \sigma $@[{$ \sigma $}]\begingroup Desviaci\'on t\'ipica.\nomeqref {3.8}|nompageref}{43}
+\nomenclatureentry{44$ i_{*} $@[{$ i_{*} $}]\begingroup Banda de la imagen satelital.\nomeqref {3.8}|nompageref}{43}
+\nomenclatureentry{45$ \sigma_{i} $@[{$ \sigma_{i} $}]\begingroup Desviaci\'on t\'ipica de la banda $ i $ de una imagen satelital.\nomeqref {3.8}|nompageref}{43}
+\nomenclatureentry{46$ \sigma_{i_{*}} $@[{$ \sigma_{i_{*}} $}]\begingroup Desviaci\'on t\'ipica de la banda $ i_{*} $ de una imagen satelital.\nomeqref {3.8}|nompageref}{43}
+\nomenclatureentry{47$ f^{'}(x,y,i) $@[{$ f^{'}(x,y,i) $}]\begingroup Nivel digital, con correcci\'on del pixel o linea perdida de las coordenadas $ (x,y) $ en la banda $ i $.\nomeqref {3.9}|nompageref}{44}
+\nomenclatureentry{48$ f^{''}(x,y,i) $@[{$ f^{''}(x,y,i) $}]\begingroup Nivel digital, con correcci\'on de bandeado, del pixel con coordenadas $ (x,y) $ de la banda $ i $.\nomeqref {3.12}|nompageref}{44}
+\nomenclatureentry{49$ I_{dif} $@[{$ I_{dif} $}]\begingroup Indice de cambio por diferencia de im\'agenes.\nomeqref {3.13}|nompageref}{46}
+\nomenclatureentry{50$ I_{ratio} $@[{$ I_{ratio} $}]\begingroup Indice de cambio por el m\'etodo de ratio.\nomeqref {3.13}|nompageref}{46}
+\nomenclatureentry{51$ I_{c} $@[{$ I_{c} $}]\begingroup Indice de cambio entre dos im\'agenes.\nomeqref {3.15}|nompageref}{47}
+\nomenclatureentry{52$ B $@[{$ B $}]\begingroup Imagen binaria en el proceso de detecci\'on de cambio.\nomeqref {3.15}|nompageref}{47}
+\nomenclatureentry{53$ B(I_{c}) $@[{$ B(I_{c}) $}]\begingroup Nivel digital para el $ I_{c} $.\nomeqref {3.15}|nompageref}{47}
+\nomenclatureentry{54$ U $@[{$ U $}]\begingroup Umbral que binariza una imagen en base a un $ I_{c} $.\nomeqref {3.15}|nompageref}{47}
+\nomenclatureentry{55$ n $@[{$ n $}]\begingroup Coeficiente de fiabilidad de los datos.\nomeqref {3.16}|nompageref}{48}
+\nomenclatureentry{56$ \sigma_{I_{c}} $@[{$ \sigma_{I_{c}} $}]\begingroup Desviaci\'on t\'ipica de la imagen de \'Indices de cambio.\nomeqref {3.16}|nompageref}{48}
+\nomenclatureentry{56$ \mu_{I_{c}} $@[{$ \mu_{I_{c}} $}]\begingroup Media de la imagen de \'Indices de cambio.\nomeqref {3.16}|nompageref}{48}
+\nomenclatureentry{56$ Z $@[{$ Z $}]\begingroup Variable tipificada.\nomeqref {4.1}|nompageref}{62}
+\nomenclatureentry{57$ ND_{i_{1}}^{'} $@[{$ ND_{i_{1}}^{'} $}]\begingroup Imagen normalizada, de la banda $ i $.\nomeqref {4.6}|nompageref}{62}
+\nomenclatureentry{58$ \sigma_{c} $@[{$ \sigma_{c} $}]\begingroup Desviaci\'on determinada como constante para la umbralizaci\'on de la cobertura vegetal.\nomeqref {4.7}|nompageref}{67}
+\nomenclatureentry{59$ r^{2}$@[{$ r^{2}$}]\begingroup Coeficiente de determinaci\'on.\nomeqref {4.7}|nompageref}{68}
+\nomenclatureentry{60$ C(x,y)$@[{$ C(x,y)$}]\begingroup Toneladas de carbono por hect\'area en las coordenadas $ (x,y) $.\nomeqref {4.8}|nompageref}{69}
+\nomenclatureentry{62$Ic(x,y)$@[{$Ic(x,y)$}]\begingroup  Indice de cambio en las coordenadas $ (x,y) $.\nomeqref {4.13}|nompageref}{70}
+\nomenclatureentry{63$PC(x,y)$@[{$PC(x,y)$}]\begingroup Toneladas de carbono por hect\'area perdidos en las coordenadas $ (x,y) $.\nomeqref {4.13}|nompageref}{70}
+\nomenclatureentry{64$ VT $@[{$ VT $}]\begingroup Puntos de verdad terreno.\nomeqref {5.0}|nompageref}{73}
+\nomenclatureentry{65$ T $@[{$ T $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}|nompageref}{73}
+\nomenclatureentry{66$ F $@[{$ F $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}|nompageref}{73}
+\nomenclatureentry{67$ TP $@[{$ TP $}]\begingroup Verdadero positivo.\nomeqref {5.0}|nompageref}{73}
+\nomenclatureentry{68$ FP $@[{$ FP $}]\begingroup Falso positivo.\nomeqref {5.0}|nompageref}{73}
+\nomenclatureentry{69$ P $@[{$ P $}]\begingroup Total positivo.\nomeqref {5.0}|nompageref}{73}
+\nomenclatureentry{70$ N $@[{$ N $}]\begingroup Total negativo.\nomeqref {5.0}|nompageref}{73}
+\nomenclatureentry{71$ FN $@[{$ FN $}]\begingroup Falso negativo.\nomeqref {5.0}|nompageref}{73}
+\nomenclatureentry{72$ P^{'} $@[{$ P^{'} $}]\begingroup Total positivo catalogado.\nomeqref {5.0}|nompageref}{73}
+\nomenclatureentry{73$ N^{'} $@[{$ N^{'} $}]\begingroup Total negativo catalogado.\nomeqref {5.0}|nompageref}{73}
