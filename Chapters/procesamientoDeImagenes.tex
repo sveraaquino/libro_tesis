@@ -97,7 +97,14 @@ El histograma de una imagen satelital, con niveles digitales en el rango de $ [0
   	\nomenclature[19]{$ND$}{ Nivel digital de una imagen satelital.}
   	\nomenclature[20]{$H(ND)$}{ Funci\'on discreta que determina la cantidad de apariciones de $ ND $, en la imagen satelital.}  	
   	\nomenclature[21]{$n_{ND}$}{ N\'umero de pixeles en la imagen satelital teniendo el nivel digital $ ND $.}  	  	
-El histograma de una una imagen satelital, es una representaci\'on gr\'afica \'util de la informaci\'on contenida por las im\'agenes obtenidas a trav\'es de la percepci\'on remota. Los analistas a menudo despliegan el histograma en cada banda, ya que proporciona una apreciaci\'on de la calidad de los datos que presenta una imagen. Por ejemplo si el contraste es bajo o muy alto (histogramas estrechos y amplios); si son multimodales responden a distintos tipos de coberturas detectadas (agua, humedales, tipos de vegetaci\'on, etc.), si en  el histograma de la banda infrarroja cercana se encuentran picos desplazados hacia la derecha implicar\'ia que existe una alta probabilidad de aparici\'on vegetal en la imagen, entre otros an\'alisis.
+ 	\begin{figure}[H]
+ 		\centering
+ 		\includegraphics[width=0.7	\textwidth]{./Figures/cap3/histograma_def.png}
+ 		\caption{Histograma de una imagen con niveles digitales de $ 0 $ a $ 255 $.}
+ 		\label{fig:histDef}
+ 	\end{figure}
+El histograma de una una imagen satelital es una representaci\'on gr\'afica \'util de la informaci\'on contenida por las im\'agenes obtenidas a trav\'es de la percepci\'on remota. En la Figura \ref{fig:histDef} podemos observar que para cada nivel digital va asociado un n\'umero de apariciones en la imagen.\\~\\
+ Los analistas a menudo despliegan el histograma en cada banda, ya que proporciona una apreciaci\'on de la calidad de los datos que presenta una imagen. Por ejemplo si el contraste es bajo o muy alto (histogramas estrechos y amplios); si son multimodales responden a distintos tipos de coberturas detectadas (agua, humedales, tipos de vegetaci\'on, etc.), si en  el histograma de la banda infrarroja cercana se encuentran picos desplazados hacia la derecha implicar\'ia que existe una alta probabilidad de aparici\'on vegetal en la imagen, entre otros an\'alisis.
 
 \subsection{Combinaci\'on de bandas}
 La visualizaci\'on de las im\'agenes de teledetecci\'on es mejor cuando se tiene una representaci\'on en colores, ya que el ojo humano percibe mejor las diferencias de color que los niveles de gris.\\~\\
@@ -135,7 +142,7 @@ El \'algebra de mapas constituye un marco te\'orico en la mayor parte de las ope
 			\item Trigonom\'etrico (sen, cos, tan, ...).
 			\item Condicional (si cumple la condición ejecuta la instrucción).
 		\end{itemize}
-		La Figura \ref{fig:oploccond} nos muestra el proceso de operadores locales l\'ogico y condicional. En el \'item (a), el operador l\'ogico binariza la imagen si $ DEM > 400 $, mientras que en el \'item (b) el operador condicional clasifica la imagen en base a un rango.
+		La Figura \ref{fig:oploccond} nos muestra el proceso de operadores locales l\'ogico y condicional. En el \'item (a), el operador l\'ogico binariza la imagen si $ DEM > 400 $, mientras que en el \'item (b) el operador condicional clasifica la imagen en base a un rango ($ 600 - 650 = 1; 650 - 700 = 2; 700 - 750 = 3; 750 - 800 = 4 $).
 		  \begin{figure}[H]
 		  	\centering
 		  	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/operadores.png}
@@ -199,15 +206,13 @@ fechas alejadas en el tiempo, estudiando el dinamismo temporal de una determinad
 En el enfoque aplicado al estudio multitemporal resulta preciso abordar previamente una serie de tratamientos sobre las im\'agenes satelitales de cara a garantizar su comparabilidad, ya que existen factores naturales o las del sensor, que influyen desde la captura de informaci\'on hasta su transformaci\'on final a niveles digitales que afectar\'ia el an\'alisis.
 
 \section{Correcciones a las im\'agenes satelitales}
-Las correcciones satelitales son el producto de aplicar un operador $ T $ a una imagen satelital para la obtenci\'on de otra $ f^{'}=T(f) $ imagen satelital. Las correcciones son hechas debido a que una imagen de sat\'elite est\'a sometida a una serie de interferencias que hacen que la informaci\'on que quiere obtenerse aparezca perturbada por una serie de errores \cite{teledUm}:
-\nomenclature[27]{$ T(f) $}{ Operador que corrige la imagen satelital $ f $.}
-	\begin{itemize}
-		\item Fallos en los sensores, generan pixeles con niveles digitales que no representan la reflectividad de los objetos terrestres.
-		\item Alteraciones en el movimiento del sat\'elite y el mecanismo de captaci\'on e los sensores, generan
-		distorsiones en la imagen global.
-		\item Interferencia de la atm\'osfera, alteran de forma sistem\'atica los valores de los pixeles.
-	\end{itemize}
-
+Las correcciones satelitales son el producto de aplicar un operador a una imagen satelital para la obtenci\'on de otra. Las correcciones est\'an definida seg\'un la expresi\'on:
+		\begin{equation}
+			f^{'}=T[f]
+		\end{equation} 
+Donde $ f $ es una imagen satelital de entrada, $ f^{'} $ es la imagen procesada y $ T $ es un operador de $ f $.
+Las correcciones son realizadas debido a fallos en los sensores, alteraciones en el movimiento del sat\'elite o interferencias de la atm\'osfera \cite{teledUm}.
+\nomenclature[27]{$ T[f] $}{ Operador que corrige la imagen satelital $ f $.}
 \subsection{Correccci\'on geom\'etrica}\label{sec:corrGeometrica}
 Una imagen de sat\'elite, al igual que las fotograf\'ias a\'ereas, no proporciona informaci\'on georreferenciada; cada pixel se ubica en un sistema de coordenadas arbitrario de tipo fila-columna como los que manejan los programas de tratamiento digital de im\'agenes \cite{deniseCultivos}.\\~\\
 El proceso consiste en dar a cada pixel su localizaci\'on en un sistema de coordenadas estandard (UTM, lambert, coordenadas geogr\'aficas) para poder combinar la imagen de sat\'elite con otro tipo de capas en un entorno SIG. El proceso obtiene una nueva capa en la que cada columna corresponde con un valor de longitud y cada fila con un valor de latitud. En caso de que la imagen no hubiese sufrido ningún tipo de distorsi\'on, el procedimiento ser\'ia bastante sencillo, sin embargo una imagen puede sufrir diversos tipos de distorsiones.\\~\\
