@@ -197,8 +197,7 @@ En la Figura \ref{fig:firmaVegetacion} podemos observar como las plantas muestra
 
 \subsubsection{Caracter\'isticas del NDVI}\label{subsec:subndvi}
 El NDVI es un \'indice usado para estimar la cantidad, calidad y desarrollo de la vegetaci\'on por medio de sensores remotos instalados com\'unmente desde la plataforma espaciales, es decir mide las condiciones de vigor vegetal de la planta, principalmente su contenido en clorofila \cite{salinero2002teledeteccion}. El objetivo del NDVI es la reducci\'on de m\'ultiples bandas a una sola, condensando la informaci\'on m\'as importante, en este caso la vegetaci\'on.\\~\\
-La principal ventaja del NDVI es su f\'acil interpretaci\'on, ya que sus valores var\'ian entre -1 y +1, permitiendo conocer el estado de vigor vegetal en grandes superficies y detecta fen\'omenos de amplio rango \cite{salinero2002teledeteccion}.\\~\\
-
+La principal ventaja del NDVI es su f\'acil interpretaci\'on, ya que sus valores var\'ian entre -1 y +1, permitiendo conocer el estado de vigor vegetal en grandes superficies y detecta fen\'omenos de amplio rango \cite{salinero2002teledeteccion}.
 
 \section{An\'alisis Multitemporal}
 El an\'alisis multitemporal de im\'agenes satelitales consiste en el estudio de zonas determinadas mediante tomas hechas en diferentes tiempos. El factor temporal puede abordarse con un doble objetivo: por un lado reconstruir la variaci\'on estacional de la zona y por otra parte la detecci\'on de cambios. Este \'ultimo objetivo se enfoca en detectar cambios entre dos o m\'as
@@ -210,8 +209,7 @@ Las correcciones satelitales son el producto de aplicar un operador a una imagen
 		\begin{equation}
 			f^{'}=T[f]
 		\end{equation} 
-Donde $ f $ es una imagen satelital de entrada, $ f^{'} $ es la imagen procesada y $ T $ es un operador de $ f $.
-Las correcciones son realizadas debido a fallos en los sensores, alteraciones en el movimiento del sat\'elite o interferencias de la atm\'osfera \cite{teledUm}.
+Donde $ f $ es una imagen satelital de entrada, $ f^{'} $ es la imagen corregida y $ T $ es un operador que realiza las correcciones a la imagen $ f $, debido a fallos en los sensores, alteraciones en el movimiento del sat\'elite o interferencias de la atm\'osfera \cite{teledUm}.
 \nomenclature[27]{$ T[f] $}{ Operador que corrige la imagen satelital $ f $.}
 \subsection{Correccci\'on geom\'etrica}\label{sec:corrGeometrica}
 Una imagen de sat\'elite, al igual que las fotograf\'ias a\'ereas, no proporciona informaci\'on georreferenciada; cada pixel se ubica en un sistema de coordenadas arbitrario de tipo fila-columna como los que manejan los programas de tratamiento digital de im\'agenes \cite{deniseCultivos}.\\~\\
@@ -238,8 +236,6 @@ El m\'etodo mas utilizado para la transformaci\'on es el de ecuaciones polin\'om
 
 
 \nomenclature[28]{$ l $}{ Grado del polinomio de ajuste.}
-
-
 Donde $ x^{'}_{i} $ e $ y^{'}_{i} $ indica la coordenada en la imagen corregida para la banda $ i $. El superindice $ l $ indica el grado del polinomio de ajuste, $ a_{i} $ y $ b_{i} $ los coeficientes del polinomio. Siendo la ecuaci\'on lineal las mas simple:
 	\begin{equation}
 	x^{'}_{i} = a_{0}+a_{1}x_{i}+a_{2}y_{i}
@@ -257,7 +253,6 @@ En la Figura \ref{fig:intPolEcua} podemos observar las transformaciones con poli
     	\caption{Interpolaci\'on espacial con polinomios de primer y segundo orden.}
     	\label{fig:intPolEcua}
     \end{figure}
-    
   \paragraph{Calidad de la interpolaci\'on espacial. }\mbox{}\\\mbox{}\\
  La calidad en la interpolaci\'on espacial y los puntos de control seleccionados $ \eta $ se calcula utilizando el promedio de los errores cuadráticos medios (RMS), que consiste en la diferencia entre la coordenada transformada deseada para un punto de control y la coordenada real obtenida como salida.
 
@@ -292,7 +287,7 @@ En la Figura \ref{fig:vecinoMasCercano2} se observa el como los pixeles de la im
 				    	\label{fig:vecinoMasCercano2}
 				    \end{figure}
 		
-		\item \textbf{Interpolaci\'on bilineal:} Considera el valor de los 4 pixeles mas cercanos en la imagen de entrada para asignar el nuevo valor de la imagen de salida. Las ventajas son que no existe el efecto de escalones en los bordes pudiendo aparecer en el vecino superior izquierdo y ademas cuenta con mejor exactitud espacial. El m\'etodo es utilizado a menudo cuando se cambia el tama\~{n}o de las celdas en los datos. La desventaja es que como los pixeles son promediados, algunos extremos de los valores de los datos pueden perderse. La Figura \ref{fig:bilineal2} podemos observar los 4 pixeles cercanos tomados para la interpolaci\'on.
+		\item \textbf{Interpolaci\'on bilineal:} Considera el valor de los 4 pixeles mas cercanos en la imagen de entrada para asignar el nuevo valor de la imagen de salida. Las ventajas son que no existe el efecto de escalones en los bordes pudiendo aparecer en el vecino superior izquierdo y ademas cuenta con mejor exactitud espacial. El m\'etodo es utilizado a menudo cuando se cambia el tama\~{n}o de las celdas en los datos. La desventaja es que como los pixeles son promediados, algunos extremos de los valores de los datos pueden perderse. En la Figura \ref{fig:bilineal2} podemos observar los 4 pixeles cercanos tomados para la interpolaci\'on.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[width=0.6	\textwidth]{./Figures/cap3/bilineal.png}
@@ -319,12 +314,12 @@ La correci\'on radiom\'etrica se encarga de minimizar los desajustes producidos 
 La Figura \ref{fig:correcError} nos muestran tres tipos de errores radiom\'etricos frecuentes, donde la lineas claras representan pixeles que no representan su nivel digital correcto a causa de la descalibraci\'on del sensor. Las lineas y pixeles negros son pixeles nulos que no pudieron ser convertidos a su nivel digital por fallos en el detector o transmisiones, como tambi\'en por conversiones de la informaci\'on anal\'ogica a digital.
 
 \subsubsection{Pixeles o lineas perdidas}\label{subsec:pixelesP}
-Sea $ f^{'} $ una imagen satelital con los pixeles corregidos, mediante estimaciones de la media entre los pixeles contiguos. Donde cada nivel digital es calculado de la siguiente manera: 
+Sea $ f^{'} $ una imagen satelital con los pixeles corregidos, mediante estimaciones de la media entre los pixeles adyacentes. Donde cada nivel digital es calculado de la siguiente manera: 
 
 		\begin{equation}\label{ec:pixelPerdido}
-		f^{'}(x,y,i) =  round(\dfrac{f(x-1,y,i) + f(x+1,y,i)}{2})
+		f^{'}(x,y,i) =  ceiling(1/2 \times [f(x-1,y,i) + f(x+1,y,i)])
 		\end{equation} 
-Donde ($ round(:) $) representa redondeo hacia arriba. No es recomendable utilizar los pixeles contiguos de la misma linea (eje $ y $) por que han sido captados por el mismo detector o banda que ha dado el fallo, por tanto son poco fiables.
+Donde $ ceiling(:) $ representa la funci\'on techo (redondeo para arriba). No es recomendable utilizar los pixeles adyacentes de la misma linea (eje $ y $) por que han sido captados por el mismo detector o banda que ha dado el fallo, por tanto son poco fiables.
 
 				\nomenclature[42]{$ \mu $}{Valor de la media.}
 				\nomenclature[43]{$ \sigma $}{Desviaci\'on t\'ipica.}
@@ -333,10 +328,13 @@ Donde ($ round(:) $) representa redondeo hacia arriba. No es recomendable utiliz
 				\nomenclature[46]{$ \sigma_{i_{*}} $}{Desviaci\'on t\'ipica de la banda $ i_{*} $ de una imagen satelital.}
 La bandas de una imagen son de detectores diferentes y est\'an altamente correlacionadas, por lo que se hace una modificaci\'on a la ecuaci\'on \ref{ec:pixelPerdido} teniendo en cuenta la banda $ i_{*} $ de la imagen satelital, donde $ i_{*} \in [1,k] $, pudiendo utilizarse el valor del pixel faltante en una banda diferente para mejorar la estimaci\'on:
 		\begin{equation}
-		f^{'}(x,y,i) = \ulcorner (\dfrac{f(x-1,y,i)-f(x+1,y,i)}{2})+ \dfrac{\sigma_{i}}{\sigma_{i_{*}}} +(f(x,y,i_{*})-\dfrac{f(x-1,y,i_{*})-f(x+1,y,i_{*})}{2}) \urcorner
+		f^{'}(x,y,i) = ceiling( dif_{i}+ \dfrac{\sigma_{i}}{\sigma_{i_{*}}} \times [f(x,y,i_{*})-dif_{i_{*}}])
 		\end{equation} 
-\nomenclature[47]{$ f^{'}(x,y,i) $}{Nivel digital, con correcci\'on del pixel o linea perdida de las coordenadas $ (x,y) $ en la banda $ i $.}
-Donde $ \sigma_{i} $ representa la desviaci\'on t\'ipica de la banda $ i $ y $ \sigma_{i_{*}} $ representa la desviaci\'on t\'ipica de la banda $ i $.\\~\\
+\nomenclature[47]{$ f^{'}(x,y,i) $}{Imagen satelital corregida, con coordenadas espaciales $ (x,y) $ en la banda $ i $.}
+Donde $ \sigma_{i} $ representa la desviaci\'on t\'ipica de la banda $ i $, $ \sigma_{i_{*}} $ representa la desviaci\'on t\'ipica de la banda $ i_{*} $ y la variable $ dif_{e} $, donde $ e \in \{ i,i_{*}\} $, esta representada por la siguiente expresi\'on:
+		\begin{equation}
+		 dif_{e}  = 1/2 \times [f(x-1,y,e) + f(x+1,y,e)]
+		\end{equation} 
 En caso de que la imagen abarque un territorio amplio y cambiante resulta recomendable calcular las desviaciones t\'ipicas ($ \sigma_{i} $ y $ \sigma_{i_{*}} $) en un entorno cercano al pixel perdido.\\~\\
 Para detectar lineas perdidas se compara la media de los $ ND $ de una linea con las medias de las lineas anterior y posterior, para detectar pixeles perdidos se compara el valor de un pixel con los de los 8 pixeles.
 \subsubsection{Bandeado}\label{subsec:bandeado}
@@ -347,14 +345,14 @@ En primer lugar se calculan los coeficientes $ m $ y $ s $ para una correcci\'on
 		m =\dfrac{\sigma_{i}}{\sigma_{i_{*}}}
 		\end{equation} 	
 				\begin{equation}
-				s=\mu_{i} - m\mu_{i_{*}}
+				s=\mu_{i} - m \times \mu_{i_{*}}
 				\end{equation} 	
 				
-Siendo $ \mu_{i} $ y $ \mu_{i_{*}} $ las medias para la banda $ i $ e $ i_{*} $. Donde cada nivel digital de la imagen satelital $ f^{''} $ es calcula de la siguiente manera:
+Siendo $ \mu_{i} $ y $ \mu_{i_{*}} $ las medias para la banda $ i $ e $ i_{*} $. Donde cada nivel digital de la imagen satelital $ f^{'} $ es calcula de la siguiente manera:
 				\begin{equation}
-				f^{''}(x,y,i) = m f'(x,y,i) + s
+				f^{'}(x,y,i) = m \times f(x,y,i) + s
 				\end{equation} 				
-		\nomenclature[48]{$ f^{''}(x,y,i) $}{Nivel digital, con correcci\'on de bandeado, del pixel con coordenadas $ (x,y) $ de la banda $ i $.}
+
 En Figura \ref{fig:bandeado} podemos observar el histogramas de una banda corregida en funci\'on a las dem\'as bandas pertenecientes a una imagen satelital. 
     \begin{figure}[H]
     	\centering
@@ -367,24 +365,25 @@ En Figura \ref{fig:bandeado} podemos observar el histogramas de una banda correg
 	En los m\'etodos comunes de detecci\'on de cambios se asigna un valor correspondiente al grado de cambio sobre cada pixel, independientemente del resto de la imagen satelital. En estos m\'etodos se considera el pixel como unidad b\'asica (\'algebra de mapas) para aplicar las correspondientes operaciones matem\'aticas asociadas a cada algoritmo.\\~\\
 Los m\'etodos de comparaci\'on, generan una imagen (\'indice de cambios) que representa el grado de cambio entre dos situaciones temporales; los pixeles de la imagen resultante, contienen una variable continua de tipo cuantitativo (Niveles digitales), por lo que se requieren t\'ecnicas que los conviertan en variables cualitativa (Categor\'ias) \cite{martinez2013normalizacion}.
 \subsection{Comparaci\'on multitemporal}\label{subsec:compMult}
-La comparaci\'on parte de un par de im\'agenes semejantes que abarcan la misma zona de estudio, siguiendo una secuencia multitemporal. Una secuencia multitemporal esta definido por $ \{f_{j}\}_{j \in \mathbb{N}} $, donde cada imagen satelital representa a una en diferentes tiempos. Las operaciones m\'as utilizadas son \cite{chuvieco1998factor}: 
+La comparaci\'on parte de un par de im\'agenes semejantes que abarcan la misma zona de estudio, siguiendo una secuencia multitemporal. Una secuencia multitemporal esta definido por $ \{f_{t}\}_{t \in \mathbb{N}} $, donde cada imagen satelital representa a una en diferentes tiempos. Las operaciones m\'as utilizadas son \cite{chuvieco1998factor}: 
 	\begin{itemize}
 		\item \textbf{Diferencia de im\'agenes:} es el m\'etodo m\'as simple, f\'acil de interpretar y directo, ya que consiste en una diferencia algebraica entre los niveles digitales ($ ND $ ) inicial y final para la obtenci\'on de un \'indice ($ I_{dif} $). Normalmente es realizada combinada  con extracciones de \'indices espectrales.
 								\begin{equation}
-								I_{dif} = f_{2}-f_{1}
+								I_{dif} = f_{t_{*}}-f_{t}
 								\end{equation} 	
+		Donde $ t_{*} \neq t $.
 \nomenclature[49]{$ I_{dif} $}{Indice de cambio por diferencia de im\'agenes.}
 \nomenclature[50]{$ I_{ratio} $}{Indice de cambio por el m\'etodo de ratio.}
 				\item \textbf{Ratio:} se obtiene aplicando la operación de cociente, entre los niveles digitales ($ ND $ ) inicial y final para la obtenci\'on de un \'indice ($ I_{ratio} $). Podr\'ia  generar mejores resultados pero no se ajusta a una distribución normal.
 										\begin{equation}
-										I_{ratio} = \dfrac{f_{2}}{f_{1}}
+										I_{ratio} = \dfrac{f_{t_{*}}}{f_{t}}
 										\end{equation} 	
 
 		\end{itemize}
-Estas dos operaciones generan una imagen con \'indices de cambios $ I_{c} $ a partir de cada conjunto de datos multitemporal, dando lugar a tantos mapas de cambios como bandas/capas se consideren; son de gran utilidad cuando se trabaje con im\'agenes pancrom\'aticas o \'indices espectrales/texturales.
+Estas dos operaciones generan una imagen con \'indices de cambios $ I_{c} $ a partir de cada conjunto de datos multitemporal, dando lugar a tantos mapas de cambios como bandas/capas se consideren.
 \subsection{Criterios de decisi\'on}
 El resultado de los c\'alculos es una imagen en donde el valor de salida indica el grado de cambio, desde la mayor p\'erdida a la mayor ganancia, en una escala gradual. Si se pretende generar una imagen binaria (cambio/estable), es preciso se\~{n}alar un umbral que delimite ambas categor\'ias en las im\'agenes. Ah\'i se plantea un problema de dif\'icil soluci\'on ya que no existen criterios de aplicación general.\\~\\
-Si el cambio abarca un sector importante de la imagen, el histograma de la imagen de cambios debiese mostrar un perfil bimodal, lo que permitir\'ia establecer umbrales naturales de cambio, aunque esta situaci\'on no es muy habitual, ya que los cambios en la naturaleza no suelen producirse de modo abrupto \cite{martinez2013normalizacion}.\\~\\
+Si el cambio abarca un sector importante de la imagen, el histograma de la imagen de cambios ($ I_{c} $) debiese mostrar un perfil bimodal, lo que permitir\'ia establecer umbrales naturales de cambio, aunque esta situaci\'on no es muy habitual, ya que los cambios en la naturaleza no suelen producirse de modo abrupto \cite{martinez2013normalizacion}.\\~\\
 Si es necesario establecer un umbral para separar las \'areas de cambio, puede optarse por se\~{n}alar alg\'un criterio estad\'istico, como la media y la desviaci\'on t\'ipica de una serie de p\'ixeles elegidos aleatoriamente. En ocasiones se ha propuesto utilizar unas \'areas de entrenamiento para calcular que rango de desviaci\'on se pod\'ia considerar l\'imite para p\'ixeles estables, aplicando luego ese valor al conjunto de la imagen \cite{tung1988determination}.
 
 \subsubsection{Discriminaci\'on de las zonas de cambio}\label{sec:discriminacion}
@@ -392,7 +391,7 @@ La comparaciones multitemporales generan indices que corresponden a variables cu
 Sea $ B:I_{c} \longrightarrow \{0,1\}$ 	una funci\'on que binariza una imagen en base a un Umbral $ U $:
 \begin{equation}\label{ec:umbralizacion}
 B(I_{c}) = \begin{cases}
-1 & \text{si se cumple que } \abs{I_c} \geq U \\
+1 & \text{si se cumple que } I_{c} \geq U \\
 0 & \text{en cualquier otro caso}
 \end{cases}
 \end{equation}
@@ -404,12 +403,12 @@ B(I_{c}) = \begin{cases}
 La ecuaci\'on \ref{ec:umbralizacion} genera una m\'ascara binaria de cambios (0, No Cambio; 1, Cambio) aplicando un umbral ($ U $) especifico sobre la imagen resultante del proceso de comparaci\'on multitemporal \cite{singh1989review}. Son f\'acilmente implementables en procesos de car\'acter autom\'atico/semiautom\'atico. Partiendo de la hip\'otesis de que el porcentaje de cambios es muy reducido, los valores correspondientes se encuentran situados en los extremos del histograma de frecuencias \cite{estornell2004analisis}. Es preciso se\~{n}alar un umbral que delimite ambas categorías (cambio/no cambio) a partir del \'indice de cambios \cite{radke2005image} para generar una m\'ascara.\\~\\
 El m\'etodo de discriminaci\'on basado en los par\'ametros estad\'isticos del \'indice de cambio entre la secuencia temporal de im\'agenes tiene la siguiente expresi\'on \cite{rodriguez2010analisis}:
 \begin{equation}
-U=\mu_{I_{c}} \pm n\sigma _{I_{c}}
+U=\mu_{I_{c}} \pm n \times \sigma _{I_{c}}
 \end{equation}
 \nomenclature[55]{$ n $}{Coeficiente de fiabilidad de los datos.}
 \nomenclature[56]{$ \sigma_{I_{c}} $}{Desviaci\'on t\'ipica de la imagen de \'Indices de cambio.}
 \nomenclature[56]{$ \mu_{I_{c}} $}{Media de la imagen de \'Indices de cambio.}
-Donde, el valor de umbral entre cambio/no cambio $ (U) $ se estima en funci\'on a la media ($ \mu_{I_{c}}) $ y desviaci\'on ($ \sigma_{I_{c}} $) de la imagen de Indice de cambio ($ I_{c} $), junto con un coeficiente de tolerancia $ n $ asignado en base a la fiabilidad de los datos. Los resultados se clasifican en funci\'on de $ n $; alta probabilidad de cambio $ (n \geq 2) $ y
+Donde el valor de umbral entre cambio/no cambio $ (U) $ se estima en funci\'on a la media ($ \mu_{I_{c}}) $ y desviaci\'on ($ \sigma_{I_{c}} $) de la imagen de Indice de cambio ($ I_{c} $), junto con un coeficiente de tolerancia $ n $ asignado en base a la fiabilidad de los datos. Los resultados se clasifican en funci\'on de $ n $; alta probabilidad de cambio $ (n \geq 2) $ y
 zonas de media probabilidad de cambio $ (1 < n < 2) $ \cite{estornell2004analisis}.
 
 \subsection{Filtrado}
@@ -420,15 +419,6 @@ Los filtros constituyen unos de los principales m\'etodos del procesamiento digi
 		\item \textbf{Realzar la imagen:} aumentar las variaciones de intensidad, all\'i donde se producen.
 		\item \textbf{Detectar bordes::} detectar aquellos p\'ixeles donde se produce un cambio brusco en la funci\'on intensidad.	
 	\end{itemize}
-\subsubsection{Filtro de la mediana}\label{subsec:filMediana}
-El filtrado tiene como ventaja de que el valor final del pixel es un valor real presente en la imagen, siendo dicha variable, la mediana entre los niveles digitales pertenecientes a su vecindad como podemos observar en la Figura \ref{fig:filMediata} de ejemplo. La mediana es el valor para el cual el 50 \% de todos los p\'ixeles en el histograma son mayores y 50 \% son menores \cite{mehl1997fundamentos}.
-
-    \begin{figure}[H]
-    	\centering
-    	\includegraphics[width=0.8	\textwidth]{./Figures/cap3/FiltrodelaMediana.png}
-    	\caption{Proceso del filtro de mediana.}
-    	\label{fig:filMediata}
-    \end{figure}
 
 \section{Resumen}
 

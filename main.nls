@@ -52,34 +52,32 @@
 		\nompageref{43}
   \item [{$ \sigma_{i_{*}} $}]\begingroup Desviaci\'on t\'ipica de la banda $ i_{*} $ de una imagen satelital.\nomeqref {3.9}
 		\nompageref{43}
-  \item [{$ f^{'}(x,y,i) $}]\begingroup Nivel digital, con correcci\'on del pixel o linea perdida de las coordenadas $ (x,y) $ en la banda $ i $.\nomeqref {3.10}
+  \item [{$ f^{'}(x,y,i) $}]\begingroup Imagen satelital corregida, con coordenadas espaciales $ (x,y) $ en la banda $ i $.\nomeqref {3.10}
 		\nompageref{44}
-  \item [{$ f^{''}(x,y,i) $}]\begingroup Nivel digital, con correcci\'on de bandeado, del pixel con coordenadas $ (x,y) $ de la banda $ i $.\nomeqref {3.13}
-		\nompageref{44}
-  \item [{$ I_{dif} $}]\begingroup Indice de cambio por diferencia de im\'agenes.\nomeqref {3.14}
+  \item [{$ I_{dif} $}]\begingroup Indice de cambio por diferencia de im\'agenes.\nomeqref {3.15}
 		\nompageref{46}
-  \item [{$ I_{ratio} $}]\begingroup Indice de cambio por el m\'etodo de ratio.\nomeqref {3.14}
+  \item [{$ I_{ratio} $}]\begingroup Indice de cambio por el m\'etodo de ratio.\nomeqref {3.15}
 		\nompageref{46}
-  \item [{$ I_{c} $}]\begingroup Indice de cambio entre dos im\'agenes.\nomeqref {3.16}
+  \item [{$ I_{c} $}]\begingroup Indice de cambio entre dos im\'agenes.\nomeqref {3.17}
 		\nompageref{47}
-  \item [{$ B $}]\begingroup Imagen binaria en el proceso de detecci\'on de cambio.\nomeqref {3.16}
+  \item [{$ B $}]\begingroup Imagen binaria en el proceso de detecci\'on de cambio.\nomeqref {3.17}
 		\nompageref{47}
-  \item [{$ B(I_{c}) $}]\begingroup Nivel digital para el $ I_{c} $.\nomeqref {3.16}
+  \item [{$ B(I_{c}) $}]\begingroup Nivel digital para el $ I_{c} $.\nomeqref {3.17}
 		\nompageref{47}
-  \item [{$ U $}]\begingroup Umbral que binariza una imagen en base a un $ I_{c} $.\nomeqref {3.16}
+  \item [{$ U $}]\begingroup Umbral que binariza una imagen en base a un $ I_{c} $.\nomeqref {3.17}
 		\nompageref{47}
-  \item [{$ n $}]\begingroup Coeficiente de fiabilidad de los datos.\nomeqref {3.17}
+  \item [{$ n $}]\begingroup Coeficiente de fiabilidad de los datos.\nomeqref {3.18}
 		\nompageref{48}
   \item [{$ Z $}]\begingroup Variable tipificada.\nomeqref {4.1}
-		\nompageref{62}
-  \item [{$ \mu_{I_{c}} $}]\begingroup Media de la imagen de \'Indices de cambio.\nomeqref {3.17}
+		\nompageref{61}
+  \item [{$ \mu_{I_{c}} $}]\begingroup Media de la imagen de \'Indices de cambio.\nomeqref {3.18}
 		\nompageref{48}
-  \item [{$ \sigma_{I_{c}} $}]\begingroup Desviaci\'on t\'ipica de la imagen de \'Indices de cambio.\nomeqref {3.17}
+  \item [{$ \sigma_{I_{c}} $}]\begingroup Desviaci\'on t\'ipica de la imagen de \'Indices de cambio.\nomeqref {3.18}
 		\nompageref{48}
   \item [{$ ND_{i_{1}}^{'} $}]\begingroup Imagen normalizada, de la banda $ i $.\nomeqref {4.6}
-		\nompageref{62}
+		\nompageref{61}
   \item [{$ \sigma_{c} $}]\begingroup Desviaci\'on determinada como constante para la umbralizaci\'on de la cobertura vegetal.\nomeqref {4.7}
-		\nompageref{67}
+		\nompageref{66}
   \item [{$ r^{2}$}]\begingroup Coeficiente de determinaci\'on.\nomeqref {4.7}
 		\nompageref{68}
   \item [{$ C(x,y)$}]\begingroup Toneladas de carbono por hect\'area en las coordenadas $ (x,y) $.\nomeqref {4.8}

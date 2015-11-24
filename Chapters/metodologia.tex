@@ -303,7 +303,14 @@ Una vez obtenido la mascara de vegetaci\'on de las dos fechas, es necesario dete
 \subsubsection{Mascara de P\'erdida Forestal}
 Este proceso constituye la ultima fase, consistiendo en la intersecci\'on entre mascaras de vegetaci\'on y cambio, utilizando solo aquellos pixeles que representan perdida, para generar una imagen binaria de perdida de vegetaci\'on Forestal.\\~\\
 La imagen final de cambios, independiente del método que se utilice, probablemente tendrá errores que son inherentes a los procesos utilizados para su creación \cite{lovell2001filtering}. \\~\\
-Para reducir el porcentaje de falsas alarmas, se propone la utilización del filtro de mediana \ref{subsec:filMediana} sobre la imagen de perdida, como m\'etodo de eliminación de ruido. Al trabajar con im\'agenes de media/alta resoluci\'on espacial(menos de 15x15 metros cuadrados), se obtienen buenos resultados aplicando filtros de 5x5; pero cuando se trabaje con im\'agenes de menor resoluci\'on no se recomienda ese tama\~{n}o de ventana por la distorsi\'on que causa a la imagen \cite{martinez2013normalizacion}. Nuestras im\'agenes satelitales de entrada son de baja resoluci\'on espacial (30x30 metros cuadrados) por lo que el tama\~{n}o de ventana a utilizar seria 3x3.
+Para reducir el porcentaje de falsas alarmas, se propone la utilización del filtro de mediana sobre la imagen de perdida, como m\'etodo de eliminación de ruido. El filtrado tiene como ventaja de que el valor final del pixel es un valor real presente en la imagen, siendo dicha variable, la mediana entre los niveles digitales pertenecientes a su vecindad como podemos observar en la Figura \ref{fig:filMediata} de ejemplo. La mediana es el valor para el cual el 50 \% de todos los p\'ixeles en el histograma son mayores y 50 \% son menores \cite{mehl1997fundamentos}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8	\textwidth]{./Figures/cap3/FiltrodelaMediana.png}
+	\caption{Proceso del filtro de mediana.}
+	\label{fig:filMediata}
+\end{figure}
+ Al trabajar con im\'agenes de media/alta resoluci\'on espacial(menos de 15x15 metros cuadrados), se obtienen buenos resultados aplicando filtros de 5x5; pero cuando se trabaje con im\'agenes de menor resoluci\'on no se recomienda ese tama\~{n}o de ventana por la distorsi\'on que causa a la imagen \cite{martinez2013normalizacion}. Nuestras im\'agenes satelitales de entrada son de baja resoluci\'on espacial (30x30 metros cuadrados) por lo que el tama\~{n}o de ventana a utilizar seria 3x3.
 La siguiente ilustraci\'on representa el flujo de tareas \ref{fig:intersPerdida}.
 \begin{figure}[H]
 	\centering
