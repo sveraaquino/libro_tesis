@@ -331,11 +331,11 @@ La bandas de una imagen son de detectores diferentes y est\'an altamente correla
 		f^{'}(x,y,i) = ceiling( dif_{i}+ \dfrac{\sigma_{i}}{\sigma_{i_{*}}} \times [f(x,y,i_{*})-dif_{i_{*}}])
 		\end{equation} 
 \nomenclature[47]{$ f^{'}(x,y,i) $}{Imagen satelital corregida, con coordenadas espaciales $ (x,y) $ en la banda $ i $.}
-Donde $ \sigma_{i} $ representa la desviaci\'on t\'ipica de la banda $ i $, $ \sigma_{i_{*}} $ representa la desviaci\'on t\'ipica de la banda $ i_{*} $ y la variable $ dif_{e} $, donde $ e \in \{ i,i_{*}\} $, esta representada por la siguiente expresi\'on:
+Donde $ \sigma_{i} $ representa la desviaci\'on t\'ipica de la banda $ i $, $ \sigma_{i_{*}} $ representa la desviaci\'on t\'ipica de la banda $ i_{*} $ y la variable $ dif_{e} $, esta representada por la siguiente expresi\'on:
 		\begin{equation}
 		 dif_{e}  = 1/2 \times [f(x-1,y,e) + f(x+1,y,e)]
 		\end{equation} 
-En caso de que la imagen abarque un territorio amplio y cambiante resulta recomendable calcular las desviaciones t\'ipicas ($ \sigma_{i} $ y $ \sigma_{i_{*}} $) en un entorno cercano al pixel perdido.\\~\\
+Donde $ e \in \{ i,i_{*}\} $. En caso de que la imagen abarque un territorio amplio y cambiante resulta recomendable calcular las desviaciones t\'ipicas ($ \sigma_{i} $ y $ \sigma_{i_{*}} $) en un entorno cercano al pixel perdido.\\~\\
 Para detectar lineas perdidas se compara la media de los $ ND $ de una linea con las medias de las lineas anterior y posterior, para detectar pixeles perdidos se compara el valor de un pixel con los de los 8 pixeles.
 \subsubsection{Bandeado}\label{subsec:bandeado}
 El fen\'omeno del bandeado se debe a una mala calibraci\'on entre detectores y resulta especialmente visible en las zonas de baja radiancia (zonas marinas por ejemplo). El resultado es la aparici\'on peri\'odica de una banda m\'as clara u oscura que las dem\'as.
@@ -365,7 +365,7 @@ En Figura \ref{fig:bandeado} podemos observar el histogramas de una banda correg
 	En los m\'etodos comunes de detecci\'on de cambios se asigna un valor correspondiente al grado de cambio sobre cada pixel, independientemente del resto de la imagen satelital. En estos m\'etodos se considera el pixel como unidad b\'asica (\'algebra de mapas) para aplicar las correspondientes operaciones matem\'aticas asociadas a cada algoritmo.\\~\\
 Los m\'etodos de comparaci\'on, generan una imagen (\'indice de cambios) que representa el grado de cambio entre dos situaciones temporales; los pixeles de la imagen resultante, contienen una variable continua de tipo cuantitativo (Niveles digitales), por lo que se requieren t\'ecnicas que los conviertan en variables cualitativa (Categor\'ias) \cite{martinez2013normalizacion}.
 \subsection{Comparaci\'on multitemporal}\label{subsec:compMult}
-La comparaci\'on parte de un par de im\'agenes semejantes que abarcan la misma zona de estudio, siguiendo una secuencia multitemporal. Una secuencia multitemporal esta definido por $ \{f_{t}\}_{t \in \mathbb{N}} $, donde cada imagen satelital representa a una en diferentes tiempos. Las operaciones m\'as utilizadas son \cite{chuvieco1998factor}: 
+La comparaci\'on parte de un par de im\'agenes semejantes que abarcan la misma zona de estudio, siguiendo una secuencia multitemporal. Una secuencia multitemporal esta definido por $ \{f_{t}\}_{t \in \mathbb{N}} $, que representa una secuencia de im\'agenes satelitales de la misma zona en diferentes tiempos. Las operaciones m\'as utilizadas son \cite{chuvieco1998factor}: 
 	\begin{itemize}
 		\item \textbf{Diferencia de im\'agenes:} es el m\'etodo m\'as simple, f\'acil de interpretar y directo, ya que consiste en una diferencia algebraica entre los niveles digitales ($ ND $ ) inicial y final para la obtenci\'on de un \'indice ($ I_{dif} $). Normalmente es realizada combinada  con extracciones de \'indices espectrales.
 								\begin{equation}

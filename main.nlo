@@ -34,7 +34,7 @@
 \nomenclatureentry{56$ \sigma_{I_{c}} $@[{$ \sigma_{I_{c}} $}]\begingroup Desviaci\'on t\'ipica de la imagen de \'Indices de cambio.\nomeqref {3.18}|nompageref}{48}
 \nomenclatureentry{56$ \mu_{I_{c}} $@[{$ \mu_{I_{c}} $}]\begingroup Media de la imagen de \'Indices de cambio.\nomeqref {3.18}|nompageref}{48}
 \nomenclatureentry{56$ Z $@[{$ Z $}]\begingroup Variable tipificada.\nomeqref {4.1}|nompageref}{61}
-\nomenclatureentry{57$ ND_{i_{1}}^{'} $@[{$ ND_{i_{1}}^{'} $}]\begingroup Imagen normalizada, de la banda $ i $.\nomeqref {4.6}|nompageref}{61}
+\nomenclatureentry{57$ f_{1}^{Norm}(x,y,i) $@[{$ f_{1}^{Norm}(x,y,i) $}]\begingroup Imagen normalizada, de la banda $ i $.\nomeqref {4.6}|nompageref}{61}
 \nomenclatureentry{58$ \sigma_{c} $@[{$ \sigma_{c} $}]\begingroup Desviaci\'on determinada como constante para la umbralizaci\'on de la cobertura vegetal.\nomeqref {4.7}|nompageref}{66}
 \nomenclatureentry{59$ r^{2}$@[{$ r^{2}$}]\begingroup Coeficiente de determinaci\'on.\nomeqref {4.7}|nompageref}{68}
 \nomenclatureentry{60$ C(x,y)$@[{$ C(x,y)$}]\begingroup Toneladas de carbono por hect\'area en las coordenadas $ (x,y) $.\nomeqref {4.8}|nompageref}{69}

@@ -37,7 +37,7 @@
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Levantamiento de puntos de control.\relax }}{58}{figure.caption.128}
 \contentsline {figure}{\numberline {4.7}{\ignorespaces Diagrama de flujo. Detecci\'on de Cambio.\relax }}{60}{figure.caption.133}
 \contentsline {figure}{\numberline {4.8}{\ignorespaces Normalizaci\'on Radiom\'etrica.\relax }}{61}{figure.caption.141}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Umbrales y valores cualitativas asignadas en cada categor\'ia.\relax }}{63}{figure.caption.144}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Umbrales y valores cualitativas asignadas en cada categor\'ia (Perdida=2, Ganancia=1, No cambio=3).\relax }}{63}{figure.caption.144}
 \contentsline {figure}{\numberline {4.10}{\ignorespaces Mascaras de cambio, iteraci\'on de la normalizaci\'on radiom\'etrica.\relax }}{64}{figure.caption.146}
 \contentsline {figure}{\numberline {4.11}{\ignorespaces Diagrama de flujo. Discriminaci\'on Forestal.\relax }}{65}{figure.caption.149}
 \contentsline {figure}{\numberline {4.12}{\ignorespaces Umbral NDVI. U=0,78076712 para n=1.\relax }}{66}{figure.caption.153}
