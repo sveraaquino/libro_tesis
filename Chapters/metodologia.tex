@@ -3,20 +3,30 @@
 
 \chapter{Materiales y Metodolog\'ia}
 \lhead{Capítulo 4. \emph{Materiales y Metodolog\'ia}} % This is for the header on each page - perhaps a shortened title
-En este cap\'itulo se describir\'an los materiales a utilizar en la elaboraci\'on de la metodolog\'ia, como tambi\'en aquellos a utilizar en las diversas pruebas y validaciones. Ademas conoceremos las diversas caracter\'isticas que presentan las im\'agenes satelitales a ser empleados en el estudio, el cual poseen mucha relevancia debido a que constituyen variables determinantes en la elaboraci\'on de constantes al flujo de procesos.\\~\\
-La metodolog\'ia nos presentara las diferentes procesos o m\'odulos necesarios, para la estimaci\'on de p\'erdida de carbono, en un marco general como tambi\'en en detalles.
+En este cap\'itulo se describir\'an los materiales a utilizar en la elaboraci\'on de la metodolog\'ia, as\'i como tambi\'en aquellos a utilizar en las diversas pruebas y validaciones. Adem\'as se presentan las diversas características de las imágenes satelitales a ser empleados en el estudio. La metodolog\'ia nos presentara los diferentes procesos o m\'odulos necesarios para la estimaci\'on de p\'erdida de carbono.
 \section{Materiales}
-\subsection{Im\'agenes satelitales}
-Los conceptos anteriores acerca de las im\'agenes sat\'elitales, nos permitir\'an describir los diferentes tipos de im\'agenes utilizados en el proyecto, de manera a brindar las caracter\'isticas relevantes en sus elecciones. 
+Un grupo de im\'agenes fueron utilizadas para los diferentes estudios y procedimientos de la metodologia, tales como:
+\begin{itemize}
+	\item Im\'agenes satelitales Landsat.
+	\item Im\'agenes Campos Continuos de Vegetación (VCF).
+	\item Im\'agen Mapa global de carbono - Paraguay.
+	\item Paraguay Forest Change Product.
+\end{itemize}
+En el procesamiento e implementaci\'on de algoritmos fueron utilizados dos aplicaciones:
+\begin{itemize}
+	\item GRASS.
+	\item Quantum GIS.
+\end{itemize}
+A continuaci\'on se hablaran con mayor detalle de los elementos citados.
+\subsection{Im\'agenes}
+En este apartado se pretende brindar las diferentes caracter\'isticas que presentan cada tipo de imagen utilizada, de manera a resaltar propiedades que fundamentaron su elecci\'on.
 \subsubsection{Landsat}\label{sec:landsat}
-Landsat representa la colecci\'on m\'as larga y continua en el mundo de im\'agenes satelitales con resoluciones moderadas. Cuatro d\'ecadas de im\'agenes proporciona un recurso \'unico para personas que trabajan en la agricultura, geolog\'ia, silvicultura, ordenaci\'on territorial, educaci\'on, cartograf\'ia e investigaci\'on del cambio global, como tambi\'en en respuesta de emergencias y operaciones de socorro \cite{landsatNasa}.\\~\\
-Las im\'agenes est\'an disponibles desde 1972 generados por una serie de 6 sat\'elites landsat. Estos sat\'elites han sido un componente importante del Programa de Observaci\'on de la tierra perteneciente a la NASA, con tres sensores primarios evolucionando a lo largo de treinta años: MSS (Multi-spectral Scanner), TM (Thematic Mapper), y ETM+ (Enhanced Thematic Mapper Plus). 
-El 11 de febrero del 2013 fue lanzado el Lansadt 8 correspondiendo al futuro de los sat\'elites landsat con dos nuevo sensores, Operational Land Imager (OLI) y el Thermal Infrared Sensor (TIRS).
+Landsat representa la colecci\'on m\'as larga y continua en el mundo de im\'agenes satelitales con resoluciones moderadas \cite{landsatNasa}. Cuatro d\'ecadas de im\'agenes proporciona un recurso \'unico para personas que trabajan en la agricultura, geolog\'ia, silvicultura, ordenaci\'on territorial, educaci\'on, cartograf\'ia e investigaci\'on del cambio global, como tambi\'en en respuesta de emergencias y operaciones de socorro.\\~\\
+Las im\'agenes est\'an disponibles desde 1972 generados por una serie de 6 sat\'elites Landsat. Estos sat\'elites han sido un componente importante del Programa de Observaci\'on de la tierra perteneciente a la NASA, con tres sensores primarios evolucionando a lo largo de treinta años: MSS (Multi-spectral Scanner), TM (Thematic Mapper), y ETM+ (Enhanced Thematic Mapper Plus). 
+El 11 de febrero del 2013 fue lanzado el Lansadt 8 correspondiendo al futuro de los sat\'elites Landsat con dos nuevo sensores, Operational Land Imager (OLI) y el Thermal Infrared Sensor (TIRS). La Tabla \ref{t:landsattipos} nos muestra las diferentes resoluciones de los sensores Landsat.
 
-\begin{table}[htbp]
+\begin{table}[htb!]
 	\centering
-	\caption{My caption}
-	\label{my-label}
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
 		\multirow{2}{*}{\textbf{Landsat}} & \multicolumn{5}{c|}{\textbf{Resoluciones}}                                                             \\ \cline{2-6} 
@@ -31,8 +41,9 @@ El 11 de febrero del 2013 fue lanzado el Lansadt 8 correspondiendo al futuro de 
 		8                                 & 30x30 m2          & 9 bandas           & 12 bits                 & 16 dias           & OLI/TIRS        \\ \hline
 	\end{tabular}
 	\caption{Resoluciones de los sat\'elites Landsat.}
+		\label{t:landsattipos}
 \end{table}
-El Sistema de Referencia Mundial Landsat-2 (WRS-2: Landsat Worldwide Reference System-2) provee un esquema de indexaci\'on para el patr\'on de repetici\'on de la trayectoria orbital terrestre seguida por las plataformas espaciales Landsat 4, 5 y 7 sobre los 16 d\'ias de su repetitivo ciclo orbital \cite{els2015refere}. El original WRS (WRS-1) fue dise\~{n}ado para las misiones Landsat 1, 2, y 3, las cuales se movieron en una \'orbita m\'as alta. El actual WRS-2 fue dise\~{n}ado para la \'orbita a 705 Km usada para las \'ultimas misiones.
+El Sistema de Referencia Mundial Landsat-2 (WRS-2: Landsat Worldwide Reference System-2) provee un esquema de indexaci\'on para el patr\'on de repetici\'on de la trayectoria orbital terrestre seguida por las plataformas espaciales Landsat 4, 5 y 7 sobre los 16 d\'ias de su repetitivo ciclo orbital \cite{els2015refere}. El original WRS (WRS-1) fue dise\~{n}ado para las misiones Landsat 1, 2, y 3, las cuales se movieron en una \'orbita m\'as alta. El actual WRS-2 fue dise\~{n}ado para la \'orbita a 705 Km usada para las \'ultimas misiones. En la Figura \ref{fig:wrs2Image} podemos observar los \'indices (Path y Row) en el momento de la obtenci\'on de una imagen satelital Landsat para una zona.
 
 \begin{figure}[H]
 	\centering
@@ -41,30 +52,20 @@ El Sistema de Referencia Mundial Landsat-2 (WRS-2: Landsat Worldwide Reference S
 	\label{fig:wrs2Image}
 \end{figure}
 
-El Servicio Geol\'ogico de los Estados Unidos (USGS) es una agencia cientifica de los Estados Unidos, el cual proveen un producto llamado L1T (Level 1 Terrain Corrected) que implica las im\'agenes Landsat con datos pre-procesados para una precisión radiom\'etrica sistem\'atica y precisi\'on geom\'etrica mediante la incorporaci\'on de puntos de control en tierra. Estos productos est\'an en la Web de forma gratuita \cite{landsatNasa}.
+El Servicio Geol\'ogico de los Estados Unidos (USGS) es una agencia cient\'ifica de los Estados Unidos, el cual proveen un producto llamado L1T (Level 1 Terrain Corrected) que implica las im\'agenes Landsat con datos pre-procesados para una correcci\'on radiom\'etrica sistem\'atica y correcci\'on geom\'etrica mediante la incorporaci\'on de puntos de control en tierra. Estos productos est\'an en la Web de forma gratuita \cite{landsatNasa}.
 
 
-\subsubsection{Vegetation Continuous Fields}\label{sec:vcf}
-Las im\'agenes VCF (Vegetation Continuous Fields) contiene estimaciones proporcionales para los tipos de cobertura vegetal: vegetaci\'on le\~{n}osa, vegetaci\'on herb\'acea y suelo desnudo. El producto se deriva de las siete bandas del sensor MODerate-resolution Imaging Spectroradiometer (MODIS) a bordo del sat\'elite Terra, perteneciente a la NASA. El esquema de clasificaci\'on continuo del VCF puede representa \'areas terrestres heterog\'eneas mejor que los esquemas tradicionales de clasificaci\'on discreta. Mientras que los sistemas de clasificaci\'on tradicionales indican donde se concentran los tipos de cobertura del suelo, este producto VCF es magnifico para mostrar cuanto de cobertura forestal o pradera existe en cualquier parte de la tierra. El VCF posee un resoluci\'on espacial de 250x250 metros cuadrados y la colecci\'on de im\'agenes se encuentra disponible gratuitamente en la Web \cite{gl2015Uni}.
-\begin{table}[htbp]\centering
-\begin{tabular}{|c|c|}
-	\hline \textbf{Valor Digital} & \textbf{Representaci\'on} \\ 
-	\hline 0-100 & Porcentaje de \'area vegetal \\ 
-	\hline 200 & Agua \\ 
-	\hline 253 & Nulo \\ 
-	\hline 
-\end{tabular} 
-\caption{Representaci\'on del valor digital en la imagen VCF.}
-\end{table}
-
+\subsubsection{Campos Continuos de Vegetación (VCF)}\label{sec:vcf}
+Las im\'agenes VCF contienen estimaciones proporcionales para los tipos de cobertura vegetal: vegetaci\'on le\~{n}osa, vegetaci\'on herb\'acea y suelo desnudo. El producto se deriva de las siete bandas del sensor MODerate-resolution Imaging Spectroradiometer (MODIS) a bordo del sat\'elite Terra, perteneciente a la NASA. El esquema de clasificaci\'on continuo del VCF puede representar \'areas terrestres heterog\'eneas mejor que los esquemas tradicionales de clasificaci\'on discreta. Los sistemas de clasificaci\'on tradicionales indican donde se concentran los tipos de cobertura del suelo. El producto VCF es magnifico para mostrar cuanto de cobertura forestal o pradera existe en cualquier parte de la tierra. El VCF posee un resoluci\'on espacial de 250x250 metros cuadrados y la colecci\'on de im\'agenes se encuentra disponible gratuitamente en la Web \cite{gl2015Uni}.
+La Figura \ref{fig:vcfImage} nos presenta un imagen, con diferentes tonalidades de color, para los porcentajes de vegetaci\'on y los niveles digitales del agua como pixeles nulos.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8	\textwidth]{./Figures/cap4/vcf_image.png}
-	\caption{Imagen VCF}
+	\caption{Imagen VCF con diferentes tonalidades de color de acuerdo al porcentaje de vegetaci\'on.}
 	\label{fig:vcfImage}
 \end{figure}
 \subsubsection{Mapa global de carbono - Paraguay}\label{sec:saatchiMapa}
-En el antecedente \ref{sec:antecedente} hablamos de saatchi y su mapa global de carbono, que nos provee un promedio en toneladas de carbono por hect\'area del \'area ocupada por el pixel. Esos mapas están liberados de forma gratuita para cada pa\'is, en donde Paraguay no es la excepci\'on.
+El mapa global de carbono \cite{saatchi2011benchmark} nos provee la densidad de carbono, expresada en toneladas de carbono por hect\'area, del \'area ocupada por un pixel. En la actualidad existen diferentes mapas de carbono a nivel mundial \cite{saatchi2011benchmark}. La Figura \ref{fig:saatchi} representa el mapa global de carbono disponible para el Paraguay.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8	\textwidth]{./Figures/cap5/saatchi.png}
@@ -74,7 +75,7 @@ En el antecedente \ref{sec:antecedente} hablamos de saatchi y su mapa global de 
 
 
 \subsubsection{Paraguay Forest Change Product}\label{sec:fcc}
-El Paraguay Forest Change Product (PFCP) muestra donde ocurri\'o la deforestaci\'on en Paraguay durante 1990-2000. El PFCP fue elaborado a partir de las im\'agenes Landsat TM y ETM+, identificando seis clases; bosque atl\'antico, Chaco bosques, el agua, no forestales y la deforestaci\'on. El producto puede ser utilizado como un ejemplo para evaluar cuantitativamente el cambio de cobertura terrestre, tambi\'en el de ayudar a determinar el proceso y el patr\'on de cambio en la cubierta forestal. La imagen se encuentra disponible gratuitamente en la Web \cite{gl2015Uni}.
+El Paraguay Forest Change Product (PFCP) muestra donde ocurri\'o la deforestaci\'on en Paraguay durante 1990-2000. El PFCP fue elaborado a partir de las im\'agenes Landsat TM y ETM+, identificando seis clases; bosque atl\'antico, Chaco bosques, el agua, no forestales y la deforestaci\'on. El producto puede ser utilizado para determinar procesos y patrones de cambio en la cubierta forestal. En la Figura \ref{fig:fcc} se puede observar el PFCP (disponible gratuitamente en Referencia \cite{gl2015Uni}). En la Tabla \ref{t:pfcptab} se describe la representaci\'on de cada nivel digital en dicha imagen. .
 \begin{table}[htbp]\centering
 \begin{tabular}{|c|c|c|}
 	\hline \textbf{Valor digital} &\textbf{ Representaci\'on} & \textbf{Color sugerido} \\ 
@@ -87,6 +88,7 @@ El Paraguay Forest Change Product (PFCP) muestra donde ocurri\'o la deforestaci\
 	\hline 
 \end{tabular} 
 \caption{Representaci\'on del valor digital en la imagen PFCP.}
+\label{t:pfcptab}
 \end{table}
 
 \begin{figure}[H]
@@ -98,15 +100,18 @@ El Paraguay Forest Change Product (PFCP) muestra donde ocurri\'o la deforestaci\
 
 
 
-\subsection{Software}
-Sistemas de informaci\'on geogr\'afica fueron utilizados para la manipulaci\'on de imagenes satelitales, como tambi\'en para dise\~{n}ar e implementar los algoritmos utilizados en la metodolog\'ia propuesta.
+\subsection{Aplicaciones}
+Sistemas de informaci\'on geogr\'afica fueron utilizados para la manipulaci\'on de im\'agenes satelitales, como tambi\'en para dise\~{n}ar e implementar los algoritmos utilizados en la metodolog\'ia propuesta. A continuaci\'on se describen las aplicaciones utilizadas.
+
 \subsubsection{GRASS}\label{sec:grass}
-GRASS es un software SIG  bajo licencia GPL (software libre). Puede soportar informaci\'on tanto raster como vectorial y posee herramientas de procesado digital de im\'agenes. Esta disponibles principalmente para plataformas Linux.
+GRASS es un software SIG  bajo licencia GPL (software libre) \cite{osgeoGrass}. El software soporta informaci\'on tanto raster como vectorial y posee herramientas de procesado digital de im\'agenes. Esta disponibles principalmente para plataformas Linux.
 \subsubsection{Quantum GIS}\label{sec:quantum}
-Quantum GIS es un SIG de c\'odigo libre para plataformas GNU/Linux, Unix, Mac OS, Microsoft Windows y Android. La principal diferencia con el GRASS es la interfaz amigable con que cuenta y la facilidad de integraci\'on con nuevas funciones espaciales desarrollados por los usuarios, esto es posible debido a que la aplicaci\'on posee un soporte muy estable para lenguajes amplios en el manejo de datos espaciales, siendo C++ y python.
+Quantum GIS es un SIG de c\'odigo libre para plataformas GNU/Linux, Unix, Mac OS, Microsoft Windows y Android. La principal diferencia con el GRASS es la interfaz amigable con que cuenta y la facilidad de integraci\'on con nuevas funciones espaciales desarrollados por los usuarios \cite{qgisSIG}.
 \section{Metodolog\'ia}
-Con los conceptos y materiales planteados en anteriores apartados, se pretende establecer una flujo de procesos o m\'odulos necesarios para el logro de los objetivos en la investigaci\'on. Se busca que los algoritmos a implementar sean ligeros en cada proceso, de manera a evitar c\'alculos complejos y excesivas supervisiones, para ello es necesario determinar comportamientos estad\'isticos de la cobertura vegetal, representados en las im\'agenes satelitales, que actuaran como variables constantes en cada proceso.\\~\\
-Se plantea como datos de entrada las im\'agenes Landsat por su disponibilidad en el tiempo y gratuita obtenci\'on. Se recomienda que en el caso de utilizar imagen Landsat 8, no se mezclen im\'agenes de otro sensor del sat\'elite ya que esta posee una resoluci\'on radiom\'etrica de 16 bits y las dem\'as son capturadas a 8 bits. Por ultimo las bandas utilizadas corresponde a la infrarroja cercana y Roja.
+Los flujo de procesos o m\'odulos necesarios para el logro de los objetivos en la investigaci\'on ser\'an planteados en este capitulo. Se busca que los algoritmos a implementar sean ligeros en cada proceso, de manera a evitar c\'alculos complejos y excesivas supervisiones, para ello es necesario determinar comportamientos estad\'isticos de la cobertura vegetal, representados en las im\'agenes satelitales, que actuaran como variables constantes en cada proceso.\\~\\
+Se plantea como datos de entrada las im\'agenes Landsat por su disponibilidad en el tiempo y gratuita obtenci\'on. Se recomienda que en el caso de utilizar imagen Landsat 8, no se mezclen im\'agenes de otro sensor del sat\'elite ya que esta posee una resoluci\'on radiom\'etrica de 16 bits y las dem\'as son capturadas a 8 bits. Por ultimo las bandas utilizadas corresponde a la infrarroja cercana y Roja.\\~\\
+La Figura \ref{fig:metodologiapc} representa el flujo de procedimientos aplicados a las im\'agenes satelitales para la obtenci\'on de la imagen de Perdida de carbono junto con la cuantificaci\'on del mismo.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0	\textwidth]{./Figures/cap4/metodologiaCarbono_2.png}
@@ -115,9 +120,9 @@ Se plantea como datos de entrada las im\'agenes Landsat por su disponibilidad en
 \end{figure}
 
 \subsection{Correcciones de im\'agenes satelitales}\label{sec:coorImsat}
-Es necesario que los pixeles en las im\'agenes posean una ubicaci\'on suficientemente aproximada a la realidad del terreno, de manera que se garantice la correspondencia geogr\'afica entre pixeles a ser comparados. Por ello se lleva a cabo pre-procesamientos de la im\'agenes aplicando correcciones geom\'etricas y radiom\'etricas.
+Los pixeles de las im\'agenes satelitales deben tener una ubicaci\'on suficientemente aproximada a la realidad del terreno, de manera que se garantice la correspondencia geogr\'afica entre pixeles a ser comparados. Por ello, el pre-procesamientos de la im\'agenes aplicando correcciones geom\'etricas y radiom\'etricas son necesarios.
 \subsubsection{Correcci\'on Geom\'etrica}
-Este procedimiento es m\'as conocido como georeferenciaci\'on consistiendo en 3 fases; puntos de control, interpolacion espacial y radiom\'etricos \ref{sec:corrGeometrica}. Para llevar a cabo el proceso de interpolaci\'on espacial es necesario la recopilaci\'on de puntos de control, dispersos en la imagen, a trav\'es de visitas al terreno o mediante el relevamientos de datos cartogr\'aficos existentes (Mapa de caminos, ríos, cruces, etc.).
+Este procedimiento es m\'as conocido como georeferenciaci\'on consistiendo en 3 fases; puntos de control, interpolacion espacial y radiom\'etricos \ref{sec:corrGeometrica}. El proceso de interpolaci\'on espacial necesita la recopilaci\'on de puntos de control dispersos en la imagen. La recopilaci\'on es llevada a cabo a trav\'es de visitas al terreno o mediante el relevamientos de datos cartogr\'aficos existentes (Mapa de caminos, ríos, cruces, entre otros.). La Figura \ref{fig:gcp} nos muestra los puntos de control relevadas en el terreno junto con su ubicaci\'on dentro de la imagen satelital.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7	\textwidth]{./Figures/cap4/ejGpc.png}
@@ -183,8 +188,8 @@ La Figura \ref{fig:deteccionCambio} presenta un panorama especifico de lo que se
 \end{figure}
 
 \paragraph{Nomalizaci\'on Radiom\'etrica}\mbox{}\\\mbox{}\\
-La normalizaci\'on radiom\'etrica pretende optimizar el proceso de comparaci\'on, mejorando la semejanza entre im\'agenes. Debido a la respuesta espectral que presentan las coberturas vegetales en diferentes estaciones del a\~{n}o o condiciones ambientales en el momento de la captura, es necesario un procedimiento adicional que iguale los pixeles en relaci\'on a contraste y brillo entre im\'agenes. Es un proceso similar al m\'etodo del bandeado \ref{subsec:bandeado}, empleado en la correcci\'on radiom\'etrica entre bandas de una misma imagen. Tomando como referencia los trabajo de Singh\cite{singh1989review}; Mateu y Ruiz\cite{mateu1999comparacion}; Estornell \cite{estornell2004analisis}; Mena y Malpica \cite{malpica2002fusion}, se aplicaran m\'etodos de normalizaci\'on mediante par\'ametros estad\'isticos de la imagen.\\~\\
-En las distintas bandas de una imagen satelital se observan un comportamiento con distribucion normal en sus histogramas, por lo que teniendo una variable tipificada $(Z)$ es posible definirlos en una distribuci\'on normal est\'andar del tipo $ N(0,1) $ seg\'un la expresión:
+La normalizaci\'on radiom\'etrica pretende optimizar el proceso de comparaci\'on, mejorando la semejanza entre im\'agenes. Debido a la respuesta espectral que presentan las coberturas vegetales en diferentes estaciones del a\~{n}o o condiciones ambientales en el momento de la captura, es necesario un procedimiento adicional que iguale los pixeles en relaci\'on a contraste y brillo entre im\'agenes. Es un proceso similar al m\'etodo del bandeado \ref{subsec:bandeado}, empleado en la correcci\'on radiom\'etrica entre bandas de una misma imagen. Los trabajo de Singh \cite{singh1989review}, Mateu y Ruiz\cite{mateu1999comparacion}, Estornell \cite{estornell2004analisis}, Mena y Malpica \cite{malpica2002fusion} representan una inclinaci\'on en la elecci\'on del m\'etodo de normalizaci\'on mediante par\'ametros estad\'isticos de la imagen.\\~\\
+En las distintas bandas de una imagen satelital se observan un comportamiento con distribuci\'on normal en sus histogramas, por lo que teniendo una variable tipificada $(Z)$ es posible definirlos en una distribuci\'on normal est\'andar del tipo $ N(0,1) $ seg\'un la expresión:
 	\begin{equation}
 	Z=\dfrac{f_{1}(x,y,i)-\mu_{i,1}}{\sigma_{i,1}}
 	\end{equation}
@@ -209,7 +214,7 @@ En las distintas bandas de una imagen satelital se observan un comportamiento co
 				f_{1}^{Norm}(x,y,i)=m_{1,2}\cdot f_{1}(x,y,i)+h_{1,2}
 		\end{equation}
 		\nomenclature[57]{$ f_{1}^{Norm}(x,y,i) $}{Imagen normalizada, de la banda $ i $.}	
-	Mediante esta transformaci\'on se obtienen histogramas parecidos, logrando de este modo mayor semejanza para el proceso de comparaci\'on multitemporal.
+	Mediante esta transformaci\'on se obtienen histogramas parecidos, logrando de este modo mayor semejanza para el proceso de comparaci\'on multitemporal. En la Figura \ref{fig:normRadio} podemos observar el histograma de la secuencia de im\'agenes y el histograma de la imagen resultante luego de la normalizaci\'on.
 	
 	\begin{figure}[H]
 		\centering
@@ -220,13 +225,13 @@ En las distintas bandas de una imagen satelital se observan un comportamiento co
 	
 	
 \paragraph{Comparaci\'on Multitemporal}\mbox{}\\\mbox{}\\
-Una vez equiparados radiom\'etricamente las im\'agenes, el siguiente paso consiste en la comparaci\'on multitemporal que nos permitir\'an obtener un indice de cambio (variable cuantitativa) en cada pixel resultante. Se aplicara el m\'etodo de Diferencia de im\'agenes \ref{subsec:compMult}, debido a que el m\'etodo Ratio no se ajusta a una distribuci\'on normal, condici\'on clave para la umbralizaci\'on estad\'istica. La comparaci\'on sera realizado sobre el NDVI \ref{subsec:ndvi} de cada serie temporal, a modo a resaltar la vegetaci\'on y simplificar la cantidad de bandas utilizadas, observando a su vez que los datos estables ser\'an pr\'oximos a 0, gracias a la semejanza existente entre los pixeles. 
+El siguiente paso despu\'es de haber equiparado radiom\'etricamente las im\'agenes, consiste en la comparaci\'on multitemporal que nos permitir\'an obtener un indice de cambio (variable cuantitativa) en cada pixel resultante. El  m\'etodo de Diferencia de im\'agenes \ref{subsec:compMult} ser\'a utilizada, debido a que el m\'etodo Ratio no se ajusta a una distribuci\'on normal, condici\'on clave para la umbralizaci\'on estad\'istica. La comparaci\'on sera realizado sobre el NDVI \ref{subsec:ndvi} de cada serie temporal, a modo a resaltar la vegetaci\'on y simplificar la cantidad de bandas utilizadas, observando a su vez que los datos estables ser\'an pr\'oximos a 0, gracias a la semejanza existente entre los pixeles. 
 \paragraph{Umbral estad\'istico}\mbox{}\\\mbox{}\\
 Los criterios de decisi\'on propuesto en el capitulo anterior \ref{sec:discriminacion}, asignan valores de cambio/no cambio en funci\'on a un umbral, generando una mascara de cambio con valores cualitativos a partir de la imagen que contiene los $ I_{c} $, es decir, clasifica cada \'indice de cambio. El m\'etodo basados en par\'ametros estad\'isticos es escogido por su sencillez y coherencia con el m\'etodo de comparaci\'on multitemporal aplicada. \\~\\
-La imagen es re-clasificadas en distintas categor\'ias mediante los umbrales calculados (Perdida=2, Ganancia=1, No cambio=3) y eligiendo la variable de fiabilidad $ n $ en base a la probabilidad de cambio deseado para la detecci\'on.
+La imagen es re-clasificadas en distintas categor\'ias mediante los umbrales calculados (Perdida=2, Ganancia=1, No cambio=3), como podemos ver en la Figura \ref{fig:umbrales}, y eligiendo la variable de fiabilidad $ n $ en base a la probabilidad de cambio deseado para la detecci\'on.
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.7	\textwidth]{./Figures/cap4/umbrales.png}
+		\includegraphics[width=0.5	\textwidth]{./Figures/cap4/umbrales.png}
 		\caption{Umbrales y valores cualitativas asignadas en cada categor\'ia (Perdida=2, Ganancia=1, No cambio=3).}
 		\label{fig:umbrales}
 	\end{figure}
@@ -240,8 +245,8 @@ Se plantea la hip\'otesis, que en la normalizaci\'on radiom\'etrica los cambios 
 		\caption{Mascaras de cambio, iteraci\'on de la normalizaci\'on radiom\'etrica.}
 		\label{fig:umbrales}
 	\end{figure}
-En la m\'ascara de cambios generada por la detecci\'on de cambios, las celdas clasificadas como cambios $ (ND = 2; ND = 1) $, son re-clasificadas como $ ND=0 $; frente a las celdas de no cambio $(ND = 3)  $, clasificadas con $ ND=1 $. Esta m\'ascara re-clasificada se utiliza para suprimir los cambios de las im\'agenes radiom\'etricas utilizadas como referencia estad\'istica. El procedimiento anterior se aplica \'unicamente para estimar los par\'ametros de normalizaci\'on radiom\'etrica. La imagen sobre la que se aplica la normalizaci\'on ha de mantener todas las celdas, independientemente de que se consideren como cambios a priori. Se propone repetir las iteraciones hasta que la media de las diferencias entre NDVI, sea de magnitud similar a la media obtenida en la iteraci\'on anterior. 
-\begin{algorithm}
+En la m\'ascara de cambios generada por la detecci\'on de cambios, las celdas clasificadas como cambios $ (ND = 2; ND = 1) $, son re-clasificadas como $ ND=0 $; frente a las celdas de no cambio $(ND = 3)  $, clasificadas con $ ND=1 $. Esta m\'ascara re-clasificada se utiliza para suprimir los cambios de las im\'agenes radiom\'etricas utilizadas como referencia estad\'istica. El procedimiento anterior se aplica \'unicamente para estimar los par\'ametros de normalizaci\'on radiom\'etrica. La imagen sobre la que se aplica la normalizaci\'on ha de mantener todas las celdas, independientemente de que se consideren como cambios a priori. Se propone repetir las iteraciones hasta que la media de las diferencias entre NDVI, sea de magnitud similar a la media obtenida en la iteraci\'on anterior. El siguiente Algoritmo \ref{alg:iteracionAlg} nos muestras como la iteraci\'on es hecha. 
+\begin{algorithm}[H]
 	\caption{Algoritmo de iteraci\'on}
 	\label{alg:iteracionAlg}
 	\begin{algorithmic}[1]
@@ -273,7 +278,7 @@ En la m\'ascara de cambios generada por la detecci\'on de cambios, las celdas cl
 
 
 \subsubsection{Discriminaci\'on Forestal}
-La siguiente ilustraci\'on \ref{fig:discrimForestal} refleja los pasos realizados para obtener una mascara de vegetaci\'on. Dicha m\'ascara representa si un pixel es o fue vegetaci\'on forestal en la serie temporal comparada. Los im\'agenes de entrada que ser\'an procesadas, son aquellas obtenidas en la ultima normalizaci\'on radiom\'etrica generada por el proceso de detecci\'on de cambio, como tambi\'en la imagen utilizada de referencia en ese proceso.
+La siguiente Figura \ref{fig:discrimForestal} refleja los pasos realizados para obtener una mascara de vegetaci\'on. Dicha m\'ascara representa si un pixel es o fue vegetaci\'on forestal en la serie temporal comparada. Los im\'agenes de entrada que ser\'an procesadas, son aquellas obtenidas en la ultima normalizaci\'on radiom\'etrica generada por el proceso de detecci\'on de cambio, como tambi\'en la imagen utilizada de referencia en ese proceso.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0	\textwidth]{./Figures/cap4/discriminacionForestal_2.png}
@@ -289,33 +294,33 @@ El umbral discriminatorio para la vegetaci\'on es determinado a partir de una co
 		U_{NDVI} = \mu_{NDVI}\pm n \times \sigma_{c}
 		\end{equation}
 \nomenclature[58]{$ \sigma_{c} $}{Desviaci\'on determinada como constante para la umbralizaci\'on de la cobertura vegetal.}
-Donde $ \mu_{NDVI} $ representa la media del NDVI calculada y $ n $ la fiabilidad. No se utiliza la ecuaci\'on correspondiente a la suma, debido a que se pretende incluir \'indices por debajo de la media.
+Donde $ \mu_{NDVI} $ representa la media del NDVI calculada y $ n $ la fiabilidad. No se utiliza la ecuaci\'on correspondiente a la suma, debido a que se pretende incluir \'indices por debajo de la media. En la Figura \ref{fig:ndviUmbral} podemos observar que el umbral del NDVI se situ\'a por debajo de la media.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8	\textwidth]{./Figures/cap4/ndviUmbral.png}
-	\caption{Umbral NDVI. U=0,78076712 para n=1.}
+	\caption{Umbral NDVI y la media en el histograma de la imagen con NDVI.}
 	\label{fig:ndviUmbral}
 \end{figure}
 
 \paragraph{Intersecci\'on \'area boscosa }\mbox{}\\\mbox{}\\
-Una vez obtenido la mascara de vegetaci\'on de las dos fechas, es necesario determinar las celdas que ser\'an evaluados el cambio, por ello aplicamos una simple operaci\'on de intersecci\'on que generara una mascara de vegetaci\'on para los dos tiempos.
+El procedimiento que sigue una vez obtenido la mascara de vegetaci\'on de las dos fechas, es la de determinar los pixeles que ser\'an evaluados para detectar el cambio, por ello aplicamos una simple operaci\'on de intersecci\'on que generara una mascara de vegetaci\'on correspondiente a los dos tiempos.
 
 \subsubsection{Mascara de P\'erdida Forestal}
 Este proceso constituye la ultima fase, consistiendo en la intersecci\'on entre mascaras de vegetaci\'on y cambio, utilizando solo aquellos pixeles que representan perdida, para generar una imagen binaria de perdida de vegetaci\'on Forestal.\\~\\
-La imagen final de cambios, independiente del método que se utilice, probablemente tendrá errores que son inherentes a los procesos utilizados para su creación \cite{lovell2001filtering}. \\~\\
-Para reducir el porcentaje de falsas alarmas, se propone la utilización del filtro de mediana sobre la imagen de perdida, como m\'etodo de eliminación de ruido. El filtrado tiene como ventaja de que el valor final del pixel es un valor real presente en la imagen, siendo dicha variable, la mediana entre los niveles digitales pertenecientes a su vecindad como podemos observar en la Figura \ref{fig:filMediata} de ejemplo. La mediana es el valor para el cual el 50 \% de todos los p\'ixeles en el histograma son mayores y 50 \% son menores \cite{mehl1997fundamentos}.
+La imagen final de cambios, independiente del método que se utilice, probablemente tendr\'a errores que son inherentes a los procesos utilizados para su creación \cite{lovell2001filtering}. \\~\\
+La utilizaci\'on del filtro de mediana sobre la imagen de perdida en la reducci\'on del porcentaje de falsas alarmas ser\'a utilizado como m\'etodo para la eliminaci\'on de ruido. El filtrado tiene como ventaja de que el valor final del pixel es un valor real presente en la imagen, siendo dicha variable, la mediana entre los niveles digitales pertenecientes a su vecindad como podemos observar en la Figura \ref{fig:filMediata} de ejemplo. La mediana es el valor para el cual el 50 \% de todos los p\'ixeles en el histograma son mayores y 50 \% son menores \cite{mehl1997fundamentos}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8	\textwidth]{./Figures/cap3/FiltrodelaMediana.png}
 	\caption{Proceso del filtro de mediana.}
 	\label{fig:filMediata}
 \end{figure}
- Al trabajar con im\'agenes de media/alta resoluci\'on espacial(menos de 15x15 metros cuadrados), se obtienen buenos resultados aplicando filtros de 5x5; pero cuando se trabaje con im\'agenes de menor resoluci\'on no se recomienda ese tama\~{n}o de ventana por la distorsi\'on que causa a la imagen \cite{martinez2013normalizacion}. Nuestras im\'agenes satelitales de entrada son de baja resoluci\'on espacial (30x30 metros cuadrados) por lo que el tama\~{n}o de ventana a utilizar seria 3x3.
-La siguiente ilustraci\'on representa el flujo de tareas \ref{fig:intersPerdida}.
+ Con im\'agenes de media/alta resoluci\'on espacial(menos de 15x15 metros cuadrados) se obtienen buenos resultados aplicando filtros de 5x5, pero cuando se trabaje con im\'agenes de menor resoluci\'on no se recomienda ese tama\~{n}o de ventana por la distorsi\'on que causa a la imagen \cite{martinez2013normalizacion}. Nuestras im\'agenes satelitales de entrada son de baja resoluci\'on espacial (30x30 metros cuadrados) por lo que el tama\~{n}o de ventana a utilizar seria 3x3.
+En la Figura \ref{fig:intersPerdida} podemos observar el flujo de tareas para la obtenci\'on de la mascara que representa la perdida forestal en dos tiempos .
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8	\textwidth]{./Figures/cap4/interseccionPerdida.png}
-	\caption{Diagrama de flujo. Mascara P\'erdida Forestal.}
+	\caption{Diagrama de procedimientos para la obtenci\'on de la m\'ascara de perdida forestal.}
 	\label{fig:intersPerdida}
 \end{figure}
 
@@ -372,11 +377,11 @@ Siendo $ PC(x,y)$ Toneladas de carbono por hect\'area perdidos. Remplazando \ref
 		\begin{equation}
 			PC(x,y) = 30,1 Ic(x,y)
 		\end{equation}
-La cuantificaci\'on sera realizado teniendo en cuenta la mascara de perdida forestal.
+La cuantificaci\'on sera realizado teniendo en cuenta la mascara de perdida forestal. La Figura \ref{fig:resulPC} nos muestra el resultado esperado por la metodolog\'ia (Mascara de perdida Forestal y cuantificaci\'on).
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8	\textwidth]{./Figures/cap4/resultadoMetodologia.png}
-	\caption{Presentaci\'on del resultado. Mascara de perdida Vegetal y cuantificaci\'on.}
+	\caption{Presentaci\'on del resultado. Mascara de perdida Forestal y cuantificaci\'on.}
 	\label{fig:resulPC}
 \end{figure}
 \section{Resumen}

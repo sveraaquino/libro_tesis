@@ -222,6 +222,7 @@ John~R Jensen.
 \bibitem[lan13]{landsatNasa}
 {Landsat Project Description}.
 \newblock \url {http://landsat.usgs.gov//about_project_descriptions.php}, 2013.
+\newblock [Internet; descargado 28-octubre-2015].
 
 \bibitem[LB05]{lu2005exploring}
 Dengsheng Lu and Mateus Batistella.
@@ -312,6 +313,11 @@ Fabian Miguel~Peralta Ojeda.
   de carbono en el \'area para Parque Nacional San Rafael, a\~{n}o 2008/2013}.
 \newblock Universidad Nacional de Asunci\'on, 2013.
 
+\bibitem[osg15]{osgeoGrass}
+osgeo.
+\newblock Grass-wiki, 2015.
+\newblock [Internet; descargado 28-octubre-2015].
+
 \bibitem[Par]{BAAPA2013}
 WWF Paraguay y la Facultad de Ciencias~Agrarias ParLu.
 \newblock Desarrollo del estudio de lÍnea de base para el sitio piloto bosque
@@ -335,6 +341,12 @@ Michael~W Palace, Franklin~B Sullivan, Mark~J Ducey, Robert~N Treuhaft,
 \newblock Estimating forest structure in a tropical forest using field
   measurements, a synthetic model and discrete return lidar data.
 \newblock {\em Remote Sensing of Environment}, 161:1--11, 2015.
+
+\bibitem[QGI15]{qgisSIG}
+QGIS.
+\newblock Un sistema de informaci\'on geogr\'afica libre y de c\'odigo abierto,
+  2015.
+\newblock [Internet; descargado 28-octubre-2015].
 
 \bibitem[RAAKR05]{radke2005image}
 Richard~J Radke, Srinivas Andra, Omar Al-Kofahi, and Badrinath Roysam.
