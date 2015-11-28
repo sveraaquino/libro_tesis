@@ -76,35 +76,37 @@
 		\nompageref{48}
   \item [{$ f_{1}^{Norm}(x,y,i) $}]\begingroup Imagen normalizada, de la banda $ i $.\nomeqref {4.6}
 		\nompageref{61}
+  \item [{$ MC $}]\begingroup Mascara de cambios.\nomeqref {4.6}
+		\nompageref{64}
   \item [{$ \sigma_{c} $}]\begingroup Desviaci\'on determinada como constante para la umbralizaci\'on de la cobertura vegetal.\nomeqref {4.7}
 		\nompageref{66}
   \item [{$ r^{2}$}]\begingroup Coeficiente de determinaci\'on.\nomeqref {4.7}
-		\nompageref{68}
-  \item [{$ C(x,y)$}]\begingroup Toneladas de carbono por hect\'area en las coordenadas $ (x,y) $.\nomeqref {4.8}
 		\nompageref{69}
+  \item [{$ C(x,y)$}]\begingroup Toneladas de carbono por hect\'area en las coordenadas $ (x,y) $.\nomeqref {4.8}
+		\nompageref{70}
   \item [{$Ic(x,y)$}]\begingroup  Indice de cambio en las coordenadas $ (x,y) $.\nomeqref {4.13}
 		\nompageref{70}
   \item [{$PC(x,y)$}]\begingroup Toneladas de carbono por hect\'area perdidos en las coordenadas $ (x,y) $.\nomeqref {4.13}
 		\nompageref{70}
   \item [{$ VT $}]\begingroup Puntos de verdad terreno.\nomeqref {5.0}
-		\nompageref{73}
+		\nompageref{74}
   \item [{$ T $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}
-		\nompageref{73}
+		\nompageref{74}
   \item [{$ F $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}
-		\nompageref{73}
+		\nompageref{74}
   \item [{$ TP $}]\begingroup Verdadero positivo.\nomeqref {5.0}
-		\nompageref{73}
+		\nompageref{74}
   \item [{$ FP $}]\begingroup Falso positivo.\nomeqref {5.0}
-		\nompageref{73}
+		\nompageref{74}
   \item [{$ P $}]\begingroup Total positivo.\nomeqref {5.0}
-		\nompageref{73}
+		\nompageref{74}
   \item [{$ N $}]\begingroup Total negativo.\nomeqref {5.0}
-		\nompageref{73}
+		\nompageref{74}
   \item [{$ FN $}]\begingroup Falso negativo.\nomeqref {5.0}
-		\nompageref{73}
+		\nompageref{74}
   \item [{$ P^{'} $}]\begingroup Total positivo catalogado.\nomeqref {5.0}
-		\nompageref{73}
+		\nompageref{74}
   \item [{$ N^{'} $}]\begingroup Total negativo catalogado.\nomeqref {5.0}
-		\nompageref{73}
+		\nompageref{74}
 
 \end{thenomenclature}

@@ -35,11 +35,12 @@
 \nomenclatureentry{56$ \mu_{I_{c}} $@[{$ \mu_{I_{c}} $}]\begingroup Media de la imagen de \'Indices de cambio.\nomeqref {3.18}|nompageref}{48}
 \nomenclatureentry{56$ Z $@[{$ Z $}]\begingroup Variable tipificada.\nomeqref {4.1}|nompageref}{61}
 \nomenclatureentry{57$ f_{1}^{Norm}(x,y,i) $@[{$ f_{1}^{Norm}(x,y,i) $}]\begingroup Imagen normalizada, de la banda $ i $.\nomeqref {4.6}|nompageref}{61}
+\nomenclatureentry{58$ MC $@[{$ MC $}]\begingroup Mascara de cambios.\nomeqref {4.6}|nompageref}{64}
 \nomenclatureentry{58$ \sigma_{c} $@[{$ \sigma_{c} $}]\begingroup Desviaci\'on determinada como constante para la umbralizaci\'on de la cobertura vegetal.\nomeqref {4.7}|nompageref}{66}
 \nomenclatureentry{59$ r^{2}$@[{$ r^{2}$}]\begingroup Coeficiente de determinaci\'on.\nomeqref {4.7}|nompageref}{69}
 \nomenclatureentry{60$ C(x,y)$@[{$ C(x,y)$}]\begingroup Toneladas de carbono por hect\'area en las coordenadas $ (x,y) $.\nomeqref {4.8}|nompageref}{70}
-\nomenclatureentry{62$Ic(x,y)$@[{$Ic(x,y)$}]\begingroup  Indice de cambio en las coordenadas $ (x,y) $.\nomeqref {4.13}|nompageref}{71}
-\nomenclatureentry{63$PC(x,y)$@[{$PC(x,y)$}]\begingroup Toneladas de carbono por hect\'area perdidos en las coordenadas $ (x,y) $.\nomeqref {4.13}|nompageref}{71}
+\nomenclatureentry{62$Ic(x,y)$@[{$Ic(x,y)$}]\begingroup  Indice de cambio en las coordenadas $ (x,y) $.\nomeqref {4.13}|nompageref}{70}
+\nomenclatureentry{63$PC(x,y)$@[{$PC(x,y)$}]\begingroup Toneladas de carbono por hect\'area perdidos en las coordenadas $ (x,y) $.\nomeqref {4.13}|nompageref}{70}
 \nomenclatureentry{64$ VT $@[{$ VT $}]\begingroup Puntos de verdad terreno.\nomeqref {5.0}|nompageref}{74}
 \nomenclatureentry{65$ T $@[{$ T $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}|nompageref}{74}
 \nomenclatureentry{66$ F $@[{$ F $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}|nompageref}{74}
