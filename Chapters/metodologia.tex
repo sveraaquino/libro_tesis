@@ -109,8 +109,8 @@ Sistemas de informaci\'on geogr\'afica fueron utilizados para la manipulaci\'on 
 \end{itemize}
 
 \section{Metodolog\'ia}
-La metodolog\'ia busca que los algoritmos a implementar sean ligeros en cada proceso, as\'i evitar c\'alculos complejos y excesivas supervisiones. Por ello, en los procedimientos es necesario realizar estudios previos de la repuesta espectral que presenta la vegetaci\'on en los sensores remotos, de manera a determinar variables fijas en la metodolog\'ia.\\~\\
-Los datos de entrada son las im\'agenes Landsat, cuya elecci\'on es debido a la disponibilidad presentada en el tiempo y gratuidad en la  obtenci\'on. Las im\'agenes Landsat 8 no deben ser mezcladas con im\'agenes de otro sensor del mismo sat\'elite, ya que esta posee una resoluci\'on radiom\'etrica de 16 bits y las dem\'as son capturadas a 8 bits. Por ultimo las bandas utilizadas corresponde a la infrarroja cercana y roja.\\~\\
+La metodolog\'ia busca que los algoritmos a implementar sean ligeros en cada proceso, para as\'i evitar c\'alculos complejos y excesivas supervisiones. En los procedimientos es necesario realizar estudios previos a la repuesta espectral que presenta la vegetaci\'on en los sensores remotos, de manera a determinar variables fijas en la metodolog\'ia.\\~\\
+Los datos de entrada son las im\'agenes Landsat, cuya elecci\'on es debido a la disponibilidad presentada en el tiempo y gratuidad en la  obtenci\'on. Las im\'agenes Landsat 8 no deben ser mezcladas con im\'agenes de otro sensor del mismo sat\'elite, ya que esta posee una resoluci\'on radiom\'etrica de 16 bits y las dem\'as son capturadas a 8 bits. Por \'ultimo las bandas utilizadas corresponde a la infrarroja cercana y roja.\\~\\
 La Figura \ref{fig:metodologiapc} representa el flujo de procedimientos aplicados a las im\'agenes satelitales para la obtenci\'on de la imagen de perdida de carbono junto con la cuantificaci\'on del mismo.
 
 \begin{figure}[H]
@@ -123,7 +123,7 @@ La Figura \ref{fig:metodologiapc} representa el flujo de procedimientos aplicado
 \subsection{Correcciones de im\'agenes satelitales}\label{sec:coorImsat}
 Los pixeles de las im\'agenes satelitales deben tener una ubicaci\'on suficientemente aproximada a la realidad del terreno, de manera que se garantice la correspondencia geogr\'afica entre pixeles a ser comparados. Por ello, el pre-procesamientos de las im\'agenes aplicando correcciones geom\'etricas y radiom\'etricas son necesarios.
 \subsubsection{Correcci\'on Geom\'etrica}
-Este procedimiento consiste en 3 fases:
+Este procedimiento es m\'as conocido como georreferenciaci\'on y es realizado para que los pixeles de la imagen satelital correspondan a sus coordenadas en el terreno. El procedimiento consiste en 3 fases:
 \begin{itemize}
 	\item Relevamiento de puntos de control.
 	\item Interpolaci\'on espacial.
@@ -138,7 +138,7 @@ El proceso de interpolación espacial necesita la recopilación de puntos de con
 	\label{fig:gcp}
 \end{figure}
 
-La ecuaci\'on de transformaci\'on es una regresi\'on que relaciona los valores de coordenadas, pertenecientes a la imagen, con las coordenadas cartogr\'aficas. Los coeficientes de transformaci\'on se obtienen a partir de los puntos de control seleccionados, aplicando un ajuste por m\'inimos cuadrados de todos los puntos. Cuando la contribuci\'on de los puntos al $ RMS $ es alta, significa que las correspondencias de puntos esta mal seleccionada y que no corresponden al modelo de transformaci\'on entre la imagen y la referencia. Por ello se tiene un umbral donde los puntos que sobre pasan son borrados, re-calculando el RMS. En nuestra modelo utilizaremos 0,5 p\'ixel de la imagen, como umbral. La redundancia de datos har\'a que la bondad de ajuste tenga significaci\'on estad\'isticas y proporcione una mayor fiabilidad. La regresi\'on para esta m\'etodologia es lineal.\\~\\
+La ecuaci\'on de transformaci\'on es una regresi\'on que relaciona los valores de coordenadas pertenecientes a la imagen, con las coordenadas cartogr\'aficas. Los coeficientes de transformaci\'on se obtienen a partir de los puntos de control seleccionados, aplicando un ajuste por m\'inimos cuadrados de todos los puntos (ver secci\'on \ref{sec:minimoscuadrados}). Cuando la contribuci\'on de los puntos al $ RMS $ es alta, significa que las correspondencias de puntos esta mal seleccionada y que no corresponden al modelo de transformaci\'on entre la imagen y la referencia. Por ello se tiene un umbral donde los puntos que sobre pasan son borrados, re-calculando el RMS. En nuestra modelo utilizaremos 0,5 p\'ixel de la imagen, como umbral. La redundancia de datos har\'a que la bondad de ajuste tenga significaci\'on estad\'isticas y proporcione una mayor fiabilidad. La regresi\'on para esta m\'etodologia es lineal.\\~\\
 La ultima fase en la correcci\'on geom\'etrica consiste en la interpolaci\'on radiom\'etrica, donde se lleva a cabo el re-muestreo de los p\'ixeles a una nueva posici\'on utilizando el m\'etodo de convoluci\'on c\'ubica (seleccionada por su mayor precisi\'on).\\~\\
 
 El Algoritmo \ref{alg:corrGEom} presenta el pseudo-código de la correcci\'on geom\'etrica.
@@ -153,10 +153,12 @@ El Algoritmo \ref{alg:corrGEom} presenta el pseudo-código de la correcci\'on ge
 		
 		\State $a \gets \text{vector de coeficientes para la axisa}$
 		\State $b \gets \text{vector de coeficientes para la ordenada}$
-		
-		\State $\textsc{ajustePorM\'inimosCuadradosRMS}(pc,a,b)$
-		
-		\State 
+		\State $i^{'} \gets \text{Imagen corregida}$
+		\State
+		\State { //Para el calculo de m\'inimos cuadrados ver secci\'on \ref{sec:minimoscuadrados}}
+		\State $\textsc{ajustePorM\'inimosCuadradosRMS}(pc,a,b)$ 
+		\State
+
 
 		
 			\For{$x \gets 0, m$}
@@ -186,56 +188,18 @@ El Algoritmo \ref{alg:corrGEom} presenta el pseudo-código de la correcci\'on ge
 El bandeo y los pixeles perdidos causados por factores naturales y del sensor podr\'ian generar errores en el momento de aplicar operaciones del \'algebra de mapas a las im\'agenes satelitales. Por ello, en este proceso se plantea realizar la correcciones radiom\'etricas a las im\'agenes satelitales aplicando los m\'etodos de bandeo y pixel o lineas perdidas descriptos en la secci\'on \ref{subsec:bandeado} y \ref{subsec:pixelesP}.
 
 \subsection{Detecci\'on de cambio forestal}
-La detecci\'on de cambio cumple un papel fundamental en la metodolog\'ia, ya que nos permite categorizar el cambio en las series temporales estudiadas. Este proceso presenta un sistema automatizado a trav\'es de c\'alculos estad\'isticos extra\'ido de las im\'agenes satelitales para detectar el cambio (m\'as detalles en la secci\'on \ref{sec:discriminacion}) y a partir de previos an\'alisis del comportamiento espectral observados en la cobertura vegetal (m\'as detalles en la secci\'on \ref{subsec:umbralVegetacion}) evaluar los cambios forestales.
+La detecci\'on de cambio cumple un papel fundamental en la metodolog\'ia, ya que nos permite categorizar el cambio en las series temporales estudiadas. Este proceso presenta un sistema automatizado a trav\'es de c\'alculos estad\'isticos extra\'ido de las im\'agenes satelitales para detectar el cambio (secci\'on \ref{sec:discriminacion}) y a partir de previos an\'alisis del comportamiento espectral observados en la cobertura vegetal (secci\'on \ref{subsec:umbralVegetacion}) evaluar los cambios forestales.
 
 \subsubsection{Detecci\'on de cambio}
-La Figura \ref{fig:deteccionCambio} presenta un panorama especifico de lo que se busca en el proceso. El resultado esperado constituye una mascara de cambio ($ MC $) entre las series temporales de im\'agenes comparadas.
+En este proceso se detecta el cambio entre dos tiempos de im\'agenes satelitales. El resultado esperado constituye una mascara de cambio ($ MC $) entre las series temporales de im\'agenes comparadas. La Figura \ref{fig:deteccionCambio} presenta un panorama espec\'ifico de lo que se busca en el proceso
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0 \textwidth]{./Figures/cap4/deteccionCambio_2.png}
 	\caption{Diagrama de flujo. Detecci\'on de Cambio.}
 	\label{fig:deteccionCambio}
 \end{figure}
-
-\paragraph{Nomalizaci\'on Radiom\'etrica}\mbox{}\\\mbox{}\\
-La normalizaci\'on radiom\'etrica pretende optimizar el proceso de comparaci\'on mejorando la semejanza entre im\'agenes. La distintas respuestas espectrales que presentan las coberturas vegetales en diferentes estaciones del a\~{n}o o condiciones ambientales en el momento de la captura hace necesario un procedimiento adicional que iguale los pixeles en relaci\'on a contraste y brillo entre im\'agenes. La normalizaci\'on mediante par\'ametros estad\'isticos de las im\'agenes fue utilizado ya que representa un m\'etodo optimo para comparar im\'agenes satelitales donde el cambio es reducido \cite{mateu1999comparacion}.\\~\\
-Las distintas bandas de una imagen satelital presentan un comportamiento con distribuci\'on normal en sus histogramas \cite{martinez2013normalizacion}, por lo que teniendo una variable tipificada $(Z)$ es posible definirlos en una distribuci\'on normal est\'andar del tipo $ N(0,1) $ (media $ 0 $ y desviaci\'on $ 1 $) seg\'un la expresión:
-	\begin{equation}
-	Z=\dfrac{f_{1}(x,y,i)-\mu_{i,1}}{\sigma_{i,1}}
-	\end{equation}
-\nomenclature[56]{$ Z $}{Variable tipificada.}	
-	Aplicando este concepto sobre cada una de las dos im\'agenes, se pueden comparar siendo ambas distribuciones estandarizadas:
-	\begin{equation}
-	\dfrac{f_{1}(x,y,i)-\mu_{i,1}}{\sigma_{i,1}}=\dfrac{f_{2}(x,y,i)-\mu_{i,2}}{\sigma_{i,2}}
-	\end{equation}
-	Para su aplicaci\'on pr\'actica, se puede transformar el nivel digital $ f_{1}(x,y,i) $ perteneciente a la imagen 1, para que se asemeje al $ f_{2}(x,y,2) $ de la imagen 2, ambas de la banda $ i $, expresi\'on:
-	\begin{equation}
-	f_{1}^{Norm}(x,y,i)=\mu_{i,2}+\dfrac{\sigma_{i,2}}{\sigma_{i,1}}\cdot(f_{1}(x,y,i)-\mu_{i,1})
-	\end{equation}
-	 Siendo $ f_{1}^{Norm}(x,y,i) $ la imagen normalizada definida por una relaci\'on lineal entre las dos distribuciones. Los coeficientes de la transformaci\'on $ m_{1,2} $ y $ h_{1,2} $ se definen seg\'un se indica en la expresi\'on:
-	
-			\begin{equation}
-			h_{1,2}=\mu_{i,2}-\dfrac{\sigma_{i,2}}{\sigma_{i,1}}\cdot\mu_{i,1}
-			\end{equation}
-					\begin{equation}
-					m_{1,2}=\dfrac{\sigma_{i,2}}{\sigma_{i,1}}
-					\end{equation}
-		\begin{equation}
-				f_{1}^{Norm}(x,y,i)=m_{1,2}\cdot f_{1}(x,y,i)+h_{1,2}
-		\end{equation}
-		\nomenclature[57]{$ f_{1}^{Norm}(x,y,i) $}{Imagen normalizada, de la banda $ i $.}	
-	La transformaci\'on obtiene histogramas parecidos, logrando de este modo mayor semejanza para el proceso de comparaci\'on multitemporal. En la Figura \ref{fig:normRadio} podemos observar el histograma de la secuencia de im\'agenes y el histograma de la imagen resultante luego de la normalizaci\'on.
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=1.0	\textwidth]{./Figures/cap4/normaRadio.png}
-		\caption{Normalizaci\'on Radiom\'etrica.}
-		\label{fig:normRadio}
-	\end{figure}
-	
-	
 \paragraph{Comparaci\'on Multitemporal}\mbox{}\\\mbox{}\\
-El siguiente paso despu\'es de haber equiparado radiom\'etricamente las im\'agenes consiste en la comparaci\'on multitemporal, permitiendo obtener un indice de cambio (variable cuantitativa) en cada pixel resultante. El m\'etodo de diferencia de im\'agenes es utilizada debido a que el m\'etodo Ratio no se ajusta a una distribuci\'on normal, se asume que el cambio es reducido y por ende est\'an ubicados hacia los extremos del histograma de la imagen con los \'indices de cambio $ I_{c} $, condici\'on clave para la umbralizaci\'on estad\'istica. La comparaci\'on es realizado sobre la imagen con los NDVI de cada serie temporal a modo a resaltar la vegetaci\'on y simplificar la cantidad de bandas utilizadas, observando a su vez que los datos estables ser\'an pr\'oximos a $ 0 $ gracias a la semejanza existente entre los pixeles. 
+El siguiente paso despu\'es de haber equiparado radiom\'etricamente (secci\'on \ref{sec:capNormalizacion}) las im\'agenes consiste en la comparaci\'on multitemporal, permitiendo obtener un indice de cambio (variable cuantitativa) en cada pixel resultante. El m\'etodo de diferencia de im\'agenes es utilizada debido a que el m\'etodo Ratio no se ajusta a una distribuci\'on normal, se asume que el cambio es reducido y por ende est\'an ubicados hacia los extremos del histograma de la imagen con los \'indices de cambio $ I_{c} $, condici\'on clave para la umbralizaci\'on estad\'istica. La comparaci\'on es realizado sobre la imagen con los NDVI de cada serie temporal a modo a resaltar la vegetaci\'on y simplificar la cantidad de bandas utilizadas, observando a su vez que los datos estables ser\'an pr\'oximos a $ 0 $ gracias a la semejanza existente entre los pixeles. 
 \paragraph{Umbral estad\'istico}\mbox{}\\\mbox{}\\
 Los criterios de decisi\'on propuesto en la secci\'on \ref{sec:discriminacion} asignan valores de cambio/no cambio en funci\'on a un umbral. Estos criterios permiten convertir los indices de cambios a valores cualitativos que representan una m\'ascara de cambio ($ MC $). El m\'etodo basados en par\'ametros estad\'isticos es escogido por su sencillez y coherencia con el m\'etodo de comparaci\'on multitemporal aplicada. \\~\\
 La imagen es re-clasificadas en distintas categor\'ias mediante los umbrales calculados (Perdida=2, Ganancia=1, No cambio=3), como podemos ver en la Figura \ref{fig:umbrales}.  La variable de fiabilidad $ n $ es elegida en base a la probabilidad de cambio deseado para la detecci\'on (m\'as detalles en la secci\'on \ref{sec:discriminacion}).
@@ -320,14 +284,7 @@ El procedimiento que sigue una vez obtenido los NDVI de las dos fechas es determ
 \subsubsection{Mascara de P\'erdida Forestal}
 El proceso consiste en la intersecci\'on entre la mascaras de vegetaci\'on y cambio ($ MC$ AND $MV $). En la interseccion solo son considerados los cambios correspondiente a p\'erdidas en $ MC $, debido a que se pretende generar una imagen binaria $ MP $ que represente si en un pixel hay p\'erdida forestal.\\~\\
 La imagen $ MP $ probablemente tendr\'a errores que son inherentes a los procesos utilizados para su creación \cite{lovell2001filtering}. \\~\\
-La utilizaci\'on del filtro de mediana sobre la imagen de perdida en la reducci\'on del porcentaje de falsas alarmas ser\'a utilizado como m\'etodo para la eliminaci\'on de ruido. El filtrado tiene como ventaja de que el valor final del pixel es un valor real presente en la imagen, siendo dicha variable, la mediana entre los niveles digitales pertenecientes a su vecindad como podemos observar en la Figura \ref{fig:filMediata} de ejemplo. La mediana es el valor para el cual el 50 \% de todos los p\'ixeles en el histograma son mayores y 50 \% son menores \cite{mehl1997fundamentos}.
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.8	\textwidth]{./Figures/cap3/FiltrodelaMediana.png}
-	\caption{Proceso del filtro de mediana.}
-	\label{fig:filMediata}
-\end{figure}
- Con im\'agenes de media/alta resoluci\'on espacial(menos de $ 15 \times 15 $ metros cuadrados) se obtienen buenos resultados aplicando filtros de $ 5x5 $, pero cuando se trabaje con im\'agenes de menor resoluci\'on no se recomienda ese tama\~{n}o de ventana por la distorsi\'on que causa a la imagen \cite{martinez2013normalizacion}. Nuestras im\'agenes satelitales de entrada son de baja resoluci\'on espacial ($ 30 \times 30 $ metros cuadrados) por lo que el tama\~{n}o de ventana a utilizar seria $ 3 \times 3 $.
+La utilizaci\'on del filtro de mediana sobre la imagen de perdida en la reducci\'on del porcentaje de falsas alarmas ser\'a utilizado como m\'etodo para la eliminaci\'on de ruido. Con im\'agenes de media/alta resoluci\'on espacial(menos de $ 15 \times 15 $ metros cuadrados) se obtienen buenos resultados aplicando filtros de $ 5x5 $, pero cuando se trabaje con im\'agenes de menor resoluci\'on no se recomienda ese tama\~{n}o de ventana por la distorsi\'on que causa a la imagen \cite{martinez2013normalizacion}. Nuestras im\'agenes satelitales de entrada son de baja resoluci\'on espacial ($ 30 \times 30 $ metros cuadrados) por lo que el tama\~{n}o de ventana a utilizar seria $ 3 \times 3 $.
 En la Figura \ref{fig:intersPerdida} podemos observar el flujo de tareas para la obtenci\'on de la mascara que representa la perdida forestal en dos tiempos .
 \begin{figure}[H]
 	\centering

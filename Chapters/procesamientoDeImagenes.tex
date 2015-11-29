@@ -213,7 +213,7 @@ Donde $ f $ es una imagen satelital de entrada, $ f^{'} $ es la imagen corregida
 \nomenclature[27]{$ T[f] $}{ Operador que corrige la imagen satelital $ f $.}
 \subsection{Correccci\'on geom\'etrica}\label{sec:corrGeometrica}
 Una imagen de sat\'elite, al igual que las fotograf\'ias a\'ereas, no proporciona informaci\'on georreferenciada; cada pixel se ubica en un sistema de coordenadas arbitrario de tipo fila-columna como los que manejan los programas de tratamiento digital de im\'agenes \cite{deniseCultivos}.\\~\\
-El proceso consiste en dar a cada pixel su localizaci\'on en un sistema de coordenadas estandard (UTM, lambert, coordenadas geogr\'aficas) para poder combinar la imagen de sat\'elite con otro tipo de capas en un entorno SIG. El proceso obtiene una nueva capa en la que cada columna corresponde con un valor de longitud y cada fila con un valor de latitud. En caso de que la imagen no hubiese sufrido ningún tipo de distorsi\'on, el procedimiento ser\'ia bastante sencillo, sin embargo una imagen puede sufrir diversos tipos de distorsiones.\\~\\
+El proceso consiste en dar a cada pixel su localizaci\'on en un sistema de coordenadas estandard (UTM, lambert, coordenadas geogr\'aficas) para poder combinar la imagen de sat\'elite con otro tipo de capas en un entorno SIG. El proceso obtiene una nueva imagen $ i^{'} $ de alguna banda $ i $ de la imagen satelital, en la que cada columna corresponde con un valor de longitud y cada fila con un valor de latitud. En caso de que la imagen no hubiese sufrido ningún tipo de distorsi\'on, el procedimiento ser\'ia bastante sencillo, sin embargo una imagen puede sufrir diversos tipos de distorsiones.\\~\\
 Es necesario localizar puntos comunes de la imagen con puntos de control, como tarea inicial para la correcci\'on geom\'etrica, de manera a poder realizar una interpolaci\'on espacial y de los valores radiom\'etricos \cite{deniseCultivos}.
 
 \subsubsection{Interpolaci\'on espacial}
@@ -253,7 +253,27 @@ En la Figura \ref{fig:intPolEcua} podemos observar las transformaciones con poli
     	\caption{Interpolaci\'on espacial con polinomios de primer y segundo orden.}
     	\label{fig:intPolEcua}
     \end{figure}
-  \paragraph{Calidad de la interpolaci\'on espacial. }\mbox{}\\\mbox{}\\
+    
+  \paragraph{Ajuste por m\'inimos cuadrados }\label{sec:minimoscuadrados}\mbox{}\\\mbox{}\\
+Una relación funcional $ y = \alpha(x) $ entre $ x $ y $ y $, con $ \alpha $ desconocida y se conocen valores $ y_{u} $ que aproximan a $ \alpha(x_{u}) $, o sea:
+ \begin{equation}
+\alpha(x_u ) = y_u + \varepsilon _u
+ \end{equation} 
+Donde $ u \in \{1,..,\eta\}$, con $  \varepsilon _u $  desconocido.
+El m\'etodo trata de recuperar la función $ \alpha $ a partir de los datos $ y_u $. Si $ \alpha $ es polin\'omica $ (\alpha(x) = p_{l}(x)) $, entonces, dados $ \eta+1 $ puntos $ (x_0, y_0), (x_1, y_1),..., (x_\eta, y_\eta) $ con $ x_0, x_1,..., x_\eta $ n\'umeros reales diferentes, se trata de encontrar un polinomio:
+  \begin{equation}
+  p_m (x) = a_0 + a_1 x + \ldots + a_l x^l
+  \end{equation} 
+  que mejor se ajuste a los datos y sea m\'inimo. En otras palabras:
+  \begin{equation}
+s(a_0 ,a_1 , \ldots ,a_l ) = \sum\limits_{u = 0}^\eta {\left( {p_m (x_u ) - y_u } \right)^2 } = \sum\limits_{u = 0}^\eta {\left( {a_0 + a_1 x_u + a_2 x_u^2 + \ldots + a_l x_u^l - y_k } \right)^2 }
+  \end{equation}   
+ Donde $ s $ es el conjunto de coeficientes del polinomio.
+ \nomenclature[30]{$ p_m (x) $}{Polinomio con variable dependiente $ x $.}
+ \nomenclature[30]{$ \alpha $}{Una funci\'on cualquiera.}
+\nomenclature[30]{$ S $}{Conjunto de coeficientes del polinomio.}
+  
+  \paragraph{Calidad de la interpolaci\'on espacial }\mbox{}\\\mbox{}\\
  La calidad en la interpolaci\'on espacial y los puntos de control seleccionados $ \eta $ se calcula utilizando el promedio de los errores cuadráticos medios (RMS), que consiste en la diferencia entre la coordenada transformada deseada para un punto de control y la coordenada real obtenida como salida.
 
  \begin{equation}
@@ -364,6 +384,44 @@ En Figura \ref{fig:bandeado} podemos observar el histogramas de una banda correg
 \section{Proceso de detecci\'on de cambios}
 	En los m\'etodos comunes de detecci\'on de cambios se asigna un valor correspondiente al grado de cambio sobre cada pixel, independientemente del resto de la imagen satelital. En estos m\'etodos se considera el pixel como unidad b\'asica (\'algebra de mapas) para aplicar las correspondientes operaciones matem\'aticas asociadas a cada algoritmo.\\~\\
 Los m\'etodos de comparaci\'on, generan una imagen (\'indice de cambios) que representa el grado de cambio entre dos situaciones temporales; los pixeles de la imagen resultante, contienen una variable continua de tipo cuantitativo (Niveles digitales), por lo que se requieren t\'ecnicas que los conviertan en variables cualitativa (Categor\'ias) \cite{martinez2013normalizacion}.
+
+\subsection{Nomalizaci\'on Radiom\'etrica}\label{sec:capNormalizacion}
+La normalizaci\'on radiom\'etrica pretende optimizar el proceso de comparaci\'on mejorando la semejanza entre im\'agenes. La distintas respuestas espectrales que presentan las coberturas vegetales en diferentes estaciones del a\~{n}o o condiciones ambientales en el momento de la captura hace necesario un procedimiento adicional que iguale los pixeles en relaci\'on a contraste y brillo entre im\'agenes. La normalizaci\'on mediante par\'ametros estad\'isticos de las im\'agenes fue utilizado ya que representa un m\'etodo optimo para comparar im\'agenes satelitales donde el cambio es reducido \cite{mateu1999comparacion}.\\~\\
+Las distintas bandas de una imagen satelital presentan un comportamiento con distribuci\'on normal en sus histogramas \cite{martinez2013normalizacion}, por lo que teniendo una variable tipificada $(Z)$ es posible definirlos en una distribuci\'on normal est\'andar del tipo $ N(0,1) $ (media $ 0 $ y desviaci\'on $ 1 $) seg\'un la expresión:
+\begin{equation}
+Z=\dfrac{f_{1}(x,y,i)-\mu_{i,1}}{\sigma_{i,1}}
+\end{equation}
+\nomenclature[56]{$ Z $}{Variable tipificada.}	
+Aplicando este concepto sobre cada una de las dos im\'agenes, se pueden comparar siendo ambas distribuciones estandarizadas:
+\begin{equation}
+\dfrac{f_{1}(x,y,i)-\mu_{i,1}}{\sigma_{i,1}}=\dfrac{f_{2}(x,y,i)-\mu_{i,2}}{\sigma_{i,2}}
+\end{equation}
+Para su aplicaci\'on pr\'actica, se puede transformar el nivel digital $ f_{1}(x,y,i) $ perteneciente a la imagen 1, para que se asemeje al $ f_{2}(x,y,2) $ de la imagen 2, ambas de la banda $ i $, expresi\'on:
+\begin{equation}
+f_{1}^{Norm}(x,y,i)=\mu_{i,2}+\dfrac{\sigma_{i,2}}{\sigma_{i,1}}\cdot(f_{1}(x,y,i)-\mu_{i,1})
+\end{equation}
+Siendo $ f_{1}^{Norm}(x,y,i) $ la imagen normalizada definida por una relaci\'on lineal entre las dos distribuciones. Los coeficientes de la transformaci\'on $ m_{1,2} $ y $ h_{1,2} $ se definen seg\'un se indica en la expresi\'on:
+
+\begin{equation}
+h_{1,2}=\mu_{i,2}-\dfrac{\sigma_{i,2}}{\sigma_{i,1}}\cdot\mu_{i,1}
+\end{equation}
+\begin{equation}
+m_{1,2}=\dfrac{\sigma_{i,2}}{\sigma_{i,1}}
+\end{equation}
+\begin{equation}
+f_{1}^{Norm}(x,y,i)=m_{1,2}\cdot f_{1}(x,y,i)+h_{1,2}
+\end{equation}
+\nomenclature[57]{$ f_{1}^{Norm}(x,y,i) $}{Imagen normalizada, de la banda $ i $.}	
+La transformaci\'on obtiene histogramas parecidos, logrando de este modo mayor semejanza para el proceso de comparaci\'on multitemporal. En la Figura \ref{fig:normRadio} podemos observar el histograma de la secuencia de im\'agenes y el histograma de la imagen resultante luego de la normalizaci\'on.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0	\textwidth]{./Figures/cap4/normaRadio.png}
+	\caption{Normalizaci\'on Radiom\'etrica.}
+	\label{fig:normRadio}
+\end{figure}
+
+
 \subsection{Comparaci\'on multitemporal}\label{subsec:compMult}
 La comparaci\'on parte de un par de im\'agenes semejantes que abarcan la misma zona de estudio, siguiendo una secuencia multitemporal. Una secuencia multitemporal esta definido por $ \{f_{t}\}_{t \in \mathbb{N}} $, que representa una secuencia de im\'agenes satelitales de la misma zona en diferentes tiempos. Las operaciones m\'as utilizadas son \cite{chuvieco1998factor}: 
 	\begin{itemize}
