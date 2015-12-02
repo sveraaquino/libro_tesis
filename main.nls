@@ -22,7 +22,7 @@
 		\nompageref{30}
   \item [{$n_{ND}$}]\begingroup  N\'umero de pixeles en la imagen satelital teniendo el nivel digital $ ND $.\nomeqref {3.0}
 		\nompageref{30}
-  \item [{$\rho$}]\begingroup Funci\'on que representa a una operaci\'on aritm\'etica, l\'ogico, entre otros.\nomeqref {3.1}
+  \item [{$\rho$}]\begingroup Operador local utilizada para \'algebra de mapa .\nomeqref {3.1}
 		\nompageref{33}
   \item [{$ndvi$}]\begingroup Imagen del \'indice de vegetaci\'on diferencial normalizada (NDVI).\nomeqref {3.2}
 		\nompageref{35}
@@ -38,81 +38,73 @@
 		\nompageref{39}
   \item [{$ (x^{'},y^{'}) $}]\begingroup Coordenadas de la imagen transformada.\nomeqref {3.7}
 		\nompageref{39}
-  \item [{$ RMS_{i} $}]\begingroup Error cuadr\'atico de la banda $ i $.\nomeqref {3.11}
+  \item [{$ RMS_{i} $}]\begingroup Error cuadr\'atico de la banda $ i $.\nomeqref {3.8}
 		\nompageref{40}
-  \item [{$ S $}]\begingroup Conjunto de coeficientes del polinomio.\nomeqref {3.10}
+  \item [{$ \eta $}]\begingroup N\'umero de puntos de control.\nomeqref {3.8}
 		\nompageref{40}
-  \item [{$ \alpha $}]\begingroup Una funci\'on cualquiera.\nomeqref {3.10}
-		\nompageref{40}
-  \item [{$ p_m (x) $}]\begingroup Polinomio con variable dependiente $ x $.\nomeqref {3.10}
-		\nompageref{40}
-  \item [{$ \eta $}]\begingroup N\'umero de puntos de control.\nomeqref {3.11}
-		\nompageref{40}
-  \item [{$ \mu $}]\begingroup Valor de la media.\nomeqref {3.12}
+  \item [{$ \mu $}]\begingroup Valor de la media.\nomeqref {3.9}
+		\nompageref{43}
+  \item [{$ \sigma $}]\begingroup Desviaci\'on t\'ipica.\nomeqref {3.9}
+		\nompageref{43}
+  \item [{$ i_{*} $}]\begingroup Banda de la imagen satelital.\nomeqref {3.9}
+		\nompageref{43}
+  \item [{$ \sigma_{i} $}]\begingroup Desviaci\'on t\'ipica de la banda $ i $ de una imagen satelital.\nomeqref {3.9}
+		\nompageref{43}
+  \item [{$ \sigma_{i_{*}} $}]\begingroup Desviaci\'on t\'ipica de la banda $ i_{*} $ de una imagen satelital.\nomeqref {3.9}
+		\nompageref{43}
+  \item [{$ f^{'}(x,y,i) $}]\begingroup Imagen satelital corregida, con coordenadas espaciales $ (x,y) $ en la banda $ i $.\nomeqref {3.10}
 		\nompageref{44}
-  \item [{$ \sigma $}]\begingroup Desviaci\'on t\'ipica.\nomeqref {3.12}
-		\nompageref{44}
-  \item [{$ i_{*} $}]\begingroup Banda de la imagen satelital.\nomeqref {3.12}
-		\nompageref{44}
-  \item [{$ \sigma_{i} $}]\begingroup Desviaci\'on t\'ipica de la banda $ i $ de una imagen satelital.\nomeqref {3.12}
-		\nompageref{44}
-  \item [{$ \sigma_{i_{*}} $}]\begingroup Desviaci\'on t\'ipica de la banda $ i_{*} $ de una imagen satelital.\nomeqref {3.12}
-		\nompageref{44}
-  \item [{$ f^{'}(x,y,i) $}]\begingroup Imagen satelital corregida, con coordenadas espaciales $ (x,y) $ en la banda $ i $.\nomeqref {3.13}
-		\nompageref{45}
-  \item [{$ I_{dif} $}]\begingroup Indice de cambio por diferencia de im\'agenes.\nomeqref {3.24}
+  \item [{$ I_{dif} $}]\begingroup Indice de cambio por diferencia de im\'agenes.\nomeqref {3.22}
 		\nompageref{48}
-  \item [{$ I_{ratio} $}]\begingroup Indice de cambio por el m\'etodo de ratio.\nomeqref {3.24}
+  \item [{$ I_{ratio} $}]\begingroup Indice de cambio por el m\'etodo de ratio.\nomeqref {3.22}
 		\nompageref{48}
-  \item [{$ I_{c} $}]\begingroup Indice de cambio entre dos im\'agenes.\nomeqref {3.26}
+  \item [{$ I_{c} $}]\begingroup Indice de cambio entre dos im\'agenes.\nomeqref {3.24}
 		\nompageref{50}
-  \item [{$ B $}]\begingroup Imagen binaria en el proceso de detecci\'on de cambio.\nomeqref {3.26}
+  \item [{$ B $}]\begingroup Imagen binaria en el proceso de detecci\'on de cambio.\nomeqref {3.24}
 		\nompageref{50}
-  \item [{$ B(I_{c}) $}]\begingroup Nivel digital para el $ I_{c} $.\nomeqref {3.26}
+  \item [{$ B(I_{c}) $}]\begingroup Nivel digital para el $ I_{c} $.\nomeqref {3.24}
 		\nompageref{50}
-  \item [{$ U $}]\begingroup Umbral que binariza una imagen en base a un $ I_{c} $.\nomeqref {3.26}
+  \item [{$ U $}]\begingroup Umbral que binariza una imagen en base a un $ I_{c} $.\nomeqref {3.24}
 		\nompageref{50}
-  \item [{$ n $}]\begingroup Coeficiente de fiabilidad de los datos.\nomeqref {3.27}
+  \item [{$ n $}]\begingroup Coeficiente de fiabilidad de los datos.\nomeqref {3.25}
 		\nompageref{50}
-  \item [{$ Z $}]\begingroup Variable tipificada.\nomeqref {3.18}
+  \item [{$ Z_{t,i} $}]\begingroup Variable tipificada.\nomeqref {3.16}
 		\nompageref{47}
-  \item [{$ \mu_{I_{c}} $}]\begingroup Media de la imagen de \'Indices de cambio.\nomeqref {3.27}
+  \item [{$ \mu_{I_{c}} $}]\begingroup Media de la imagen de \'Indices de cambio.\nomeqref {3.25}
 		\nompageref{50}
-  \item [{$ \sigma_{I_{c}} $}]\begingroup Desviaci\'on t\'ipica de la imagen de \'Indices de cambio.\nomeqref {3.27}
+  \item [{$ \sigma_{I_{c}} $}]\begingroup Desviaci\'on t\'ipica de la imagen de \'Indices de cambio.\nomeqref {3.25}
 		\nompageref{50}
-  \item [{$ f_{1}^{Norm}(x,y,i) $}]\begingroup Imagen normalizada, de la banda $ i $.\nomeqref {3.23}
-		\nompageref{48}
-  \item [{$ MC $}]\begingroup Mascara de cambios.\nomeqref {4.0}
-		\nompageref{66}
+  \item [{$ f_{t}^{Norm}(x,y,i) $}]\begingroup Imagen normalizada, de la banda $ i $.\nomeqref {3.21}
+		\nompageref{47}
   \item [{$ \sigma_{c} $}]\begingroup Desviaci\'on determinada como constante para la umbralizaci\'on de la cobertura vegetal.\nomeqref {4.1}
-		\nompageref{68}
+		\nompageref{64}
   \item [{$ r^{2}$}]\begingroup Coeficiente de determinaci\'on.\nomeqref {4.1}
-		\nompageref{70}
+		\nompageref{66}
   \item [{$ C(x,y)$}]\begingroup Toneladas de carbono por hect\'area en las coordenadas $ (x,y) $.\nomeqref {4.2}
-		\nompageref{70}
+		\nompageref{67}
   \item [{$Ic(x,y)$}]\begingroup  Indice de cambio en las coordenadas $ (x,y) $.\nomeqref {4.7}
-		\nompageref{71}
+		\nompageref{67}
   \item [{$PC(x,y)$}]\begingroup Toneladas de carbono por hect\'area perdidos en las coordenadas $ (x,y) $.\nomeqref {4.7}
-		\nompageref{71}
+		\nompageref{67}
   \item [{$ VT $}]\begingroup Puntos de verdad terreno.\nomeqref {5.0}
-		\nompageref{75}
+		\nompageref{72}
   \item [{$ T $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}
-		\nompageref{75}
+		\nompageref{72}
   \item [{$ F $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}
-		\nompageref{75}
+		\nompageref{72}
   \item [{$ TP $}]\begingroup Verdadero positivo.\nomeqref {5.0}
-		\nompageref{75}
+		\nompageref{72}
   \item [{$ FP $}]\begingroup Falso positivo.\nomeqref {5.0}
-		\nompageref{75}
+		\nompageref{72}
   \item [{$ P $}]\begingroup Total positivo.\nomeqref {5.0}
-		\nompageref{75}
+		\nompageref{72}
   \item [{$ N $}]\begingroup Total negativo.\nomeqref {5.0}
-		\nompageref{75}
+		\nompageref{72}
   \item [{$ FN $}]\begingroup Falso negativo.\nomeqref {5.0}
-		\nompageref{75}
+		\nompageref{72}
   \item [{$ P^{'} $}]\begingroup Total positivo catalogado.\nomeqref {5.0}
-		\nompageref{75}
+		\nompageref{72}
   \item [{$ N^{'} $}]\begingroup Total negativo catalogado.\nomeqref {5.0}
-		\nompageref{75}
+		\nompageref{72}
 
 \end{thenomenclature}

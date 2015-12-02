@@ -109,95 +109,22 @@ Sistemas de informaci\'on geogr\'afica fueron utilizados para la manipulaci\'on 
 \end{itemize}
 
 \section{Metodolog\'ia}
-La metodolog\'ia busca que los algoritmos a implementar sean ligeros en cada proceso, para as\'i evitar c\'alculos complejos y excesivas supervisiones. En los procedimientos es necesario realizar estudios previos a la repuesta espectral que presenta la vegetaci\'on en los sensores remotos, de manera a determinar variables fijas en la metodolog\'ia.\\~\\
-Los datos de entrada son las im\'agenes Landsat, cuya elecci\'on es debido a la disponibilidad presentada en el tiempo y gratuidad en la  obtenci\'on. Las im\'agenes Landsat 8 no deben ser mezcladas con im\'agenes de otro sensor del mismo sat\'elite, ya que esta posee una resoluci\'on radiom\'etrica de 16 bits y las dem\'as son capturadas a 8 bits. Por \'ultimo las bandas utilizadas corresponde a la infrarroja cercana y roja.\\~\\
+Los datos de entrada son las im\'agenes Landsat pre-procesadas (correcciones geom\'etricas y radiom\'etricas) de manera a disminuir los errores de localizaci\'on e intensidad de los niveles digitales causados por distintos factores (secci\'on \ref{sec:correcionesImages}).  
+Las im\'agenes Landsat 8 no deben ser mezcladas con im\'agenes de otro sensor del mismo sat\'elite, ya que esta posee una resoluci\'on radiom\'etrica de 16 bits y las dem\'as son capturadas a 8 bits. Las bandas utilizadas corresponde a la infrarroja cercana y roja.\\~\\
 La Figura \ref{fig:metodologiapc} representa el flujo de procedimientos aplicados a las im\'agenes satelitales para la obtenci\'on de la imagen de perdida de carbono junto con la cuantificaci\'on del mismo.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.0	\textwidth]{./Figures/cap4/metodologiaCarbono_2.png}
+	\includegraphics[width=1.0	\textwidth]{./Figures/cap4/metodologiaCarbono_3.png}
 	\caption{Diagrama de flujo. Metodolog\'ia propuesta}
 	\label{fig:metodologiapc}
 \end{figure}
 
-\subsection{Correcciones de im\'agenes satelitales}\label{sec:coorImsat}
-Los pixeles de las im\'agenes satelitales deben tener una ubicaci\'on suficientemente aproximada a la realidad del terreno, de manera que se garantice la correspondencia geogr\'afica entre pixeles a ser comparados. Por ello, el pre-procesamientos de las im\'agenes aplicando correcciones geom\'etricas y radiom\'etricas son necesarios.
-\subsubsection{Correcci\'on Geom\'etrica}
-Este procedimiento es m\'as conocido como georreferenciaci\'on y es realizado para que los pixeles de la imagen satelital correspondan a sus coordenadas en el terreno. El procedimiento consiste en 3 fases:
-\begin{itemize}
-	\item Relevamiento de puntos de control.
-	\item Interpolaci\'on espacial.
-	\item Interpolaci\'on radiom\'etricos.
-\end{itemize}
-
-El proceso de interpolación espacial necesita la recopilación de puntos de control dispersos en la imagen ( más detalles ver secci\'on \ref{sec:corrGeometrica}). La recopilaci\'on es realizadas por medio de visitas al terreno o mediante el relevamiento de datos cartogr\'aficos existentes (mapa de caminos, ríos, cruces, entre otros.). La Figura \ref{fig:gcp} nos muestra los puntos de control relevadas en el terreno junto con su ubicaci\'on dentro de la imagen satelital que son utilizadas en la determinaci\'on de la ecuaci\'on de transformaci\'on.
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7	\textwidth]{./Figures/cap4/ejGpc.png}
-	\caption{Levantamiento de puntos de control.}
-	\label{fig:gcp}
-\end{figure}
-
-La ecuaci\'on de transformaci\'on es una regresi\'on que relaciona los valores de coordenadas pertenecientes a la imagen, con las coordenadas cartogr\'aficas. Los coeficientes de transformaci\'on se obtienen a partir de los puntos de control seleccionados, aplicando un ajuste por m\'inimos cuadrados de todos los puntos (ver secci\'on \ref{sec:minimoscuadrados}). Cuando la contribuci\'on de los puntos al $ RMS $ es alta, significa que las correspondencias de puntos esta mal seleccionada y que no corresponden al modelo de transformaci\'on entre la imagen y la referencia. Por ello se tiene un umbral donde los puntos que sobre pasan son borrados, re-calculando el RMS. En nuestra modelo utilizaremos 0,5 p\'ixel de la imagen, como umbral. La redundancia de datos har\'a que la bondad de ajuste tenga significaci\'on estad\'isticas y proporcione una mayor fiabilidad. La regresi\'on para esta m\'etodologia es lineal.\\~\\
-La ultima fase en la correcci\'on geom\'etrica consiste en la interpolaci\'on radiom\'etrica, donde se lleva a cabo el re-muestreo de los p\'ixeles a una nueva posici\'on utilizando el m\'etodo de convoluci\'on c\'ubica (seleccionada por su mayor precisi\'on).\\~\\
-
-El Algoritmo \ref{alg:corrGEom} presenta el pseudo-código de la correcci\'on geom\'etrica.
-
-\begin{algorithm}
-	\caption{Algoritmo de correci\'on geom\'etrica}
-	\label{alg:corrGEom}
-	\begin{algorithmic}[1]
-		\Require{Puntos de control $pc=(x^{'},y^{'},x,y)$ y la banda $i$ de la imagen satelital}
-		\Statex
-		\Function{correcionGeometrica}{$pc,i$}
-		
-		\State $a \gets \text{vector de coeficientes para la axisa}$
-		\State $b \gets \text{vector de coeficientes para la ordenada}$
-		\State $i^{'} \gets \text{Imagen corregida}$
-		\State
-		\State { //Para el calculo de m\'inimos cuadrados ver secci\'on \ref{sec:minimoscuadrados}}
-		\State $\textsc{ajustePorM\'inimosCuadradosRMS}(pc,a,b)$ 
-		\State
-
-
-		
-			\For{$x \gets 0, m$}
-				\For{$y \gets 0, n$}
-					\State $\textsc{transformaci\'on}(x,y,a,b,i,i^{'})$
-				\EndFor
-			\EndFor
-			
-			\Return $ i^{'} $
-		
-		\EndFunction
-		
-		\State
-		\State
-		\Procedure{transformacion}{$x,y,a,b,i,i^{'}$}
-			\State $x^{'} = a[0]+a[1].x+a[2].y$
-			\State $y^{'} = b[0]+b[1].x+b[2].y$
-			
-			\State $i^{'}[x^{'}][y^{'}]=\textsc{convoluci\'onC\'ubica}(x^{'},y^{'},x,y,i)$
-			
-		\EndProcedure
-	\end{algorithmic}
-\end{algorithm}
-
-
-\subsubsection{Correcci\'on Radiom\'etrica}
-El bandeo y los pixeles perdidos causados por factores naturales y del sensor podr\'ian generar errores en el momento de aplicar operaciones del \'algebra de mapas a las im\'agenes satelitales. Por ello, en este proceso se plantea realizar la correcciones radiom\'etricas a las im\'agenes satelitales aplicando los m\'etodos de bandeo y pixel o lineas perdidas descriptos en la secci\'on \ref{subsec:bandeado} y \ref{subsec:pixelesP}.
-
-\subsection{Detecci\'on de cambio forestal}
-La detecci\'on de cambio cumple un papel fundamental en la metodolog\'ia, ya que nos permite categorizar el cambio en las series temporales estudiadas. Este proceso presenta un sistema automatizado a trav\'es de c\'alculos estad\'isticos extra\'ido de las im\'agenes satelitales para detectar el cambio (secci\'on \ref{sec:discriminacion}) y a partir de previos an\'alisis del comportamiento espectral observados en la cobertura vegetal (secci\'on \ref{subsec:umbralVegetacion}) evaluar los cambios forestales.
+\subsection{Detecci\'on de cambio Forestal}
+La detecci\'on de cambio cumple un papel fundamental en la metodolog\'ia ya que nos permite categorizar el cambio en la secuencia temporal estudiada. Este proceso presenta una metodolog\'ia automatizada a trav\'es del calculo de par\'ametros estad\'isticos extra\'ido de las im\'agenes satelitales y el uso de variables determinadas en un previo an\'alisis del comportamiento espectral observados en la cobertura vegetal de prueba.
 
 \subsubsection{Detecci\'on de cambio}
-En este proceso se detecta el cambio entre dos tiempos de im\'agenes satelitales. El resultado esperado constituye una mascara de cambio ($ MC $) entre las series temporales de im\'agenes comparadas. La Figura \ref{fig:deteccionCambio} presenta un panorama espec\'ifico de lo que se busca en el proceso
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1.0 \textwidth]{./Figures/cap4/deteccionCambio_2.png}
-	\caption{Diagrama de flujo. Detecci\'on de Cambio.}
-	\label{fig:deteccionCambio}
-\end{figure}
+En este proceso se detecta el cambio entre dos tiempos de im\'agenes satelitales. El resultado esperado constituye una mascara de cambio ($ MC $) entre las series temporales de im\'agenes comparadas. 
 \paragraph{Comparaci\'on Multitemporal}\mbox{}\\\mbox{}\\
 El siguiente paso despu\'es de haber equiparado radiom\'etricamente (secci\'on \ref{sec:capNormalizacion}) las im\'agenes consiste en la comparaci\'on multitemporal, permitiendo obtener un indice de cambio (variable cuantitativa) en cada pixel resultante. El m\'etodo de diferencia de im\'agenes es utilizada debido a que el m\'etodo Ratio no se ajusta a una distribuci\'on normal, se asume que el cambio es reducido y por ende est\'an ubicados hacia los extremos del histograma de la imagen con los \'indices de cambio $ I_{c} $, condici\'on clave para la umbralizaci\'on estad\'istica. La comparaci\'on es realizado sobre la imagen con los NDVI de cada serie temporal a modo a resaltar la vegetaci\'on y simplificar la cantidad de bandas utilizadas, observando a su vez que los datos estables ser\'an pr\'oximos a $ 0 $ gracias a la semejanza existente entre los pixeles. 
 \paragraph{Umbral estad\'istico}\mbox{}\\\mbox{}\\
@@ -220,48 +147,16 @@ En la Figura \ref{fig:iteracionRadiometrica} podemos observar que a partir de la
 		\caption{Mascaras de cambio, iteraci\'on de la normalizaci\'on radiom\'etrica.}
 		\label{fig:iteracionRadiometrica}
 	\end{figure}
-En la m\'ascara de cambios generada por la detecci\'on de cambios ($ MC $), las celdas clasificadas como cambios $ (ND = 2; ND = 1) $, son re-clasificadas como $ ND=0 $; frente a las celdas de no cambio $(ND = 3)  $, clasificadas con $ ND=1 $. Esta m\'ascara re-clasificada se utiliza para suprimir los cambios de las im\'agenes radiom\'etricas utilizadas como referencia estad\'istica. El procedimiento anterior se aplica \'unicamente para estimar los par\'ametros de normalizaci\'on radiom\'etrica. La imagen sobre la que se aplica la normalizaci\'on ha de mantener todas las celdas, independientemente de que se consideren como cambios a priori. Las iteraciones son repetidas hasta que la media de las diferencias entre NDVI sea de magnitud similar a la media obtenida en la iteraci\'on anterior. El siguiente Algoritmo \ref{alg:iteracionAlg} nos muestras como la iteraci\'on es hecha. 
-\nomenclature[58]{$ MC $}{Mascara de cambios.}
-\begin{algorithm}[H]
-	\caption{Algoritmo de iteraci\'on}
-	\label{alg:iteracionAlg}
-	\begin{algorithmic}[1]
-	\Statex
-	
-	\State $ i_{1} \gets \text{imagen de la fecha 1} $ 
-	\State $ i_{2} \gets \text{imagen de la fecha 2} $ 
-	\State $ MC \gets \text{mascara de cambio} $ 
-	\State $ i^{Norm} \gets \text{imagen normalizada} $ 
-	\State $ bandera = 0$
-
-	
-	\State 
-	\State $ continuar = 1 $ 
-	\State $ primera = 1 $ 
-	\While{$continuar = 1$}
-			\State $ MC = \textsc{normalizar}(MC,i_{1},i_{2},i^{Norm})$ 
-			\If{$primera = 1 \text{ or } i^{Norm}.media <> bandera$}
-				\State $ continuar = 1 $ 
-				\State $ primera = 0 $ 
-				\State $ bandera = i^{Norm}.media $
-			\Else
-				\State $continuar = 0$
-			\EndIf
-	\EndWhile
-	
-	\end{algorithmic}
-\end{algorithm}
-
-
-\subsubsection{Discriminaci\'on Forestal}
-La siguiente Figura \ref{fig:discrimForestal} refleja los pasos realizados para obtener una mascara de vegetaci\'on. Dicha m\'ascara representa si un pixel es o fue vegetaci\'on forestal en la serie temporal comparada. Los im\'agenes de entrada que ser\'an procesadas son aquellas obtenidas en la ultima normalizaci\'on radiom\'etrica generada por el proceso iterativo y la imagen base para la semejanza en ese proceso. 
+En la m\'ascara de cambios generada por la detecci\'on de cambios ($ MC $), las celdas clasificadas como cambios $ (ND = 2; ND = 1) $, son re-clasificadas como $ ND=0 $; frente a las celdas de no cambio $(ND = 3)  $, clasificadas con $ ND=1 $. Esta m\'ascara re-clasificada se utiliza para suprimir los cambios de las im\'agenes radiom\'etricas utilizadas como referencia estad\'istica. El procedimiento anterior se aplica \'unicamente para estimar los par\'ametros de normalizaci\'on radiom\'etrica. La imagen sobre la que se aplica la normalizaci\'on ha de mantener todas las celdas, independientemente de que se consideren como cambios a priori. Las iteraciones son repetidas hasta que la media de las diferencias entre NDVI sea de magnitud similar a la media obtenida en la iteraci\'on anterior. La Figura \ref{fig:deteccionCambio} nos presenta el ciclo de procedimientos para la detecci\'on de cambio.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.0	\textwidth]{./Figures/cap4/discriminacionForestal_2.png}
-	\caption{Diagrama de flujo. Discriminaci\'on Forestal.}
-	\label{fig:discrimForestal}
+	\includegraphics[width=1.0 \textwidth]{./Figures/cap4/deteccionCambio_3.png}
+	\caption{Diagrama de flujo. Detecci\'on de Cambio.}
+	\label{fig:deteccionCambio}
 \end{figure}
 
+\subsubsection{Discriminaci\'on Forestal}
+Las im\'agenes procesadas son aquellas obtenidas en la ultima normalizaci\'on radiom\'etrica, generada por el proceso iterativo y la imagen base para la semejanza en ese proceso. En este procedimiento se busca generar una mascara de vegetaci\'on (MV) de la secuencia temporal.
 \paragraph{NDVI}\mbox{}\\\mbox{}\\
 El NDVI es calculado para ambas fechas pertenecientes a la serie temporal evaluada. El calculo es hecho teniendo como entradas las bandas infrarroja cercana y roja, donde el vigor vegetal de cada p\'ixel sera determinado por la ecuaci\'on \ref{e:ndvi}. En total son consumidas 4 im\'agenes para obtener dos de salidas.
 \paragraph{Umbral de Vegetaci\'on}\label{sec:uvegetacion}\mbox{}\\\mbox{}\\
@@ -279,7 +174,14 @@ Donde $ \mu_{NDVI} $ representa la media del NDVI calculada y $ n $ la fiabilida
 \end{figure}
 
 \paragraph{Intersecci\'on \'area boscosa }\mbox{}\\\mbox{}\\
-El procedimiento que sigue una vez obtenido los NDVI de las dos fechas es determinar los pixeles que ser\'an evaluados para detectar el cambio, por ello aplicamos una simple operaci\'on de uni\'on ($ ndvi_{1} $ OR $ ndvi_{2}$) que generara una mascara de vegetaci\'on $ MV $ correspondiente a los dos tiempos.
+El procedimiento que sigue una vez obtenido los NDVI de las dos fechas es determinar los pixeles que ser\'an evaluados para detectar el cambio, por ello aplicamos una simple operaci\'on de uni\'on ($ ndvi_{1} $ OR $ ndvi_{2}$) que generara una mascara de vegetaci\'on $ MV $ correspondiente a los dos tiempos. La Figura \ref{fig:discrimForestal} refleja los pasos realizados para obtener una mascara de vegetaci\'on.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0	\textwidth]{./Figures/cap4/discriminacionForestal_2.png}
+	\caption{Diagrama de flujo. Discriminaci\'on Forestal.}
+	\label{fig:discrimForestal}
+\end{figure}
+
 
 \subsubsection{Mascara de P\'erdida Forestal}
 El proceso consiste en la intersecci\'on entre la mascaras de vegetaci\'on y cambio ($ MC$ AND $MV $). En la interseccion solo son considerados los cambios correspondiente a p\'erdidas en $ MC $, debido a que se pretende generar una imagen binaria $ MP $ que represente si en un pixel hay p\'erdida forestal.\\~\\
@@ -317,38 +219,41 @@ Sea $ C:(x,y) \longrightarrow \{ [-\infty,\infty]\}$ la cantidad de carbono, en 
 		\end{equation}
 		\nomenclature[60]{$ C(x,y)$}{Toneladas de carbono por hect\'area en las coordenadas $ (x,y) $.}
 
-La estimaci\'on de carbono para dos fechas en funci\'on al ndvi ($ ndvi_{1},ndvi_{2} $) queda definida de la siguiente manera:
+La estimaci\'on de carbono para dos fechas en funci\'on al ndvi ($ ndvi_{t},ndvi_{t_{*}} $) queda definida de la siguiente manera:
 		\begin{equation}
 		\label{e:fecha1}
-		C_{1}(x,y)=4,33+30,1 \times ndvi_{1}(x,y)
+		C_{t}(x,y)=4,33+30,1 \times ndvi_{t}(x,y)
 		\end{equation}
 		\begin{equation}
 		\label{e:fecha2}
-		C_{2}(x,y)=4,33+30,1 \times ndvi_{2}(x,y)
+		C_{t_{*}}(x,y)=4,33+30,1 \times ndvi_{t_{*}}(x,y)
 		\end{equation}
-El c\'alculo de perdida de carbono en las fechas consistir\'ia b\'asicamente en: $\Sigma^{m}_{x=0}\Sigma^{n}_{y=0} C_{2}(x,y) - \Sigma^{m}_{x=0}\Sigma^{n}_{y=0} C_{1}(x,y) $. Pero sabiendo que:
+El c\'alculo de perdida de carbono en las fechas consistir\'ia b\'asicamente en $\Sigma^{m}_{x=0}\Sigma^{n}_{y=0} C_{t_{*}}(x,y) - \Sigma^{m}_{x=0}\Sigma^{n}_{y=0} C_{t}(x,y) $. El indice de cambio generado para la detecci\'on de cambio simplificar\'ia los c\'alculos ya que:
 		\begin{equation}
 		\label{e:indiceCambio}
-		Ic(x,y)=ndvi_{2}(x,y) -ndvi_{1}(x,y)
+		Ic(x,y)=ndvi_{t_{*}}(x,y) -ndvi_{t}(x,y)
 		\end{equation}		
 
 Podr\'iamos restar la ecuaci\'on \ref{e:fecha2} y \ref{e:fecha1}, tendr\'iamos:
 		\begin{equation}
 		\label{e:restaCar}
-		C_{2}(x,y) - C_{1}(x,y)= 30,1 \times (ndvi_{2}(x,y)-ndvi_{1}(x,y))
+		C_{t_{*}}(x,y) - C_{t}(x,y)= 30,1 \times (ndvi_{t_{*}}(x,y)-ndvi_{t}(x,y))
 		\end{equation}		
 		\begin{equation}
 		\label{e:perdidaCar}
-		PC(x,y)= C_{2}(x,y) - C_{1}(x,y)
+		PC(x,y)= C_{t_{*}}(x,y) - C_{t}(x,y)
 		\end{equation}		
 		\nomenclature[62]{$Ic(x,y)$}{ Indice de cambio en las coordenadas $ (x,y) $.}
 		\nomenclature[63]{$PC(x,y)$}{Toneladas de carbono por hect\'area perdidos en las coordenadas $ (x,y) $.}
 		
 Siendo $ PC(x,y)$ toneladas de carbono por hect\'area perdidos. Remplazando \ref{e:indiceCambio} y \ref{e:perdidaCar} en \ref{e:restaCar}, la ecuaci\'on de regresi\'on final quedar\'ia:
-\begin{equation}
+\begin{equation}\label{ec:carbono}
 PC(x,y) = 30,1 \times Ic(x,y)
 \end{equation}
-
+La ecuaci\'on \ref{ec:carbono} debe ser multiplicada por un factor de $ 0,09 $, debido a que los pixeles del mapa global de carbono representan toneladas de carbono por hect\'area \cite{saatchi2011benchmark} y la superficie m\'inima representada por las imagenes Landsat (utilizadas para el calculo de NDVI) es de $ 900m^{2}=0.09 toneladas $. La ecuaci\'on final quedar\'ia:
+\begin{equation}\label{ec:carbonoFinal}
+PC(x,y) = 2.709 \times Ic(x,y)
+\end{equation}
 La cuantificaci\'on sera realizado teniendo en cuenta la mascara de perdida forestal. La Figura \ref{fig:resulPC} nos muestra el resultado esperado por la metodolog\'ia (Mascara de perdida Forestal y cuantificaci\'on).
 \begin{figure}[H]
 	\centering
