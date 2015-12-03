@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.27)  2 DEC 2015 19:24
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.27)  3 DEC 2015 18:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2359,9 +2359,9 @@ File: ./Pictures/./Figures/cap3/inter_spacial.png Graphic file (type png)
 <use ./Pictures/./Figures/cap3/inter_spacial.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap3/inter_spacial.png used on in
 put line 223.
-(pdftex.def)             Requested size: 250.48637pt x 228.53656pt.
+(pdftex.def)             Requested size: 208.73653pt x 190.44261pt.
  [38 <./Pictures/./Figures/cap3/inter_spacial.png>]
-<./Pictures/./Figures/cap3/ecuacPolinomica.png, id=1060, 628.59843pt x 314.6756
+<./Pictures/./Figures/cap3/ecuacPolinomica.png, id=1063, 628.59843pt x 314.6756
 3pt>
 File: ./Pictures/./Figures/cap3/ecuacPolinomica.png Graphic file (type png)
  <use ./Pictures/./Figures/cap3/ecuacPolinomica.png>
@@ -2380,8 +2380,8 @@ File: ./Pictures/./Figures/cap4/rms.png Graphic file (type png)
 Package pdftex.def Info: ./Pictures/./Figures/cap4/rms.png used on input line 2
 72.
 (pdftex.def)             Requested size: 375.7232pt x 176.08765pt.
- [40 <./Pictures/./Figures/cap4/rms.png>]
-<./Pictures/./Figures/cap3/vecinoMasCercano2.png, id=1084, 325.96782pt x 412.54
+
+<./Pictures/./Figures/cap3/vecinoMasCercano2.png, id=1076, 325.96782pt x 412.54
 124pt>
 File: ./Pictures/./Figures/cap3/vecinoMasCercano2.png Graphic file (type png)
  <use ./Pictures/./Figures/cap3/vecinoMasCercano2.png>
@@ -2393,6 +2393,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 282--289
 
  []
 
+[40 <./Pictures/./Figures/cap4/rms.png>]
 <./Pictures/./Figures/cap3/bilineal.png, id=1086, 392.96812pt x 341.02406pt>
 File: ./Pictures/./Figures/cap3/bilineal.png Graphic file (type png)
 
@@ -2428,21 +2429,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 342--345
 
  []
 
-[44]
-<./Pictures/./Figures/cap3/bandeo_k.png, id=1120, 520.94624pt x 465.99094pt>
+<./Pictures/./Figures/cap3/bandeo_k.png, id=1112, 520.94624pt x 465.99094pt>
 File: ./Pictures/./Figures/cap3/bandeo_k.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap3/bandeo_k.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap3/bandeo_k.png used on input l
 ine 360.
 (pdftex.def)             Requested size: 375.7232pt x 336.08916pt.
-
+ [44]
 Underfull \hbox (badness 10000) in paragraph at lines 366--368
 
  []
 
-[45 <./Pictures/./Figures/cap3/bandeo_k.png>]
-<./Pictures/./Figures/cap4/normaRadio.png, id=1130, 525.46312pt x 195.73125pt>
+
+<./Pictures/./Figures/cap4/normaRadio.png, id=1125, 525.46312pt x 195.73125pt>
 File: ./Pictures/./Figures/cap4/normaRadio.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap4/normaRadio.png>
@@ -2454,15 +2454,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 370--377
 
  []
 
-[46 <./Pictures/./Figures/cap4/normaRadio.png>]
-<./Pictures/./Figures/cap4/normalizacionZecuacion.png, id=1144, 978.65625pt x 4
-46.41782pt>
+[45 <./Pictures/./Figures/cap3/bandeo_k.png>] [46 <./Pictures/./Figures/cap4/no
+rmaRadio.png>]
+<./Pictures/./Figures/cap4/normalizacionZecuacion.png, id=1145, 978.65625pt x 5
+39.76656pt>
 File: ./Pictures/./Figures/cap4/normalizacionZecuacion.png Graphic file (type p
 ng)
  <use ./Pictures/./Figures/cap4/normalizacionZecuacion.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap4/normalizacionZecuacion.png u
 sed on input line 409.
-(pdftex.def)             Requested size: 417.47307pt x 190.43689pt.
+(pdftex.def)             Requested size: 417.47307pt x 230.25842pt.
  [47]
 [48 <./Pictures/./Figures/cap4/normalizacionZecuacion.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 432--435
@@ -2580,7 +2581,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--149
 File: ./Pictures/./Figures/cap4/deteccionCambio_3.png Graphic file (type png)
  <use ./Pictures/./Figures/cap4/deteccionCambio_3.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap4/deteccionCambio_3.png used o
-n input line 153.
+n input line 154.
 (pdftex.def)             Requested size: 417.47307pt x 188.60469pt.
  [62 <./Pictures/./Figures/cap4/iteracionUmbra.png>] [63 <./Pictures/./Figures/
 cap4/deteccionCambio_3.png>]
@@ -2589,7 +2590,7 @@ File: ./Pictures/./Figures/cap4/ndviUmbral.png Graphic file (type png)
 
 <use ./Pictures/./Figures/cap4/ndviUmbral.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap4/ndviUmbral.png used on input
- line 171.
+ line 172.
 (pdftex.def)             Requested size: 333.97972pt x 201.0816pt.
 
 <./Pictures/./Figures/cap4/discriminacionForestal_2.png, id=1293, 862.72313pt x
@@ -2598,7 +2599,7 @@ File: ./Pictures/./Figures/cap4/discriminacionForestal_2.png Graphic file (type
  png)
  <use ./Pictures/./Figures/cap4/discriminacionForestal_2.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap4/discriminacionForestal_2.png
- used on input line 180.
+ used on input line 181.
 (pdftex.def)             Requested size: 417.47307pt x 183.23613pt.
 
 [64 <./Pictures/./Figures/cap4/ndviUmbral.png>]
@@ -2608,21 +2609,21 @@ File: ./Pictures/./Figures/cap4/interseccionPerdida.png Graphic file (type png)
 
  <use ./Pictures/./Figures/cap4/interseccionPerdida.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap4/interseccionPerdida.png used
- on input line 193.
+ on input line 194.
 (pdftex.def)             Requested size: 333.97972pt x 306.43143pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--196
+Underfull \hbox (badness 10000) in paragraph at lines 188--197
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--196
+Underfull \hbox (badness 10000) in paragraph at lines 188--197
 
  []
 
 [65 <./Pictures/./Figures/cap4/discriminacionForestal_2.png>] [66 <./Pictures/.
 /Figures/cap4/interseccionPerdida.png>]
-Overfull \hbox (19.45627pt too wide) in paragraph at lines 230--232
+Overfull \hbox (19.45627pt too wide) in paragraph at lines 231--233
 \OT1/cmr/m/n/10.95 El c^^Salcu-lo de per-di-da de car-bono en las fe-chas con-s
 is-tir^^S^^Pa b^^Sasi-ca-men-te en $^^F[]^^F[]\OML/cmm/m/it/10.95 C[]\U/matha/m
 /n/10.95 p\OML/cmm/m/it/10.95 x; y\U/matha/m/n/10.95 q ^^A
@@ -2635,7 +2636,7 @@ File: ./Pictures/./Figures/cap4/resultadoMetodologia.png Graphic file (type png
 )
  <use ./Pictures/./Figures/cap4/resultadoMetodologia.png>
 Package pdftex.def Info: ./Pictures/./Figures/cap4/resultadoMetodologia.png use
-d on input line 260.
+d on input line 261.
 (pdftex.def)             Requested size: 333.97972pt x 230.27414pt.
 )
 (./Chapters/casoDeEstudio.tex [68 <./Pictures/./Figures/cap4/resultadoMetodolog
@@ -2963,7 +2964,7 @@ texlive/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/mathabx-type1/matha8.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (118 pages, 7131509 bytes).
+Output written on main.pdf (118 pages, 7168931 bytes).
 PDF statistics:
  1726 PDF objects out of 1728 (max. 8388607)
  1462 compressed objects within 15 object streams

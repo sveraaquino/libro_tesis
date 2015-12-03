@@ -46,7 +46,7 @@
 \contentsline {subsection}{\numberline {3.6.1}Correccci\'on geom\'etrica}{37}{subsection.70}
 \contentsline {subsubsection}{\numberline {3.6.1.1}Interpolaci\'on espacial}{38}{subsubsection.71}
 \contentsline {paragraph}{\numberline {3.6.1.1.1}Transformaci\IeC {\'o}n usando ecuaciones polinomicas. }{38}{paragraph.73}
-\contentsline {paragraph}{\numberline {3.6.1.1.2}Calidad de la interpolaci\'on espacial }{40}{paragraph.79}
+\contentsline {paragraph}{\numberline {3.6.1.1.2}Calidad de la interpolaci\'on espacial }{39}{paragraph.79}
 \contentsline {subsubsection}{\numberline {3.6.1.2}Interpolaci\'on de los valores radiom\'etricos}{40}{subsubsection.82}
 \contentsline {subsection}{\numberline {3.6.2}Correcci\'on radiom\'etrica}{42}{subsection.86}
 \contentsline {subsubsection}{\numberline {3.6.2.1}Pixeles o lineas perdidas}{43}{subsubsection.88}

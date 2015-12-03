@@ -220,7 +220,7 @@ Es necesario localizar puntos comunes de la imagen con puntos de control, como t
 La interpolaci\'on espacial consiste en determinar la relaci\'on geom\'etrica entre las coordenadas del pixel de la imagen a corregir y sus coordenadas geogr\'afica correspondientes. Utilizando los puntos comunes localizados, se plantea una ecuaci\'on de transformaci\'on mediante la cual se obtiene la posici\'on de los pixeles en la imagen de salida, ilustrada en la Figura \ref{fig:intEspacial}. Este proceso tambi\'en es conocido como Georreferenciaci\'on.  
     \begin{figure}[H]
     	\centering
-    	\includegraphics[width=0.6	\textwidth]{./Figures/cap3/inter_spacial.png}
+    	\includegraphics[width=0.5	\textwidth]{./Figures/cap3/inter_spacial.png}
     	\caption{Localizaci\'on de puntos comunes y puntos de referencia.}
     	\label{fig:intEspacial}
     \end{figure}
@@ -263,7 +263,7 @@ En la Figura \ref{fig:intPolEcua} podemos observar las transformaciones con poli
  		\nomenclature[30]{$ RMS_{i} $}{Error cuadr\'atico de la banda $ i $.}
  		\nomenclature[31]{$ \eta $}{N\'umero de puntos de control.}
 
- 	Donde los sub-indices ($i,j$) representan a una de las bandas de la imagen satelital y a un punto de control del total relevados $ \eta $.   El valor de $ RMS $ elegido por referencia para corregir una imagen debe ser aproximadamente $ 0.5 $, y en lo posible nunca superar la unidad \cite{guide1999erdas}. \\~\\
+ 	Donde los sub-indices ($i,j$) indican el punto de control $ j $ en la banda $ i $ de un total de $ \eta $ puntos de control. El valor de $ RMS $ elegido por referencia para corregir una imagen debe ser aproximadamente $ 0.5 $, y en lo posible nunca superar la unidad \cite{guide1999erdas}. \\~\\
  	La Figura \ref{fig:rms} nos muestra la manera de como es calculado el RMS para un punto de control determinado.
  
  
