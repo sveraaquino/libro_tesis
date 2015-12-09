@@ -8,23 +8,12 @@ En base a los resultados obtenidos en la estimaci\'on de perdida de carbono en n
 \section{Conclusiones}
 
 \begin{itemize}
-\item Una vez evaluado las diferentes zonas de nuestro caso de estudio, podemos darnos cuenta que la metodolog\'ia propuesta posee una mejor respuesta, respecto a la calidad, en \'areas rurales. Esto es debido a que el Coeficiente kappa o los indices de acuerdo var\'ian entre 0.57-0.67 y su precisi\'on global sobrepasan el umbral optimo de 85\%, para cada coeficiente de tolerancia $ n $. Por lo que se considera satisfactorio la metodolog\'ia propuesta, ya que la perdida de carbono es un fen\'omeno frecuente en \'areas con vegetaci\'on predominante.
-
-\item Zonas donde la vegetaci\'on no predomina, esta metodolog\'ia podr\'ia no resultar suficientemente conveniente. Las pruebas experimentales hechas en zonas urbanas, la precisi\'on global y el coeficiente kappa no son \'optimos por el cual se llega a esa interpretaci\'on.
-
-\item En \'areas cercanas a r\'ios o sujetas a inundaci\'on, se observaron resultados aceptables para  estudios con tolerancias medias y altas en la detecci\'on de perdida forestal. Por lo que el monitoreo en estos tipos de zonas con la metodolog\'ia propuesta podr\'ia ser aun de gran utilidad, ya que la presencia de agua en la vegetaci\'on modifica la respuesta espectral, dificultando su clasificaci\'on como cobertura vegetal.
-
-\item Mediante los an\'alisis estad\'isticos empleados tanto para la determinaci\'on de umbrales vegetaci\'on/no vegetaci\'on como en el hallazgo de ecuaciones de transformaci\'on a carbono, nos indica que empleando extracciones de indices vegetales y variables estad\'isticas es posible generar metodolog\'ias no complejas destinadas al monitorio ambiental. Esta sencillez nos libera de necesarias supervisiones y entrenamientos normalmente empleadas en teledetecci\'on.
-
-\item El mapa global de carbono \cite{saatchi2011benchmark} constituyo un factor importante para la automatizaci\'on, al permitir determinar una ecuaci\'on que transforme el indice vegetal a carbono. De no existir, hubiese sido necesario aplicar previos muestreos forestales en el terreno.
-
-\item La correcci\'on geom\'etrica implica procesos que engloba visitas al terreno para levantamientos de puntos de control requeridas en las interpolaciones. Gracias a la utilizaci\'on de im\'agenes Landsat L1T prove\'idas por la USGS, no fue necesario sumar ese costo a la metodolog\'ia, automatizando-la por no haber necesidad de realizar dicho procedimiento.
-
+\item La im\'agenes	satelitales presentan una distribuci\'on normal en el histograma de cada una de sus bandas pudiendo as\'i representarlos con variables tipificadas $ Z $ de la forma $ N(0,1) $, por lo que teniendo una secuencia multitemporal ($ f_{t},f_{t_{*}} $) posibilito que los pixeles de $ f_{t_{*}} $ sean semejante a los de $ f_{t} $ luego de un proceso de normalizaci\'on radiom\'etrica. 
+\item La normalizaci\'on radiom\'etrica permite que los pixeles de una secuencia multitemporal sean semejantes. Los indices de cambios obtenidos de la comparaci\'on multitemporal posibilitan obtener variables cualitativas a partir de umbrales elaborados por par\'ametros estad\'isticos extra\'idos de la misma imagen de cambio $ I_{c} $. La iteraci\'on permite automatizar la detecci\'on de cambio, ya que el proceso de normaliza repetidamente las im\'agenes teniendo en cuenta solo los pixeles que no sufrieron cambio en el tiempo optimizan y mejoran la comparaci\'on multitemporal.
+\item El an\'alisis estad\'istico realizado a las im\'agenes satelitales VCF y Landsat posibilitaron obtener constantes que transforman las variables cuantitativas (NDVI) a variables cualitativas (vegetaci\'on/no vegetaci\'on).
+\item El an\'alisis de regresi\'on permito encontrar una relaci\'on entre un \'indice de vegetaci\'on (NDVI) y el carbono (Mapa global de carbono), por lo que convertir el indice generado por las im\'agenes satelitales se resume en una ecuaci\'on que no implico muestreo en campo ni estudios adicionales.
 \end{itemize}
-
 La idea al elegir como caso de estudio parte del chaco paraguayo, es la de actuar de impulsora en la generaci\'on de herramientas para el monitoreo ambiental, donde con el empleo de procesamientos digital de im\'agenes satelitales que conlleven t\'ecnicas computacionalmente sencillas y autom\'aticas podamos identificar alertas referentes a perdida en el contenido de carbono forestal. De manera que una vez detectado, a trav\'es de las estimaciones, se puedan generar pol\'iticas de acci\'on o prevenci\'on contra los da\~{n}os posibles al ambiente. El chaco paraguayo es una regi\'on muy afectada actualmente por la degradaci\'on y de-forestaci\'on en los bosques, donde la falta de recursos y el costo  elevado en el monitoreo dificulta las intervenciones a tiempo, constituyendo un caso ideal e impulsora para la aplicaci\'on de metodolog\'ias como la propuestas en esta investigaci\'on.
-
-
 
 \section{Trabajos futuros}
 Se pretende que la metodolog\'ia propuesta siga mejorando en t\'erminos de pre-procesamiento de las im\'agenes satelitales, ante factores que influyan en el momento de captura de los datos hechas por sensores remotos como tambi\'en en t\'ecnicas que permita mejora la detecci\'on de cambio forestal, por lo que mencionamos como trabajos futuros:
@@ -33,5 +22,6 @@ Se pretende que la metodolog\'ia propuesta siga mejorando en t\'erminos de pre-p
 \item Mejorar la precisi\'on global y el coeficiente kappa para zonas urbanas.
 \item Dise\~{n}ar mejores t\'ecnicas que clasifique cobertura vegetal mediante la extracci\'on de indices en todas las bandas.
 \item Adaptar la metodolog\'ia, de manera a que permita recibir im\'agenes satelitales con diferentes resoluciones radiom\'etricas.
+\item Validar el $ \sigma_{c} $ para otras zonas del pa\'is. 
 
 \end{itemize}

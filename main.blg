@@ -22,73 +22,69 @@ Repeated entry---line 171 of file Bibliography.bib
 I'm skipping whatever remains of this entry
 Warning--entry type for "teledet2015perce" isn't style-file defined
 --line 177 of file Bibliography.bib
-I was expecting a `,' or a `}'---line 186 of file Bibliography.bib
+I was expecting a `,' or a `}'---line 193 of file Bibliography.bib
  :  
  :  year={2006},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--entry type for "ciclot2015carbo" isn't style-file defined
---line 196 of file Bibliography.bib
+--line 203 of file Bibliography.bib
 Warning--entry type for "calent2015global" isn't style-file defined
---line 202 of file Bibliography.bib
+--line 209 of file Bibliography.bib
 Warning--entry type for "teledet2015Combi" isn't style-file defined
---line 340 of file Bibliography.bib
+--line 347 of file Bibliography.bib
 Warning--entry type for "gl2015Uni" isn't style-file defined
---line 346 of file Bibliography.bib
+--line 353 of file Bibliography.bib
 Warning--entry type for "landsatNasa" isn't style-file defined
---line 352 of file Bibliography.bib
+--line 359 of file Bibliography.bib
 Warning--entry type for "teledUm" isn't style-file defined
---line 429 of file Bibliography.bib
+--line 436 of file Bibliography.bib
 Warning--entry type for "natur2015PW" isn't style-file defined
---line 621 of file Bibliography.bib
+--line 628 of file Bibliography.bib
 Warning--entry type for "BAAPA2013" isn't style-file defined
---line 629 of file Bibliography.bib
+--line 636 of file Bibliography.bib
 Warning--entry type for "nellemann2009carbono" isn't style-file defined
---line 671 of file Bibliography.bib
-Repeated entry---line 997 of file Bibliography.bib
- : @misc{mehl1997fundamentos
- :                          ,
-I'm skipping whatever remains of this entry
-"{" immediately follows a field name---line 1344 of file Bibliography.bib
+--line 678 of file Bibliography.bib
+"{" immediately follows a field name---line 1359 of file Bibliography.bib
  : @article
  :         {gonzalez2013tecnicas,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1542 of file Bibliography.bib
+I was expecting a `,' or a `}'---line 1557 of file Bibliography.bib
  : 
  : @ONLINE{idf,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 1873 of file Bibliography.bib
+I was expecting a `,' or a `}'---line 1888 of file Bibliography.bib
  : 
  : @ONLINE{nei,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2272 of file Bibliography.bib
+You're missing a field name---line 2287 of file Bibliography.bib
  :  
  :  %month = jul,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2288 of file Bibliography.bib
+You're missing a field name---line 2303 of file Bibliography.bib
  :  
  :  %edition = {2},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2323 of file Bibliography.bib
+You're missing a field name---line 2338 of file Bibliography.bib
  :  
  :  %month = jul,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2335 of file Bibliography.bib
+You're missing a field name---line 2350 of file Bibliography.bib
  :   
  :   %pages={185--208},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You're missing a field name---line 2372 of file Bibliography.bib
+You're missing a field name---line 2387 of file Bibliography.bib
  :  
  :  %issue_date = {2013},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting an "="---line 2695 of file Bibliography.bib
+I was expecting an "="---line 2710 of file Bibliography.bib
  : +´`  
  :       title={Color image palette construction based on the HSI color system for minimizing the reconstruction error},
 I'm skipping whatever remains of this entry
@@ -212,45 +208,45 @@ Warning--empty publisher in salinero2002teledeteccion
 Warning--empty journal in salinas2008guia
 Warning--there's a number but no series in sivakumar2004satellite
 Warning--there's a number but no volume in vasquez2011mineria
-You've used 80 entries,
+You've used 79 entries,
             2543 wiz_defined-function locations,
-            962 strings with 20289 characters,
-and the built_in function-call counts, 29450 in all, are:
-= -- 2857
-> -- 1496
-< -- 37
-+ -- 523
-- -- 517
-* -- 2126
-:= -- 4838
-add.period$ -- 233
-call.type$ -- 80
-change.case$ -- 506
-chr.to.int$ -- 78
-cite$ -- 121
-duplicate$ -- 1129
-empty$ -- 2125
-format.name$ -- 594
-if$ -- 5923
-int.to.chr$ -- 3
+            953 strings with 19756 characters,
+and the built_in function-call counts, 28955 in all, are:
+= -- 2804
+> -- 1460
+< -- 38
++ -- 511
+- -- 504
+* -- 2086
+:= -- 4755
+add.period$ -- 231
+call.type$ -- 79
+change.case$ -- 497
+chr.to.int$ -- 76
+cite$ -- 120
+duplicate$ -- 1121
+empty$ -- 2096
+format.name$ -- 581
+if$ -- 5825
+int.to.chr$ -- 4
 int.to.str$ -- 0
-missing$ -- 72
-newline$ -- 396
-num.names$ -- 201
-pop$ -- 608
+missing$ -- 73
+newline$ -- 392
+num.names$ -- 198
+pop$ -- 603
 preamble$ -- 1
-purify$ -- 600
+purify$ -- 591
 quote$ -- 0
-skip$ -- 925
+skip$ -- 909
 stack$ -- 0
-substring$ -- 1358
-swap$ -- 124
-text.length$ -- 37
-text.prefix$ -- 25
+substring$ -- 1326
+swap$ -- 123
+text.length$ -- 38
+text.prefix$ -- 26
 top$ -- 0
-type$ -- 592
+type$ -- 580
 warning$ -- 28
-while$ -- 240
-width$ -- 86
-write$ -- 971
-(There were 59 error messages)
+while$ -- 234
+width$ -- 85
+write$ -- 960
+(There were 58 error messages)

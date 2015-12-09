@@ -34,12 +34,14 @@
 \usepackage[spanish]{babel}
 \selectlanguage{spanish} 
 %\usepackage[spanish,onelanguage,ruled,linesnumbered]{algorithm2e}
-\usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{algorithm}
+
+
 
 
 \floatname{algorithm}{Algoritmo}
-
+\renewcommand{\algorithmiccomment}[1]{// #1}
 \renewcommand{\algorithmicrequire}{\textbf{requiere:}}
 \renewcommand{\algorithmicensure}{\textbf{validar:}}
 \renewcommand{\algorithmicend}{\textbf{fin}}
@@ -193,7 +195,7 @@
 
  
 \textsc{\LARGE San Lorenzo - Paraguay}\\[1.5cm]
-\textsc{\LARGE Octubre - 2015}\\[1.5cm]
+\textsc{\LARGE Diciembre - 2015}\\[1.5cm]
  
 %{\large \today}\\[4cm] % Date
 \vfill
@@ -212,7 +214,7 @@
 \pagestyle{empty} % Page style needs to be empty for this page
 \dedicatory{
 
-A mis familiares, profesores, compañeros y amigos por su apoyo, aliento y comprensión incondicional. 
+A mis hermanos, profesores, compañeros, amigos y en especial a mis padres por brindarme el apoyo incondicional de siempre. 
 
 } 
 \addtocontents{toc}{\vspace{2em}} % Add a gap in the Contents, for aesthetics
@@ -224,7 +226,7 @@ A mis familiares, profesores, compañeros y amigos por su apoyo, aliento y compr
 \clearpage % Start a new page
 \setstretch{1.3} % Reset the line-spacing to 1.3 for body text (if it has changed)
 \acknowledgements{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
-A todos los que conocen
+Mi agradecimiento especial a mis tutores: MSc. Jos\'e L. V\'azquez Noguera y Dr. Horacio Legal por el tiempo y los conocimientos transmitidos. Tambi\'en a la Prof. Larissa Karina Rejalaga Noguera por su ayuda compartiendo conmigo sus conocimientos en el \'area forestal. 
 
 
 }
@@ -241,11 +243,10 @@ A todos los que conocen
 
 El cambio clim\'atico es un problema de carácter mundial, que engloba distintos factores ligadas a las actividades humanas. Los bosques constituyen un medio principal de conservaci\'on de carbono, donde la deforestaci\'on y degradaci\'on contribuyen al aumento de los Gases de efecto invernadero (GEI). En los \'ultimos 50 a\~{n}os la explotaci\'on Forestal y el cambio en el uso de la tierra, produjo la p\'erdida del 90\% de los bosques en la región Oriental del Paraguay, generados por degradaciones y deforestaciones en los suelos con destino a una progresiva desertificaci\'on que atenta contra la biodiversidad y los sumideros de carbono. A diferencia de la regi\'on oriental,  en el occidente o Chaco Paraguayo aplicar mecanismos de control ambiental implica elevados costo, por lo que el empleo de metodolog\'ias que ayuden a determinar zonas de riesgos disminuir\'an en cierta proporci\'on los gasto en monitoreos. \\~\\
 Esta investigaci\'on elabora una metodolog\'ia practica y din\'amica para identificar focos de perdidas de carbono forestal empleando procesamiento digital de im\'agenes satelitales. Una vez identificado focos de riesgos, permitir\'a fortalecer planes y estrategias en los controles, con acciones mas optimas y rigurosas en base a las estimaciones hechas.\\~\\
-La metodolog\'ia propuesta cuenta con tres procedimientos generales, donde las bandas infrarroja cercana y roja de las im\'agenes satelitales para dos fechas, constituyen entradas en la generaci\'on de un mapa de perdida forestal (degradaci\'on y deforestaci\'on) con su correspondiente estimaci\'on de carbono, en toneladas por hect\'area, perdidos en el \'area evaluada. Los procedimientos son los siguientes:
+La metodolog\'ia propuesta cuenta con dos procedimientos generales, donde las bandas infrarroja cercana y roja de las im\'agenes satelitales para dos fechas, constituyen entradas en la generaci\'on de un mapa de perdida forestal (degradaci\'on y deforestaci\'on) con su correspondiente estimaci\'on de carbono perdidos en el \'area evaluada. Los procedimientos son los siguientes:
 \begin{itemize}
-	\item Correcci\'on de im\'agenes satelitales: permite que los pixeles de las im\'agenes posean una correspondencia geogr\'afica en su ubicaci\'on, como tambi\'en corregir errores provenientes de los sensores remotos en el momento que la informaci\'on es capturada. 
 	\item Detecci\'on de cambio Forestal: mediante an\'alisis estad\'isticos previos hechos a indices de vegetaci\'on y algoritmos basados en par\'ametros estad\'isticos para la detecci\'on del cambio, nos permiten obtener una mascara de perdida forestal.
-	\item Estimaci\'on de Perdida de cambio forestal: se hallo una correlaci\'on moderada $ (r^{2}=0.509125) $ entre el mapa global de carbono y el indice de vegetaci\'on, proporcionando una ecuaci\'on lineal que transforma en toneladas de carbono por hect\'area el indice.
+	\item Estimaci\'on de Perdida de cambio forestal: se hallo una correlaci\'on moderada $ (r^{2}=0.509125) $ entre el mapa global de carbono y el indice de vegetaci\'on, proporcionando una ecuaci\'on lineal que transforma en toneladas de carbono por hect\'area dicho indice.
 \end{itemize}
 En el chaco paraguayo, espec\'ificamente parte del distrito de Filadelfia, departamento de Boquer\'on, fueron determinadas \'areas en base a la presencia forestal (urbano, rural y h\'umedo), de manera a evaluar la metodolog\'ia propuesta con distintos tipos de uso del suelo, sum\'andole un criterio de fiabilidad a la detecci\'on del cambio. Zonas rurales obtuvieron precisiones globales mayores al 85\% y coeficientes Kappa moderadas como tambi\'en considerables, siendo la m\'as satisfactorias en las pruebas experimentales. Estas pruebas fueron hechas a trav\'es de comparaciones entre resultados y estudios de perdida boscosa realizado al Paraguay, por The Global Land Cover Facility de University of Maryland Institute for Advanced Computer Studies.\\~\\
 La metodolog\'ia propuesta nos brinda una herramienta valida en la generaci\'on de indicadores ambientales para monitoreos de \'areas extensas. Estos indicadores representan  alertas en \'areas donde la deforestaci\'on y degradaci\'on forestal transforman los sumideros de carbono a zonas des\'erticas o productivas, contribuyendo as\'i al cambio clim\'atico. \\~\\
@@ -260,8 +261,19 @@ La metodolog\'ia propuesta nos brinda una herramienta valida en la generaci\'on 
 
 \clearpage % Start a new page
 \abstract{\addtocontents{toc}{\vspace{1em}} % Add a gap in the Contents, for aesthetics
+Climate change is a global problem, which encompasses various factors linked to human activities. Forests are a major means of carbon conservation where deforestation and degradation contribute to increased greenhouse gases (GHG). In the last 50 years on Forest exploitation and the change in land use, it caused the loss of 90\% of the forests in eastern Paraguay, generated by deforestation and degradation in soils destined to progressive desertification threatens biodiversity and carbon sinks. Unlike the eastern region, western or Paraguayan Chaco apply environmental control mechanisms involves high cost, so that the use of methodologies that help determine risk areas will decrease to a certain proportion of expenditure monitoring.\\~\\
+This research develops a dynamic and practical methodology to identify sources of lost forest carbon using digital processing of satellite images. Once identified sources of risks, will strengthen plans and strategies in the controls, with more optimal and rigorous actions based on estimates made.\\~\\
+The proposed methodology has two general procedures, where the red and near infrared bands of satellite images for two dates are inputs in the generation of a map of forest loss (deforestation and degradation) with the corresponding estimate of carbon lost
+the area evaluated. The procedures are:
+\begin{itemize}
+	\item Forest change detection: using pre-made statistical analysis of vegetation indices and statistical parameters based algorithms for change detection, allow us to obtain a mask of forest loss.
+	\item Loss estimate of forest change: a moderate correlation was found
+	$ (r^{2}=0.509125) $ between the global map of carbon and vegetation index, providing a linear equation that transforms into tons of carbon per hectare index said.
+\end{itemize}
+In the Paraguayan Chaco, specifically the district of Philadelphia, department Boqueron, were certain areas based on the presence forest (urban, rural and humid), so to evaluate the proposed methodology with different types of land use, adding reliability criteria change detection. Rural areas had higher overall accuracies of 85\% and moderate Kappa coefficients as also considerable, being the most successful in experimental tests. These tests were done through comparisons between results and studies of forest lost to Paraguay conducted by The Global Land Cover Facility of University of Maryland Institute for Advanced Computer Studies.\\~\\
+The proposed methodology provides us with a valid tool in the generation of environmental indicators for monitoring of large areas. These indicators represent alerts in areas where deforestation and forest degradation transform carbon sinks desert or productive areas, thereby contributing to climate change.
 
-xxxxx
+\textbf{ Keywords: } Climate change, greenhouse gases, carbon sinks, digital satellite image processing, remote sensing, global precision, kappa coefficient.
 
 
 
@@ -291,6 +303,13 @@ xxxxx
 
 %\lhead{\emph{Lista de Tablas}} % Set the left side page header to "List of Tables"
 \listoftables % Write out the List of Tables
+
+
+
+%Lista de algoritmos
+\renewcommand{\listalgorithmname}{Lista de algoritmos}
+\lhead{\emph{Lista de algoritmos}}
+\listofalgorithms
 
 
 

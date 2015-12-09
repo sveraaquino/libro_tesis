@@ -14,7 +14,11 @@
 		\nompageref{30}
   \item [{$k$}]\begingroup  N\'umero de bandas que posee una imagen satelital.\nomeqref {3.0}
 		\nompageref{30}
-  \item [{$f(x,y,i)$}]\begingroup  Nivel digital, en la posici\'on $ (x,y) $ de la banda $ i $, de la imagen satelital.\nomeqref {3.0}
+  \item [{$col$}]\begingroup  N\'umero de columnas de la imagen $ f $.\nomeqref {3.0}
+		\nompageref{30}
+  \item [{$f(x,y,i)$}]\begingroup  Nivel digital en la posici\'on $ (x,y) $ de la banda $ i $ de la imagen satelital $ f $.\nomeqref {3.0}
+		\nompageref{30}
+  \item [{$fil$}]\begingroup  N\'umero de filas de la imagen $ f $.\nomeqref {3.0}
 		\nompageref{30}
   \item [{$ND$}]\begingroup  Nivel digital de una imagen satelital.\nomeqref {3.0}
 		\nompageref{30}
@@ -22,11 +26,11 @@
 		\nompageref{30}
   \item [{$n_{ND}$}]\begingroup  N\'umero de pixeles en la imagen satelital teniendo el nivel digital $ ND $.\nomeqref {3.0}
 		\nompageref{30}
-  \item [{$\rho$}]\begingroup Operador local utilizada para \'algebra de mapa .\nomeqref {3.1}
+  \item [{$\rho$}]\begingroup Operador local utilizada para \'algebra de mapa.\nomeqref {3.1}
 		\nompageref{33}
-  \item [{$ndvi$}]\begingroup Imagen del \'indice de vegetaci\'on diferencial normalizada (NDVI).\nomeqref {3.2}
+  \item [{$ndvi_{f}$}]\begingroup Imagen del \'indice de vegetaci\'on diferencial normalizada (NDVI) de $ f $.\nomeqref {3.2}
 		\nompageref{35}
-  \item [{$ndvi(x,y)$}]\begingroup  NDVI de las coordenadas $ (x,y) $.\nomeqref {3.2}
+  \item [{$ndvi_{f}(x,y)$}]\begingroup  NDVI de la coordenada $ (x,y) $ de la imagen $ f $.\nomeqref {3.2}
 		\nompageref{35}
   \item [{$R$}]\begingroup  Posici\'on de la banda roja en la imagen satelital.\nomeqref {3.2}
 		\nompageref{35}
@@ -52,59 +56,67 @@
 		\nompageref{43}
   \item [{$ \sigma_{i_{*}} $}]\begingroup Desviaci\'on t\'ipica de la banda $ i_{*} $ de una imagen satelital.\nomeqref {3.9}
 		\nompageref{43}
+  \item [{$ f_{t} $}]\begingroup Imagen satelital en el tiempo $ t $ de una secuencia multitemporal.\nomeqref {3.14}
+		\nompageref{46}
   \item [{$ f^{'}(x,y,i) $}]\begingroup Imagen satelital corregida, con coordenadas espaciales $ (x,y) $ en la banda $ i $.\nomeqref {3.10}
 		\nompageref{44}
-  \item [{$ I_{dif} $}]\begingroup Indice de cambio por diferencia de im\'agenes.\nomeqref {3.22}
+  \item [{$ I_{dif} $}]\begingroup Indice de cambio por diferencia de im\'agenes.\nomeqref {3.19}
 		\nompageref{48}
-  \item [{$ I_{ratio} $}]\begingroup Indice de cambio por el m\'etodo de ratio.\nomeqref {3.22}
+  \item [{$ I_{ratio} $}]\begingroup Indice de cambio por el m\'etodo de ratio.\nomeqref {3.19}
 		\nompageref{48}
-  \item [{$ I_{c} $}]\begingroup Indice de cambio entre dos im\'agenes.\nomeqref {3.24}
-		\nompageref{50}
-  \item [{$ B $}]\begingroup Imagen binaria en el proceso de detecci\'on de cambio.\nomeqref {3.24}
-		\nompageref{50}
-  \item [{$ B(I_{c}) $}]\begingroup Nivel digital para el $ I_{c} $.\nomeqref {3.24}
-		\nompageref{50}
-  \item [{$ U $}]\begingroup Umbral que binariza una imagen en base a un $ I_{c} $.\nomeqref {3.24}
-		\nompageref{50}
-  \item [{$ n $}]\begingroup Coeficiente de fiabilidad de los datos.\nomeqref {3.25}
+  \item [{$ I_{c} $}]\begingroup Indice de cambio entre dos im\'agenes.\nomeqref {3.21}
+		\nompageref{49}
+  \item [{$ B $}]\begingroup Imagen binaria en el proceso de detecci\'on de cambio.\nomeqref {3.21}
+		\nompageref{49}
+  \item [{$ B(I_{c}) $}]\begingroup Nivel digital para el $ I_{c} $.\nomeqref {3.21}
+		\nompageref{49}
+  \item [{$ U $}]\begingroup Umbral que binariza una imagen en base a un $ I_{c} $.\nomeqref {3.21}
+		\nompageref{49}
+  \item [{$ n $}]\begingroup Coeficiente de fiabilidad de los datos.\nomeqref {3.22}
 		\nompageref{50}
   \item [{$ Z_{t,i} $}]\begingroup Variable tipificada.\nomeqref {3.16}
 		\nompageref{47}
-  \item [{$ \mu_{I_{c}} $}]\begingroup Media de la imagen de \'Indices de cambio.\nomeqref {3.25}
+  \item [{$ \mu_{I_{c}} $}]\begingroup Media de la imagen de \'Indices de cambio.\nomeqref {3.22}
 		\nompageref{50}
-  \item [{$ \sigma_{I_{c}} $}]\begingroup Desviaci\'on t\'ipica de la imagen de \'Indices de cambio.\nomeqref {3.25}
+  \item [{$ \sigma_{I_{c}} $}]\begingroup Desviaci\'on t\'ipica de la imagen de \'Indices de cambio.\nomeqref {3.22}
 		\nompageref{50}
-  \item [{$ f_{t}^{Norm}(x,y,i) $}]\begingroup Imagen normalizada, de la banda $ i $.\nomeqref {3.21}
+  \item [{$ f_{t}^{Norm}(x,y,i) $}]\begingroup Imagen normalizada, de la banda $ i $.\nomeqref {3.18}
 		\nompageref{47}
-  \item [{$ \sigma_{c} $}]\begingroup Desviaci\'on determinada como constante para la umbralizaci\'on de la cobertura vegetal.\nomeqref {4.1}
-		\nompageref{64}
-  \item [{$ r^{2}$}]\begingroup Coeficiente de determinaci\'on.\nomeqref {4.1}
-		\nompageref{66}
-  \item [{$ C(x,y)$}]\begingroup Toneladas de carbono por hect\'area en las coordenadas $ (x,y) $.\nomeqref {4.2}
+  \item [{$ \epsilon $}]\begingroup Error de cambio.\nomeqref {4.3}
+		\nompageref{61}
+  \item [{$ \sigma_{c} $}]\begingroup Desviaci\'on determinada como constante para la umbralizaci\'on de la cobertura vegetal.\nomeqref {4.4}
+		\nompageref{65}
+  \item [{$ h$}]\begingroup Coeficiente en la ecuaci\'on de estimaci\'on de carbono.\nomeqref {4.5}
+		\nompageref{68}
+  \item [{$ m$}]\begingroup Coeficiente en la ecuaci\'on de estimaci\'on de carbono.\nomeqref {4.5}
+		\nompageref{68}
+  \item [{$ r^{2}$}]\begingroup Coeficiente de determinaci\'on para una regresi\'on.\nomeqref {4.4}
 		\nompageref{67}
-  \item [{$Ic(x,y)$}]\begingroup  Indice de cambio en las coordenadas $ (x,y) $.\nomeqref {4.7}
-		\nompageref{67}
-  \item [{$PC(x,y)$}]\begingroup Toneladas de carbono por hect\'area perdidos en las coordenadas $ (x,y) $.\nomeqref {4.7}
-		\nompageref{67}
+  \item [{$ C(x,y)$}]\begingroup Toneladas de carbono por hect\'area en las coordenadas $ (x,y) $.\nomeqref {4.13}
+		\nompageref{69}
+  \item [{$PC(x,y)$}]\begingroup Toneladas de carbono por hect\'area perdidos en las coordenadas $ (x,y) $.\nomeqref {4.13}
+		\nompageref{69}
   \item [{$ VT $}]\begingroup Puntos de verdad terreno.\nomeqref {5.0}
-		\nompageref{72}
+		\nompageref{79}
   \item [{$ T $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}
-		\nompageref{72}
+		\nompageref{79}
   \item [{$ F $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}
-		\nompageref{72}
-  \item [{$ TP $}]\begingroup Verdadero positivo.\nomeqref {5.0}
-		\nompageref{72}
-  \item [{$ FP $}]\begingroup Falso positivo.\nomeqref {5.0}
-		\nompageref{72}
-  \item [{$ P $}]\begingroup Total positivo.\nomeqref {5.0}
-		\nompageref{72}
-  \item [{$ N $}]\begingroup Total negativo.\nomeqref {5.0}
-		\nompageref{72}
-  \item [{$ FN $}]\begingroup Falso negativo.\nomeqref {5.0}
-		\nompageref{72}
-  \item [{$ P^{'} $}]\begingroup Total positivo catalogado.\nomeqref {5.0}
-		\nompageref{72}
-  \item [{$ N^{'} $}]\begingroup Total negativo catalogado.\nomeqref {5.0}
-		\nompageref{72}
+		\nompageref{79}
+  \item [{$ TP $}]\begingroup Pixeles que se catalogaron como perdida correctamente.\nomeqref {5.0}
+		\nompageref{79}
+  \item [{$ FP $}]\begingroup Pixeles que se catalogaron como perdida incorrectamente.\nomeqref {5.0}
+		\nompageref{79}
+  \item [{$ P $}]\begingroup Total de pixeles catalogados como perdida.\nomeqref {5.0}
+		\nompageref{79}
+  \item [{$ N $}]\begingroup Total de pixeles catalogados como no perdida.\nomeqref {5.0}
+		\nompageref{79}
+  \item [{$ TN $}]\begingroup Pixeles que se catalogaron como no perdida correctamente.\nomeqref {5.0}
+		\nompageref{79}
+  \item [{$ FN $}]\begingroup Pixeles que se catalogaron como no perdida incorrectamente.\nomeqref {5.0}
+		\nompageref{79}
+  \item [{$ P' $}]\begingroup Total de pixeles con perdida.\nomeqref {5.0}
+		\nompageref{79}
+  \item [{$ N' $}]\begingroup Total de pixeles con no perdida.\nomeqref {5.0}
+		\nompageref{79}
 
 \end{thenomenclature}

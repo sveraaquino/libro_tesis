@@ -76,7 +76,7 @@ La resoluci\'on de un sensor se define como el menor cambio en la magnitud de en
 
 \section{Im\'agenes satelitales}
 
-Una imagen satelital es una funci\'on $ f:(x,y,i) \longrightarrow \{0,...,2^{r}\} $. Cada $ (x,y,i) $ indica la posición $ (x,y) $ en a banda $ i $, donde $ i \in \{1,...,k\} $, $ x \in \{0,...,m\} $ e $ y \in \{0,...,n\} $ para una matriz $ m \times n $, siendo $ k $ el numero de bandas y $ r $ la resoluci\'on radiom\'etrica en la imagen. Las im\'agenes satelitales son conocidos tambi\'en como raster \cite{vasquez2011mineria} y se puede representar de forma matricial. La Figura \ref{fig:imagenMultiespectral} nos muestra los ejes de coordenadas espaciales $ (x,y) $ para cada plano que representan las bandas, pudiendo acceder a valor de la intensidad o nivel digital mediante el nivel digital  $ f(x,y,i) $.
+Una imagen satelital es una funci\'on $ f:(x,y,i) \longrightarrow \{0,...,2^{r}\} $. Cada $ (x,y,i) $ indica la posición $ (x,y) $ en a banda $ i $, donde $ i \in \{1,...,k\} $, $ x \in \{0,...,fil\} $ e $ y \in \{0,...,col\} $ para una matriz $ fil \times col $, siendo $ k $ el numero de bandas y $ r $ la resoluci\'on radiom\'etrica en la imagen. Las im\'agenes satelitales son conocidos tambi\'en como raster \cite{vasquez2011mineria} y se puede representar de forma matricial. La Figura \ref{fig:imagenMultiespectral} nos muestra los ejes de coordenadas espaciales $ (x,y) $ para cada plano que representan las bandas, pudiendo acceder a valor de la intensidad o nivel digital mediante el nivel digital  $ f(x,y,i) $.
   \begin{figure}[H]
   	\centering
   	\includegraphics[width=0.8	\textwidth]{./Figures/cap3/imagen_satelital_k4.png}
@@ -88,7 +88,9 @@ Una imagen satelital es una funci\'on $ f:(x,y,i) \longrightarrow \{0,...,2^{r}\
   	\nomenclature[13]{$(x,y)$}{ Coordenadas espaciales.}
   	\nomenclature[16]{$(x,y,i)$}{Coordenadas espaciales de la banda $ i $ en la imagen satelital.}
   	\nomenclature[17]{$k$}{ N\'umero de bandas que posee una imagen satelital.}
-  	\nomenclature[18]{$f(x,y,i)$}{ Nivel digital, en la posici\'on $ (x,y) $ de la banda $ i $, de la imagen satelital.}
+  	\nomenclature[18]{$f(x,y,i)$}{ Nivel digital en la posici\'on $ (x,y) $ de la banda $ i $ de la imagen satelital $ f $.}
+  	\nomenclature[18]{$fil$}{ N\'umero de filas de la imagen $ f $.}
+  	\nomenclature[18]{$col$}{ N\'umero de columnas de la imagen $ f $.}
 
 
 
@@ -133,7 +135,7 @@ El \'algebra de mapas constituye un marco te\'orico en la mayor parte de las ope
 		\label{e:opLoc}
 		f_{1,2,3}=\rho(f_{1},f_{2},f_{3})
 		\end{equation}
-		\nomenclature[22]{$\rho$}{Operador local utilizada para \'algebra de mapa .}
+		\nomenclature[22]{$\rho$}{Operador local utilizada para \'algebra de mapa.}
 		Donde $ \rho $ representa a alguna funci\'on del tipo:
 		\begin{itemize}
 			\item Aritm\'etico (suma, resta, multiplicaci\'on, divisi\'on, raiz cuadrada, potencia, ...).
@@ -177,13 +179,13 @@ Los \'indices de vegetaci\'on son transformaciones que implican efectuar una com
 El estudio de las cubiertas vegetales mediante la teledetecci\'on se aborda tradicionalmente mediante la utilización de los denominados “índices de vegetaci\'on”, siendo el m\'as utilizado el \'Indice de vegetaci\'on diferencial normalizada (NDVI) \cite{sader2000estimacion}.
 
 \subsection{\'Indice de vegetaci\'on diferencial normalizada}\label{subsec:ndvi}
-Sea una funci\'on $ ndvi:(x,y) \longrightarrow [-1,1] $ que determina la imagen con los NDVI en cada coordenada espacial $ (x,y) $ definida por la siguiente expresi\'on:
+Sea una funci\'on $ ndvi_{f}:(x,y) \longrightarrow [-1,1] $ que determina el NDVI de la imagen satelital $ f $ en cada coordenada espacial $ (x,y) $ definida por la siguiente expresi\'on:
 \begin{equation}
 \label{e:ndvi}
-ndvi(x,y)=\dfrac{f(x,y,IRc)-f(x,y,R)}{f(x,y,IRc)+f(x,y,R)}
+ndvi_{f}(x,y)=\dfrac{f(x,y,IRc)-f(x,y,R)}{f(x,y,IRc)+f(x,y,R)}
 \end{equation}
-\nomenclature[23]{$ndvi$}{Imagen del \'indice de vegetaci\'on diferencial normalizada (NDVI).}
-\nomenclature[24]{$ndvi(x,y)$}{ NDVI de las coordenadas $ (x,y) $.}
+\nomenclature[23]{$ndvi_{f}$}{Imagen del \'indice de vegetaci\'on diferencial normalizada (NDVI) de $ f $.}
+\nomenclature[24]{$ndvi_{f}(x,y)$}{ NDVI de la coordenada $ (x,y) $ de la imagen $ f $.}
 \nomenclature[25]{$R$}{ Posici\'on de la banda roja en la imagen satelital.}
 \nomenclature[26]{$IRc$}{ Posici\'on de la banda infrarroja cercana en la imagen satelital.}
 Donde $ R \in \{1,...,k\}$ representa la banda roja del espectro visible y  $ IRc \in \{1,...,k\}$ a la banda infrarroja cercana del espectro infrarrojo.\\~\\
@@ -375,6 +377,7 @@ Una secuencia multitemporal esta definido por $ \{f_{t}\}_{t \in \mathbb{N}} $, 
 	\caption{Histogramas de la la banda $ i $ en los tiempos $ t $, $ t_* $ junto con el de la imagen normalizada.}
 	\label{fig:normRadio}
 \end{figure}
+\nomenclature[46]{$ f_{t} $}{Imagen satelital en el tiempo $ t $ de una secuencia multitemporal.}
 Las distintas bandas de una imagen satelital presentan un comportamiento con distribuci\'on normal en sus histogramas \cite{martinez2013normalizacion}, por lo que teniendo variables tipificadas $Z_{i,t}$ para la imagen satelital $ f_{t} $ y $Z_{i,t_{*}}$ para la imagen satelital $ f_{t_{*}}$, ambos de la banda $ i $, es posible definirlos en una distribuci\'on normal est\'andar del tipo $ N(0,1) $ (media $ 0 $ y desviaci\'on $ 1 $) seg\'un la expresión:
 \begin{equation}\label{ec:zt}
 Z_{i,t}=\dfrac{f_{t}(x,y,i)-\mu_{i,t}}{\sigma_{i,t}}
@@ -388,25 +391,14 @@ Donde $ \mu_{i,t},\sigma_{i,t} $ representa la media y desviaci\'on para $ f_{t}
 \dfrac{f_{t}(x,y,i)-\mu_{i,t}}{\sigma_{i,t}}=\dfrac{f_{t_{*}}(x,y,i)-\mu_{i,t_{*}}}{\sigma_{i,t_{*}}}
 \end{equation}
 Para su aplicaci\'on pr\'actica se puede transformar el nivel digital $ f_{t}(x,y,i) $ perteneciente a la banda $ i $ de la imagen satelital $ f_{t} $, para que se asemeje al $ f_{t_{*}}(x,y,i) $ perteneciente a la banda $ i $ de la imagen satelital $ f_{t_{*}} $. Siendo $ f_{t}^{Norm}(x,y,i) \simeq  f_{t_{*}}(x,y,i)$ la imagen normalizada definida por una relaci\'on lineal entre las dos distribuciones con la siguiente expresi\'on:
-\begin{equation}
-f_{t}^{Norm}(x,y,i)=\mu_{i,t_{*}}+\dfrac{\sigma_{i,t_*}}{\sigma_{i,t}}\cdot(f_{t}(x,y,i)-\mu_{i,t})
-\end{equation}
-Los coeficientes de la transformaci\'on $ m_{t,t_*} $ y $ h_{t,t_*} $ se definen como constantes seg\'un se indica en la expresi\'on:
-
-\begin{equation}
-h_{t,t_*}=\mu_{i,t_*}-\dfrac{\sigma_{i,t_*}}{\sigma_{i,t}}\cdot\mu_{i,t}
-\end{equation}
-\begin{equation}
-m_{t,t_*}=\dfrac{\sigma_{i,t_*}}{\sigma_{i,t}}
-\end{equation}
 \begin{equation}\label{ec:normalizacion}
-f_{t}^{Norm}(x,y,i)=m_{t,t_*}\cdot f_{t}(x,y,i)+h_{t,t_*}
+f_{t}^{Norm}(x,y,i)=\mu_{i,t_{*}}+\dfrac{\sigma_{i,t_*}}{\sigma_{i,t}}\cdot(f_{t}(x,y,i)-\mu_{i,t})
 \end{equation}
 \nomenclature[57]{$ f_{t}^{Norm}(x,y,i) $}{Imagen normalizada, de la banda $ i $.}	
 La transformaci\'on obtiene histogramas parecidos, logrando de este modo mayor semejanza para el proceso de comparaci\'on multitemporal. En la Figura \ref{fig:normProceso} podemos observar como en cada pixel de la imagen $ f_{t} $ y $ f_{t_{*}} $ se igualan las variables tipificada $ Z_{t} = Z_{t_{*}} $, de manera a obtener una ecuaci\'on \ref{ec:normalizacion} que asemeje cada pixel de la imagen $ f_{t} $ a la imagen $ f_{t_{*}} $. La normalizaci\'on genera una imagen $ f_{t}^{Norm} $ semejante a $ f_{t_{*}} $.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.0	\textwidth]{./Figures/cap4/normalizacionZecuacion.png}
+	\includegraphics[width=1.1	\textwidth]{./Figures/cap4/normalizacionZecuacion_3.png}
 	\caption{Proceso de normalizaci\'on radiometrica entre una imagen satelital en el tiempo $ t $ y $ t_* $.}
 	\label{fig:normProceso}
 \end{figure}
@@ -455,7 +447,7 @@ U=\mu_{I_{c}} \pm n \times \sigma _{I_{c}}
 \nomenclature[55]{$ n $}{Coeficiente de fiabilidad de los datos.}
 \nomenclature[56]{$ \sigma_{I_{c}} $}{Desviaci\'on t\'ipica de la imagen de \'Indices de cambio.}
 \nomenclature[56]{$ \mu_{I_{c}} $}{Media de la imagen de \'Indices de cambio.}
-Donde el valor de umbral entre cambio/no cambio $ (U) $ se estima en funci\'on a la media ($ \mu_{I_{c}}) $ y desviaci\'on ($ \sigma_{I_{c}} $) de la imagen de Indice de cambio ($ I_{c} $), junto con un coeficiente de tolerancia $ n $ asignado en base a la fiabilidad de los datos. Los resultados se clasifican en funci\'on de $ n $; alta probabilidad de cambio $ (n \geq 2) $ y
+Donde los dos umbrales de cambio/no cambio $ (U) $ se estima en funci\'on a la media ($ \mu_{I_{c}}) $ y desviaci\'on ($ \sigma_{I_{c}} $) de la imagen de Indice de cambio ($ I_{c} $), junto con un coeficiente de tolerancia $ n $ asignado en base a la fiabilidad de los datos. Los resultados se clasifican en funci\'on de $ n $; alta probabilidad de cambio $ (n \geq 2) $ y
 zonas de media probabilidad de cambio $ (1 < n < 2) $ \cite{estornell2004analisis}.
 
 \subsection{Filtrado}
