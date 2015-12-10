@@ -72,25 +72,25 @@
 \contentsline {paragraph}{\numberline {4.2.1.1.1}Comparaci\'on Multitemporal}{59}{paragraph.133}
 \contentsline {paragraph}{\numberline {4.2.1.1.2}Umbral estad\'istico}{59}{paragraph.134}
 \contentsline {paragraph}{\numberline {4.2.1.1.3}Iteraci\'on}{60}{paragraph.138}
-\contentsline {subsubsection}{\numberline {4.2.1.2}Discriminaci\'on Forestal}{64}{subsubsection.143}
-\contentsline {paragraph}{\numberline {4.2.1.2.1}NDVI}{64}{paragraph.144}
-\contentsline {paragraph}{\numberline {4.2.1.2.2}Umbral de Vegetaci\'on}{65}{paragraph.145}
+\contentsline {subsubsection}{\numberline {4.2.1.2}Discriminaci\'on Forestal}{63}{subsubsection.143}
+\contentsline {paragraph}{\numberline {4.2.1.2.1}NDVI}{63}{paragraph.144}
+\contentsline {paragraph}{\numberline {4.2.1.2.2}Umbral de Vegetaci\'on}{64}{paragraph.145}
 \contentsline {paragraph}{\numberline {4.2.1.2.3}Intersecci\'on \'area boscosa }{65}{paragraph.148}
-\contentsline {subsubsection}{\numberline {4.2.1.3}Mascara de P\'erdida Forestal}{66}{subsubsection.150}
-\contentsline {subsection}{\numberline {4.2.2}Estimaci\'on de p\'erdida de carbono forestal}{67}{subsection.152}
-\contentsline {subsection}{\numberline {4.2.3}Esquema general de la metodolog\'ia}{69}{subsection.164}
-\contentsline {section}{\numberline {4.3}Resumen}{76}{section.172}
-\contentsline {chapter}{\numberline {5}Pruebas experimentales}{78}{chapter.173}
-\contentsline {section}{\numberline {5.1}Caso de estudio}{78}{section.174}
-\contentsline {section}{\numberline {5.2}M\IeC {\'e}tricas de evaluaci\IeC {\'o}n}{79}{section.175}
-\contentsline {subsection}{\numberline {5.2.1}Porcentaje de precisi\'on global}{80}{subsection.177}
-\contentsline {subsection}{\numberline {5.2.2}Coeficiente Kappa}{80}{subsection.179}
-\contentsline {section}{\numberline {5.3}Pruebas y resultados experimentales}{81}{section.182}
-\contentsline {subsection}{\numberline {5.3.1}Umbral de Vegetaci\'on}{81}{subsection.183}
-\contentsline {subsection}{\numberline {5.3.2}Estimaci\'on de p\'erdida de carbono forestal}{84}{subsection.187}
-\contentsline {subsection}{\numberline {5.3.3}Prueba experimental}{85}{subsection.192}
-\contentsline {subsection}{\numberline {5.3.4}Discusi\'on de resultados}{92}{subsection.203}
-\contentsline {subsection}{\numberline {5.3.5}Dificultades encontradas}{93}{subsection.204}
-\contentsline {chapter}{\numberline {6}Conclusiones y trabajos futuros}{95}{chapter.205}
-\contentsline {section}{\numberline {6.1}Conclusiones}{95}{section.206}
-\contentsline {section}{\numberline {6.2}Trabajos futuros}{96}{section.207}
+\contentsline {subsubsection}{\numberline {4.2.1.3}Mascara de P\'erdida Forestal}{65}{subsubsection.150}
+\contentsline {subsection}{\numberline {4.2.2}Estimaci\'on de p\'erdida de carbono forestal}{66}{subsection.152}
+\contentsline {subsection}{\numberline {4.2.3}Esquema general de la metodolog\'ia}{68}{subsection.164}
+\contentsline {section}{\numberline {4.3}Resumen}{73}{section.172}
+\contentsline {chapter}{\numberline {5}Pruebas experimentales}{75}{chapter.173}
+\contentsline {section}{\numberline {5.1}Caso de estudio}{75}{section.174}
+\contentsline {section}{\numberline {5.2}M\IeC {\'e}tricas de evaluaci\IeC {\'o}n}{76}{section.175}
+\contentsline {subsection}{\numberline {5.2.1}Porcentaje de precisi\'on global}{77}{subsection.177}
+\contentsline {subsection}{\numberline {5.2.2}Coeficiente Kappa}{77}{subsection.179}
+\contentsline {section}{\numberline {5.3}Pruebas y resultados experimentales}{78}{section.182}
+\contentsline {subsection}{\numberline {5.3.1}Umbral de Vegetaci\'on}{78}{subsection.183}
+\contentsline {subsection}{\numberline {5.3.2}Estimaci\'on de p\'erdida de carbono forestal}{81}{subsection.187}
+\contentsline {subsection}{\numberline {5.3.3}Prueba experimental}{82}{subsection.192}
+\contentsline {subsection}{\numberline {5.3.4}Dificultades encontradas}{89}{subsection.203}
+\contentsline {subsection}{\numberline {5.3.5}Discusi\'on de resultados}{89}{subsection.204}
+\contentsline {chapter}{\numberline {6}Conclusiones y trabajos futuros}{92}{chapter.205}
+\contentsline {section}{\numberline {6.1}Conclusiones}{92}{section.206}
+\contentsline {section}{\numberline {6.2}Trabajos futuros}{93}{section.207}

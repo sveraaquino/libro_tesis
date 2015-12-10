@@ -322,7 +322,7 @@ Sea $ f^{'} $ una imagen satelital con los pixeles corregidos, mediante estimaci
 		\begin{equation}\label{ec:pixelPerdido}
 		f^{'}(x,y,i) =  ceiling(1/2 \times [f(x-1,y,i) + f(x+1,y,i)])
 		\end{equation} 
-Donde $ ceiling(:) $ representa la funci\'on techo (redondeo para arriba). No es recomendable utilizar los pixeles adyacentes de la misma linea (eje $ y $) por que han sido captados por el mismo detector o banda que ha dado el fallo, por tanto son poco fiables.
+Donde $ ceiling(:) $ representa la funci\'on techo (redondeo para arriba). No es recomendable utilizar los pixeles adyacentes de la misma linea (eje $ y $) por que han sido captados por el mismo detector o banda que ha dado el fallo, por tanto son poco fiables \cite{cor2015radio}.
 
 				\nomenclature[42]{$ \mu $}{Valor de la media.}
 				\nomenclature[43]{$ \sigma $}{Desviaci\'on t\'ipica.}
@@ -333,7 +333,7 @@ La bandas de una imagen son de detectores diferentes y est\'an altamente correla
 		\begin{equation}
 		f^{'}(x,y,i) = ceiling( dif_{i}+ \dfrac{\sigma_{i}}{\sigma_{i_{*}}} \times [f(x,y,i_{*})-dif_{i_{*}}])
 		\end{equation} 
-\nomenclature[47]{$ f^{'}(x,y,i) $}{Imagen satelital corregida, con coordenadas espaciales $ (x,y) $ en la banda $ i $.}
+\nomenclature[47]{$ f^{'}(x,y,i) $}{Nivel digital en la posici\'on $ (x,y) $, en la banda $ i $, de la imagen satelital\\ corregida $ f' $.}
 Donde $ \sigma_{i} $ representa la desviaci\'on t\'ipica de la banda $ i $, $ \sigma_{i_{*}} $ representa la desviaci\'on t\'ipica de la banda $ i_{*} $ y la variable $ dif_{e} $, esta representada por la siguiente expresi\'on:
 		\begin{equation}
 		 dif_{e}  = 1/2 \times [f(x-1,y,e) + f(x+1,y,e)]

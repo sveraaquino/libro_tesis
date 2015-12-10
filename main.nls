@@ -58,7 +58,7 @@
 		\nompageref{43}
   \item [{$ f_{t} $}]\begingroup Imagen satelital en el tiempo $ t $ de una secuencia multitemporal.\nomeqref {3.14}
 		\nompageref{46}
-  \item [{$ f^{'}(x,y,i) $}]\begingroup Imagen satelital corregida, con coordenadas espaciales $ (x,y) $ en la banda $ i $.\nomeqref {3.10}
+  \item [{$ f^{'}(x,y,i) $}]\begingroup Nivel digital en la posici\'on $ (x,y) $, en la banda $ i $, de la imagen satelital\\ corregida $ f' $.\nomeqref {3.10}
 		\nompageref{44}
   \item [{$ I_{dif} $}]\begingroup Indice de cambio por diferencia de im\'agenes.\nomeqref {3.19}
 		\nompageref{48}
@@ -83,40 +83,38 @@
   \item [{$ f_{t}^{Norm}(x,y,i) $}]\begingroup Imagen normalizada, de la banda $ i $.\nomeqref {3.18}
 		\nompageref{47}
   \item [{$ \epsilon $}]\begingroup Error de cambio.\nomeqref {4.3}
-		\nompageref{61}
+		\nompageref{62}
   \item [{$ \sigma_{c} $}]\begingroup Desviaci\'on determinada como constante para la umbralizaci\'on de la cobertura vegetal.\nomeqref {4.4}
-		\nompageref{65}
-  \item [{$ h$}]\begingroup Coeficiente en la ecuaci\'on de estimaci\'on de carbono.\nomeqref {4.5}
-		\nompageref{68}
-  \item [{$ m$}]\begingroup Coeficiente en la ecuaci\'on de estimaci\'on de carbono.\nomeqref {4.5}
-		\nompageref{68}
-  \item [{$ r^{2}$}]\begingroup Coeficiente de determinaci\'on para una regresi\'on.\nomeqref {4.4}
+		\nompageref{64}
+  \item [{$ (m, h)$}]\begingroup Coeficiente en la ecuaci\'on de estimaci\'on de carbono.\nomeqref {4.5}
 		\nompageref{67}
+  \item [{$ r^{2}$}]\begingroup Coeficiente de determinaci\'on para una regresi\'on.\nomeqref {4.4}
+		\nompageref{66}
   \item [{$ C(x,y)$}]\begingroup Toneladas de carbono por hect\'area en las coordenadas $ (x,y) $.\nomeqref {4.13}
-		\nompageref{69}
+		\nompageref{68}
   \item [{$PC(x,y)$}]\begingroup Toneladas de carbono por hect\'area perdidos en las coordenadas $ (x,y) $.\nomeqref {4.13}
-		\nompageref{69}
+		\nompageref{68}
   \item [{$ VT $}]\begingroup Puntos de verdad terreno.\nomeqref {5.0}
-		\nompageref{79}
+		\nompageref{76}
   \item [{$ T $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}
-		\nompageref{79}
+		\nompageref{76}
   \item [{$ F $}]\begingroup Puntos catalogados correctamente.\nomeqref {5.0}
-		\nompageref{79}
+		\nompageref{76}
   \item [{$ TP $}]\begingroup Pixeles que se catalogaron como perdida correctamente.\nomeqref {5.0}
-		\nompageref{79}
+		\nompageref{76}
   \item [{$ FP $}]\begingroup Pixeles que se catalogaron como perdida incorrectamente.\nomeqref {5.0}
-		\nompageref{79}
+		\nompageref{76}
   \item [{$ P $}]\begingroup Total de pixeles catalogados como perdida.\nomeqref {5.0}
-		\nompageref{79}
+		\nompageref{76}
   \item [{$ N $}]\begingroup Total de pixeles catalogados como no perdida.\nomeqref {5.0}
-		\nompageref{79}
+		\nompageref{76}
   \item [{$ TN $}]\begingroup Pixeles que se catalogaron como no perdida correctamente.\nomeqref {5.0}
-		\nompageref{79}
+		\nompageref{76}
   \item [{$ FN $}]\begingroup Pixeles que se catalogaron como no perdida incorrectamente.\nomeqref {5.0}
-		\nompageref{79}
+		\nompageref{76}
   \item [{$ P' $}]\begingroup Total de pixeles con perdida.\nomeqref {5.0}
-		\nompageref{79}
+		\nompageref{76}
   \item [{$ N' $}]\begingroup Total de pixeles con no perdida.\nomeqref {5.0}
-		\nompageref{79}
+		\nompageref{76}
 
 \end{thenomenclature}

@@ -151,7 +151,14 @@ MP(x,y) = \begin{cases}
 \paragraph{Iteraci\'on}\label{subsec:iteracion}\mbox{}\\\mbox{}\\
  Si dos im\'agenes se consideran semejantes, los cambios producidos en el terreno afectan a la radiometr\'ia registrada en las im\'agenes, y por tanto, en los par\'ametros estad\'isticos que las definen.\\~\\
 En la normalizaci\'on radiom\'etrica los cambios introducen ruido \cite{martinez2013normalizacion}, ya que el proceso busca que los pixeles de una banda de im\'agenes satelitales en diferentes tiempos sean semejantes y el cambio estar\'ia influyendo en la correlaci\'on entre los pixeles que verdaderamente no sufrieron cambio. Si el \'area de todos los pixeles con cambio es mayor, la influencia en la normalizaci\'on ser\'a mayor y por ende afectara la precisi\'on en la detecci\'on de cambios. En vista al problema, mediante una normalizaci\'on radiom\'etrica iterativa se pretende minimizar dicha influencia, donde los par\'ametros estad\'isticos ($ \mu,\sigma $) utilizados constituyen los pixeles sin cambios.\\~\\	
-La Figura \ref{fig:deteccionCambio} nos presenta el ciclo de procedimientos para la detecci\'on de cambio, donde a partir de la secuencia de im\'agenes satelitales en las bandas infrarroja cercana y roja ($ f_{t}(x,y,IRc);f_{t}(x,y,R), f_{t_{*}}(x,y,IRc);f_{t*}(x,y,R) $) son calculados los par\'ametros estad\'isticos ($ \mu_{i,t};\sigma_{i,t}, \mu_{i,t_{*}};\sigma_{i,t_{*}} $) para las im\'agenes. Esos par\'ametros son utilizados para normalizar radiom\'etricamente las bandas del tiempo $ t_{*} $, en semejanza a las bandas de la imagen satelital del tiempo $ t $, as\'i determinar la imagen con los \'indices de cambios ($ I_{c} $) una vez calculados los NDVI ($ ndvi_{f_{t}},ndvi_{f_{t_{*}}} $). La m\'ascara de cambio ($ MC $) es el resultado de pasar por los umbrales estad\'isticos (secci\'on \ref{sec:umbralEstadistico2}). La iteraci\'on ($ iter $) continua si la media del $ I_{c} $ actual es de magnitud similar a la registrada en la anterior. Se define la función l\'ogica $ continuar $:
+La Figura \ref{fig:deteccionCambio} nos presenta el ciclo de procedimientos para la detecci\'on de cambio, donde a partir de la secuencia de im\'agenes satelitales en las bandas infrarroja cercana y roja ($ f_{t}(x,y,IRc);f_{t}(x,y,R), f_{t_{*}}(x,y,IRc);f_{t*}(x,y,R) $) son calculados los par\'ametros estad\'isticos ($ \mu_{i,t};\sigma_{i,t}, \mu_{i,t_{*}};\sigma_{i,t_{*}} $) para las im\'agenes.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0 \textwidth]{./Figures/cap4/deteccionCambio_4.png}
+	\caption{Diagrama de flujo. Detecci\'on de Cambio.}
+	\label{fig:deteccionCambio}
+\end{figure}
+ Esos par\'ametros son utilizados para normalizar radiom\'etricamente las bandas del tiempo $ t_{*} $, en semejanza a las bandas de la imagen satelital del tiempo $ t $, as\'i determinar la imagen con los \'indices de cambios ($ I_{c} $) una vez calculados los NDVI ($ ndvi_{f_{t}},ndvi_{f_{t_{*}}} $). La m\'ascara de cambio ($ MC $) es el resultado de pasar por los umbrales estad\'isticos (secci\'on \ref{sec:umbralEstadistico2}). La iteraci\'on ($ iter $) continua si la media del $ I_{c} $ actual es de magnitud similar a la registrada en la anterior. Se define la función l\'ogica $ continuar $:
   \begin{equation}\label{ec:continuar}
   continuar(\mu_{I_{c}^{iter}},\mu_{I_{c}^{iter-1}}) = \begin{cases}
   falso & \text{si se cumple que } \mu_{I_{c}^{iter}} - \mu_{I_{c}^{iter-1}} \leq \epsilon \\
@@ -159,8 +166,8 @@ La Figura \ref{fig:deteccionCambio} nos presenta el ciclo de procedimientos para
   \end{cases}
   \end{equation}
   \nomenclature[58]{$ \epsilon $}{Error de cambio.}
-  Siendo $ \epsilon $ un error de aproximaci\'on. Si el proceso de iteraci\'on debe continuar, el c\'alculo  de los par\'ametros estad\'isticos debe realizarse seg\'un el Algoritmo \ref{alg:parametros}. Cada valor de pixel, de las bandas en cada imagen satelital, es utilizado en el c\'alculo si no representa un cambio en la m\'ascara de cambio $ MC $.
-  \begin{algorithm}[H]
+  Siendo $ \epsilon $ un error de aproximaci\'on. Si el proceso de iteraci\'on debe continuar, el c\'alculo  de los par\'ametros estad\'isticos debe realizarse seg\'un el Algoritmo \ref{alg:parametros}.
+  \begin{algorithm}
   	\caption{Funci\'on que calcula los par\'ametros estad\'isticos.}
   	\label{alg:parametros}
   	\begin{algorithmic}[1]
@@ -169,7 +176,6 @@ La Figura \ref{fig:deteccionCambio} nos presenta el ciclo de procedimientos para
 		\State $sumR =0$ \Comment{Variable auxiliar sumatoria}
 		\State $sumIRc =0 $ \Comment{Variable auxiliar sumatoria}
 		\State $nT =0 $ \Comment{N\'umero de pixeles sin cambio}
-		\Statex
 		\For {$x \gets 0, fil$}
 			\For {$y \gets 0, col$}
 %															\algstore{myalg2}
@@ -186,12 +192,11 @@ La Figura \ref{fig:deteccionCambio} nos presenta el ciclo de procedimientos para
 				\EndIf
 			\EndFor
 		\EndFor
-	\Statex
+
 		\State $ \mu_{R,t}= sumR/nT$
 		\State $ \mu_{IRc,t}= sumIRc/nT$
 		\State $ sumR=0$
 		\State $ sumIRc=0$
-		\Statex
 		\For {$x \gets 0, fil$}
 			\For {$y \gets 0, col$}
 				\If{$MC(x,y)=1$}
@@ -200,7 +205,6 @@ La Figura \ref{fig:deteccionCambio} nos presenta el ciclo de procedimientos para
 				\EndIf
 			\EndFor
 		\EndFor
-		\Statex
 		\State $\sigma_{R,t}=\sqrt{\dfrac{1}{nT-1} \times sumR}$
 		\State $\sigma_{IRc,t}=\sqrt{\dfrac{1}{nT-1} \times sumIRc}$
   		\Statex
@@ -208,14 +212,7 @@ La Figura \ref{fig:deteccionCambio} nos presenta el ciclo de procedimientos para
   		\EndFunction
   	\end{algorithmic}
   \end{algorithm}
-El proceso de iteraci\'on finaliza retornando una un m\'ascara de perdida $ MP $ seg\'un la ecuaci\'on \ref{ec:umbMetodoMP}.\\~\\
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=1.0 \textwidth]{./Figures/cap4/deteccionCambio_4.png}
-	\caption{Diagrama de flujo. Detecci\'on de Cambio.}
-	\label{fig:deteccionCambio}
-\end{figure}
-
+\\  Cada valor de pixel, de las bandas en cada imagen satelital, es utilizado en el c\'alculo si no representa un cambio en la m\'ascara de cambio $ MC $. El proceso de iteraci\'on finaliza retornando una un m\'ascara de perdida $ MP $ seg\'un la ecuaci\'on \ref{ec:umbMetodoMP}.\\~\\
 En la Figura \ref{fig:iteracionRadiometrica} podemos observar que a partir de la mascara de cambio obtenido en la primera iteraci\'on, los par\'ametros estad\'isticos para la iteraci\'on 2, en la normalizaci\'on iterativa, son realizados sobre los pixeles que no detectaron cambios. 
 \begin{figure}[H]
 	\centering
@@ -289,8 +286,8 @@ Sea $ C:(x,y) \longrightarrow \{ [-\infty,\infty]\}$ la cantidad de carbono, en 
 \begin{equation}\label{ec:regreLinelCarb}
 C(x,y)=h+m \times ndvi_{f}(x,y)
 \end{equation}
-\nomenclature[59]{$ m$}{Coeficiente en la ecuaci\'on de estimaci\'on de carbono.}
-\nomenclature[59]{$ h$}{Coeficiente en la ecuaci\'on de estimaci\'on de carbono.}
+\nomenclature[59]{$ (m, h)$}{Coeficiente en la ecuaci\'on de estimaci\'on de carbono.}
+
 Donde $ ndvi_{f} $ representa la variable independiente, $ C $ la variable dependiente y ($ h , m $) coeficientes de la ecuaci\'on de regresi\'on lineal. \\~\\
 La estimaci\'on de carbono para una secuencia multitemporal ($ C_{t},C_{t_{*}} $) en funci\'on al ndvi ($ ndvi_{t},ndvi_{t_{*}} $) queda definida de la siguiente manera:
 \begin{equation}
@@ -417,7 +414,7 @@ La metodolog\'ia presenta un esquema general descripta por el Algoritmo \ref{alg
 Dada una secuencia multitemporal ($ f_{t},f_{t_{*}} $), donde $ t<t_{*} $, con las bandas infrarroja cercana y roja de entrada $ (f_{t}(x,y,IRC)$, $f_{t}(x,y,R)$, $f_{t_{*}}(x,y,IRC)$,  $f_{t_{*}}(x,y,R)) $ de una peque\~{n}a porci\'on de cada imagen satelital, seg\'un la Figura \ref{fig:ejemplo_1}, se realiza un ejemplo con una porci\'on de $ 5 \times 5 $ para $ f_{t} $ y $ f_{t_{*}} $:
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8	\textwidth]{./Figures/cap4/ejemplo_entrada.png}
+	\includegraphics[width=0.6	\textwidth]{./Figures/cap4/ejemplo_entrada.png}
 	\caption{Bandas de im\'agenes satelitales utilizados como entrada.}
 	\label{fig:ejemplo_1}
 \end{figure}
@@ -425,7 +422,7 @@ El proceso de iteraci\'on empieza normalizando radiom\'etricamente las bandas de
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.0	\textwidth]{./Figures/cap4/ejemplo_iteracion_1.png}
+	\includegraphics[width=0.8	\textwidth]{./Figures/cap4/ejemplo_iteracion_1.png}
 	\caption{Primera iteraci\'on en el proceso de detecci\'on de cambio.}
 	\label{fig:ejemplo_2}
 \end{figure}
@@ -439,7 +436,7 @@ En la segunda iteraci\'on la mascara de cambio $ MC $ es tenido en cuenta para r
 En la Figura \ref{fig:ejemplo_4} podemos observar la siguiente iteraci\'on, donde la diferencia entre la media anterior $ \mu_{anterior} $ y la media de $ I_{c} $ actual ($ \mu_{I_{c}} $) cumple con la ecuaci\'on \ref{ec:continuar} para un $\epsilon=0 $, finalizando as\'i la iteraci\'on en la detecci\'on de cambio.
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.0	\textwidth]{./Figures/cap4/ejemplo_iteracion_3.png}
+	\includegraphics[width=0.8	\textwidth]{./Figures/cap4/ejemplo_iteracion_3.png}
 	\caption{\'Ultima iteraci\'on en el proceso de detecci\'on de cambio.}
 	\label{fig:ejemplo_4}
 \end{figure}

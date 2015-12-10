@@ -10,7 +10,7 @@ Filadelfia es una ciudad de Paraguay, del departamento de Boquer\'on - Chaco par
 La localizaci\'on descripta fue elegida debido a que ademas de estar ubicada en el Chaco Paraguayo posee un crecimiento demogr\'afico en la que las actividades agr\'icolas y ganaderas son variantes, proporcionando un ambiente ideal para las distintas pruebas y validaciones.
 
 \section{Métricas de evaluación}
-En el control de calidad, algunos se basan en el concepto de matriz de confusi\'on, que establece una relaci\'on entre los resultados obtenidos en el proceso de asignaci\'on y la informaci\'on verdad terreno $ (VT) $ disponible para la zona de estudio. En la Tabla \ref{t:matrizConfusion}, la diagonal principal representa el n\'umero de celdas correctamente catalogadas $ (T) $ , y la diagonal transpuesta, las incorrectamente catalogadas $ (F) $. El uso de esta matriz presenta como mayor desventaja que est\'a condicionada a la veracidad y exactitud de la referencia utilizada como $ VT $. La interpretaci\'on de la matriz de confusi\'on esta dada de la siguiente manera:
+En el control de calidad, algunos se basan en el concepto de matriz de confusi\'on, que establece una relaci\'on entre los resultados obtenidos en el proceso de asignaci\'on (Algoritmo) y la informaci\'on verdad terreno $ (VT) $ disponible para la zona de estudio. En la Tabla \ref{t:matrizConfusion}, la diagonal principal representa el n\'umero de celdas correctamente catalogadas $ (T) $, y la diagonal transpuesta, las incorrectamente catalogadas $ (F) $. El uso de esta matriz presenta como mayor desventaja que est\'a condicionada a la veracidad y exactitud de la referencia utilizada como $ VT $. La interpretaci\'on de la matriz de confusi\'on esta dada de la siguiente manera:
 \begin{itemize}
 	\item TP: pixeles que se catalogaron como perdida correctamente.
 	\item FP: pixeles que se catalogaron como perdida incorrectamente.
@@ -86,9 +86,9 @@ La Tabla \ref{t:kappaTable} nos presenta la interpretaci\'on del coeficiente Kap
 
 
 \section{Pruebas y resultados experimentales}
-En esta secci\'on se describir\'an las diferentes pruebas desarrolladas para la determinaci\'on de constantes establecidas dentro de la metodolog\'ia. Los resultados obtenidos por la metodolog\'ia, empleada en el estado del arte, son expuestos de manera a evaluar los datos de salida mediante las m\'etricas planteadas.
+En esta secci\'on se describir\'an las diferentes pruebas desarrolladas para la determinaci\'on de constantes establecidas dentro de la metodolog\'ia. Los resultados obtenidos por la metodolog\'ia son expuestos de manera a evaluar los datos de salida mediante las m\'etricas planteadas.
 \subsection{Umbral de Vegetaci\'on}\label{subsec:umbralVegetacion}
-En la metodolog\'ia hemos hablado y utilizado una variable estad\'istica (secci\'on \ref{sec:uvegetacion}) hallada por un an\'alisis previo del comportamiento espectral que presenta la cobertura vegetal. Dicha variable corresponde a la desviaci\'on estandar de los NDVI hallados.\\~\\
+En la metodolog\'ia hemos hablado y utilizado una variable estad\'istica (secci\'on \ref{sec:uvegetacion}) hallada por un an\'alisis previo del comportamiento espectral que presenta la cobertura vegetal. Dicha variable corresponde a la desviaci\'on estandar de los NDVI encontrados.\\~\\
 Las im\'agenes VCF (secci\'on \ref{sec:vcf}) junto con las im\'agenes Landsat (secci\'on \ref{sec:landsat}) permitieron realizar un pareo de niveles digitales en base a su posicion geografica $ (x,y) $. En las im\'agenes VCF los p\'ixeles representan porcentajes de vegetaci\'on existente en un pixel, mientras que las im\'agenes Landsat nos permite calcular NDVI. Im\'agenes con NDVI fueron calculadas para diferentes tiempos (1986, 1990, 2000). Existe una colecci\'on disponible de im\'agenes VCF, del a\~{n}o 2000 hasta el 2010, en la que se tomo el a\~{n}o 2000 como referencia por observar mayor porcentaje de cobertura vegetal que las dem\'as para ser cruzada con las im\'agenes de NDVI. Mascaras de VCF fueron elaboradas en diferentes rangos (0\%-10\%, 0\%-20\%, 0\%-30\%, 0\%-\%40 y 0\%-\%50). El rango completo no fue analizado debido a que no existen p\'ixeles que representa la vegetaci\'on en un porcentaje mayor al 50\%. En la Figura \ref{fig:mascVCf} podemos observar la mascara de VCF para pixeles con 30\% de vegetaci\'on junto con la imagen NDVI correspondiente al a\~{n}o 2000.
 \begin{figure}[H]
 	\centering
@@ -115,7 +115,7 @@ El procedimiento se repite para cada mascara en los distintos rangos. En total s
 		\rowcolor[HTML]{EFEFEF} 
 		\multicolumn{3}{|c|}{\cellcolor[HTML]{EFEFEF}\textbf{A\~{n}o 1986}}        \\ \hline
 		\rowcolor[HTML]{EFEFEF} 
-		\textbf{VCF (\%)} & \textbf{$ \mu_{ndvi_{ft}} $} & \textbf{$ \sigma_{ndvi_{ft}} $)} \\ \hline
+		\textbf{VCF (\%)} & \textbf{$ \mu_{ndvi_{ft}} $} & \textbf{$ \sigma_{ndvi_{ft}} $} \\ \hline
 		50                & 0.356701              & 0.047891                   \\ \hline
 		40                & 0.344022              & 0.0507296                  \\ \hline
 		30                & 0.337696              & 0.061581                   \\ \hline
@@ -146,7 +146,7 @@ El procedimiento se repite para cada mascara en los distintos rangos. En total s
 
 La Tabla \ref{t:vcfNdvi} nos muestra que la media del NDVI es diferente para cada a\~{n}o, independientemente del porcentaje de vegetaci\'on evaluado, debido a que el \'area foliar (hojas) en la vegetaci\'on posee diferente respuesta espectral para cada especie y \'epoca en la que es capturada por los sensores remotos. En este caso, no es conveniente tomar la media ($  \mu_{ndvi_{ft}} $) dentro de un patr\'on de comportamiento con el fin de discriminar la vegetaci\'on. Las desviaciones ($ \sigma_{ndvi_{ft}} $) se observan pr\'oximas para cada evaluaci\'on por lo que consideramos resaltante y \'util para la discriminaci\'on forestal. Un promedio entre todas las desviaciones es realizado quedando como variable $ \sigma_{c} $ en la umbralizaci\'on de vegetaci\'on  $ \sigma_{c} = 0.0658242733 $.
 \subsection{Estimaci\'on de p\'erdida de carbono forestal}\label{subsec:estimacionCarbono}
-El Mapa Global de Carbono nos permite analizar una relaci\'on posible con los indices de vegetaci\'on. El mapa corresponde a la d\'ecada del a\~{n}o 2000, como se hab\'ia comentado en la secci\'on \ref{sec:saatchiMapa}, por lo que para el an\'alisis se obtuvieron calculos de NDVI a partir de im\'agenes Landsat del a\~{n}o 2003. Posteriormente se generaron 240 puntos aleatorios dentro \'areas que correspond\'ian a vegetaci\'on como podemos observar en la Figura \ref{fig:aleatorioCrb}.
+El Mapa Global de Carbono nos permite analizar una relaci\'on posible con los indices de vegetaci\'on. Los NDVI fueron calculados a partir de im\'agenes Landsat del a\~{n}o 2003, debido a que el Mapa Global de Carbono corresponde a la d\'ecada del a\~{n}o 2000 (como se hab\'ia comentado en la secci\'on \ref{sec:saatchiMapa}). Posteriormente se generaron 240 puntos aleatorios dentro \'areas que correspond\'ian a vegetaci\'on como podemos observar en la Figura \ref{fig:aleatorioCrb}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8	\textwidth]{./Figures/cap5/carbNdvi.png}
@@ -160,7 +160,7 @@ Estos puntos fueron generados para interceptar en ellos los NDVI y ton C/ha en e
 	\caption{Regresi\'on Lineal. $ X=NDVI, Y=TonC/ha $}
 	\label{fig:linealCar}
 \end{figure}
-Los coeficientes de la ecuaci\'on \ref{ec:regreLinelCarb} hallado en el experimento corresponden a $ m=30.1 $ y $ h =4,33 $, quedando la ecuaci\'on con la siguiente expresi\'on:
+Los coeficientes de la ecuaci\'on \ref{ec:regreLinelCarb} encontrados en el experimento corresponden a $ m=30.1 $ y $ h =4,33 $, quedando la ecuaci\'on con la siguiente expresi\'on:
 \begin{equation}\label{ec:regreLinelCarbExp}
 C(x,y)=4.33+30.1 \times ndvi_{f}(x,y)
 \end{equation}
@@ -185,7 +185,7 @@ En la Figura \ref{fig:zonasEva} podemos observar las \'areas seleccionadas dentr
 	\caption{\'Areas de los sectores empleados para los experimentos.}
 	\label{fig:zonasEva}
 \end{figure}
-En la Tabla \ref{t:poligonos} podemos observar las propiedades del \'area para cada sector elegido.
+En la Tabla \ref{t:poligonos} podemos observar las coordenadas de los pol\'igonos (xMax,yMax,xMin,yMin) con su per\'imetro (Km) y \'area (Has.) correspondiente a cada sector elegido, de manera a brindar mayores detalles para su reproducci\'on.
 \begin{table}[H]
 	\centering
 	\begin{tabular}{|l|l|l|l|l|l|l|}
@@ -200,7 +200,8 @@ En la Tabla \ref{t:poligonos} podemos observar las propiedades del \'area para c
 		\label{t:poligonos}
 \end{table}
 El proceso de correcci\'on de las im\'agenes satelitales (secci\'on \ref{sec:correcionesImages}), debido a que obtuvieron los productos L1T del USGS (secci\'on \ref{sec:landsat}), no fueron implementados por ya poseer el pre-procesamiento de correcci\'on geom\'etrica y radiom\'etrica correspondiente. Esto es beneficioso al estudio en cuanto a costo, por no ser necesario el levantamiento de los puntos de control (GCP) en el terreno para la correcci\'on geom\'etrica espec\'ificamente.\\~\\
-Nuestras im\'agenes satelitales de entrada son de baja resoluci\'on espacial ($ 30 \times 30 $ metros cuadrados) por lo que el tama\~{n}o de ventana a utilizar seria $ 3 \times 3 $ en el filtro de mediana. \\~\\
+El $ \epsilon $ utilizado para el punto de parada en el proceso de iteraci\'on es de $ 0.01 $.\\~\\
+Las im\'agenes satelitales de entrada son de baja resoluci\'on espacial ($ 30 \times 30 $ metros cuadrados) por lo que el tama\~{n}o de ventana a utilizar seria $ 3 \times 3 $ en el filtro de mediana. \\~\\
  La Tabla \ref{t:pathRow} nos muestra los path/row (secci\'on \ref{sec:landsat}) de las im\'agenes utilizadas en nuestro experimento.
 
 % Please add the following required packages to your document preamble:
@@ -220,19 +221,21 @@ Nuestras im\'agenes satelitales de entrada son de baja resoluci\'on espacial ($ 
 		\label{t:pathRow}
 \end{table}
 
-Se recortaron las bandas de las im\'agenes, infrarroja cercana y roja, para cada sector y fecha e introducidas como datos de entrada en la metodolog\'ia. Las Figuras \ref{fig:ubana}, \ref{fig:rural} y \ref{fig:humeda} muestran la m\'ascara de perdida forestal ($ MPF $) junto con la cuantificaci\'on de carbono ($ CCP $) en los sectores y coeficientes de fiabilidad ($ n $) (secci\'on \ref{sec:umbralEstadistico2}) obtenidos luego de aplicar la metodolog\'ia presentada.
+Se recortaron las bandas de las im\'agenes, infrarroja cercana y roja, para cada sector y fecha e introducidas como datos de entrada en la metodolog\'ia. Las Figura \ref{fig:ubana} muestra la m\'ascara de perdida forestal ($ MPF $) junto con la cuantificaci\'on de carbono ($ CCP $) en el \'area urbana para cada coeficientes de fiabilidad ($ n $) (secci\'on \ref{sec:umbralEstadistico2}), obtenidos luego de aplicar la metodolog\'ia presentada.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0	\textwidth]{./Figures/cap5/res_zona_urbana.png}
 	\caption{\'Area Urbana. Mapa de perdida forestal y toneladas de carbono perdidos.}
 	\label{fig:ubana}
 \end{figure}
+La Figura \ref{fig:rural} muestra la m\'ascara de perdida forestal ($ MPF $) junto con la cuantificaci\'on de carbono ($ CCP $) en el \'area rural para cada coeficientes de fiabilidad ($ n $) (secci\'on \ref{sec:umbralEstadistico2}), obtenidos luego de aplicar la metodolog\'ia presentada. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0	\textwidth]{./Figures/cap5/res_zona_rural.png}
 	\caption{\'Area Rural. Mapa de perdida forestal y toneladas de carbono perdidos}
 	\label{fig:rural}
 \end{figure}
+La Figura \ref{fig:humeda} muestra la m\'ascara de perdida forestal ($ MPF $) junto con la cuantificaci\'on de carbono ($ CCP $) en el \'area h\'umeda para cada coeficientes de fiabilidad ($ n $) (secci\'on \ref{sec:umbralEstadistico2}), obtenidos luego de aplicar la metodolog\'ia presentada.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0	\textwidth]{./Figures/cap5/res_zona_humeda.png}
@@ -241,8 +244,8 @@ Se recortaron las bandas de las im\'agenes, infrarroja cercana y roja, para cada
 \end{figure}
 
 
-La evaluaci\'on de la calidad en la detecci\'on de perdida forestal ($ MP $) fueron hechas con la comparaci\'on del Paraguay Forest Change Produc (PFCP) y los resultados obtenidos por cada sector y coeficiente de tolerancia $ (n) $. El indice kappa y la precisi\'on Global nos permiti\'a saber la calidad en los resultados de detecci\'on de cambio.\\~\\
-Previamente se realizo una re-clasificaci\'on en la imagen PFCP, ya que en ella refleja dos tipos de bosques (Atl\'antico y Chaco) y no bosques, por ello se procedi\'o a dejar solo aquellos pixeles que representan perdida de vegetaci\'on en cualquier de los tipos, generando una imagen binaria como podemos observar en la Figura \ref{fig:pfcp}.
+La evaluaci\'on de la calidad en la detecci\'on de perdida forestal ($ MP $) fueron hechas con la comparaci\'on del Paraguay Forest Change Produc (PFCP) y los resultados obtenidos por cada sector y coeficiente de tolerancia $ (n) $. El indice kappa y la precisi\'on global nos permiti\'a saber la calidad en los resultados de detecci\'on de cambio forestal.\\~\\
+Una re-clasificaci\'on en la imagen PFCP fue realizado previamente, ya que en ella clasifica dos tipos de bosques (Atl\'antico y Chaco), no bosques y agua. La re-clasificaci\'on consisti\'o en dejar solo los pixeles que representan perdida de vegetaci\'on en cualquier de los tipos, generando una imagen binaria (rojo para pixeles con perdida forestal y amarillo otros) como podemos observar en la Figura \ref{fig:pfcp}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4	\textwidth]{./Figures/cap5/pcfp.png}
@@ -284,7 +287,7 @@ Una vez generado la imagen de referencia para la evaluaci\'on con ayuda de la ap
 		\label{t:kappaGa}
 \end{table}
 
-En la figura \ref{fig:kappaGrafico}, podemos observar que los coeficientes kappas en todos los $ n  $ son mejores para zonas rurales, variando en resultados moderados y considerables. Seguido por zonas h\'umedas, donde $ n=1 $ se obtienen resultados aceptables a diferencia de las dem\'as que son moderadas. Por ultimo las zonas urbanos son las que presentan gran variaci\'on entre los coeficientes hallados para el, debiendo implementar tolerancia baja $(n=1)$, al modelo de detecci\'on, para obtener resultados moderados. Los coeficientes son interpretados seg\'un la tabla \ref{t:kappaTable}.
+En la Figura \ref{fig:kappaGrafico} podemos observar que los coeficientes kappas en todos los $ n  $ son mejores para zonas rurales, variando en resultados moderados y considerables. Las zonas h\'umedas, donde $ n=1 $ se obtienen resultados aceptables a diferencia de las dem\'as que son moderadas. Por ultimo las zonas urbanos son las que presentan gran variaci\'on entre los coeficientes hallados para el, debiendo implementar tolerancia baja $(n=1)$, al modelo de detecci\'on, para obtener resultados moderados. Los coeficientes son interpretados seg\'un la Tabla \ref{t:kappaTable}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8	\textwidth]{./Figures/cap5/kappaGrafico.png}
@@ -298,13 +301,13 @@ La precisi\'on global, seg\'un la ilustraci\'on \ref{fig:gaGrafico}, nos dice qu
 	\caption{GA por cada \'Area y tolerancia.}
 	\label{fig:gaGrafico}
 \end{figure}
-\subsection{Discusi\'on de resultados}
-Una vez evaluado las diferentes zonas de nuestro caso de estudio, podemos darnos cuenta que la metodolog\'ia propuesta posee una mejor respuesta, respecto a la calidad, en \'areas rurales. Esto es debido a que el Coeficiente kappa o los indices de acuerdo var\'ian entre 0.57-0.67 y su precisi\'on global sobrepasan el umbral optimo de 85\%, para cada coeficiente de tolerancia $ n $. Por lo que se considera satisfactorio la metodolog\'ia propuesta, ya que la perdida de carbono es un fen\'omeno frecuente en \'areas con vegetaci\'on predominante.\\~\\	
-Zonas donde la vegetaci\'on no predomina, esta metodolog\'ia podr\'ia no resultar suficientemente conveniente. Las pruebas experimentales hechas en zonas urbanas, la precisi\'on global y el coeficiente kappa no son \'optimos por el cual se llega a esa interpretaci\'on.\\~\\
- En \'areas cercanas a r\'ios o sujetas a inundaci\'on, se observaron resultados aceptables para  estudios con tolerancias medias y altas en la detecci\'on de perdida forestal. Por lo que el monitoreo en estos tipos de zonas con la metodolog\'ia propuesta podr\'ia ser aun de gran utilidad, ya que la presencia de agua en la vegetaci\'on modifica la respuesta espectral, dificultando su clasificaci\'on como cobertura vegetal.\\~\\	
- Los an\'alisis estad\'isticos empleados tanto para la determinaci\'on de umbrales vegetaci\'on/no vegetaci\'on como en el hallazgo de ecuaciones de transformaci\'on a carbono, nos indica que empleando extracciones de indices vegetales y variables estad\'isticas es posible generar metodolog\'ias no complejas destinadas al monitorio ambiental. Esta sencillez nos libera de necesarias supervisiones y entrenamientos normalmente empleadas en teledetecci\'on.\\~\\	
-El mapa global de carbono \cite{saatchi2011benchmark} constituyo un factor importante para la automatizaci\'on, al permitir determinar una ecuaci\'on que transforme el indice vegetal a carbono. De no existir, hubiese sido necesario aplicar previos muestreos forestales en el terreno.\\~\\	
- La correcci\'on geom\'etrica implica procesos que engloba visitas al terreno para levantamientos de puntos de control requeridas en las interpolaciones. Gracias a la utilizaci\'on de im\'agenes Landsat L1T prove\'idas por la USGS, no fue necesario sumar ese costo a la metodolog\'ia, automatizando-la por no haber necesidad de realizar dicho procedimiento.
 \subsection{Dificultades encontradas} 
 Unas de las principales dificultades encontradas fue de que las im\'agenes Landsat presentan un porcentaje de nubosidad en algunas fechas, por lo que requerir\'a de un pre-procesamiento que permita su utilizaci\'on en el an\'alisis. Las correcciones geom\'etricas constituyen un problema adicional si no se utilizan las im\'agenes Lansadt del USGS (secci\'on \ref{sec:landsat}), ya que necesitaran de un previo trabajo de campo para el relevamiento de puntos de control necesarios en la correcci\'on.\\~\\
 Los resultados evaluados en base a los objetivos propuestos, en el siguiente y \'ultimo cap\'itulo se exponen las conclusiones de este trabajo  y finalmente trabajos futuros que puedan dar continuidad a este trabajo final de grado.
+\subsection{Discusi\'on de resultados}
+Una vez evaluado las diferentes zonas de nuestro caso de estudio, podemos darnos cuenta que la metodolog\'ia propuesta posee una mejor respuesta, respecto a la calidad, en \'areas rurales. Esto es debido a que el Coeficiente kappa o los indices de acuerdo var\'ian entre 0.57-0.67 y su precisi\'on global sobrepasan el umbral optimo de 85\%, para cada coeficiente de tolerancia $ n $. Por lo que se considera satisfactorio la metodolog\'ia propuesta, ya que la perdida de carbono es un fen\'omeno frecuente en \'areas con vegetaci\'on predominante.\\~\\	
+Zonas donde la vegetaci\'on no predomina, esta metodolog\'ia podr\'ia no resultar suficientemente conveniente. Las pruebas experimentales hechas en zonas urbanas, la precisi\'on global y el coeficiente kappa no son \'optimos por el cual se llega a esa interpretaci\'on.\\~\\
+ En \'areas cercanas a r\'ios o sujetas a inundaci\'on, se observaron resultados aceptables para  estudios con tolerancias medias y altas en la detecci\'on de perdida forestal. El monitoreo en estos tipos de zonas con la metodolog\'ia propuesta podr\'ia ser aun de gran utilidad, ya que la presencia de agua en la vegetaci\'on modifica la respuesta espectral, dificultando su clasificaci\'on como cobertura vegetal.\\~\\	
+ Los an\'alisis estad\'isticos empleados tanto para la determinaci\'on de umbrales vegetaci\'on/no vegetaci\'on como en el hallazgo de ecuaciones de transformaci\'on a carbono, nos indica que empleando extracciones de indices vegetales y variables estad\'isticas es posible generar metodolog\'ias no complejas destinadas al monitorio ambiental. Esta sencillez nos libera de necesarias supervisiones y entrenamientos normalmente empleadas en teledetecci\'on.\\~\\	
+El mapa global de carbono \cite{saatchi2011benchmark} constituy\'o un factor importante para la automatizaci\'on, al permitir determinar una ecuaci\'on que transforme el indice vegetal a carbono. De no existir, hubiese sido necesario aplicar previos muestreos forestales en el terreno.\\~\\	
+ La correcci\'on geom\'etrica implica procesos que engloba visitas al terreno para levantamientos de puntos de control requeridas en las interpolaciones. Gracias a la utilizaci\'on de im\'agenes Landsat L1T prove\'idas por la USGS, no fue necesario sumar ese costo a la metodolog\'ia.
