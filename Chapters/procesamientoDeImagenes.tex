@@ -3,7 +3,7 @@
 \thispagestyle{empty} 
 
 \chapter{Procesamiento de im\'agenes satelitales}
-\lhead{Capítulo 3. \emph{Procesamiento de im\'agenes satelitales}} % This is for the header on each page - perhaps a shortened title
+\lhead{Cap\'itulo 3. \emph{Procesamiento de im\'agenes satelitales}} % This is for the header on each page - perhaps a shortened title
 La teledetecci\'on presenta un principio base similar al de la visi\'on, permitiendo mediante una fuente de energ\'ia, un objetivo o escena y un sensor, generar im\'agenes digitales que posibilitan resaltar aquellos elementos dif\'iciles de percibir o ser distinguidos directamente a trav\'es de una imagen normal. El comportamiento caracter\'istico que poseen los recursos naturales a sensores remotos, nos posibilita el empleo amplio de t\'ecnicas de procesamiento de im\'agenes provechosos para el logro de los objetivos en la investigaci\'on \cite{deespectro}. \\~\\
 Este capitulo consiste en brindar conceptos espec\'ificos utilizados por la metodolog\'ia, posibilitando comprender la influencia de cada factor en el empleo de im\'agenes satelitales para la estimaci\'on de p\'erdida del contenido de carbono forestal.
 
@@ -16,7 +16,7 @@ Las bandas m\'as empleadas son las siguientes \cite{salinero2002teledeteccion}:
 		\item \textbf{Espectro visible:} (400 nm a 700 nm) se denomina as\'i por tratarse de la \'unica radiaci\'on electromagn\'etica que pueden percibir nuestros ojos, coincidiendo con las longitudes de onda en donde es m\'axima la radiaci\'on solar. Dentro de esta se distinguen tres bandas fundamentales: Azul (400 nm a 500 nm), verde (500 nm a 600 nm) y rojo (600 nm a 700 nm).
 		\item \textbf{Infrarrojo pr\'oximo:} (700 nm a 1300 nm) se utiliza para discriminar masas vegetales y concentraciones de humedad.
 		\item \textbf{Infrarrojo medio:} (1,3 um a 8 um) en esta franja se entremezclan los procesos de reflexi\'on de la luz solar y de emisi\'on de la superficie terrestre. El infrarrojo medio es muy utilizado para estimar el contenido de humedad en la vegetaci\'on y los focos de alta temperatura.
-		\item \textbf{Infrarrojo lejano o térmico:} (8 um a 14 um) se detecta el calor de la mayor\'ia de las cubiertas terrestres.
+		\item \textbf{Infrarrojo lejano o t\'ermico:} (8 um a 14 um) se detecta el calor de la mayor\'ia de las cubiertas terrestres.
 		\item \textbf{Microondas:} (a partir de 1 um) de gran inter\'es por ser un tipo de energ\'ia transparente a la cubierta nubosa.
 	\end{itemize}
 	En la Figura \ref{fig:bandasIs} podemos observar como el sensor montado en una plataforma espacial capta la informaci\'on terrestre en diferentes bandas de acuerdo a la longitud de onda.
@@ -76,7 +76,7 @@ La resoluci\'on de un sensor se define como el menor cambio en la magnitud de en
 
 \section{Im\'agenes satelitales}
 
-Una imagen satelital es una funci\'on $ f:(x,y,i) \longrightarrow \{0,...,2^{r}\} $. Cada $ (x,y,i) $ indica la posición $ (x,y) $ en a banda $ i $, donde $ i \in \{1,...,k\} $, $ x \in \{0,...,fil\} $ e $ y \in \{0,...,col\} $ para una matriz $ fil \times col $, siendo $ k $ el numero de bandas y $ r $ la resoluci\'on radiom\'etrica en la imagen. Las im\'agenes satelitales son conocidos tambi\'en como raster \cite{vasquez2011mineria} y se puede representar de forma matricial. La Figura \ref{fig:imagenMultiespectral} nos muestra los ejes de coordenadas espaciales $ (x,y) $ para cada plano que representan las bandas, pudiendo acceder a valor de la intensidad o nivel digital mediante el nivel digital  $ f(x,y,i) $.
+Una imagen satelital es una funci\'on $ f:(x,y,i) \longrightarrow \{0,...,2^{r}\} $. Cada $ (x,y,i) $ indica la posici\'on $ (x,y) $ en a banda $ i $, donde $ i \in \{1,...,k\} $, $ x \in \{0,...,fil\} $ e $ y \in \{0,...,col\} $ para una matriz $ fil \times col $, siendo $ k $ el numero de bandas y $ r $ la resoluci\'on radiom\'etrica en la imagen. Las im\'agenes satelitales son conocidos tambi\'en como raster \cite{vasquez2011mineria} y se puede representar de forma matricial. La Figura \ref{fig:imagenMultiespectral} nos muestra los ejes de coordenadas espaciales $ (x,y) $ para cada plano que representan las bandas, pudiendo acceder a valor de la intensidad o nivel digital mediante el nivel digital  $ f(x,y,i) $.
   \begin{figure}[H]
   	\centering
   	\includegraphics[width=0.8	\textwidth]{./Figures/cap3/imagen_satelital_k4.png}
@@ -111,7 +111,7 @@ El histograma de una una imagen satelital es una representaci\'on gr\'afica \'ut
 \subsection{Combinaci\'on de bandas}
 La visualizaci\'on de las im\'agenes de teledetecci\'on es mejor cuando se tiene una representaci\'on en colores, ya que el ojo humano percibe mejor las diferencias de color que los niveles de gris.\\~\\
 Las combinaci\'on de tres bandas a color en las im\'agenes satelitales recibe el nombre de imagen de color compuesta \cite{com2015color}. Las im\'agenes de las distintas bandas se pueden combinar entre ellas para producir una imagen en color real o en falso color en funci\'on de las bandas escogidas. Esto se hace asignando a cada uno de los canales (RGB) de la pantalla de ordenador, una banda en particular.\\~\\
-Las im\'agenes compuestas en color natural o real son combinaciones de las bandas 1 (azul) , 2 (verde) y 3 (rojo) que coinciden aproximadamente con la gama visual del ojo humano, por lo que se parecen bastante a lo que esperar\'iamos ver en una fotograf\'ia normal en color. Las im\'agenes de color real tienden a presentar un bajo contraste y un aspecto algo borroso. Ello es debido a que la luz azul es m\'as afectada que las dem\'as por la dispersión atmosf\'erica.\\~\\
+Las im\'agenes compuestas en color natural o real son combinaciones de las bandas 1 (azul) , 2 (verde) y 3 (rojo) que coinciden aproximadamente con la gama visual del ojo humano, por lo que se parecen bastante a lo que esperar\'iamos ver en una fotograf\'ia normal en color. Las im\'agenes de color real tienden a presentar un bajo contraste y un aspecto algo borroso. Ello es debido a que la luz azul es m\'as afectada que las dem\'as por la dispersi\'on atmosf\'erica.\\~\\
 Otras combinaciones de bandas distintas, generan im\'agenes en falso color. La naturaleza de los objetos que se quieren investigar, determina la selecci\'on de las tres bandas a combinar \cite{com2015color}. A continuaci\'on se describe algunas combinaciones posibles con im\'agenes Landsat para la identificaci\'on visual de aspectos terrestres \cite{lillesand2014remote}:
 	\begin{itemize}
 		\item \textbf{Bandas 3,2,1 (RGB):} Es una imagen de color natural. Refleja el \'area tal como la observa el ojo humano en una fotograf\'ia a\'erea a color.
@@ -142,7 +142,7 @@ El \'algebra de mapas constituye un marco te\'orico en la mayor parte de las ope
 			\item L\'ogico (AND, OR, XOR, NOT).
 			\item Relacional ($ >, >=, <, <=, ==, != $).
 			\item Trigonom\'etrico (sen, cos, tan, ...).
-			\item Condicional (si cumple la condición ejecuta la instrucción).
+			\item Condicional (si cumple la condici\'on ejecuta la instrucci\'on).
 		\end{itemize}
 		La Figura \ref{fig:oploccond} nos muestra el proceso de operadores locales l\'ogico y condicional. En el \'item (a), el operador l\'ogico binariza la imagen si $ DEM > 400 $, mientras que en el \'item (b) el operador condicional clasifica la imagen en base a un rango ($ 600 - 650 = 1; 650 - 700 = 2; 700 - 750 = 3; 750 - 800 = 4 $).
 		  \begin{figure}[H]
@@ -155,7 +155,7 @@ El \'algebra de mapas constituye un marco te\'orico en la mayor parte de las ope
 		\begin{itemize}
 			\item Filtrado de im\'agenes: es el conjunto de t\'ecnicas que se aplican a las im\'agenes digitales con el objetivo de mejorar la calidad o facilitar la b\'usqueda de informaci\'on.
 			\item Operadores estad\'isticos: calcula variables estad\'isticas (media, desviaci\'on t\'ipica, m\'inimo, m\'aximo, entre otros.) a partir de los valores de todas los pixeles que forman la vecindad y lo adjudican al pixel central en la imagen de salida. 
-			\item Operadores direccionales: Permiten estimar un conjunto de par\'ametros relacionados con la ubicaci\'on de los diferentes valores dentro de la vecindad. Su utilidad primordial es el an\'alisis de Modelos Digitales de Terreno (pendiente, orientación, curvatura, entre otros.)
+			\item Operadores direccionales: Permiten estimar un conjunto de par\'ametros relacionados con la ubicaci\'on de los diferentes valores dentro de la vecindad. Su utilidad primordial es el an\'alisis de Modelos Digitales de Terreno (pendiente, orientaci\'on, curvatura, entre otros.)
 		\end{itemize}		
 		\item  \textbf{Operadores de vecindad extendida:} son aquellos que afectan a zonas relativamente extensas, que cumplen determinado criterio pero cuya localizaci\'on precisa no se conoce previamente. Por tanto el operador (algoritmo) debe determinar previamente cual es el \'area que cumple dichas caracter\'isticas. En la Figura \ref{fig:oplvecext} podemos ver el resultado de haber aplicado un operador de vecindad extendida a partir de pixeles situados a distancias $ 25,50,75,100,125 $.
 						  \begin{figure}[H]
@@ -176,7 +176,7 @@ El \'algebra de mapas constituye un marco te\'orico en la mayor parte de las ope
  
 \section{\'Indices de vegetaci\'on}
 Los \'indices de vegetaci\'on son transformaciones que implican efectuar una combinaci\'on matem\'atica, entre los niveles digitales almacenados en dos o m\'as bandas espectrales de la misma imagen, teniendo en cuenta el comportamiento radiom\'etrico de la vegetaci\'on vigorosa para la elecci\'on de bandas \cite{speranza2005potencialidad}. \\~\\
-El estudio de las cubiertas vegetales mediante la teledetecci\'on se aborda tradicionalmente mediante la utilización de los denominados “índices de vegetaci\'on”, siendo el m\'as utilizado el \'Indice de vegetaci\'on diferencial normalizada (NDVI) \cite{sader2000estimacion}.
+El estudio de las cubiertas vegetales mediante la teledetecci\'on se aborda tradicionalmente mediante la utilizaci\'on de los denominados “\'indices de vegetaci\'on”, siendo el m\'as utilizado el \'Indice de vegetaci\'on diferencial normalizada (NDVI) \cite{sader2000estimacion}.
 
 \subsection{\'Indice de vegetaci\'on diferencial normalizada}\label{subsec:ndvi}
 Sea una funci\'on $ ndvi_{f}:(x,y) \longrightarrow [-1,1] $ que determina el NDVI de la imagen satelital $ f $ en cada coordenada espacial $ (x,y) $ definida por la siguiente expresi\'on:
@@ -203,7 +203,7 @@ La principal ventaja del NDVI es su f\'acil interpretaci\'on, ya que sus valores
 
 \section{An\'alisis Multitemporal}
 El an\'alisis multitemporal de im\'agenes satelitales consiste en el estudio de zonas determinadas mediante tomas hechas en diferentes tiempos. El factor temporal puede abordarse con un doble objetivo: por un lado reconstruir la variaci\'on estacional de la zona y por otra parte la detecci\'on de cambios. Este \'ultimo objetivo se enfoca en detectar cambios entre dos o m\'as
-fechas alejadas en el tiempo, estudiando el dinamismo temporal de una determinada zona como por ejemplo: el crecimiento urbano, transformaciones agrícolas, entre otras \cite{salinero2002teledeteccion}.\\~\\
+fechas alejadas en el tiempo, estudiando el dinamismo temporal de una determinada zona como por ejemplo: el crecimiento urbano, transformaciones agr\'icolas, entre otras \cite{salinero2002teledeteccion}.\\~\\
 En el enfoque aplicado al estudio multitemporal resulta preciso abordar previamente una serie de tratamientos sobre las im\'agenes satelitales de cara a garantizar su comparabilidad, ya que existen factores naturales o las del sensor, que influyen desde la captura de informaci\'on hasta su transformaci\'on final a niveles digitales que afectar\'ia el an\'alisis.
 
 \section{Correcciones a las im\'agenes satelitales}\label{sec:correcionesImages}
@@ -213,9 +213,9 @@ Las correcciones satelitales son el producto de aplicar un operador a una imagen
 		\end{equation} 
 Donde $ f $ es una imagen satelital de entrada, $ f^{'} $ es la imagen corregida y $ T $ es un operador que realiza las correcciones a la imagen $ f $, debido a fallos en los sensores, alteraciones en el movimiento del sat\'elite o interferencias de la atm\'osfera \cite{teledUm}.
 \nomenclature[27]{$ T[f] $}{ Operador que corrige la imagen satelital $ f $.}
-\subsection{Correccci\'on geom\'etrica}\label{sec:corrGeometrica}
+\subsection{Correcci\'on geom\'etrica}\label{sec:corrGeometrica}
 Una imagen de sat\'elite, al igual que las fotograf\'ias a\'ereas, no proporciona informaci\'on georreferenciada; cada pixel se ubica en un sistema de coordenadas arbitrario de tipo fila-columna como los que manejan los programas de tratamiento digital de im\'agenes \cite{deniseCultivos}.\\~\\
-El proceso consiste en dar a cada pixel su localizaci\'on en un sistema de coordenadas estandard (UTM, lambert, coordenadas geogr\'aficas) para poder combinar la imagen de sat\'elite con otro tipo de capas en un entorno SIG. El proceso obtiene una nueva imagen $ i^{'} $ de alguna banda $ i $ de la imagen satelital, en la que cada columna corresponde con un valor de longitud y cada fila con un valor de latitud. En caso de que la imagen no hubiese sufrido ningún tipo de distorsi\'on, el procedimiento ser\'ia bastante sencillo, sin embargo una imagen puede sufrir diversos tipos de distorsiones.\\~\\
+El proceso consiste en dar a cada pixel su localizaci\'on en un sistema de coordenadas estandard (UTM, lambert, coordenadas geogr\'aficas) para poder combinar la imagen de sat\'elite con otro tipo de capas en un entorno SIG. El proceso obtiene una nueva imagen $ i^{'} $ de alguna banda $ i $ de la imagen satelital, en la que cada columna corresponde con un valor de longitud y cada fila con un valor de latitud. En caso de que la imagen no hubiese sufrido ning\'un tipo de distorsi\'on, el procedimiento ser\'ia bastante sencillo, sin embargo una imagen puede sufrir diversos tipos de distorsiones.\\~\\
 Es necesario localizar puntos comunes de la imagen con puntos de control, como tarea inicial para la correcci\'on geom\'etrica, de manera a poder realizar una interpolaci\'on espacial y de los valores radiom\'etricos \cite{deniseCultivos}.
 
 \subsubsection{Interpolaci\'on espacial}
@@ -227,7 +227,7 @@ La interpolaci\'on espacial consiste en determinar la relaci\'on geom\'etrica en
     	\label{fig:intEspacial}
     \end{figure}
     
-\paragraph{Transformación usando ecuaciones polinomicas. }\mbox{}\\\mbox{}\\
+\paragraph{Transformaci\'on usando ecuaciones polinomicas. }\mbox{}\\\mbox{}\\
 El m\'etodo mas utilizado para la transformaci\'on de im\'agenes satelitales  es el de ecuaciones polin\'omicas. La transformaci\'on puede expresarse de la siguiente manera \cite{guide1999erdas}:
 	\begin{equation}
 	x^{'}_{i} = \sum_{j=0}^{l} \sum_{e=0}^{l-j} a_{ij}x^{j}_{i}y^{e}_{i}
@@ -257,7 +257,7 @@ En la Figura \ref{fig:intPolEcua} podemos observar las transformaciones con poli
     \end{figure}
     
   \paragraph{Calidad de la interpolaci\'on espacial }\mbox{}\\\mbox{}\\
- La calidad en la interpolaci\'on espacial y los puntos de control seleccionados $ \eta $ se calcula utilizando el promedio de los errores cuadráticos medios (RMS), que consiste en la diferencia entre la coordenada transformada deseada para un punto de control y la coordenada real obtenida como salida.
+ La calidad en la interpolaci\'on espacial y los puntos de control seleccionados $ \eta $ se calcula utilizando el promedio de los errores cuadr\'aticos medios (RMS), que consiste en la diferencia entre la coordenada transformada deseada para un punto de control y la coordenada real obtenida como salida.
 
  \begin{equation}
  RMS_{i} = \sqrt{\dfrac{\sum_{j=1}^{\eta} ((x_{i,j}^{'}-x_{i,j})^{2}+(y_{i,j}^{'}-y_{i,j})^{2})}{\eta}}
@@ -307,7 +307,7 @@ En la Figura \ref{fig:vecinoMasCercano2} se observa el como los pixeles de la im
 		    				    \end{figure}
 	\end{itemize}
 \subsection{Correcci\'on radiom\'etrica}
-La correci\'on radiom\'etrica se encarga de minimizar los desajustes producidos en el registro del valor digital en los pixeles de la imagen, de hecho en algunos casos las estaciones receptoras llevan a cabo alg\'un tipo de correcci\'on en el momento de recepci\'on de la imagen. La corrección radiom\'etrica implica por una parte la restauraci\'on de lineas o p\'ixeles perdidos y por otra la correcci\'on del bandeado en la imagen \cite{teledUm}.
+La correci\'on radiom\'etrica se encarga de minimizar los desajustes producidos en el registro del valor digital en los pixeles de la imagen, de hecho en algunos casos las estaciones receptoras llevan a cabo alg\'un tipo de correcci\'on en el momento de recepci\'on de la imagen. La correcci\'on radiom\'etrica implica por una parte la restauraci\'on de lineas o p\'ixeles perdidos y por otra la correcci\'on del bandeado en la imagen \cite{teledUm}.
     \begin{figure}[H]
     	\centering
     	\includegraphics[width=0.9	\textwidth]{./Figures/cap3/correcError.png}
@@ -316,7 +316,7 @@ La correci\'on radiom\'etrica se encarga de minimizar los desajustes producidos 
     \end{figure}
 La Figura \ref{fig:correcError} nos muestran tres tipos de errores radiom\'etricos frecuentes, donde la lineas claras representan pixeles que no representan su nivel digital correcto a causa de la descalibraci\'on del sensor. Las lineas y pixeles negros son pixeles nulos que no pudieron ser convertidos a su nivel digital por fallos en el detector o transmisiones, como tambi\'en por conversiones de la informaci\'on anal\'ogica a digital.
 
-\subsubsection{Pixeles o lineas perdidas}\label{subsec:pixelesP}
+\subsubsection{Pixeles o lineas p\'erdidas}\label{subsec:pixelesP}
 Sea $ f^{'} $ una imagen satelital con los pixeles corregidos, mediante estimaciones de la media entre los pixeles adyacentes. Donde cada nivel digital es calculado de la siguiente manera: 
 
 		\begin{equation}\label{ec:pixelPerdido}
@@ -339,7 +339,7 @@ Donde $ \sigma_{i} $ representa la desviaci\'on t\'ipica de la banda $ i $, $ \s
 		 dif_{e}  = 1/2 \times [f(x-1,y,e) + f(x+1,y,e)]
 		\end{equation} 
 Donde $ e \in \{ i,i_{*}\} $. En caso de que la imagen abarque un territorio amplio y cambiante resulta recomendable calcular las desviaciones t\'ipicas ($ \sigma_{i} $ y $ \sigma_{i_{*}} $) en un entorno cercano al pixel perdido.\\~\\
-Para detectar lineas perdidas se compara la media de los $ ND $ de una linea con las medias de las lineas anterior y posterior, para detectar pixeles perdidos se compara el valor de un pixel con los de los 8 pixeles.
+Para detectar lineas p\'erdidas se compara la media de los $ ND $ de una linea con las medias de las lineas anterior y posterior, para detectar pixeles perdidos se compara el valor de un pixel con los de los 8 pixeles.
 \subsubsection{Bandeado}\label{subsec:bandeado}
 El fen\'omeno del bandeado se debe a una mala calibraci\'on entre detectores y resulta especialmente visible en las zonas de baja radiancia (zonas marinas por ejemplo). El resultado es la aparici\'on peri\'odica de una banda m\'as clara u oscura que las dem\'as.
 Para corregir el bandeado se asume que, en caso de no haber error, los histogramas obtenidos por cada uno de los detectores ser\'ian similares entre s\'i y similares al histograma global de la imagen que se toma como referencia.\\~\\
@@ -378,7 +378,7 @@ Una secuencia multitemporal esta definido por $ \{f_{t}\}_{t \in \mathbb{N}} $, 
 	\label{fig:normRadio}
 \end{figure}
 \nomenclature[46]{$ f_{t} $}{Imagen satelital en el tiempo $ t $ de una secuencia multitemporal.}
-Las distintas bandas de una imagen satelital presentan un comportamiento con distribuci\'on normal en sus histogramas \cite{martinez2013normalizacion}, por lo que teniendo variables tipificadas $Z_{i,t}$ para la imagen satelital $ f_{t} $ y $Z_{i,t_{*}}$ para la imagen satelital $ f_{t_{*}}$, ambos de la banda $ i $, es posible definirlos en una distribuci\'on normal est\'andar del tipo $ N(0,1) $ (media $ 0 $ y desviaci\'on $ 1 $) seg\'un la expresión:
+Las distintas bandas de una imagen satelital presentan un comportamiento con distribuci\'on normal en sus histogramas \cite{martinez2013normalizacion}, por lo que teniendo variables tipificadas $Z_{i,t}$ para la imagen satelital $ f_{t} $ y $Z_{i,t_{*}}$ para la imagen satelital $ f_{t_{*}}$, ambos de la banda $ i $, es posible definirlos en una distribuci\'on normal est\'andar del tipo $ N(0,1) $ (media $ 0 $ y desviaci\'on $ 1 $) seg\'un la expresi\'on:
 \begin{equation}\label{ec:zt}
 Z_{i,t}=\dfrac{f_{t}(x,y,i)-\mu_{i,t}}{\sigma_{i,t}}
 \end{equation}
@@ -413,7 +413,7 @@ La comparaci\'on parte de un par de im\'agenes semejantes que abarcan la misma z
 		Donde $ t_{*} \neq t $.
 \nomenclature[49]{$ I_{dif} $}{Indice de cambio por diferencia de im\'agenes.}
 \nomenclature[50]{$ I_{ratio} $}{Indice de cambio por el m\'etodo de ratio.}
-				\item \textbf{Ratio:} se obtiene aplicando la operación de cociente, entre los niveles digitales ($ ND $ ) inicial y final para la obtenci\'on de un \'indice ($ I_{ratio} $). Podr\'ia  generar mejores resultados pero no se ajusta a una distribución normal.
+				\item \textbf{Ratio:} se obtiene aplicando la operaci\'on de cociente, entre los niveles digitales ($ ND $ ) inicial y final para la obtenci\'on de un \'indice ($ I_{ratio} $). Podr\'ia  generar mejores resultados pero no se ajusta a una distribuci\'on normal.
 										\begin{equation}
 										I_{ratio} = \dfrac{f_{t_{*}}}{f_{t}}
 										\end{equation} 	
@@ -421,7 +421,7 @@ La comparaci\'on parte de un par de im\'agenes semejantes que abarcan la misma z
 		\end{itemize}
 Estas dos operaciones generan una imagen con \'indices de cambios $ I_{c} $ a partir de cada conjunto de datos multitemporal, dando lugar a tantos mapas de cambios como bandas/capas se consideren.
 \subsection{Criterios de decisi\'on}
-El resultado de los c\'alculos es una imagen en donde el valor de salida indica el grado de cambio, desde la mayor p\'erdida a la mayor ganancia, en una escala gradual. Si se pretende generar una imagen binaria (cambio/estable), es preciso se\~{n}alar un umbral que delimite ambas categor\'ias en las im\'agenes. Ah\'i se plantea un problema de dif\'icil soluci\'on ya que no existen criterios de aplicación general.\\~\\
+El resultado de los c\'alculos es una imagen en donde el valor de salida indica el grado de cambio, desde la mayor p\'erdida a la mayor ganancia, en una escala gradual. Si se pretende generar una imagen binaria (cambio/estable), es preciso se\~{n}alar un umbral que delimite ambas categor\'ias en las im\'agenes. Ah\'i se plantea un problema de dif\'icil soluci\'on ya que no existen criterios de aplicaci\'on general.\\~\\
 Si el cambio abarca un sector importante de la imagen, el histograma de la imagen de cambios ($ I_{c} $) debiese mostrar un perfil bimodal, lo que permitir\'ia establecer umbrales naturales de cambio, aunque esta situaci\'on no es muy habitual, ya que los cambios en la naturaleza no suelen producirse de modo abrupto \cite{martinez2013normalizacion}.\\~\\
 Si es necesario establecer un umbral para separar las \'areas de cambio, puede optarse por se\~{n}alar alg\'un criterio estad\'istico, como la media y la desviaci\'on t\'ipica de una serie de p\'ixeles elegidos aleatoriamente. En ocasiones se ha propuesto utilizar unas \'areas de entrenamiento para calcular que rango de desviaci\'on se pod\'ia considerar l\'imite para p\'ixeles estables, aplicando luego ese valor al conjunto de la imagen \cite{tung1988determination}.
 
@@ -439,7 +439,7 @@ B(I_{c}) = \begin{cases}
 \nomenclature[52]{$ B $}{Imagen binaria en el proceso de detecci\'on de cambio.}
 \nomenclature[53]{$ B(I_{c}) $}{Nivel digital para el $ I_{c} $.}
 \nomenclature[54]{$ U $}{Umbral que binariza una imagen en base a un $ I_{c} $.}
-La ecuaci\'on \ref{ec:umbralizacion} genera una m\'ascara binaria de cambios (0, No Cambio; 1, Cambio) aplicando un umbral ($ U $) especifico sobre la imagen resultante del proceso de comparaci\'on multitemporal \cite{singh1989review}. Son f\'acilmente implementables en procesos de car\'acter autom\'atico/semiautom\'atico. Partiendo de la hip\'otesis de que el porcentaje de cambios es muy reducido, los valores correspondientes se encuentran situados en los extremos del histograma de frecuencias \cite{estornell2004analisis}. Es preciso se\~{n}alar un umbral que delimite ambas categorías (cambio/no cambio) a partir del \'indice de cambios \cite{radke2005image} para generar una m\'ascara.\\~\\
+La ecuaci\'on \ref{ec:umbralizacion} genera una m\'ascara binaria de cambios (0, No Cambio; 1, Cambio) aplicando un umbral ($ U $) especifico sobre la imagen resultante del proceso de comparaci\'on multitemporal \cite{singh1989review}. Son f\'acilmente implementables en procesos de car\'acter autom\'atico/semiautom\'atico. Partiendo de la hip\'otesis de que el porcentaje de cambios es muy reducido, los valores correspondientes se encuentran situados en los extremos del histograma de frecuencias \cite{estornell2004analisis}. Es preciso se\~{n}alar un umbral que delimite ambas categor\'ias (cambio/no cambio) a partir del \'indice de cambios \cite{radke2005image} para generar una m\'ascara.\\~\\
 El m\'etodo de discriminaci\'on basado en los par\'ametros estad\'isticos del \'indice de cambio entre la secuencia temporal de im\'agenes tiene la siguiente expresi\'on \cite{rodriguez2010analisis}:
 \begin{equation}
 U=\mu_{I_{c}} \pm n \times \sigma _{I_{c}}

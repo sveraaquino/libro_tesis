@@ -2,13 +2,13 @@
 \thispagestyle{empty} 
 
 \chapter{Materiales y Metodolog\'ia}
-\lhead{Capítulo 4. \emph{Materiales y Metodolog\'ia}} % This is for the header on each page - perhaps a shortened title
-En este cap\'itulo se describir\'an los materiales a utilizar en la elaboraci\'on de la metodolog\'ia, as\'i como tambi\'en aquellos a utilizar en las diversas pruebas y validaciones. Adem\'as se presentan las diversas características de las imágenes satelitales a ser empleados en el estudio. La metodolog\'ia nos presenta los diferentes procesos o m\'odulos necesarios para la estimaci\'on de p\'erdida de carbono.
+\lhead{Cap\'itulo 4. \emph{Materiales y Metodolog\'ia}} % This is for the header on each page - perhaps a shortened title
+En este cap\'itulo se describir\'an los materiales a utilizar en la elaboraci\'on de la metodolog\'ia, as\'i como tambi\'en aquellos a utilizar en las diversas pruebas y validaciones. Adem\'as se presentan las diversas caracter\'isticas de las im\'agenes satelitales a ser empleados en el estudio. La metodolog\'ia nos presenta los diferentes procesos o m\'odulos necesarios para la estimaci\'on de p\'erdida de carbono.
 \section{Materiales}
 Un grupo de im\'agenes fueron utilizadas para los diferentes estudios y procedimientos de la metodologia, tales como:
 \begin{itemize}
 	\item Im\'agenes satelitales Landsat.
-	\item Im\'agenes Campos Continuos de Vegetación (VCF).
+	\item Im\'agenes Campos Continuos de Vegetaci\'on (VCF).
 	\item Im\'agen Mapa global de carbono - Paraguay.
 	\item Paraguay Forest Change Product.
 \end{itemize}
@@ -55,7 +55,7 @@ El Sistema de Referencia Mundial Landsat-2 (WRS-2: Landsat Worldwide Reference S
 El Servicio Geol\'ogico de los Estados Unidos (USGS) es una agencia cient\'ifica de los Estados Unidos, el cual proveen un producto llamado L1T (Level 1 Terrain Corrected) que implica las im\'agenes Landsat con datos pre-procesados para una correcci\'on radiom\'etrica sistem\'atica y correcci\'on geom\'etrica mediante la incorporaci\'on de puntos de control en tierra. Estos productos est\'an en la Web de forma gratuita \cite{landsatNasa}.
 
 
-\subsubsection{Campos Continuos de Vegetación (VCF)}\label{sec:vcf}
+\subsubsection{Campos Continuos de Vegetaci\'on (VCF)}\label{sec:vcf}
 Las im\'agenes VCF contienen estimaciones proporcionales para los tipos de cobertura vegetal: vegetaci\'on le\~{n}osa, vegetaci\'on herb\'acea y suelo desnudo. El producto se deriva de las siete bandas del sensor MODerate-resolution Imaging Spectroradiometer (MODIS) a bordo del sat\'elite Terra, perteneciente a la NASA. El esquema de clasificaci\'on continuo del VCF puede representar \'areas terrestres heterog\'eneas mejor que los esquemas tradicionales de clasificaci\'on discreta. Los sistemas de clasificaci\'on tradicionales indican donde se concentran los tipos de cobertura del suelo. El VCF posee un resoluci\'on espacial de 250x250 metros cuadrados y la colecci\'on de im\'agenes se encuentra disponible gratuitamente en la Web \cite{gl2015Uni}.
 La Figura \ref{fig:vcfImage} nos presenta un imagen, con diferentes tonalidades de color, para los porcentajes de vegetaci\'on y los niveles digitales del agua como pixeles nulos.
 \begin{figure}[H]
@@ -123,7 +123,7 @@ En la Figura \ref{fig:metodologiapc} podemos observar que a partir de las banda 
 La detecci\'on de cambio cumple un papel fundamental en la metodolog\'ia ya que nos permite categorizar el cambio en la secuencia temporal estudiada. Este proceso presenta una metodolog\'ia automatizada a trav\'es del calculo de par\'ametros estad\'isticos extra\'ido de las im\'agenes satelitales y el uso de variables determinadas en un previo an\'alisis del comportamiento espectral observados en la cobertura vegetal de prueba.
 
 \subsubsection{Detecci\'on de cambio}
-En este proceso se detecta el cambio entre dos tiempos de im\'agenes satelitales. El resultado esperado constituye una mascara de perdida ($ MP $) entre las series temporales de im\'agenes comparadas. 
+En este proceso se detecta el cambio entre dos tiempos de im\'agenes satelitales. El resultado esperado constituye una mascara de p\'erdida ($ MP $) entre las series temporales de im\'agenes comparadas. 
 \paragraph{Comparaci\'on Multitemporal}\mbox{}\\\mbox{}\\
 El siguiente paso despu\'es de haber equiparado radiom\'etricamente (secci\'on \ref{sec:capNormalizacion}) las im\'agenes consiste en la comparaci\'on multitemporal, permitiendo obtener un indice de cambio (variable cuantitativa) en cada pixel resultante. El m\'etodo de diferencia de im\'agenes es utilizada debido a que el m\'etodo Ratio no se ajusta a una distribuci\'on normal, se asume que el cambio es reducido y por ende est\'an ubicados hacia los extremos del histograma de la imagen con los \'indices de cambio $ I_{c} $, condici\'on clave para la umbralizaci\'on estad\'istica. La comparaci\'on es realizado sobre la imagen con los NDVI de cada serie temporal a modo a resaltar la vegetaci\'on y simplificar la cantidad de bandas utilizadas, observando a su vez que los datos estables ser\'an pr\'oximos a $ 0 $ gracias a la semejanza existente entre los pixeles. 
 \paragraph{Umbral estad\'istico} \label{sec:umbralEstadistico2}\mbox{}\\\mbox{}\\
@@ -141,7 +141,7 @@ En la Figura \ref{fig:umbrales} se puede observar una linea roja y verde, que de
 		\caption{Umbrales que binarizan los indices de cambios $ I_{c} $.}
 		\label{fig:umbrales}
 	\end{figure}
-Los pixeles que sufrieron perdida estar\'an definidos por una m\'ascara $ MP $ con las siguiente expresi\'on:
+Los pixeles que sufrieron p\'erdida estar\'an definidos por una m\'ascara $ MP $ con las siguiente expresi\'on:
 \begin{equation}\label{ec:umbMetodoMP}
 MP(x,y) = \begin{cases}
 1 & \text{si se cumple que } I_{c}(x,y) < \mu_{I_{c}} - n \times \sigma_{I_{c}} \\
@@ -158,7 +158,7 @@ La Figura \ref{fig:deteccionCambio} nos presenta el ciclo de procedimientos para
 	\caption{Diagrama de flujo. Detecci\'on de Cambio.}
 	\label{fig:deteccionCambio}
 \end{figure}
- Esos par\'ametros son utilizados para normalizar radiom\'etricamente las bandas del tiempo $ t_{*} $, en semejanza a las bandas de la imagen satelital del tiempo $ t $, as\'i determinar la imagen con los \'indices de cambios ($ I_{c} $) una vez calculados los NDVI ($ ndvi_{f_{t}},ndvi_{f_{t_{*}}} $). La m\'ascara de cambio ($ MC $) es el resultado de pasar por los umbrales estad\'isticos (secci\'on \ref{sec:umbralEstadistico2}). La iteraci\'on ($ iter $) continua si la media del $ I_{c} $ actual es de magnitud similar a la registrada en la anterior. Se define la función l\'ogica $ continuar $:
+ Esos par\'ametros son utilizados para normalizar radiom\'etricamente las bandas del tiempo $ t_{*} $, en semejanza a las bandas de la imagen satelital del tiempo $ t $, as\'i determinar la imagen con los \'indices de cambios ($ I_{c} $) una vez calculados los NDVI ($ ndvi_{f_{t}},ndvi_{f_{t_{*}}} $). La m\'ascara de cambio ($ MC $) es el resultado de pasar por los umbrales estad\'isticos (secci\'on \ref{sec:umbralEstadistico2}). La iteraci\'on ($ iter $) continua si la media del $ I_{c} $ actual es de magnitud similar a la registrada en la anterior. Se define la funci\'on l\'ogica $ continuar $:
   \begin{equation}\label{ec:continuar}
   continuar(\mu_{I_{c}^{iter}},\mu_{I_{c}^{iter-1}}) = \begin{cases}
   falso & \text{si se cumple que } \mu_{I_{c}^{iter}} - \mu_{I_{c}^{iter-1}} \leq \epsilon \\
@@ -212,7 +212,7 @@ La Figura \ref{fig:deteccionCambio} nos presenta el ciclo de procedimientos para
   		\EndFunction
   	\end{algorithmic}
   \end{algorithm}
-\\  Cada valor de pixel, de las bandas en cada imagen satelital, es utilizado en el c\'alculo si no representa un cambio en la m\'ascara de cambio $ MC $. El proceso de iteraci\'on finaliza retornando una un m\'ascara de perdida $ MP $ seg\'un la ecuaci\'on \ref{ec:umbMetodoMP}.\\~\\
+\\  Cada valor de pixel, de las bandas en cada imagen satelital, es utilizado en el c\'alculo si no representa un cambio en la m\'ascara de cambio $ MC $. El proceso de iteraci\'on finaliza retornando una un m\'ascara de p\'erdida $ MP $ seg\'un la ecuaci\'on \ref{ec:umbMetodoMP}.\\~\\
 En la Figura \ref{fig:iteracionRadiometrica} podemos observar que a partir de la mascara de cambio obtenido en la primera iteraci\'on, los par\'ametros estad\'isticos para la iteraci\'on 2, en la normalizaci\'on iterativa, son realizados sobre los pixeles que no detectaron cambios. 
 \begin{figure}[H]
 	\centering
@@ -254,18 +254,18 @@ El procedimiento que sigue una vez obtenido los NDVI de las dos fechas es determ
 
 
 \subsubsection{Mascara de P\'erdida Forestal}
-El proceso consiste en la intersecci\'on entre la mascaras de vegetaci\'on y cambio. En la intersecci\'on solo son considerados los cambios correspondiente a p\'erdidas  $ MP $, debido a que se pretende generar una imagen binaria $ MPF $ que represente la perdida forestal en un pixel.\\~\\
-La imagen $ MPF $ probablemente tendr\'a errores que son inherentes a los procesos utilizados para su creación \cite{lovell2001filtering}. Estos errores lo consideramos como ruidos en la imagen $ MPF $. El filtro de mediana \cite{gonzalez2002woods} reducir\'a el porcentaje de falsas alarmas en la imagen $ MPF $ eliminando los ruidos generados.
-En la Figura \ref{fig:intersPerdida} podemos observar el flujo de tareas para la obtenci\'on de la mascara que representa la perdida forestal en dos tiempos .
+El proceso consiste en la intersecci\'on entre la mascaras de vegetaci\'on y cambio. En la intersecci\'on solo son considerados los cambios correspondiente a p\'erdidas  $ MP $, debido a que se pretende generar una imagen binaria $ MPF $ que represente la p\'erdida forestal en un pixel.\\~\\
+La imagen $ MPF $ probablemente tendr\'a errores que son inherentes a los procesos utilizados para su creaci\'on \cite{lovell2001filtering}. Estos errores lo consideramos como ruidos en la imagen $ MPF $. El filtro de mediana \cite{gonzalez2002woods} reducir\'a el porcentaje de falsas alarmas en la imagen $ MPF $ eliminando los ruidos generados.
+En la Figura \ref{fig:intersPerdida} podemos observar el flujo de tareas para la obtenci\'on de la mascara que representa la p\'erdida forestal en dos tiempos .
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.6	\textwidth]{./Figures/cap4/interseccionPerdida.png}
-	\caption{Diagrama de procedimientos para la obtenci\'on de la m\'ascara de perdida forestal.}
+	\caption{Diagrama de procedimientos para la obtenci\'on de la m\'ascara de p\'erdida forestal.}
 	\label{fig:intersPerdida}
 \end{figure}
 
 \subsection{Estimaci\'on de p\'erdida de carbono forestal}
-El procedimiento final en la metodolog\'ia consiste en estimar el carbono perdido o no secuestrados dentro del tiempo transcurrido entre las im\'agenes satelitales. El producto constituye la mascara de perdida forestal ($ MPF $) junto con la cuantificaci\'on ($ CCP $) en toneladas de carbono obtenida a trav\'es de una ecuaci\'on de regresi\'on lineal. La ecuaci\'on de regresi\'on fue generada por medio del mapa global de carbono (variable dependiente) \cite{saatchi2011benchmark} y el NDVI (variable independiente) determinadas por las im\'agenes Landsat en un an\'alisis previo (m\'as detalles en la secci\'on \ref{subsec:estimacionCarbono}). La regresi\'on fue evaluada a trav\'es del coeficiente de determinaci\'on $ r^{2} $. En la Tabla \ref{t:coefDeter} se presenta el tipo de relaci\'on del coeficiente de determinaci\'on \cite{kris2014estimacionCorr}.
+El procedimiento final en la metodolog\'ia consiste en estimar el carbono perdido o no secuestrados dentro del tiempo transcurrido entre las im\'agenes satelitales. El producto constituye la mascara de p\'erdida forestal ($ MPF $) junto con la cuantificaci\'on ($ CCP $) en toneladas de carbono obtenida a trav\'es de una ecuaci\'on de regresi\'on lineal. La ecuaci\'on de regresi\'on fue generada por medio del mapa global de carbono (variable dependiente) \cite{saatchi2011benchmark} y el NDVI (variable independiente) determinadas por las im\'agenes Landsat en un an\'alisis previo (m\'as detalles en la secci\'on \ref{subsec:estimacionCarbono}). La regresi\'on fue evaluada a trav\'es del coeficiente de determinaci\'on $ r^{2} $. En la Tabla \ref{t:coefDeter} se presenta el tipo de relaci\'on del coeficiente de determinaci\'on \cite{kris2014estimacionCorr}.
 \nomenclature[59]{$ r^{2}$}{Coeficiente de determinaci\'on para una regresi\'on.}
 \begin{table}[H]
 	\centering
@@ -298,7 +298,7 @@ C_{t}(x,y)=h+m \times ndvi_{f_{t}}(x,y)
 \label{e:fecha2m}
 C_{t_{*}}(x,y)=h+m \times ndvi_{f_{t_{*}}}(x,y)
 \end{equation}
- El \'indice de cambio generado en la detecci\'on de cambio simplificar\'ia los c\'alculos a la hora de estimar la perdida, ya que:
+ El \'indice de cambio generado en la detecci\'on de cambio simplificar\'ia los c\'alculos a la hora de estimar la p\'erdida, ya que:
  \begin{equation}
  \label{e:indiceCambiom}
  Ic(x,y)=ndvi_{f_{t}}(x,y) - ndvi_{f_{t_{*}}}(x,y)
@@ -329,15 +329,15 @@ C_{t}(x,y) - C_{t_{*}}(x,y)= m \times (ndvi_{f_{t}}(x,y) - ndvi_{f_{t_{*}}}(x,y)
  \nomenclature[63]{$PC(x,y)$}{Toneladas de carbono por hect\'area perdidos en las coordenadas $ (x,y) $.}
 \nomenclature[60]{$ C(x,y)$}{Toneladas de carbono por hect\'area en las coordenadas $ (x,y) $.}
 
-La ecuaci\'on  \ref{ec:carbonoFinalsumatoriam} ser\'a realizado teniendo en cuenta la m\'ascara de perdida forestal, es decir solo ser\'an sumados aquellos pixeles que representa una perdida seg\'un $ MPF $. La Figura \ref{fig:resulPC} nos muestra el resultado esperado por la metodolog\'ia ($ MPF $ y $ CCP $ ), donde los pixeles de color rojo representa perdida de carbono forestal y los grises a pixeles en las cuales no hubo perdida.
+La ecuaci\'on  \ref{ec:carbonoFinalsumatoriam} ser\'a realizado teniendo en cuenta la m\'ascara de p\'erdida forestal, es decir solo ser\'an sumados aquellos pixeles que representa una p\'erdida seg\'un $ MPF $. La Figura \ref{fig:resulPC} nos muestra el resultado esperado por la metodolog\'ia ($ MPF $ y $ CCP $ ), donde los pixeles de color rojo representa p\'erdida de carbono forestal y los grises a pixeles en las cuales no hubo p\'erdida.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8	\textwidth]{./Figures/cap4/resultadoMetodologia.png}
-	\caption{Presentaci\'on del resultado. Mascara de perdida Forestal y la cantidad de carbono perdido.}
+	\caption{Presentaci\'on del resultado. Mascara de p\'erdida Forestal y la cantidad de carbono perdido.}
 	\label{fig:resulPC}
 \end{figure}
 \subsection{Esquema general de la metodolog\'ia}
-La metodolog\'ia presenta un esquema general descripta por el Algoritmo \ref{alg1}, desde los datos de entrada hasta su finalizaci\'on, de manera a brindar un resumen de los procesos realizados como también su aplicaci\'on en un ejemplo gr\'afico.
+La metodolog\'ia presenta un esquema general descripta por el Algoritmo \ref{alg1}, desde los datos de entrada hasta su finalizaci\'on, de manera a brindar un resumen de los procesos realizados como tambi\'en su aplicaci\'on en un ejemplo gr\'afico.
 \begin{algorithm}
 	\caption{Metodolog\'ia para estimar p\'erdida de carbono}
 	\label{alg1}
@@ -396,10 +396,10 @@ La metodolog\'ia presenta un esquema general descripta por el Algoritmo \ref{alg
 		\State \Comment{Se determina la m\'ascara de vegetaci\'on seg\'un la secci\'on \ref{sec:discrForestalMet}}
 		\State $MV=\textsc{mascaraVegetacion}(f_{t_{*}}^{Norm}(x,y,R),f_{t_{*}}^{Norm}(x,y,IRc),f_{t}(x,y,R),f_{t}(x,y,IRc))$
 		\State 
-		\State \Comment{Se determina la m\'ascara de perdida seg\'un la ecuaci\'on \ref{ec:umbMetodoMP}}
+		\State \Comment{Se determina la m\'ascara de p\'erdida seg\'un la ecuaci\'on \ref{ec:umbMetodoMP}}
 		\State $MP=\textsc{mascaraPerdida}(I_{c})$
 		\Statex		
-		\State \Comment{Se determina la m\'ascara de perdida forestal intersectando $ MC $ con $ MV $}
+		\State \Comment{Se determina la m\'ascara de p\'erdida forestal intersectando $ MC $ con $ MV $}
 		\State $MPF=MP \textsc{ AND } MV $ 
 		\Statex 		
 		\State \Comment{Se estima la cantidad de carbono perdido mediante ecuaci\'on \ref{ec:carbonoFinalsumatoriam}}
@@ -447,12 +447,12 @@ La Figura \ref{fig:ejemplo_5} nos muestra como es obtenida la mascara de vegetac
 	\caption{Determinaci\'on de la m\'ascara de vegetaci\'on $ MV $.}
 	\label{fig:ejemplo_5}
 \end{figure}
-La Figura \ref{fig:ejemplo_6} podemos observar la forma en que es calculado la m\'ascara de perdida forestal y su cuantificaci\'on. En la figura se resalta en un cuadro rojo el resultado esperado por la metodología. 
+La Figura \ref{fig:ejemplo_6} podemos observar la forma en que es calculado la m\'ascara de p\'erdida forestal y su cuantificaci\'on. En la figura se resalta en un cuadro rojo el resultado esperado por la metodolog\'ia. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8	\textwidth]{./Figures/cap4/ejemplo_resultado.png}
-	\caption{Mascara de cambio forestal y cuantificaci\'on de perdida de carbono forestal.}
+	\caption{Mascara de cambio forestal y cuantificaci\'on de p\'erdida de carbono forestal.}
 	\label{fig:ejemplo_6}
 \end{figure}
 \section{Resumen}
-En este capitulo se describen los materiales y los tres procedimientos generales que componen la metodolog\'ia propuesta. La im\'agenes infrarroja cercana y roja de las dos fechas inicialmente deben pasar por un proceso de correcci\'on de errores del sensor y de ubicaci\'on geogr\'afica para realizar el an\'alisis multitemporal en la detecci\'on de cambio forestal. Una vez detectado la perdida forestal entre las fechas del proceso de detecci\'on de cambio, se realiza la estimaci\'on de carbono en base a una ecuaci\'on de regresi\'on hallado por un estudio previo. El resultado consiste en un mapa de perdida forestal junto a la cuantificaci\'on en toneladas de carbono perdidos.
+En este capitulo se describen los materiales y los tres procedimientos generales que componen la metodolog\'ia propuesta. La im\'agenes infrarroja cercana y roja de las dos fechas inicialmente deben pasar por un proceso de correcci\'on de errores del sensor y de ubicaci\'on geogr\'afica para realizar el an\'alisis multitemporal en la detecci\'on de cambio forestal. Una vez detectado la p\'erdida forestal entre las fechas del proceso de detecci\'on de cambio, se realiza la estimaci\'on de carbono en base a una ecuaci\'on de regresi\'on hallado por un estudio previo. El resultado consiste en un mapa de p\'erdida forestal junto a la cuantificaci\'on en toneladas de carbono perdidos.

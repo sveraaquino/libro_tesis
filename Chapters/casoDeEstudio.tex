@@ -3,36 +3,36 @@
 
 \chapter{Pruebas experimentales}
 \lhead{Cap\'itulo 5. \emph{Pruebas experimentales}} % This is for the header on each page - perhaps a shortened title
-En este capítulo se menciona las m\'etricas de evaluaci\'on utilizadas para medir el desempe\~{n}o en la metodolog\'ia propuesta. Los experimentos son detallados, junto a la comparaci\'on y la discusi\'on de los mismos.
+En este cap\'itulo se menciona las m\'etricas de evaluaci\'on utilizadas para medir el desempe\~{n}o en la metodolog\'ia propuesta. Los experimentos son detallados, junto a la comparaci\'on y la discusi\'on de los mismos.
 
 \section{Caso de estudio}
 Filadelfia es una ciudad de Paraguay, del departamento de Boquer\'on - Chaco paraguayo (latitud-longitud $22^{o}20^{,}00^{,,} S - 60^{o}01^{,} 00^{,,} O$ ) con una superficie de 13.879 $ km^{2} $. La ciudad fue elevada a nivel de distrito en 2006. Su poblaci\'on la constituyen principalmente colonos menonitas. Fundada junto a otras localidades menonitas a finales de la d\'ecada de 1920, ha desarrollado una cultura espec\'ifica transmitida a lo largo de los siglos a trav\'es de la religi\'on, y una infraestructura productiva que le aporta a sus residentes alto poder de compra. Estas comunidades menonitas trabajan con modernas t\'ecnicas de producci\'on agropecuaria, fabricaci\'on de productos l\'acteos y procesamiento de s\'esamo y man\'i. Pueden ser ubicadas dentro de las im\'agenes landsat con path-Row 228-76 y en las VCF con c\'odigo KJ1920.\\~\\
 La localizaci\'on descripta fue elegida debido a que ademas de estar ubicada en el Chaco Paraguayo posee un crecimiento demogr\'afico en la que las actividades agr\'icolas y ganaderas son variantes, proporcionando un ambiente ideal para las distintas pruebas y validaciones.
 
-\section{Métricas de evaluación}
+\section{M\'etricas de evaluaci\'on}
 En el control de calidad, algunos se basan en el concepto de matriz de confusi\'on, que establece una relaci\'on entre los resultados obtenidos en el proceso de asignaci\'on (Algoritmo) y la informaci\'on verdad terreno $ (VT) $ disponible para la zona de estudio. En la Tabla \ref{t:matrizConfusion}, la diagonal principal representa el n\'umero de celdas correctamente catalogadas $ (T) $, y la diagonal transpuesta, las incorrectamente catalogadas $ (F) $. El uso de esta matriz presenta como mayor desventaja que est\'a condicionada a la veracidad y exactitud de la referencia utilizada como $ VT $. La interpretaci\'on de la matriz de confusi\'on esta dada de la siguiente manera:
 \begin{itemize}
-	\item TP: pixeles que se catalogaron como perdida correctamente.
-	\item FP: pixeles que se catalogaron como perdida incorrectamente.
-	\item P: total de pixeles catalogados como perdida.
-	\item FN: pixeles que se catalogaron como no perdida incorrectamente.
-	\item TN: pixeles que se catalogaron como no perdida correctamente.
-	\item N: total de pixeles catalogados como no perdida.
-	\item P': total de pixeles con perdida.
-	\item N': total de pixeles con no perdida.
+	\item TP: pixeles que se catalogaron como p\'erdida correctamente.
+	\item FP: pixeles que se catalogaron como p\'erdida incorrectamente.
+	\item P: total de pixeles catalogados como p\'erdida.
+	\item FN: pixeles que se catalogaron como no p\'erdida incorrectamente.
+	\item TN: pixeles que se catalogaron como no p\'erdida correctamente.
+	\item N: total de pixeles catalogados como no p\'erdida.
+	\item P': total de pixeles con p\'erdida.
+	\item N': total de pixeles con no p\'erdida.
 \end{itemize}
 
 \nomenclature[64]{$ VT $}{Puntos de verdad terreno.}
 \nomenclature[65]{$ T $}{Puntos catalogados correctamente.}
 \nomenclature[66]{$ F $}{Puntos catalogados correctamente.}
-\nomenclature[67]{$ TP $}{Pixeles que se catalogaron como perdida correctamente.}
-\nomenclature[70]{$ TN $}{Pixeles que se catalogaron como no perdida correctamente.}
-\nomenclature[68]{$ FP $}{Pixeles que se catalogaron como perdida incorrectamente.}
-\nomenclature[71]{$ FN $}{Pixeles que se catalogaron como no perdida incorrectamente.}
-\nomenclature[69]{$ P $}{Total de pixeles catalogados como perdida.}
-\nomenclature[70]{$ N $}{Total de pixeles catalogados como no perdida.}
-\nomenclature[72]{$ P' $}{Total de pixeles con perdida.}
-\nomenclature[73]{$ N' $}{Total de pixeles con no perdida.}
+\nomenclature[67]{$ TP $}{Pixeles que se catalogaron como p\'erdida correctamente.}
+\nomenclature[70]{$ TN $}{Pixeles que se catalogaron como no p\'erdida correctamente.}
+\nomenclature[68]{$ FP $}{Pixeles que se catalogaron como p\'erdida incorrectamente.}
+\nomenclature[71]{$ FN $}{Pixeles que se catalogaron como no p\'erdida incorrectamente.}
+\nomenclature[69]{$ P $}{Total de pixeles catalogados como p\'erdida.}
+\nomenclature[70]{$ N $}{Total de pixeles catalogados como no p\'erdida.}
+\nomenclature[72]{$ P' $}{Total de pixeles con p\'erdida.}
+\nomenclature[73]{$ N' $}{Total de pixeles con no p\'erdida.}
 \begin{table}[H]
 	\centering
 \begin{tabular}{|
@@ -47,10 +47,10 @@ En el control de calidad, algunos se basan en el concepto de matriz de confusi\'
 		\label{t:matrizConfusion}
 \end{table}
 
-Esta matriz de confusi\'on, permite extraer distintos par\'ametros que eval\'uen la calidad del resultado obtenido en un proceso de detecci\'on de cambios utilizando t\'ecnicas de teledetecci\'on. A continuación se explican los dos par\'ametros m\'as utilizados para este propósito: el porcentaje de precisi\'on global y el coeficiente Kappa. Estas medidas de la precisi\'on se han utilizado para evaluar diferentes m\'etodos de detecci\'on de cambio \cite{foody2002status}.
+Esta matriz de confusi\'on, permite extraer distintos par\'ametros que eval\'uen la calidad del resultado obtenido en un proceso de detecci\'on de cambios utilizando t\'ecnicas de teledetecci\'on. A continuaci\'on se explican los dos par\'ametros m\'as utilizados para este prop\'osito: el porcentaje de precisi\'on global y el coeficiente Kappa. Estas medidas de la precisi\'on se han utilizado para evaluar diferentes m\'etodos de detecci\'on de cambio \cite{foody2002status}.
 
 \subsection{Porcentaje de precisi\'on global}\label{sec:pg}
-El porcentaje de precisi\'on global (Global Acurrancy, GA) se define como la suma del n\'umero de pixeles clasificadas correctamente dividido por el n\'umero total de pixeles que componen el \'area de referencia, representando la verdad terreno. Los resultados a partir de un 85 \% de precisión global son considerados \'optimos \cite{foody2002status}. La expresi\'on matem\'atica de la precisi\'on global es:
+El porcentaje de precisi\'on global (Global Acurrancy, GA) se define como la suma del n\'umero de pixeles clasificadas correctamente dividido por el n\'umero total de pixeles que componen el \'area de referencia, representando la verdad terreno. Los resultados a partir de un 85 \% de precisi\'on global son considerados \'optimos \cite{foody2002status}. La expresi\'on matem\'atica de la precisi\'on global es:
 		\begin{equation}
 		GA = \frac{TP+TN}{T+F}\cdot100
 		\end{equation}
@@ -79,7 +79,7 @@ La Tabla \ref{t:kappaTable} nos presenta la interpretaci\'on del coeficiente Kap
 				0,61-80                    & Considerable                       \\ \hline
 				0,81-1,00                  & Casi perfecta                      \\ \hline
 			\end{tabular}
-						\caption{Valoración del coeficiente kappa.}
+						\caption{Valoraci\'on del coeficiente kappa.}
 						\label{t:kappaTable}
 		\end{table}
 		
@@ -153,7 +153,7 @@ El Mapa Global de Carbono nos permite analizar una relaci\'on posible con los in
 	\caption{Puntos aleatorios.}
 	\label{fig:aleatorioCrb}
 \end{figure}
-Estos puntos fueron generados para interceptar en ellos los NDVI y ton C/ha en el espacio geográfico. De esa manera nos permiti\'o realizar un an\'alisis de regresi\'on lineal, como podemos ver en la Figura \ref{fig:linealCar}, donde el coeficiente de determinaci\'on fue moderado ($ r^{2}=0.509125 $), .
+Estos puntos fueron generados para interceptar en ellos los NDVI y ton C/ha en el espacio geogr\'afico. De esa manera nos permiti\'o realizar un an\'alisis de regresi\'on lineal, como podemos ver en la Figura \ref{fig:linealCar}, donde el coeficiente de determinaci\'on fue moderado ($ r^{2}=0.509125 $), .
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8	\textwidth]{./Figures/cap4/ndviCarb.png}
@@ -175,7 +175,7 @@ Con el prop\'osito de evaluar la calidad en la detecci\'on de cambio, se obtuvie
 Sectores fueron delimitados en base al uso del suelo empleado en dicha \'area. Esto es con el fin de evaluar la detecci\'on en diferentes condiciones:
 \begin{itemize}
 	\item \textbf{\'Area Urbana:} zona de aglomeramiento y mayor densidad poblacional. Existe predominio  de actividades econ\'omicas no agropecuarias, sumado a la poblaci\'on total. 
-	\item \textbf{\'Area Rural:} se caracteriza por la inmensidad de espacios verdes que la componen y que por esta razón est\'a destinada y es utilizada para la realizaci\'on de actividades agropecuarias y agro-industriales.
+	\item \textbf{\'Area Rural:} se caracteriza por la inmensidad de espacios verdes que la componen y que por esta raz\'on est\'a destinada y es utilizada para la realizaci\'on de actividades agropecuarias y agro-industriales.
 	\item \textbf{\'Area H\'umeda:}	zona de tierras, generalmente planas, cuya superficie se inunda de manera permanente o intermitente.
 \end{itemize}
 En la Figura \ref{fig:zonasEva} podemos observar las \'areas seleccionadas dentro de la imagen satelital. El \'area urbana contiene a la zona c\'entrica del distrito de Filadelfia mientras que el \'area rural a zonas retiradas donde la vegetaci\'on es predominante. Las \'areas h\'umedas corresponden a zonas cercanas al rio Pilcomayo, donde las inundaciones a causa de subidas del rio son frecuente.   
@@ -194,7 +194,7 @@ En la Tabla \ref{t:poligonos} podemos observar las coordenadas de los pol\'igono
 		\textbf{Sector} & \textbf{xMin} & \textbf{yMin} & \textbf{xMax} & \textbf{yMax} & \textbf{Has.} & \textbf{Km.} \\ \hline
 		Urbano          & 748797.48     & -2532113.76   & 799869.96     & -2482116.50 & 255348.41 & 202.13   \\ \hline
 		Rural           & 758474.37     & -2578885.40   & 827825.42     & -2537489.81 & 287082.72 & 221.49  \\ \hline
-		Húmedo          & 750947.90     & -2615442.54   & 798257.14     & -2579960.61 & 167862.32 & 165.58	  \\ \hline
+		H\'umedo          & 750947.90     & -2615442.54   & 798257.14     & -2579960.61 & 167862.32 & 165.58	  \\ \hline
 	\end{tabular}
 		\caption{Pol\'igono de las \'areas. Sistema de coordenadas UTM Zona 20 K. }
 		\label{t:poligonos}
@@ -221,31 +221,31 @@ Las im\'agenes satelitales de entrada son de baja resoluci\'on espacial ($ 30 \t
 		\label{t:pathRow}
 \end{table}
 
-Se recortaron las bandas de las im\'agenes, infrarroja cercana y roja, para cada sector y fecha e introducidas como datos de entrada en la metodolog\'ia. Las Figura \ref{fig:ubana} muestra la m\'ascara de perdida forestal ($ MPF $) junto con la cuantificaci\'on de carbono ($ CCP $) en el \'area urbana para cada coeficientes de fiabilidad ($ n $) (secci\'on \ref{sec:umbralEstadistico2}), obtenidos luego de aplicar la metodolog\'ia presentada.
+Se recortaron las bandas de las im\'agenes, infrarroja cercana y roja, para cada sector y fecha e introducidas como datos de entrada en la metodolog\'ia. Las Figura \ref{fig:ubana} muestra la m\'ascara de p\'erdida forestal ($ MPF $) junto con la cuantificaci\'on de carbono ($ CCP $) en el \'area urbana para cada coeficientes de fiabilidad ($ n $) (secci\'on \ref{sec:umbralEstadistico2}), obtenidos luego de aplicar la metodolog\'ia presentada.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0	\textwidth]{./Figures/cap5/res_zona_urbana.png}
-	\caption{\'Area Urbana. Mapa de perdida forestal y toneladas de carbono perdidos.}
+	\caption{\'Area Urbana. Mapa de p\'erdida forestal y toneladas de carbono perdidos.}
 	\label{fig:ubana}
 \end{figure}
-La Figura \ref{fig:rural} muestra la m\'ascara de perdida forestal ($ MPF $) junto con la cuantificaci\'on de carbono ($ CCP $) en el \'area rural para cada coeficientes de fiabilidad ($ n $) (secci\'on \ref{sec:umbralEstadistico2}), obtenidos luego de aplicar la metodolog\'ia presentada. 
+La Figura \ref{fig:rural} muestra la m\'ascara de p\'erdida forestal ($ MPF $) junto con la cuantificaci\'on de carbono ($ CCP $) en el \'area rural para cada coeficientes de fiabilidad ($ n $) (secci\'on \ref{sec:umbralEstadistico2}), obtenidos luego de aplicar la metodolog\'ia presentada. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0	\textwidth]{./Figures/cap5/res_zona_rural.png}
-	\caption{\'Area Rural. Mapa de perdida forestal y toneladas de carbono perdidos}
+	\caption{\'Area Rural. Mapa de p\'erdida forestal y toneladas de carbono perdidos}
 	\label{fig:rural}
 \end{figure}
-La Figura \ref{fig:humeda} muestra la m\'ascara de perdida forestal ($ MPF $) junto con la cuantificaci\'on de carbono ($ CCP $) en el \'area h\'umeda para cada coeficientes de fiabilidad ($ n $) (secci\'on \ref{sec:umbralEstadistico2}), obtenidos luego de aplicar la metodolog\'ia presentada.
+La Figura \ref{fig:humeda} muestra la m\'ascara de p\'erdida forestal ($ MPF $) junto con la cuantificaci\'on de carbono ($ CCP $) en el \'area h\'umeda para cada coeficientes de fiabilidad ($ n $) (secci\'on \ref{sec:umbralEstadistico2}), obtenidos luego de aplicar la metodolog\'ia presentada.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0	\textwidth]{./Figures/cap5/res_zona_humeda.png}
-	\caption{\'Area H\'umeda. Mapa de perdida forestal y toneladas de carbono perdidos}
+	\caption{\'Area H\'umeda. Mapa de p\'erdida forestal y toneladas de carbono perdidos}
 	\label{fig:humeda}
 \end{figure}
 
 
-La evaluaci\'on de la calidad en la detecci\'on de perdida forestal ($ MP $) fueron hechas con la comparaci\'on del Paraguay Forest Change Produc (PFCP) y los resultados obtenidos por cada sector y coeficiente de tolerancia $ (n) $. El indice kappa y la precisi\'on global nos permiti\'a saber la calidad en los resultados de detecci\'on de cambio forestal.\\~\\
-Una re-clasificaci\'on en la imagen PFCP fue realizado previamente, ya que en ella clasifica dos tipos de bosques (Atl\'antico y Chaco), no bosques y agua. La re-clasificaci\'on consisti\'o en dejar solo los pixeles que representan perdida de vegetaci\'on en cualquier de los tipos, generando una imagen binaria (rojo para pixeles con perdida forestal y amarillo otros) como podemos observar en la Figura \ref{fig:pfcp}.
+La evaluaci\'on de la calidad en la detecci\'on de p\'erdida forestal ($ MP $) fueron hechas con la comparaci\'on del Paraguay Forest Change Produc (PFCP) y los resultados obtenidos por cada sector y coeficiente de tolerancia $ (n) $. El indice kappa y la precisi\'on global nos permiti\'a saber la calidad en los resultados de detecci\'on de cambio forestal.\\~\\
+Una re-clasificaci\'on en la imagen PFCP fue realizado previamente, ya que en ella clasifica dos tipos de bosques (Atl\'antico y Chaco), no bosques y agua. La re-clasificaci\'on consisti\'o en dejar solo los pixeles que representan p\'erdida de vegetaci\'on en cualquier de los tipos, generando una imagen binaria (rojo para pixeles con p\'erdida forestal y amarillo otros) como podemos observar en la Figura \ref{fig:pfcp}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4	\textwidth]{./Figures/cap5/pcfp.png}
@@ -305,9 +305,9 @@ La precisi\'on global, seg\'un la ilustraci\'on \ref{fig:gaGrafico}, nos dice qu
 Unas de las principales dificultades encontradas fue de que las im\'agenes Landsat presentan un porcentaje de nubosidad en algunas fechas, por lo que requerir\'a de un pre-procesamiento que permita su utilizaci\'on en el an\'alisis. Las correcciones geom\'etricas constituyen un problema adicional si no se utilizan las im\'agenes Lansadt del USGS (secci\'on \ref{sec:landsat}), ya que necesitaran de un previo trabajo de campo para el relevamiento de puntos de control necesarios en la correcci\'on.\\~\\
 Los resultados evaluados en base a los objetivos propuestos, en el siguiente y \'ultimo cap\'itulo se exponen las conclusiones de este trabajo  y finalmente trabajos futuros que puedan dar continuidad a este trabajo final de grado.
 \subsection{Discusi\'on de resultados}
-Una vez evaluado las diferentes zonas de nuestro caso de estudio, podemos darnos cuenta que la metodolog\'ia propuesta posee una mejor respuesta, respecto a la calidad, en \'areas rurales. Esto es debido a que el Coeficiente kappa o los indices de acuerdo var\'ian entre 0.57-0.67 y su precisi\'on global sobrepasan el umbral optimo de 85\%, para cada coeficiente de tolerancia $ n $. Por lo que se considera satisfactorio la metodolog\'ia propuesta, ya que la perdida de carbono es un fen\'omeno frecuente en \'areas con vegetaci\'on predominante.\\~\\	
+Una vez evaluado las diferentes zonas de nuestro caso de estudio, podemos darnos cuenta que la metodolog\'ia propuesta posee una mejor respuesta, respecto a la calidad, en \'areas rurales. Esto es debido a que el Coeficiente kappa o los indices de acuerdo var\'ian entre 0.57-0.67 y su precisi\'on global sobrepasan el umbral optimo de 85\%, para cada coeficiente de tolerancia $ n $. Por lo que se considera satisfactorio la metodolog\'ia propuesta, ya que la p\'erdida de carbono es un fen\'omeno frecuente en \'areas con vegetaci\'on predominante.\\~\\	
 Zonas donde la vegetaci\'on no predomina, esta metodolog\'ia podr\'ia no resultar suficientemente conveniente. Las pruebas experimentales hechas en zonas urbanas, la precisi\'on global y el coeficiente kappa no son \'optimos por el cual se llega a esa interpretaci\'on.\\~\\
- En \'areas cercanas a r\'ios o sujetas a inundaci\'on, se observaron resultados aceptables para  estudios con tolerancias medias y altas en la detecci\'on de perdida forestal. El monitoreo en estos tipos de zonas con la metodolog\'ia propuesta podr\'ia ser aun de gran utilidad, ya que la presencia de agua en la vegetaci\'on modifica la respuesta espectral, dificultando su clasificaci\'on como cobertura vegetal.\\~\\	
+ En \'areas cercanas a r\'ios o sujetas a inundaci\'on, se observaron resultados aceptables para  estudios con tolerancias medias y altas en la detecci\'on de p\'erdida forestal. El monitoreo en estos tipos de zonas con la metodolog\'ia propuesta podr\'ia ser aun de gran utilidad, ya que la presencia de agua en la vegetaci\'on modifica la respuesta espectral, dificultando su clasificaci\'on como cobertura vegetal.\\~\\	
  Los an\'alisis estad\'isticos empleados tanto para la determinaci\'on de umbrales vegetaci\'on/no vegetaci\'on como en el hallazgo de ecuaciones de transformaci\'on a carbono, nos indica que empleando extracciones de indices vegetales y variables estad\'isticas es posible generar metodolog\'ias no complejas destinadas al monitorio ambiental. Esta sencillez nos libera de necesarias supervisiones y entrenamientos normalmente empleadas en teledetecci\'on.\\~\\	
 El mapa global de carbono \cite{saatchi2011benchmark} constituy\'o un factor importante para la automatizaci\'on, al permitir determinar una ecuaci\'on que transforme el indice vegetal a carbono. De no existir, hubiese sido necesario aplicar previos muestreos forestales en el terreno.\\~\\	
  La correcci\'on geom\'etrica implica procesos que engloba visitas al terreno para levantamientos de puntos de control requeridas en las interpolaciones. Gracias a la utilizaci\'on de im\'agenes Landsat L1T prove\'idas por la USGS, no fue necesario sumar ese costo a la metodolog\'ia.
