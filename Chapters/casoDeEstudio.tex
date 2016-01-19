@@ -50,7 +50,7 @@ En el control de calidad, algunos se basan en el concepto de matriz de confusi\'
 Esta matriz de confusi\'on, permite extraer distintos par\'ametros que eval\'uen la calidad del resultado obtenido en un proceso de detecci\'on de cambios utilizando t\'ecnicas de teledetecci\'on. A continuaci\'on se explican los dos par\'ametros m\'as utilizados para este prop\'osito: el porcentaje de precisi\'on global y el coeficiente Kappa. Estas medidas de la precisi\'on se han utilizado para evaluar diferentes m\'etodos de detecci\'on de cambio \cite{foody2002status}.
 
 \subsection{Porcentaje de precisi\'on global}\label{sec:pg}
-El porcentaje de precisi\'on global (Global Acurrancy, GA) se define como la suma del n\'umero de pixeles clasificadas correctamente dividido por el n\'umero total de pixeles que componen el \'area de referencia, representando la verdad terreno. Los resultados a partir de un 85 \% de precisi\'on global son considerados \'optimos \cite{foody2002status}. La expresi\'on matem\'atica de la precisi\'on global es:
+El porcentaje de precisi\'on global (GA) se define como la suma del n\'umero de pixeles clasificados correctamente dividido por el n\'umero total de pixeles que componen el \'area de referencia, representando la verdad terreno. Los resultados a partir de un 85 \% de precisi\'on global son considerados \'optimos \cite{foody2002status}. La expresi\'on matem\'atica de la precisi\'on global es:
 		\begin{equation}
 		GA = \frac{TP+TN}{T+F}\cdot100
 		\end{equation}
@@ -59,7 +59,7 @@ El coeficiente Kappa es otro indicador utilizado frecuentemente en un proceso de
 El coeficiente Kappa esta definida con la siguiente expresi\'on:
 
 		\begin{equation}
-		KAPPA=\dfrac{Total \times (TP+TN)-(P \times P'+N \times N')}{Total^{2} \times (P \times P'+N \times N')}
+		KAPPA=\dfrac{Total \times (TP+TN)-(P \times P'+N \times N')}{Total^{2} - (P \times P'+N \times N')}
 		\end{equation}
 		
 		% Please add the following required packages to your document preamble:
@@ -89,7 +89,7 @@ La Tabla \ref{t:kappaTable} nos presenta la interpretaci\'on del coeficiente Kap
 En esta secci\'on se describir\'an las diferentes pruebas desarrolladas para la determinaci\'on de constantes establecidas dentro de la metodolog\'ia. Los resultados obtenidos por la metodolog\'ia son expuestos de manera a evaluar los datos de salida mediante las m\'etricas planteadas.
 \subsection{Umbral de Vegetaci\'on}\label{subsec:umbralVegetacion}
 En la metodolog\'ia hemos hablado y utilizado una variable estad\'istica (secci\'on \ref{sec:uvegetacion}) hallada por un an\'alisis previo del comportamiento espectral que presenta la cobertura vegetal. Dicha variable corresponde a la desviaci\'on estandar de los NDVI encontrados.\\~\\
-Las im\'agenes VCF (secci\'on \ref{sec:vcf}) junto con las im\'agenes Landsat (secci\'on \ref{sec:landsat}) permitieron realizar un pareo de niveles digitales en base a su posicion geografica $ (x,y) $. En las im\'agenes VCF los p\'ixeles representan porcentajes de vegetaci\'on existente en un pixel, mientras que las im\'agenes Landsat nos permite calcular NDVI. Im\'agenes con NDVI fueron calculadas para diferentes tiempos (1986, 1990, 2000). Existe una colecci\'on disponible de im\'agenes VCF, del a\~{n}o 2000 hasta el 2010, en la que se tomo el a\~{n}o 2000 como referencia por observar mayor porcentaje de cobertura vegetal que las dem\'as para ser cruzada con las im\'agenes de NDVI. Mascaras de VCF fueron elaboradas en diferentes rangos (0\%-10\%, 0\%-20\%, 0\%-30\%, 0\%-\%40 y 0\%-\%50). El rango completo no fue analizado debido a que no existen p\'ixeles que representa la vegetaci\'on en un porcentaje mayor al 50\%. En la Figura \ref{fig:mascVCf} podemos observar la mascara de VCF para pixeles con 30\% de vegetaci\'on junto con la imagen NDVI correspondiente al a\~{n}o 2000.
+Las im\'agenes VCF (secci\'on \ref{sec:vcf}) junto con las im\'agenes Landsat (secci\'on \ref{sec:landsat}) permitieron realizar un pareo de niveles digitales en base a su posicion geografica $ (x,y) $. En las im\'agenes VCF los p\'ixeles representan porcentajes de vegetaci\'on existente en un pixel, mientras que las im\'agenes Landsat nos permite calcular NDVI. Im\'agenes con NDVI fueron calculadas para diferentes tiempos (1986, 1990, 2000). Existe una colecci\'on disponible de im\'agenes VCF, del a\~{n}o 2000 hasta el 2010, en la que se tomo el a\~{n}o 2000 como referencia por observar mayor porcentaje de cobertura vegetal que las dem\'as para ser cruzada con las im\'agenes de NDVI. Mascaras de VCF fueron elaboradas en diferentes rangos (0\%-10\%, 0\%-20\%, 0\%-30\%, 0\%-\%40 y 0\%-\%50). El rango completo no fue analizado debido a que no existen p\'ixeles que representan la vegetaci\'on en un porcentaje mayor al 50\%. En la Figura \ref{fig:mascVCf} podemos observar la mascara de VCF para pixeles con 30\% de vegetaci\'on junto con la imagen NDVI correspondiente al a\~{n}o 2000.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8	\textwidth]{./Figures/cap5/mascaraVCF.png}
@@ -116,29 +116,29 @@ El procedimiento se repite para cada mascara en los distintos rangos. En total s
 		\multicolumn{3}{|c|}{\cellcolor[HTML]{EFEFEF}\textbf{A\~{n}o 1986}}        \\ \hline
 		\rowcolor[HTML]{EFEFEF} 
 		\textbf{VCF (\%)} & \textbf{$ \mu_{ndvi_{ft}} $} & \textbf{$ \sigma_{ndvi_{ft}} $} \\ \hline
-		50                & 0.356701              & 0.047891                   \\ \hline
-		40                & 0.344022              & 0.0507296                  \\ \hline
-		30                & 0.337696              & 0.061581                   \\ \hline
-		20                & 0.339586              & 0.0632055                  \\ \hline
-		10                & 0.335528              & 0.0727573                  \\ \hline
+		0-50                & 0.356701              & 0.047891                   \\ \hline
+		0-40                & 0.344022              & 0.0507296                  \\ \hline
+		0-30                & 0.337696              & 0.061581                   \\ \hline
+		0-20                & 0.339586              & 0.0632055                  \\ \hline
+		0-10                & 0.335528              & 0.0727573                  \\ \hline
 		\rowcolor[HTML]{EFEFEF} 
 		\multicolumn{3}{|c|}{\cellcolor[HTML]{EFEFEF}\textbf{A\~{n}o 1990}}        \\ \hline
 		\rowcolor[HTML]{EFEFEF} 
 		\textbf{VCF (\%)} & \textbf{$ \mu_{ndvi_{ft}} $} & \textbf{$ \sigma_{ndvi_{ft}} $} \\ \hline
-		50                & 0.278804              & 0.0631834                  \\ \hline
-		40                & 0.264651              & 0.0679451                  \\ \hline
-		30                & 0.254145              & 0.0742348                  \\ \hline
-		20                & 0.252186              & 0.0759032                  \\ \hline
-		10                & 0.251421              & 0.0796667                  \\ \hline
+		0-50                & 0.278804              & 0.0631834                  \\ \hline
+		0-40                & 0.264651              & 0.0679451                  \\ \hline
+		0-30                & 0.254145              & 0.0742348                  \\ \hline
+		0-20                & 0.252186              & 0.0759032                  \\ \hline
+		0-10                & 0.251421              & 0.0796667                  \\ \hline
 		\rowcolor[HTML]{EFEFEF} 
-		\multicolumn{3}{|c|}{\cellcolor[HTML]{EFEFEF}\textbf{A\~{n}o 1990}}        \\ \hline
+		\multicolumn{3}{|c|}{\cellcolor[HTML]{EFEFEF}\textbf{A\~{n}o 2000}}        \\ \hline
 		\rowcolor[HTML]{EFEFEF} 
 		\textbf{VCF (\%)} & \textbf{$ \mu_{ndvi_{ft}} $} & \textbf{$ \sigma_{ndvi_{ft}} $} \\ \hline
-		50                & 0.0202133             & 0.0572825                  \\ \hline
-		40                & 0.0104289             & 0.0608757                  \\ \hline
-		30                & -0.00337075           & 0.066776                   \\ \hline
-		20                & -0.00663188           & 0.0695777                  \\ \hline
-		10                & -0.0103891            & 0.0757546                  \\ \hline
+		0-50                & 0.0202133             & 0.0572825                  \\ \hline
+		0-40                & 0.0104289             & 0.0608757                  \\ \hline
+		0-30                & -0.00337075           & 0.066776                   \\ \hline
+		0-20                & -0.00663188           & 0.0695777                  \\ \hline
+		0-10                & -0.0103891            & 0.0757546                  \\ \hline
 	\end{tabular}
 		\caption{Media y desviaci\'on del muestreo realizado.}
 		\label{t:vcfNdvi}
@@ -146,7 +146,7 @@ El procedimiento se repite para cada mascara en los distintos rangos. En total s
 
 La Tabla \ref{t:vcfNdvi} nos muestra que la media del NDVI es diferente para cada a\~{n}o, independientemente del porcentaje de vegetaci\'on evaluado, debido a que el \'area foliar (hojas) en la vegetaci\'on posee diferente respuesta espectral para cada especie y \'epoca en la que es capturada por los sensores remotos. En este caso, no es conveniente tomar la media ($  \mu_{ndvi_{ft}} $) dentro de un patr\'on de comportamiento con el fin de discriminar la vegetaci\'on. Las desviaciones ($ \sigma_{ndvi_{ft}} $) se observan pr\'oximas para cada evaluaci\'on por lo que consideramos resaltante y \'util para la discriminaci\'on forestal. Un promedio entre todas las desviaciones es realizado quedando como variable $ \sigma_{c} $ en la umbralizaci\'on de vegetaci\'on  $ \sigma_{c} = 0.0658242733 $.
 \subsection{Estimaci\'on de p\'erdida de carbono forestal}\label{subsec:estimacionCarbono}
-El Mapa Global de Carbono nos permite analizar una relaci\'on posible con los indices de vegetaci\'on. Los NDVI fueron calculados a partir de im\'agenes Landsat del a\~{n}o 2003, debido a que el Mapa Global de Carbono corresponde a la d\'ecada del a\~{n}o 2000 (como se hab\'ia comentado en la secci\'on \ref{sec:saatchiMapa}). Posteriormente se generaron 240 puntos aleatorios dentro \'areas que correspond\'ian a vegetaci\'on como podemos observar en la Figura \ref{fig:aleatorioCrb}.
+El Mapa Global de Carbono nos permite analizar una relaci\'on posible con los indices de vegetaci\'on. Los NDVI fueron calculados a partir de im\'agenes Landsat del a\~{n}o 2003, debido a que el Mapa Global de Carbono corresponde a la d\'ecada del a\~{n}o 2000 (como se hab\'ia comentado en la secci\'on \ref{sec:saatchiMapa}). Posteriormente se generaron 240 puntos aleatorios dentro de \'areas que correspond\'ian a vegetaci\'on como podemos observar en la Figura \ref{fig:aleatorioCrb}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8	\textwidth]{./Figures/cap5/carbNdvi.png}
@@ -178,7 +178,7 @@ Sectores fueron delimitados en base al uso del suelo empleado en dicha \'area. E
 	\item \textbf{\'Area Rural:} se caracteriza por la inmensidad de espacios verdes que la componen y que por esta raz\'on est\'a destinada y es utilizada para la realizaci\'on de actividades agropecuarias y agro-industriales.
 	\item \textbf{\'Area H\'umeda:}	zona de tierras, generalmente planas, cuya superficie se inunda de manera permanente o intermitente.
 \end{itemize}
-En la Figura \ref{fig:zonasEva} podemos observar las \'areas seleccionadas dentro de la imagen satelital. El \'area urbana contiene a la zona c\'entrica del distrito de Filadelfia mientras que el \'area rural a zonas retiradas donde la vegetaci\'on es predominante. Las \'areas h\'umedas corresponden a zonas cercanas al rio Pilcomayo, donde las inundaciones a causa de subidas del rio son frecuente.   
+En la Figura \ref{fig:zonasEva} podemos observar las \'areas seleccionadas dentro de la imagen satelital. El \'area urbana contiene a la zona c\'entrica del distrito de Filadelfia mientras que el \'area rural a zonas retiradas donde la vegetaci\'on es predominante. Las \'areas h\'umedas corresponden a zonas cercanas al rio Pilcomayo, donde las inundaciones a causa de subidas del rio son frecuentes.   
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7	\textwidth]{./Figures/cap5/zonas.png}
@@ -221,31 +221,31 @@ Las im\'agenes satelitales de entrada son de baja resoluci\'on espacial ($ 30 \t
 		\label{t:pathRow}
 \end{table}
 
-Se recortaron las bandas de las im\'agenes, infrarroja cercana y roja, para cada sector y fecha e introducidas como datos de entrada en la metodolog\'ia. Las Figura \ref{fig:ubana} muestra la m\'ascara de p\'erdida forestal ($ MPF $) junto con la cuantificaci\'on de carbono ($ CCP $) en el \'area urbana para cada coeficientes de fiabilidad ($ n $) (secci\'on \ref{sec:umbralEstadistico2}), obtenidos luego de aplicar la metodolog\'ia presentada.
+Se recortaron las bandas de las im\'agenes, infrarroja cercana y roja, para cada sector y fecha e introducidas como datos de entrada en la metodolog\'ia. Las Figura \ref{fig:ubana} muestra la m\'ascara de p\'erdida forestal ($ MPF $) junto con la cuantificaci\'on de carbono ($ CCP $) en el \'area urbana para cada coeficiente de fiabilidad ($ n $) (secci\'on \ref{sec:umbralEstadistico2}), obtenidos luego de aplicar la metodolog\'ia presentada.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0	\textwidth]{./Figures/cap5/res_zona_urbana.png}
-	\caption{\'Area Urbana. Mapa de p\'erdida forestal y toneladas de carbono perdidos.}
+	\caption{\'Area Urbana. Con respecto a $ n=1 $, en la contabilizaci\'on para $ n=2 $ fue de 81\% menos y 45\% menos para $ n=1.5 $.}
 	\label{fig:ubana}
 \end{figure}
 La Figura \ref{fig:rural} muestra la m\'ascara de p\'erdida forestal ($ MPF $) junto con la cuantificaci\'on de carbono ($ CCP $) en el \'area rural para cada coeficientes de fiabilidad ($ n $) (secci\'on \ref{sec:umbralEstadistico2}), obtenidos luego de aplicar la metodolog\'ia presentada. 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0	\textwidth]{./Figures/cap5/res_zona_rural.png}
-	\caption{\'Area Rural. Mapa de p\'erdida forestal y toneladas de carbono perdidos}
+	\caption{\'Area Rural. Con respecto a $ n=1 $, en la contabilizaci\'on para $ n=2 $ fue de 51\% menos y 25\% menos para $ n=1.5 $.}
 	\label{fig:rural}
 \end{figure}
 La Figura \ref{fig:humeda} muestra la m\'ascara de p\'erdida forestal ($ MPF $) junto con la cuantificaci\'on de carbono ($ CCP $) en el \'area h\'umeda para cada coeficientes de fiabilidad ($ n $) (secci\'on \ref{sec:umbralEstadistico2}), obtenidos luego de aplicar la metodolog\'ia presentada.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0	\textwidth]{./Figures/cap5/res_zona_humeda.png}
-	\caption{\'Area H\'umeda. Mapa de p\'erdida forestal y toneladas de carbono perdidos}
+	\caption{\'Area H\'umeda. Con respecto a $ n=1 $, en la contabilizaci\'on para $ n=2 $ fue de 64\% menos y 40\% menos para $ n=1.5 $.}
 	\label{fig:humeda}
 \end{figure}
 
 
 La evaluaci\'on de la calidad en la detecci\'on de p\'erdida forestal ($ MP $) fueron hechas con la comparaci\'on del Paraguay Forest Change Produc (PFCP) y los resultados obtenidos por cada sector y coeficiente de tolerancia $ (n) $. El indice kappa y la precisi\'on global nos permiti\'a saber la calidad en los resultados de detecci\'on de cambio forestal.\\~\\
-Una re-clasificaci\'on en la imagen PFCP fue realizado previamente, ya que en ella clasifica dos tipos de bosques (Atl\'antico y Chaco), no bosques y agua. La re-clasificaci\'on consisti\'o en dejar solo los pixeles que representan p\'erdida de vegetaci\'on en cualquier de los tipos, generando una imagen binaria (rojo para pixeles con p\'erdida forestal y amarillo otros) como podemos observar en la Figura \ref{fig:pfcp}.
+Una re-clasificaci\'on en la imagen PFCP fue realizada previamente, ya que en ella clasifica dos tipos de bosques (Atl\'antico y Chaco), no bosques y agua. La re-clasificaci\'on consisti\'o en dejar solo los pixeles que representan p\'erdida de vegetaci\'on en cualquiera de los tipos, generando una imagen binaria (rojo para pixeles con p\'erdida forestal y amarillo otros) como podemos observar en la Figura \ref{fig:pfcp}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4	\textwidth]{./Figures/cap5/pcfp.png}
@@ -287,7 +287,7 @@ Una vez generado la imagen de referencia para la evaluaci\'on con ayuda de la ap
 		\label{t:kappaGa}
 \end{table}
 
-En la Figura \ref{fig:kappaGrafico} podemos observar que los coeficientes kappas en todos los $ n  $ son mejores para zonas rurales, variando en resultados moderados y considerables. Las zonas h\'umedas, donde $ n=1 $ se obtienen resultados aceptables a diferencia de las dem\'as que son moderadas. Por ultimo las zonas urbanos son las que presentan gran variaci\'on entre los coeficientes hallados para el, debiendo implementar tolerancia baja $(n=1)$, al modelo de detecci\'on, para obtener resultados moderados. Los coeficientes son interpretados seg\'un la Tabla \ref{t:kappaTable}.
+En la Figura \ref{fig:kappaGrafico} podemos observar que los coeficientes kappas en todos los $ n  $ son mejores para zonas rurales, variando en resultados moderados y considerables. Las zonas h\'umedas, donde $ n=1 $ se obtienen resultados aceptables a diferencia de las dem\'as que son moderadas. Por \'ultimo las zonas urbanas son las que presentan gran variaci\'on entre los coeficientes hallados para el, debiendo implementar tolerancia baja $(n=1)$, al modelo de detecci\'on, para obtener resultados moderados. Los coeficientes son interpretados seg\'un la Tabla \ref{t:kappaTable}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8	\textwidth]{./Figures/cap5/kappaGrafico.png}

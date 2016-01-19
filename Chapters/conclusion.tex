@@ -9,7 +9,7 @@ En base a los resultados obtenidos en la estimaci\'on de p\'erdida de carbono en
 
 \begin{itemize} 
 \item La normalizaci\'on radiom\'etrica permite que los pixeles de una secuencia multitemporal sean semejantes. Los indices de cambios obtenidos de la comparaci\'on multitemporal posibilitan obtener variables cualitativas a partir de umbrales elaborados por par\'ametros estad\'isticos extra\'idos de la misma imagen de cambio $ I_{c} $. La iteraci\'on permite automatizar la detecci\'on de cambio, ya que el proceso normaliza repetidamente las im\'agenes teniendo en cuenta solo los pixeles que no sufrieron cambio en el tiempo, optimizando y mejorando la comparaci\'on multitemporal.
-\item El an\'alisis estad\'istico realizado a las im\'agenes satelitales VCF y Landsat posibilitaron determinar a la desviaci\'on est\'andar de los NDVI calculados, como una constante que permite transforman las variables cuantitativas (NDVI) a variables cualitativas (vegetaci\'on/no vegetaci\'on).
+\item El an\'alisis estad\'istico realizado a las im\'agenes satelitales VCF y Landsat posibilitaron determinar a la desviaci\'on est\'andar, de los NDVI calculados, como una constante que permite transforman las variables cuantitativas (NDVI) a variables cualitativas (vegetaci\'on/no vegetaci\'on).
 \item El an\'alisis de regresi\'on permiti\'o encontrar una relaci\'on entre un \'indice de vegetaci\'on (NDVI) y el carbono (Mapa global de carbono), por lo que convertir el indice generado por las im\'agenes satelitales se resume en una ecuaci\'on que no implic\'o muestreo en campo ni estudios adicionales.
 \item La detecci\'on de cambio forestal fue realizado mediante a la normalizaci\'on radiom\'etrica y comparaci\'on multitemporal de forma iterativa, donde el cambio forestal fue discriminado mediante el hallazgo de la desviaci\'on est\'andar de los NDVI. 
 \item En la detecci\'on de cambio forestal los resultados obtenidos fueron comparados con la imagen PFCP, de manera a evaluar el proceso con m\'etricas de precisi\'on global y coeficiente kappa.
@@ -22,6 +22,7 @@ La metodolog\'ia presenta diferentes dificultades y evaluaciones desarrolladas e
 \item Se pretende que la metodolog\'ia propuesta siga mejorando en t\'erminos de pre-procesamiento de las im\'agenes satelitales, ante factores que influyan en el momento de captura de los datos hechas por sensores remotos como tambi\'en en t\'ecnicas que permita mejora la detecci\'on de cambio forestal.
 \item Proponer t\'ecnicas que permitan detectar y eliminar nubosidad en las imagen satelitales.
 \item Mejorar la precisi\'on global y el coeficiente kappa para zonas urbanas.
+\item Mejora la metodolog\'ia de manera a poder estimar la ganancia o captura de carbono forestal en una secuencia multitemporal.
 \item Dise\~{n}ar mejores t\'ecnicas que clasifique cobertura vegetal mediante la extracci\'on de indices en todas las bandas.
 \item Adaptar la metodolog\'ia, de manera a que permita recibir im\'agenes satelitales con diferentes resoluciones radiom\'etricas.
 
